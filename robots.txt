@@ -2,4 +2,4 @@ User-Agent: *
 
 Disallow: /C_klasse.htm
 Disallow: /old_c_klasse.htm
-Sitemap: http://motor.geocities.jp/piyopiyo_246/sitemap.xml
+Sitemap: https://piyopiyo246.github.io/sitemap.xml
