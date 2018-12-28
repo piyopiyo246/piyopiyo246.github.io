@@ -1,5 +1,4 @@
-User-Agent: *
+User-agent: *
+Disallow:
 
-Disallow: /C_klasse.htm
-Disallow: /old_c_klasse.htm
 Sitemap: https://piyopiyo246.github.io/sitemap.xml
