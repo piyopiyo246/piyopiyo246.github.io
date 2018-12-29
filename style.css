@@ -717,9 +717,9 @@ div {	width: 100%;
 }
 /*Top*/
 .wood {
-	position: relative;/*相対配置*/
+	position: absolute;/*絶対配置*/
 	background: #4f4f4f ;
-	width: 100%;
+	width: 1340px;
 	height: 50px;
 	margin: 0 auto;
 	border-bottom:solid 2px #ffffff;
@@ -818,7 +818,7 @@ input:focus {
 .inside,.r-side {
 	font-size: 4em;
 	line-height: 1.4em;
-	color: #c9c9c9;	/*標準↑↑*/
+	color: #d6d6d6;	/*標準↑↑*/
 	text-align: center;
 }
 .r-side {	text-align: right;
