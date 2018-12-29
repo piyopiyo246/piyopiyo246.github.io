@@ -50,7 +50,7 @@ dd {	padding: 0;
 }
 .w5 {	width: 5em;
 }
-.s {	margin-right: 0.5em;
+.s {	margin-right: 1em;
 }
 .m0 {	margin-left: 0em;
 }
@@ -64,8 +64,8 @@ dd {	padding: 0;
 }
 .cb {	clear: both;	/*<br class = "cb">inline要素を殺したいとき*/
 }
-.small {	font-size: 10pt;
-	color: #6b8e23;
+.small {
+	color: #666666;
 }
 /*ボタン*/
 button, input, select, textarea {
@@ -93,56 +93,4 @@ button, input, select, textarea {
 .square_btn:hover {
 	background: #666666;
 	color: #efefef;
-}
-/*検索窓*/
-#gsc{
-	width:400px;
-	margin:0;
-	float: left;
-	margin-left: 2em;
-	position:relative;
-}
-#gsc td {
-	border: none;
-}
-#gsc .gsc-control-cse, 
-#gsc .gsc-control-cse-ja,
-#gsc .gsib_a{
-	margin:0 !important;
-	padding:0 !important;
-}
-#gsc table.gsc-search-box td,	/* テキスト入力フォームとボタンの位置 */
-#gsc table.gsc-search-box input {
-	vertical-align: top !important;
-}
-#gsc input[type="text"]{		/* テキスト入力フォーム */
-	border: none !important;
-	height:34px !important;
-	margin-top: 100px;
-	font-size: 16px;
-}
-#gsc input[type="text"]:focus {
-	border: none	 !important;
-	outline: 0;  /*safariの自動フォーカスを切る */
-}
-#gsc #gsc-iw-id1{	/* テキスト入力フォームの影を消す */
-	border:none !important;
-}
-#gsc #gs_tti0 input{	/* テキスト入力フォームの背景画像位置調整 */
-	background-position:1px 1px !important;
-}
-#gsc input.gsc-search-button {	/* ボタンの色 */
-	background: none !important;
-	background: -ms-linear-gradient(top,  #008ee1 0%,#008ee1 100%); /* IE10+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dfdfdf', endColorstr='#dfdfdf',GradientType=0 );	/* IE6-9 */
-	border: none !important;
-}
-#gsc .gsc-search-button{	/* ボタンの位置調整と角丸消し *//* 入力時に出る「×」ボタンの位置調整 */
-	margin:0 !important;
-	border-radius:0px;
-}
-#gsc .gsib_b span{	/* 入力時に出る×ボタン -- Firefox位置調整 -- */
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	padding:2px 0 0 0;
 }
