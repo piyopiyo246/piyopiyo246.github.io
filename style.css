@@ -809,8 +809,9 @@ input:focus {
 	font-family: Lato;
 	position: absolute;
 	background: no-repeat;
+	width: 1302px;
 }
-.bk	{opacity: 0.8;	/*文字透過*/
+.bk	{opacity: 1;	/*文字透過*/
 }
 .bk2	{padding: 0;
 	text-align: right;
