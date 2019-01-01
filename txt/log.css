@@ -71,6 +71,8 @@ dd {	padding: 0;
 .small {
 	color: #666666;
 }
+.clr-lb {	color: #0e56dd;	/*light blue*/	/*#0b44ad;cobalt blue*/
+}
 /*ボタン*/
 button, input, select, textarea {
 	font-family: inherit;
