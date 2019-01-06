@@ -460,8 +460,6 @@ img {	vertical-align: top;
 }
 /*リスト*/
 table {	font-family: 'MS UI Gothic';
-	font-size: 18px;
-	line-height: 1.6em;
 	padding: 0 0 1em 0;
 	text-align: center;
 	margin-left: 1em;
@@ -691,7 +689,8 @@ div {	width: 100%;
 .box104 {width: 1140px;}
 .box121 {width: 1210px;}
 .box-full {width: 1302px;}
-.box-wide {width: 1302px;}
+.box-135 {width: 1350px;}
+.box-wide {width: 1390px;}
 /*Timeline*/
 .timeline1, .timeline2{
 	width:142.5px;
@@ -824,7 +823,7 @@ input:focus {
 }
 .r-side {	text-align: right;
 }
-/*>>▼ ■*/
+/*before >> ▼ ■*/
 .bf1:before {content: ">>";
 	margin-left:2em;
 	margin-right:0.5em;
@@ -865,7 +864,7 @@ input:focus {
 }
 .bn {	border: 0;
 }
-.ac2 {	width: 1188px;	/*＞＞対応*/
+.ac2 {	width: 1302px;	/*＞＞対応*/
 }
 .ac2:hover {
 	color: #0e56dd;	/*light blue*/
