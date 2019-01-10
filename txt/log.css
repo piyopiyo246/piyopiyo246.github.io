@@ -1,102 +1,68 @@
 @charset "UTF-8";
-body {	font-family:'MS UI Gothic' , 'Hiragino Kaku Gothic ProN' ;
-	background-color: rgb(225, 225, 230);
+body {
+	font-family:'MS UI Gothic' , 'Hiragino Kaku Gothic ProN' ;
+	background-color: #dfdfdf;
 	font-size: 20px;			/*px以外、OperaやEDGEで文字サイズがChoromeより小さくなる */
 	font-weight: 700;
 }
-nav {	/*▼対応*/
-	color: #6e6e6e;	/*標準↑*/
-	width: 1300px;
+/*https://seolaboratory.jp/44065/ */
+/*http://www.finefinefine.jp/jquery/kiji1388/ */
+/*https://kanae-design.the-day-mie.com/528/ */
+
+#header_txt {
+	margin: -8px 0 0 -8px;
+	font-weight: 400;
+	background-color: #000000;
+	width: 1370px ;
+	height: 2em;
 	clear: both;
+	position: fixed;
+	z-index: 1;
+	border-bottom:solid 2px #ffffff;
 }
-h1,h2 {	font-size: 120%;
-	margin-left: 1em;
-	width: 1300px;
+h1,h2 {
+	font-size: 120% ;
+	margin-left: 1em ;
 }
-a {	text-decoration: none ;
-}
-a:link {	color: #000000; 
-}
-a:visited {color: #000000 ; 
- }
-a.lnk:hover {color: #0e56dd;	/*light blue*/
+h1 {margin-top: 1.2em ;}
+a {text-decoration: none ;}
+a:link {color: #ffffff ;}
+a:visited {color: #ffffff ;}
+a.lnk:hover {
+	color: #6b9bf6;	/*light blue*/
 	transition: color 0.2s;
 }
-p {	white-space: pre;
+p {
+	white-space: pre;
 	margin-left: 0.3em;
 	line-height: 1em;
 	letter-spacing: 0.4pt;
 	word-wrap: break-word;
 }
-hr {	border-top: 1px solid rgba(0,0,0,0.4);
-}
-dl {	line-height: 1.8em;
+hr {border-top: 1px solid rgba(0,0,0,0.4) ;}
+ul {
 	padding: 0;
-	margin: 0;
+	margin: 4px 0 1px 0;
 	list-style: none;
-	overflow: hidden;
-	position: relative;
 	zoom: 1;
+	display: inline-block ;
 }
-dt {	padding: 0;
-	margin: 0;
-	float: left;	/*左に寄せる*/
+li {
+	padding: 0;
+	margin: 4px 0 0 1em;
+	color: #ffffff ;
+	float: left ;	/*左に寄せる*/
 }
-dd {	padding: 0;
-	margin: 0;
-	float: left;	/*左に寄せる*/
-}
-.ib {	display: inline-block;
-}
-.w2 {	width: 2em;
-}
-.w4 {	width: 4em;
-}
-.w5 {	width: 5em;
-}
-.s {	margin-right: 1em;
-}
-.m0 {	margin-left: 0em;
-}
-.m1 {	margin-left: 1em;
-}
-.m3 {	margin-left: 3.6em;
-}
-.m20 {	margin-left: 20em;
-}
-.i {	display: inline;
-}
-.cb {	clear: both;	/*<br class = "cb">inline要素を殺したいとき*/
-}
-.small {
-	color: #666666;
-}
-.clr-lb {	color: #0e56dd;	/*light blue*/	/*#0b44ad;cobalt blue*/
-}
-/*ボタン*/
-button, input, select, textarea {
-	font-family: inherit;
-	font-size: 85%;
-}
-.keywords1 {
-	color: #4a4a4a;
-	background-color: #efefef;
-	border: 1px solid #8a8a8a;
-	border-radius: 2px;
-}
-.keywords1:hover {
-	background: #fcfcfc;
-}
-.square_btn {
-	display: inline-block;
-	padding: 2pt;
-	font-size: 14px;
-	color: #4a4a4a;
-	border: solid 1px #8a8a8a;
-	background: e6e6e6;
-	border-radius: 2px;
-}
-.square_btn:hover {
-	background: #666666;
-	color: #efefef;
-}
+.ib {display: inline-block ;}
+.i {display: inline;}
+.w2 {width: 2em;}
+.w4 {width: 4em;}
+.w5 {width: 5em;}
+.s {margin-right: 1em;}
+.m0 {margin-left: 0em;}
+.m1 {margin-left: 1em;}
+.m3 {margin-left: 3.6em;}
+.m20 {margin-left: 20em;}
+.cb {clear: both;}	/*<br class = "cb">inline要素を殺したいとき*/
+.small {color: #666666;}
+.clr-lb {color: #6b9bf6;}	/*light blue*/	/*#0b44ad;cobalt blue*/
