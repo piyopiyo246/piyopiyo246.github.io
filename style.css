@@ -1,4 +1,4 @@
-/*標準*/
+/*code・import*/
 @charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700);
 @import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
@@ -35,7 +35,7 @@ body {	font-family: 'MS UI Gothic', "ＭＳ Ｐゴシック", "MS PGothic", sans
 .scrollbox::-webkit-scrollbar-corner {/*右下角部分*/
 	background: #4f4f4f;
 }
-/*基本*/
+/*format*/
 h1 ,h2 {font-size: 18px;
 	font-weight: normal;
 	margin: 0 0 0 1em;
@@ -48,10 +48,6 @@ h3 ,h4 ,h5,h6 {
 }
 p {	margin: 0 0 0 3em;
 }
-img {	padding: 2pt 0;
-}
-.kakumaru {	border-radius:10px;	/*Interior Trim*/
-}
 hr {	margin: 0.7em 0.5em 0.9em 0.5em;
 	border: none;
 	border-top: 1px #6e6e6e solid;
@@ -62,7 +58,7 @@ hr {	margin: 0.7em 0.5em 0.9em 0.5em;
 	background:-webkit-linear-gradient(left, #dfdfdf, #6e6e6e, #dfdfdf);
 	background:-moz-linear-gradient(left, #dfdfdf, #6e6e6e, #dfdfdf);
 }
-/*フォント*/
+/*font*/
 .clr-f1 {	color: #111111;
 }
 .clr-f2 {	color: #2e2e2e;
@@ -433,9 +429,12 @@ a:visited {color: #060606;	/*標準*/
 .ut-1 {	margin-top: -0.5em;
 	margin-bottom: -0.5em;
 }
-/*画像・アイコン*/
+/*img・ico*/
 img {	vertical-align: top;
 	margin: 0;
+	padding: 2pt 0;
+}
+.kakumaru {	border-radius:10px;	/*Interior Trim*/
 }
 .ico-wiki,.ico-wiki2,.ico-camera,.ico-eg {
 	display: inline-block;
@@ -497,7 +496,7 @@ td {	padding: 0 8px 0 0;
 .trim_name {
 	overflow-wrap : break-word;
  }
-/*インライン*/
+/*inline*/
 .i {	display: inline;
 }
 .ib {	display: inline-block;
@@ -507,7 +506,7 @@ td {	padding: 0 8px 0 0;
 }
 .cb {	clear: both;		/*<br class = "cb">inline要素を殺したいとき*/
 }
-/*DIV制御*/
+/*DIV*/
 div {	width: 100%;
 	padding: 0;
 	margin: 0;
@@ -760,7 +759,7 @@ div {	width: 100%;
 	border-left:solid 2px #111111;
 	transition: background-color 0.5s;	
 } 
-/*Button*/
+/*Button・Search*/
 button, input, select, textarea {
 	font-family: inherit;
 }
