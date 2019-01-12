@@ -5,10 +5,7 @@ body {
 	font-size: 20px;			/*px以外、OperaやEDGEで文字サイズがChoromeより小さくなる */
 	font-weight: 700;
 }
-/*https://seolaboratory.jp/44065/ */
-/*http://www.finefinefine.jp/jquery/kiji1388/ */
-/*https://kanae-design.the-day-mie.com/528/ */
-
+/*header*/
 #header_txt {
 	margin: -8px 0 0 -8px;
 	font-weight: 400;
@@ -20,6 +17,7 @@ body {
 	z-index: 1;
 	border-bottom:solid 2px #ffffff;
 }
+/*基本*/
 h1,h2 {
 	font-size: 120% ;
 	margin-left: 1em ;
@@ -40,6 +38,7 @@ p {
 	word-wrap: break-word;
 }
 hr {border-top: 1px solid rgba(0,0,0,0.4) ;}
+/*list*/
 ul {
 	padding: 0;
 	margin: 4px 0 1px 0;
@@ -66,3 +65,4 @@ li {
 .cb {clear: both;}	/*<br class = "cb">inline要素を殺したいとき*/
 .small {color: #666666;}
 .clr-lb {color: #6b9bf6;}	/*light blue*/	/*#0b44ad;cobalt blue*/
+/*Button*/
