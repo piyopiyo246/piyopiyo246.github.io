@@ -5,7 +5,7 @@ body {
 	font-size: 20px;			/*px以外、OperaやEDGEで文字サイズがChoromeより小さくなる */
 	font-weight: 700;
 }
-/*header*/
+/*nav*/
 #header_txt {
 	margin: -8px 0 0 -8px;
 	font-weight: 400;
