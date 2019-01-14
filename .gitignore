@@ -16,3 +16,4 @@ wp/wp-content/cache/
 wp/wp-content/upgrade/
 wp/wp-content/uploads/
 wp/wp-content/wp-cache-config.php
+*.coffee
