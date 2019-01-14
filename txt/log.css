@@ -27,7 +27,7 @@ a {text-decoration: none ;}
 a:link {color: #ffffff ;}
 a:visited {color: #ffffff ;}
 a.lnk:hover {
-	color: #6b9bf6;	/*light blue*/
+	color: #6bbef6;	/*light blue*/
 	transition: color 0.2s;
 }
 p {
@@ -64,5 +64,5 @@ li {
 .m20 {margin-left: 20em;}
 .cb {clear: both;}	/*<br class = "cb">inline要素を殺したいとき*/
 .small {color: #666666;}
-.clr-lb {color: #6b9bf6;}	/*light blue*/	/*#0b44ad;cobalt blue*/
+.clr-lb {color: #6bbef6;}	/*light blue*/	/*#0b44ad;cobalt blue*/
 /*Button*/
