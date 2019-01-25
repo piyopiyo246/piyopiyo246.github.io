@@ -17,3 +17,4 @@ wp/wp-content/upgrade/
 wp/wp-content/uploads/
 wp/wp-content/wp-cache-config.php
 *.coffee
+index.scala.html

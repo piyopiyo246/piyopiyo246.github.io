@@ -59,6 +59,7 @@ li {
 .w5 {width: 5em;}
 .s {margin-right: 1em;}
 .m0 {margin-left: 0em;}
+.m0a {margin-left: 0.5em;}
 .m1 {margin-left: 1em;}
 .m3 {margin-left: 3.6em;}
 .m20 {margin-left: 20em;}
@@ -66,3 +67,17 @@ li {
 .small {color: #666666;}
 .clr-lb {color: #6bbef6;}	/*light blue*/	/*#0b44ad;cobalt blue*/
 /*search*/
+.highlight{
+  background-color:yellow /*色は自由にお決めになって。*/
+}
+.important {
+    background-color: #FFCC66;
+    padding: 5px;
+    border-radius: 3px;
+}
+.important.active {
+    background-color: #66CCFF;
+}
+.content {
+    margin-top: 60px;
+}
