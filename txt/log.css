@@ -2,7 +2,7 @@
 body {
 	font-family:'MS UI Gothic' , 'Hiragino Kaku Gothic ProN' ;
 	background-color: #dfdfdf;
-	font-size: 20px;			/*px以外、OperaやEDGEで文字サイズがChoromeより小さくなる */
+	font-size: 20px;
 	font-weight: 700;
 }
 /*nav*/
@@ -51,23 +51,11 @@ li {
 	color: #ffffff ;
 	float: left ;	/*左に寄せる*/
 }
+/*search
 .ib {display: inline-block ;}
-.i {display: inline;}
-.w2 {width: 2em;}
-.w4 {width: 4em;}
-.w5 {width: 5em;}
-.s {margin-right: 1em;}
-.m0 {margin-left: 0em;}
 .m0a {margin-left: 0.5em;}
-.m1 {margin-left: 1em;}
-.m3 {margin-left: 3.6em;}
-.m20 {margin-left: 20em;}
-.cb {clear: both;}	/*<br class = "cb">inline要素を殺したいとき*/
-.small {color: #666666;}
-.clr-lb {color: #6bbef6;}	/*light blue*/	/*#0b44ad;cobalt blue*/
-/*search*/
 .highlight{
-  background-color:yellow /*色は自由にお決めになって。*/
+  background-color:yellow /*色は自由にお決めになって。
 }
 .important {
     background-color: #FFCC66;
@@ -80,3 +68,4 @@ li {
 .content {
     margin-top: 60px;
 }
+*/
