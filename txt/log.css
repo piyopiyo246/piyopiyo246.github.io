@@ -24,8 +24,7 @@ h1,h2 {
 }
 h1 {margin-top: 1.2em ;}
 a {text-decoration: none ;}
-a:link {color: #ffffff ;}
-a:visited {color: #ffffff ;}
+a:visited {color:inherit;}
 a.lnk:hover {
 	color: #6bbef6;	/*light blue*/
 	transition: color 0.2s;

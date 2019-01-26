@@ -127,10 +127,10 @@ hr {	margin: 0.7em 0.5em 0.9em 0.5em;
 /*文字列*/
 a {	text-decoration: none;
 }
-a:link {	color: #060606;	/*標準*/
+a:link {color: #060606;	/*標準*/
 }
 a:visited {color: #060606;	/*標準*/
- }
+}
 .lnk:hover {
 	color: #006c00;	/*green*/
 	border-bottom: solid 0.05em #006c00;	/*green*/
@@ -138,10 +138,6 @@ a:visited {color: #060606;	/*標準*/
 .lnk2:hover {
 	color: #0e56dd;	/*light blue*/
 	border-bottom: solid 0.05em #0e56dd;	/*light blue*/
-}
-.lnk3:hover {
-	color: #006c00;	/*green*/
-	border-bottom: solid 0.05em #006c00;	/*green*/
 }
 .top {	vertical-align: top;
 }
