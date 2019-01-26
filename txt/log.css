@@ -23,12 +23,10 @@ h1,h2 {
 	margin-left: 1em ;
 }
 h1 {margin-top: 1.2em ;}
-a {text-decoration: none ;}
-a:visited {color:inherit;}
-a.lnk:hover {
-	color: #6bbef6;	/*light blue*/
-	transition: color 0.2s;
-}
+a {text-decoration: none;}
+a:link {color: #ffffff;}
+a:visited {color: #ffffff;}
+a:hover {color: #6bbef6;}	/*light blue*/
 p {
 	white-space: pre;
 	margin-left: 0.3em;
@@ -36,7 +34,7 @@ p {
 	letter-spacing: 0.4pt;
 	word-wrap: break-word;
 }
-hr {border-top: 1px solid rgba(0,0,0,0.4) ;}
+hr {border-top: 1px solid rgba(0,0,0,0.4);}
 /*list*/
 ul {
 	padding: 0;
@@ -51,8 +49,10 @@ li {
 	color: #ffffff ;
 	float: left ;	/*左に寄せる*/
 }
+.clr-lb {color: #6bbef6;}	/*light blue*/
+span {color: #ff0000;}
+div {display: inline-block ;}
 /*search
-.ib {display: inline-block ;}
 .m0a {margin-left: 0.5em;}
 .highlight{
   background-color:yellow /*色は自由にお決めになって。
