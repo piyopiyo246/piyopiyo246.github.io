@@ -17,6 +17,17 @@
 	<link href="./log.css" rel="stylesheet" type="text/css">
 	<link rel="shortcut icon" href="../ico/mb-logo-g.png" type="image/vnd.microsoft.icon">
 	<title>Cクラス単独スレッド過去ログ</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			$('p').each(function(){
+				var txt = $(this).html();
+				$(this).html(
+					txt.replace(/(\d{1,4} \d{2}\/\d{2}\/\d{2}.*\n)/g, '<span>$1</span>')
+				);
+			});
+		});
+	</script>
 </head>
 <body>
 <header id="header_txt">

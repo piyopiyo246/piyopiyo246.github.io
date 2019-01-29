@@ -2,8 +2,8 @@
 body {
 	font-family:'MS UI Gothic' , 'Hiragino Kaku Gothic ProN' ;
 	background-color: #dfdfdf;
-	font-size: 20px;
-	font-weight: 700;
+	font-size: 24px;
+	font-weight: 400;
 }
 /*nav*/
 #header_txt {
@@ -29,7 +29,7 @@ a:visited {color: #ffffff;}
 a:hover {color: #6bbef6;}	/*light blue*/
 p {
 	white-space: pre;
-	margin-left: 0.3em;
+	margin-left: 1em;
 	line-height: 1em;
 	letter-spacing: 0.4pt;
 	word-wrap: break-word;
@@ -50,7 +50,11 @@ li {
 	float: left ;	/*左に寄せる*/
 }
 .clr-lb {color: #6bbef6;}	/*light blue*/
-span {color: #ff0000;}
+span {
+	color: #008000;
+	font-weight: 800;
+
+}	/*green*/
 div {display: inline-block ;}
 /*search
 .m0a {margin-left: 0.5em;}
