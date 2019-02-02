@@ -23,7 +23,7 @@
 			$('p').each(function(){
 				var txt = $(this).html();
 				$(this).html(
-					txt.replace(/(\d{1,4} \d{2}\/\d{2}\/\d{2}.*\n)/g, '<span>$1</span>')
+					txt.replace(/(\d{1,4}.*\d{2}\/\d{2}\/\d{2}.*\n)/g, '<span>$1</span>')
 				);
 			});
 		});
@@ -34,7 +34,8 @@
 	<nav>
 		<ul>
 			<li><a class="lnk" href="../c_klasse.html" title="Cクラス総合スレッドテンプレ">テンプレ</a></li>
-			<li>＞</li>
+			<li>/</li>
+			<li><a class="lnk" href="mb_1t.html" title="メルセデスベンツ総合スレッド過去ログ">MB総合</a></li>
 			<li><a class="lnk" href="c-class_1t.html" title="Cクラス総合スレッド過去ログ">C総合</a></li>
 			<li><a class="lnk" href="slk_1t.html" title="SLK総合スレッド過去ログ">SLK総合</a></li>
 			<li><a class="lnk" href="clk_1t.html" title="CLK総合スレッド過去ログ">CLK総合</a></li>
