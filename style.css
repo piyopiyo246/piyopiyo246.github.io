@@ -3,7 +3,8 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700);
 @import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
 /*body*/
-body {	font-family: 'MS UI Gothic', "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+body {
+	font-family: 'MS UI Gothic', "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 	line-height: 1.6em;
 	font-size: 18px;			/*px以外、OperaやEDGEで文字サイズがChoromeより小さくなる */
 	color: #060606;	/*標準*/
@@ -36,7 +37,8 @@ body {	font-family: 'MS UI Gothic', "ＭＳ Ｐゴシック", "MS PGothic", sans
 	background: #4f4f4f;
 }
 /*format*/
-h1 ,h2 {font-size: 18px;
+h1 ,h2 {
+	font-size: 18px;
 	font-weight: normal;
 	margin: 0 0 0 1em;
 	letter-spacing: 0.8px;
@@ -46,91 +48,76 @@ h3 ,h4 ,h5,h6 {
 	margin: 0 0 0 1em;
 	font-size: 18px;			/*px以外、OperaやEDGEで文字サイズがChoromeより小さくなる */
 }
-p {	margin: 0 0 0 3em;
-}
-hr {	margin: 0.7em 0.5em 0.9em 0.5em;
+p {	margin: 0 0 0 3em;}
+hr {
+	margin: 0.7em 0.5em 0.9em 0.5em;
 	border: none;
 	border-top: 1px #6e6e6e solid;
 }
-.d_line {height: 1px;
+.d_line {
+	height: 1px;
 	border: 0;
 	background:linear-gradient(left, #dfdfdf, #6e6e6e, #dfdfdf);
 	background:-webkit-linear-gradient(left, #dfdfdf, #6e6e6e, #dfdfdf);
 	background:-moz-linear-gradient(left, #dfdfdf, #6e6e6e, #dfdfdf);
 }
 /*font*/
-.clr-f1 {	color: #111111;
-}
-.clr-f2 {	color: #2e2e2e;
-}
-.clr-f3 {	color: #4c4c4c;
-}
-.clr-f4 {	color: #696969;
-}
-.clr-f5 {	color: #878787;
-}
-.clr-f6 {	color: #a4a4a4;
-}
-.clr-f7 {	color: #c2c2c2;
-}
-.f14-lg,.box-dg,.ac1 {
-	font-size: 14px;
-}
-.clr-w {	color: #ffffff;
-}
-.clr-r {	color: #ff6633;
-}
-.clr-g {	color: #6e6e6e;
-}
-.clr-gy {	color: #006c00;	/*green*/
-}
-.clr-lb {	color: #0e56dd;	/*light blue*/	/*#0b44ad;cobalt blue*/
-}
-.f16,.f14-lg,.ac1,.clr-g,.ls04 {
-	letter-spacing: 0.4pt;
-}
-.ls411 {	letter-spacing: 4.11pt;
-}
-.f18 {	font-size: 18px;
-}
-.f16 {	font-size: 16px;
-}
-.f14-lg {	color: #6e6e6e;
-}
-.b {	font-weight: 700;
+.clr-f1 {	color: #111111;}
+.clr-f2 {	color: #2e2e2e;}
+.clr-f3 {	color: #4c4c4c;}
+.clr-f4 {	color: #696969;}
+.clr-f5 {	color: #878787;}
+.clr-f6 {	color: #a4a4a4;}
+.clr-f7 {	color: #c2c2c2;}
+.f14-lg,.box-dg,.ac1 {font-size: 14px;}
+.clr-w {	color: #ffffff;}
+.clr-r {	color: #ff6633;}
+.clr-g {	color: #6e6e6e;}
+.clr-gy {	color: #006c00;}	/*green*/
+.clr-lb {	color: #0e56dd;}	/*light blue*/	/*#0b44ad;cobalt blue*/
+.f16,.f14-lg,.ac1,.clr-g,.ls04 {letter-spacing: 0.4pt;}
+.ls411 {	letter-spacing: 4.11pt;}
+.f18 {	font-size: 18px;}
+.f16 {	font-size: 16px;}
+.f14-lg {	color: #6e6e6e;}
+.b {
+	font-weight: 700;
 	letter-spacing: 0.6pt;
 	color: #888888;
 }
-.bb {	font-weight: 700;
+.bb {
+	font-weight: 700;
 	color: #000000;
 }
-.aa {	font-size: 16px;
+.aa {
+	font-size: 16px;
 	line-height: 0.95em;
 	margin: 5em 0 1em 5em;
 }
-.td1 {	border-top: solid 0.05em #666666;
+.td1 {
+	border-top: solid 0.05em #666666;
 	border-bottom: solid 0.05em #666666;
 }
-.td2 {	border-bottom: solid 0.05em #0e56dd;	/*light blue*/
+.td2 {
+	border-bottom: solid 0.05em #0e56dd;	/*light blue*/
 	color: #0e56dd;	/*light blue*/
 }
-.td3 {	border-bottom: solid 0.05em #dfdfdf;	/*E/C-class 画像サイト*/
+.td3 {
+	border-bottom: solid 0.05em #dfdfdf;	/*E/C-class 画像サイト*/
 	color: #dfdfdf;
 }
 .td3:hover {
 	border-bottom: solid 0.05em #59f3ff ;	/*pale blue E/C-class 画像サイト**/
 	color: #59f3ff ;	/*pale blue E/C-class 画像サイト**/
 }
-.td4 {	color: #006c00;	/*green*/
+.td4 {
+	color: #006c00;	/*green*/
 	border-bottom: solid 0.05em #006c00;	/*green*/
 }
 /*文字列*/
-a {	text-decoration: none;
-}
-a:link {color: #060606;	/*標準*/
-}
-a:visited {color: #060606;	/*標準*/
-}
+a {	text-decoration: none;}
+a:link {color: #060606;}	/*標準*/
+a:visited {color: #060606;}	/*標準*/
 .lnk:hover {
 	color: #006c00;	/*green*/
 	border-bottom: solid 0.05em #006c00;	/*green*/
@@ -139,164 +126,89 @@ a:visited {color: #060606;	/*標準*/
 	color: #0e56dd;	/*light blue*/
 	border-bottom: solid 0.05em #0e56dd;	/*light blue*/
 }
-.top {	vertical-align: top;
-}
-.left {
-	text-align: left;
-}
-.mid {	text-align: center;
-}
-.mid2 {	margin: 0 auto;
-}
-.r ,.ru {	text-align: right;
-}
-.ru {	margin-top: -1.6em;
-}
-.lh0 {	line-height: 0;
+.top {	vertical-align: top;}
+.left {	text-align: left;}
+.mid {	text-align: center;}
+.mid2 {	margin: 0 auto;}
+.r ,.ru {	text-align: right;}
+.ru {	margin-top: -1.6em;}
+.lh0 {
+	line-height: 0;
 	color: #dfdfdf;
 }
-.lh1 {	line-height: 0.95em;
-}
-.lh2 {	line-height: 1.9em;
-}
+.lh1 {	line-height: 0.95em;}
+.lh2 {	line-height: 1.9em;}
 /*PB（下 margin）*/
-.pb1 {	padding-bottom: 0.7em;
-}
-.pb2 {	padding-bottom: 1.4em;
-}
-.pb3 {	padding-bottom: 2.8em;
-}
-.pb4 {	padding-bottom: 4.2em;
-}
-.pb5 {	padding-bottom: 5.6em;
-}
-.pb6 {	padding-bottom: 7em;
-}
-.pb7 {	padding-bottom: 8.4em;
-}
-.pb8 {	padding-bottom: 9.8em;
-}
-.pb9 {	padding-bottom: 11.2em;
-}
-.pb10 {	padding-bottom: 12.6em;
-}
-.pb11 {	padding-bottom: 14em;
-}
-.pb12 {	padding-bottom: 15.4em;
-}
+.pb1 {	padding-bottom: 0.7em;}
+.pb2 {	padding-bottom: 1.4em;}
+.pb3 {	padding-bottom: 2.8em;}
+.pb4 {	padding-bottom: 4.2em;}
+.pb5 {	padding-bottom: 5.6em;}
+.pb6 {	padding-bottom: 7em;}
+.pb7 {	padding-bottom: 8.4em;}
+.pb8 {	padding-bottom: 9.8em;}
+.pb9 {	padding-bottom: 11.2em;}
+.pb10 {	padding-bottom: 12.6em;}
+.pb11 {	padding-bottom: 14em;}
+.pb12 {	padding-bottom: 15.4em;}
 /*W*/
-.w1 {	width: 1em;
-}
-.w2 {	width: 2em;
-}
-.w3 {	width: 3em;
-}
-.w4 {	width: 4em;
-}
-.w5 {	width: 5em;
-}
-.w6 {	width: 6em;
-}
-.w7 {	width: 7em;
-}
-.w8 {	width: 8em;
-}
-.w9 {	width: 9em;
-}
-.w10 {	width: 10em;
-}
-.w12 {	width: 12em;
-}
-.w13 {	width: 13em;
-}
-.w14 {	width: 14em;
-}
-.w15 {	width: 15em;
-}
-.w16 {	width: 16em;
-}
-.w18 {	width: 18em;
-}
-.w20 {	width: 20em;
-}
-.w22 {	width: 22em;
-}
-.w24 {	width: 24em;
-}
-.w25 {	width: 25em;
-}
-.w30 {	width: 30em;
-}
-.w35 {	width: 35em;
-}
-.w90 {	width: 90em;
-}
-.w100 {	width: 1040px;
-}
-.w110 {	width: 1090px;
-}
-.w116 {	width: 1188px;
-}
-.w120 {	width: 1200px;
-}
-.w123 {	width: 1234px;
-}
+.w1 {	width: 1em;}
+.w2 {	width: 2em;}
+.w3 {	width: 3em;}
+.w4 {	width: 4em;}
+.w5 {	width: 5em;}
+.w6 {	width: 6em;}
+.w7 {	width: 7em;}
+.w8 {	width: 8em;}
+.w9 {	width: 9em;}
+.w10 {	width: 10em;}
+.w12 {	width: 12em;}
+.w13 {	width: 13em;}
+.w14 {	width: 14em;}
+.w15 {	width: 15em;}
+.w16 {	width: 16em;}
+.w18 {	width: 18em;}
+.w20 {	width: 20em;}
+.w22 {	width: 22em;}
+.w24 {	width: 24em;}
+.w25 {	width: 25em;}
+.w30 {	width: 30em;}
+.w35 {	width: 35em;}
+.w90 {	width: 90em;}
+.w100 {	width: 1040px;}
+.w110 {	width: 1090px;}
+.w116 {	width: 1188px;}
+.w120 {	width: 1200px;}
+.w123 {	width: 1234px;}
 /*S（右 margin）*/
-.s {	margin-right: 0.5em;
-}
-.s2 {	margin-right: 1em;
-}
-.s3 {	margin-right: 1.5em;
-}
-.s4 {	margin-right: 2em;
-}
-.s5 {	margin-right: 2.5em;
-}
-.s6 {	margin-right: 3em;
-}
-.s7 {	margin-right: 3.5em;
-}
-.s8 {	margin-right: 4em;
-}
-.s10 {	margin-right: 5.18em;	/*年表*/
-}
-.s12 {	margin-right: 6em;
-}
-.s14 {	margin-right: 7em;
-}
-.s16 {	margin-right: 8em;
-}
+.s {	margin-right: 0.5em;}
+.s2 {	margin-right: 1em;}
+.s3 {	margin-right: 1.5em;}
+.s4 {	margin-right: 2em;}
+.s5 {	margin-right: 2.5em;}
+.s6 {	margin-right: 3em;}
+.s7 {	margin-right: 3.5em;}
+.s8 {	margin-right: 4em;}
+.s10 {	margin-right: 5.18em;}	/*年表*/
+.s12 {	margin-right: 6em;}
+.s14 {	margin-right: 7em;}
+.s16 {	margin-right: 8em;}
 /*T（上 margin）*/
-.t0 {	margin-top: 0.8em;
-}
-.t0a {	margin-top: -0.16em;
-}
-.t0c {	margin-top: 0.5em;
-}
-.t1 {	margin-top: 1.6em;
-}
-.t1a {	margin-top: 1.9em;
-}
-.t2 {	margin-top: 3.2em;
-}
-.t3 {	margin-top: 4.8em;
-}
-.t4 {	margin-top: 6.4em;
-}
-.t4a {	margin-top: 5.63em;
-}
-.t5 {	margin-top: 8em;
-}
-.t17 {	margin-top: 17em;
-}
-.t18 {	margin-top: 18em;
-}
-.t18a {	margin-top: 17.8em;
-}
-.t37 {	margin-top: 7.55em;
-}
-.t21a {	margin-top: 21.7em;
-}
+.t0 {	margin-top: 0.8em;}
+.t0a {	margin-top: -0.16em;}
+.t0c {	margin-top: 0.5em;}
+.t1 {	margin-top: 1.6em;}
+.t1a {	margin-top: 1.9em;}
+.t2 {	margin-top: 3.2em;}
+.t3 {	margin-top: 4.8em;}
+.t4 {	margin-top: 6.4em;}
+.t4a {	margin-top: 5.63em;}
+.t5 {	margin-top: 8em;}
+.t17 {	margin-top: 17em;}
+.t18 {	margin-top: 18em;}
+.t18a {	margin-top: 17.8em;}
+.t37 {	margin-top: 7.55em;}
+.t21a {	margin-top: 21.7em;}
 /*M（左 margin）*/
 .m-1 {	margin-left: -1em;}
 .m0 {	margin-left: 0;}
@@ -422,88 +334,97 @@ a:visited {color: #060606;	/*標準*/
 .m54 {	margin-left: 54em;}
 .m66 {	margin-left: 66em;}
 /*▲ Pagetop に使う*/
-.ut-1 {	margin-top: -0.5em;
+.ut-1 {
+	margin-top: -0.5em;
 	margin-bottom: -0.5em;
 }
 /*img・ico*/
-img {	vertical-align: top;
+img {
+	vertical-align: top;
 	margin: 0;
 	padding: 2pt 0;
 }
-.kakumaru {	border-radius:10px;	/*Interior Trim*/
-}
+.kakumaru {	border-radius:10px;}	/*Interior Trim*/
 .ico-wiki,.ico-wiki2,.ico-camera,.ico-eg {
 	display: inline-block;
 	background-repeat: no-repeat;
 }
-.ico-wiki {width: 17px;
+.ico-wiki {
+	width: 17px;
 	margin-right: 3px;
 	background-image: url('ico/wiki.png');
 	height: 17px;
 }
-.ico-wiki2 {width: 17px;
+.ico-wiki2 {
+	width: 17px;
 	margin-right: 3px;
 	background-image: url('ico/wiki.png');
 	height: 14px;
 }
-.ico-camera {width: 20px;
+.ico-camera {
+	width: 20px;
 	height: 16px;
 	background-image: url('ico/camera.png');
 }
-.ico-eg {width: 24px;
+.ico-eg {
+	width: 24px;
 	background-image: url('ico/eg.png');
 }
 /*list*/
-table {	font-family: 'MS UI Gothic';
+table {
+	font-family: 'MS UI Gothic';
 	padding: 0 0 1em 0;
 	text-align: center;
 	margin-left: 1em;
 	table-layout: auto;
 }
-ul ,ol ,li ,dl ,dt {padding: 0;
+ul ,ol ,li ,dl ,dt {
+	padding: 0;
 	margin: 0;
 }
-ul ,ol ,dl {list-style: none;
+ul ,ol ,dl {
+	list-style: none;
 	overflow: hidden;
 	position: relative;
 	zoom: 1;
 }
-dt {	float: left;
+dt {
+	float: left;
 	clear: left;		/*後続の左寄せを解除*/
 }
-dd {	padding: 0;
+dd {
+	padding: 0;
 	margin: 0 1em 0 0;
 	float: left;
 }
 table, th, td {border:none;
 }
-th {	padding: 0 8px 0 0;
+th {
+	padding: 0 8px 0 0;
 	font-weight: 400;
 	border-bottom: 1px dashed #666666;	/*ヘッダ行の下線 */
 }
-tr {	vertical-align: top;
+tr {vertical-align: top;
 }
-td {	padding: 0 8px 0 0;
+td {padding: 0 8px 0 0;
 }
 .fix {
 	width: 1210px;
 	table-layout: fixed;
 }
-.trim_name {
-	overflow-wrap : break-word;
- }
+.trim_name {overflow-wrap : break-word;}
 /*inline*/
-.i {	display: inline;
-}
-.ib {	display: inline-block;
-}
-.wp {	white-space: normal;	/*折り返し*/
+.i {display: inline;}
+.ib {display: inline-block;}
+.wp {
+	white-space: normal;	/*折り返し*/
 	word-wrap: break-word;
 }
 .cb {	clear: both;		/*<br class = "cb">inline要素を殺したいとき*/
 }
 /*DIV*/
-div {	width: 100%;
+div {
+	width: 100%;
 	padding: 0;
 	margin: 0;
 	overflow: hidden;
@@ -540,78 +461,42 @@ div {	width: 100%;
 	background: #b0b0b0  ;
 	margin: 6px 0 0 22px;
 }
-.vs60 {height: 60px;
-}
-.vs90 ,.v90 {height: 90px;
-}
-.vs120 ,.v120 {height: 120px;
-}
-.v150 ,.vs150 {	height: 150px;
-}
-.vs170 {height: 170px;
-}
-.vs200 {height: 200px;
-}
-.v200 {	height: 200px;
-}
-.v220 {	height: 220px;
-}
-.vs240 ,.v240 {height: 240px;
-}
-.vs260 ,.v260 {height: 260px;
-}
-.v280 {height: 280px;
-}
-.v300 ,.vs300 {height: 300px;
-}
-.v320 {height: 320px;
-}
-.vs330 {height: 330px;
-}
-.v350 {height: 350px;
-}
-.vs360 {height: 360px;
-}
-.vs380 {height: 380px;
-}
-.v400 ,.vs400 {	height: 400px;
-}
-.vs420 ,.v420  {height: 420px;
-}
-.vs440 {height: 480px;
-}
-.v450  {height: 450px;
-}
-.v470  {height: 470px;
-}
-.v500 {	height: 500px;
-}
-.v600 {	height: 600px;
-}
-.v640 {	height: 640px;
-}
-.v680 {	height: 680px;
-}
-.v750 {	height: 760px;
-}
-.v830 {	height: 830px;
-}
-.v1000 {height: 1050px;
-}
-.v1100 {height: 1100px;
-}
-.v1200 {height: 1130px;
-}
-.v2000 {height: 2080px;
-}
-.v3200 {height: 3200px;
-}
-.v3800 {height: 3840px;
-}
-.v4100 {height: 4170px;
-}
-.v5600 {height: 5610px;
-}
+.vs60 {height: 60px;}
+.vs90 ,.v90 {height: 90px;}
+.vs120 ,.v120 {height: 120px;}
+.v150 ,.vs150 {	height: 150px;}
+.vs170 {height: 170px;}
+.vs200 {height: 200px;}
+.v200 {	height: 200px;}
+.v220 {	height: 220px;}
+.vs240 ,.v240 {height: 240px;}
+.vs260 ,.v260 {height: 260px;}
+.v280 {height: 280px;}
+.v300 ,.vs300 {height: 300px;}
+.v320 {height: 320px;}
+.vs330 {height: 330px;}
+.v350 {height: 350px;}
+.vs360 {height: 360px;}
+.vs380 {height: 380px;}
+.v400 ,.vs400 {	height: 400px;}
+.vs420 ,.v420  {height: 420px;}
+.vs440 {height: 480px;}
+.v450  {height: 450px;}
+.v470  {height: 470px;}
+.v500 {	height: 500px;}
+.v600 {	height: 600px;}
+.v640 {	height: 640px;}
+.v680 {	height: 680px;}
+.v750 {	height: 760px;}
+.v830 {	height: 830px;}
+.v1000 {height: 1050px;}
+.v1100 {height: 1100px;}
+.v1200 {height: 1130px;}
+.v2000 {height: 2080px;}
+.v3200 {height: 3200px;}
+.v3800 {height: 3840px;}
+.v4100 {height: 4170px;}
+.v5600 {height: 5610px;}
 
 /*BOX*/
 .box06 ,.box07 ,.box07a ,.box09 ,.box10 ,.box10a ,.box11 ,.box12 ,.box12a ,.box13 ,.box14 ,.box14b ,.box15 ,.box16a ,.box17 ,.box17a ,.box19 ,.box19a ,.box20 ,.box21 ,.box21a ,.box22 ,.box23 ,.box25 ,.box26 ,.box28 ,.box28a ,.box29a ,.box29 ,.box30 ,.box35 ,.box36 ,.box38a ,.box38 ,.box40 ,.box41 ,.box42 ,.box43 ,.box44 ,.box46 ,.box47a ,.box48 ,.box49 ,.box50 ,.box50a ,.box50b ,.box51 ,.box52 ,.box53 ,.box56 ,.box58 ,.box59 ,.box60 ,.box61 ,.box62 ,.box67 ,.box68 ,.box70 ,.box71 ,.box71a ,.box72 ,.box74 ,.box80 ,.box81 ,.box104 ,.box-dg 
