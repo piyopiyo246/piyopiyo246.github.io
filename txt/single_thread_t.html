@@ -23,7 +23,7 @@
 			$('p').each(function(){
 				var txt = $(this).html();
 				$(this).html(
-					txt.replace(/(\d{1,4}.*\d{2}\/\d{2}\/\d{2}.*\n)/g, '<span>$1</span>')
+					txt.replace(/(\n\d{1,4}.*\d{2}\/\d{2}\/\d{2}.*\n)/g, '<span>$1</span>')
 				);
 			});
 		});
