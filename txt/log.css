@@ -27,10 +27,12 @@ h1 {
 	margin-top: 1.2em ;
 	font-size: 120% ;
 }
-a {text-decoration: none;}
-a:link {color: #ffffff;}
-a:visited {color: #ffffff;}
-a:hover {color: #6bbef6;}	/*light blue*/
+.lnk:link {
+	color: #ffffff;
+	text-decoration: none;
+}
+.lnk:visited {color: #ffffff;}
+.lnk:hover {color: #6bbef6;}	/*light blue*/
 p {
 	white-space: pre;
 	margin-left: 1em;
