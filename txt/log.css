@@ -35,7 +35,7 @@ h1 {
 .lnk:hover {color: #6bbef6;}	/*light blue*/
 p {
 	white-space: pre;
-	margin-left: 1em;
+	margin-left: 1.4em;
 	line-height: 1,2em;
 	letter-spacing: 0.4pt;
 	word-wrap: break-word;
@@ -59,7 +59,7 @@ li {
 span {
 	color: #008000;
 	font-weight: 800;
-
+	margin: 0 0 0 -30px;
 }	/*green*/
 div {display: inline-block ;}
 /*search
