@@ -1,6 +1,5 @@
 
 *.BAK
-変換時のポイント.txt
 *.jbf
 eg.xlsx
 wp/*.log
