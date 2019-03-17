@@ -568,16 +568,18 @@ div {
 .box-135 {width: 1350px;}
 .box-wide {width: 1390px;}
 /*Timeline*/
-.timeline1, .timeline2{
+.timeline1,.timeline2,.timeline3 {
 	width:142.5px;
 	float: left;
 	padding: 0;
 	margin: 0 0 0 10.8em;
 	border-left: 1px dashed #888888;
+}
+.timeline1,.timeline2 {
 	border-right: 1px dashed #888888;
 }
-.timeline2 {margin: 0 0 0 8.1em;}
-.ht36 {	height:360px;}
+.timeline2,.timeline3 {margin: 0 0 0 8.1em;}
+.ht36 {	height:380px;}
 .ht52 {	height:530px;}
 .ht60 {	height:640px;}
 .ht68 {	height:680px;}
