@@ -40,12 +40,12 @@ body {
 h1 ,h2 {
 	font-size: 18px;
 	font-weight: normal;
-	margin: 0 0 0 1em;
+	margin: 0.2em 0 0 1em;
 	letter-spacing: 0.8px;
 }
 h3 ,h4 ,h5,h6 {
 	font-weight: normal;
-	margin: 0 0 0 1em;
+	margin: 0.2em 0 0 1em;
 	font-size: 18px;			/*px以外、OperaやEDGEで文字サイズがChoromeより小さくなる */
 }
 p {	margin: 0 0 0 3em;}
