@@ -76,25 +76,34 @@ ttp[ -~][^"¡¡ ]{90}
 ^([1-9][0-9]*[ ])
 \n\1
 ----------------------------------------------------------------------------------
-<!--
-	<script type="text/javascript" src='@routes.Assets.versioned("../js/jquery.highlight.js")'></script>
-	<script type="text/javascript" src='@routes.Assets.versioned("../js/inpage.search.js")'></script>
-	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-	<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
-	<script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
- -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script type="text/javascript">
-		$(function() {
-			$('p').each(function(){
-				var txt = $(this).html();
-				$(this).html(
-					txt.replace(/(\n\d{1,4}.*\d{2}\/\d{2}\/\d{2}.*\n)/g, '<span>$1</span>')
-				);
-			});
-		});
-	</script>
+	<div>
+		<div class="box51">
+				<img src="style/e/w210_d2.jpg" alt="Mercedes,W210,E-class,dashboard2" width="510" height="">
+		</div>
+		<div class="box70">
+				<img src="style/e/w210_a.jpg" alt="Mercedes,W210,E-class,dimensions" width="700" height=""> 
+		</div>
+	</div>
+
+
+	<div>
+		<div class="box53">
+				<img src="style/e/w210_d2.jpg" alt="Mercedes,W210,E-class,dashboard2" width="524" height="">
+		</div>
+		<div class="box68">
+				<img src="style/e/w210_a.jpg" alt="Mercedes,W210,E-class,dimensions" width="680" height=""> 
+		</div>
+	</div>
+
+	<div>
+		<div class="box61"><br>
+				<img src="style/slk/r172_d.jpg" alt="Mercedes,R172,SLK,dashboard" width="604" height="">
+		</div>
+		<div class="box61">
+				<img src="style/slk/r172_d2.jpg" alt="Mercedes,R172,SLC,dashboard" width="604" height="">
+		</div>
+	</div>
+----------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------
 (?#maxlines:10)\n+
 ----------------------------------------------------------------------------------
