@@ -7,20 +7,19 @@ body {
 	font-family: 'MS UI Gothic', "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 	line-height: 1.6em;
 	font-size: 18px;			/*px以外、OperaやEDGEで文字サイズがChoromeより小さくなる */
-	color: #000000;	/*標準*/
 	letter-spacing: 0;
 	text-align: left;
 	vertical-align: middle;
-	background: #dfdfdf;	/*011930*/
+	background: #f2f2f2;	/*011930*/
 	white-space: nowrap;
 	margin: 0 0 1% 0;
-	scrollbar-arrow-color:#dfdfdf;
-	scrollbar-face-color:#dfdfdf;
-	scrollbar-3dlight-color:#dfdfdf;
-	scrollbar-darkshadow-color:#dfdfdf;
-	scrollbar-highlight-color:#dfdfdf;
-	scrollbar-shadow-color:#dfdfdf;
-	scrollbar-track-color:#dfdfdf;
+	scrollbar-arrow-color:#f2f2f2 ;
+	scrollbar-face-color:#f2f2f2 ;
+	scrollbar-3dlight-color:#f2f2f2 ;
+	scrollbar-darkshadow-color:#f2f2f2 ;
+	scrollbar-highlight-color:#f2f2f2 ;
+	scrollbar-shadow-color:#f2f2f2 ;
+	scrollbar-track-color:#f2f2f2 ;
 	-webkit-text-size-adjust: none;
 }
 ::-webkit-scrollbar {	/*スクロールバー全体*/
@@ -667,7 +666,7 @@ input:focus {
 	text-align: center;
 	padding: 0 8pt;
 	height: 16pt;
-	background: #dfdfdf;
+	background: #f2f2f2;
 	border:solid 1px #6e6e6e;	/*標準↑*/
 	border-radius: 1px;
 	display: inline-block;
