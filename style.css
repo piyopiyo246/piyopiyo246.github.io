@@ -658,7 +658,7 @@ input:focus {
 	color: #1b2943;	/*褐返し*/
 }
 .square_btn {
-	color: #555555;	/*標準^*/
+	color: #444444;	/*標準^*/
 	font-family: Lato;
 	font-size: 12px;
 	text-align: center;
@@ -670,8 +670,8 @@ input:focus {
 	display: inline-block;
 }
 .square_btn:hover {
-	color: #134013;			/*グレイみの抹茶*/
-	background: #ececec ;
+	color: #000000;
+	background: #ececec;
 	border:solid 1px #555555;	/*標準^*/
 }
 /*Side txt*/
