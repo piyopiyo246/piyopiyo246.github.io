@@ -711,7 +711,9 @@ input:focus {
 	margin-right:1em;
 	color: #888888;	
 }
-.bf3:before {content: "■ ";}
+.bf3:before {content: "■ ";
+	color: #444444;	/*標準↑*/
+}
 /*Accordion*/
 .ac1 {	/*▼対応*/
 	color: #6e6e6e;	/*標準↑*/
