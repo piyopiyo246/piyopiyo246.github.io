@@ -369,7 +369,8 @@ img {
 	background-image: url('ico/camera.png');
 }
 .ico-eg {
-	width: 24px;
+	width: 20px;
+	height: 16px;
 	background-image: url('ico/eg.png');
 }
 /*list*/
