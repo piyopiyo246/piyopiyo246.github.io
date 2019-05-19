@@ -116,7 +116,7 @@ hr {
 }
 /*文字列*/
 a {	text-decoration: none;}
-a:link {color: #666666;}	/*標準*/
+a:link {color: #060606;}	/*標準*/
 a:visited {color: #060606;}	/*標準*/
 .lnk:hover {
 	color: #006c00;	/*green*/
