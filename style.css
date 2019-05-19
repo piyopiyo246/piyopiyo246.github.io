@@ -419,7 +419,7 @@ td {padding: 0 8px 0 0;}
 	white-space: normal;	/*折り返し*/
 	word-wrap: break-word;
 }
-.cb {	clear: both;}	/*<br class = "cb">inline要素を殺したいとき*/
+.cb {	clear: both;}	/*inline要素を殺したいとき*/
 /*DIV*/
 div {
 	width: 100%;
