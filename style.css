@@ -726,7 +726,7 @@ input:focus {
 	border-radius: 2px;
 }
 .ac1:hover {
-	color: #0e56dd;	/*light blue*/
+	color: #000000;	/**/
 	background: #ececec ;	/*薄いwhite*/
 	transition: 0.2s;
 }
