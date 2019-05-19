@@ -74,10 +74,9 @@ hr {
 .clr-g {color: #6e6e6e;}
 .clr-gy {color: #006c00;}	/*green*/
 .clr-lb {color: #0e56dd;}	/*light blue*/	/*#0b44ad;cobalt blue*/
-.f16,.f14-lg,.ac1,.clr-g,.ls04 {letter-spacing: 0.4pt;}
+.f14-lg,.ac1,.clr-g,.ls04 {letter-spacing: 0.4pt;}
 .ls411 {letter-spacing: 4.11pt;}
 .f18 {font-size: 18px;}
-.f16 {font-size: 16px;}
 .f14-lg {color: #6e6e6e;}
 .b {
 	font-weight: 700;
