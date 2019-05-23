@@ -75,9 +75,8 @@ hr {
 .clr-g {color: #6e6e6e;}
 .clr-gy {color: #006c00;}	/*green*/
 .clr-lb {color: #0e56dd;}	/*light blue*/	/*#0b44ad;cobalt blue*/
-.f14-lg,.ac1,.clr-g,.ls04 {letter-spacing: 0.4pt;}
+.ac1,.clr-g,.ls04 {letter-spacing: 0.4pt;}
 .ls411 {letter-spacing: 4.11pt;}
-.f14-lg {color: #6e6e6e;}
 .b {
 	font-weight: 700;
 	letter-spacing: 0.6pt;
