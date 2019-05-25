@@ -438,6 +438,9 @@ div {
 	margin-left: auto;
 	margin-right: auto;
 }
+.style-n {
+	margin-top: 10px;
+}
 .bk-w {	background: #ffffff;}
 .f {float: left;}
 .float {clear: none;}		/*後続の左寄せを解除しない*/
