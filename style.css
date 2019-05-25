@@ -586,7 +586,7 @@ div {
 }
 .b-box {
 	width: 1060px;
-	height: 27px;
+	height: 34px;
 	position: absolute;/*絶対配置*/
 	background: #000000;
 	top: 46%;
@@ -602,7 +602,7 @@ div {
 	color: #f0f0f0;
 	font-family: Lato;
 	text-align: center;
-	height: 1.8em;
+	height: 32px;
 	letter-spacing: 6px;
 	width: 150px;
 	margin: 2px 0.5px;
