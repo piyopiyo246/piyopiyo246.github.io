@@ -17,9 +17,30 @@
 	<link href="../style.css" rel="stylesheet" type="text/css">
 	<link rel="shortcut icon" href="../ico/mb-logo-g.png" type="image/vnd.microsoft.icon">
 	<title>A-klasse</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+	<script type="text/javascript">
+	$(function() {
+		var topBtn = $('#page-top');	
+		topBtn.hide();
+		$(window).scroll(function () {
+			if ($(this).scrollTop() > 100) {
+				topBtn.fadeIn();
+			} else {
+				topBtn.fadeOut();
+			}
+		});
+		//スクロールしてトップ
+	    topBtn.click(function () {
+			$('body,html').animate({
+				scrollTop: 0
+			}, 500);
+			return false;
+	    });
+	});
+	</script>
 </head>
 <body>
-<p class="lh0 pb1"><a id="HEADER">.</a></p>
+<div id="wrap">
 <header>
 <nav class="style-n">
 <p class="i m0"><a title="Zur&uuml;ck zur C-Klasse-Vorlage" href="../c_klasse.html" class="lnk2"> テンプレ</a></p>
@@ -102,7 +123,6 @@
 		<img src="style/a/w168l_a.jpg" alt="Mercedes,W168,A-class,Lang,primary,dimensions" width="600" height="664">
 </div>
 <h2 class="style-n b">2te A-klasse</h2>
-<p class="ru s2 clr-g"><a href="#HEADER" class="lnk2 bf4"> Top</a></p>
 <div class="style-w">
 	<a id="w169" href="http://de.wikipedia.org/wiki/Mercedes-Benz_Baureihe_169" class="ico-wiki" title="Wikipedia(D)_Mercedes-Benz_Baureihe_169"></a>
 	<h3 class="i m0">W169 / C169</h3>
@@ -143,7 +163,6 @@
 		<img src="style/a/c169_a.png" alt="Mercedes,C169,A-class,dimensions" width="901" height="579">
 </div>
 <h2 class="style-n b">3te A-klasse</h2>
-<p class="ru s2 clr-g"><a href="#HEADER" class="lnk2 bf4"> Top</a></p>
 <div class="style-w">
 	<a id="w176" href="http://de.wikipedia.org/wiki/Mercedes-Benz_W_176" class="ico-wiki" title="Wikipedia(D)_Mercedes-Benz_W_176"></a>
 	<h3 class="i m0">W176</h3>
@@ -169,7 +188,6 @@
 		<img src="style/a/w176_a.jpg" alt="Mercedes,W176,A-class,dimensions" width="806" height="1049">
 </div>
 <h2 class="style-n b">4te A-klasse</h2>
-<p class="ru s2 clr-g"><a href="#HEADER" class="lnk2 bf4"> Top</a></p>
 <div class="style-w">
 	<a id="w177" href="http://de.wikipedia.org/wiki/Mercedes-Benz_W_177" class="ico-wiki" title="Wikipedia(D)_Mercedes-Benz_W_177"></a>
 	<h3 class="i m0">W177</h3>
@@ -232,7 +250,7 @@
 <footer>
 <nav class="style-n">
 <p class="m0 bb">■ Mercedes-Benz Pkw GALERIE</p>
-<p class="ru s2"><a title="Zur&uuml;ck zur C-Klasse-Vorlage" href="../c_klasse.html" class="lnk2"> テンプレに戻る </a>　<a href="#HEADER" class="lnk2 bf4"> Top</a></p>
+<p class="ru s2"><a title="Zur&uuml;ck zur C-Klasse-Vorlage" href="../c_klasse.html" class="lnk2"> テンプレに戻る </a></p>
 <dl class="m1">
 	<dt class="w12 b">Limousine・Kombi</dt>
 		<dd class="s3 clr-lb">A-klasse</dd>
@@ -265,6 +283,8 @@
 </dl>
 </nav>
 </footer>
+<p id="page-top"><a href="#wrap">▲</a></p>
+</div>
 <hr>
 </body>
 </html>

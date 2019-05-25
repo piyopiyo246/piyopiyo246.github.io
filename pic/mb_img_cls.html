@@ -17,9 +17,30 @@
 	<link href="../style.css" rel="stylesheet" type="text/css">
 	<link rel="shortcut icon" href="../ico/mb-logo-g.png" type="image/vnd.microsoft.icon">
 	<title>CLS-klasse</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+	<script type="text/javascript">
+	$(function() {
+		var topBtn = $('#page-top');	
+		topBtn.hide();
+		$(window).scroll(function () {
+			if ($(this).scrollTop() > 100) {
+				topBtn.fadeIn();
+			} else {
+				topBtn.fadeOut();
+			}
+		});
+		//スクロールしてトップ
+	    topBtn.click(function () {
+			$('body,html').animate({
+				scrollTop: 0
+			}, 500);
+			return false;
+	    });
+	});
+	</script>
 </head>
 <body>
-<p class="lh0 pb1"><a id="HEADER">.</a></p>
+<div id="wrap">
 <header>
 <nav class="style-n">
 <p class="i m0"><a title="Zur&uuml;ck zur C-Klasse-Vorlage" href="../c_klasse.html" class="lnk2"> テンプレ</a></p>
@@ -89,7 +110,6 @@
 		<img src="style/cls/c219_a.gif" alt="Mercedes,C219,CLS,dimensions" width="1000" height="540">
 </div>
 <h2 class="style-n b">2te CLS-klasse</h2>
-<p class="ru s2 clr-g"><a href="#HEADER" class="lnk2 bf4"> Top</a></p>
 <div class="style-w">
 	<a id="w218" href="http://de.wikipedia.org/wiki/Mercedes-Benz_Baureihe_218" class="ico-wiki" title="Wikipedia(D)_Mercedes-Benz_Baureihe_218"></a>
 	<h3 class="i m0">C218</h3>
@@ -133,7 +153,6 @@
 		<img src="style/cls/x218_a_4.jpg" alt="Mercedes,X218,CLS,dimensions4" width="749" height="328">
 </div>
 <h2 class="style-n b">3te CLS-klasse</h2>
-<p class="ru s2 clr-g"><a href="#HEADER" class="lnk2 bf4"> Top</a></p>
 <div class="style-w">
 	<a id="w257" href="http://de.wikipedia.org/wiki/Mercedes-Benz_Baureihe_257" class="ico-wiki" title="Wikipedia(D)_Mercedes-Benz_Baureihe_257"></a>
 	<h3 class="i m0">C257</h3>
@@ -150,7 +169,7 @@
 <footer>
 <nav class="style-n">
 <p class="m0 bb">■ Mercedes-Benz Pkw GALERIE</p>
-<p class="ru s2"><a title="Zur&uuml;ck zur C-Klasse-Vorlage" href="../c_klasse.html" class="lnk2"> テンプレに戻る </a>　<a href="#HEADER" class="lnk2 bf4"> Top</a></p>
+<p class="ru s2"><a title="Zur&uuml;ck zur C-Klasse-Vorlage" href="../c_klasse.html" class="lnk2"> テンプレに戻る </a></p>
 <dl class="m1">
 	<dt class="w12 b">Limousine・Kombi</dt>
 		<dd class="s3"><a href="mb_img_a.html" class="lnk2">A-klasse</a></dd>
@@ -183,6 +202,8 @@
 </dl>
 </nav>
 </footer>
+<p id="page-top"><a href="#wrap">▲</a></p>
+</div>
 <hr>
 </body>
 </html>

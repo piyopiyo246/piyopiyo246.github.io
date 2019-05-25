@@ -17,9 +17,30 @@
 	<link href="../style.css" rel="stylesheet" type="text/css">
 	<link rel="shortcut icon" href="../ico/mb-logo-g.png" type="image/vnd.microsoft.icon">
 	<title>S-klasse</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+	<script type="text/javascript">
+	$(function() {
+		var topBtn = $('#page-top');	
+		topBtn.hide();
+		$(window).scroll(function () {
+			if ($(this).scrollTop() > 100) {
+				topBtn.fadeIn();
+			} else {
+				topBtn.fadeOut();
+			}
+		});
+		//スクロールしてトップ
+	    topBtn.click(function () {
+			$('body,html').animate({
+				scrollTop: 0
+			}, 500);
+			return false;
+	    });
+	});
+	</script>
 </head>
 <body>
-<p class="lh0 pb1"><a id="HEADER">.</a></p>
+<div id="wrap">
 <header>
 <nav class="style-n">
 <p class="i m0"><a title="Zur&uuml;ck zur C-Klasse-Vorlage" href="../c_klasse.html" class="lnk2"> テンプレ</a></p>
@@ -85,7 +106,6 @@
 		<img src="style/s/s_all.jpg" alt="Mercedes,S_all" width="1210" height="1069">
 </div>
 <h2 class="style-n b">Typ 220</h2>
-<p class="ru s2 clr-g"><a href="#HEADER" class="lnk2 bf4"> Top</a></p>
 <div class="style-w">
 	<a id="w187" href="http://de.wikipedia.org/wiki/Mercedes-Benz_W_187" class="ico-wiki" title="Wikipedia(D)_Mercedes-Benz_W_187"></a>
 	<h3 class="i m0">W187</h3>
@@ -98,7 +118,6 @@
 		<img src="style/s/w187k_r.jpg" alt="Mercedes,W187,Delivery Lieferwagen,rear" width="751" height="400">
 </div>
 <h2 class="style-n b">Ponton</h2>
-<p class="ru s2 clr-g"><a href="#HEADER" class="lnk2 bf4"> Top</a></p>
 <div class="style-w">
 	<a id="w180" href="http://de.wikipedia.org/wiki/Mercedes-Benz_W_180" class="ico-wiki" title="Wikipedia(D)_Mercedes-Benz_W_180"></a>
 	<h3 class="i m0">W180</h3>
@@ -114,7 +133,6 @@
 		<img src="style/s/w128_r.jpg" alt="Mercedes,W180,rear" width="604" height="429">
 </div>
 <h2 class="style-n b">Heckflosse (Fintail)</h2>
-<p class="ru s2 clr-g"><a href="#HEADER" class="lnk2 bf4"> Top</a></p>
 <div class="style-w">
 	<a id="w111" href="http://de.wikipedia.org/wiki/Mercedes-Benz_W_111" class="ico-wiki" title="Wikipedia(D)_wiki/Mercedes-Benz_W_111"></a>
 	<h3 class="i m0">W111</h3>
@@ -138,7 +156,6 @@
 		<img src="style/s/w108-w111-heck.jpg" alt="Mercedes,W108-w111,rear view" width="1210" height="670">
 </div>
 <h2 class="style-n b">W108</h2>
-<p class="ru s2 clr-g"><a href="#HEADER" class="lnk2 bf4"> Top</a></p>
 <div class="style-w">
 	<a id="w108" href="http://de.wikipedia.org/wiki/Mercedes-Benz_W_108" class="ico-wiki" title="Wikipedia(D)_Mercedes-Benz_W_108"></a>
 	<h3 class="i m0">W108</h3>
@@ -154,7 +171,6 @@
 		<img src="style/s/w108_a.gif" alt="Mercedes,W108,S-class,primary,dimensions" width="646" height="258">
 </div>
 <h2 class="style-n b">1ste S-klasse</h2>
-<p class="ru s2 clr-g"><a href="#HEADER" class="lnk2 bf4"> Top</a></p>
 <div class="style-w">
 	<a id="w116" href="http://de.wikipedia.org/wiki/Mercedes-Benz_Baureihe_116" class="ico-wiki" title="Wikipedia(D)_Mercedes-Benz_Baureihe_116"></a>
 	<h3 class="i m0">W116</h3>
@@ -168,7 +184,6 @@
 		<img src="style/s/w116_a.jpg" alt="Mercedes,W116,S-class,primary,dimensions" width="860" height="1080">
 </div>
 <h2 class="style-n b">2te S-klasse</h2>
-<p class="ru s2 clr-g"><a href="#HEADER" class="lnk2 bf4"> Top</a></p>
 <div class="style-w">
 	<a id="w126" href="http://de.wikipedia.org/wiki/Mercedes-Benz_Baureihe_126" class="ico-wiki" title="Wikipedia(D)_Mercedes-Benz_Baureihe_126"></a>
 	<h3 class="i m0">W126</h3>
@@ -194,7 +209,6 @@
 	<img src="style/s/w126_a.jpg" alt="Mercedes,W126,S-class,2th,dimensions" width="804" height="422">
 </div>
 <h2 class="style-n b">3te S-klasse</h2>
-<p class="ru s2 clr-g"><a href="#HEADER" class="lnk2 bf4"> Top</a></p>
 <div class="style-w">
 	<a id="w140" href="http://de.wikipedia.org/wiki/Mercedes-Benz_Baureihe_140" class="ico-wiki" title="Wikipedia(D)_Mercedes-Benz_Baureihe_140"></a>
 	<h3 class="i m0">W140</h3>
@@ -215,7 +229,6 @@
 		<img src="style/s/w140l_i.jpg" alt="Mercedes,W140, Pullman,interior" width="671" height="419">
 </div>
 <h2 class="style-n b">4te S-klasse</h2>
-<p class="ru s2 clr-g"><a href="#HEADER" class="lnk2 bf4"> Top</a></p>
 <div class="style-w">
 	<a id="w220" href="http://de.wikipedia.org/wiki/Mercedes-Benz_Baureihe_220" class="ico-wiki" title="Wikipedia(D)_Mercedes-Benz_Baureihe_220"></a>
 	<h3 class="i m0">W220</h3>
@@ -240,7 +253,6 @@
 		<img src="style/s/w220l_i.jpg" alt="Mercedes,W220, interior" width="528" height="297">
 </div>
 <h2 class="style-n b">5te S-klasse</h2>
-<p class="ru s2 clr-g"><a href="#HEADER" class="lnk2 bf4"> Top</a></p>
 <div class="style-w">
 	<a id="w221" href="http://de.wikipedia.org/wiki/Mercedes-Benz_Baureihe_221" class="ico-wiki" title="Wikipedia(D)_Mercedes-Benz_Baureihe_221"></a>
 	<h3 class="i m0">W221</h3>
@@ -274,7 +286,6 @@
 	</div>
 </div>
 <h2 class="style-n b">6te S-klasse</h2>
-<p class="ru s2 clr-g"><a href="#HEADER" class="lnk2 bf4"> Top</a></p>
 <div class="style-w">
 	<a id="w222" href="http://de.wikipedia.org/wiki/Mercedes-Benz_Baureihe_222" class="ico-wiki" title="Wikipedia(D)_Mercedes-Benz_Baureihe_222"></a>
 	<h3 class="i m0">W222</h3>
@@ -305,7 +316,7 @@
 <footer>
 <nav class="style-n">
 <p class="m0 bb">■ Mercedes-Benz Pkw GALERIE</p>
-<p class="ru s2"><a title="Zur&uuml;ck zur C-Klasse-Vorlage" href="../c_klasse.html" class="lnk2"> テンプレに戻る </a>　<a href="#HEADER" class="lnk2 bf4"> Top</a></p>
+<p class="ru s2"><a title="Zur&uuml;ck zur C-Klasse-Vorlage" href="../c_klasse.html" class="lnk2"> テンプレに戻る </a></p>
 <dl class="m1">
 	<dt class="w12 b">Limousine・Kombi</dt>
 		<dd class="s3"><a href="mb_img_a.html" class="lnk2">A-klasse</a></dd>
@@ -338,6 +349,8 @@
 </dl>
 </nav>
 </footer>
+<p id="page-top"><a href="#wrap">▲</a></p>
+</div>
 <hr>
 </body>
 </html>

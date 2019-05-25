@@ -17,9 +17,30 @@
 	<link href="../style.css" rel="stylesheet" type="text/css">
 	<link rel="shortcut icon" href="../ico/mb-logo-g.png" type="image/vnd.microsoft.icon">
 	<title>Gel&auml;ndewagen</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+	<script type="text/javascript">
+	$(function() {
+		var topBtn = $('#page-top');	
+		topBtn.hide();
+		$(window).scroll(function () {
+			if ($(this).scrollTop() > 100) {
+				topBtn.fadeIn();
+			} else {
+				topBtn.fadeOut();
+			}
+		});
+		//スクロールしてトップ
+	    topBtn.click(function () {
+			$('body,html').animate({
+				scrollTop: 0
+			}, 500);
+			return false;
+	    });
+	});
+	</script>
 </head>
 <body>
-<p class="lh0 pb1"><a id="HEADER">.</a></p>
+<div id="wrap">
 <header>
 <nav class="style-n">
 <p class="i m0"><a title="Zur&uuml;ck zur C-Klasse-Vorlage" href="../c_klasse.html" class="lnk2"> テンプレ</a></p>
@@ -99,7 +120,6 @@
 		<img src="style/g/w460a_f.jpg" alt="Mercedes,W460,G-class,cabriolet,front" width="604" height="453">
 		<img src="style/g/w460a_r.jpg" alt="Mercedes,W460,G-class,cabriolet,rear" width="604" height="453">
 </div> <br>
-<p class="ru s2 clr-g"><a href="#HEADER" class="lnk2 bf4"> Top</a></p>
 <div class="style-w">
 	<a id="w461" href="https://pl.wikipedia.org/wiki/Mercedes-Benz_250_GD_Wolf" class="ico-wiki" title="Wikipedia(D)_Mercedes-Benz_250_GD_Wolf"></a>
 	<h3 class="i m0">W461</h3>
@@ -142,7 +162,6 @@
 		<img src="style/g/w461l_m4_f.jpg" alt="Mercedes,W461,G-class,Lang,military4,front" width="603" height="401">
 		<img src="style/g/w461l_m5_f.jpg" alt="Mercedes,W461,G-class,Lang,military5,front" width="603" height="401">
 </div> <br>
-<p class="ru s2 clr-g"><a href="#HEADER" class="lnk2 bf4"> Top</a></p>
 <div class="style-w">
 	<h3 class="i"><a id="w463">W463</a></h3>
 	<p class="i m1">1990-</p>
@@ -199,7 +218,6 @@
 	<p class="i m1">2014</p><br>
 		<img src="style/g/w463l_f3_6x6.jpg" alt="Mercedes,W463,6x6,G-class,front3" width="1210" height="759"><br>
 </div> <br>
-<p class="ru s2 clr-g"><a href="#HEADER" class="lnk2 bf4"> Top</a></p>
 <div class="style-w">
 	<h3 class="i"><a id="w463_2">W463_Ⅱ</a></h3>
 	<p class="i m1">01/2018</p>
@@ -213,7 +231,7 @@
 <footer>
 <nav class="style-n">
 <p class="m0 bb">■ Mercedes-Benz Pkw GALERIE</p>
-<p class="ru s2"><a title="Zur&uuml;ck zur C-Klasse-Vorlage" href="../c_klasse.html" class="lnk2"> テンプレに戻る </a>　<a href="#HEADER" class="lnk2 bf4"> Top</a></p>
+<p class="ru s2"><a title="Zur&uuml;ck zur C-Klasse-Vorlage" href="../c_klasse.html" class="lnk2"> テンプレに戻る </a></p>
 <dl class="m1">
 	<dt class="w12 b">Limousine・Kombi</dt>
 		<dd class="s3"><a href="mb_img_a.html" class="lnk2">A-klasse</a></dd>
@@ -246,6 +264,8 @@
 </dl>
 </nav>
 </footer>
+<p id="page-top"><a href="#wrap">▲</a></p>
+</div>
 <hr>
 </body>
 </html>

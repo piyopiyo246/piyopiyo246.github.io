@@ -17,9 +17,30 @@
 	<link href="../style.css" rel="stylesheet" type="text/css">
 	<link rel="shortcut icon" href="../ico/mb-logo-g.png" type="image/vnd.microsoft.icon">
 	<title>Gro&szlig;er Maybach</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+	<script type="text/javascript">
+	$(function() {
+		var topBtn = $('#page-top');	
+		topBtn.hide();
+		$(window).scroll(function () {
+			if ($(this).scrollTop() > 100) {
+				topBtn.fadeIn();
+			} else {
+				topBtn.fadeOut();
+			}
+		});
+		//スクロールしてトップ
+	    topBtn.click(function () {
+			$('body,html').animate({
+				scrollTop: 0
+			}, 500);
+			return false;
+	    });
+	});
+	</script>
 </head>
 <body>
-<p class="lh0 pb1"><a id="HEADER">.</a></p>
+<div id="wrap">
 <header>
 <nav class="style-n">
 <p class="i m0"><a title="Zur&uuml;ck zur C-Klasse-Vorlage" href="../c_klasse.html" class="lnk2"> テンプレ</a></p>
@@ -89,7 +110,6 @@
 		<img src="style/l/w186l_a.gif" alt="Mercedes,W186,landaulet,dimensions" width="967" height="543">
 </div>
 <h2 class="style-n b">Typ 300 d</h2>
-<p class="ru s2 clr-g"><a href="#HEADER" class="lnk2 bf4"> Top</a></p>
 <div class="style-w">
 	<a id="w189" href="http://de.wikipedia.org/wiki/Mercedes-Benz_W_189" class="ico-wiki" title="Wikipedia(D)_Mercedes-Benz_W_189"></a>
 	<h3 class="i m0">W189</h3>
@@ -110,7 +130,6 @@
 		<img src="style/l/w189l_fl.jpg" alt="Mercedes,W189,landaulet,lange,front" width="603" height="452">
 </div>
 <h2 class="style-n b">Typ 600</h2>
-<p class="ru s2 clr-g"><a href="#HEADER" class="lnk2 bf4"> Top</a></p>
 <div class="style-w">
 	<a id="w100" href="http://de.wikipedia.org/wiki/Mercedes-Benz_W_100" class="ico-wiki" title="Wikipedia(D)_Mercedes-Benz_W_100"></a>
 	<h3 class="i m0">W100</h3>
@@ -140,7 +159,6 @@
 </div>
 	<a id="w240"><img src="style/l/Maybach-Logo.png" alt="Maybach-Logo" width="100" height="74"></a>
 <h2 class="style-n b">Maybach</h2>
-<p class="ru s2 clr-g"><a href="#HEADER" class="lnk2 bf4"> Top</a></p>
 <div class="style-w">
 	<a href="http://de.wikipedia.org/wiki/Maybach_57_und_62" class="ico-wiki" title="Wikipedia(D)_Maybach_57_und_62"></a>
 	<h3 class="i m0">W240</h3>
@@ -163,7 +181,6 @@
 		<img src="style/l/w240_62l_i.jpg" alt="Mercedes,W240,Maybach,62,landaulet,interior" width="554" height="368">
 </div>
 <h2 class="style-n b">Mercedes Maybach</h2>
-<p class="ru s2 clr-g"><a href="#HEADER" class="lnk2 bf4"> Top</a></p>
 <div class="style-w">
 	<a id="w222" href="http://de.wikipedia.org/wiki/Mercedes-Benz_Baureihe_222" class="ico-wiki" title="Wikipedia(D)_Mercedes-Benz_Baureihe_222"></a>
 	<h3 class="i m0">X222</h3>
@@ -183,7 +200,7 @@
 <footer>
 <nav class="style-n">
 <p class="m0 bb">■ Mercedes-Benz Pkw GALERIE</p>
-<p class="ru s2"><a title="Zur&uuml;ck zur C-Klasse-Vorlage" href="../c_klasse.html" class="lnk2"> テンプレに戻る </a>　<a href="#HEADER" class="lnk2 bf4"> Top</a></p>
+<p class="ru s2"><a title="Zur&uuml;ck zur C-Klasse-Vorlage" href="../c_klasse.html" class="lnk2"> テンプレに戻る </a></p>
 <dl class="m1">
 	<dt class="w12 b">Limousine・Kombi</dt>
 		<dd class="s3"><a href="mb_img_a.html" class="lnk2">A-klasse</a></dd>
@@ -216,6 +233,8 @@
 </dl>
 </nav>
 </footer>
+<p id="page-top"><a href="#wrap">▲</a></p>
+</div>
 <hr>
 </body>
 </html>
