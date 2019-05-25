@@ -4,6 +4,8 @@
 @import url(https://fonts.googleapis.com/earlyaccess/notosansjp.css);
 /*body*/
 body {
+	margin-right: auto;
+	margin-left : auto;
 	font-family: 'MS UI Gothic', "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 	line-height: 1.6em;
 	font-size: 18px;			/*px以外、OperaやEDGEで文字サイズがChoromeより小さくなる */
@@ -12,7 +14,10 @@ body {
 	vertical-align: middle;
 	background: #f2f2f2;	/*011930*/
 	white-space: nowrap;
-	margin: 0 0 1% 0;
+	width: 1356px;
+	margin-top: 0;
+	margin-left: auto;
+	margin-right: auto;
 	min-width: 200px;
 	scrollbar-arrow-color:#f2f2f2 ;
 	scrollbar-face-color:#f2f2f2 ;
@@ -40,7 +45,7 @@ body {
 h1 ,h2 {
 	font-size: 18px;
 	font-weight: normal;
-	margin: 0.2em 0 0 1em;
+	margin: 0.6em 0 0 1em;
 	letter-spacing: 0.8px;
 }
 h3 ,h4 ,h5,h6 {
@@ -50,16 +55,9 @@ h3 ,h4 ,h5,h6 {
 }
 p {	margin: 0 0 0 3em;}
 hr {
-	margin: 0.7em 0.5em 0.9em 0.5em;
+	width: 1214px;
 	border: none;
 	border-top: 1px #6e6e6e solid;
-}
-.d_line {
-	height: 1px;
-	border: 0;
-	background:linear-gradient(left, #f2f2f2, #6e6e6e, #f2f2f2);
-	background:-webkit-linear-gradient(left, #f2f2f2, #6e6e6e, #f2f2f2);
-	background:-moz-linear-gradient(left, #f2f2f2, #6e6e6e, #f2f2f2);
 }
 /*font*/
 .clr-f1 {color: #111111;}
@@ -126,7 +124,6 @@ a:visited {color: #060606;}	/*標準*/
 .top {vertical-align: top;}
 .left {text-align: left;}
 .mid {text-align: center;}
-.mid2 {margin: 0 auto;}
 .r ,.ru {text-align: right;}
 .ru {margin-top: -1.6em;}
 .lh0 {
@@ -134,7 +131,6 @@ a:visited {color: #060606;}	/*標準*/
 	color: #f2f2f2;
 }
 .lh1 {line-height: 0.95em;}
-.lh2 {line-height: 1.9em;}
 /*PB（下 margin）*/
 .pb1 {padding-bottom: 0.7em;}
 .pb2 {padding-bottom: 1.4em;}
@@ -332,11 +328,6 @@ a:visited {color: #060606;}	/*標準*/
 .m53 {margin-left: 53em;}
 .m54 {margin-left: 54em;}
 .m66 {margin-left: 66em;}
-/*▲ Pagetop に使う*/
-.ut-1 {
-	margin-top: -0.5em;
-	margin-bottom: -0.5em;
-}
 /*img・ico*/
 img {
 	vertical-align: top;
@@ -430,16 +421,12 @@ div {
 .style-w {			/*画像グレイ背景*/
 	background: #4f4f4f;
 	color: #f2f2f2;
-	margin-bottom: 1%;
 	padding: 0.9%;
 }
-.style-n ,.style-w {	/*ナビ部分中央寄せ*/
+.style-n ,.style-w {	/*中央寄せ*/
 	width: 1214px;
 	margin-left: auto;
 	margin-right: auto;
-}
-.style-n {
-	margin-top: 10px;
 }
 .bk-w {	background: #ffffff;}
 .f {float: left;}
@@ -633,49 +620,6 @@ div {
 	border-bottom:solid 2px #000000;
 	border-left:solid 2px #111111;
 	transition: background-color 0.5s;	
-}
-/*Button・Search*/
-button, input, select, textarea {
-	font-family: inherit;
-}
-.keywords1 {
-	color: #141e31;	/*褐返し*/
-	font-style:italic;
-	font-size: 16px;
-	width: 260px;
-	padding: 4px 4px;
-	background: #748963 ;	/*黄緑みのグレイ*/
-	opacity: 0.8;
-	border: none;
-	display: inline-block;
-}
-.keywords1:hover {
-	background: #8eab4c;	/*グレイみの抹茶*/
-	transition: background 0.2s;	
-}
-.keywords1:focus {
-	background: #8eab4c;	/*グレイみの抹茶*/
-}
-input:focus {
-	outline: none;
-	color: #1b2943;	/*褐返し*/
-}
-.square_btn {
-	color: #444444;	/*標準^*/
-	font-family: Lato;
-	font-size: 12px;
-	text-align: center;
-	padding: 0 8pt;
-	height: 16pt;
-	background: #f2f2f2;
-	border:solid 1px #6e6e6e;	/*標準↑*/
-	border-radius: 1px;
-	display: inline-block;
-}
-.square_btn:hover {
-	color: #000000;
-	background: #ececec;
-	border:solid 1px #555555;	/*標準^*/
 }
 /*Side txt*/
 .bk,.bk2{
