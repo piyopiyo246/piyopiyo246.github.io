@@ -696,6 +696,49 @@ div {
 	color: #0e56dd;	/*light blue*/
 	transition: background 0.2s;
 }
+/*Button・Search*/
+button, input, select, textarea {
+	font-family: inherit;
+}
+.keywords1 {
+	color: #141e31;	/*褐返し*/
+	font-style:italic;
+	font-size: 16px;
+	width: 260px;
+	padding: 4px 4px;
+	background: #748963 ;	/*黄緑みのグレイ*/
+	opacity: 0.8;
+	border: none;
+	display: inline-block;
+}
+.keywords1:hover {
+	background: #8eab4c;	/*グレイみの抹茶*/
+	transition: background 0.2s;	
+}
+.keywords1:focus {
+	background: #8eab4c;	/*グレイみの抹茶*/
+}
+input:focus {
+	outline: none;
+	color: #1b2943;	/*褐返し*/
+}
+.square_btn {
+	color: #555555;	/*標準^*/
+	font-family: Lato;
+	font-size: 12px;
+	text-align: center;
+	padding: 0 8pt;
+	height: 16pt;
+	background: #f2f2f2;
+	border:solid 1px #6e6e6e;	/*標準↑*/
+	border-radius: 1px;
+	display: inline-block;
+}
+.square_btn:hover {
+	color: #134013;			/*グレイみの抹茶*/
+	background: #ececec ;
+	border:solid 1px #555555;	/*標準^*/
+}
 /* page-top */
 #page-top {
 	position: fixed;
