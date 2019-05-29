@@ -640,21 +640,17 @@ div {
 /*before >> ▼ ■*/
 .bf1:before {
 	content: ">>";
-	margin-left:2em;
-	margin-right:0.5em;
-	color: #6e6e6e;	/*標準↑*/
-}
-.bf1a:before {
-	content: ">>";
-	margin-right:0.5em;
+	margin-left:30px;
+	margin-right:5px;
 	color: #6e6e6e;	/*標準↑*/
 }
 .bf2:before {
 	content: "▼";
-	margin-right:1em;
+	margin-right:10px;
 	color: #888888;	
 }
-.bf3:before {content: "■ ";
+.bf3:before {
+	content: "■ ";
 	color: #444444;	/*標準↑*/
 }
 .bf4:before {
