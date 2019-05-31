@@ -101,10 +101,6 @@ hr {
 	border-bottom: solid 0.05em #59f3ff ;	/*pale blue E/C-class 画像サイト**/
 	color: #59f3ff ;	/*pale blue E/C-class 画像サイト**/
 }
-.td4 {
-	color: #006c00;	/*green*/
-	border-bottom: solid 0.05em #006c00;	/*green*/
-}
 /*文字列*/
 a {	text-decoration: none;}
 a:link {color: #060606;}	/*標準*/
