@@ -124,6 +124,7 @@ a:visited {color: #060606;}	/*標準*/
 }
 .lh1 {line-height: 0.95em;}
 /*PB（下 margin）*/
+.pb0 {padding-bottom: 8px;}
 .pb1 {padding-bottom: 16px;}
 .pb2 {padding-bottom: 32px;}
 .pb3 {padding-bottom: 48px;}
