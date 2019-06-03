@@ -124,18 +124,18 @@ a:visited {color: #060606;}	/*標準*/
 }
 .lh1 {line-height: 0.95em;}
 /*PB（下 margin）*/
-.pb1 {padding-bottom: 0.7em;}
-.pb2 {padding-bottom: 1.4em;}
-.pb3 {padding-bottom: 2.8em;}
-.pb4 {padding-bottom: 4.2em;}
-.pb5 {padding-bottom: 5.6em;}
-.pb6 {padding-bottom: 7em;}
-.pb7 {padding-bottom: 8.4em;}
-.pb8 {padding-bottom: 9.8em;}
-.pb9 {padding-bottom: 11.2em;}
-.pb10 {padding-bottom: 12.6em;}
-.pb11 {padding-bottom: 14em;}
-.pb12 {padding-bottom: 15.4em;}
+.pb1 {padding-bottom: 16px;}
+.pb2 {padding-bottom: 32px;}
+.pb3 {padding-bottom: 48px;}
+.pb4 {padding-bottom: 64px;}
+.pb5 {padding-bottom: 80px;}
+.pb6 {padding-bottom: 96px;}
+.pb7 {padding-bottom: 112px;}
+.pb8 {padding-bottom: 128px;}
+.pb9 {padding-bottom: 144px;}
+.pb10 {padding-bottom: 160px;}
+.pb11 {padding-bottom: 176px;}
+.pb12 {padding-bottom: 192px;}
 /*W*/
 .w1 {width: 1em;}
 .w2 {width: 2em;}
