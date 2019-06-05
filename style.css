@@ -174,13 +174,13 @@ a:visited {color: #060606;}	/*標準*/
 .s3 {margin-right: 24px;}
 .s4 {margin-right: 32px;}
 .s5 {margin-right: 40px;}
-.s6 {margin-right: 3em;}
-.s7 {margin-right: 3.5em;}
-.s8 {margin-right: 4em;}
-.s10 {margin-right: 5.18em;}	/*年表*/
-.s12 {margin-right: 6em;}
-.s14 {margin-right: 7em;}
-.s16 {margin-right: 8em;}
+.s6 {margin-right: 48px;}
+.s7 {margin-right: 56px;}
+.s8 {margin-right: 64px;}
+.s10 {margin-right: 80px;}
+.s12 {margin-right: 96px;}
+.s14 {margin-right: 112px;}
+.s16 {margin-right: 128px;}
 /*T（上 margin）*/
 .t0 {margin-top: 0.8em;}
 .t0a {margin-top: -0.16em;}
