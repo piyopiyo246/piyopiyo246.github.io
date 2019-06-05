@@ -47,8 +47,8 @@ h1 ,h2 ,h3 ,h4 ,h5 ,h6 {
 	font-weight: normal;
 	letter-spacing: 1px;
 }
-h1 ,h2 {margin: 10px 0 2px 16px;}
-h3 ,h4 ,h5 ,h6 {margin: 2px 0 4px 20px;}
+h1 ,h2 {margin: 14px 0 6px 18px;}
+h3 ,h4 ,h5 ,h6 {margin: 2px 0 4px 24px;}
 p {	margin: 0 0 2px 24px;}
 hr {
 	width: 1214px;
@@ -169,11 +169,11 @@ a:visited {color: #060606;}	/*標準*/
 .w123 {width: 1234px;}
 .w130 {width: 1300px;}
 /*S（右 margin）*/
-.s {margin-right: 0.5em;}
-.s2 {margin-right: 1em;}
-.s3 {margin-right: 1.5em;}
-.s4 {margin-right: 2em;}
-.s5 {margin-right: 2.5em;}
+.s {margin-right: 8px;}
+.s2 {margin-right: 16px;}
+.s3 {margin-right: 24px;}
+.s4 {margin-right: 32px;}
+.s5 {margin-right: 40px;}
 .s6 {margin-right: 3em;}
 .s7 {margin-right: 3.5em;}
 .s8 {margin-right: 4em;}
@@ -361,7 +361,6 @@ table {
 	font-family: 'MS UI Gothic';
 	padding: 0 0 1em 0;
 	text-align: center;
-	margin-left: 1em;
 	table-layout: auto;
 }
 ul ,ol ,li ,dl ,dt {
@@ -380,7 +379,7 @@ dt {
 }
 dd {
 	padding: 0;
-	margin: 0 1em 0 0;
+	margin: 0 32px 0 0;
 	float: left;
 }
 table, th, td {border:none;}
