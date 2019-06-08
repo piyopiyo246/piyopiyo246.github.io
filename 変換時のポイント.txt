@@ -105,6 +105,24 @@ ttp[ -~][^"¡¡ ]{90}
 		</div>
 	</div>
 ----------------------------------------------------------------------------------
+<a class="popup" href="#">¼Ì¿¿²èÁü<span><img alt="¼Ì¿¿²èÁü" src="¼Ì¿¿¤ÎURL" /></span></a>
+<a href="pic/mb_img_a.html#w168" class="lnk2 popup" title="1st A-klasse">'97W168.----<span><img alt="¼Ì¿¿²èÁü" src="pic/style/a/w168_f.jpg" /></span></a>
+/* popup */
+a.popup:hover {
+position: relative;
+text-decoration: none;
+}
+a.popup span {
+display: none;
+position: absolute;
+top: 1em;
+left: 0;
+}
+a.popup:hover span {
+border: none;
+display: block;
+width: 180px;
+}
 ----------------------------------------------------------------------------------
 (?#maxlines:10)\n+
 ----------------------------------------------------------------------------------
