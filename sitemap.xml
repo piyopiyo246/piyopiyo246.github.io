@@ -13,6 +13,12 @@
 		<priority>0.1</priority>
 	</url>
 	<url>
+		<loc>https://piyopiyo246.github.io/old_c_klasse.htm</loc>
+		<lastmod>2019-01-10</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.1</priority>
+	</url>
+	<url>
 		<loc>https://piyopiyo246.github.io/pic/mb_img_a.html</loc>
 		<lastmod>2019-06-06</lastmod>
 		<changefreq>yearly</changefreq>
@@ -157,25 +163,13 @@
 		<priority>0.1</priority>
 	</url>
 	<url>
-		<loc>https://piyopiyo246.github.io/txt/mb_1t.html</loc>
-		<lastmod>2019-05-18</lastmod>
-		<changefreq>yearly</changefreq>
-		<priority>0.1</priority>
-	</url>
-	<url>
 		<loc>https://piyopiyo246.github.io/txt/c-class_1t.html</loc>
 		<lastmod>2019-05-18</lastmod>
 		<changefreq>yearly</changefreq>
 		<priority>0.1</priority>
 	</url>
 	<url>
-		<loc>https://piyopiyo246.github.io/txt/single_thread_t.html</loc>
-		<lastmod>2019-05-18</lastmod>
-		<changefreq>yearly</changefreq>
-		<priority>0.1</priority>
-	</url>
-	<url>
-		<loc>https://piyopiyo246.github.io/txt/w204_1t.html</loc>
+		<loc>https://piyopiyo246.github.io/txt/c205_1t.html</loc>
 		<lastmod>2019-05-18</lastmod>
 		<changefreq>yearly</changefreq>
 		<priority>0.1</priority>
@@ -187,13 +181,19 @@
 		<priority>0.1</priority>
 	</url>
 	<url>
-		<loc>https://piyopiyo246.github.io/txt/x117_1t.html</loc>
+		<loc>https://piyopiyo246.github.io/txt/clk_1t.html</loc>
 		<lastmod>2019-05-18</lastmod>
 		<changefreq>yearly</changefreq>
 		<priority>0.1</priority>
 	</url>
 	<url>
-		<loc>https://piyopiyo246.github.io/txt/slk_1t.html</loc>
+		<loc>https://piyopiyo246.github.io/txt/glc_1t.html</loc>
+		<lastmod>2019-05-18</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.1</priority>
+	</url>
+	<url>
+		<loc>https://piyopiyo246.github.io/txt/mb_1t.html</loc>
 		<lastmod>2019-05-18</lastmod>
 		<changefreq>yearly</changefreq>
 		<priority>0.1</priority>
@@ -211,7 +211,19 @@
 		<priority>0.1</priority>
 	</url>
 	<url>
-		<loc>https://piyopiyo246.github.io/txt/clk_1t.html</loc>
+		<loc>https://piyopiyo246.github.io/txt/single_thread_t.html</loc>
+		<lastmod>2019-05-18</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.1</priority>
+	</url>
+	<url>
+		<loc>https://piyopiyo246.github.io/txt/slk_1t.html</loc>
+		<lastmod>2019-05-18</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.1</priority>
+	</url>
+	<url>
+		<loc>https://piyopiyo246.github.io/txt/w204_1t.html</loc>
 		<lastmod>2019-05-18</lastmod>
 		<changefreq>yearly</changefreq>
 		<priority>0.1</priority>
@@ -229,20 +241,8 @@
 		<priority>0.1</priority>
 	</url>
 	<url>
-		<loc>https://piyopiyo246.github.io/txt/c205_1t.html</loc>
+		<loc>https://piyopiyo246.github.io/txt/x117_1t.html</loc>
 		<lastmod>2019-05-18</lastmod>
-		<changefreq>yearly</changefreq>
-		<priority>0.1</priority>
-	</url>
-	<url>
-		<loc>https://piyopiyo246.github.io/txt/glc_1t.html</loc>
-		<lastmod>2019-05-18</lastmod>
-		<changefreq>yearly</changefreq>
-		<priority>0.1</priority>
-	</url>
-	<url>
-		<loc>https://piyopiyo246.github.io/old_c_klasse.htm</loc>
-		<lastmod>2019-01-10</lastmod>
 		<changefreq>yearly</changefreq>
 		<priority>0.1</priority>
 	</url>
