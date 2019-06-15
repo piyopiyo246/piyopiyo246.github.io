@@ -693,6 +693,9 @@ div {
 	color: #0e56dd;	/*light blue*/
 	transition: background 0.2s;
 }
+.displayNone {
+	display: none;
+}
 /*Button・Search*/
 button, input, select, textarea {
 	font-family: inherit;
