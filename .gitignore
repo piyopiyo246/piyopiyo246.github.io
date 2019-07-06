@@ -17,3 +17,5 @@ wp/wp-content/uploads/
 wp/wp-content/wp-cache-config.php
 *.coffee
 index.scala.html
+test/style.css
+test/c_klasse.html
