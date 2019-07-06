@@ -2,5 +2,5 @@
 *.BAK
 *.jbf
 eg.xlsx
-test/*.*
-js/*.*
+test/
+js/
