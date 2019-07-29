@@ -494,7 +494,7 @@ div {
 .v1130 {height: 1120px;}
 .v1200 {height: 1200px;}
 .v1280 {height: 1320px;}
-.v2000 {height: 2170px;}
+.v2000 {height: 2020px;}
 .v2300 {height: 2260px;}
 .v3200 {height: 3200px;}
 .v3400 {height: 3435px;}
@@ -604,6 +604,7 @@ div {
 	border-top: 1px dashed #d6d6d6;
 	border-bottom: 1px dashed #d6d6d6;
 	text-align: right;
+	color: #888888;
 }
 
 /*Top*/
