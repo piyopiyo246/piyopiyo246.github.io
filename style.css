@@ -216,7 +216,7 @@ a:visited {color: #060606;}	/*標準*/
 
 /*M（左 margin）*/
 .m-1 {margin-left: -1em;}
-.m-0 {margin-left: -0.05em;}
+.m-0 {margin-left: -0.03em;}
 .m0 {margin-left: 0;}
 .m0a {margin-left: 0.68em;}
 .m0b {margin-left: 0.38em;}
@@ -240,7 +240,8 @@ a:visited {color: #060606;}	/*標準*/
 .m1e {margin-left: 1.1em;}
 .m1f {margin-left: 1.24em;}
 .m1g {margin-left: 1.4em;}
-.m1h {margin-left: 1em;}
+.m1h {margin-left: 1.67em;}
+.m1i {margin-left: 1.75em;}
 .m1j {margin-left: 1.8em;}
 .m1k {margin-left: 1.9em;}
 .m1m {margin-left: 1.3em;}
