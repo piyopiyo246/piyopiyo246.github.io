@@ -71,6 +71,7 @@ hr {
 .clr-lb {color: #0e56dd;}	/*light blue*/	/*#0b44ad;cobalt blue*/
 .ac1,.clr-g,.ls04 {letter-spacing: 0.4pt;}
 .ls411 {letter-spacing: 4.11pt;}
+.ls-13 {letter-spacing: -1.3pt;}
 .b {
 	font-weight: 700;
 	letter-spacing: 1px;
@@ -207,15 +208,17 @@ a:visited {color: #060606;}	/*標準*/
 .t37 {margin-top: 7.55em;}
 .t21a {margin-top: 21.7em;}
 .t24 {margin-top: 25.1em;}
+.t40 {margin-top: 40em;}
 .t42 {margin-top: 42em;}
 .t46 {margin-top: 46.1em;}
 .t48 {margin-top: 47.8em;}
 .t55 {margin-top: 55.55em;}
-.t76 {margin-top: 76em;}
+.t76 {margin-top: 75.65em;}
 
 
 /*M（左 margin）*/
 .m-1 {margin-left: -1em;}
+.m-05 {margin-left: -0.6em;}
 .m-0 {margin-left: -0.03em;}
 .m0 {margin-left: 0;}
 .m0a {margin-left: 0.68em;}
