@@ -18,8 +18,10 @@
 	<link href="./log.css" rel="stylesheet" type="text/css">
 	<link rel="shortcut icon" href="../ico/mb-logo-g.png" type="image/vnd.microsoft.icon">
 	<title>CLA_SBスレッド過去ログ</title>
+	<script async type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script><!--head内に-->
 </head>
 <body>
+<div id="wrap">
 <header>
 	<nav id="header_txt">
 		<ul>
@@ -12561,4 +12563,25 @@ VW排ガス不正　ディーゼルは終わりなのか？ 日本は大丈夫�
 ドイツ自動車5社は当局の指示に従い、リコールに応じるとしている。
 </p>
 <hr></article>
+<p id="page-top"><a href="#wrap">▲</a></p>
+</div>
+<script type="text/javascript">
+	$(function() {
+		var topBtn = $('#page-top');			topBtn.hide();
+		$(window).scroll(function () {
+			if ($(this).scrollTop() > 100) {
+				topBtn.fadeIn();
+			} else {
+				topBtn.fadeOut();
+			}
+		});
+		//スクロールしてトップ
+			topBtn.click(function () {
+			$('body,html').animate({
+				scrollTop: 0
+			}, 500);
+			return false;
+			});
+	});
+</script>
 </body></html>
