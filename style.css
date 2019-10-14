@@ -100,17 +100,25 @@ hr {
 	color: #59f3ff ;	/*pale blue E/C-class 画像サイト**/
 }
 /*文字列*/
-a {	text-decoration: none;}
+a {text-decoration: none;}
 a:link {color: #060606;}	/*標準*/
 a:visited {color: #060606;}	/*標準*/
+
 .lnk:hover {
 	color: #006c00;	/*green*/
-	border-bottom: solid 0.05em #006c00;	/*green*/
+	border-bottom: solid 0.05em #006c00;
 }
-.lnk2:hover {
+a.lnk2:hover {
 	color: #0e56dd;	/*light blue*/
-	border-bottom: solid 0.05em #0e56dd;	/*light blue*/
+	border-bottom: solid 0.05em #0e56dd;
 }
+a.lnk3: {color: #666;}
+a.lnk3:visited {color: #666;}
+a.lnk3:hover {
+	color: #0e56dd;	/*light blue*/
+	border-bottom: solid 0.05em #0e56dd;
+}
+
 .top {vertical-align: top;}
 .left {text-align: left;}
 .mid {text-align: center;}
