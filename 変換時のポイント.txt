@@ -315,3 +315,35 @@ https://www.webprofessional.jp/style-google-custom-search/
 　　 　 ／　　 /⌒>／　　　　　　ヽ/　 ）丶、　　　（_丿　　／　 ′　│　　　　　　　　　　　　　　　　 　 |
 __,,..　　　　..::〈___／　 　 　 　 　 　 ∨（ (⌒≧z-　　_..　イ　 // 　 　 |.　 　 　 完全に>>1乙！　　　　 |
 　　　 　 ..:::〔_／　　　　　 　 　 　 　 ∨７∨ /¨|//〉ｰ=∨　/ 　 　 　 |　　　　　　　　　　　　　　　　　　 |
+----------------------------------------------------------------------------------
+検索ボックス
+[CSS]
+/*Button・Search*/
+button, input, select, textarea {
+	font-family: inherit;
+}
+.keywords1 {
+	color: #141e31;	/*褐返し*/
+	font-style:italic;
+	font-size: 16px;
+	width: 260px;
+	padding: 4px 4px;
+	background: #748963 ;	/*黄緑みのグレイ*/
+	opacity: 0.8;
+	border: none;
+	display: inline-block;
+}
+.keywords1:hover {
+	background: #8eab4c;	/*グレイみの抹茶*/
+	transition: background 0.2s;	
+}
+.keywords1:focus {
+	background: #8eab4c;	/*グレイみの抹茶*/
+}
+input:focus {
+	outline: none;
+	color: #1b2943;	/*褐返し*/
+}
+
+
+[HTML]

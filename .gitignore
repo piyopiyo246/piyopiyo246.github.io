@@ -1,7 +1,8 @@
 
-*.BAK
+*.bak
 *.jbf
-eg.xlsx
+*.xlsx
 test/
 js/
+kotou/
 

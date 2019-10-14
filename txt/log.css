@@ -50,19 +50,20 @@ span {
 	font-weight: 800;
 	margin: 0 0 0 -30px;
 }
+.s0 {margin-right: 0;}
 /*list*/
 ul {
 	padding: 0;
-	margin: 4px 0 1px 0;
+	margin: 10px 0 0 10px;
 	list-style: none;
 	zoom: 1;
 	display: inline-block ;
 }
 li {
 	padding: 0;
-	margin: 4px 0 0 18px;
-	color: #ffffff ;
-	float: left ;	/*左に寄せる*/
+	margin: 0px 8px;
+	color: #fff ;
+	float: left ;
 }
 .clr-lb {color: #6bbef6;}	/*light blue*/
 /* page-top */
@@ -87,4 +88,10 @@ li {
 #page-top a:hover {
 	text-decoration: none;
 	background: #999;
+}
+.af1:after {
+	content: "/";
+	color: #fff;	/*標準↑*/
+	font-weight: 700;
+	margin: 0 0 0 12px;
 }

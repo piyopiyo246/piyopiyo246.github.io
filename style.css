@@ -150,6 +150,7 @@ a:visited {color: #060606;}	/*標準*/
 .w8 {width: 8em;}
 .w9 {width: 9em;}
 .w10 {width: 10em;}
+.w11 {width: 11em;}
 .w12 {width: 12em;}
 .w13 {width: 13em;}
 .w14 {width: 14em;}
@@ -212,8 +213,6 @@ a:visited {color: #060606;}	/*標準*/
 .t48 {margin-top: 47.8em;}
 .t55 {margin-top: 55.64em;}
 .t76 {margin-top: 75.65em;}
-
-
 /*M（左 margin）*/
 .m-1 {margin-left: -1em;}
 .m-05 {margin-left: -0.6em;}
@@ -419,7 +418,6 @@ td {padding: 0 8px 0 0;}
 	width: 1210px;
 	table-layout: fixed;
 }
-.trim_name {overflow-wrap : break-word;}
 /*inline*/
 .i {display: inline;}
 .ib {display: inline-block;}
@@ -452,7 +450,7 @@ div {
 .float {clear: none;}		/*後続の左寄せを解除しない*/
 .nofloat {float: none;}		/*後続の左寄せをしない*/
 /*V*/
-.vs60 ,.v90 ,.vs90 ,.v120 ,.vs120 ,.v150 ,.vs150 ,.vs170 ,.v200 ,.vs200 ,.v220 ,.v240 ,.vs240 ,.v260 ,.vs260 ,.v280 ,.vs280 ,.v300 ,.vs300 ,.v320 ,.vs320 ,.vs330 ,.v340 ,.v350 ,.v360 ,.vs360 ,.vs380 ,.v400 ,.vs400 ,.v420 ,.vs420 ,.v450 ,.vs450 ,.v470 ,.vs470 ,.vs480 ,.v500 ,.v540 ,.vs540 ,.v560 ,.v580 ,.v600 ,.v640 ,.v680 ,.v720 ,.v750 ,.v800 ,.v830 ,.v860 ,.v890 ,.v1000 ,.v1100 ,.v1130 ,.v1200 ,.v1280 ,.v2000 ,.v2300 ,.v3200 ,.v3400 ,.v14000 ,.v3200 ,.v3800 ,.v4100 ,.v6280{
+.vs60 ,.v90 ,.vs90 ,.v120 ,.vs120 ,.v150 ,.vs150 ,.vs170 ,.v200 ,.vs200 ,.v220 ,.v240 ,.vs240 ,.v260 ,.vs260 ,.v280 ,.vs280 ,.v300 ,.vs300 ,.v320 ,.vs320 ,.vs330 ,.v340 ,.v350 ,.v360 ,.vs360 ,.vs380 ,.v400 ,.vs400 ,.v420 ,.vs420 ,.v450 ,.vs450 ,.v470 ,.vs470 ,.vs480 ,.v500 ,.v540 ,.vs540 ,.v560 ,.v580 ,.v600 ,.v640 ,.v700 ,.v720 ,.v750 ,.v800 ,.v830 ,.v860 ,.v890 ,.v1000 ,.v1100 ,.v1130 ,.v1200 ,.v1280 ,.v2000 ,.v2300 ,.v3200 ,.v3400 ,.v14000 ,.v3200 ,.v3800 ,.v4100 ,.v6280{
 	position: absolute;
 	width: 10px;
 	padding: 0;
@@ -490,7 +488,7 @@ div {
 .v580 {	height: 580px;}
 .v600 {	height: 600px;}
 .v640 {	height: 640px;}
-.v680 {	height: 680px;}
+.v700 {	height: 700px;}
 .v720 {	height: 720px;}
 .v750 {	height: 760px;}
 .v800 {	height: 800px;}
@@ -501,7 +499,7 @@ div {
 .v1100 {height: 1100px;}
 .v1130 {height: 1120px;}
 .v1200 {height: 1200px;}
-.v1280 {height: 1320px;}
+.v1280 {height: 1350px;}
 .v2000 {height: 2020px;}
 .v2300 {height: 2260px;}
 .v3200 {height: 3200px;}
@@ -617,7 +615,6 @@ div {
 	text-align: right;
 	color: #888888;
 }
-
 /*Top*/
 .wood {
 	position: absolute;/*絶対配置*/
@@ -680,7 +677,7 @@ div {
 	text-align: center;
 }
 .r-side {	text-align: right;}
-/*before >> ▼ ■*/
+/*before/after >> ▼ ■*/
 .bf1:before {
 	content: ">>";
 	margin-left:30px;
@@ -696,14 +693,25 @@ div {
 	content: "■ ";
 	color: #444444;	/*標準↑*/
 }
-/*Accordion*/
+.bf4:before {
+	content: "/";
+	color: #444444;	/*標準↑*/
+	font-weight: 700;
+	margin: 0 20px;
+}
+.af1:after {
+	content: "/";
+	color: #444444;	/*標準↑*/
+	font-weight: 700;
+	margin: 0 20px;
+}
+/*Ac*/
 .ac1 {	/*▼対応*/
-	color: #6e6e6e;	/*標準↑*/
+	color: #6e6e6e;
 	font-family: Lato;
-	font-size: 16px;
-	border:solid 1px #6e6e6e;
+	border:solid 1px #6e6e6e;	/*Accordion*/
 	width: 1340px;
-	line-height: 30px;
+	line-height: 24px;
 	clear: both;
 	cursor: pointer;
 	margin: 0 4px 4px;
@@ -722,8 +730,8 @@ div {
 .bn {	border: 0;}
 .ac2 {
 	width: 1302px;
-	line-height: 28px;
-}	/*＞＞対応*/
+	line-height: 28px;	/*＞＞対応*/
+}
 .ac2:hover {
 	color: #0e56dd;	/*light blue*/
 	transition: background 0.2s;
@@ -735,32 +743,7 @@ div {
 .displayNone {
 	display: none;
 }
-/*Button・Search*/
-button, input, select, textarea {
-	font-family: inherit;
-}
-.keywords1 {
-	color: #141e31;	/*褐返し*/
-	font-style:italic;
-	font-size: 16px;
-	width: 260px;
-	padding: 4px 4px;
-	background: #748963 ;	/*黄緑みのグレイ*/
-	opacity: 0.8;
-	border: none;
-	display: inline-block;
-}
-.keywords1:hover {
-	background: #8eab4c;	/*グレイみの抹茶*/
-	transition: background 0.2s;	
-}
-.keywords1:focus {
-	background: #8eab4c;	/*グレイみの抹茶*/
-}
-input:focus {
-	outline: none;
-	color: #1b2943;	/*褐返し*/
-}
+
 .square_btn {
 	color: #555555;	/*標準^*/
 	font-family: Lato;
@@ -800,4 +783,5 @@ input:focus {
 #page-top a:hover {
 	text-decoration: none;
 	background: #999;
-}
+/*lightbox*/
+.trim_name {overflow-wrap : break-word;}
