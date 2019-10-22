@@ -362,7 +362,7 @@ img {
 	padding: 2pt 0;
 }
 .kakumaru {	border-radius:10px;}	/*Interior Trim*/
-.ico-wiki,.ico-wiki2,.ico-camera,.ico-eg {
+.ico-wiki,.ico-wiki2,.ico-camera,.ico-eg,.ico-tube {
 	display: inline-block;
 	background-repeat: no-repeat;
 }
@@ -387,6 +387,11 @@ img {
 	width: 20px;
 	height: 16px;
 	background-image: url('ico/eg.png');
+}
+.ico-tube {
+	width: 23px;
+	height: 16px;
+	background-image: url('ico/youtube.png');
 }
 /*list*/
 table {
@@ -713,7 +718,7 @@ div {
 	font-weight: 700;
 	margin: 0 20px;
 }
-/*Ac*/
+/*Accordion*/
 .ac1 {	/*▼対応*/
 	color: #6e6e6e;
 	font-family: Lato;
