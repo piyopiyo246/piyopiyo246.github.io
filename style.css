@@ -756,7 +756,7 @@ div {
 .displayNone {
 	display: none;
 }
-
+/*button*/
 .square_btn {
 	color: #555555;	/*標準^*/
 	font-family: Lato;
@@ -764,6 +764,7 @@ div {
 	text-align: center;
 	padding: 0 8pt;
 	height: 16pt;
+	background: #e3e3e3;
 	border:solid 1px #6e6e6e;	/*標準↑*/
 	border-radius: 1px;
 	display: inline-block;
