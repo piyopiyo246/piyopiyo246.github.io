@@ -747,10 +747,12 @@ div {
 }
 .ac2:hover {
 	color: #0e56dd;	/*light blue*/
+	background: #ececec;
 	transition: background 0.2s;
 }
 .ac2:focus {
 	color: #0e56dd;	/*light blue*/
+	background: #ececec;
 	transition: background 0.2s;
 }
 .displayNone {
