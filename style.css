@@ -105,18 +105,18 @@ a:link {color: #060606;}	/*標準*/
 a:visited {color: #060606;}	/*標準*/
 
 .lnk:hover {
-	color: #006c00;	/*green*/
-	border-bottom: solid 0.05em #006c00;
+	color: #005300;	/*green*/
+	border-bottom: solid 0.05em #005300;
 }
 a.lnk2:hover {
-	color: #0e56dd;	/*light blue*/
-	border-bottom: solid 0.05em #0e56dd;
+	color: #2e0edd;	/*light blue*/
+	border-bottom: solid 0.05em #2e0edd;
 }
 a.lnk3: {color: #666;}
 a.lnk3:visited {color: #666;}
 a.lnk3:hover {
-	color: #0e56dd;	/*light blue*/
-	border-bottom: solid 0.05em #0e56dd;
+	color: #2e0edd;	/*light blue*/
+	border-bottom: solid 0.05em #2e0edd;
 }
 
 .top {vertical-align: top;}
@@ -736,7 +736,7 @@ div {
 	transition: 0.2s;
 }
 .ac1:focus {
-	color: #0e56dd;	/*light blue*/
+	color: #2e0edd;	/*light blue*/
 	background: #ececec ;
 	transition: 0.2s;
 }
@@ -746,12 +746,12 @@ div {
 	line-height: 28px;	/*＞＞対応*/
 }
 .ac2:hover {
-	color: #0e56dd;	/*light blue*/
+	color: #2e0edd;	/*light blue*/
 	background: #ececec;
 	transition: background 0.2s;
 }
 .ac2:focus {
-	color: #0e56dd;	/*light blue*/
+	color: #2e0edd;	/*light blue*/
 	background: #ececec;
 	transition: background 0.2s;
 }
