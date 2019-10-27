@@ -9,7 +9,7 @@ body {
 	letter-spacing: 0;
 	text-align: left;
 	vertical-align: middle;
-	background: #e3e3e3;	/*011930*/
+	background: #f2f2f2;	/*011930*/
 	white-space: nowrap;
 	width: 1356px;
 	margin-top: 0;
@@ -732,12 +732,12 @@ div {
 }
 .ac1:hover {
 	color: #000000;	/**/
-	background: #ececec ;	/*薄いwhite*/
+	background: #fafafa ;	/*薄いwhite*/
 	transition: 0.2s;
 }
 .ac1:focus {
 	color: #2e0edd;	/*light blue*/
-	background: #ececec ;
+	background: #fafafa ;
 	transition: 0.2s;
 }
 .bn {	border: 0;}
@@ -747,12 +747,12 @@ div {
 }
 .ac2:hover {
 	color: #2e0edd;	/*light blue*/
-	background: #ececec;
+	background: #fafafa;
 	transition: background 0.2s;
 }
 .ac2:focus {
 	color: #2e0edd;	/*light blue*/
-	background: #ececec;
+	background: #fafafa;
 	transition: background 0.2s;
 }
 .displayNone {
@@ -766,14 +766,14 @@ div {
 	text-align: center;
 	padding: 0 8pt;
 	height: 16pt;
-	background: #e3e3e3;
+	background: #f2f2f2;
 	border:solid 1px #6e6e6e;	/*標準↑*/
 	border-radius: 1px;
 	display: inline-block;
 }
 .square_btn:hover {
 	color: #134013;			/*グレイみの抹茶*/
-	background: #ececec ;
+	background: #fafafa ;
 	border:solid 1px #555555;	/*標準^*/
 }
 /* page-top */
