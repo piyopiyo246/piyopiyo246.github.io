@@ -684,9 +684,9 @@ div {
 	text-align: right;
 }
 .inside,.r-side {
-	font-size: 2em;
+	font-size: 4em;
 	line-height: 1.4em;
-	color: #bdbdbd;	/*標準↑↑*/
+	color: #d6d6d6;	/*標準↑↑*/
 	text-align: center;
 }
 .r-side {	text-align: right;}
