@@ -724,7 +724,7 @@ div {
 	margin: 0 20px;
 }
 /*Accordion*/
-.ac1 {	/*▼対応*/
+.ac1,.ac1a {	/*▼対応*/
 	color: #6e6e6e;
 	font-family: Lato;
 	border:solid 1px #6e6e6e;	/*Accordion*/
@@ -735,16 +735,17 @@ div {
 	margin: 0 4px 4px;
 	border-radius: 2px;
 }
-.ac1:hover {
+.ac1,.ac1a:hover {
 	color: #000000;	/**/
 	background: #fafafa ;	/*薄いwhite*/
 	transition: 0.2s;
 }
-.ac1:focus {
+.ac1,.ac1a:focus {
 	color: #2e0edd;	/*light blue*/
 	background: #fafafa ;
 	transition: 0.2s;
 }
+.ac1a {margin-top: 20px;}
 .bn {	border: 0;}
 .ac2 {
 	width: 1302px;
