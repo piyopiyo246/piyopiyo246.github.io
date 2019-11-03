@@ -800,3 +800,17 @@ div {
 	background: #999;
 /*lightbox*/
 .trim_name {overflow-wrap : break-word;}
+/*Horizontal Scroll*/
+.horizontal-list {
+	overflow-x: auto;
+	white-space: nowrap;
+	-webkit-overflow-scrolling: touch;
+}
+.item {
+	display: inline-block;	/* 横スクロール用 */
+	width: 90%;
+	height: 400px;	/* 見た目調整 */
+	margin: 16px;
+	font-size: 48px;
+	background: rgba(255, 0, 0, 0.4);
+}
