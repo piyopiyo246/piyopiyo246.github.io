@@ -800,17 +800,26 @@ div {
 	background: #999;
 /*lightbox*/
 .trim_name {overflow-wrap : break-word;}
-/*Horizontal Scroll*/
-.horizontal-list {
-	overflow-x: auto;
-	white-space: nowrap;
-	-webkit-overflow-scrolling: touch;
+/*fleXcroll*/
+.scrollgeneric {	/* 変更・省略不可 */
+	line-height: 1px;
+	font-size: 1px;
+	position: absolute;
+	top: 0; left: 0;
 }
-.item {
-	display: inline-block;	/* 横スクロール用 */
-	width: 90%;
-	height: 400px;	/* 見た目調整 */
-	margin: 16px;
-	font-size: 48px;
-	background: rgba(255, 0, 0, 0.4);
+.vscrollerbase {	/* 縦スクロールバー背景 */
+	width: 15px;
+	background-color: white;
+}
+.vscrollerbar {	/* 縦スクロールバー */
+	width: 15px;
+	background-color: #b0b0b0;
+}
+.hscrollerbase {	/* 横スクロールバー背景 */
+	height: 15px;
+	background-color: white;
+}
+.hscrollerbar {	/* 横スクロールバー */
+	height: 15px;
+	background-color: #b0b0b0;
 }
