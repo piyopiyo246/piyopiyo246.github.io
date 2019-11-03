@@ -725,39 +725,34 @@ div {
 /*Accordion*/
 .ac1 {	/*▼対応*/
 	color: #6e6e6e;
-	font-family: Lato;
-	border:solid 1px #6e6e6e;	/*Accordion*/
+	border:solid 1px #6e6e6e;
 	width: 1340px;
-	line-height: 24px;
+	line-height: 150%;
 	clear: both;
 	cursor: pointer;
 	margin: 0 4px 4px;
 	border-radius: 2px;
 }
 .ac1:hover {
-	color: #000000;	/**/
-	background: #fafafa ;	/*薄いwhite*/
-	transition: 0.2s;
+	color: #2e0edd;
+	background: #fdfdfd ;	/*薄いwhite*/
 }
 .ac1:focus {
 	color: #2e0edd;	/*light blue*/
-	background: #fafafa ;
-	transition: 0.2s;
+	background: #fdfdfd ;
 }
-.bn {	border: 0;}
+.bn {border: 0;}
 .ac2 {
 	width: 1302px;
 	line-height: 28px;	/*＞＞対応*/
 }
 .ac2:hover {
 	color: #2e0edd;	/*light blue*/
-	background: #fafafa;
-	transition: background 0.2s;
+	background: #fdfdfd;
 }
 .ac2:focus {
 	color: #2e0edd;	/*light blue*/
-	background: #fafafa;
-	transition: background 0.2s;
+	background: #fdfdfd;
 }
 .displayNone {
 	display: none;
@@ -771,13 +766,14 @@ div {
 	padding: 0 8pt;
 	height: 16pt;
 	background: #f2f2f2;
-	border:solid 1px #6e6e6e;	/*標準↑*/
+	border:solid 1px #6e6e6e;
 	border-radius: 1px;
 	display: inline-block;
 }
 .square_btn:hover {
-	color: #134013;			/*グレイみの抹茶*/
-	background: #fafafa ;
+	color: #000000;
+	border:solid 1px #00000;
+	background: #fdfdfd ;
 	border:solid 1px #555555;	/*標準^*/
 }
 /* page-top */
