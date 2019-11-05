@@ -2,13 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
 		<loc>https://piyopiyo246.github.io/c_klasse.html</loc>
-		<lastmod>2019-11-02</lastmod>
+		<lastmod>2019-11-05</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>1.0</priority>
 	</url>
 	<url>
 		<loc>https://piyopiyo246.github.io/history.html</loc>
-		<lastmod>2019-10-22</lastmod>
+		<lastmod>2019-11-05</lastmod>
 		<changefreq>yearly</changefreq>
 		<priority>0.1</priority>
 	</url>
@@ -275,13 +275,6 @@
 	<url>
 		<loc>https://piyopiyo246.github.io/txt/x117_1t.html</loc>
 		<lastmod>2019-10-20</lastmod>
-		<changefreq>yearly</changefreq>
-		<priority>0.1</priority>
-	</url>
-
-	<url>
-		<loc>https://piyopiyo246.github.io/xls/diesel.html</loc>
-		<lastmod>2019-10-14</lastmod>
 		<changefreq>yearly</changefreq>
 		<priority>0.1</priority>
 	</url>
