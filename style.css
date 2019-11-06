@@ -113,8 +113,8 @@ a.lnk2:hover {
 	color: #2e0edd;	/*light blue*/
 	border-bottom: solid 0.05em #2e0edd;
 }
-a.lnk3: {color: #666;}
-a.lnk3:visited {color: #666;}
+a.lnk3: {color: #666666;}
+a.lnk3:visited {color: #666666;}
 a.lnk3:hover {
 	color: #2e0edd;	/*light blue*/
 	border-bottom: solid 0.05em #2e0edd;
