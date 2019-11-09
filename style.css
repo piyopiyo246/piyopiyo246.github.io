@@ -454,12 +454,15 @@ div {
 	position: relative;	/*DWで正常にプレビューできるようになる*/
 	zoom: 1;		/*IE6でレイアウト崩れを防ぐ*/
 }
-.style-w ,.style-w2 {	/*画像グレイ背景*/
+.style-w {	/*画像グレイ背景*/
 	background: #4f4f4f;
 	color: #f2f2f2;
 	padding: 0.9%;
 }
-.style-w2 {			/*画像グレイ背景*/
+.style-w2 {color: #f2f2f2;}
+.style-w2:hover {	/*画像グレイ背景*/
+	background: #4f4f4f;
+	color: #f2f2f2;
 	padding: 10px;
 	font-weight: 700;
 }
