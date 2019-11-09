@@ -5,11 +5,14 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.min.css"><!--lightbox-->
 	<link href="./style.css" rel="stylesheet">
 	<title>TEST</title>
-	<script type="text/javascript" src="jquery-2.2.1.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function () {
 			$("#button01").on('click', function () {
-				alert("ボタン1がクリックされました。");
+			var txt = $(this).html();
+			$(this).html(
+				txt.replace(/none/g,'block')
+			);
 			});
 			
 			$("#button02").on('click', function () {
@@ -22,14 +25,6 @@
 		})
 	</script>
 
-		$(function(){
-			$('.replace').each(function(){
-			var txt = $(this).html();
-			$(this).html(
-			  txt.replace(/みかん/g,'猫')
-			);
-			});
-		});
 
 </head>
 <body>
