@@ -146,6 +146,8 @@ a.lnk3:hover {
 .pb15 {padding-bottom: 240px;}
 .pb16 {padding-bottom: 256px;}
 .pb17 {padding-bottom: 272px;}
+.pb18 {padding-bottom: 288px;}
+.pb19 {padding-bottom: 304px;}
 /*W*/
 .w1 {width: 1em;}
 .w2 {width: 2em;}
@@ -477,7 +479,7 @@ div {
 .float {clear: none;}		/*後続の左寄せを解除しない*/
 .nofloat {float: none;}		/*後続の左寄せをしない*/
 /*Vertical*/
-.vs60 ,.v90 ,.vs90 ,.v120 ,.vs120 ,.v150 ,.vs150 ,.vs170 ,.v200 ,.vs200 ,.v220 ,.v240 ,.vs240 ,.v260 ,.vs260 ,.v280 ,.vs280 ,.v300 ,.vs300 ,.v320 ,.vs320 ,.vs330 ,.v340 ,.v350 ,.v360 ,.vs360 ,.vs380 ,.v400 ,.vs400 ,.v420 ,.vs420 ,.v450 ,.vs450 ,.v470 ,.vs470 ,.vs480 ,.v500 ,.v540 ,.vs540 ,.v560 ,.v580 ,.v600 ,.v640 ,.v700 ,.v720 ,.v750 ,.v800 ,.v830 ,.v860 ,.v890 ,.v1000 ,.v1100 ,.v1130 ,.v1200 ,.v1280 ,.v2000 ,.v2300 ,.v3200 ,.v3400 ,.v14000 ,.v3700 ,.v4200 ,.v4700 ,.v6280{
+.vs60 ,.v90 ,.vs90 ,.v120 ,.vs120 ,.v150 ,.vs150 ,.vs170 ,.v200 ,.vs200 ,.v220 ,.v240 ,.vs240 ,.v260 ,.vs260 ,.v280 ,.vs280 ,.v300 ,.vs300 ,.v320 ,.vs320 ,.vs330 ,.v340 ,.v350 ,.v360 ,.vs360 ,.vs380 ,.v400 ,.vs400 ,.v420 ,.vs420 ,.v450 ,.vs450 ,.v470 ,.vs470 ,.vs480 ,.v500 ,.v540 ,.vs540 ,.v560 ,.v580 ,.v600 ,.v640 ,.v700 ,.v720 ,.v750 ,.v800 ,.v830 ,.v860 ,.v890 ,.v1000 ,.v1100 ,.v1130 ,.v1200 ,.v1500 ,.v2000 ,.v2300 ,.v3200 ,.v3400 ,.v14000 ,.v3700 ,.v4200 ,.v4700 ,.v6280{
 	position: absolute;
 	width: 10px;
 	padding: 0;
@@ -526,7 +528,7 @@ div {
 .v1100 {height: 1100px;}
 .v1130 {height: 1120px;}
 .v1200 {height: 1200px;}
-.v1280 {height: 1420px;}
+.v1500 {height: 1470px;}
 .v2000 {height: 2020px;}
 .v2300 {height: 2310px;}
 .v3200 {height: 3200px;}
