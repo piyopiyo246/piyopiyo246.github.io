@@ -462,12 +462,16 @@ div {
 	color: #f2f2f2;
 	padding: 0.9%;
 }
-.style-w2 {color: #f2f2f2;}
+.style-w2 {
+	color: #f2f2f2;
+	transition: 5s ;
+}
 .style-w2:hover {	/*画像グレイ背景*/
 	background: #4f4f4f;
 	color: #f2f2f2;
 	padding: 10px;
 	font-weight: 700;
+	transition: 0.2s ;
 }
 .style-n ,.style-w {	/*中央寄せ*/
 	width: 1214px;
