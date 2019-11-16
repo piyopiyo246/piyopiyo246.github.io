@@ -464,7 +464,8 @@ div {
 }
 .style-w2 {
 	color: #f2f2f2;
-	transition: 360s ;
+	transition: 10s ;
+	transition-timing-function : step-end
 }
 .style-w2:hover {	/*画像グレイ背景*/
 	background: #4f4f4f;
