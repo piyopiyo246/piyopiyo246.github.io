@@ -719,6 +719,7 @@ div {
 /*before/after >> ▼ ■*/
 .bf1:before {
 	content: ">>";
+	font-weight: 700;
 	margin-left:30px;
 	margin-right:5px;
 	color: #6e6e6e;	/*標準↑*/
