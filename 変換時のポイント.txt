@@ -40,9 +40,9 @@ ttp[ -~][^"　 ]{90}
 <lastmod>.*</lastmod>
 <lastmod>2019-09-15</lastmod>
 ----------------------------------------------------------------------------------
- 折り畳み展開ポインタ
-style = "display:none;clear:both;"
-style = "display:block;clear:both;"
+// 折り畳み展開ポインタ
+//style = "display:none;clear:both;"
+//style = "display:block;clear:both;"
 ----------------------------------------------------------------------------------
 ^([1-9][0-9]*[ ])
 \n\1
