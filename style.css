@@ -174,8 +174,10 @@ a.lnk3:hover {
 .w35 {width: 35em;}
 .w80 {width: 800px;}
 .w90 {width: 900px;}
+.w99 {width: 992px;}
 .w100 {width: 1000px;}
 .w110 {width: 1090px;}
+.w112 {width: 1140px;}
 .w116 {width: 1188px;}
 .w120 {width: 1200px;}
 .w123 {width: 1234px;}
@@ -717,9 +719,8 @@ div {
 	top: 20px;
 }
 .bk4 {
-	line-height: 12px;
+	line-height: 10px;
 	text-align: center;
-	width: 1180px;
 	top: 6px;
 }
 .inside,.r-side {
