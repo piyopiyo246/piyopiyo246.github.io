@@ -698,10 +698,12 @@ div {
 	transition: background-color 0.5s;	
 }
 /*Side txt*/
-.bk,.bk2{
-	font-family: Lato;
+.bk,.bk2,.bk3,.bk4 {
 	position: absolute;
 	background: no-repeat;
+}
+.bk,.bk2{
+	font-family: Lato;
 	width: 1302px;
 }
 .bk {opacity: 1;}	/*文字透過*/
@@ -709,9 +711,7 @@ div {
 	padding: 0;
 	text-align: right;
 }
-.bk3,.bk4 {
-	position: absolute;
-	background: no-repeat;
+.bk3 {
 	width: 230px;
 	left: 1090px;
 	top: 20px;
@@ -720,7 +720,6 @@ div {
 	line-height: 12px;
 	text-align: center;
 	width: 1180px;
-	left: 140px;
 	top: 6px;
 }
 .inside,.r-side {
