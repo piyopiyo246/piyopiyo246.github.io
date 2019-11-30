@@ -468,6 +468,7 @@ div {
 .style-w2 {
 	color: #f2f2f2;
 	padding: 10px;
+	letter-spacing: 1px;
 	transition: 10s ;
 	transition-timing-function : step-end
 }
