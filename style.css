@@ -709,6 +709,20 @@ div {
 	padding: 0;
 	text-align: right;
 }
+.bk3,.bk4 {
+	position: absolute;
+	background: no-repeat;
+	width: 230px;
+	left: 1090px;
+	top: 20px;
+}
+.bk4 {
+	line-height: 12px;
+	text-align: center;
+	width: 1180px;
+	left: 140px;
+	top: 6px;
+}
 .inside,.r-side {
 	font-size: 4em;
 	line-height: 1.4em;
