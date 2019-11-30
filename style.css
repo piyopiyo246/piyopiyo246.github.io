@@ -464,14 +464,17 @@ div {
 	padding: 0.9%;
 }
 .style-w2 {
+/*	position: absolute;*/
+/*	background: no-repeat;*/
+	margin-left: 10px; 
 	color: #f2f2f2;
+	padding: 10px;
 	transition: 10s ;
 	transition-timing-function : step-end
 }
 .style-w2:hover {	/*画像グレイ背景*/
 	background: #4f4f4f;
 	color: #f2f2f2;
-	padding: 10px;
 	font-weight: 700;
 	transition: 0.1s ;
 }
