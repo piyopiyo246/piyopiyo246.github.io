@@ -533,6 +533,7 @@ div {
 .v830 {	height: 830px;}
 .v860 {	height: 860px;}
 .v890 {	height: 900px;}
+.v900 {	height: 910px;}
 .v1000 {height: 1020px;}
 .v1100 {height: 1100px;}
 .v1130 {height: 1120px;}
@@ -644,7 +645,7 @@ div {
 .ht52 {	height:620px;}
 .ht60 {	height:750px;}
 .ht68 {	height:780px;}
-.ht80 {	height:1060px;}
+.ht80 {	height:910px;}
 .btm-lg {border-bottom: 1px solid #888888;}
 .btm-lg-dash {border-bottom: 1px dashed #888888;}
 
