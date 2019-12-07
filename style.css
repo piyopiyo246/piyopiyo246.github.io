@@ -128,8 +128,6 @@ a.lnk3:hover {
 	color: #f2f2f2;
 }
 .lh1 {line-height: 0.95em;}
-.lh2 {line-height: 1.3em;}
-
 /*PB（下 margin）*/
 .pb0 {padding-bottom: 8px;}
 .pb1 {padding-bottom: 16px;}
@@ -722,7 +720,7 @@ div {
 	top: 20px;
 }
 .bk4 {
-	line-height: 10px;
+	line-height: 18px;
 	text-align: center;
 	top: 6px;
 }
