@@ -626,7 +626,7 @@ div {
 .box104 {width: 1140px;}
 .box110 {width: 1170px;}
 .box121 {width: 1210px;}
-.box-full {width: 1300px;}
+.box-full {width: 1280px;}
 .box-wide {width: 1390px;}
 /*Timeline*/
 .timeline1,.timeline2,.timeline3 {
@@ -661,7 +661,7 @@ div {
 .wood {
 	position: absolute;/*絶対配置*/
 	background: #4f4f4f ;
-	width: 1300px;
+	width: 1280px;
 	height: 50px;
 	border-bottom:solid 2px #ffffff;
 }
