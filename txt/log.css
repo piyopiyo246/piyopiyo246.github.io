@@ -7,12 +7,11 @@ body {
 }
 /*基本*/
 #header_txt {
-	font-size: 20px;
+	font-size: 18px;
 	margin: -8px 0 0 -8px;
-	font-weight: 400;
 	background-color: #000000;
-	width: 1345px ;
-	height: 2em;
+	width: 1300px ;
+	height: 34px;
 	clear: both;
 	position: fixed;
 	z-index: 1;
