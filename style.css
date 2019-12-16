@@ -752,13 +752,13 @@ div {
 	content: "/";
 	color: #444444;	/*標準↑*/
 	font-weight: 700;
-	margin: 0 20px;
+	margin: 0 8px;
 }
 .af1:after {
 	content: "/";
 	color: #444444;	/*標準↑*/
 	font-weight: 700;
-	margin: 0 20px;
+	margin: 0 10px;
 }
 /*Accordion*/
 .ac1 {	/*▼対応*/
