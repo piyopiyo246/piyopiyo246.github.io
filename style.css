@@ -488,13 +488,13 @@ div {
 /*Vertical*/
 .vs60 ,.v90 ,.vs90 ,.v120 ,.vs120 ,.v150 ,.vs150 ,.v170 ,.vs170 ,.v200 ,.vs200 ,.v240 ,.vs240 ,.v260 ,.vs260 ,.v280 ,.vs280 ,.v300 ,.vs300 ,.v320 ,.vs320 ,.vs330 ,.v340 ,.v350 ,.v360 ,.vs360 ,.vs380 ,.v400 ,.vs400 ,.v420 ,.vs420 ,.v450 ,.vs450 ,.v470 ,.vs470 ,.vs480 ,.v500 ,.v540 ,.vs540 ,.v560 ,.v580 ,.v600 ,.v640 ,.v700 ,.v720 ,.v750 ,.v800 ,.v830 ,.v860 ,.v890 ,.v900 ,.v1000 ,.v1100 ,.v1130 ,.v1200 ,.v1500 ,.v2000 ,.v2300 ,.v3200 ,.v3400 ,.v14000 ,.v3700 ,.v4200 ,.v4700 ,.v6280{
 	position: absolute;
-	width: 6px;
+	width: 10px;
 	padding: 0;
 	background: #b0b0b0 ;
-	margin: 4px 0 0 4px;
+	margin: 4px 0 0 10px;
 }
 .vs60 ,.vs90 ,.vs120 ,.vs150 ,.vs170 ,.vs200 ,.vs240 ,.vs260 ,.vs280 ,.vs300 ,.vs320 ,.vs330 ,.vs360 ,.vs380 ,.vs400 ,.vs420 ,.vs450 ,.vs470 ,.vs480 ,.vs540 {
-	margin-left: 13px;
+	margin-left: 22px;
 }
 .vs60 {height: 60px;}
 .v90 ,.vs90 {height: 90px;}
