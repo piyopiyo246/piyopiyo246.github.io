@@ -126,7 +126,6 @@ a.lnk3: hover {
 	color: #f2f2f2;
 }
 .lh1 {line-height: 0.95em;}
-.lh2 {line-height: 24px;}
 /*PB（下 margin）*/
 .pb0 {padding-bottom: 8px;}
 .pb1 {padding-bottom: 16px;}
@@ -465,7 +464,7 @@ div {
 }
 .style-w2 {
 	color: #f2f2f2;
-	padding: 10px;
+	padding: 2px;
 	transition: 10s ;
 	transition-timing-function : step-end
 }
@@ -714,13 +713,11 @@ div {
 }
 .bk3 {
 	width: 340px;
-	line-height: 20px;
 	left: 900px;
 	top: 10px;
 }
 .bk4 {
 	width: 1080px;
-	line-height: 12px;
 	text-align: center;
 	top: 10px;
 }
