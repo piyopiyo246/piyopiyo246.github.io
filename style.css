@@ -715,14 +715,15 @@ div {
 }
 .bk3 {
 	width: 340px;
+	line-height: 20px;
 	left: 900px;
 	top: 10px;
 }
 .bk4 {
 	width: 1080px;
-	line-height: 14px;
+	line-height: 12px;
 	text-align: center;
-	top: 6px;
+	top: 10px;
 }
 .inside,.r-side {
 	font-size: 4em;
