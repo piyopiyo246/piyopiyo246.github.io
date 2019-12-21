@@ -11,7 +11,6 @@ body {
 	vertical-align: middle;
 	background: #f2f2f2;	/*011930*/
 	white-space: nowrap;
-	width: 1270px;
 	margin-top: 0;
 	min-width: 200px;
 	scrollbar-arrow-color:#f2f2f2 ;
@@ -46,7 +45,8 @@ h1 ,h2 {margin: 14px 0 6px 18px;}
 h3 ,h4 ,h5 ,h6 {margin: 2px 0 4px 24px;}
 p {	margin: 0 0 2px 24px;}
 hr {
-	width: 1214px;
+	margin-left : 20px;
+	width: 1200px;
 	border: none;
 	border-top: 1px #6e6e6e solid;
 }
@@ -660,7 +660,7 @@ div {
 .wood {
 	position: absolute;/*絶対配置*/
 	background: #4f4f4f ;
-	width: 1270px;
+	width: 1400px;
 	height: 50px;
 	border-bottom:solid 2px #ffffff;
 }
@@ -670,10 +670,10 @@ div {
 	position: absolute;/*絶対配置*/
 	background: #000000;
 	top: 46%;
-	left: 50%;
-	-ms-transform: translate(-50%,-50%);
-	-webkit-transform: translate(-50%,-50%);
-	transform: translate(-50%,-50%);
+	left: 46%;
+	-ms-transform: translate(-46%,-46%);
+	-webkit-transform: translate(-46%,-46%);
+	transform: translate(-46%,-46%);
 	margin:0;
 	padding:0;
 }
@@ -768,7 +768,7 @@ div {
 	line-height: 150%;
 	clear: both;
 	cursor: pointer;
-	margin: 0 4px 4px;
+	margin: 0 0 4px 20px;
 	border-radius: 2px;
 }
 .ac1:hover {
