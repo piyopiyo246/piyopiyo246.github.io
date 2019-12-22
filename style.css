@@ -48,8 +48,8 @@ h1 ,h2 {margin: 14px 0 6px 18px;}
 h3 ,h4 ,h5 ,h6 {margin: 2px 0 4px 24px;}
 p {	margin: 0 0 2px 24px;}
 hr {
-	margin-left : 20px;
-	width: 1200px;
+	margin-left : 10px;
+	width: 1220px;
 	border: none;
 	border-top: 1px #6e6e6e solid;
 }
@@ -163,6 +163,8 @@ a.lnk3: hover {
 	background: #4f4f4f ;
 	height: 50px;
 	border-bottom:solid 2px #ffffff;
+	margin:0;
+	padding:0;
 }
 .b-box {
 	position: absolute;/*絶対配置*/
@@ -645,11 +647,11 @@ div {
 .ac1 {	/*▼対応*/
 	color: #6e6e6e;
 	border:solid 1px #6e6e6e;
-	width: 1240px;
+	width: 1250px;
 	line-height: 150%;
 	clear: both;
 	cursor: pointer;
-	margin: 0 0 4px 20px;
+	margin: 0 0 4px 10px;
 	border-radius: 2px;
 }
 .ac1:hover {
@@ -662,7 +664,7 @@ div {
 }
 .bn {border: 0;}
 .ac2 {
-	width: 1210px;
+	width: 1250px;
 	line-height: 28px;	/*＞＞対応*/
 }
 .ac2:hover {
