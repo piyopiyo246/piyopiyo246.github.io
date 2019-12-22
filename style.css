@@ -1,8 +1,6 @@
 @charset "UTF-8";
 /*body*/
 body {
-	margin-right: auto;
-	margin-left : auto;
 	font-family: 'MS UI Gothic', "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 	line-height: 32px;
 	font-size: 18px;			/*px以外、OperaやEDGEで文字サイズがChoromeより小さくなる */
@@ -11,7 +9,7 @@ body {
 	vertical-align: middle;
 	background: #f2f2f2;	/*011930*/
 	white-space: nowrap;
-	margin-top: 0;
+	margin: 0;
 	min-width: 200px;
 	scrollbar-arrow-color:#f2f2f2 ;
 	scrollbar-face-color:#f2f2f2 ;
@@ -34,6 +32,11 @@ body {
 }
 .scrollbox::-webkit-scrollbar-corner {/*右下角部分*/
 	background: #4f4f4f;
+}
+#contents {
+	margin-right: auto;
+	margin-left : auto;
+	width: 1270px;
 }
 /*format*/
 h1 ,h2 ,h3 ,h4 ,h5 ,h6 {
@@ -657,19 +660,17 @@ div {
 }
 /*Top*/
 .wood {
-	position: absolute;/*絶対配置*/
 	background: #4f4f4f ;
-	width: 1360px;
 	height: 50px;
 	border-bottom:solid 2px #ffffff;
 }
 .b-box {
+	position: absolute;/*絶対配置*/
 	width: 1060px;
 	height: 34px;
-	position: absolute;/*絶対配置*/
 	background: #000000;
-	top: 46%;
-	left: 46%;
+	top: 20px;
+	left: 50%;
 	-ms-transform: translate(-46%,-46%);
 	-webkit-transform: translate(-46%,-46%);
 	transform: translate(-46%,-46%);
