@@ -44,7 +44,7 @@ h1 ,h2 ,h3 ,h4 ,h5 ,h6 {
 	font-weight: normal;
 	letter-spacing: 1px;
 }
-h1 ,h2 {margin: 14px 0 6px 18px;}
+h1 ,h2 {margin: 4px 0 4px 18px;}
 h3 ,h4 ,h5 ,h6 {margin: 2px 0 4px 24px;}
 p {	margin: 0 0 2px 24px;}
 hr {
