@@ -546,6 +546,7 @@ div {
 	background: #4f4f4f;
 	color: #f2f2f2;
 	font-weight: 700;
+	font-size: 96%;
 	transition: 0.1s ;
 }
 .style-n ,.style-w {	/*中央寄せ*/
@@ -783,11 +784,13 @@ div {
 	width: 340px;
 	left: 900px;
 	top: 10px;
+	font-size: 96%;
 }
 .bk4 {
 	width: 1080px;
 	text-align: center;
 	top: 4px;
+	font-size: 96%;
 }
 .inside,.r-side {
 	font-size: 4em;
