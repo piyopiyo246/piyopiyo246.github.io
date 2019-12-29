@@ -771,6 +771,7 @@ div {
 .bk,.bk2,.bk3,.bk4 {
 	position: absolute;
 	background: no-repeat;
+	border-radius: 1px;
 }
 .bk,.bk2{
 	font-family: Lato;
@@ -780,18 +781,19 @@ div {
 	padding: 0;
 	text-align: right;
 }
+.bk3,.bk4 {
+	top: 1px;
+	border-radius: 2px;
+	font-size: 96%;
+}
 .bk3 {
 	width: 340px;
 	left: 900px;
-	top: 10px;
-	font-size: 96%;
 }
 .bk4 {
 	width: 1060px;
 	left: 180px;
 	text-align: center;
-	top: 4px;
-	font-size: 96%;
 }
 .inside,.r-side {
 	font-size: 4em;
