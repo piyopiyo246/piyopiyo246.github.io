@@ -10,30 +10,11 @@
 		gtag('config', 'UA-49012481-1');
 	</script>
 	<script defer src="js/lazysizes.min.js"></script><!-- 横scroll-->
-	<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script><!-- scrollTop-->
-	<script>
-		$(function() {
-			var topBtn = $('#page-top');			topBtn.hide();
-			$(window).scroll(function () {
-				if ($(this).scrollTop() > 100) {
-					topBtn.fadeIn();
-				} else {
-					topBtn.fadeOut();
-				}
-			});
-			//スクロールしてトップ
-				topBtn.click(function () {
-				$('body,html').animate({
-					scrollTop: 0
-				}, 500);
-				return false;
-				});
-		});
-	</script>
-	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script><!--lightbox-->
 	<script defer src="js/flexcroll.js"></script><!-- 横scroll-->
+	<script async src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script><!-- scrollTop-->
+	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script><!--lightbox-->
 	<meta charset="UTF-8">
- 	<meta name="viewport" content="width = device-width,initial-scale=1">
+	<meta name="viewport" content="width = device-width,initial-scale=1">
 	<meta name="description" content="メルセデスＣクラス総合スレのテンプレートとして、ほぼ文字情報でスペック等を掲載しています。">
 	<meta name="format-detection" content="telephone=no">
 	<meta name="theme-color" content="#000000"/>
@@ -5248,4 +5229,23 @@
 </aside>
 <p id="page-top"><a href="#wrap">▲</a></p>
 <hr class="t0">
+<script>
+	$(function() {
+		var topBtn = $('#page-top');			topBtn.hide();
+		$(window).scroll(function () {
+			if ($(this).scrollTop() > 100) {
+				topBtn.fadeIn();
+			} else {
+				topBtn.fadeOut();
+			}
+		});
+		//スクロールしてトップ
+			topBtn.click(function () {
+			$('body,html').animate({
+				scrollTop: 0
+			}, 500);
+			return false;
+			});
+	});
+</script>
 </div></div></body></html>
