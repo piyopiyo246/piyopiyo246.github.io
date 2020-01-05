@@ -1,6 +1,36 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-49012481-1"></script><!-- Global site tag (gtag.js) - Google Analytics -->
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-49012481-1');
+	</script>
+	<script defer type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+	<script defer type="text/javascript">
+		$(function() {
+			var topBtn = $('#page-top');	
+			topBtn.hide();
+			$(window).scroll(function () {
+				if ($(this).scrollTop() > 100) {
+					topBtn.fadeIn();
+				} else {
+					topBtn.fadeOut();
+				}
+			});
+			//スクロールしてトップ
+				topBtn.click(function () {
+				$('body,html').animate({
+					scrollTop: 0
+				}, 500);
+				return false;
+				});
+		});
+	</script>
+</head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width = device-width,initial-scale=1">
 	<meta name="description" content="Cクラス総合スレッドにてサイズとかを比較してみようと出来心で作ってしまいました。">
@@ -12,7 +42,6 @@
 	<link rel="stylesheet" href="./style.css">
 	<link rel="shortcut icon" href="ico/mb-logo-g.png" type="image/vnd.microsoft.icon">
 	<title>Ｃクラススレテンプレの履歴</title>
-</head>
 <body>
 <div id="wrap"><div id="contents">
 	<header>
@@ -1007,7 +1036,7 @@
 	<hr>
 	<section>
 		<h2>■サイトを作った発端</h2>
-		<h3 class="i">１　最初の試み</h3><p  class="i m4"><a class="lnk2" title="過去ログサイトの当該カキコへ" href="txt/c-class_1t.html#t409">‥…叱られました…‥　＿|￣|○</a></p>
+		<h3 class="i">1 最初の試み</h3><p  class="i m4"><a class="lnk2" title="過去ログサイトの当該カキコへ" href="txt/c-class_1t.html#t409">‥…叱られました…‥　＿|￣|○</a></p>
 		<p class="m3 t0 clr-gy">
 			409 名前：名無しさん＠そうだドライブへ行こう[sage] 投稿日：2007/01/26(金) 17：02：05 [夕方] ID:WQQRJcwt0 (PC)
 		</p>
@@ -1035,12 +1064,12 @@
 		<p class="m3 t1 clr-gy">
 			410 名前：↑[sage] 投稿日：2007/01/26(金) 20：44：24 [夜] ID:jxK6co4+0 (PC)<br>
 		</p>
-		<p class="m4 t0">
+		<p class="m4 t0 pb0">
 			車名と開発コードがバラバラ<br>
 			やりなおし
 		</p>
-		<h3 class="t1">２　その後</h3>
-		<p class="m3">
+		<h3>2 その後</h3>
+		<p class="m3  pb0">
 			<a class="lnk2" href="txt/c-class_1t.html#t10台目">総合ｽﾚ10台目</a>
 			からスレッドに直接書き込み始めましたが、
 			<a class="lnk2" href="txt/c-class_1t.html#t16台目">肥大化の一途</a>
@@ -1048,7 +1077,7 @@
 			<a class="lnk2" href="txt/c-class_1t.html#t18台目">18台目</a>
 			から当サイトに移行しました。
 		</p>
-		<h3 class="t1">３　さらにその後</h3>
+		<h3>3 さらにその後</h3>
 		<p class="m3 pb1">
 			テンプレ本体が味気ないので
 			<a class="lnk2" href="pic/mb_img_c.html" title="戦後のメルセデス車のフロントビュー、リヤビュー、インパネ等">画像サイト</a>
@@ -1059,34 +1088,4 @@
 	</section>
 <hr>
 </div></div>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-49012481-1"></script>
-<script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-
-	gtag('config', 'UA-49012481-1');
-</script>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
-<script type="text/javascript">
-	$(function() {
-		var topBtn = $('#page-top');	
-		topBtn.hide();
-		$(window).scroll(function () {
-			if ($(this).scrollTop() > 100) {
-				topBtn.fadeIn();
-			} else {
-				topBtn.fadeOut();
-			}
-		});
-		//スクロールしてトップ
-			topBtn.click(function () {
-			$('body,html').animate({
-				scrollTop: 0
-			}, 500);
-			return false;
-			});
-	});
-</script>
 </body></html>
