@@ -9,27 +9,7 @@
 
 		gtag('config', 'UA-49012481-1');
 	</script>
-	<script defer type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
-	<script defer type="text/javascript">
-		$(function() {
-			var topBtn = $('#page-top');	
-			topBtn.hide();
-			$(window).scroll(function () {
-				if ($(this).scrollTop() > 100) {
-					topBtn.fadeIn();
-				} else {
-					topBtn.fadeOut();
-				}
-			});
-			//スクロールしてトップ
-				topBtn.click(function () {
-				$('body,html').animate({
-					scrollTop: 0
-				}, 500);
-				return false;
-				});
-		});
-	</script>
+	<script async type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
 </head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width = device-width,initial-scale=1">
@@ -1087,5 +1067,24 @@
 		<p id="page-top"><a href="#wrap">▲</a></p>
 	</section>
 <hr>
-</div></div>
-</body></html>
+<script>
+	$(function() {
+		var topBtn = $('#page-top');	
+		topBtn.hide();
+		$(window).scroll(function () {
+			if ($(this).scrollTop() > 100) {
+				topBtn.fadeIn();
+			} else {
+				topBtn.fadeOut();
+			}
+		});
+		//スクロールしてトップ
+			topBtn.click(function () {
+			$('body,html').animate({
+				scrollTop: 0
+			}, 500);
+			return false;
+			});
+	});
+</script>
+</div></div></body></html>
