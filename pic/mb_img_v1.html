@@ -8,26 +8,7 @@
 		gtag('js', new Date());
 		gtag('config', 'UA-49012481-1');
 	</script>
-	<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
-	<script>
-		$(function() {
-			var topBtn = $('#page-top');			topBtn.hide();
-			$(window).scroll(function () {
-				if ($(this).scrollTop() > 100) {
-					topBtn.fadeIn();
-				} else {
-					topBtn.fadeOut();
-				}
-			});
-			//スクロールしてトップ
-				topBtn.click(function () {
-				$('body,html').animate({
-					scrollTop: 0
-				}, 500);
-				return false;
-				});
-		});
-	</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width = device-width,initial-scale=1">
 	<meta name="description" content="メルセデス・ベンツの小型商用バン ヴァネオ,シタン の画像を年代順に掲載しました。">
@@ -166,4 +147,23 @@
 	</nav>
 </footer>
 <p id="page-top"><a href="#wrap">▲</a></p>
+<script>
+	$(function() {
+		var topBtn = $('#page-top');			topBtn.hide();
+		$(window).scroll(function () {
+			if ($(this).scrollTop() > 100) {
+				topBtn.fadeIn();
+			} else {
+				topBtn.fadeOut();
+			}
+		});
+		//スクロールしてトップ
+			topBtn.click(function () {
+			$('body,html').animate({
+				scrollTop: 0
+			}, 500);
+			return false;
+			});
+	});
+</script>
 </div></body></html>
