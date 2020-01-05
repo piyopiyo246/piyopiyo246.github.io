@@ -10,6 +10,26 @@
 
 		gtag('config', 'UA-49012481-1');
 	</script>
+	<script async src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script><!--head内に-->
+	<script>
+		$(function() {
+			var topBtn = $('#page-top');			topBtn.hide();
+			$(window).scroll(function () {
+				if ($(this).scrollTop() > 100) {
+					topBtn.fadeIn();
+				} else {
+					topBtn.fadeOut();
+				}
+			});
+			//スクロールしてトップ
+				topBtn.click(function () {
+				$('body,html').animate({
+					scrollTop: 0
+				}, 500);
+				return false;
+				});
+		});
+	</script>
 	<link rel="canonical" href="https://piyopiyo246.github.io/txt/single_thread_t.html">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width = device-width,initial-scale=1">
@@ -18,8 +38,6 @@
 	<link href="./log.css" rel="stylesheet" type="text/css">
 	<link rel="shortcut icon" href="../ico/mb-logo-g.png" type="image/vnd.microsoft.icon">
 	<title>Cクラス単独スレッド全過去ログ</title>
-	<script async type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script><!--head内に-->
-</head>
 <body>
 <div id="wrap">
 <header>
@@ -21851,24 +21869,4 @@ original_spec/index.htm</a>
 </p>
 <hr></article>
 <p id="page-top"><a href="#wrap">▲</a></p>
-</div>
-<script type="text/javascript">
-	$(function() {
-		var topBtn = $('#page-top');			topBtn.hide();
-		$(window).scroll(function () {
-			if ($(this).scrollTop() > 100) {
-				topBtn.fadeIn();
-			} else {
-				topBtn.fadeOut();
-			}
-		});
-		//スクロールしてトップ
-			topBtn.click(function () {
-			$('body,html').animate({
-				scrollTop: 0
-			}, 500);
-			return false;
-			});
-	});
-</script>
-</body></html>
+</div></body></html>
