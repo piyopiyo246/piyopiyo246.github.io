@@ -539,7 +539,7 @@ div {
 	color: #f2f2f2;
 	padding: 4px 2px 4px 10px ;
 	line-height: 24px;
-	transition: 1s ;
+	transition: 2s ;
 	transition-timing-function : step-end
 }
 .style-w2:hover {	/*画像グレイ背景*/
@@ -547,7 +547,7 @@ div {
 	color: #f2f2f2;
 	font-weight: 700;
 	font-size: 96%;
-	transition: 0.1s ;
+	transition: 1s ;
 }
 .style-n ,.style-w {	/*中央寄せ*/
 	width: 1214px;
