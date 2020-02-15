@@ -147,13 +147,13 @@ a.lnk3:hover {
 	content: "/";
 	color: #444444;	/*標準↑*/
 	font-weight: 700;
-	margin: 0 8px;
+	margin: 0 -6px 0 4px;
 }
 .af1:after {
 	content: "/";
 	color: #444444;	/*標準↑*/
 	font-weight: 700;
-	margin: 0 10px;
+	margin: 0 4px;
 }
 /*Top*/
 .wood {
