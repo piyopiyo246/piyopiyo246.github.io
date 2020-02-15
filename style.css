@@ -554,6 +554,8 @@ div {
 	margin-left: auto;
 	margin-right: auto;
 }
+.style-n {width: 1240px;}
+
 .bk-w {	background: #ffffff;}
 .f {float: left;}
 .float {clear: none;}		/*後続の左寄せを解除しない*/
@@ -638,7 +640,7 @@ div {
 .box98 {width: 1010px;}
 .box100 {width: 1080px;}
 .box104 {width: 1140px;}
-.box110 {width: 1170px;}
+.box110 {width: 1168px;}
 .box121 {width: 1210px;}
 .box-full {width: 1270px;}
 .box-wide {width: 1390px;}
