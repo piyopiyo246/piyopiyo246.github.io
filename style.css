@@ -48,7 +48,7 @@ h1 ,h2 {margin: 4px 0 4px 18px;}
 h3 ,h4 ,h5 ,h6 {margin: 2px 0 4px 24px;}
 p {	margin: 0 0 2px 24px;}
 hr {
-	margin-left : 10px;
+	margin : 4px 10px;
 	border: none;
 	border-top: 1px #6e6e6e solid;
 }
@@ -158,7 +158,7 @@ a.lnk3:hover {
 /*Top*/
 .wood {
 	background: #4f4f4f ;
-	height: 50px;
+	height: 46px;
 	border-bottom:solid 2px #ffffff;
 	margin:0;
 	padding:0;
