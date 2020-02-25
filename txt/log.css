@@ -60,7 +60,7 @@ ul {
 }
 li {
 	padding: 0;
-	margin: 0px 14px;
+	margin: 0 28px 0 0;
 	color: #fff ;
 	float: left ;
 }
@@ -92,5 +92,5 @@ li {
 	content: "/";
 	color: #fff;	/*標準↑*/
 	font-weight: 700;
-	margin: 0 0 0 12px;
+	margin: 0 0 0 6px;
 }
