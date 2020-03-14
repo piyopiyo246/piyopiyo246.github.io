@@ -526,7 +526,7 @@ div {
 	width: 100%;
 	padding: 0;
 	margin: 0;
-	overflow: visible;
+	overflow: hidden;
 	position: relative;	/*DWで正常にプレビューできるようになる*/
 	zoom: 1;		/*IE6でレイアウト崩れを防ぐ*/
 }
