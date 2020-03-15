@@ -162,9 +162,13 @@ a.lnk3:hover {
 	border-bottom:solid 2px #ffffff;
 	margin:0;
 	padding:0;
+	clear: both;
+	position: fixed;
+	width: 100% ;
+	z-index: 1;
 }
 .b-box {
-	position: absolute;/*絶対配置*/
+	position: absolute;	/*絶対配置*/
 	width: 1060px;
 	height: 34px;
 	background: #000000;
