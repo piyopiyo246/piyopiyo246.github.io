@@ -40,7 +40,7 @@ body {
 }
 /*format*/
 h1 ,h2 ,h3 ,h4 ,h5 ,h6 {
-	font-size: 18px;	/*px以外、OperaやEDGEで文字サイズがChoromeより小さくなる */
+	font-size: 17px;	/*px以外、OperaやEDGEで文字サイズがChoromeより小さくなる */
 	font-weight: normal;
 	letter-spacing: 1px;
 }
