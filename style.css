@@ -127,21 +127,21 @@ a.lnk3:hover {
 }
 .lh1 {line-height: 0.99;}
 /*>> ▼ ■*/
+.bf0:before {
+	content: "■ ";
+	color: #444444;	/*標準↑*/
+}
 .bf1:before {
+	content: "▼";
+	margin: 0 10px 4px;
+	color: #888888;	
+}
+.bf2:before {
 	content: ">>";
 	font-weight: 700;
 	margin-left:30px;
 	margin-right:5px;
 	color: #6e6e6e;	/*標準↑*/
-}
-.bf2:before {
-	content: "▼";
-	margin: 0 10px 4px;
-	color: #888888;	
-}
-.bf3:before {
-	content: "■ ";
-	color: #444444;	/*標準↑*/
 }
 .bf4:before {
 	content: "/";
@@ -149,7 +149,7 @@ a.lnk3:hover {
 	font-weight: 700;
 	margin: 0;
 }
-.af1:after {
+.bf4:after {
 	content: "/";
 	color: #444444;	/*標準↑*/
 	font-weight: 700;
@@ -657,7 +657,7 @@ div {
 	clear: both;
 	cursor: pointer;
 	margin: 0 0 4px 10px;
-	border-radius: 2px;
+	border-radius: 2px ;
 }
 .ac1:hover {
 	color: #2e0edd;
@@ -667,10 +667,11 @@ div {
 .ac2 {						/* >>対応 */
 	width: 98%;
 	line-height: 1.6;
+	border-radius: 0 20px 20px 0;
 }
 .ac2:hover {
 	color: #2e0edd;			/*light blue*/
-	background: #fdfdfd;
+	background: #a2ddf9 ;
 }
 .displayNone {
 	display: none;
