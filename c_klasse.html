@@ -27,7 +27,7 @@
 	<title>Ｃクラス総合スレッドのテンプレ</title>
 </head>
 <body id="wrap">
-<nav class="wood">
+<nav class="dashboard">
 	<ul class="b-box">
 		<li class="i"><input class="box-dg" type="button" onclick="location.href = '#inland'" title="Verkauf in Japan" value="国内販売"></li>
 		<li class="i"><input class="box-dg" type="button" onclick="location.href = '#body'" title="Körper Spezifikationen" value="車体"></li>
@@ -41,11 +41,11 @@
 <div id="contents">
 <header>
 	<div>
-		<div class="bk3 t2 style-w2">
+		<div class="bk3 style-w2">
 			　当サイトは、Ｃクラスと関連車種のスペック<br>
 			等を、ほぼ文字情報で掲載しています。
 		</div>
-		<h1 class="bf0 ib t2"><a title="Mercedes C-Klasse allgemeine Thread-Vorlage">メルセデスＣクラス総合スレッドのテンプレート</a></h1>
+		<h1 class="bf0 ib"><a title="Mercedes C-Klasse allgemeine Thread-Vorlage">メルセデスＣクラス総合スレッドのテンプレート</a></h1>
 		<dl class="m2 ib lh1">
 			<dt class="w4 b float">Update</dt>
 			<dt class="s2 float">20/03/15</dt>
@@ -630,8 +630,7 @@
 	</section>
 </article>
 <section>
-	<p class="lh0"><a id="inland">.</a></p>
-	<div>
+	<div id="inland">
 		<div class="bk3 style-w2">
 			▼ や &gt;&gt; の行を Clickし開閉してください。
 		</div>
@@ -828,7 +827,6 @@
 		</div>
 	</div>
 	<section>
-		<p class="lh0 t0">.</p>
 		<div class="ac1 bn" onclick="obj=document.getElementById('japan-mb').style; obj.display=(obj.display=='none')?'block':'none';">
 			<h3 class="bf1"><a title="Andere Mercedes">他の Mercedes</a></h3>
 		</div>
@@ -1209,8 +1207,7 @@
 	</aside>
 </section>
 <section>
-	<p class="lh0"><a id="body">.</a></p>
-	<div>
+	<div id="body">
 		<div class="bk4 style-w2">
 			<ul class="left">
 				<li class="f w8">年：発表年</li>
@@ -3089,8 +3086,7 @@
 	</aside>
 </section>
 <section>
-	<p class="lh1"><a id="motor">.</a></p>
-	<div>
+	<div id="motor">
 		<div class="bk3 style-w2">
 			▼ や &gt;&gt; の行を Clickし開閉してください。
 		</div>
@@ -3766,8 +3762,7 @@
 	</aside>
 </section>
 <section>
-	<p class="lh0"><a id="at">.</a></p>
-	<h2 class="bf0"><a title="Automatische Übertragung">AT</a></h2>
+	<h2 class="bf0" id="at"><a title="Automatische Übertragung">AT</a></h2>
 		<table class="w123 m3 wp">
 			<thead>
 				<tr><th class="left"></th><th class="left"></th><th>Code</th><th class="w6">Typ</th><th class="w3">Zeit</th><th class="left">Modell</th></tr>
@@ -3791,8 +3786,7 @@
 	<hr>
 </section>
 <section>
-	<p class="lh0"><a id="zeit">.</a></p>
-	<div>
+	<div id="zeit">
 		<div>
 			<h2 class="bf0 pb0"><a title="Zeitleiste">年表</a></h2>
 			<h3 class="i m2 b"><a title="Limousine">セダン</a></h3>
@@ -5059,13 +5053,12 @@
 	</section>
 </section>
 <section>
-	<div class="t0">
+	<div id="vin" class="t0">
 		<div class="bk3 style-w2">
 			　車検証「車台番号」欄 17桁の英数字が、<br>
 			VIN コードです。 DeCoder に入力すると、<br>
 			色々と教えてくれます。
 		</div>
-		<p class="lh0"><a id="vin">.</a></p>
 		<h2 title="Fahrzeug-Identifizierungsnummer"><a href = "https://goo.gl/fKnj1x" class="ico-wiki" target="_blank" rel="noopener" title="Wiki(J) 車両識別番号"></a> VIN CODE</h2>
 		<dl class="m2 pb0">
 			<dt class="w6 b">DeCoder</dt>
@@ -5173,8 +5166,7 @@
 	</aside>
 </section>
 <aside>
-	<p class="lh0"><a id="huroku">.</a></p>
-	<h2 class="bf0"><a title="Anhang">付録</a></h2>
+	<h2 id="huroku" class="bf0"><a title="Anhang">付録</a></h2>
 	<div>
 		<div class="bk r-side t0d">
 			<img src="ico/mb-logo.png" class="lazyload" alt="dreizackiger Stern" width="150" height="150"><br>

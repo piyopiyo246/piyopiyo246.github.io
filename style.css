@@ -121,10 +121,6 @@ a.lnk3:hover {
 .mid {text-align: center;}
 .r ,.ru {text-align: right;}
 .ru {margin-top: -1.85em;}
-.lh0 {
-	line-height: 0;
-	color: #f2f2f2;
-}
 .lh1 {line-height: 0.99;}
 /*>> ▼ ■*/
 .bf0:before {
@@ -156,14 +152,13 @@ a.lnk3:hover {
 	margin: 0 4px;
 }
 /*Top*/
-.wood {
+.dashboard {
 	background: #4f4f4f ;
 	height: 46px;
 	border-bottom:solid 2px #ffffff;
 	margin:0;
 	padding:0;
 	clear: both;
-	position: fixed;
 	width: 100% ;
 	z-index: 1;
 }
