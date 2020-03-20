@@ -2,7 +2,7 @@
 /*body*/
 body {
 	font-family: 'MS UI Gothic', "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-	line-height: 32px;
+	line-height: 1.8;
 	font-size: 18px;			/*px以外、OperaやEDGEで文字サイズがChoromeより小さくなる */
 	letter-spacing: 0;
 	text-align: left;
@@ -81,7 +81,7 @@ hr {
 }
 .aa {
 	font-size: 16px;
-	line-height: 15px;
+	line-height: 0.95;
 	margin: 60px 0 15px 60px;
 }
 .td1 {
@@ -125,7 +125,7 @@ a.lnk3:hover {
 	line-height: 0;
 	color: #f2f2f2;
 }
-.lh1 {line-height: 0.95em;}
+.lh1 {line-height: 1;}
 /*>> ▼ ■*/
 .bf1:before {
 	content: ">>";
