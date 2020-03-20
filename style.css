@@ -125,7 +125,7 @@ a.lnk3:hover {
 	line-height: 0;
 	color: #f2f2f2;
 }
-.lh1 {line-height: 1;}
+.lh1 {line-height: 0.99;}
 /*>> ▼ ■*/
 .bf1:before {
 	content: ">>";
@@ -542,7 +542,7 @@ div {
 .style-w2 {
 	color: #f2f2f2;
 	padding: 4px 2px 4px 10px ;
-	line-height: 24px;
+	line-height: 1.4;
 	transition: 2s ;
 	transition-timing-function : step-end
 }
@@ -653,7 +653,7 @@ div {
 	color: #6e6e6e;
 	border:solid 1px #6e6e6e;
 	width: 1250px;
-	line-height: 150%;
+	line-height: 1.2;
 	clear: both;
 	cursor: pointer;
 	margin: 0 0 4px 10px;
@@ -670,7 +670,7 @@ div {
 .bn {border: 0;}
 .ac2 {
 	width: 1250px;
-	line-height: 28px;	/*＞＞対応*/
+	line-height: 1.6;	/*＞＞対応*/
 }
 .ac2:hover {
 	color: #2e0edd;	/*light blue*/
@@ -800,7 +800,7 @@ div {
 }
 .inside,.r-side {
 	font-size: 4em;
-	line-height: 1.4em;
+	line-height: 1.2;
 	color: #d6d6d6;	/*標準↑↑*/
 	text-align: center;
 }
