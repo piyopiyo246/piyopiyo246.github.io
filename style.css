@@ -649,10 +649,10 @@ div {
 .box-full {width: 1270px;}
 .box-wide {width: 1390px;}
 /*Accordion*/
-.ac1 {	/*▼対応*/
+.ac1 {						/*▼対応*/
 	color: #6e6e6e;
 	border:solid 1px #6e6e6e;
-	width: 1250px;
+	width: 98%;
 	line-height: 1.2;
 	clear: both;
 	cursor: pointer;
@@ -663,21 +663,13 @@ div {
 	color: #2e0edd;
 	background: #fdfdfd ;	/*薄いwhite*/
 }
-.ac1:focus {
-	color: #2e0edd;	/*light blue*/
-	background: #fdfdfd ;
-}
 .bn {border: 0;}
-.ac2 {
-	width: 1250px;
-	line-height: 1.6;	/*＞＞対応*/
+.ac2 {						/* >>対応 */
+	width: 98%;
+	line-height: 1.6;
 }
 .ac2:hover {
-	color: #2e0edd;	/*light blue*/
-	background: #fdfdfd;
-}
-.ac2:focus {
-	color: #2e0edd;	/*light blue*/
+	color: #2e0edd;			/*light blue*/
 	background: #fdfdfd;
 }
 .displayNone {
