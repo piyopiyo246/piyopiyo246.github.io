@@ -4,12 +4,13 @@ body {
 	background-color: #dfdfdf;
 	font-size: 22px;
 	font-weight: 400;
+	line-height: 1.1;
 }
 /*基本*/
 #header_txt {
 	font-size: 18px;
-	line-height: 24px;
 	margin: -8px 0 0 -8px;
+	line-height: 1.2;
 	background-color: #000000;
 	width: 100% ;
 	clear: both;
@@ -39,8 +40,6 @@ h2 {
 p {
 	white-space: pre;
 	margin-left: 30px;
-	line-height: 24px;
-	letter-spacing: 0.4pt;
 	word-wrap: break-word;
 }
 hr {border-top: 1px solid rgba(0,0,0,0.4);}
