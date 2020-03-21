@@ -10,10 +10,7 @@ body {
 	background: #f2f2f2;	/*011930*/
 	white-space: nowrap;
 	margin: 0;
-	width: 1270px;
 	min-width: 200px;
-	margin-right: auto;
-	margin-left : auto;
 	scrollbar-arrow-color:#f2f2f2 ;
 	scrollbar-face-color:#f2f2f2 ;
 	scrollbar-3dlight-color:#f2f2f2 ;
@@ -35,6 +32,11 @@ body {
 }
 .scrollbox::-webkit-scrollbar-corner {/*右下角部分*/
 	background: #4f4f4f;
+}
+#contents {
+	width: 1270px;
+	margin-right: auto;
+	margin-left : auto;
 }
 /*format*/
 h1 ,h2 ,h3 ,h4 ,h5 ,h6 {
@@ -165,10 +167,10 @@ a.lnk3:hover {
 	height: 34px;
 	background: #000000;
 	top: 20px;
-	left: 46%;
-	-ms-transform: translate(-46%,-46%);
-	-webkit-transform: translate(-46%,-46%);
-	transform: translate(-46%,-46%);
+	left: 100px;
+	-ms-transform: translate(-20px,-16px);
+	-webkit-transform: translate(-20px,-16px);
+	transform: translate(-20px,-16px);
 	margin:0;
 	padding:0;
 }
