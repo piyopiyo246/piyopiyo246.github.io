@@ -153,13 +153,13 @@ a.lnk3:hover {
 }
 /*Top*/
 .dashboard {
+	width: 1250px;
 	background: #4f4f4f ;
 	height: 46px;
 	border-bottom:solid 2px #ffffff;
 	margin:0;
 	padding:0;
 	clear: both;
-	width: 100% ;
 	z-index: 1;
 }
 .b-box {
