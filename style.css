@@ -130,26 +130,20 @@ a.lnk3:hover {
 .bf1:before {
 	content: "▼";
 	margin: 0 10px 4px;
-	color: #888888;	
+	color: #444444;	/*標準↑*/
 }
 .bf2:before {
 	content: ">>";
 	font-weight: 700;
 	margin-left:30px;
 	margin-right:5px;
-	color: #6e6e6e;	/*標準↑*/
+	color: #444444;	/*標準↑*/
 }
-.bf4:before {
+.bf4:before ,.af4:after  {
 	content: "/";
 	color: #444444;	/*標準↑*/
 	font-weight: 700;
-	margin: 0;
-}
-.bf4:after {
-	content: "/";
-	color: #444444;	/*標準↑*/
-	font-weight: 700;
-	margin: 0 4px;
+	margin: 10px;
 }
 /*Top*/
 .dashboard {
