@@ -38,7 +38,7 @@ body {
 	margin-right: auto;
 	margin-left : auto;
 }
-#contents1 {width: 1210px;}
+#contents1 {width: 1210px;}	/*メインおよびHistory用幅設定*/
 /*format*/
 h1 ,h2 ,h3 ,h4 ,h5 ,h6 {
 	font-size: 17px;	/*px以外、OperaやEDGEで文字サイズがChoromeより小さくなる */
