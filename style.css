@@ -684,51 +684,43 @@ div {
 	display: none;
 }
 /*Vertical*/
-.vs60 ,.v90 ,.vs90 ,.v120 ,.vs120 ,.v150 ,.vs150 ,.v170 ,.vs170 ,.v200 ,.vs200 ,.v240 ,.vs240 ,.v260 ,.vs260 ,.v280 ,.vs280 ,.v300 ,.vs300 ,.v320 ,.vs320 ,.vs330 ,.v340 ,.v350 ,.v360 ,.vs360 ,.vs380 ,.v400 ,.vs400 ,.v420 ,.vs420 ,.v450 ,.vs450 ,.v470 ,.vs470 ,.vs480 ,.v500 ,.v540 ,.vs540 ,.v560 ,.v580 ,.v600 ,.v640 ,.v700 ,.v720 ,.v750 ,.v800 ,.v860 ,.v890 ,.v900 ,.v960 ,.v1000 ,.v1100 ,.v1130 ,.v1200 ,.v1230 ,.v1500 ,.v1900 ,.v2000 ,.v2300 ,.v2400 ,.v3200 ,.v3400 ,.v14000 ,.v3700 ,.v4200 ,.v4700 ,.v6280{
+.v90 ,.v120 ,.v150 ,.v170 ,.v200 ,.v240 ,.v260 ,.v280 ,.v300 ,.v320 ,.v340 ,.v350 ,.v360 ,.v400 ,.v420 ,.v450 ,.v470 ,.v500 ,.v540 ,.v560 ,.v580 ,.v600 ,.v640 ,.v700 ,.v720 ,.v750 ,.v800 ,.v860 ,.v890 ,.v900 ,.v960 ,.v1000 ,.v1100 ,.v1130 ,.v1200 ,.v1230 ,.v1500 ,.v1900 ,.v2000 ,.v2300 ,.v2400 ,.v3200 ,.v3400 ,.v14000 ,.v3700 ,.v4200 ,.v4700 ,.v6280{
 	position: absolute;
 	width: 6px;
 	padding: 0;
 	background: #b0b0b0 ;
 	margin: 4px 0 0 10px;
 }
-.vs60 ,.vs90 ,.vs120 ,.vs150 ,.vs170 ,.vs200 ,.vs240 ,.vs260 ,.vs280 ,.vs300 ,.vs320 ,.vs330 ,.vs360 ,.vs380 ,.vs400 ,.vs420 ,.vs450 ,.vs470 ,.vs480 ,.vs540 {
-	margin-left: 18px;
-}
-.vs60 {height: 60px;}
-.v90 ,.vs90 {height: 90px;}
-.v120 ,.vs120 {height: 120px;}
-.v150 ,.vs150 {	height: 150px;}
-.v170 ,.vs170 {height: 160px;}
-.v200 ,.vs200 {height: 200px;}
-.v240 ,.vs240 {height: 240px;}
-.v260 ,.vs260 {height: 260px;}
-.v280 ,.vs280  {height: 280px;}
-.v300 ,.vs300 {height: 300px;}
-.v320 ,.vs320 {height: 320px;}
-.vs330 {height: 330px;}
+.v90 {height: 90px;}
+.v120 {height: 120px;}
+.v150 {height: 150px;}
+.v170 {height: 160px;}
+.v200 {height: 200px;}
+.v240 {height: 240px;}
+.v260 {height: 260px;}
+.v280 {height: 280px;}
+.v300 {height: 300px;}
+.v320 {height: 320px;}
 .v340 {height: 340px;}
 .v350 {height: 350px;}
-.v360,.vs360 {height: 360px;}
-.vs380 {height: 380px;}
-.v400 ,.vs400 {	height: 400px;}
-.vs420 ,.v420 {height: 420px;}
-.v450 ,.vs450 {height: 450px;}
-.v470 ,.vs470 {height: 470px;}
-.vs480 {height: 480px;}
-.v500 {	height: 500px;}
-.v540 ,.vs540 {height: 540px;}
-.v560 {	height: 560px;}
-.v580 {	height: 580px;}
-.v600 {	height: 600px;}
-.v640 {	height: 640px;}
-.v700 {	height: 700px;}
-.v720 {	height: 720px;}
-.v750 {	height: 760px;}
-.v800 {	height: 800px;}
-.v860 {	height: 860px;}
-.v890 {	height: 900px;}
-.v900 {	height: 910px;}
-.v960 {	height: 960px;}
+.v360 {height: 360px;}
+.v400 {height: 400px;}
+.v450 {height: 450px;}
+.v470 {height: 470px;}
+.v500 {height: 500px;}
+.v540 {height: 540px;}
+.v560 {height: 560px;}
+.v580 {height: 580px;}
+.v600 {height: 600px;}
+.v640 {height: 640px;}
+.v700 {height: 700px;}
+.v720 {height: 720px;}
+.v750 {height: 760px;}
+.v800 {height: 800px;}
+.v860 {height: 860px;}
+.v890 {height: 900px;}
+.v900 {height: 910px;}
+.v960 {height: 960px;}
 .v1000 {height: 1020px;}
 .v1100 {height: 1100px;}
 .v1130 {height: 1120px;}
