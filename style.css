@@ -3,14 +3,13 @@
 body {
 	font-family: 'MS UI Gothic', "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 	line-height: 1.8;
-	font-size: 18px;			/*px以外、OperaやEDGEで文字サイズがChoromeより小さくなる */
+	font-size: 18px;		/*px以外、OperaやEDGEで文字サイズがChoromeより小さくなる */
 	letter-spacing: 0;
 	text-align: left;
 	vertical-align: middle;
 	background: #f2f2f2;	/*011930*/
 	white-space: nowrap;
 	margin: 0;
-	min-width: 200px;
 	scrollbar-arrow-color:#f2f2f2 ;
 	scrollbar-face-color:#f2f2f2 ;
 	scrollbar-3dlight-color:#f2f2f2 ;
@@ -34,14 +33,14 @@ body {
 	background: #4f4f4f;
 }
 #contents ,#contents1 {
-	width: 1270px;
+	width: 1270px;			/*画像サイト用幅設定*/
 	margin-right: auto;
 	margin-left : auto;
 }
 #contents1 {width: 1210px;}	/*メインおよびHistory用幅設定*/
 /*format*/
 h1 ,h2 ,h3 ,h4 ,h5 ,h6 {
-	font-size: 17px;	/*px以外、OperaやEDGEで文字サイズがChoromeより小さくなる */
+	font-size: 17px;		/*px以外、OperaやEDGEで文字サイズがChoromeより小さくなる */
 	font-weight: normal;
 	letter-spacing: 1px;
 }
@@ -91,7 +90,7 @@ hr {
 }
 .td2 {
 	border-bottom: solid 0.05em #0e56dd;	/*light blue*/
-	color: #0e56dd;	/*light blue*/
+	color: #0e56dd;
 }
 .td3 {
 	border-bottom: solid 0.05em #f2f2f2;	/*E/C-class 画像サイト*/
@@ -99,22 +98,22 @@ hr {
 }
 .td3:hover {
 	border-bottom: solid 0.05em #59f3ff ;	/*pale blue E/C-class 画像サイト**/
-	color: #59f3ff ;	/*pale blue E/C-class 画像サイト**/
+	color: #59f3ff ;						/*pale blue E/C-class 画像サイト**/
 }
 /*文字列*/
 a {text-decoration: none;}
 a:link {color: #060606;}	/*標準*/
 a:visited {color: #060606;}	/*標準*/
 .lnk:hover {
-	color: #005300;	/*green*/
+	color: #005300;			/*green*/
 	border-bottom: solid 0.05em #005300;
 }
 a.lnk2:hover {
-	color: #2e0edd;	/*light blue*/
+	color: #2e0edd;		/*light blue*/
 	border-bottom: solid 0.05em #2e0edd;
 }
 a.lnk3:hover {
-	color: #2e0edd;	/*light blue*/
+	color: #2e0edd;		/*light blue*/
 	border-bottom: solid 0.05em #2e0edd;
 }
 .top {vertical-align: top;}
@@ -149,6 +148,9 @@ a.lnk3:hover {
 }
 /*Top*/
 .dashboard {
+	position: absolute;	/*絶対配置*/
+	width: 100%;
+	min-width: 1210px;
 	background: #4f4f4f ;
 	height: 46px;
 	border-bottom:solid 2px #ffffff;
@@ -158,7 +160,16 @@ a.lnk3:hover {
 	z-index: 1;
 }
 .b-box {
-	position: absolute;	/*絶対配置*/
+	margin-top: 4px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 1060px;
+	height: 34px;
+	background: #000000;
+	padding: 0;
+}
+/*
+	position: absolute;	/*絶対配置
 	width: 1060px;
 	height: 34px;
 	background: #000000;
@@ -169,7 +180,7 @@ a.lnk3:hover {
 	transform: translate(-49%,-16px);
 	margin:0;
 	padding:0;
-}
+*/
 .box-dg {
 	background: #444444;
 	color: #f0f0f0;
@@ -527,9 +538,9 @@ div {
 	margin: 0;
 	overflow: hidden;
 	position: relative;	/*DWで正常にプレビューできるようになる*/
-	zoom: 1;		/*IE6でレイアウト崩れを防ぐ*/
+	zoom: 1;			/*IE6でレイアウト崩れを防ぐ*/
 }
-.style-w {	/*画像グレイ背景*/
+.style-w {				/*画像グレイ背景*/
 	background: #4f4f4f;
 	color: #f2f2f2;
 	padding: 0.9%;
@@ -541,7 +552,7 @@ div {
 	transition: 2s ;
 	transition-timing-function : step-end
 }
-.style-w2:hover {	/*画像グレイ背景*/
+.style-w2:hover {		/*画像グレイ背景*/
 	background: #4f4f4f;
 	color: #f2f2f2;
 	font-weight: 700;
@@ -850,7 +861,7 @@ div {
 	width: 15px;
 	background-color: white;
 }
-.vscrollerbar {	/* 縦スクロールバー */
+.vscrollerbar {		/* 縦スクロールバー */
 	width: 15px;
 	background-color: #b0b0b0;
 }
