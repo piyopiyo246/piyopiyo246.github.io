@@ -136,7 +136,7 @@ a.lnk3:hover {
 .bf2:before {
 	content: ">>";
 	font-weight: 700;
-	margin-left:30px;
+	margin-left:20px;
 	margin-right:5px;
 	color: #444444;	/*標準↑*/
 }
