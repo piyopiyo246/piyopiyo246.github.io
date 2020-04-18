@@ -100,6 +100,10 @@ hr {
 	border-bottom: solid 0.05em #59f3ff ;	/*pale blue E/C-class 画像サイト**/
 	color: #59f3ff ;						/*pale blue E/C-class 画像サイト**/
 }
+.td4 {
+	color: #005300;			/*green*/
+	border-bottom: solid 0.05em #005300;
+}
 /*文字列*/
 a {text-decoration: none;}
 a:link {color: #060606;}	/*標準*/
@@ -546,18 +550,19 @@ div {
 	padding: 0.9%;
 }
 .style-w2 {
-	color: #f2f2f2;
+	opacity:0;
 	padding: 4px 2px 4px 10px ;
 	line-height: 1.4;
-	transition: 2s ;
+	transition: 0s ;
 	transition-timing-function : step-end
+	font-weight: 700;
+	font-size: 16px;
 }
 .style-w2:hover {		/*画像グレイ背景*/
+	opacity: 1;
 	background: #4f4f4f;
 	color: #f2f2f2;
-	font-weight: 700;
-	font-size: 96%;
-	transition: 1s ;
+	transition: 0s;
 }
 .style-n ,.style-w {	/*中央寄せ*/
 	width: 1214px;
