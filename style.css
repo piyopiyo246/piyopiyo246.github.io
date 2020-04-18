@@ -124,7 +124,10 @@ a.lnk3:hover {
 .left {text-align: left;}
 .mid {text-align: center;}
 .r ,.ru {text-align: right;}
-.ru {margin-top: -1.85em;}
+.ru {
+	margin-top: -1.85em;
+	margin-right: 30px;
+}
 .lh1 {line-height: 0.99;}
 .lh2 {line-height: 1.4;}
 /*>> ▼ ■*/
