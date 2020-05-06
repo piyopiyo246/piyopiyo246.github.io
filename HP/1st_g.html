@@ -1,0 +1,66 @@
+<!DOCTYPE html><html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-160592426-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-160592426-1');
+	</script>
+	<script async src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script><!-- scrollTop-->
+	<script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
+	<script>
+		$(function() {
+			$("#header").load("header.html");
+		});
+	</script>
+	<meta name="viewport" content="width = device-width,initial-scale=1">
+	<meta name="description" content="">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="theme-color" content="#000000"/>
+	<meta name="msapplication-navbutton-color" content="#-000000">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="stylesheet" href="style.css">
+	<link rel="shortcut icon" href="images/parts/kousyou.png" type="image/vnd.microsoft.icon">
+	<title></title>
+</head>
+<body id="wrap" class="bgr-seamless_paper">
+<div id="header"></div>
+<div id="contents">
+<h1 class="bf3 t2"></h1>
+<hr class="brown">
+
+
+
+<hr class="brown">
+<footer>
+	<p class="mid bbb">
+		&#169; Narashino City Mukoyama E.S
+		<a href="policy.html" class="m1 lnk">このサイトについて</a>
+	</p>
+</footer>
+
+<p id="page-top"><a href="#wrap">▲</a></p>
+<script>
+	$(function() {
+		var topBtn = $('#page-top');			topBtn.hide();
+		$(window).scroll(function () {
+			if ($(this).scrollTop() > 100) {
+				topBtn.fadeIn();
+			} else {
+				topBtn.fadeOut();
+			}
+		});
+		//スクロールしてトップ
+			topBtn.click(function () {
+			$('body,html').animate({
+				scrollTop: 0
+			}, 500);
+			return false;
+			});
+	});
+</script>
+</div></body></html>

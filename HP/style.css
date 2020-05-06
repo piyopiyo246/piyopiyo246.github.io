@@ -1,0 +1,668 @@
+@charset "utf-8";
+/*body*/
+body {
+	font-family: 'MS UI Gothic', "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	line-height: 180%;
+	font-size: 18px;			/*px以外、OperaやEDGEで文字サイズがChoromeより小さくなる */
+	letter-spacing: 0;
+	text-align: left;
+	color: #222;
+	vertical-align: middle;
+	background: #dbdfd6;	/*light gray*/
+	white-space: nowrap;
+	margin: 0;
+	min-width: 200px;
+
+	scrollbar-arrow-color:#f2f2f2 ;
+	scrollbar-face-color:#f2f2f2 ;
+	scrollbar-3dlight-color:#f2f2f2 ;
+	scrollbar-darkshadow-color:#f2f2f2 ;
+	scrollbar-highlight-color:#f2f2f2 ;
+	scrollbar-shadow-color:#f2f2f2 ;
+	scrollbar-track-color:#f2f2f2 ;
+	-webkit-text-size-adjust: none;
+}
+::-webkit-scrollbar {	/*スクロールバー全体*/
+	width: 10px;
+}
+::-webkit-scrollbar-track {	/*スクロールバーの軌道*/
+	border-radius: 10px;
+	box-shadow: inset 0 0 6px #f2f2f2;
+}
+::-webkit-scrollbar-thumb {	/*スクロールバーの動く部分*/
+	background: #4f4f4f;
+}
+.scrollbox::-webkit-scrollbar-corner {/*右下角部分*/
+	background: #4f4f4f;
+}
+#hd_bg {					/*header用*/
+	margin: 0 auto;
+	line-height: 1.2;
+	background-color: #000000;
+	width: 100% ;
+	clear: both;
+	position: fixed;
+	z-index: 1;
+	border-bottom:solid 2px #ffffff;
+}
+#contents {
+	margin-right: auto;
+	margin-left : auto;
+	background: #f8f9f7;	/*011930*/
+	width: 800px;
+}
+
+/*format*/
+h1 ,h2 ,h3 ,h4 ,h5 ,h6 ,p {
+	font-size: 16px;	/*px以外、OperaやEDGEで文字サイズがChoromeより小さくなる */
+	white-space: normal;	/*折り返し*/
+	word-wrap: break-word;
+}
+h1 ,h2 {
+	margin: 16px 48px 8px 32px;
+}
+h3 ,h4 ,h5 ,h6 {
+	margin: 8px 48px 0 48px;
+}
+p {
+	margin: 0 64px 0 64px;
+}
+.ww {
+	margin-top: -32px;	/*<br>なしで改行*/
+	white-space: pre;
+}
+.ws {
+	white-space: normal;	/*折り返し*/
+}
+hr {
+	width: 88%;
+	margin : 9px auto;
+	border: none;
+	border-top: 0.5px #c2c2c2 solid;
+}
+.brown ,.brown2 {
+	width: 92%;
+	margin : 0 auto;
+	border-top: 2px #9a6438 solid;
+}
+.brown2 {
+	margin-top: 20px ;	/*途中の hr*/
+}
+
+/*font*/
+.gothic {font-family: "ＭＳ ゴシック", "MS Gothic" ;}
+.fs200 {font-size: 200%;}
+.fs150 {font-size: 150%;}
+.fs90 {font-size: 90%;}
+.fs80 {font-size: 86%;}
+
+.clr-f1 {color: #111111;}	/*black*/
+.clr-f2 {color: #2e2e2e;}
+.clr-f3 {color: #4c4c4c;}
+.clr-f4 {color: #696969;}
+.clr-f5 {color: #878787;}
+.clr-f6 {color: #9c9c9c;}
+.clr-f7 {color: #c2c2c2;}
+.clr-w {color: #ffffff;}	/*white*/
+
+.clr-r {color: #ff0000;}	/*red*/
+.clr-o {color: #ff6633;}	/*orange*/
+.clr-o2 {color: #ff9933;}	/*明るいorange*/
+.clr-o3 {color: #ffcc33;}	/*明るいorange*/
+.clr-g {color: #6e6e6e;}
+.clr-gy {color: #006c00;}	/*green*/
+.clr-lb {color: #0e56dd;}	/*light blue*/	/*#0b44ad;cobalt blue*/
+
+.b ,.bb ,.bbb {
+	font-weight: 700;	/*太字*/
+}
+.bb {
+	color: #2e2e2e;
+}
+.bbb ,.lnk {
+	color: #2e2e2e;
+	font-size: 14px;
+}
+
+.td {
+	border-bottom: solid 0.5px #666666;	/*下線*/
+}
+.td2 {
+	border-top: solid 0.5px #666666;	/*上線*/
+	border-bottom: solid 0.5px #666666;	/*下線*/
+}
+.lnk ,.lnk2 ,.lnk3 {
+	text-decoration: none;	/*リンク部分の下線や色を付けたくないときに使う*/
+}
+a.lnk:link {
+	color: #666;	/*標準*/
+}
+a.lnk:visited {
+	color: #666;
+}
+a.lnk:hover {
+	color: #2e0edd;		/*light blue*/
+	border-bottom: solid 0.05em #2e0edd;
+}
+
+a.lnk2:link {
+	color: #2e2e2e;
+	font-weight: 700;
+	font-size: 16px;
+}
+a.lnk2:visited {
+	color: #2e2e2e;
+}
+a.lnk2:hover {
+	color: #2e0edd;		/*light blue*/
+	border-bottom: solid 0.05em #2e0edd;
+}
+
+a.lnk3:link {			/*header用*/
+	color: #ffffff;
+	font-weight: 700;
+	font-size: 16px;
+}
+a.lnk3:visited {
+	color: #ffffff;
+}
+a.lnk3:hover {
+	color: #6bbef6;	/*light blue*/
+}
+
+/*文字列位置*/
+.btm {
+position:absolute;
+	left: 470px;
+	top: 288px;
+	line-height: 16px;	/*隠し文字列*/
+}
+.top {
+	vertical-align: top;
+}
+.vmid {
+	vertical-align: center;
+}
+.left {
+	text-align: left;
+}
+.mid {
+	text-align: center;
+	margin: 0;
+}
+.r ,.ru {
+	text-align: right;	/*右寄せ*/
+}
+.ru {
+	margin-top: -35px;	/*上に1行上げて右寄せ*/
+}
+.lh0 {
+	line-height: 0;	/*隠し文字列*/
+}
+.lh1 {line-height: 15px;}
+
+/*▼ ■*/
+.bf1:before {
+	content: ">>";
+	margin-left:30px;
+	margin-right:5px;
+	color: #6e6e6e;	/*標準↑*/
+}
+.bf2:before {
+	content: "▼";
+	margin: 0 4px 0 0;
+	color: #444444;
+}
+.bf3:before {
+	content: "■ ";
+	color: #444444;	/*標準↑*/
+}
+.bf4:before {
+	content: "/";
+	color: #444444;	/*標準↑*/
+	font-weight: 700;
+	margin: 0;
+}
+.af4:after {
+	content: "/";
+	color: #white;	/*標準↑*/
+	font-weight: 700;
+	margin: 0 12px;
+}
+.bf5:before {
+	content: "○ ";
+	color: #444444;	/*標準↑*/
+	margin: 0 4px 0 0;
+}
+
+/*T（上 margin）*/
+.t-1 {margin-top: -26px;}
+.t0 {margin-top: 13px;}
+.t1 {margin-top: 26px;}
+.t2 {margin-top: 51px;}
+.t3 {margin-top: 80px;}
+.t4 {margin-top: 102px;}
+.t5 {margin-top: 128px;}
+
+/*S（右 margin）*/
+.s0 {margin-right: 4px;}
+.s1 {margin-right: 8px;}
+.s2 {margin-right: 16px;}
+.s3 {margin-right: 24px;}
+.s4 {margin-right: 32px;}
+.s5 {margin-right: 40px;}
+.s6 {margin-right: 48px;}
+.s8 {margin-right: 64px;}
+.s10 {margin-right: 80px;}
+.s12 {margin-right: 96px;}
+
+/*PB（下 margin）*/
+.pb0 {padding-bottom: 8px;}
+.pb1 {padding-bottom: 16px;}
+.pb2 {padding-bottom: 32px;}
+.pb3 {padding-bottom: 48px;}
+.pb4 {padding-bottom: 64px;}
+
+/*M（左 margin）*/
+.m-1 {margin-left: -10px;}
+.m0 {margin-left: 0;}
+.m1 {margin-left: 16px;}
+.m2 {margin-left: 32px;}
+.m3 {margin-left: 48px;}
+.m4 {margin-left: 64px;}
+.m5 {margin-left: 80px;}
+.m6 {margin-left: 96px;}
+.m7 {margin-left: 112px;}
+.m8 {margin-left: 128px;}
+.m9 {margin-left: 144px;}
+.m10 {margin-left: 160px;}
+.m11 {margin-left: 176px;}
+
+/*W（width）*/
+.w32 {width: 320px;}
+.w50 {width: 500px;}
+.w56 {width: 560px;}
+.w60 {width: 600px;}
+.w70 {width: 700px;}
+.w80 {width: 800px;}
+
+/*height*/
+.hgt13 {height: 130px;}
+.hgt36 {height: 330px;}
+/*img・ico*/
+img {
+	vertical-align: top;
+	margin: 0;
+	padding: 4px 0;
+}
+.kakumaru {	border-radius:10px;}	/*Interior Trim*/
+.ico-wiki,.ico-wiki2,.ico-camera,.ico-tube {
+	display: inline-block;
+	background-repeat: no-repeat;
+}
+.ico-wiki {
+	width: 17px;
+	margin-right: 3px;
+	background-image: url('ico/wiki.png');
+	height: 17px;
+}
+.ico-wiki2 {
+	width: 17px;
+	margin-right: 3px;
+	background-image: url('ico/wiki.png');
+	height: 14px;
+}
+.ico-camera {
+	width: 20px;
+	height: 16px;
+	background-image: url('ico/camera.png');
+}
+.ico-tube {
+	width: 23px;
+	height: 16px;
+	background-image: url('ico/youtube.png');
+}
+.maru { border-radius: 50%; }
+
+/*table*/
+table {
+	table-layout: auto;
+	width: 720px;
+	margin: auto;
+}
+th {
+	color: #ffcc33;
+	background :#4c4c4c;
+	font-size :14px;
+	padding: 6px;
+	text-align: center;
+}
+td {
+	border :#666666;
+	padding: 6px;
+}
+table tr:nth-child(even){
+	background-color:#d7dfeb ; /*#e0e0ec薄紫*/
+}
+
+table tr:nth-child(odd){
+	background-color:#fffff5;　/*#ffffce薄黄*/
+}
+.fix {
+	table-layout: fixed;
+}
+
+/*list*/
+ul ,ol ,dl {
+	list-style: none;
+	overflow: hidden;
+	position: relative;
+	zoom: 1;
+	margin: 0 48px 8px 32px;
+	width: 740px;
+	font-size: 16px;
+}
+.hd_ul {					/*header用*/
+	width: 100% ;
+	padding: 0 auto;
+	margin: 0 auto;
+	list-style: none;
+	zoom: 1;
+	display: inline-block ;
+}
+dl {
+	margin: 0 32px 8px 48px;
+}
+dt {
+	margin: 0 0 0 32px;
+	font-weight: 700;
+	white-space: normal;	/*折り返し*/
+	clear: both;
+}
+dd {
+	margin: 0 8px 8px 32px;
+	float: left;
+	white-space: normal;	/*折り返し*/
+}
+li {
+	margin: 0 32px 8px 0;
+	float: left;
+	white-space: normal;	/*折り返し*/
+}
+.hd_li {					/*header用*/
+	padding: 8px 4px;
+	margin: 0 10px 0 10px;
+	color: #fff ;
+	float: left ;
+}
+.headline {
+	margin: 0 27px 0 0;
+}
+
+/*inline*/
+.i {
+	display: inline;
+}
+.ib {
+	display: inline-block;
+}
+.cb {
+	clear: both;	/*inline要素を殺したいとき*/
+}
+
+/*DIV*/
+div {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	position: relative;	/*DWで正常にプレビューできるようになる*/
+	zoom: 1;		/*IE6でレイアウト崩れを防ぐ*/
+}
+.style-w {	/*画像グレイ背景*/
+	background: #4f4f4f;
+	color: #f2f2f2;
+}
+.style-w2 {
+	color: #f2f2f2;
+	padding: 4px 2px 4px 10px ;
+	line-height: 24px;
+	transition: 2s ;
+	transition-timing-function : step-end
+}
+.style-w2:hover {	/*画像グレイ背景*/
+	background: #4f4f4f;
+	color: #f2f2f2;
+	font-weight: 700;
+	font-size: 96%;
+	transition: 1s ;
+}
+.style-n ,.style-w {	/*中央寄せ*/
+	margin-left: auto;
+	margin-right: auto;
+}
+.f {
+	float: left;
+}
+.float {
+	clear: none;	/*後続の左寄せを解除しない*/
+}
+.nofloat {
+	float: none;	/*後続の左寄せをしない*/
+}
+
+/*BOX*/
+.box05 ,.box07 ,.box08 ,.box09 ,.box10 ,.box20 ,.box24 ,.box26 ,.box28 ,.box42 ,.box45 ,.box50 ,.box52 ,.box56 ,.box60 ,.box64 ,.box70 ,.box72 {
+	float: left;
+}
+.box05 {width: 50px;}
+.box07 {width: 70px;}
+.box08 {width: 80px;}
+.box09 {width: 96px;}
+.box10 {width: 100px;}
+.box20 {width: 200px;}
+.box24 {width: 240px;}
+.box26 {width: 260px;}
+.box28 {width: 280px;}
+.box42 {width: 410px;}
+.box45 {width: 450px;}
+.box50 {width: 500px;}
+.box52 {width: 520px;}
+.box56 {width: 560px;}
+.box60 {width: 600px;}
+.box64 {width: 640px;}
+.box70 {width: 700px;}
+.box72 {width: 720px;}
+
+/*Accordion*/
+.ac1 {
+	background: #eceff1;	/*light gray e1e5e8*/
+	border:none;
+	height: 38px;
+	width: 720px;
+	clear: both;
+	cursor: pointer;
+	margin: 2px 0 0 38px;
+	border-radius: 0 22px 22px 0;
+}
+.ac1:hover {
+	color: #2e0edd;
+	background: #c2f1ff;	/*light blue*/
+}
+.ac1:focus {
+	color: #2e0edd;
+	background: #c2f1ff;	/*light blue*/
+}
+.bn {border: 0;}
+.ac2 {
+	margin-top: 10px;
+	width: 800px;
+	line-height: 38px;
+	clear: both;
+	cursor: pointer;
+	border-radius: 4px;
+}
+.ac2:hover {
+	color: #2e0edd;
+	background: #c2f1ff ;	/*light blue*/
+}
+.ac2:focus {
+	color: #2e0edd;	/*light blue*/
+	background: #fdfdfd ;
+}
+.displayNone {	
+	display: none;
+}
+
+/*back ground*/
+.bgc-gg {background: #e1e5e8;}	/*gray of gray*/
+.bgc-lg {background: #D6DBDF;}	/*light gray*/
+
+.bgc-re {background: #ff0000;}	/*red*/
+.bgc-dp {background: #ff006b;}	/*deep pink*/
+.bgc-p {background: #fde0e7;}	/*pink*/
+.bgc-gp {background: #fbf8f2;}	/*grayshpink*/
+.bgc-pp {background: #fef2f5;}	/*palepink*/
+
+.bgc-or {background: #f7df97;}	/*orange */
+.bgc-ye {background: #ffffb7;}	/*yellow*/
+.bgc-yo {background: #f3dc3b;}	/*yellowocher*/
+.bgc-sb {background: #e8e0a8;}	/*sandbeige*/
+.bgc-sb2 {background: #fbf7be ;}/*sandbeige*/
+.bgc-sb3 {background: #fef9ee ;}/*sandbeige*/
+.bgc-br {background: #9a6438;}	/*brown*/
+
+.bgc-gy {background: #00b900;}	/*green*/
+.bgc-gr {background: #ACF7AB;}	/*green*/
+.bgc-pg {background: #e1ffe1;}	/*pale green*/
+.bgc-pg2 {background: #cdffcd;}	/*pale green*/
+
+.bgc-lb {background: #c2f1ff;}	/*light blue*/
+.bgc-pb {background: #d6fffe;}	/*pale blue*/
+.bgc-cb {background: #0b44ad;}	/*cobaltblue*/
+
+.bgc-w {background: #ffffff;}	/*white*/
+
+/*wall paper*/
+.bgr-gr{
+	background:url(images/wall/g9b.gif) repeat;
+}
+.bgr-butterfly-flower{
+	background:url(images/wall/butterfly-flower.jpg) repeat;
+}
+.bgr-trees{
+	background:url(images/wall/trees.png) repeat;
+}
+.bgr-seamless_paper{
+	background:url(images/wall/seamless_paper_texture.png) repeat;
+}
+.bgr-canadian-dollar{
+	background:url(images/wall/canadian-dollar.png) repeat;
+}
+
+/*Vertical*/
+.vs60 {
+	position: absolute;
+}
+
+/*bk*/
+.bk,.bk2,.bk3,.bk4 {
+	position: absolute;
+	background: no-repeat;
+}
+.bk,.bk2{
+	font-family: Lato;
+}
+.bk {
+	opacity: 1;	/*文字透過*/
+}
+.bk2 {
+	padding: 0;
+	text-align: right;
+}
+.bk3,.bk4 {
+	top: 1px;
+	border-radius: 4px;
+	font-size: 96%;
+}
+.bk3 {
+	width: 310px;
+	left: 930px;
+}
+.bk4 {
+	width: 1000px;
+	left: 200px;
+	text-align: center;
+}
+
+/*btn*/
+.square_btn {
+	color: #555555;	/*標準^*/
+	font-family: Lato;
+	font-size: 12px;
+	text-align: center;
+	padding: 0 8pt;
+	height: 16pt;
+	background: #f2f2f2;
+	border:solid 1px #6e6e6e;
+	border-radius: 1px;
+	display: inline-block;
+}
+.square_btn:hover {
+	color: #000000;
+	border:solid 1px #00000;
+	background: #fdfdfd ;
+	border:solid 1px #555555;	/*標準^*/
+}
+
+/* page-top */
+#page-top {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	font-size: 77%;
+}
+#page-top a {
+	background: #666;
+	text-decoration: none;
+	color: #fff;
+	width: 30px;
+	padding: 5px 0;
+	text-align: center;
+	display: block;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+#page-top a:hover {
+	text-decoration: none;
+	background: #999;
+
+/*lightbox*/
+.trim_name {
+	overflow-wrap : break-word;
+}
+
+/*fleXcroll*/
+.scrollgeneric {	/* 変更・省略不可 */
+	line-height: 1px;
+	font-size: 1px;
+	position: absolute;
+	top: 0; left: 0;
+}
+.vscrollerbase {	/* 縦スクロールバー背景 */
+	width: 15px;
+	background-color: white;
+}
+.vscrollerbar {	/* 縦スクロールバー */
+	width: 15px;
+	background-color: #b0b0b0;
+}
+.hscrollerbase {	/* 横スクロールバー背景 */
+	height: 15px;
+	background-color: white;
+}
+.hscrollerbar {	/* 横スクロールバー */
+	height: 15px;
+	background-color: #b0b0b0;
+}
