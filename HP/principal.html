@@ -1,6 +1,6 @@
-
 <!DOCTYPE html><html lang="ja">
 <head>
+	<meta charset="utf-8">
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-160592426-1"></script>
 	<script>
@@ -11,7 +11,12 @@
 		gtag('config', 'UA-160592426-1');
 	</script>
 	<script async src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script><!-- scrollTop-->
-	<meta charset="shift_jis">
+	<script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
+	<script>
+		$(function() {
+			$("#header").load("header.html");
+		});
+	</script>
 	<meta name="viewport" content="width = device-width,initial-scale=1">
 	<meta name="description" content="校長室より">
 	<meta name="format-detection" content="telephone=no">
@@ -22,13 +27,10 @@
 	<link rel="shortcut icon" href="images/parts/kousyou.png" type="image/vnd.microsoft.icon">
 	<title>校長室より</title>
 </head>
-<body id="wrap" class="bgr-butterfly-flower"><div id="contents"><br>
-<hr class="brown">
-<div class="vmid mid">
-	<div class="ib t0 pb1 box05 m7"><a href="index.htm"><img src="images/parts/kousyou_tp.png" width="48" height="52" alt="校章" title="校章"></a></div>
-	<h1 class="ib t1 fs200 box42 m2">校長室より</h1>
-	<div class="ib t0 pb1 m-1 box05"><a href="index.htm"><img src="images/parts/kousyou_tp.png" width="48" height="52" alt="校章" title="校章"></a></div>
-</div>
+<body id="wrap" class="bgr-butterfly-flower">
+<div id="header"></div>
+<div id="contents">
+<h1 class="bf3 t2">校長室より</h1>
 <hr class="brown">
 <div class="mid"><br>
 	<a href="https://youtu.be/8Qx4lZZ2TLw"><img src="pp/020424douga.jpg" width="320" height="180" alt="校長先生からのメッセージ"></a><br>

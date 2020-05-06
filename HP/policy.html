@@ -1,5 +1,6 @@
 <!DOCTYPE html><html lang="ja">
 <head>
+	<meta charset="utf-8">
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-160592426-1"></script>
 	<script>
@@ -10,13 +11,18 @@
 		gtag('config', 'UA-160592426-1');
 	</script>
 	<script async src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script><!--scrollTop-->
+	<script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
+	<script>
+		$(function() {
+			$("#header").load("header.html");
+		});
+	</script>
 	<script src="js/audio.min.js"></script><!--audio-->
 	<script>
 		audiojs.events.ready(function() {
 			var as = audiojs.createAll();
 		});
 	</script>
-	<meta charset="utf-8">
 	<meta name="viewport" content="width = device-width,initial-scale=1">
 	<meta name="description" content="Mukouyama E.S site policy">
 	<meta name="format-detection" content="telephone=no">
@@ -28,8 +34,9 @@
 	<title>習志野市立向山小学校サイトポリシー</title>
 </head>
 <body id="wrap" class="bgr-seamless_paper"><div id="contents">
-<hr class="brown">
-<h1 class="bf3">このサイトについて</h1>
+<div id="header"></div>
+<div id="contents">
+<h1 class="bf3 t2">このサイトについて</h1>
 <hr class="brown">
 <h2>掲載内容について</h2>
 <p>
