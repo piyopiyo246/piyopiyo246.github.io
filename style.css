@@ -1468,7 +1468,7 @@ td {
 
 /*inline要素を殺したいとき*/
 /*DIV*/
-div {
+div,article,section,aside {
 	width: 100%;
 	padding: 0;
 	margin: 0;
@@ -1946,33 +1946,25 @@ div {
 /*Accordion*/
 .ac1 {
 	/*▼対応*/
-	color: #6e6e6e;
-	border: solid 1px #6e6e6e;
-	width: 98%;
-	line-height: 1.2;
+	width: 100%;
+	line-height: 1.4;
 	clear: both;
 	cursor: pointer;
-	margin: 0 0 4px 10px;
-	border-radius: 2px;
+	background: #e4e3e3;
+	margin: 0 0 2px 0;
+	border-radius: 0 15px 15px 0;
 }
-
 .ac1:hover {
 	color: #2e0edd;
-	background: #fdfdfd;
-	/*薄いwhite*/
-}
-
-.bn {
-	border: 0;
+	background: #a2ddf9;	/*薄いwhite*/
 }
 
 .ac2 {
 	/* >>対応 */
-	width: 98%;
+	width: 100%;
 	line-height: 1.6;
 	border-radius: 0 20px 20px 0;
 }
-
 .ac2:hover {
 	color: #2e0edd;
 	/*light blue*/
