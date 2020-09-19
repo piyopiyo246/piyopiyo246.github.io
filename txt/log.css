@@ -1,12 +1,9 @@
 @charset "UTF-8";
 body {
-	font-family: 'MS UI Gothic', 'Hiragino Kaku Gothic ProN';
+	font-family: 'MS UI Gothic';
 	background-color: #dfdfdf;
-	line-height: 1.1;
 	font-size: 22px;
 }
-
-/*基本*/
 
 #header_txt {
 	font-size: 18px;
@@ -54,8 +51,6 @@ h2 {
 	color: #6bbef6;
 }
 
-/*light blue*/
-
 p {
 	white-space: pre;
 	margin-left: 30px;
@@ -68,24 +63,16 @@ hr {
 
 span {
 	color: #008000;
-	/*green*/
 	font-weight: 800;
 	margin: 0 0 0 -30px;
-}
-
-.s0 {
-	margin-right: 0;
 }
 
 .af1:after {
 	content: "/";
 	color: #fff;
-	/*標準↑*/
 	font-weight: 700;
 	margin: 0 0 0 16px;
 }
-
-/*list*/
 
 ul {
 	padding: 0;
@@ -105,10 +92,6 @@ li {
 .clr-lb {
 	color: #6bbef6;
 }
-
-/*light blue*/
-
-/* page-top */
 
 #page-top {
 	position: fixed;
