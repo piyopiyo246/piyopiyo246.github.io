@@ -335,19 +335,6 @@ a.lnk3:hover {
 	padding: 0;
 }
 
-/*
-	position: absolute;	/*絶対配置
-	width: 1060px;
-	height: 34px;
-	background: #000000;
-	top: 20px;
-	left: 49%;
-	-ms-transform: translate(-49%,-16px);
-	-webkit-transform: translate(-49%,-16px);
-	transform: translate(-49%,-16px);
-	margin:0;
-	padding:0;
-*/
 .box-dg {
 	background: #444444;
 	color: #f0f0f0;
@@ -1950,7 +1937,7 @@ div,article,section,aside {
 	line-height: 1.4;
 	clear: both;
 	cursor: pointer;
-	background: #e4e3e3;
+	background: #d6d6d6;
 	margin: 0 0 2px 0;
 	border-radius: 0 15px 15px 0;
 }
