@@ -55,10 +55,6 @@ body {
 	width: 1210px;
 }
 
-/*メインおよびHistory用幅設定*/
-
-/*format*/
-
 h1, h2, h3, h4, h5, h6 {
 	font-size: 17px;
 	/*px以外、OperaやEDGEで文字サイズがChoromeより小さくなる */
@@ -138,15 +134,9 @@ hr {
 	color: #006c00;
 }
 
-/*green*/
-
 .clr-lb {
 	color: #0e56dd;
 }
-
-/*light blue*/
-
-/*#0b44ad;cobalt blue*/
 
 .ac1, .clr-g, .ls04 {
 	letter-spacing: 0.4pt;
@@ -2187,7 +2177,7 @@ div, article, section, aside {
 /*btn*/
 
 .square_btn {
-	color: #383838;
+	color: #000000;
 	/*標準^*/
 	font-family: Lato;
 	font-size: 12px;
