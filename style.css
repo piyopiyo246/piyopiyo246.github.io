@@ -1,6 +1,4 @@
 @charset "UTF-8";
-/*body*/
-
 body {
 	font-family: 'MS UI Gothic', "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 	line-height: 1.8;
@@ -207,13 +205,9 @@ a:link {
 	color: #060606;
 }
 
-/*標準*/
-
 a:visited {
 	color: #060606;
 }
-
-/*標準*/
 
 .lnk:hover {
 	color: #005300;
@@ -294,6 +288,28 @@ a.lnk3:hover {
 	margin: 10px;
 }
 
+/*background-color*/
+
+.bgc-hp{
+	background-color: hotpink;
+}
+
+.bgc-lg{
+	background-color: lightgreen;
+}
+
+.bgc-pb{
+	background-color: powderblue;
+}
+
+.bgc-or{
+	background-color: orange;
+}
+
+.bgc-ye{
+	background-color: yellow;
+}
+
 /*Top*/
 
 .dashboard {
@@ -368,7 +384,7 @@ a.lnk3:hover {
 }
 
 .t0e {
-	margin-top: 0.68em;
+	margin-top: 1.52em;
 }
 
 .t0f {
@@ -387,10 +403,6 @@ a.lnk3:hover {
 	margin-top: 2.4em;
 }
 
-.t1c {
-	margin-top: 1.9em;
-}
-
 .t1d {
 	margin-top: 1.75em;
 }
@@ -405,6 +417,10 @@ a.lnk3:hover {
 
 .t2b {
 	margin-top: 2.8em;
+}
+
+.t2c {
+	margin-top: 2.92em;
 }
 
 .t3 {
@@ -448,11 +464,11 @@ a.lnk3:hover {
 }
 
 .t24 {
-	margin-top: 25.6em;
+	margin-top: 25.44em;
 }
 
 .t40 {
-	margin-top: 40.3em;
+	margin-top: 40.86em;
 }
 
 .t42 {
@@ -464,15 +480,15 @@ a.lnk3:hover {
 }
 
 .t48 {
-	margin-top: 48.8em;
+	margin-top: 48.56em;
 }
 
 .t55 {
-	margin-top: 56.8em;
+	margin-top: 56.82em;
 }
 
 .t76 {
-	margin-top: 74.65em;
+	margin-top: 77em;
 }
 
 /*S（右 margin）*/
@@ -1431,11 +1447,11 @@ td {
 	word-wrap: break-word;
 }
 
+/*inline要素を殺したいとき*/
+
 .cb {
 	clear: both;
 }
-
-/*inline要素を殺したいとき*/
 
 /*DIV*/
 
@@ -1503,8 +1519,6 @@ div, article, section, aside {
 .nofloat {
 	float: none;
 }
-
-/*後続の左寄せをしない*/
 
 /*BOX*/
 
@@ -2132,13 +2146,8 @@ div, article, section, aside {
 
 .bk {
 	font-family: Lato;
-}
-
-.bk {
 	opacity: 1;
 }
-
-/*文字透過*/
 
 .bk2, .bk3, .bk4 {
 	top: 1px;
@@ -2183,7 +2192,6 @@ div, article, section, aside {
 	font-size: 12px;
 	text-align: center;
 	padding: 0 8pt;
-	height: 16pt;
 	background: #f2f2f2;
 	border: solid 1px #6e6e6e;
 	border-radius: 1px;
@@ -2194,7 +2202,6 @@ div, article, section, aside {
 	color: #000000;
 	border: solid 1px #000000;
 	background: #fdfdfd;
-	border: solid 1px #555555;
 	/*標準^*/
 }
 
