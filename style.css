@@ -172,21 +172,19 @@ hr {
 
 .td2 {
 	border-bottom: solid 0.05em #0e56dd;
-	/*light blue*/
 	color: #0e56dd;
 }
 
+/*E/C-class 画像サイト*/
 .td3 {
 	border-bottom: solid 0.05em #f2f2f2;
-	/*E/C-class 画像サイト*/
 	color: #f2f2f2;
 }
 
+/*pale blue E/C-class 画像サイト**/
 .td3:hover {
 	border-bottom: solid 0.05em #59f3ff;
-	/*pale blue E/C-class 画像サイト**/
 	color: #59f3ff;
-	/*pale blue E/C-class 画像サイト**/
 }
 
 .td4 {
@@ -1337,7 +1335,7 @@ img {
 
 /*Interior Trim*/
 
-.ico-wiki, .ico-wiki2, .ico-camera, .ico-eg, .ico-tube {
+.ico-wiki, .ico-wiki2, .ico-camera, .ico-camera_w, .ico-eg, .ico-eg_w, .ico-tube {
 	display: inline-block;
 	background-repeat: no-repeat;
 }
@@ -1362,10 +1360,22 @@ img {
 	background-image: url('ico/camera.png');
 }
 
+.ico-camera_w {
+	width: 20px;
+	height: 16px;
+	background-image: url('ico/camera_w.png');
+}
+
 .ico-eg {
 	width: 20px;
 	height: 16px;
 	background-image: url('ico/eg.png');
+}
+
+.ico-eg_w {
+	width: 20px;
+	height: 16px;
+	background-image: url('ico/eg_w.png');
 }
 
 .ico-tube {
