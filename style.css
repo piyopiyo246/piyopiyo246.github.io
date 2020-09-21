@@ -1487,7 +1487,7 @@ div, article, section, aside {
 	opacity: 0;
 	padding: 4px 2px 4px 10px;
 	line-height: 1.4;
-	transition: 0s;
+	transition: 1s;
 	transition-timing-function: step-end;
 	font-weight: 700;
 	font-size: 16px;
@@ -1498,7 +1498,7 @@ div, article, section, aside {
 	opacity: 1;
 	background: #4f4f4f;
 	color: #f2f2f2;
-	transition: 0s;
+	transition: 0.4s;
 }
 
 .style-n, .style-w {
@@ -1862,22 +1862,21 @@ div, article, section, aside {
 
 /*Accordion*/
 
-.ac1 {
-	/*▼対応*/
+.ac1,.ac1_b {
 	width: 100%;
 	line-height: 1.4;
 	clear: both;
 	cursor: pointer;
-	background: #d6d6d6;
+	background: #e2e1e1;
 	margin: 0 0 2px 0;
 	border-radius: 0 15px 15px 0;
 }
 
-.ac1:hover {
-	color: #2e0edd;
-	background: #a2ddf9;
-	/*薄いwhite*/
+.ac1_b {
+	background: #dce2ee;
+	color: #4779d6;
 }
+
 
 .ac2 {
 	/* >>対応 */
@@ -1886,11 +1885,10 @@ div, article, section, aside {
 	border-radius: 0 20px 20px 0;
 }
 
-.ac2:hover {
+/* .ac2:hover {
 	color: #2e0edd;
-	/*light blue*/
 	background: #a2ddf9;
-}
+} */
 
 .displayNone {
 	display: none;
