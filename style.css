@@ -112,7 +112,7 @@ hr {
 	color: #c2c2c2;
 }
 
-.f14-lg, .box-dg, .ac1 {
+.f14-lg, .box-dg  {
 	font-size: 14px;
 }
 
@@ -136,7 +136,7 @@ hr {
 	color: #0e56dd;
 }
 
-.ac1, .clr-g, .ls04 {
+.clr-g, .ls04 {
 	letter-spacing: 0.4pt;
 }
 
@@ -1862,11 +1862,10 @@ div, article, section, aside {
 
 /*Accordion*/
 
-.ac1,.ac1_b {
-	width: 100%;
-	line-height: 1.4;
+.ac1,.ac1_b,.ac1_s {
 	clear: both;
 	cursor: pointer;
+	color: #7a7a7a;
 	background: #e2e1e1;
 	margin: 0 0 2px 0;
 	border-radius: 0 15px 15px 0;
@@ -1876,7 +1875,10 @@ div, article, section, aside {
 	background: #dce2ee;
 	color: #4779d6;
 }
-
+.ac1_s {
+	background: #eeebdc;
+	color: #776235;
+}
 
 .ac2 {
 	/* >>対応 */
