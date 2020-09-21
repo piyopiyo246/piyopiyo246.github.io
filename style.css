@@ -1862,22 +1862,14 @@ div, article, section, aside {
 
 /*Accordion*/
 
-.ac1,.ac1_b,.ac1_s {
+.ac1 {
 	clear: both;
 	cursor: pointer;
 	color: #7a7a7a;
-	background: #e2e1e1;
-	margin: 0 0 2px 0;
-	border-radius: 0 15px 15px 0;
-}
-
-.ac1_b {
-	background: #dce2ee;
-	color: #4779d6;
-}
-.ac1_s {
-	background: #eeebdc;
-	color: #776235;
+	border: solid 1px #6e6e6e;
+	width: 99%;
+	line-height: 1.2;
+	margin: 0 0 4px 0;
 }
 
 .ac2 {
