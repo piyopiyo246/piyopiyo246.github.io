@@ -77,31 +77,31 @@ hr {
 	font-size: 50%;
 }
 
-.clr-f1 {
+.f1 {
 	color: #111;
 }
 
-.clr-f2 {
+.f2 {
 	color: #222;
 }
 
-.clr-f3 {
+.f3 {
 	color: #444;
 }
 
-.clr-f4 {
+.f4 {
 	color: #666;
 }
 
-.clr-f5 {
+.f5 {
 	color: #888;
 }
 
-.clr-f6 {
+.f6 {
 	color: #999;
 }
 
-.clr-f7 {
+.f7 {
 	color: #ccc;
 }
 
@@ -129,7 +129,7 @@ hr {
 	letter-spacing: -1.3pt;
 }
 
-.b,.bb {
+.b, .bb {
 	font-weight: 700;
 	color: #666;
 }
@@ -1813,6 +1813,7 @@ div, article, section, aside {
 /*Accordion*/
 
 /* ▼対応 */
+
 .ac1 {
 	clear: both;
 	cursor: pointer;
@@ -1830,6 +1831,7 @@ div, article, section, aside {
 }
 
 /* >>対応 */
+
 .ac2 {
 	width: 100%;
 }
