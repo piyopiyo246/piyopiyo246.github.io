@@ -2,23 +2,15 @@
 body {
 	font-family: 'MS UI Gothic', "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 	line-height: 1.8;
+	/*px以外、OperaやEDGEで文字サイズがChoromeより小さくなる */
 	font-size: 18px;
 	color: #444;
-	/*px以外、OperaやEDGEで文字サイズがChoromeより小さくなる */
 	letter-spacing: 0;
 	text-align: left;
 	vertical-align: middle;
 	background: #f2f2f2;
-	/*011930*/
 	white-space: nowrap;
 	margin: 0;
-	scrollbar-arrow-color: #f2f2f2;
-	scrollbar-face-color: #f2f2f2;
-	scrollbar-3dlight-color: #f2f2f2;
-	scrollbar-darkshadow-color: #f2f2f2;
-	scrollbar-highlight-color: #f2f2f2;
-	scrollbar-shadow-color: #f2f2f2;
-	scrollbar-track-color: #f2f2f2;
 	-webkit-text-size-adjust: none;
 }
 
@@ -113,12 +105,8 @@ hr {
 	color: #ccc;
 }
 
-.f14-lg, .box-dg  {
+.f14-lg, .box-dg {
 	font-size: 14px;
-}
-
-.clr-g {
-	color: #6e6e6e;
 }
 
 .clr-gy {
@@ -129,7 +117,7 @@ hr {
 	color: #0e56dd;
 }
 
-.clr-g, .ls04 {
+.ls04 {
 	letter-spacing: 0.4pt;
 }
 
@@ -169,12 +157,14 @@ hr {
 }
 
 /*E/C-class 画像サイト*/
+
 .td3 {
 	border-bottom: solid 0.05em #f2f2f2;
 	color: #f2f2f2;
 }
 
 /*pale blue E/C-class 画像サイト**/
+
 .td3:hover {
 	border-bottom: solid 0.05em #59f3ff;
 	color: #59f3ff;
@@ -281,23 +271,23 @@ a.lnk3:hover {
 
 /*background-color*/
 
-.bgc-hp{
+.bgc-hp {
 	background-color: hotpink;
 }
 
-.bgc-lg{
+.bgc-lg {
 	background-color: lightgreen;
 }
 
-.bgc-pb{
+.bgc-pb {
 	background-color: powderblue;
 }
 
-.bgc-or{
+.bgc-or {
 	background-color: orange;
 }
 
-.bgc-ye{
+.bgc-ye {
 	background-color: yellow;
 }
 
@@ -1333,7 +1323,7 @@ img {
 	background-repeat: no-repeat;
 }
 
-.ico-wiki,.ico-wiki2 {
+.ico-wiki, .ico-wiki2 {
 	width: 17px;
 	margin-right: 3px;
 	background-image: url('ico/wiki.png');
@@ -1344,7 +1334,7 @@ img {
 	height: 14px;
 }
 
-.ico-camera,.ico-eg {
+.ico-camera, .ico-eg {
 	width: 20px;
 	height: 16px;
 	background-image: url('ico/camera.png');
