@@ -1328,12 +1328,12 @@ img {
 
 /*Interior Trim*/
 
-.ico-wiki, .ico-wiki2, .ico-camera, .ico-camera_w, .ico-eg, .ico-eg_w, .ico-tube {
+.ico-wiki, .ico-wiki2, .ico-camera, .ico-eg, .ico-tube {
 	display: inline-block;
 	background-repeat: no-repeat;
 }
 
-.ico-wiki {
+.ico-wiki,.ico-wiki2 {
 	width: 17px;
 	margin-right: 3px;
 	background-image: url('ico/wiki.png');
@@ -1341,34 +1341,17 @@ img {
 }
 
 .ico-wiki2 {
-	width: 17px;
-	margin-right: 3px;
-	background-image: url('ico/wiki.png');
 	height: 14px;
 }
 
-.ico-camera {
+.ico-camera,.ico-eg {
 	width: 20px;
 	height: 16px;
 	background-image: url('ico/camera.png');
 }
 
-.ico-camera_w {
-	width: 20px;
-	height: 16px;
-	background-image: url('ico/camera_w.png');
-}
-
 .ico-eg {
-	width: 20px;
-	height: 16px;
 	background-image: url('ico/eg.png');
-}
-
-.ico-eg_w {
-	width: 20px;
-	height: 16px;
-	background-image: url('ico/eg_w.png');
 }
 
 .ico-tube {
@@ -2085,11 +2068,11 @@ div, article, section, aside {
 	float: left;
 	padding: 0;
 	margin: 0 0 0 34px;
-	border-left: 1px dashed #888888;
+	border-left: 1px dashed #888;
 }
 
 .timeline1, .timeline2 {
-	border-right: 1px dashed #888888;
+	border-right: 1px dashed #888;
 }
 
 .timeline2, .timeline3 {
@@ -2121,18 +2104,18 @@ div, article, section, aside {
 }
 
 .btm-lg {
-	border-bottom: 1px solid #888888;
+	border-bottom: 1px solid #888;
 }
 
 .btm-lg-dash {
-	border-bottom: 1px dashed #888888;
+	border-bottom: 1px dashed #888;
 }
 
 .timeline4 {
 	height: 104px;
 	padding: 0 0 0 20px;
 	border-bottom: 1px dashed #afafaf;
-	color: #888888;
+	color: #888;
 }
 
 /*bk*/
@@ -2173,7 +2156,6 @@ div, article, section, aside {
 	font-size: 4em;
 	line-height: 1.2;
 	color: #d6d6d6;
-	/*標準↑↑*/
 	text-align: center;
 }
 
