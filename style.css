@@ -3,6 +3,7 @@ body {
 	font-family: 'MS UI Gothic', "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 	line-height: 1.8;
 	font-size: 18px;
+	color: #444444;
 	/*px以外、OperaやEDGEで文字サイズがChoromeより小さくなる */
 	letter-spacing: 0;
 	text-align: left;
@@ -116,14 +117,6 @@ hr {
 	font-size: 14px;
 }
 
-.clr-w {
-	color: #ffffff;
-}
-
-.clr-r {
-	color: #ff6633;
-}
-
 .clr-g {
 	color: #6e6e6e;
 }
@@ -200,11 +193,11 @@ a {
 }
 
 a:link {
-	color: #060606;
+	color: #444444;
 }
 
 a:visited {
-	color: #060606;
+	color: #444444;
 }
 
 .lnk:hover {
