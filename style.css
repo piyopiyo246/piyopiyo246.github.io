@@ -1872,17 +1872,20 @@ div, article, section, aside {
 	margin: 0 0 4px 0;
 }
 
+.ac1:hover {
+	color: #000000;
+	border: solid 1px #000000;
+	background: #fdfdfd;
+}
+
 .ac2 {
 	/* >>対応 */
 	width: 100%;
-	line-height: 1.6;
-	border-radius: 0 20px 20px 0;
 }
 
-/* .ac2:hover {
-	color: #2e0edd;
-	background: #a2ddf9;
-} */
+.ac2:hover {
+	background: #fdfdfd;
+}
 
 .displayNone {
 	display: none;
@@ -2189,7 +2192,6 @@ div, article, section, aside {
 
 .square_btn {
 	color: #000000;
-	/*標準^*/
 	font-family: Lato;
 	font-size: 12px;
 	text-align: center;
@@ -2204,7 +2206,6 @@ div, article, section, aside {
 	color: #000000;
 	border: solid 1px #000000;
 	background: #fdfdfd;
-	/*標準^*/
 }
 
 /* page-top */
