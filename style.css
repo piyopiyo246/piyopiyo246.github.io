@@ -129,15 +129,13 @@ hr {
 	letter-spacing: -1.3pt;
 }
 
-.b {
+.b,.bb {
 	font-weight: 700;
-	letter-spacing: 1px;
 	color: #666;
 }
 
-.bb {
-	font-weight: 700;
-	color: #666;
+.b {
+	letter-spacing: 1px;
 }
 
 .aa {
@@ -154,21 +152,15 @@ hr {
 /*E/C-class 画像サイト*/
 
 .td3 {
-	border-bottom: solid 0.05em #f2f2f2;
+	border-bottom: solid 0.1em #f2f2f2;
 	color: #f2f2f2;
 }
 
-/*pale blue E/C-class 画像サイト**/
+/*E/C-class 画像サイト**/
 
 .td3:hover {
-	border-bottom: solid 0.05em #59f3ff;
+	border-bottom: solid 0.1em #59f3ff;
 	color: #59f3ff;
-}
-
-.td4 {
-	color: #005300;
-	/*green*/
-	border-bottom: solid 0.05em #005300;
 }
 
 /*文字列*/
