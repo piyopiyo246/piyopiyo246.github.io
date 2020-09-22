@@ -191,21 +191,18 @@ a:visited {
 }
 
 .lnk:hover {
-	color: #005300;
-	/*green*/
-	border-bottom: solid 0.05em #005300;
+	color: #000;
+	border-bottom: solid 0.1em #000;
 }
 
 a.lnk2:hover {
-	color: #2e0edd;
-	/*light blue*/
-	border-bottom: solid 0.05em #2e0edd;
+	color: #2600ff;
+	border-bottom: solid 0.1em #2600ff;
 }
 
 a.lnk3:hover {
-	color: #2e0edd;
-	/*light blue*/
-	border-bottom: solid 0.05em #2e0edd;
+	color: #2600ff;
+	border-bottom: solid 0.1em #2600ff;
 }
 
 .top {
@@ -1828,6 +1825,7 @@ div, article, section, aside {
 
 /*Accordion*/
 
+/* ▼対応 */
 .ac1 {
 	clear: both;
 	cursor: pointer;
@@ -1844,8 +1842,8 @@ div, article, section, aside {
 	background: #fdfdfd;
 }
 
+/* >>対応 */
 .ac2 {
-	/* >>対応 */
 	width: 100%;
 }
 
