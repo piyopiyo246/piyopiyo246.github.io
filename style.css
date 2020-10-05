@@ -254,9 +254,14 @@ a.lnk3:hover {
 }
 
 /*background-color*/
+/* .bgc-hp,.bgc-lg,.bgc-pb,.bgc-op,.bgc-ye {
+	filter:alpha(opacity=50);
+    -moz-opacity: 0.5;
+    opacity: 0.5;
+} */
 
 .bgc-hp {
-	background-color: hotpink;
+	background-color: rgb(253, 187, 220);
 }
 
 .bgc-lg {
@@ -622,6 +627,14 @@ a.lnk3:hover {
 	margin-left: -0.6em;
 }
 
+.m-021 {
+margin-left: -0.21em;
+}
+
+.m-01 {
+	margin-left: -0.1em;
+}
+
 .m-0 {
 	margin-left: -0.03em;
 }
@@ -679,7 +692,7 @@ a.lnk3:hover {
 }
 
 .m0n {
-	margin-left: 0.2em;
+	margin-left: 0.91em;
 }
 
 .m0p {
@@ -692,6 +705,10 @@ a.lnk3:hover {
 
 .m0s {
 	margin-left: 0.1em;
+}
+
+.m0t {
+	margin-left: 0.2em;
 }
 
 .m1 {
@@ -763,7 +780,7 @@ a.lnk3:hover {
 }
 
 .m2b {
-	margin-left: 2.18em;
+	margin-left: 2.2em;
 }
 
 .m2c {
@@ -790,6 +807,10 @@ a.lnk3:hover {
 	margin-left: 2.12em;
 }
 
+.m2j {
+	margin-left: 2.75em;
+}
+
 .m3 {
 	margin-left: 3em;
 }
@@ -803,7 +824,7 @@ a.lnk3:hover {
 }
 
 .m3c {
-	margin-left: 3.7em;
+	margin-left: 3.8em;
 }
 
 .m3d {
@@ -812,6 +833,10 @@ a.lnk3:hover {
 
 .m3e {
 	margin-left: 3.55em;
+}
+
+.m3f {
+	margin-left: 3.1em;
 }
 
 .m4 {
@@ -867,11 +892,7 @@ a.lnk3:hover {
 }
 
 .m06b {
-	margin-left: 6.6em;
-}
-
-.m06c {
-	margin-left: 6.6em;
+	margin-left: 6.8em;
 }
 
 .m06d {
@@ -883,7 +904,7 @@ a.lnk3:hover {
 }
 
 .m07a {
-	margin-left: 7.3em;
+	margin-left: 7.4em;
 }
 
 .m08 {
@@ -1482,7 +1503,7 @@ div, article, section, aside {
 
 /*BOX*/
 
-.box04, .box05, .box06, .box07, .box07a, .box08, .box09, .box09a, .box10, .box10a, .box11, .box12, .box12a, .box13, .box13a, .box14, .box14b, .box15, .box15a, .box16a, .box17, .box17a, .box19, .box19a, .box20, .box21, .box21a, .box22, .box23, .box24, .box25, .box26, .box27, .box28, .box28a, .box29, .box30, .box35, .box36, .box37, .box38a, .box38, .box40, .box41, .box42, .box43, .box44, .box46, .box47a, .box48, .box49, .box50, .box50a, .box50b, .box51, .box52, .box53, .box56, .box58, .box59, .box60, .box61, .box62, .box67, .box68, .box70, .box71, .box71a, .box72, .box74, .box76, .box80, .box81, .box86, .box90, .box96, .box98, .box100, .box104, .box110, .box-dg {
+.box04, .box05, .box06, .box07, .box07a, .box08, .box09, .box09a, .box10, .box10a, .box11, .box12, .box12a, .box13, .box13a, .box14, .box14b, .box15, .box15a, .box16a, .box17, .box17a, .box19, .box19a, .box19b, .box20, .box21, .box21a, .box22, .box23, .box24, .box25, .box26, .box27, .box28, .box28a, .box29, .box30, .box35, .box36, .box37, .box38a, .box38, .box40, .box41, .box42, .box43, .box44, .box46, .box47a, .box48, .box49, .box50, .box50a, .box50b, .box51, .box52, .box53, .box54a, .box55, .box56, .box58, .box59, .box60, .box61, .box62, .box67, .box68, .box70, .box71, .box71a, .box72, .box74, .box76, .box80, .box81, .box86, .box90, .box96, .box98, .box100, .box104, .box110, .box-dg {
 	float: left;
 }
 
@@ -1582,6 +1603,10 @@ div, article, section, aside {
 	width: 194px;
 }
 
+.box19b {
+	width: 196px;
+}
+
 .box20 {
 	width: 200px;
 }
@@ -1591,11 +1616,11 @@ div, article, section, aside {
 }
 
 .box21a {
-	width: 214px;
+	width: 212px;
 }
 
 .box22 {
-	width: 220px;
+	width: 222px;
 }
 
 .box23 {
@@ -1607,7 +1632,7 @@ div, article, section, aside {
 }
 
 .box25 {
-	width: 250px;
+	width: 253px;
 }
 
 .box26 {
@@ -1708,6 +1733,14 @@ div, article, section, aside {
 
 .box53 {
 	width: 525px;
+}
+
+.box54a {
+	width: 534px;
+}
+
+.box55 {
+	width: 550px;
 }
 
 .box56 {
@@ -2003,7 +2036,7 @@ div, article, section, aside {
 }
 
 .v2000 {
-	height: 2020px;
+	height: 2220px;
 }
 
 .v2300 {
