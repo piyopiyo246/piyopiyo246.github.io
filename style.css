@@ -280,6 +280,10 @@ a.lnk3:hover {
 	background-color: yellow;
 }
 
+.bgc-pp {
+	background-color: rgb(197, 164, 250);
+}
+
 /*Top*/
 
 .dashboard {
@@ -434,11 +438,11 @@ a.lnk3:hover {
 }
 
 .t24 {
-	margin-top: 25.44em;
+	margin-top: 25.4em;
 }
 
 .t40 {
-	margin-top: 40.86em;
+	margin-top: 41.04em;
 }
 
 .t42 {
@@ -450,7 +454,7 @@ a.lnk3:hover {
 }
 
 .t48 {
-	margin-top: 48.56em;
+	margin-top: 48.5em;
 }
 
 .t55 {
