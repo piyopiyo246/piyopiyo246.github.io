@@ -2194,6 +2194,8 @@ div, article, section, aside {
 }
 
 .timeline4 {
+	font-family: Lato;
+	opacity: 1;
 	height: 104px;
 	padding: 0 0 0 20px;
 	border-bottom: 1px dashed #afafaf;
