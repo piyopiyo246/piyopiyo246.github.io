@@ -2107,6 +2107,13 @@ div, article, section, aside {
 .v2300 {
 	height: 2330px;
 }
+.v2300r {
+	float: left;
+	height: 2330px;
+	width: 6px;
+	padding: 0;
+	background: #b0b0b0;
+}
 
 .v2400 {
 	height: 2460px;
