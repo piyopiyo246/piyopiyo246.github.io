@@ -489,6 +489,11 @@ a.lnk3:hover {
 	margin-top: 1376px;
 }
 
+
+.t120 {
+	margin-top: 1936px;
+}
+
 /*S（右 margin）*/
 
 .s {
@@ -1912,7 +1917,7 @@ div, article, section, aside {
 }
 
 .box-wide {
-	width: 1880px;
+	width: 2006px;
 }
 
 /*Accordion*/
