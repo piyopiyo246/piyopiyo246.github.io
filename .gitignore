@@ -7,4 +7,5 @@ test/
 kotou/
 browser/
 xls/
-/.tmp.drivedownload
+.tmp.drivedownload/
+HiReName/
