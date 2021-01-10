@@ -645,6 +645,10 @@ a.lnk3:hover {
 	margin-left: 18px;
 }
 
+.m1k {
+	margin-left: 18.8px;
+}
+
 .m1e {
 	margin-left: 19.8px;
 }
@@ -757,6 +761,10 @@ a.lnk3:hover {
 	margin-left: 72px;
 }
 
+.m4b {
+	margin-left: 74px;
+}
+
 .m4e {
 	margin-left: 75.5px;
 }
@@ -771,6 +779,10 @@ a.lnk3:hover {
 
 .m05 {
 	margin-left: 90px;
+}
+
+.m05a {
+	margin-left: 92px;
 }
 
 .m06 {
@@ -1411,7 +1423,7 @@ div, article, section, aside {
 }
 
 .box-wide {
-	width: 2026px;
+	width: 2120px;
 }
 
 /*Accordion*/
