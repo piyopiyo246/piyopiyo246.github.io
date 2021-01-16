@@ -2,7 +2,6 @@
 body {
 	font-family: 'MS UI Gothic', "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 	line-height: 1.8;
-	/*px以外、OperaやEDGEで文字サイズがChoromeより小さくなる */
 	font-size: 18px;
 	color: #444;
 	letter-spacing: 0;
@@ -14,30 +13,35 @@ body {
 	-webkit-text-size-adjust: none;
 }
 
+/*スクロールバー全体*/
+
 ::-webkit-scrollbar {
-	/*スクロールバー全体*/
 	width: 10px;
 }
 
+/*スクロールバーの軌道*/
+
 ::-webkit-scrollbar-track {
-	/*スクロールバーの軌道*/
 	border-radius: 10px;
 	box-shadow: inset 0 0 6px #f2f2f2;
 }
 
+/*スクロールバーの動く部分*/
+
 ::-webkit-scrollbar-thumb {
-	/*スクロールバーの動く部分*/
 	background: #4f4f4f;
 }
 
+/*右下角部分*/
+
 .scrollbox::-webkit-scrollbar-corner {
-	/*右下角部分*/
 	background: #4f4f4f;
 }
+
+/*画像サイト用幅設定*/
 
 #contents, #contents1 {
 	width: 1270px;
-	/*画像サイト用幅設定*/
 	margin-right: auto;
 	margin-left: auto;
 }
@@ -48,7 +52,6 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
 	font-size: 17px;
-	/*px以外、OperaやEDGEで文字サイズがChoromeより小さくなる */
 	font-weight: normal;
 	letter-spacing: 1px;
 }
@@ -160,8 +163,6 @@ hr {
 	color: #f2f2f2;
 }
 
-/*E/C-class 画像サイト**/
-
 .td3:hover {
 	border-bottom: solid 1.8px #59f3ff;
 	color: #59f3ff;
@@ -225,19 +226,15 @@ a.lnk3:hover {
 	line-height: 1.4;
 }
 
-/*>> ▼ ■*/
-
 .bf0:before {
 	content: "■ ";
 	color: #444;
-	/*標準↑*/
 }
 
 .bf1:before {
 	content: "▼";
 	margin: 0 10px 4px;
 	color: #444;
-	/*標準↑*/
 }
 
 .bf2:before {
@@ -246,23 +243,14 @@ a.lnk3:hover {
 	margin-left: 20px;
 	margin-right: 5px;
 	color: #444;
-	/*標準↑*/
 }
 
 .bf4:before, .af4:after {
 	content: "/";
 	color: #444;
-	/*標準↑*/
 	font-weight: 700;
 	margin: 10px;
 }
-
-/*background-color*/
-/* .bgc-hp,.bgc-lg,.bgc-pb,.bgc-op,.bgc-ye {
-	filter:alpha(opacity=50);
-    -moz-opacity: 0.5;
-    opacity: 0.5;
-} */
 
 .bgc-hp {
 	background-color: rgb(253, 187, 220);
@@ -288,11 +276,8 @@ a.lnk3:hover {
 	background-color: rgb(197, 164, 250);
 }
 
-/*Top*/
-
 .dashboard {
 	position: absolute;
-	/*絶対配置*/
 	width: 100%;
 	min-width: 1210px;
 	background: #4f4f4f;
@@ -420,6 +405,7 @@ a.lnk3:hover {
 .t4 {
 	margin-top: 128px;
 }
+
 .t5 {
 	margin-top: 158px;
 }
@@ -523,6 +509,7 @@ a.lnk3:hover {
 }
 
 /*PB（下 margin）*/
+
 .pb0 {
 	padding-bottom: 8px;
 }
@@ -584,7 +571,6 @@ a.lnk3:hover {
 .m-01 {
 	margin-left: -1.8px;
 }
-
 
 .m0 {
 	margin-left: 0;
@@ -731,7 +717,7 @@ a.lnk3:hover {
 }
 
 .m1a {
-	margin-left:  35px;
+	margin-left: 35px;
 }
 
 .m2 {
@@ -771,7 +757,7 @@ a.lnk3:hover {
 }
 
 .m3f {
-	margin-left:  55.8px;
+	margin-left: 55.8px;
 }
 
 .m3a {
@@ -807,7 +793,7 @@ a.lnk3:hover {
 }
 
 .m4a {
-	margin-left:  77.94px;
+	margin-left: 77.94px;
 }
 
 .m4c {
@@ -955,6 +941,7 @@ a.lnk3:hover {
 }
 
 /*W（width）*/
+
 .w1 {
 	width: 18px;
 }
@@ -1150,10 +1137,11 @@ ul, ol, dl {
 	zoom: 1;
 }
 
+/*後続の左寄せを解除*/
+
 dt {
 	float: left;
 	clear: left;
-	/*後続の左寄せを解除*/
 }
 
 dd {
@@ -1166,11 +1154,12 @@ table, th, td {
 	border: none;
 }
 
+/*ヘッダ行の下線 */
+
 th {
 	padding: 0 8px 0 0;
 	font-weight: 400;
 	border-bottom: 1px dashed #666;
-	/*ヘッダ行の下線 */
 }
 
 tr {
@@ -1196,9 +1185,10 @@ td {
 	display: inline-block;
 }
 
+/*折り返し*/
+
 .wp {
 	white-space: normal;
-	/*折り返し*/
 	word-wrap: break-word;
 }
 
@@ -1216,13 +1206,10 @@ div, article, section, aside {
 	margin: 0;
 	overflow: hidden;
 	position: relative;
-	/*DWで正常にプレビューできるようになる*/
 	zoom: 1;
-	/*IE6でレイアウト崩れを防ぐ*/
 }
 
 .style-w {
-	/*画像グレイ背景*/
 	background: #4f4f4f;
 	color: #f2f2f2;
 	padding: 0.9%;
@@ -1239,15 +1226,15 @@ div, article, section, aside {
 }
 
 .style-w2:hover {
-	/*画像グレイ背景*/
 	opacity: 1;
 	background: #4f4f4f;
 	color: #f2f2f2;
 	transition: 0.4s;
 }
 
+/*中央寄せ*/
+
 .style-n, .style-w {
-	/*中央寄せ*/
 	width: 1214px;
 	margin-left: auto;
 	margin-right: auto;
@@ -1277,13 +1264,7 @@ div, article, section, aside {
 
 /*BOX*/
 
-.box04, .box07a, .box08, .box09, .box09a, .box11, .box12,
-.box13, .box13a, .box14b, .box15, .box17a, .box18,.box21a,
-.box23, .box27, .box30a, .box36, .box40, .box41,.box44,
-.box46, .box47a, .box50, .box51, .box53, .box56, .box59,
-.box60, .box61, .box62, .box64, .box64a, .box68,.box70,
-.box71, .box74, .box76, .box80, .box81, .box90,.box100,
-.box104, .box-dg {
+.box04, .box07a, .box08, .box09, .box09a, .box11, .box12, .box13, .box13a, .box14b, .box15, .box17a, .box18, .box21a, .box23, .box27, .box30a, .box36, .box40, .box41, .box44, .box46, .box47a, .box50, .box51, .box53, .box56, .box59, .box60, .box61, .box62, .box64, .box64a, .box68, .box70, .box71, .box74, .box76, .box80, .box81, .box90, .box100, .box104, .box-dg {
 	float: left;
 }
 
@@ -1465,8 +1446,6 @@ div, article, section, aside {
 
 /*Accordion*/
 
-/* ▼対応 */
-
 .ac1 {
 	clear: both;
 	cursor: pointer;
@@ -1499,9 +1478,7 @@ div, article, section, aside {
 
 /*Vertical*/
 
-.v90, .v120, .v170, .v240, .v260, .v300, .v320, .v340, .v360, .v400, .v420, .v470, .v500,
-.v540, .v560, .v580, .v600, .v700, .v720, .v750, .v860, .v890, .v900, .v960, .v1000,
-.v1130, .v1200, .v1230, .v1900,.v2300, .v3400, .v14000, .v3700 {
+.v90, .v120, .v170, .v240, .v260, .v300, .v320, .v340, .v360, .v400, .v420, .v470, .v500, .v540, .v560, .v580, .v600, .v700, .v720, .v750, .v860, .v890, .v900, .v960, .v1000, .v1130, .v1200, .v1230, .v1900, .v2300, .v3400, .v14000, .v3700 {
 	position: absolute;
 	width: 6px;
 	padding: 0;
@@ -1624,6 +1601,7 @@ div, article, section, aside {
 .v2300 {
 	height: 2330px;
 }
+
 .v2300r {
 	float: left;
 	height: 2330px;
@@ -1645,6 +1623,7 @@ div, article, section, aside {
 }
 
 /*Timeline*/
+
 .timeline1, .timeline2, .timeline3 {
 	width: 142.3px;
 	float: left;
