@@ -1710,15 +1710,9 @@ div, article, section, aside {
 	opacity: 1;
 }
 
-.bk2, .bk3, .bk4 {
+.bk3, .bk4 {
 	top: 4px;
 	border-radius: 4px;
-}
-
-.bk2 {
-	width: 580px;
-	left: 610px;
-	top: 54px;
 }
 
 .bk3 {
