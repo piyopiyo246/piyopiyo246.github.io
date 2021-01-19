@@ -550,8 +550,16 @@ a.lnk3:hover {
 	padding-bottom: 144px;
 }
 
+.pb11 {
+	padding-bottom: 176px;
+}
+
 .pb23 {
 	padding-bottom: 368px;
+}
+
+.pb25 {
+	padding-bottom: 400px;
 }
 
 /*M（左 margin）*/
@@ -1611,7 +1619,7 @@ div, article, section, aside {
 }
 
 .v1900 {
-	height: 1920px;
+	height: 1940px;
 }
 
 .v2300 {
