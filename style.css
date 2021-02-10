@@ -69,9 +69,14 @@ p {
 }
 
 hr {
-	margin: 6px 10px;
+	margin: 6px 2px;
 	border: none;
-	border-top: 1px #6e6e6e solid;
+	border-top: 1px #8c8b8b solid;
+}
+
+.branch {
+	border-top: 6px solid #dfdfdf;
+	border-bottom: 1px solid #fff;
 }
 
 /*font*/
