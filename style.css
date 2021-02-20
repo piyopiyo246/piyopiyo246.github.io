@@ -57,7 +57,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1, h2 {
-	margin: 4px 0;
+	margin: 4px 0 4px 4px;
 }
 
 h3, h4, h5, h6 {
@@ -120,8 +120,10 @@ hr {
 	color: rgb(219, 216, 216);
 }
 
-.f14-lg, .box-dg {
+.box-dg {
 	font-size: 14px;
+	height: 32px;
+	width: 150px;
 }
 
 .clr-gy {
@@ -311,9 +313,8 @@ a.lnk3:hover {
 	background: #444;
 	color: #f0f0f0;
 	text-align: center;
-	height: 32px;
 	letter-spacing: 6px;
-	width: 150px;
+	font-size: 14px;
 	margin: 2px 0.5px;
 	border-top: solid 2px #555;
 	border-right: solid 2px #777;
@@ -1062,53 +1063,6 @@ a.lnk3:hover {
 	width: 432px;
 }
 
-.w25 {
-	width: 450px;
-}
-
-.w30 {
-	width: 540px;
-}
-
-.w35 {
-	width: 630px;
-}
-
-.w80 {
-	width: 800px;
-}
-
-.w90 {
-	width: 900px;
-}
-
-.w99 {
-	width: 992px;
-}
-
-.w100 {
-	width: 1000px;
-}
-
-.w110 {
-	width: 1090px;
-}
-
-.w112 {
-	width: 1140px;
-}
-
-.w116 {
-	width: 1188px;
-}
-
-.w120 {
-	width: 1200px;
-}
-
-.w123 {
-	width: 1234px;
-}
 
 /*img・ico*/
 
