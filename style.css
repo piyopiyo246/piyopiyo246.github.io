@@ -1,7 +1,7 @@
 @charset "UTF-8";
 body {
 	font-family: 'MS UI Gothic', "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-	line-height: 1.8;
+	line-height: 1.9;
 	font-size: 18px;
 	color: #444;
 	letter-spacing: 0;
@@ -53,19 +53,19 @@ body {
 h1, h2, h3, h4, h5, h6 {
 	font-size: 17px;
 	font-weight: normal;
-	letter-spacing: 1px;
+	letter-spacing: 0.5px;
 }
 
 h1, h2 {
-	margin: 4px 0 4px 18px;
+	margin: 4px 0;
 }
 
 h3, h4, h5, h6 {
-	margin: 2px 0 4px 24px;
+	margin: 2px 0 4px 8px;
 }
 
 p {
-	margin: 0 0 2px 24px;
+	margin: 0;
 }
 
 hr {
@@ -82,6 +82,10 @@ hr {
 
 .fs50 {
 	font-size: 50%;
+}
+
+.fs17 {
+	font-size: 17px;
 }
 
 .f1 {
@@ -237,7 +241,7 @@ a.lnk3:hover {
 
 .bf1:before {
 	content: "▼";
-	margin: 0 10px 4px;
+	margin: 0 10px 4px 0;
 	color: #444;
 }
 
@@ -1207,7 +1211,6 @@ td {
 }
 
 .fix {
-	width: 1100px;
 	table-layout: fixed;
 }
 
@@ -1525,11 +1528,10 @@ div, article, section, aside {
 	width: 142.3px;
 	float: left;
 	padding: 0;
-	margin: 0 0 0 34px;
-	border-left: 1px dashed #888;
 }
 
-.timeline1, .timeline2 {
+.timeline1, .timeline2, .timeline3 {
+	border-left: 1px dashed #888;
 	border-right: 1px dashed #888;
 }
 
