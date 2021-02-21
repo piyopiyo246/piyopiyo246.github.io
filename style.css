@@ -1598,6 +1598,7 @@ div, article, section, aside {
 	bottom: 20px;
 	left: 20px;
 	font-size: 77%;
+	opacity:0.5; 
 }
 
 #page-top a {
