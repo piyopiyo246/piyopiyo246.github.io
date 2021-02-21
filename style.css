@@ -1593,11 +1593,10 @@ div, article, section, aside {
 }
 
 /* page-top */
-
 #page-top {
 	position: fixed;
 	bottom: 20px;
-	right: 20px;
+	left: 20px;
 	font-size: 77%;
 }
 
@@ -1620,13 +1619,11 @@ div, article, section, aside {
 }
 
 /*lightbox*/
-
 .trim_name {
 	overflow-wrap: break-word;
 }
 
 /*fleXcroll*/
-
 .scrollgeneric {
 	/* 変更・省略不可 */
 	line-height: 1px;
