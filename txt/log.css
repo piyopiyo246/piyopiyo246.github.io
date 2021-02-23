@@ -53,7 +53,7 @@ h2 {
 
 p {
 	white-space: pre;
-	margin-left: 30px;
+	margin-left: 40px;
 	word-wrap: break-word;
 }
 
@@ -64,7 +64,7 @@ hr {
 span {
 	color: #008000;
 	font-weight: 800;
-	margin: 0 0 0 -30px;
+	margin: 0 0 0 -20px;
 }
 
 .af1:after {
@@ -95,9 +95,9 @@ li {
 
 #page-top {
 	position: fixed;
-	bottom: 20px;
-	left: 8px;
-	opacity:0.5; 
+	bottom: 10px;
+	left: -30px;
+	opacity:0.3; 
 	font-size: 77%;
 }
 
