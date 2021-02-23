@@ -96,7 +96,8 @@ li {
 #page-top {
 	position: fixed;
 	bottom: 20px;
-	right: 20px;
+	left: 20px;
+	opacity:0.5; 
 	font-size: 77%;
 }
 
