@@ -1615,6 +1615,34 @@ div, article, section, aside {
 
 #page-top a {
 	background: #666;
+	color: #fff;
+	text-decoration: none;
+	width: 30px;
+	padding: 5px 0;
+	text-align: center;
+	display: block;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+
+#page-top a:hover {
+	text-decoration: none;
+	background: #999;
+}
+
+/* close-accordion { */
+#close-accordion {
+	position: fixed;
+	margin-left: 1200px;
+	bottom: 20px;
+	left: 20px;
+	font-size: 77%;
+	opacity:0.5; 
+}
+
+#close-accordion a {
+	background: #666;
 	text-decoration: none;
 	color: #fff;
 	width: 30px;
@@ -1626,7 +1654,7 @@ div, article, section, aside {
 	-moz-border-radius: 5px;
 }
 
-#page-top a:hover {
+#close-accordion a:hover {
 	text-decoration: none;
 	background: #999;
 }
