@@ -1614,7 +1614,7 @@ div, article, section, aside {
 	bottom: 70px;
 	left: 20px;
 	font-size: 77%;
-	opacity:0.4; 
+	opacity:0.6; 
 }
 
 #page-top a {
@@ -1642,7 +1642,7 @@ div, article, section, aside {
 	bottom: 20px;
 	left: 20px;
 	font-weight: bold;
-	opacity:0.4; 
+	opacity:0.6; 
 }
 
 #close-accordion a {
