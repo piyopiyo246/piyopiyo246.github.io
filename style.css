@@ -1273,7 +1273,7 @@ div, article, section, aside {
 
 /*BOX*/
 
-.box04, .box07a, .box08, .box09, .box09a, .box11, .box12, .box13, .box13a, .box14b, .box15, .box16, .box17a, .box18, .box21a, .box23, .box27, .box30a, .box36, .box40, .box41, .box44, .box46, .box47a, .box50, .box51, .box53, .box56, .box59, .box60, .box61, .box62, .box64, .box64a, .box68, .box70, .box71, .box74, .box76, .box80, .box81, .box90, .box90a, .box100, .box101, .box104, .box-dg {
+.box04, .box07a, .box08, .box09, .box09a, .box11, .box12, .box13, .box13a, .box14b, .box15, .box16, .box17a, .box18, .box21, .box21a, .box23, .box27, .box30a, .box36, .box40, .box41, .box44, .box46, .box47a, .box50, .box51, .box53, .box56, .box59, .box60, .box61, .box62, .box64, .box64a, .box68, .box70, .box71, .box74, .box76, .box80, .box81, .box90, .box90a, .box100, .box101, .box104, .box-dg {
 	float: left;
 }
 
@@ -1331,6 +1331,10 @@ div, article, section, aside {
 
 .box18 {
 	width: 180px;
+}
+
+.box21 {
+	width: 210px;
 }
 
 .box21a {
