@@ -1549,7 +1549,7 @@ div, article, section, aside {
 
 /*bk*/
 
-.bk, .bk2, .bk3, .bk4 {
+.bk, .bk2, .bk3, .bk4, .bk5 {
 	position: absolute;
 	background: no-repeat;
 }
@@ -1559,12 +1559,12 @@ div, article, section, aside {
 	opacity: 1;
 }
 
-.bk3, .bk4 {
+.bk3, .bk4, .bk5 {
 	top: 4px;
 	border-radius: 4px;
 }
 
-.bk3 {
+.bk3, .bk5 {
 	width: 300px;
 	left: 880px;
 }
@@ -1573,6 +1573,10 @@ div, article, section, aside {
 	width: 800px;
 	left: 330px;
 	text-align: left;
+}
+
+.bk5 {
+	left: 300px;
 }
 
 .inside, .r-side {
