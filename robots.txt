@@ -1,7 +1,2 @@
 User-agent: *
-Disallow : /txt/w205_4t.html
-Disallow : /txt/c-class_2t.html
-Disallow : /txt/c-class_3t.html
-Disallow : /txt/cla_2t.html
-Disallow : /txt/x117_1t.html
 Sitemap: https://piyopiyo246.github.io/sitemap.xml
