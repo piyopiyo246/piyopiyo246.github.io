@@ -1628,17 +1628,16 @@ div, article, section, aside {
 
 .square_btn {
 	color: #000;
-	font-size: 14px;
+	font-size: 16px;
 	text-align: center;
 	padding: 0 8pt;
-	background: #f2f2f2;
-	border: solid 1px #6e6e6e;
+	border: solid 1.6px #666;
 	display: inline-block;
 }
 
 .square_btn:hover {
-	color: #000;
-	border: solid 1px #000;
+	color: rgb(255, 115, 0);
+	border: solid 1.6px #000;
 	background: #fdfdfd;
 }
 
@@ -1759,18 +1758,24 @@ div, article, section, aside {
 	margin: 0 0 4px 0;
 }
 
-.vmenu_on .vmenuitem,
-.vmenu_on .vmenuitem2
- {
+.vmenu_on .vmenuitem {
 	border: 1px solid #9e9e9e;
 	border-left: 6px solid #b8b8b8;
 }
 
-.vmenu_off .vmenuitem,
-.vmenu_off .vmenuitem2
- {
+.vmenu_on .vmenuitem2 {
+	border: 2px solid #9e9e9e;
+	margin: 6px 0 0 0;
+}
+
+.vmenu_off .vmenuitem {
 	border: 1px solid #9e9e9e;
 	margin-left: 5px;
+}
+
+.vmenu_off .vmenuitem2 {
+	border: 2px solid #9e9e9e;
+	margin: 6px 0 0 0;
 }
 
 .vmenu_on section {
