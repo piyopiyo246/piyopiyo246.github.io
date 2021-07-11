@@ -22,6 +22,17 @@
 	<link rel="shortcut icon" href="../ico/mb-logo-g.png" type="image/vnd.microsoft.icon">
 	<link href="../style.min.css" rel="stylesheet" type="text/css">
 	<title>Aクラス</title>
+	<script defer type="text/javascript">
+		function doToggleClassName(obj, onClassName, offClassName) { obj.className = (obj.className != onClassName) ? onClassName : offClassName; }
+		function getParentObj(obj) { return obj.parentElement || obj.parentNode; }
+		function doReplaceClassName(findClassName, replaceClassName, targetTagName) {
+			var elements = document.getElementsByTagName(targetTagName || '*');
+			for (var i = 0; i < elements.length; i++) {
+				if (elements[i].className == findClassName)
+					elements[i].className = replaceClassName;
+			}
+		}
+	</script>
 </head>
 
 <body id="wrap">
@@ -113,8 +124,7 @@
 				<a href="full/a/w168l_r_sheet.jpg"><img src="style/a/w168l_r_sheet.jpg" alt="メルセデス,ベンツ,W168,Aクラス,ロングホイールベース,rear sheet" width="400" height="276"></a>
 				<h4>Dimensions</h4>
 				<a href="full/a/w168_a.gif"><img src="style/a/w168_a.gif" alt="メルセデス,ベンツ,W168,Aクラス,寸法" width="600" height="774"></a>
-				<a href="full/a/w168l_a.jpg"><img src="style/a/w168l_a.jpg" alt="メルセデス,ベンツ,W168,A
-			クラス,ロングホイールベース,寸法" width="600" height="664"></a>
+				<a href="full/a/w168l_a.jpg"><img src="style/a/w168l_a.jpg" alt="メルセデス,ベンツ,W168,Aクラス,ロングホイールベース,寸法" width="600" height="664"></a>
 			</div>
 		</section>
 		<section>
