@@ -247,6 +247,12 @@ a.lnk3:hover {
 	color: #444;
 }
 
+.bf1a:before {
+	content: "▼";
+	margin: 0 10px 4px 10px;
+	color: #f2f2f2;
+}
+
 .bf2:before {
 	content: ">>";
 	font-weight: 700;
