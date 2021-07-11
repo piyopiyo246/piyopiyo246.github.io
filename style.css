@@ -539,6 +539,34 @@ a.lnk3:hover {
 	margin-right: 104px;
 }
 
+.s15 {
+	margin-right: 140px;
+}
+
+.s17 {
+	margin-right: 176px;
+}
+
+.s19 {
+	margin-right: 212px;
+}
+
+.s21 {
+	margin-right: 248px;
+}
+
+.s23 {
+	margin-right: 284px;
+}
+
+.s25 {
+	margin-right: 320px;
+}
+
+.s27 {
+	margin-right: 356px;
+}
+
 /*PB（下 margin）*/
 
 .pb0 {
@@ -1721,7 +1749,7 @@ div, article, section, aside {
 }
 
 .vmenuitem2 :hover {
-	background: #17a6d1;
+	color:coral;
 }
 
 .vmenu_on,
