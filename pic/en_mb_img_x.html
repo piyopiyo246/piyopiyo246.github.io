@@ -3,13 +3,9 @@
 
 <head>
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-49012481-1"></script>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script>
 		window.dataLayer = window.dataLayer || [];
-
-		function gtag() {
-			dataLayer.push(arguments);
-		}
+		function gtag() { dataLayer.push(arguments); }
 		gtag('js', new Date());
 		gtag('config', 'UA-49012481-1');
 	</script>
@@ -43,15 +39,14 @@
 	<div id="contents">
 		<header>
 			<nav class="style-n t0c">
-				<ul class="box104">
+				<ul>
 					<li class="i"><a href="../c_klasse.html" class="lnk3" title="Back to the C-Class template">Home page</a></li>
 					<li class="i bf4 af4">
 						<h1 class="i m0">Mercedes-Benz Pkw GALERIE　X-Class</h1>
 					</li>
 					<li class="i s2"><a href="#w470" title="470" class="lnk2">470</a></li>
-				</ul>
-				<ul>
-					<li>
+					<li class="r">
+						<a class="vmenu_all_action" title="Klicken Sie hier, um alle Öffnungen zu öffnen" span onclick="doReplaceClassName('vmenu_off', 'vmenu_on')"><input class="square_btn" type="button" value="Close all openings"></a>
 						<button class="square_btn" type="button" onclick="location.href='ja_mb_img_x.html'">Ja</button>
 						<button class="square_btn" type="button" onclick="location.href='mb_img_x.html'">De</button>
 					</li>
@@ -160,6 +155,9 @@
 			</nav>
 		</footer>
 		<p id="page-top"><a href="#wrap">▲</a></p>
+		<p id="close-accordion">
+			<a class="vmenu_all_action" onclick="doReplaceClassName('vmenu_on',  'vmenu_off')" title="Close all openings">&sum;</a>
+		</p>
 		<script>
 			$(function () {
 				var topBtn = $('#page-top');

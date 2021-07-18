@@ -120,14 +120,15 @@ hr {
 	color: rgb(219, 216, 216);
 }
 
-.fl-w {
-	font-size: 120px;
+.fl-w,.fl-w2 {
+	font-size: 100px;
 	color: #ccc;
 	line-height: 100px;
-	margin-right: 40px
 }
 
-
+.fl-w2 {
+	font-size: 80px;
+}
 
 .box-dg {
 	font-size: 14px;
@@ -548,6 +549,10 @@ a.lnk3:hover {
 	margin-right: 104px;
 }
 
+.s14 {
+	margin-right: 122px;
+}
+
 .s15 {
 	margin-right: 140px;
 }
@@ -556,8 +561,16 @@ a.lnk3:hover {
 	margin-right: 176px;
 }
 
+.s18 {
+	margin-right: 194px;
+}
+
 .s19 {
 	margin-right: 212px;
+}
+
+.s20 {
+	margin-right: 230px;
 }
 
 .s21 {

@@ -39,7 +39,7 @@
 	<div id="contents">
 		<header>
 			<nav class="style-n t0c">
-				<ul class="box104">
+				<ul>
 					<li class="i"><a href="../c_klasse.html" class="lnk3" title="Zurück zur Vorlage der C-Klasse">Startseite</a></li>
 					<li class="i bf4 af4">
 						<h1 class="i m0">Mercedes-Benz Pkw GALERIE　E-Klasse</h1>
@@ -54,9 +54,8 @@
 					<li class="i s2"><a href="#w211" title="Der 3te E-Klasse,W211/S211" class="lnk2">211</a></li>
 					<li class="i s2"><a href="#w212" title="Die 4te E-Klasse,W212/S212/V212" class="lnk2">212</a></li>
 					<li class="i s2"><a href="#w213" title="Der 5te E-Klasse,W213/S213/V213" class="lnk2">213</a></li>
-				</ul>
-				<ul>
-					<li>
+					<li class="r">
+						<a class="vmenu_all_action" title="Klicken Sie hier, um alle Öffnungen zu öffnen" span onclick="doReplaceClassName('vmenu_off', 'vmenu_on')"><input class="square_btn" type="button" value="Alle Öffnungen öffnen"></a>
 						<button class="square_btn" type="button" onclick="location.href='ja_mb_img_e.html'">Ja</button>
 						<button class="square_btn" type="button" onclick="location.href='en_mb_img_e.html'">En</button>
 					</li>
@@ -96,7 +95,7 @@
 				<hr>
 			</nav>
 			<div class="mid style-w">
-				<iframe class="box30a" width="300" height="200" src="https://www.youtube.com/embed/DP34Y44jmnw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<iframe class="box36" width="360" height="200" src="https://www.youtube.com/embed/DP34Y44jmnw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				<div class="m1 box81">
 					<a href="#w120" title="Ponton,Typ180/Typ190 W120/W121"><img src="thumb\e\120.jpg" alt="w120" width="160" height="100"></a>
 					<a href="#w105" title="Ponton,W105"><img src="thumb\e\105.jpg" alt="w105" width="160" height="100"></a>
@@ -555,6 +554,9 @@
 			</nav>
 		</footer>
 		<p id="page-top"><a href="#wrap">▲</a></p>
+		<p id="close-accordion">
+			<a class="vmenu_all_action" onclick="doReplaceClassName('vmenu_on',  'vmenu_off')" title="Alle Öffnungen schließen">&sum;</a>
+		</p>
 		<script>
 			$(function () {
 				var topBtn = $('#page-top'); topBtn.hide();
