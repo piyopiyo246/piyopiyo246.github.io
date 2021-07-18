@@ -120,6 +120,15 @@ hr {
 	color: rgb(219, 216, 216);
 }
 
+.fl-w {
+	font-size: 120px;
+	color: #ccc;
+	line-height: 100px;
+	margin-right: 40px
+}
+
+
+
 .box-dg {
 	font-size: 14px;
 	height: 32px;
@@ -565,6 +574,22 @@ a.lnk3:hover {
 
 .s27 {
 	margin-right: 356px;
+}
+
+.s28 {
+	margin-right: 374px;
+}
+
+.s29 {
+	margin-right: 392px;
+}
+
+.s30 {
+	margin-right: 410px;
+}
+
+.s31 {
+	margin-right: 428px;
 }
 
 /*PB（下 margin）*/

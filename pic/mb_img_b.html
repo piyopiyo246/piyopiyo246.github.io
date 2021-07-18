@@ -39,17 +39,16 @@
 	<div id="contents">
 		<header>
 			<nav class="style-n t0c">
-				<ul class="box104">
+				<ul>
 					<li class="i"><a href="../c_klasse.html" class="lnk3" title="Zurück zur Vorlage der C-Klasse">Startseite</a></li>
 					<li class="i bf4 af4">
 						<h1 class="i m0">Mercedes-Benz Pkw GALERIE　B-Klasse</h1>
 					</li>
 					<li class="i s2"><a href="#w245" title="Die 1ste B-Klasse T245" class="lnk2">245</a></li>
 					<li class="i s2"><a href="#w246" title="Der 2te B-Klasse W246" class="lnk2">246</a></li>
-					<li class="i s2"><a href="#w247" title="Der 3te B-Klasse W247" class="lnk2">247</a></li>
-				</ul>
-				<ul>
-					<li>
+					<li class="i s28"><a href="#w247" title="Der 3te B-Klasse W247" class="lnk2">247</a></li>
+					<li class="i">
+						<a class="vmenu_all_action" title="Klicken Sie hier, um alle Öffnungen zu öffnen" span onclick="doReplaceClassName('vmenu_off', 'vmenu_on')"><input class="square_btn" type="button" value="Alle Öffnungen öffnen"></a>
 						<button class="square_btn" type="button" onclick="location.href='ja_mb_img_b.html'">Ja</button>
 						<button class="square_btn" type="button" onclick="location.href='en_mb_img_b.html'">En</button>
 					</li>
@@ -89,6 +88,7 @@
 				<hr>
 			</nav>
 			<div class="mid style-w">
+				<a class="fl-w">B-klasse</a>
 				<a href="#w245" title="Die 1ste B-Klasse W245"><img src="thumb\b\245.jpg" alt="245" width="160" height="100"></a>
 				<a href="#w246" title="Die 2te B-Klasse W246"><img src="thumb\b\246.jpg" alt="246" width="160" height="100"></a>
 				<a href="#w247" title="Die 3te B-Klasse W247"><img src="thumb\b\247.jpg" alt="247" width="160" height="100"></a>
@@ -97,11 +97,16 @@
 		<section>
 			<h2 class="style-n b" id="w245">Die 1ste B-Klasse</h2>
 			<div class="style-w">
-				<a href="https://de.wikipedia.org/wiki/Mercedes-Benz_T_245" class="ico-wiki" target="_blank" rel="noopener" title="Wikipedia(D) T245"></a>
-				<h3 class="i m0">T245</h3>
-				<p class="i m1">06/2005 - 06/2011</p><br>
 				<a href="full/b/t245_s.jpg"><img src="style/b/t245_s.jpg" alt="Mercedes,T245,B-Klasse,Seitenansicht" width="1210" height="756"></a><br>
-				<div>
+				<div class="vmenu_off">
+					<div class="vmenuitem2" onclick="doToggleClassName(getParentObj(this),'vmenu_on','vmenu_off')">
+						<p class="bf1a i">Zum Öffnen und Schließen anklicken</p>
+						<a href="https://de.wikipedia.org/wiki/Mercedes-Benz_T_245" class="ico-wiki m1" target="_blank" rel="noopener" title="Wikipedia(D) T245"></a>
+						<h3 class="i m0">T245</h3>
+						<p class="i m1">06/2005 - 06/2011</p><br>
+							</div>
+							<section>
+								<div>
 					<div class="box61"><br>
 						<a href="full/b/t245_f.jpg"><img src="style/b/t245_f.jpg" alt="Mercedes,T245,B-Klasse,Frontansicht" width="604" height="420"></a><br>
 						<a href="full/b/t245_r.jpg"><img src="style/b/t245_r.jpg" alt="Mercedes,T245,B-Klasse,Rückansicht" width="604" height="404"></a><br>
@@ -117,16 +122,23 @@
 				</div>
 				<h4>Abmessungen</h4>
 				<a href="full/b/t245_a.jpg"><img src="style/b/t245_a.jpg" alt="t245,B-Klasse,Maße" width="926" height="542"></a>
+					</section>
+				</div>
 			</div>
 		</section>
 		<section>
 			<h2 class="style-n b" id="w246">Der 2te B-Klasse</h2>
 			<div class="style-w">
-				<a href="https://de.wikipedia.org/wiki/Mercedes-Benz_W_246" class="ico-wiki" target="_blank" rel="noopener" title="Wikipedia(D) W246"></a>
-				<h3 class="i m0">W246</h3>
-				<p class="i m1">09/2011</p>
-				<p class="ru">Designer Mark Fetherston (2008)</p>
 				<a href="full/b/w246.jpg"><img src="style/b/w246.jpg" alt="Mercedes,W246,B-Klasse" width="1210" height="908"></a> <br>
+				<div class="vmenu_off">
+					<div class="vmenuitem2" onclick="doToggleClassName(getParentObj(this),'vmenu_on','vmenu_off')">
+						<p class="bf1a i">Zum Öffnen und Schließen anklicken</p>
+						<a href="https://de.wikipedia.org/wiki/Mercedes-Benz_W_246" class="ico-wiki m1" target="_blank" rel="noopener" title="Wikipedia(D) W246"></a>
+						<h3 class="i m0">W246</h3>
+						<p class="i m1">09/2011</p>
+						<p class="ru">Designer Mark Fetherston (2008)</p>
+									</div>
+							<section>
 				<a href="full/b/w246_tp.jpg"><img src="style/b/w246_tp.jpg" alt="Mercedes,W246,B-Klasse,Perspektive" width="1210" height="854"></a> <br>
 				<div>
 					<div class="box61"><br>
@@ -144,7 +156,9 @@
 				</div>
 				<h4>Abmessungen</h4>
 				<a href="full/b/w246_a.jpg"><img src="style/b/w246_a.jpg" alt="Mercedes,W246,B-Klasse,Maße" width="804" height="1102"></a>
-			</div>
+			</section>
+		</div>
+</div>
 			<p class="style-n b">Vergleich zwischen alt und neu</p>
 			<div class="style-w">
 				<p class="m1">W246 , W247</p>
@@ -154,16 +168,23 @@
 		<section>
 			<h2 class="style-n b" id="w247">Der 3te B-Klasse</h2>
 			<div class="style-w">
-				<a href="https://de.wikipedia.org/wiki/Mercedes-Benz_W_247" class="ico-wiki" target="_blank" rel="noopener" title="Wikipedia(D) W247"></a>
-				<h3 class="i m0">W247</h3>
-				<p class="i m1">10/2018</p> <br>
 				<a href="full/b/w247_f.jpg"><img src="style/b/w247_f.jpg" alt="Mercedes,W247,B-Klasse,Frontansicht" width="1210" height="600"></a> <br>
+				<div class="vmenu_off">
+					<div class="vmenuitem2" onclick="doToggleClassName(getParentObj(this),'vmenu_on','vmenu_off')">
+						<p class="bf1a i">Zum Öffnen und Schließen anklicken</p>
+						<a href="https://de.wikipedia.org/wiki/Mercedes-Benz_W_247" class="ico-wiki m1" target="_blank" rel="noopener" title="Wikipedia(D) W247"></a>
+						<h3 class="i m0">W247</h3>
+						<p class="i m1">10/2018</p> <br>
+											</div>
+							<section>
 				<a href="full/b/w247_r.jpg"><img src="style/b/w247_r.jpg" alt="Mercedes,W247,B-Klasse,Rückansicht " width="560" height="356"></a>
 				<a href="full/b/w247_d.jpg"><img src="style/b/w247_d.jpg" alt="Mercedes,W247,B-Klasse,Instrumententafel" width="647" height="356"></a> <br>
 				<h4>AMG-line</h4>
 				<a href="full/b/w247_fa.jpg"><img src="style/b/w247_fa.jpg" alt="Mercedes,W247,B-Klasse,Frontansicht" width="1010" height="568"></a> <br>
 				<h4>Abmessungen</h4>
 				<a href="full/b/w247_a2.jpg"><img src="style/b/w247_a2.jpg" alt="Mercedes,W247,B-Klasse,Maße" width="1210" height="527"></a>
+			</section>
+		</div>
 			</div>
 		</section>
 		<footer>
@@ -208,6 +229,9 @@
 			</nav>
 		</footer>
 		<p id="page-top"><a href="#wrap">▲</a></p>
+		<p id="close-accordion">
+			<a class="vmenu_all_action" onclick="doReplaceClassName('vmenu_on',  'vmenu_off')" title="Alle Öffnungen schließen">&sum;</a>
+		</p>
 		<script>
 			$(function () {
 				var topBtn = $('#page-top'); topBtn.hide();
