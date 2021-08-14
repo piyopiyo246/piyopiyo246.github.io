@@ -1671,6 +1671,7 @@ div, article, section, aside {
 	text-align: center;
 	padding: 0 8pt;
 	border: solid 1.6px #666;
+	border-radius: 12px;
 	display: inline-block;
 }
 
@@ -1780,6 +1781,11 @@ div, article, section, aside {
 	cursor: pointer;
 	width: 99.4%;
 	height: 0.6;
+}
+
+.vmenuitem2
+ {
+	border-radius: 22px;
 }
 
 .vmenuitem :hover {
