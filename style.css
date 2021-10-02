@@ -1801,7 +1801,7 @@ div, article, section, aside {
 .vmenu_off {
 	clear: both;
 	cursor: auto;
-	margin: 0 0 4px 0;
+	margin: 0 0 8px 0;
 }
 
 .vmenu_on .vmenuitem {
