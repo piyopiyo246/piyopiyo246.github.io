@@ -41,7 +41,7 @@ body {
 /*画像サイト用幅設定*/
 
 #contents {
-	width: 1210px;
+	width: 1220px;
 	margin-right: auto;
 	margin-left: auto;
 }
@@ -228,11 +228,11 @@ a.lnk3:hover {
 
 .r, .ru {
 	text-align: right;
+	margin-right: 30px;
 }
 
 .ru {
 	margin-top: -33.3px;
-	margin-right: 30px;
 }
 
 .lh1 {
@@ -1298,7 +1298,7 @@ div, article, section, aside {
 .style-w {
 	background: #4f4f4f;
 	color: #f2f2f2;
-	padding: 0.9%;
+	padding: 0.4%;
 }
 
 .style-w2 {
