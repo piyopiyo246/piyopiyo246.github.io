@@ -40,7 +40,7 @@ body {
 
 /*画像サイト用幅設定*/
 
-#contents, #contents1 {
+#contents {
 	width: 1210px;
 	margin-right: auto;
 	margin-left: auto;
