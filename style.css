@@ -41,13 +41,9 @@ body {
 /*画像サイト用幅設定*/
 
 #contents, #contents1 {
-	width: 1270px;
+	width: 1210px;
 	margin-right: auto;
 	margin-left: auto;
-}
-
-#contents1 {
-	width: 1210px;
 }
 
 h1, h2, h3, h4, h5, h6 {
