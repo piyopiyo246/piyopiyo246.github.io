@@ -249,9 +249,10 @@ a.lnk3:hover {
 }
 
 .bf1:before {
-	content: "　▼";
+	content: "▼";
 	margin: 0 10px 4px 0;
-	color: #666;
+	padding-left: 18px;
+	color: rgb(175, 175, 175);
 }
 
 .bf1a:before {
@@ -505,6 +506,10 @@ a.lnk3:hover {
 }
 
 /*S（右 margin）*/
+
+.s-5 {
+	margin-right: -40px;
+}
 
 .s {
 	margin-right: 8px;
@@ -1349,7 +1354,7 @@ div, article, section, aside {
 
 /*BOX*/
 
-.box04, .box07a, .box08, .box09, .box09a, .box11, .box12, .box13, .box13a, .box14b, .box15, .box16, .box17a, .box18, .box21, .box21a, .box23, .box27, .box30a, .box36, .box40, .box41, .box44, .box46, .box47a, .box50, .box51, .box53, .box56, .box59, .box60, .box61, .box62, .box64, .box64a, .box68, .box70, .box71, .box74, .box76, .box80, .box81, .box90, .box90a, .box100, .box101, .box104, .box-dg {
+.box04, .box07a, .box08, .box09, .box09a, .box11, .box12, .box13, .box13a, .box14b, .box15, .box16, .box17a, .box18, .box21, .box21a, .box23, .box27, .box30a, .box36, .box40, .box41, .box44, .box46, .box47a, .box50, .box51, .box53, .box56, .box59, .box60, .box61, .box62, .box64, .box64a, .box68, .box70, .box71, .box72, .box74, .box76, .box80, .box81, .box90, .box90a, .box100, .box101, .box104, .box-dg {
 	float: left;
 }
 
@@ -1499,6 +1504,10 @@ div, article, section, aside {
 
 .box71 {
 	width: 706px;
+}
+
+.box72 {
+	width: 719px;
 }
 
 .box74 {
@@ -1780,22 +1789,39 @@ div, article, section, aside {
 }
 
 .vmenuitem,
-.vmenuitem2
- {
+.vmenuitem2,
+.vmenuitem_ll,
+.vmenuitem_l,
+.vmenuitem_s {
 	cursor: pointer;
-	width: 90%;
+	width: 400px;
 	height: 0.6;
+}
+
+.vmenuitem2 {
+	width: 90%;
+	border-radius: 22px;
 	margin-right: auto;
 	margin-left: auto;
 }
 
-.vmenuitem2
- {
-	border-radius: 22px;
+.vmenuitem_ll {
+	width: 1060px;
 }
 
-.vmenuitem :hover {
-	background: #fdfdfd;
+.vmenuitem_l {
+	width: 710px;
+}
+
+.vmenuitem_s {
+	width: 220px;
+}
+
+.vmenuitem :hover,
+.vmenuitem_ll :hover,
+.vmenuitem_l :hover,
+.vmenuitem_s :hover {
+	background: #f0f0f0;
 }
 
 .vmenuitem2 :hover {
@@ -1809,31 +1835,25 @@ div, article, section, aside {
 	margin-top:8px;
 }
 
-.vmenu_on .vmenuitem {
-	border: 1px solid #000;
+.vmenu_on .vmenuitem,
+.vmenu_on .vmenuitem_ll,
+.vmenu_on .vmenuitem_l,
+.vmenu_on .vmenuitem_s {
 	background: #f0f0f0;
 }
 
-.vmenu_on2 .vmenuitem2 {
-	border: 2px solid #9e9e9e;
-	margin-top: 16px;
-	margin-bottom: 16px;
-}
-
 .vmenu_off .vmenuitem {
-	border: 1px solid #9e9e9e;
-}
-
-.vmenu_off .vmenuitem2 {
-	border: 2px solid #9e9e9e;
-	margin-top: 8px;
-	margin-bottom: 8px;
+	border: none;
 }
 
 .vmenu_on section,
-.vmenu_on2 section {
+.vmenu_on2 section,
+.vmenuitem_ll section,
+.vmenuitem_l section,
+.vmenuitem_s section {
 	display: auto;
 }
+
 .vmenu_on section {
 	background: #f0f0f0;
 }
