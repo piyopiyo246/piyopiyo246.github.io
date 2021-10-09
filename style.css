@@ -1821,7 +1821,7 @@ div, article, section, aside {
 .vmenuitem_ll :hover,
 .vmenuitem_l :hover,
 .vmenuitem_s :hover {
-	background: #f0f0f0;
+	background: #f3f3f3;
 }
 
 .vmenuitem2 :hover {
@@ -1839,7 +1839,7 @@ div, article, section, aside {
 .vmenu_on .vmenuitem_ll,
 .vmenu_on .vmenuitem_l,
 .vmenu_on .vmenuitem_s {
-	background: #f0f0f0;
+	background: #f3f3f3;
 }
 
 .vmenu_on2 .vmenuitem2 {
@@ -1867,7 +1867,7 @@ div, article, section, aside {
 }
 
 .vmenu_on section {
-	background: #f0f0f0;
+	background: #f3f3f3;
 }
 
 .vmenu_off section {
