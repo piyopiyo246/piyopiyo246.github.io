@@ -254,7 +254,8 @@ a.lnk3:hover {
 	color: #444;
 }
 
-.bf1:before {
+.bf1:before,
+.bf1a:before {
 	content: "▼";
 	margin: 0 10px 4px 0;
 	padding-left: 18px;
@@ -262,7 +263,6 @@ a.lnk3:hover {
 }
 
 .bf1a:before {
-	content: "▼";
 	margin: 0 10px 4px 10px;
 	color: #f2f2f2;
 }
@@ -356,7 +356,7 @@ a.lnk3:hover {
 /*T（上 margin）*/
 
 .t-05 {
-	margin-top: -11px;
+	margin-top: -15px;
 }
 
 .t-02 {
@@ -468,7 +468,7 @@ a.lnk3:hover {
 }
 
 .t24 {
-	margin-top: 467px;
+	margin-top: 469px;
 }
 
 .t40 {
@@ -480,7 +480,7 @@ a.lnk3:hover {
 }
 
 .t48 {
-	margin-top: 894px;
+	margin-top: 902px;
 }
 
 .t55 {
