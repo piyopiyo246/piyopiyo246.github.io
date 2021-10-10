@@ -75,7 +75,7 @@ hr {
 }
 
 .narrow {
-	border-top :0.1px dashed #888;
+	border-top :1px dotted #888;
 	border-bottom: none;
 	width: 94%;
 }
@@ -1256,7 +1256,7 @@ table, th, td {
 th {
 	padding: 0 8px 0 0;
 	font-weight: 400;
-	border-bottom: 1px dashed #666;
+	border-bottom: 1px dotted #888;
 }
 
 tr {
@@ -1577,8 +1577,8 @@ div, article, section, aside {
 }
 
 .timeline1, .timeline2, .timeline3 {
-	border-left: 1px dashed #888;
-	border-right: 1px dashed #888;
+	border-left: 1px dotted #888;
+	border-right: 1px dotted #888;
 }
 
 .timeline2, .timeline3 {
@@ -1618,14 +1618,14 @@ div, article, section, aside {
 }
 
 .btm-lg-dash {
-	border-bottom: 1px dashed #888;
+	border-bottom: 1px dotted #888;
 }
 
 .timeline4 {
 	font-family: Lato;
 	opacity: 1;
 	padding: 0 0 0 20px;
-	border-bottom: 1px dashed #afafaf;
+	border-bottom: 1px dotted #888;
 	color: #888;
 }
 
