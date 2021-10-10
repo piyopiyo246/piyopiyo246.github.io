@@ -74,6 +74,12 @@ hr {
 	margin: 16px auto;
 }
 
+.narrow {
+	border-top :1px dashed #888;
+	border-bottom: 0;
+	width: 94%;
+}
+
 /*font*/
 
 .fs50p {
@@ -1581,10 +1587,6 @@ div, article, section, aside {
 
 .ht10 {
 	height: 106.6px;
-}
-
-.ht36 {
-	height: 430px;
 }
 
 .ht45 {
