@@ -1325,13 +1325,8 @@ div, article, section, aside {
 /*中央寄せ*/
 
 .style-n, .style-w {
-	width: 1214px;
 	margin-left: auto;
 	margin-right: auto;
-}
-
-.style-n {
-	width: 1240px;
 }
 
 .bk-w {
