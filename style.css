@@ -355,8 +355,12 @@ a.lnk3:hover {
 
 /*T（上 margin）*/
 
-.t-05 {
+.t-08 {
 	margin-top: -15px;
+}
+
+.t-05 {
+	margin-top: -8.6px;
 }
 
 .t-04 {
@@ -367,12 +371,20 @@ a.lnk3:hover {
 	margin-top: -4px;
 }
 
+.t-01 {
+	margin-top: -2px;
+}
+
+.t-01a {
+	margin-top: -1.6px;
+}
+
 .t00 {
 	margin-top: 0;
 }
 
 .t0 {
-	margin-top: 0.8;
+	margin-top: 0.8px;
 }
 
 .t0f {
@@ -381,6 +393,10 @@ a.lnk3:hover {
 
 .t0c {
 	margin-top: 7.2px;
+}
+
+.t0a {
+	margin-top: 8px;
 }
 
 .t0d {
@@ -1516,7 +1532,7 @@ div, article, section, aside {
 }
 
 .box72 {
-	width: 719px;
+	width: 717px;
 }
 
 .box74 {
