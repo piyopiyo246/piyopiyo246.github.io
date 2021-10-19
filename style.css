@@ -1737,7 +1737,7 @@ div, article, section, aside {
 .square_btn {
 	color: #000;
 	font-size: 15px;
-	background: #fdfdfd;
+	background: #fff;
 	text-align: center;
 	padding: 0 8pt;
 	border: solid 1.6px #666;
@@ -1748,7 +1748,6 @@ div, article, section, aside {
 .square_btn:hover {
 	color: rgb(255, 115, 0);
 	border: solid 1.6px #000;
-	background: #fdfdfd;
 }
 
 /* page-top */
