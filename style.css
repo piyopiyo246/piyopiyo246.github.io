@@ -531,6 +531,10 @@ a.lnk3:hover {
 	margin-top: 750px;
 }
 
+.t42 {
+	margin-top: 780px;
+}
+
 .t46 {
 	margin-top: 858px;
 }
@@ -565,6 +569,10 @@ a.lnk3:hover {
 
 .t64 {
 	margin-top: 1180px;
+}
+
+.t65 {
+	margin-top: 1214px;
 }
 
 .t76 {
@@ -947,6 +955,10 @@ a.lnk3:hover {
 
 .m2j {
 	margin-left: 49.5px;
+}
+
+.m2k {
+	margin-left: 52px;
 }
 
 .m3 {
@@ -1624,7 +1636,7 @@ div, article, section, aside {
 }
 
 .box-wide {
-	width: 2700px;
+	width: 3000px;
 }
 
 /*Accordion history_only*/
