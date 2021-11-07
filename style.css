@@ -519,6 +519,18 @@ a.lnk3:hover {
 	margin-top: 316px;
 }
 
+.t22a {
+	margin-top: 320px;
+}
+
+.t23 {
+	margin-top: 429px;
+}
+
+.t23a {
+	margin-top: 433px;
+}
+
 .t24 {
 	margin-top: 469px;
 }
@@ -933,6 +945,10 @@ a.lnk3:hover {
 	margin-left: 39px;
 }
 
+.m2h {
+	margin-left: 40px;
+}
+
 .m2c {
 	margin-left: 42px;
 }
@@ -953,6 +969,10 @@ a.lnk3:hover {
 	margin-left: 46.44px;
 }
 
+.m2d {
+	margin-left: 47.4px;
+}
+
 .m2e {
 	margin-left: 48.6px;
 }
@@ -970,7 +990,7 @@ a.lnk3:hover {
 }
 
 .m3f {
-	margin-left: 55.8px;
+	margin-left: 54.8px;
 }
 
 .m3a {
@@ -1447,7 +1467,7 @@ div, article, section, aside {
 
 /*BOX*/
 
-.box04, .box07a, .box08, .box09, .box09a, .box11, .box12, .box13, .box13a, .box14b, .box15, .box16, .box17a, .box18, .box21, .box21a, .box23, .box27, .box30a, .box36, .box40, .box41, .box44, .box46, .box47a, .box50, .box51, .box53, .box56, .box59, .box60, .box61, .box62, .box64, .box64a, .box68, .box70, .box71, .box72, .box74, .box76, .box80, .box81, .box90, .box90a, .box100, .box101, .box104, .box-dg {
+.box04, .box07a, .box08, .box09, .box09a, .box11, .box12, .box13, .box13a, .box14b, .box15, .box16, .box17a, .box18, .box21, .box21a, .box22, .box23, .box27, .box30a, .box36, .box39, .box40, .box41, .box41a, .box44, .box46, .box47a, .box50, .box51, .box53, .box56, .box59, .box60, .box61, .box62, .box64, .box64a, .box68, .box70, .box71, .box72, .box74, .box76, .box80, .box81, .box90, .box90a, .box100, .box101, .box104, .box-dg {
 	float: left;
 }
 
@@ -1515,6 +1535,10 @@ div, article, section, aside {
 	width: 212px;
 }
 
+.box22 {
+	width: 220px;
+}
+
 .box23 {
 	width: 230px;
 }
@@ -1531,12 +1555,20 @@ div, article, section, aside {
 	width: 360px;
 }
 
+.box39 {
+	width: 387px;
+}
+
 .box40 {
 	width: 400px;
 }
 
 .box41 {
 	width: 406px;
+}
+
+.box41a {
+	width: 417px;
 }
 
 .box44 {
@@ -1644,7 +1676,7 @@ div, article, section, aside {
 }
 
 .box-wide {
-	width: 3000px;
+	width: 3230px;
 }
 
 /*Accordion history_only*/
