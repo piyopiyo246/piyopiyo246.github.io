@@ -354,6 +354,13 @@ a.lnk3:hover {
 }
 
 /*T（上 margin）*/
+.t-60 {
+	margin-top: -100px;
+}
+
+.t-50 {
+	margin-top: -80px;
+}
 
 .t-08 {
 	margin-top: -15px;
