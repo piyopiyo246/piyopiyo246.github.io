@@ -1740,6 +1740,13 @@ div, article, section, aside {
 	display: none;
 }
 
+.v_line {
+	border-right: 1px dotted #F89174;
+	width: 776px;
+	padding: 0;
+	height: 3240px;
+}
+
 /*Timeline*/
 .timeline1, .timeline2, .timeline3 {
 	width: 142.3px;
