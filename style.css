@@ -778,12 +778,20 @@ a.lnk3:hover {
 	padding-bottom: 176px;
 }
 
+.pb12 {
+	padding-bottom: 192px;
+}
+
 .pb23 {
 	padding-bottom: 368px;
 }
 
 .pb25 {
 	padding-bottom: 400px;
+}
+
+.pb27 {
+	padding-bottom: 432px;
 }
 
 /*M（左 margin）*/
