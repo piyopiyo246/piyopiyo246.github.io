@@ -2030,8 +2030,8 @@ div, article, section, aside {
 
 .vmenu_on2 .vmenuitem2 {
 	border: 2px solid #9e9e9e;
-	margin-top: 16px;
-	margin-bottom: 16px;
+	margin-top: 8px;
+	margin-bottom: 8px;
 }
 
 .vmenu_off .vmenuitem {
@@ -2040,7 +2040,6 @@ div, article, section, aside {
 
 .vmenu_off .vmenuitem2 {
 	border: 2px solid #9e9e9e;
-	margin-top: 8px;
 	margin-bottom: 8px;
 }
 
