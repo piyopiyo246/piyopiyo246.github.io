@@ -2061,6 +2061,7 @@ div, article, section, aside {
 
 .vmenu_all_action {
 	margin: 0;
+	margin-left: -10.8px;
 }
 
 .vmenu_all_action span {
