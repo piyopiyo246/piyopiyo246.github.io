@@ -2055,6 +2055,10 @@ div, article, section, aside {
 	background: #fbfbfb;
 }
 
+.vmenu_on2 section {
+	background: #4f4f4f;
+}
+
 .vmenu_off section {
 	display: none;
 }
