@@ -281,7 +281,7 @@ a.lnk3:hover {
 }
 
 .bf4:before, .af4:after {
-	content: "/";
+	content: "|";
 	color: #444;
 	font-weight: 700;
 	margin: 10px;
