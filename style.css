@@ -122,7 +122,7 @@ hr {
 	color: rgb(219, 216, 216);
 }
 
-.fl-w,.fl-w2 {
+.fl-w,.fl-w2,.fl-w3 {
 	font-size: 100px;
 	color: #ccc;
 	line-height: 100px;
@@ -130,6 +130,11 @@ hr {
 
 .fl-w2 {
 	font-size: 80px;
+	line-height: 80px;
+}
+
+.fl-w3 {
+	font-size: 60px;
 	line-height: 80px;
 }
 
