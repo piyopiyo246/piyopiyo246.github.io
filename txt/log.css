@@ -88,13 +88,14 @@ span {
 	content: "/";
 	color: #fff;
 	font-weight: 700;
+	margin-left: 16px;
 }
 
 
 .bf2:before {
 	content: ">>";
 	font-weight: 700;
-	margin-left: 20px;
+	margin-left: 5px;
 	margin-right: 5px;
 	color: #444;
 }
