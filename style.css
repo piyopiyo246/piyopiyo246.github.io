@@ -1876,7 +1876,7 @@ div, article, section, aside {
 	text-align: center;
 	padding: 0 8pt;
 	border: solid 1.6px #666;
-	border-radius: 10px;
+	/* border-radius: 10px; */
 	display: inline-block;
 }
 
