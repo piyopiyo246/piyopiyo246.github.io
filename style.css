@@ -122,6 +122,10 @@ hr {
 	color: rgb(219, 216, 216);
 }
 
+.f9 {
+	color: #ffffff;
+}
+
 .fl-w,.fl-w2,.fl-w3 {
 	font-size: 100px;
 	color: #ccc;
@@ -209,8 +213,15 @@ a:link {
 	color: #444;
 }
 
+a.lnk3 {
+	color: rgb(187, 187, 187);
+}
+
 a:visited {
 	color: #444;
+}
+a.lnk3:visited  {
+	color: rgb(187, 187, 187);
 }
 
 .lnk:hover {
@@ -221,6 +232,11 @@ a:visited {
 a.lnk2:hover {
 	color: #2600ff;
 	border-bottom: solid 1.8px #2600ff;
+}
+
+a.lnk3:hover {
+	color: rgb(187, 187, 187);
+	border-bottom: solid 1.8px rgb(187, 187, 187);
 }
 
 .top {
@@ -307,6 +323,10 @@ a.lnk2:hover {
 
 .bgc-pp {
 	background-color: rgb(197, 164, 250);
+}
+
+.bgc-g {
+	background-color: rgb(97, 97, 97);
 }
 
 .dashboard {
