@@ -334,13 +334,21 @@ a.lnk3:hover {
 	background-color: rgb(97, 97, 97);
 }
 
+.bgc-amazon {
+	background-color: #232F3E;
+}
+
+.bgc-amazon2 {
+	background-color: #37475A;
+}
+
 .dashboard {
 	position: absolute;
 	width: 100%;
 	min-width: 1210px;
 	background: #4f4f4f;
-	height: 46px;
-	border-bottom: solid 2px #ffffff;
+	height: 57px;
+	border-bottom: solid 2px #fff;
 	margin: 0;
 	padding: 0;
 	clear: both;
@@ -348,7 +356,7 @@ a.lnk3:hover {
 }
 
 .b-box {
-	margin-top: 4px;
+	margin-top: 10px;
 	margin-left: auto;
 	margin-right: auto;
 	width: 1060px;
