@@ -2100,28 +2100,18 @@ div, article, section, aside {
 	font-size: 17px;
 }
 
-#hideMe {
-	-moz-animation: cssAnimation 1s ease-in 5s forwards;
-	/* Firefox */
-	-webkit-animation: cssAnimation 1s ease-in 5s forwards;
-	/* Safari and Chrome */
-	-o-animation: cssAnimation 1s ease-in 5s forwards;
-	/* Opera */
-	animation: cssAnimation 1s ease-in 5s forwards;
-	-webkit-animation-fill-mode: forwards;
-	animation-fill-mode: forwards;
+.container{
+	width: 170px;
+	max-width: 100%;
 }
-@keyframes cssAnimation {
-	to {
-			width:0;
-			height:0;
-			overflow:hidden;
-	}
+
+.fadeout{
+	width: 100%;
+	animation: fadeout-anim 15s linear forwards;
 }
-@-webkit-keyframes cssAnimation {
-	to {
-			width:0;
-			height:0;
-			visibility:hidden;
+
+@keyframes fadeout-anim {
+	100% {
+		opacity: 0;
 	}
 }
