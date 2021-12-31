@@ -75,9 +75,8 @@ hr {
 }
 
 .narrow {
-	border-top :1px dotted #666;
+	border-top :.1px #b9b9b9 solid;
 	border-bottom: none;
-	width: 94%;
 }
 
 /*font*/
