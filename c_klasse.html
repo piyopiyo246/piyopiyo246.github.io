@@ -15867,13 +15867,38 @@
 				<p class="i m0b"><a class="lnk2" title="" href="#code">年表 / 既存のコード</a> に Wikipedia への Link を追加中です。</p> -->
 			</div>
 		</aside>
-		<nav class="pb1">
-			<div class="mid" style="width: 1179.5px; margin-left: 20px; background-color: #37475A;">
-				<a href="#wrap" class="lnk3"><span class="f7">トップへ戻る</span></a>
-			</div>
-			<div class="style-w" style="width: 1170px; background-color: #232F3E; font-size: 11pt; font-family: 'Hiragino Kaku Gothic ProN','Hiragino Sans',Meiryo,sans-serif;" id="sitemap">
-				<div class="box21 pb1">
-					<p class="m3 t0b" style="font-weight: 800;">テンプレ</p>
+	</div>
+	<p class="m-05" id="page-top"><a href="#wrap" title="ページトップへジャンプ">▲</a></p>
+	<p id="close-accordion">
+		<a class="vmenu_all_action" onclick="doReplaceClassName('vmenu_on', 'vmenu_off')" title="全ての開閉部を閉じる">&sum;</a>
+	</p>
+	<script>
+		$(function () {
+			var topBtn = $('#page-top'); topBtn.hide();
+			$(window).scroll(function () {
+				if ($(this).scrollTop() > 100) {
+					topBtn.fadeIn();
+				} else {
+					topBtn.fadeOut();
+				}
+			});
+			//スクロールしてトップ
+			topBtn.click(function () {
+				$('body,html').animate({
+					scrollTop: 0
+				}, 500);
+				return false;
+			});
+		});
+	</script>
+	<nav>
+		<div class="mid" style="background-color: #37475A;">
+			<a href="#wrap" class="lnk3"><span class="f7">トップへ戻る</span></a>
+		</div>
+		<div id="sitemap" style="background-color: #232F3E; font-size: 11pt;">
+			<div class="center hiragino pb3" style="width: 1170px;">
+				<div class="box21 left">
+					<p class="m3 t0b" style="font-weight: 800; color: white;">テンプレ</p>
 					<ul class="m3 box11">
 						<li><a class="lnk3" href="#model-in-jpn">国内販売</a></li>
 						<li><a class="lnk3" href="#body-spec">車体</a></li>
@@ -15882,8 +15907,8 @@
 						<li><a class="lnk3" href="#zeit">歴史</a></li>
 					</ul>
 				</div>
-				<div class="box62 pb1">
-					<p class="m0 t0b" style="font-weight: 800;">画像 (日本語版)</p>
+				<div class="box62 left">
+					<p class="m0 t0b" style="font-weight: 800; color: white;">画像 (日本語版)</p>
 					<ul class="box11">
 						<li><a class="lnk3" href="pic/ja_mb_img_a.html">Aクラス</a></li>
 						<li><a class="lnk3" href="pic/ja_mb_img_b.html">Bクラス</a></li>
@@ -15920,8 +15945,8 @@
 						<li><a class="lnk3" href="pic/ja_mb_img_x.html">Xクラス</a></li>
 					</ul>
 				</div>
-				<div class="box34 pb1">
-					<p class=" m0 t0b" style="font-weight: 800;">過去ログ倉庫</p>
+				<div class="box34 left">
+					<p class=" m0 t0b" style="font-weight: 800; color: white;">過去ログ倉庫</p>
 					<ul class="box11">
 						<li><a class="lnk3" href="txt/c-class_1t.html">C総合</a></li>
 						<li><a class="lnk3" href="txt/cla_1t.html">CLA</a></li>
@@ -15943,31 +15968,8 @@
 					</ul>
 				</div>
 			</div>
-		</nav>
-	</div>
-	<p class="m-05" id="page-top"><a href="#wrap" title="ページトップへジャンプ">▲</a></p>
-		<p id="close-accordion">
-			<a class="vmenu_all_action" onclick="doReplaceClassName('vmenu_on', 'vmenu_off')" title="全ての開閉部を閉じる">&sum;</a>
-		</p>
-		<script>
-			$(function () {
-				var topBtn = $('#page-top'); topBtn.hide();
-				$(window).scroll(function () {
-					if ($(this).scrollTop() > 100) {
-						topBtn.fadeIn();
-					} else {
-						topBtn.fadeOut();
-					}
-				});
-				//スクロールしてトップ
-				topBtn.click(function () {
-					$('body,html').animate({
-						scrollTop: 0
-					}, 500);
-					return false;
-				});
-			});
-		</script>
+		</div>
+	</nav>
 </body>
 
 </html>
