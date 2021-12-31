@@ -225,17 +225,14 @@ a.lnk3:visited  {
 
 .lnk:hover {
 	color: #000;
-	border-bottom: solid 1.8px #000;
 }
 
 a.lnk2:hover {
 	color: #2600ff;
-	border-bottom: solid 1.8px #2600ff;
 }
 
 a.lnk3:hover {
 	color: rgb(187, 187, 187);
-	border-bottom: solid 1.8px rgb(187, 187, 187);
 }
 
 .top {
