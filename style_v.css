@@ -307,7 +307,7 @@ a.lnk3:hover { color: rgb(187, 187, 187); border-bottom:  solid 1px rgb(187, 187
 .w22 { width: 396px;}
 .w24 { width: 432px;}
 /*BOX*/
-.box04, .box07a, .box08, .box09, .box09a, .box11, .box12, .box13, .box13a, .box14b, .box15, .box16, .box17a, .box18, .box21, .box21a, .box22, .box23, .box27, .box30a, .box34, .box36, .box39, .box40, .box41, .box41a, .box44, .box46, .box47a, .box50, .box51, .box53, .box56, .box59, .box60, .box61, .box62, .box64, .box64a, .box68, .box70, .box71, .box72, .box74, .box76, .box80, .box81, .box90, .box100, .box108, .box111, .box-dg { float: left;}
+.box04, .box07a, .box08, .box09, .box09a, .box11, .box12, .box13, .box13a, .box14b, .box15, .box16, .box17a, .box18, .box21, .box21a, .box22, .box23, .box27, .box30a, .box34, .box36, .box39, .box40, .box41, .box41a, .box44, .box46, .box47a, .box50, .box51, .box53, .box56, .box59, .box60, .box61, .box62, .box64, .box64a, .box68, .box70, .box71, .box72, .box74, .box76, .box80, .box81, .box90, .box96, .box100, .box108, .box111, .box-dg { float: left;}
 .box04 { width: 40px;}
 .box07a { width: 74px;}
 .box08 { width: 82px;}
@@ -355,6 +355,7 @@ a.lnk3:hover { color: rgb(187, 187, 187); border-bottom:  solid 1px rgb(187, 187
 .box80 { width: 804px;}
 .box81 { width: 808px;}
 .box90 { width: 900px;}
+.box96 { width: 960px;}
 .box100 { width: 1000px;}
 .box108 { width: 1080px;}
 .box111 { width: 1110px;}

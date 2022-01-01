@@ -85,7 +85,7 @@ hr {
 	padding: 0;
 }
 
-.a-box,.b-box {
+.a-box,.b-box,.c-box {
 	margin-left: auto;
 	margin-right: auto;
 	padding: 0;
@@ -98,15 +98,22 @@ hr {
 	background: #000;
 }
 
+.c-box {
+	margin-top: 5px;
+	width: 168px;
+	height: 62px;
+	background: #000;
+}
+
 .box-dg {
 	font-size: 14px;
 	height: 32px;
 	width: 150px;
 }
 
-.box-dg {
+.box-dg, .box-co {
 	background: #444;
-	color: #f0f0f0;
+	color: #eeeeee;
 	text-align: center;
 	letter-spacing: 6px;
 	font-size: 14px;
@@ -118,7 +125,13 @@ hr {
 	border-radius: 4px;
 }
 
-.box-dg:hover {
+.box-co {
+	font-size: 12px;
+	height: 26px;
+	width: 150px;
+}
+
+.box-dg:hover, .box-co:hover {
 	background: #333;
 	color: #ffffff;
 	border-top: solid 2px #333;
@@ -126,6 +139,51 @@ hr {
 	border-bottom: solid 2px #000;
 	border-left: solid 2px #111;
 	transition: background-color 0.5s;
+}
+
+/*btn*/
+
+.square_btn {
+	color: #000;
+	font-size: 15px;
+	background: #fff;
+	text-align: center;
+	padding: 0 8pt;
+	border: solid 1.6px #666;
+	/* border-radius: 10px; */
+	display: inline-block;
+}
+
+.square_btn:hover {
+	color: rgb(255, 115, 0);
+	border: solid 1.6px #000;
+}
+
+/* page-top */
+#page-top {
+	position: fixed;
+	bottom: 70px;
+	left: 20px;
+	font-size: 77%;
+	opacity:0.6; 
+}
+
+#page-top a {
+	background: #666;
+	color: #fff;
+	text-decoration: none;
+	width: 30px;
+	padding: 5px 0;
+	text-align: center;
+	display: block;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+
+#page-top a:hover {
+	text-decoration: none;
+	background: #999;
 }
 
 /*img・ico*/
@@ -427,51 +485,6 @@ td {
 
 .r-side {
 	text-align: right;
-}
-
-/*btn*/
-
-.square_btn {
-	color: #000;
-	font-size: 15px;
-	background: #fff;
-	text-align: center;
-	padding: 0 8pt;
-	border: solid 1.6px #666;
-	/* border-radius: 10px; */
-	display: inline-block;
-}
-
-.square_btn:hover {
-	color: rgb(255, 115, 0);
-	border: solid 1.6px #000;
-}
-
-/* page-top */
-#page-top {
-	position: fixed;
-	bottom: 70px;
-	left: 20px;
-	font-size: 77%;
-	opacity:0.6; 
-}
-
-#page-top a {
-	background: #666;
-	color: #fff;
-	text-decoration: none;
-	width: 30px;
-	padding: 5px 0;
-	text-align: center;
-	display: block;
-	border-radius: 5px;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-}
-
-#page-top a:hover {
-	text-decoration: none;
-	background: #999;
 }
 
 /* close-accordion { */
