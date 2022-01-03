@@ -32,8 +32,6 @@ article, aside, div, nav, section {
 h1, h2, h3, h4, h5, h6 {
 	font-size: 17px;
 	font-weight: normal;
-}
-h1, h2 {
 	margin: 4px 0 4px 18px;
 }
 h3, h4, h5, h6 {
@@ -43,11 +41,8 @@ p {
 	margin: 0;
 }
 hr {
-	margin: 12px;
 	border-top: 1px #666 solid;
 	border-bottom: 1px solid #fff;
-}
-.branch {
 	margin: 16px auto;
 }
 .narrow {
@@ -154,7 +149,7 @@ hr {
 	border: solid 1.6px #000;
 }
 
-/* page-top */
+/* GOTO page-top */
 #page-top {
 	position: fixed;
 	bottom: 70px;
@@ -311,9 +306,6 @@ td {
 	margin-left: auto;
 	margin-right: auto;
 }
-.bk-w {
-	background: #ffffff;
-}
 .f {
 	float: left;
 }
@@ -406,9 +398,6 @@ td {
 	font-size: 72px;
 	line-height: 1.2;
 	color: #bdbdbd;
-}
-.r-side {
-	text-align: right;
 }
 
 /* close-accordion { */
