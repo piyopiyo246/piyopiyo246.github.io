@@ -560,8 +560,7 @@ td {
 	cursor: pointer;
 	font-size: 17px;
 }
-.container_180{
-	width: 180px;
+.container{
 	max-width: 100%;
 }
 .fadeout{
