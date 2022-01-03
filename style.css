@@ -25,7 +25,8 @@ article, aside, div, nav, section {
 	position:relative;
 	zoom:1
 }
-.center, .style-w {
+.center,
+.style-w {
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -51,7 +52,10 @@ hr {
 }
 
 /* navi */
-.dashboard, .wood, .under_box, .sitemap {
+.dashboard,
+.wood,
+.under_box,
+.sitemap {
 	position: absolute;
 	background: #4f4f4f;
 	width: 100%;
@@ -77,7 +81,8 @@ hr {
 	height: 10px;
 }
 /*文字を重ねる*/
-.overlap_1,.c-box {
+.overlap_1,
+.c-box {
 	position: absolute;
 	left: 31.5%;
 	top: 48%;
@@ -87,7 +92,8 @@ hr {
 	font-weight: bold;
 }
 /*btnの後ろ*/
-.b-box,.c-box {
+.b-box,
+.c-box {
 	background: #000;
 }
 .b-box {
@@ -100,7 +106,8 @@ hr {
 	width: 305px;
 	height: 29px;
 }
-.top_btn1, .top_btn2 {
+.top_btn1,
+.top_btn2 {
 	background: #444;
 	color: #d3d3d3;
 	text-align: center;
@@ -113,7 +120,8 @@ hr {
 	border-left: solid 2px #333;
 	border-radius: 4px;
 }
-.top_btn1, .top_btn2 {
+.top_btn1,
+.top_btn2 {
 	float: left;
 	height: 32px;
 	width: 150px;
@@ -121,7 +129,8 @@ hr {
 .top_btn2{
 	height: 26px;
 }
-.top_btn1:hover, .top_btn2:hover {
+.top_btn1:hover,
+.top_btn2:hover {
 	background: #333;
 	color: #ffffff;
 	border-top: solid 2px #333;
@@ -183,11 +192,16 @@ img {
 }
 
 /*ico*/
-.ico-wiki, .ico-wiki2, .ico-camera, .ico-eg, .ico-tube {
+.ico-wiki,
+.ico-wiki2,
+.ico-camera,
+.ico-eg,
+.ico-tube {
 	display: inline-block;
 	background-repeat: no-repeat;
 }
-.ico-wiki, .ico-wiki2 {
+.ico-wiki,
+.ico-wiki2 {
 	width: 17px;
 	margin-right: 3px;
 	background-image: url('ico/wiki.png');
@@ -196,7 +210,8 @@ img {
 .ico-wiki2 {
 	height: 14px;
 }
-.ico-camera, .ico-eg {
+.ico-camera,
+.ico-eg {
 	width: 20px;
 	height: 16px;
 	background-image: url('ico/camera.png');
@@ -329,16 +344,21 @@ td {
 }
 
 /*Timeline*/
-.timeline1, .timeline2, .timeline3 {
+.timeline1,
+.timeline2,
+.timeline3 {
 	width: 142.3px;
 	float: left;
 	padding: 0;
 }
-.timeline1, .timeline2, .timeline3 {
+.timeline1,
+.timeline2,
+.timeline3 {
 	border-left: 1px dotted #888;
 	border-right: 1px dotted #888;
 }
-.timeline2, .timeline3 {
+.timeline2,
+.timeline3 {
 	margin: 0 0 0 145.8px;
 }
 .ht10 {height: 106.6px;}
@@ -362,7 +382,10 @@ td {
 	color: #888;
 }
 /*bk*/
-.bk, .bk2, .bk3, .bk4, .bk5 {
+.bk,
+.bk3,
+.bk4,
+.bk5 {
 	position: absolute;
 	background: no-repeat;
 }
@@ -370,11 +393,14 @@ td {
 	font-family: Lato;
 	opacity: 1;
 }
-.bk3, .bk4, .bk5 {
+.bk3,
+.bk4,
+.bk5 {
 	top: 4px;
 }
 	/* border-radius: 4px; */
-.bk3, .bk5 {
+.bk3,
+.bk5 {
 	width: 300px;
 	left: 880px;
 }
@@ -387,7 +413,7 @@ td {
 .bk5 {
 	left: 300px;
 }
-.inside, .r-side {
+.inside {
 	font-size: 72px;
 	line-height: 1.2;
 	color: #bdbdbd;
