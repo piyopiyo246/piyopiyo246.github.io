@@ -459,26 +459,6 @@ td {
 	top: 0;
 	left: 0;
 }
-.vscrollerbase {
-	/* 縦スクロールバー背景 */
-	width: 15px;
-	background-color: #fbfbfb;
-}
-.vscrollerbar {
-	/* 縦スクロールバー */
-	width: 15px;
-	background-color: #fbfbfb;
-}
-.hscrollerbase {
-	/* 横スクロールバー背景 */
-	height: 15px;
-	background-color: #fbfbfb;
-}
-.hscrollerbar {
-	/* 横スクロールバー */
-	height: 15px;
-	background-color: #fbfbfb;
-}
 .vmenuitem,
 .vmenuitem2,
 .vmenuitem_ll,
