@@ -25,9 +25,9 @@ article, aside, div, nav, section {
 	position:relative;
 	zoom:1
 }
-.center {
-	margin-right: auto;
+.center, .style-w {
 	margin-left: auto;
+	margin-right: auto;
 }
 h1, h2, h3, h4, h5, h6 {
 	font-size: 17px;
@@ -86,22 +86,19 @@ hr {
 	font-size: 100%;
 	font-weight: bold;
 }
-.a-box,.b-box,.c-box {
-	margin-left: auto;
-	margin-right: auto;
-	padding: 0;
+/*btnの後ろ*/
+.b-box,.c-box {
+	background: #000;
 }
 .b-box {
 	margin-top: 10px;
 	width: 1060px;
 	height: 34px;
-	background: #000;
 }
 .c-box {
 	transform: translate(150%,-50%);
 	width: 305px;
 	height: 29px;
-	background: #000;
 }
 .top_btn1, .top_btn2 {
 	background: #444;
@@ -301,11 +298,7 @@ td {
 	transition: 0.4s;
 }
 
-/*中央寄せ*/
-.style-n, .style-w {
-	margin-left: auto;
-	margin-right: auto;
-}
+/*左寄せ*/
 .f {
 	float: left;
 }
