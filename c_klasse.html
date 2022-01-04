@@ -38,7 +38,7 @@
 			}
 		}
 	</script>
-</head>
+	</head>
 
 <body id="wrap">
 	<nav class="dashboard">
@@ -59,7 +59,18 @@
 	<!-- <div class="wood" style="background-image: url(pic/trim/26_zebrano-rot.png);"> -->
 	<!-- <div class="wood" style="background-image: url(pic/trim/27_zebrano-hell.png);"> -->
 	<!-- <div class="wood" style="background-image: url(pic/trim/33_piano-black.png);"> -->
-		<div class="overlap_1">
+		<script defer type="text/javascript">
+			$(".wood").on("click", function () {
+				if ($(this).hasClass("change")) {
+					$(this).attr("style", "background-image: url(pic/trim/13_carbon.png);");
+					$(this).toggleClass("change");
+				} else {
+					$(this).attr("style", "background-image: url(pic/trim/27_zebrano-hell.png);");
+					$(this).toggleClass("change");
+				}
+			});
+		</script>
+			<div class="overlap_1">
 			<h1 class="b">
 				<a class="f7" title="当サイトは、Ｃクラスと関連車種のスペック等を、ほぼ文字情報で掲載しています。
 Diese Site listet die Spezifikationen der C-Klasse und verwandter Modelle in fast textuellen Informationen auf.">
