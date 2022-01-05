@@ -289,7 +289,10 @@ td {
 	white-space: normal;
 	word-wrap: break-word;
 }
-
+/*float要素を殺したいとき*/
+.fn {
+	float: none;
+}
 /*inline要素を殺したいとき*/
 .cb {
 	clear: both;
