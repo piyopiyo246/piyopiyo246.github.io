@@ -343,12 +343,6 @@ td {
 .displayNone {
 	display: none;
 }
-.v_line {
-	border-right: 1px dotted orange;
-	width: 776px;
-	padding: 0;
-	height: 3240px;
-}
 
 /*Timeline*/
 .timeline1,
