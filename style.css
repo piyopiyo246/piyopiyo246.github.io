@@ -345,14 +345,12 @@ td {
 }
 
 /*Timeline*/
-.timeline1,
 .timeline2,
 .timeline3 {
 	width: 142.3px;
 	float: left;
 	padding: 0;
 }
-.timeline1,
 .timeline2,
 .timeline3 {
 	border-left: 1px dotted #888;
