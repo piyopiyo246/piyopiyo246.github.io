@@ -96,8 +96,7 @@ hr {
 	font-weight: bold;
 }
 /*btnの後ろ*/
-.b-box,
-.c-box {
+.b-box,.c-box,.searchArea {
 	background: #000;
 }
 .b-box {
@@ -106,12 +105,11 @@ hr {
 	height: 34px;
 }
 .c-box {
-	transform: translate(150%,-50%);
-	width: 305px;
+	transform: translate(95%,-48%);
+	width: 393px;
 	height: 29px;
 }
-.top_btn1,
-.top_btn2 {
+.top_btn1,.top_btn2 {
 	background: #444;
 	color: #d3d3d3;
 	text-align: center;
@@ -132,6 +130,7 @@ hr {
 }
 .top_btn2{
 	height: 26px;
+	width: 60px;
 }
 .top_btn1:hover,
 .top_btn2:hover {
@@ -182,6 +181,35 @@ hr {
 #page-top a:hover {
 	text-decoration: none;
 	background: #000;
+}
+
+/* --- 検索全体のBOX--- */
+.searchArea{
+	margin         : auto;               /* サンプルを中心に寄せ  */
+	letter-spacing : 0.1em;              /* 文字間隔              */
+	font-weight    : bold;               /* 太字                  */
+	line-height    : 0;                  /* 標準の行高さ          */
+}
+ 
+ /* --- テキスト入力欄のSTYLE設定 --- */
+.searchArea .searchText {
+	display        : block;              /* ブロック化            */
+	float          : left;               /* 横並び                */
+	box-sizing     : border-box;         /* 枠線,余白を含んだ長さ */
+	height         : 27px;               /* 入力の高さ            */
+	width          : 207px;              /* 入力の幅              */
+	margin         : 0;                  /* 外余白                */
+	padding        : 0 12px;             /* 内余白                */
+	border         : 2px solid #000;  /* 枠線　幅,実践,色      */
+	color          : #333;               /* 文字色                */
+	outline        : 0;                  /* 入力の薄い枠を非表示  */
+	font-size      : 12px;               /* フォントサイズ        */
+	background     : #a7af7c;            /* ボタンの色            */
+}
+ 
+/* --- 検索ボタン欄にフォーカスか来たとき --- */
+.searchArea .searchText:focus {
+	background     : #cfe7ff;            /* フォーカス時の背景色  */
 }
 
 /*img・ico*/
