@@ -111,7 +111,7 @@ hr {
 }
 .top_btn1,.top_btn2 {
 	background: #444;
-	color: #d3d3d3;
+	color: #c6c6c6;
 	text-align: center;
 	letter-spacing: 6px;
 	font-size: 14px;
@@ -135,7 +135,7 @@ hr {
 .top_btn1:hover,
 .top_btn2:hover {
 	background: #333;
-	color: #ffffff;
+	color: #e0e0e0;
 	border-top: solid 2px #333;
 	border-right: solid 2px #555;
 	border-bottom: solid 2px #000;
@@ -208,7 +208,7 @@ hr {
 }
  
 /* --- 検索ボタン欄にフォーカスか来たとき --- */
-.searchArea .searchText:focus {
+.searchArea .searchText:focus,.searchArea .searchText:hover {
 	background     : #cfe7ff;            /* フォーカス時の背景色  */
 }
 
