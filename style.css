@@ -293,7 +293,7 @@ table, th, td {
 th {
 	padding: 0 8px 0 0;
 	font-weight: 400;
-	border-bottom: 1px dotted #888;
+	border-bottom: 1px #777 solid;
 }
 tr {
 	vertical-align: top;
