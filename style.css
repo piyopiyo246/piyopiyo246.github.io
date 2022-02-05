@@ -285,6 +285,9 @@ dd {
 table, th, td {
 	border: none;
 }
+.bd {
+	border-bottom:1px #777 solid;
+}
 
 /*ヘッダ行の下線 */
 th {
