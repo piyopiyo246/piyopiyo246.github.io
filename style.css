@@ -374,15 +374,18 @@ td {
 }
 
 /*Timeline*/
-.timeline2 {
+.timeline2,.timeline3 {
 	width: 144px;
 }
-.timeline2 {
+.timeline2,.timeline3 {
 	float: left;
 	padding: 0;
 	border-left: 1px dotted #888;
 	border-right: 1px dotted #888;
 	margin: 0 0 0 143px;
+}
+.timeline3 {
+	border-right: none;
 }
 .ht10 {height: 106.6px;}
 .ht45 {height: 470px;}
