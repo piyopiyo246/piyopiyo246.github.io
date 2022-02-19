@@ -47,12 +47,6 @@ hr {
 	background-color: #6e6e6e;
 	margin-left: 4px;
 }
-.narrow {
-	height: .1px; 
-	background-color: #929292;
-	margin-left: 10px;
-	width: 90%;
-}
 
 /* navi */
 .dashboard,
