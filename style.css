@@ -561,13 +561,6 @@ td {
 	cursor: pointer;
 	font-size: 17px;
 }
-.container{
-	max-width: 100%;
-}
-.fadeout{
-	width: 100%;
-	animation: fadeout-anim 15s linear forwards;
-}
 @keyframes fadeout-anim {
 	100% {
 		opacity: 0;
