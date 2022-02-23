@@ -2,7 +2,7 @@
 /*font*/
 .hiragino { font-family: 'Hiragino Kaku Gothic ProN','Hiragino Sans',Meiryo,sans-serif;}
 .fs50p { font-size: 50%;}
-.fs70p { font-size: 70%;}
+.fs80p { font-size: 80%;}
 .fs250p { font-size: 250%;}
 .fs300p { font-size: 300%;}
 .fs17 { font-size: 17px;}
@@ -35,11 +35,12 @@
 /*文字列*/
 a { text-decoration: none;}
 a:link { color: #444;}
-a.lnk3 { color: rgb(187, 187, 187);}
-a:visited { color: #444;}a.lnk3:visited  { color: rgb(187, 187, 187);}
+a:visited { color: #444;}
 .lnk:hover { color: #000; border-bottom:  solid 1px #000;}
 a.lnk2:hover { color: #2600ff; border-bottom:  solid 1px #2600ff;}
-a.lnk3:hover { color: rgb(187, 187, 187); border-bottom:  solid 1px rgb(187, 187, 187);}
+a.lnk3 { color: #fbfbfb; line-height: 40px;}
+a.lnk3:visited  { color: #fbfbfb;}
+a.lnk3:hover { border-bottom: solid 1px #f2f2f2;}
 .top { vertical-align: top;}
 .left { text-align: left;}
 .mid { text-align: center;}
