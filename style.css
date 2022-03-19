@@ -42,9 +42,9 @@ p {
 	margin: 0;
 }
 hr {
-	border: 0 none; 
-	height: .1px; 
-	background-color: #6e6e6e;
+	border: none; 
+	height: 1.4px; 
+	background-color: #444;
 	margin-left: 4px;
 }
 
