@@ -68,6 +68,7 @@ a.lnk3:hover { border-bottom: solid 1px #f2f2f2;}
 .bgc-yamaha { background-color: #3b3b3b;}
 .bgc-yamaha2 { background-color: #dbdbdb;}
 /*T（上 margin）*/
+.t-320 { margin-top: -320px;}
 .t-60 { margin-top: -100px;}
 .t-50 { margin-top: -80px;}
 .t-08 { margin-top: -15px;}
