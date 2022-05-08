@@ -138,9 +138,10 @@ hr {
 }
 
 /*btn*/
-.square_btn {
+.square_btn  {
 	color: #000;
 	font-size: 15px;
+	line-height: 21px;
 	background: #fff;
 	text-align: center;
 	padding: 0 8pt;
