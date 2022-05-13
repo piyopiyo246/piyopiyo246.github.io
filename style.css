@@ -204,7 +204,7 @@ hr {
  
 /* --- 検索ボタン欄にフォーカスか来たとき --- */
 .searchArea .searchText:focus {
-	background     : #cfe7ff;            /* フォーカス時の背景色  */
+	background     : #f3c372;            /* フォーカス時の背景色  */
 }
 
 /*img・ico*/
