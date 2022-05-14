@@ -180,31 +180,31 @@ hr {
 
 /* ---検索全体のBOX--- */
 .searchArea{
-	margin         : auto;               /* サンプルを中�?に�?�?  */
-	letter-spacing : 0.1em;              /* �?字間�?              */
-	font-weight    : bold;               /* 太�?                  */
-	line-height    : 0;                  /* 標準�?�行高さ          */
+	margin         : auto;
+	letter-spacing : 0.1em;
+	font-weight    : bold;
+	line-height    : 0;
 }
  
  /* ---テキスト入力欄のSTYLE設定--- */
 .searchArea .searchText {
-	display        : block;              /*  ブロック化            */
-	float          : left;               /* 横並び                */
-	box-sizing     : border-box;         /* 枠線,余白を含んだ長さ */
-	height         : 27px;               /*  入力の高さ            */
-	width          : 207px;              /* 入力の幅              */
-	margin         : 0;                  /* 外余白                */
-	padding        : 0 12px;             /*  内余白                */
-	border         : 2px solid #000;  /* 枠線　幅,実践,色      */
-	color          : #333;               /* 文字色                */
-	outline        : 0;                  /* 入力の薄い枠を非表示  */
-	font-size      : 12px;               /* フォントサイズ        */
-	background     : #a7af7c;            /* ボタンの色            */
+	display        : block;             /*  ブロック化          */
+	float          : left;              /* 横並び               */
+	box-sizing     : border-box;        /* 枠線,余白を含んだ長さ */
+	height         : 27px;              /*  入力の高さ          */
+	width          : 207px;             /* 入力の幅             */
+	margin         : 0;                 /* 外余白               */
+	padding        : 0 12px;            /*  内余白              */
+	border         : 2px solid #000;  /* 枠線　幅,実践,色     */
+	color          : #333;            /* 文字色              */
+	outline        : 0;                 /* 入力の薄い枠を非表示 */
+	font-size      : 12px;              /* フォントサイズ        */
+	background     : #a7af7c;         /* ボタンの色           */
 }
  
 /* --- 検索ボタン欄にフォーカスか来たとき  --- */
 .searchArea .searchText:focus {
-	background     : #d3e37f;            /* フォーカス時の背景色  */
+	background     : #d3e37f;	/* フォーカス時の背景色  */
 }
 
 /*img・ico*/
