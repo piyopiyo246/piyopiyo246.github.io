@@ -1,6 +1,6 @@
 @charset "UTF-8";
 body {
-	font-family: 'MS UI Gothic', "?��?�� ?��ゴシ�?ク", "MS PGothic", sans-serif;
+	font-family: 'MS UI Gothic', "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 	line-height: 2.1;
 	font-size: 18px;
 	color: #444;
@@ -78,7 +78,7 @@ hr {
 	margin-top: 99px;
 	height: 10px;
 }
-/*�?字を重�?��?*/
+/*文字を重ねる*/
 .overlap_1,
 .c-box {
 	position: absolute;
@@ -178,33 +178,33 @@ hr {
 	background: #000;
 }
 
-/* --- 検索全体�?�BOX--- */
+/* ---検索全体のBOX--- */
 .searchArea{
-	margin         : auto;               /* サンプルを中�?に�?�?  */
-	letter-spacing : 0.1em;              /* �?字間�?              */
-	font-weight    : bold;               /* 太�?                  */
-	line-height    : 0;                  /* 標準�?�行高さ          */
+	margin         : auto;               /* サンプルを中�?に�?�?  */
+	letter-spacing : 0.1em;              /* �?字間�?              */
+	font-weight    : bold;               /* 太�?                  */
+	line-height    : 0;                  /* 標準�?�行高さ          */
 }
  
- /* --- �?キスト�?�力�?のSTYLE設�? --- */
+ /* ---テキスト入力欄のSTYLE設定--- */
 .searchArea .searchText {
-	display        : block;              /* ブロ�?ク�?            */
+	display        : block;              /*  ブロック化            */
 	float          : left;               /* 横並び                */
-	box-sizing     : border-box;         /* �?�?,余白を含んだ長�? */
-	height         : 27px;               /* 入力�?�高さ            */
-	width          : 207px;              /* 入力�?��?              */
+	box-sizing     : border-box;         /* 枠線,余白を含んだ長さ */
+	height         : 27px;               /*  入力の高さ            */
+	width          : 207px;              /* 入力の幅              */
 	margin         : 0;                  /* 外余白                */
-	padding        : 0 12px;             /* �?余白                */
-	border         : 2px solid #000;  /* �?線　�?,実践,色      */
-	color          : #333;               /* �?字色                */
-	outline        : 0;                  /* 入力�?��?�?�?を非表示  */
+	padding        : 0 12px;             /*  内余白                */
+	border         : 2px solid #000;  /* 枠線　幅,実践,色      */
+	color          : #333;               /* 文字色                */
+	outline        : 0;                  /* 入力の薄い枠を非表示  */
 	font-size      : 12px;               /* フォントサイズ        */
 	background     : #a7af7c;            /* ボタンの色            */
 }
  
-/* --- 検索ボタン�?にフォーカスか来たと�? --- */
+/* --- 検索ボタン欄にフォーカスか来たとき  --- */
 .searchArea .searchText:focus {
-	background     : #d3e37f;            /* フォーカス時�?�背景色  */
+	background     : #d3e37f;            /* フォーカス時の背景色  */
 }
 
 /*img・ico*/
@@ -268,7 +268,7 @@ ul, ol, dl {
 	zoom: 1;
 }
 
-/*後続�?�左�?せを解除*/
+/*後続の左寄せを解除*/
 dt {
 	float: left;
 	clear: left;
@@ -285,7 +285,7 @@ table, th, td {
 	border-bottom:1px #777 solid;
 }
 
-/*ヘッダ行�?�下�? */
+/*ヘッダ行の下線 */
 th {
 	padding: 0 8px 0 0;
 	font-weight: 400;
@@ -314,11 +314,11 @@ td {
 	white-space: normal;
 	word-wrap: break-word;
 }
-/*float要�?を殺した�?と�?*/
+/*float要素を殺したいとき*/
 .fn {
 	float: none;
 }
-/*inline要�?を殺した�?と�?*/
+/*inline要素を殺したいとき*/
 .cb {
 	clear: both;
 }
@@ -345,7 +345,7 @@ td {
 	transition: 0.4s;
 }
 
-/*左�?�?*/
+/*左寄せ*/
 .f {
 	float: left;
 }
@@ -353,7 +353,7 @@ td {
 	clear: none;
 }
 
-/*後続�?�左�?せを解除しな�?*/
+/*後続の左寄せを解除しない*/
 .nofloat {
 	float: none;
 }
@@ -550,16 +550,16 @@ td {
 	}
 }
 
-/*スクロールバ�?�全�?*/
+/*スクロールバー全体*/
 ::-webkit-scrollbar {
 	width: 10px;
 }
-/*スクロールバ�?�の軌道*/
+/*スクロールバーの軌道*/
 ::-webkit-scrollbar-track {
 	border-radius: 10px;
 	box-shadow: inset 0 0 6px #f2f2f2;
 }
-/*スクロールバ�?�の動く部�?*/
+/*スクロールバーの動く部分*/
 ::-webkit-scrollbar-thumb {
 	background: #4f4f4f;
 	height: 19%;
