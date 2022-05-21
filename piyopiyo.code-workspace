@@ -5,6 +5,12 @@
 		}
 	],
 	"settings": {
-		"editor.find.autoFindInSelection": "always"
+		"editor.find.autoFindInSelection": "always",
+		"files.exclude": {
+			"**/Thumbs.db": false
+		},
+		"search.useParentIgnoreFiles": true,
+		"search.useIgnoreFiles": true,
+		"search.useGlobalIgnoreFiles": true
 	}
 }
