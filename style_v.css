@@ -55,6 +55,7 @@ a.lnk3:hover { border-bottom: solid 1px #f2f2f2;}
 .bf2:before { content: ">>"; font-weight: 700; margin-left: 20px; margin-right: 5px; color: #444;}
 .bf4:before, .af4:after { content: "|"; color: #444; font-weight: 700; margin: 10px;}
 /* background */
+.bgc-w {	background-color: white;}
 .bgc-hp { background-color: rgb(253, 187, 220);}
 .bgc-lg { background-color: lightgreen;}
 .bgc-pb { background-color: powderblue;}
