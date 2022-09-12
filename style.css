@@ -476,7 +476,9 @@ td {
 }
 .vmenuitem,
 .vmenuitem2,
-.vmenuitem_ll {
+.vmenuitem_l,
+.vmenuitem_ll,
+.vmenuitem_lll {
 	cursor: pointer;
 	width: 400px;
 	height: 0.6;
@@ -487,14 +489,22 @@ td {
 	margin-right: auto;
 	margin-left: auto;
 }
+.vmenuitem_lll {
+	width: 1080px;
+}
 .vmenuitem_ll {
-	width: 1060px;
+	width: 780px;
+}
+.vmenuitem_l {
+	width: 680px;
 }
 .vmenuitem {
-	width: 710px;
+	width: 580px;
 }
 .vmenuitem :hover,
-.vmenuitem_ll :hover {
+.vmenuitem_l :hover,
+.vmenuitem_ll :hover,
+.vmenuitem_lll :hover {
 	background: #fbfbfb;
 }
 .vmenu_on,
@@ -504,7 +514,9 @@ td {
 	margin-top:8px;
 }
 .vmenu_on .vmenuitem,
-.vmenu_on .vmenuitem_ll {
+.vmenu_on .vmenuitem_l,
+.vmenu_on .vmenuitem_ll,
+.vmenu_on .vmenuitem_lll {
 	background: #fbfbfb;
 }
 .vmenu_on2 .vmenuitem2 {
@@ -522,11 +534,6 @@ td {
 .vmenu_off .vmenuitem {
 	border: none;
 }
-/* .vmenu_on section,
-.vmenu_on2 section,
-.vmenuitem_ll section {
-	display: auto;
-} */
 .vmenu_on section {
 	background: #fbfbfb;
 }
