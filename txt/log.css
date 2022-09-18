@@ -75,9 +75,12 @@ p {
 }
 
 hr {
-	border-top: 1px solid rgba(0, 0, 0);
+	margin-left: 4px;
+	border-top: 1.4px solid #444;
+	border-right: none;
+	border-bottom: none;
+	border-left: none;
 }
-
 span {
 	color: #008000;
 	font-weight: 800;
