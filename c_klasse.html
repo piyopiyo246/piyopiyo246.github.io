@@ -103,6 +103,7 @@ Alle schließen" value="&sum;">
 		</div>
 	</div>
 	<div class="under_box"></div>
+
 	<div id="contents">
 		<header>
 			<h2 class="hidden">News &amp; Page top items</h2>
@@ -115,7 +116,7 @@ Alle schließen" value="&sum;">
 						<a class="lnk2" href="c_klasse.html#body-mb" title="Cクラス総合スレのテンプレ">ボディスペック</a>・
 						<a class="lnk2" href="c_klasse.html#zeit">年表</a>・
 						<a class="lnk2" href="c_klasse.html#code">既存のコード</a>に
-					新型Eクラス（W214） 追加
+						新型Eクラス（W214） 追加
 					</span>
 				</dd>
 				<dd>
@@ -16356,31 +16357,6 @@ Alle schließen" value="&sum;">
 			</div>
 		</aside>
 	</div>
-	<p class="m-05" id="page-top"><a href="#wrap" title="ページトップへジャンプ
-Zum Seitenanfang springen">▲</a></p>
-	<p id="close-accordion">
-		<a class="vmenu_all_action" onclick="doReplaceClassName('vmenu_on', 'vmenu_off')" title="全て閉じる
-Alle Öffnungen schließen">&sum;</a>
-	</p>
-	<script>
-		$(function () {
-			var topBtn = $('#page-top'); topBtn.hide();
-			$(window).scroll(function () {
-				if ($(this).scrollTop() > 100) {
-					topBtn.fadeIn();
-				} else {
-					topBtn.fadeOut();
-				}
-			});
-			//スクロールしてトップ
-			topBtn.click(function () {
-				$('body,html').animate({
-					scrollTop: 0
-				}, 500);
-				return false;
-			});
-		});
-	</script>
 
 	<nav id="map" class="sitemap t1 fs80p hiragino">
 		<div class="center bgc-ricoh">
@@ -16472,6 +16448,34 @@ Alle Öffnungen schließen">&sum;</a>
 			</p>
 		</div>
 	</nav>
+
+	<p class="m-05" id="page-top"><a href="#wrap" title="ページトップへジャンプ
+	Zum Seitenanfang springen">▲</a></p>
+	<p id="close-accordion">
+		<a class="vmenu_all_action" onclick="doReplaceClassName('vmenu_on', 'vmenu_off')" title="全て閉じる
+	Alle Öffnungen schließen">&sum;</a>
+	</p>
+
+	<script defer>
+		$(function () {
+			var topBtn = $('#page-top'); topBtn.hide();
+			$(window).scroll(function () {
+				if ($(this).scrollTop() > 100) {
+					topBtn.fadeIn();
+				} else {
+					topBtn.fadeOut();
+				}
+			});
+			//スクロールしてトップ
+			topBtn.click(function () {
+				$('body,html').animate({
+					scrollTop: 0
+				}, 500);
+				return false;
+			});
+		});
+	</script>
+
 	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script> <!-- lightbox-->
 </body>
 
