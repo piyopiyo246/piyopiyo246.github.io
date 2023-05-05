@@ -17,6 +17,8 @@ body {
 	border-bottom: solid 2px #ffffff;
 }
 
+
+
 h1 {
 	margin-top: 20px;
 	margin-left: 40px;
@@ -146,3 +148,11 @@ li {
 	text-decoration: none;
 	background: #000;
 }
+/* 
+footer {
+	width: 100%;
+}
+.footer_txt {
+	font-size: 18px;
+	text-align: center;
+} */
