@@ -154,6 +154,7 @@ a.lnk3:hover { border-bottom: solid 1px #f2f2f2;}
 .t100 { margin-top: 1749px;}
 .t105 { margin-top: 1765.6px;}
 .t120 { margin-top: 1933.6px;}
+.t200 { margin-top: 1950px;}
 /*S（右 margin）*/
 .s-5 { margin-right: -40px;}
 .s { margin-right: 8px;}
@@ -321,6 +322,7 @@ a.lnk3:hover { border-bottom: solid 1px #f2f2f2;}
 .m29 { margin-left: 522px;}
 .m33 { margin-left: 594px;}
 .m34a { margin-left: 622.5px;}
+.m34 { margin-left: 630px;}
 .m36a { margin-left: 642px;}
 .m37 { margin-left: 660.6px;}
 .m38 { margin-left: 696px;}
@@ -337,7 +339,9 @@ a.lnk3:hover { border-bottom: solid 1px #f2f2f2;}
 .m53 { margin-left: 954px;}
 .m54 { margin-left: 972px;}
 .m60 { margin-left: 1024px;}
-
+.m123 { margin-left: 1230px;}
+.m200 { margin-left: 2400px;}
+.m340 {	margin-left: 3400px;}
 /*W（width）*/
 .w1 { width: 18px;}
 .w2 { width: 36px;}
