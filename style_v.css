@@ -284,6 +284,7 @@ a.lnk3:hover { border-bottom: solid 1px #f2f2f2;}
 .m3 { margin-left: 54px;}
 .m3f { margin-left: 55px;}
 .m3l { margin-left: 56.6px;}
+.m3p { margin-left: 57.6px;}
 .m3o { margin-left: 59px;}
 .m3a { margin-left: 60.48px;}
 .m3b { margin-left: 61.2px;}
@@ -384,8 +385,13 @@ a.lnk3:hover { border-bottom: solid 1px #f2f2f2;}
 .w22 { width: 396px;}
 .w24 { width: 432px;}
 /*BOX*/
-.box04, .box07, .box07a, .box08, .box09, .box09a, .box11, .box12, .box13, .box13a, .box14b, .box15, .box16, .box17a, .box18, .box19, .box21, .box21a, .box22, .box23, .box27, .box30a, .box34, .box36, .box39, .box40, .box41, .box41a, .box44, .box46, .box47a, .box50, .box51, .box53,
-.box54, .box56, .box59, .box60, .box61, .box62, .box64, .box65, .box64a, .box68, .box70, .box71, .box72, .box74, .box76, .box80, .box81, .box90, .box96, .box100, .box108, .box111 { float: left;}
+.box04, .box07, .box07a, .box08, .box09, .box09a, .box11, .box12,.box13,.box13a,
+.box14b, .box15, .box16, .box17a, .box18, .box19, .box20, .box21, .box21a, .box22,
+.box23, .box24, .box25, .box27, .box30a, .box34, .box36, .box39, .box40, .box41,
+.box41a,.box44, .box46, .box47a, .box50, .box51, .box53, .box54, .box56, .box59,
+.box60,.box61, .box62, .box64, .box65, .box64a, .box68, .box70, .box71, .box72,
+.box74,.box76, .box80, .box81, .box90, .box96, .box100, .box108, .box111
+  { float: left;}
 .box04 { width: 40px;}
 .box07 { width: 66px;}
 .box07a { width: 74px;}
@@ -402,10 +408,13 @@ a.lnk3:hover { border-bottom: solid 1px #f2f2f2;}
 .box17a { width: 175px;}
 .box18 { width: 180px;}
 .box19 { width: 190px;}
+.box20 { width: 200px;}
 .box21 { width: 210px;}
 .box21a { width: 212px;}
 .box22 { width: 220px;}
 .box23 { width: 230px;}
+.box24 { width: 240px;}
+.box25 { width: 250px;}
 .box27 { width: 270px;}
 .box30a { width: 300px;}
 .box34 { width: 340px;}
@@ -442,7 +451,7 @@ a.lnk3:hover { border-bottom: solid 1px #f2f2f2;}
 .box108 { width: 1080px;}
 .box111 { width: 1128px;}
 .box121 { width: 1219px;}
-.box-wide { width: 3717px;}
+.box-wide { width: 3787px;}
 /*height*/
 .ht10 {height: 106.6px;}
 .ht45 {height: 500px;}
