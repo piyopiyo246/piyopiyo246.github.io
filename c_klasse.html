@@ -2,8 +2,6 @@
 <html lang="ja">
 
 <head>
-	<script defer src="js/lazysizes.min.js"></script><!-- lazy -->
-	<script defer src="js/flexcroll.js"></script><!-- 横scroll -->
 	<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script><!-- scrollTop-->
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width = device-width,initial-scale=1">
@@ -17,12 +15,10 @@
 	<meta name="theme-color" content="#000000" />
 	<meta name="msapplication-navbutton-color" content="#-000000">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="shortcut icon" href="ico/mb-logo-g.png" type="image/vnd.microsoft.icon">
 	<link rel="stylesheet" href="./style.min.css">
 	<link rel="stylesheet" href="./style_v.min.css">
-	<link rel="shortcut icon" href="ico/mb-logo-g.png" type="image/vnd.microsoft.icon">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.min.css"><!--lightbox css-->
 	<title>Ｃクラス総合スレッドのテンプレ</title>
-	<!--展開と折りたたみ-->
 	<script defer>
 		function doToggleClassName(obj, onClassName, offClassName) { obj.className = (obj.className != onClassName) ? onClassName : offClassName; }
 		function getParentObj(obj) { return obj.parentElement || obj.parentNode; }
@@ -33,7 +29,7 @@
 					elements[i].className = replaceClassName;
 			}
 		}
-	</script>
+	</script><!--展開と折りたたみ-->
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=GT-KFG3B2J"></script>
@@ -16735,8 +16731,6 @@ Alle schließen" value="&sum;">
 				</p>
 			</div>
 		</aside>
-	</div>
-
 	<footer>
 		<nav id="map" class="sitemap t1 fs80p hiragino">
 			<div class="center bgc-ricoh">
@@ -16829,13 +16823,13 @@ Alle schließen" value="&sum;">
 			</div>
 		</nav>
 	</footer>
-
 	<p class="m-05" id="page-top"><a href="#wrap" title="ページトップへジャンプ
 	Zum Seitenanfang springen">▲</a></p>
 	<p id="close-accordion">
 		<a class="vmenu_all_action" onclick="doReplaceClassName('vmenu_on', 'vmenu_off')" title="全て閉じる
 	Alle Öffnungen schließen">&sum;</a>
 	</p>
+	</div>
 	<script>
 		$(function () {
 			var topBtn = $('#page-top'); topBtn.hide();
@@ -16855,7 +16849,10 @@ Alle schließen" value="&sum;">
 			});
 		});
 	</script>
-	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script> <!-- lightbox-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.min.css"><!--lightbox css-->
+	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script> <!-- lightbox js-->
+	<script defer src="js/lazysizes.min.js"></script><!-- lazy -->
+	<script defer src="js/flexcroll.js"></script><!-- 横scroll -->
 </body>
 
 </html>
