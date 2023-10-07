@@ -298,6 +298,7 @@ tr {
 }
 td {
 	padding: 0 8px 0 0;
+	 vertical-align: middle;
 }
 .fix {
 	table-layout: fixed;
