@@ -470,3 +470,26 @@ a.lnk3:hover { border-bottom: solid 1px #f2f2f2;}
 .ht78 {height: 820px;}
 .ht94 {height: 940px;}
 .ht104 {height: 1040px;}
+
+.xl_e, .xl_sl, .xl_s, .xl_b, .xl_ce, .xl_a, .xl_clk, .xl_cl, .xl_ss, .xl_c, .xl_t1, .xl_v, .xl_g, .xl_old, .xl_100, .xl_w {
+  color: white;
+  font-size: 12.0pt;
+  font-weight: 700;
+  border: .5pt solid gray;
+  background: #548235;
+}
+.xl_sl {background: #006699;}
+.xl_s {color: black; background: #ffff4e;}
+.xl_b {color: black; background: #FFCCFF;}
+.xl_ce {color: black; background: #CCFFCC;}
+.xl_a {background: #d45858;}
+.xl_clk {color: black; background: #CCECFF;}
+.xl_cl {color: black; background: #FFFF99;}
+.xl_ss {background: #7030A0;}
+.xl_c {background: #3333FF;}
+.xl_t1 {background: gray;}
+.xl_v {color: black; background: #D9D9D9;}
+.xl_g {color: black; background: #FFC000;}
+.xl_old {background: black;}
+.xl_100 {background: #6b1500;}
+.xl_w { color: gray; background: white;}
