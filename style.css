@@ -610,3 +610,7 @@ figcaption {
 	padding: 5px;
 	text-align: center;
 }
+
+iframe {
+	border-width: 0;
+}
