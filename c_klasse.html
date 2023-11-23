@@ -11,7 +11,6 @@
 
 		gtag('config', 'GT-KFG3B2J');
 	</script>
-
 	<!-- Google Tag Manager -->
 	<script>(function (w, d, s, l, i) {
 			w[l] = w[l] || []; w[l].push({
@@ -20,7 +19,8 @@
 			}); var f = d.getElementsByTagName(s)[0],
 				j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
 					'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-		})(window, document, 'script', 'dataLayer', 'GTM-MMJ4PJ3');</script>
+		})(window, document, 'script', 'dataLayer', 'GTM-MMJ4PJ3');
+	</script>
 	<!-- End Google Tag Manager -->
 	<!-- Google 構造化データ マークアップ支援ツールが生成した JSON-LD マークアップです。 -->
 	<script type="application/ld+json">
@@ -75,16 +75,10 @@
 		}
 	]
 	</script>
-
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script><!-- scrollTop “difer”はダメ絶対！-->
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width = device-width,initial-scale=1">
 	<meta name="description" content="メルセデスＣクラス総合スレッドのテンプレートとして、ほぼ文字情報でスペック等を掲載しています。">
-
-	<meta name="keywords" content="Mercedes,Benz,C-Class,メルセデス,ベンツ,Ｃクラス,車,ドイツ,諸元,テンプレ,スペック,エンジン,販売">
-	<meta name="language" content="ja">
-	<meta name="geo.region" content="JP">
-
 	<meta name="format-detection" content="telephone=no">
 	<meta name="theme-color" content="#000000">
 	<meta name="msapplication-navbutton-color" content="#-000000">
@@ -93,18 +87,6 @@
 	<link rel="stylesheet" href="./style.min.css">
 	<link rel="stylesheet" href="./style_v.min.css">
 	<title>Ｃクラス総合スレッドのテンプレ</title>
-	
-	<script defer>
-		function doToggleClassName(obj, onClassName, offClassName) { obj.className = (obj.className != onClassName) ? onClassName : offClassName; }
-		function getParentObj(obj) { return obj.parentElement || obj.parentNode; }
-		function doReplaceClassName(findClassName, replaceClassName, targetTagName) {
-			var elements = document.getElementsByTagName(targetTagName || '*');
-			for (var i = 0; i < elements.length; i++) {
-				if (elements[i].className == findClassName)
-					elements[i].className = replaceClassName;
-			}
-		}
-	</script><!--展開と折りたたみ-->
 </head>
 
 <body id="wrap">
@@ -17540,6 +17522,7 @@ Zum Seitenanfang springen">▲</a>
 		<a class="vmenu_all_action" onclick="doReplaceClassName('vmenu_on', 'vmenu_off')" title="全て閉じる
 Alle Öffnungen schließen">&sum;</a>
 	</p>
+	<!-- スクロールしてトップ -->
 	<script>
 		$(function () {
 			var topBtn = $('#page-top'); topBtn.hide();
@@ -17550,7 +17533,7 @@ Alle Öffnungen schließen">&sum;</a>
 					topBtn.fadeOut();
 				}
 			});
-			//スクロールしてトップ
+			
 			topBtn.click(function () {
 				$('body,html').animate({
 					scrollTop: 0
@@ -17559,7 +17542,18 @@ Alle Öffnungen schließen">&sum;</a>
 			});
 		});
 	</script>
-
+	<!--展開と折りたたみ-->
+	<script defer>
+		function doToggleClassName(obj, onClassName, offClassName) { obj.className = (obj.className != onClassName) ? onClassName : offClassName; }
+		function getParentObj(obj) { return obj.parentElement || obj.parentNode; }
+		function doReplaceClassName(findClassName, replaceClassName, targetTagName) {
+			var elements = document.getElementsByTagName(targetTagName || '*');
+			for (var i = 0; i < elements.length; i++) {
+				if (elements[i].className == findClassName)
+					elements[i].className = replaceClassName;
+			}
+		}
+	</script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.min.css"><!--lightbox css-->
 	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script> <!-- lightbox js-->
 	<script defer src="js/lazysizes.min.js"></script><!-- lazy -->
