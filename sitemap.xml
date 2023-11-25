@@ -7,12 +7,6 @@
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>https://piyopiyo246.github.io/history.html</loc>
-		<lastmod>2023-11-26</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.1</priority>
-	</url>
-	<url>
 		<loc>https://piyopiyo246.github.io/pic/mb_img_a.html</loc>
 		<lastmod>2023-11-02</lastmod>
 		<changefreq>yearly</changefreq>
@@ -546,10 +540,5 @@
 		<changefreq>monthly</changefreq>
 		<priority>0.1</priority>
 	</url>
-	<url>
-		<loc>https://piyopiyo246.github.io/old_c_klasse.htm</loc>
-		<lastmod>2021-07-18</lastmod>
-		<changefreq>yearly</changefreq>
-		<priority>0.1</priority>
-	</url>
 </urlset>
+<!-- old_c_klasse.htm , history.html については、noindex としたため削除した。2023-11-26 -->
