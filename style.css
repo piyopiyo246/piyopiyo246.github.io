@@ -1,13 +1,14 @@
 @charset "UTF-8";
 body {
-	font-family: 'MS UI Gothic', "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	/* font-family: 'MS UI Gothic', "ＭＳ Ｐゴシック", "MS PGothic", sans-serif; */
+	font-family: '游ゴシック', 'Hiragino Sans', sans-serif;
 	line-height: 2.1;
 	font-size: 18px;
-	color: #444;
+	color: #000;
 	letter-spacing: 0;
 	text-align: left;
 	vertical-align: middle;
-	background: #efefef;
+	background: #f1f1f1;
 	white-space: nowrap;
 	margin: 0;
 	-webkit-text-size-adjust: none;
@@ -40,9 +41,25 @@ h3, h4, h5, h6 {
 }
 h1,h2 {
 	font-weight: bold;
-}
+	color: #666;}
 p {
 	margin: 0;
+}
+.justify{
+	text-align:justify;
+	}
+.b {
+	font-weight: 800;
+	color: #666;
+}
+.b_cancel {
+	font-weight: normal;
+}
+.aa {
+	font-family: 'MS UI Gothic', "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	font-size: 16px;
+	line-height: 0.95;
+	margin: 60px 0 15px 30px;
 }
 hr {
 	margin-left: 4px;
@@ -376,18 +393,14 @@ td {
 }
 
 /*Timeline*/
-.timeline2,.timeline3 {
-	width: 144px;
+.timeline2 {
+	width: 154px;
 }
-.timeline2,.timeline3 {
+.timeline2 {
 	float: left;
 	padding: 0;
-	border-left: 1px dotted #888;
 	border-right: 1px dotted #888;
-	margin: 0 0 0 143px;
-}
-.timeline3 {
-	border-right: none;
+	margin: 0;
 }
 .btm-lg {
 	border-bottom: 1px solid #888;
@@ -422,7 +435,7 @@ td {
 	/* border-radius: 4px; */
 .bk3,
 .bk5 {
-	width: 300px;
+	width: 320px;
 	left: 800px;
 }
 .bk4 {
@@ -435,7 +448,7 @@ td {
 	left: 300px;
 }
 .inside {
-	font-size: 72px;
+	font-size: 52px;
 	line-height: 1.2;
 	color: #bdbdbd;
 }

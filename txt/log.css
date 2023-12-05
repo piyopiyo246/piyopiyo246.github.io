@@ -1,6 +1,6 @@
 @charset "UTF-8";
 body {
-	font-family: 'MS UI Gothic';
+	font-family: 'MS UI Gothic','Hiragino Sans', sans-serif;
 	background-color: #efefef;
 	font-size: 22px;
 }
