@@ -43,7 +43,7 @@ a:visited .lnk2 {
 	color: #d6d6d6;
 }
 .lnk2:hover {
-	color: #6bbef6;
+	color: #a9ddff;
 }
 .lnk:link {
 	color: #999;
@@ -53,7 +53,7 @@ a:visited .lnk2 {
 	color: #999;
 }
 .lnk:hover {
-	color: #6bbef6;
+	color: #a9ddff;
 }
 p {
 	white-space: pre;
