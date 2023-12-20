@@ -309,24 +309,25 @@
 		</p>
 	</div>
 </body>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script><!-- scrollTop “difer”はダメ絶対！-->
-		<script>
-			$(function () {
-				var topBtn = $('#page-top'); topBtn.hide();
-				$(window).scroll(function () {
-					if ($(this).scrollTop() > 100) {
-						topBtn.fadeIn();
-					} else {
-						topBtn.fadeOut();
-					}
-				});
-				//スクロールしてトップ
-				topBtn.click(function () {
-					$('body,html').animate({
-						scrollTop: 0
-					}, 500);
-					return false;
-				});
-			});
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script><!-- scrollTop “difer”はダメ絶対！-->
+<script>
+	$(function () {
+		var topBtn = $('#page-top'); topBtn.hide();
+		$(window).scroll(function () {
+			if ($(this).scrollTop() > 100) {
+				topBtn.fadeIn();
+			} else {
+				topBtn.fadeOut();
+			}
+		});
+		//スクロールしてトップ
+		topBtn.click(function () {
+			$('body,html').animate({
+				scrollTop: 0
+			}, 500);
+			return false;
+		});
+	});
 </script>
+
 </html>
