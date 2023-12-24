@@ -18,7 +18,7 @@ body {
 	margin-right: auto;
 	margin-left: auto;
 }
-article, aside, div, nav, section {
+article, aside, div, main, nav, section {
 	width:100%;
 	padding:0;
 	margin:0;
