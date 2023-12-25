@@ -34,6 +34,7 @@
 	<link rel="shortcut icon" href="../ico/mb-logo-g.png" type="image/vnd.microsoft.icon">
 	<link href="../style.min.css" rel="stylesheet" type="text/css">
 	<link href="../style_v.min.css" rel="stylesheet" type="text/css">
+	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 	<title>SL-Klasse</title>
 	<script defer type="text/javascript">
 		function doToggleClassName(obj, onClassName, offClassName) { obj.className = (obj.className != onClassName) ? onClassName : offClassName; }
@@ -115,8 +116,14 @@
 			</nav>
 			<hr>
 			<div class="mid style-w t1">
-				<div class="box46 fl-w2">SL-KLASSE</div>
-				<div class="box68">
+				<div class="box56">
+					<div class="yt">
+						<div class="yt_video" youtube="https://www.youtube.com/embed/4a5On3LXlJ0?rel=0&showinfo=0&autoplay=1">
+							<img src="https://img.youtube.com/vi/4a5On3LXlJ0/mqdefault.jpg" alt="Youtube Video" width="561">
+						</div>
+					</div>
+				</div>
+				<div class="box64 m0b t0b">
 					<a href="#w198" title="300SL,Die 1ste SL-Klasse W198"><img loading="lazy" src="thumb/sl/w198.webp" alt="w198" width="160" height="100"></a>
 					<a href="#w121" title="190SL W121" class="lnk2"><img loading="lazy" src="thumb/sl/w121.webp" alt="w121" width="160" height="100"></a>
 					<a href="#w113" title="Der 2te SL-Klasse W113"><img loading="lazy" src="thumb/sl/w113.webp" alt="w113" width="160" height="100"></a>
@@ -502,7 +509,7 @@
 					<dd><a href="mb_img_x.html" class="lnk2">X-Klasse</a></dd>
 				</dl>
 				<hr>
-				<p class="mid">@ seit 2010 , piyopiyo_246</p>
+				<p class="mid"><small>@ seit 2010 , piyopiyo_246</small></p>
 			</nav>
 		</footer>
 		<p class="m-05" id="page-top"><a href="#head">▲</a></p>
@@ -512,7 +519,13 @@
 	</div>
 </body>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script><!-- scrollTop “difer”はダメ絶対！-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script><!-- scrollTop “difer”はダメ絶対！-->
+<script>
+	$('.yt_video').click(function () {
+		video = '<iframe src="' + $(this).attr('youtube') + '" frameborder="0"></iframe>';
+		$(this).replaceWith(video);
+	});
+</script>
 <script>
 	$(function () {
 		var topBtn = $('#page-top'); topBtn.hide();

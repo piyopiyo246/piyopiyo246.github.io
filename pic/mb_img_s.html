@@ -34,6 +34,7 @@
 	<link rel="shortcut icon" href="../ico/mb-logo-g.png" type="image/vnd.microsoft.icon">
 	<link href="../style.min.css" rel="stylesheet" type="text/css">
 	<link href="../style_v.min.css" rel="stylesheet" type="text/css">
+	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 	<title>S-Klasse</title>
 	<script defer type="text/javascript">
 		function doToggleClassName(obj, onClassName, offClassName) { obj.className = (obj.className != onClassName) ? onClassName : offClassName; }
@@ -119,8 +120,14 @@
 			</nav>
 			<hr>
 			<div class="mid style-w t1">
-				<iframe class="box56" width="561" height="312" src="https://www.youtube.com/embed/5EKrNIviTSg" loading="lazy" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				<div class="box64 m0b">
+				<div class="box56">
+					<div class="yt">
+						<div class="yt_video" youtube="https://www.youtube.com/embed/5EKrNIviTSg?rel=0&showinfo=0&autoplay=1">
+							<img src="https://img.youtube.com/vi/5EKrNIviTSg/mqdefault.jpg" alt="Youtube Video" width="561">
+						</div>
+					</div>
+				</div>
+				<div class="box64 m0b t0b">
 					<a href="#w187" title="Typ 220 W187"><img loading="lazy" src="thumb/s/187.webp" alt="w187" width="160" height="100"></a>
 					<a href="#w180" title="Ponton W180"><img loading="lazy" src="thumb/s/180.webp" alt="w180" width="160" height="100"></a>
 					<a href="#w128" title="Ponton W128"><img loading="lazy" src="thumb/s/128.webp" alt="w128" width="160" height="100"></a>
@@ -266,7 +273,7 @@
 						<p class="bf1a i">Zum Öffnen und Schließen anklicken</p>
 						<a href="https://de.wikipedia.org/wiki/Mercedes-Benz_Baureihe_116" class="ico-wiki m1" title="Wikipedia(D) 116"></a>
 						<h3 class="i m0">W116</h3>
-						<p class="i m1">09/1972 - 09/1980　Von diesem Modell wurde es offiziell als S-Class bezeichnet.</p>
+						<p class="i m1">09/1972 - 09/1980　Von diesem Modell wurde es offiziell als S-class bezeichnet.</p>
 						<p class="r">Designer Friedrich Geiger (1969)</p>
 					</div>
 					<section>
@@ -547,7 +554,7 @@
 					<dd><a href="mb_img_x.html" class="lnk2">X-Klasse</a></dd>
 				</dl>
 				<hr>
-				<p class="mid">@ seit 2010 , piyopiyo_246</p>
+				<p class="mid"><small>@ seit 2010 , piyopiyo_246</small></p>
 			</nav>
 		</footer>
 		<p class="m-05" id="page-top"><a href="#head">▲</a></p>
@@ -557,7 +564,13 @@
 	</div>
 </body>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script><!-- scrollTop “difer”はダメ絶対！-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script><!-- scrollTop “difer”はダメ絶対！-->
+<script>
+	$('.yt_video').click(function () {
+		video = '<iframe src="' + $(this).attr('youtube') + '" frameborder="0"></iframe>';
+		$(this).replaceWith(video);
+	});
+</script>
 <script>
 	$(function () {
 		var topBtn = $('#page-top'); topBtn.hide();

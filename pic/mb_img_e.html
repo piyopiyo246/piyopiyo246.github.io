@@ -34,6 +34,7 @@
 	<link rel="shortcut icon" href="../ico/mb-logo-g.png" type="image/vnd.microsoft.icon">
 	<link href="../style.min.css" rel="stylesheet" type="text/css">
 	<link href="../style_v.min.css" rel="stylesheet" type="text/css">
+	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 	<title>E-Klasse</title>
 	<script defer type="text/javascript">
 		function doToggleClassName(obj, onClassName, offClassName) { obj.className = (obj.className != onClassName) ? onClassName : offClassName; }
@@ -118,8 +119,14 @@
 			</nav>
 			<hr>
 			<div class="mid style-w t1">
-				<iframe class="box54" width="540" height="300" src="https://www.youtube.com/embed/DP34Y44jmnw" loading="lazy" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				<div class="m0ba box65">
+				<div class="box56">
+					<div class="yt">
+						<div class="yt_video" youtube="https://www.youtube.com/embed/DP34Y44jmnw?rel=0&showinfo=0&autoplay=1">
+							<img src="https://img.youtube.com/vi/DP34Y44jmnw/mqdefault.jpg" alt="Youtube Video" width="561">
+						</div>
+					</div>
+				</div>
+				<div class="box64 m0b t0b">
 					<a href="#w120" title="Ponton,Typ180/Typ190 W120/W121"><img loading="lazy" src="thumb/e/120.webp" alt="w120" width="160" height="100"></a>
 					<a href="#w105" title="Ponton,W105"><img loading="lazy" src="thumb/e/105.webp" alt="w105" width="160" height="100"></a>
 					<a href="#w110" title="kleine Heckflosse,Fintail W110"><img loading="lazy" src="thumb/e/110.webp" alt="w110" width="160" height="100"></a>
@@ -816,7 +823,7 @@
 					<dd><a href="mb_img_x.html" class="lnk2">X-Klasse</a></dd>
 				</dl>
 				<hr>
-				<p class="mid">@ seit 2010 , piyopiyo_246</p>
+				<p class="mid"><small>@ seit 2010 , piyopiyo_246</small></p>
 			</nav>
 		</footer>
 		<p class="m-05" id="page-top"><a href="#head">▲</a></p>
@@ -826,7 +833,13 @@
 	</div>
 </body>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script><!-- scrollTop “difer”はダメ絶対！-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script><!-- scrollTop “difer”はダメ絶対！-->
+<script>
+	$('.yt_video').click(function () {
+		video = '<iframe src="' + $(this).attr('youtube') + '" frameborder="0"></iframe>';
+		$(this).replaceWith(video);
+	});
+</script>
 <script>
 	$(function () {
 		var topBtn = $('#page-top'); topBtn.hide();
