@@ -453,7 +453,7 @@ a.lnk3:hover { border-bottom: solid 1px #f2f2f2;}
 .box23, .box24, .box25, .box27, .box28, .box30a, .box34, .box36, .box39, .box40, .box41,
 .box41a,.box44, .box46, .box47a, .box50, .box51, .box53, .box54, .box56, .box59,
 .box60,.box61, .box62, .box64, .box65, .box64a, .box68, .box70, .box71, .box72,
-.box74,.box76, .box80, .box81, .box90, .box96, .box100, .box108
+.box74,.box76, .box80, .box81, .box82, .box90, .box96, .box100, .box108
   { float: left;}
 .box04 { width: 40px;}
 .box05 { width: 50px;}
@@ -511,6 +511,7 @@ a.lnk3:hover { border-bottom: solid 1px #f2f2f2;}
 .box77 { width: 770px;}
 .box80 { width: 804px;}
 .box81 { width: 808px;}
+.box82 { width: 822px;}
 .box90 { width: 900px;}
 .box96 { width: 960px;}
 .box100 { width: 1000px;}
