@@ -21,9 +21,15 @@
 .f7 { color: #ccc;}
 .f8 { color: rgb(219, 216, 216);}
 .f9 { color: #ffffff;}
-.fl-w,.fl-w2,.fl-w3 { font-size: 100px; color: #ccc; line-height: 100px;}
-.fl-w2 { font-size: 80px; line-height: 80px;}
-.fl-w3 { font-size: 60px; line-height: 80px;}
+.fl-w,.fl-w2,.fl-w2a,.fl-w3 { 
+  font-size: 400%; 
+  font-weight: bold;
+  color: #ccc; 
+  line-height: 100%;
+}
+.fl-w2 { font-size: 370%; }
+.fl-w2a { font-size: 330%;}
+.fl-w3 { font-size: 300%; }
 .clr-or { color: orange;}
 .clr-co {color: #cc6600;}
 .clr-gy { color: #006c00;}
