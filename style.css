@@ -239,10 +239,9 @@ img {
 	margin: 0;
 	padding: 2pt 0;
 }
-.kakumaru {
+.kakumaru  img {
 	border-radius: 10px;
 }
-
 /*ico*/
 .ico-wiki,
 .ico-wiki2,
@@ -611,7 +610,7 @@ td {
 /*スクロールバーの動く部分*/
 ::-webkit-scrollbar-thumb {
 	background: #4f4f4f;
-	height: 19.4%;
+	height: 20%;
 }
 
 .mrkm {
