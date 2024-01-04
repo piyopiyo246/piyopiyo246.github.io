@@ -103,8 +103,8 @@
 			<li class="i"><input class="top_btn1" type="button" onclick="location.href = '#huroku'" title="Anhang" value="付録"></li>
 		</ul>
 	</nav>
-	<!-- <div class="wood" style="background-color: #4f4f4f;"> -->
 	<div class="wood" style="background-image: url(pic/trim/13_carbon.png);">
+		<!-- <div class="wood" style="background-color: #4f4f4f;"> -->
 		<!-- <div class="wood" style="background-image: url(pic/trim/22_wurzelnuss-matt.jpg);"> -->
 		<!-- <div class="wood" style="background-image: url(pic/trim/25_esche.png);"> -->
 		<!-- <div class="wood" style="background-image: url(pic/trim/26_zebrano-rot.png);"> -->
@@ -18242,7 +18242,6 @@
 </body>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script><!-- scrollTop “difer”はダメ絶対！-->
-<!-- スクロールしてトップ -->
 <script>
 	$(function () {
 		var topBtn = $('#page-top'); topBtn.hide();
@@ -18261,8 +18260,7 @@
 			return false;
 		});
 	});
-</script>
-<!--展開と折りたたみ-->
+</script><!-- スクロールしてトップ -->
 <script defer>
 	function doToggleClassName(obj, onClassName, offClassName) { obj.className = (obj.className != onClassName) ? onClassName : offClassName; }
 	function getParentObj(obj) { return obj.parentElement || obj.parentNode; }
@@ -18273,7 +18271,7 @@
 				elements[i].className = replaceClassName;
 		}
 	}
-</script>
+</script><!--展開と折りたたみ-->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.min.css"><!--lightbox css-->
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script> <!-- lightbox js-->
 <!-- <script defer src="js/lazysizes.min.js"></script>lazy -->
