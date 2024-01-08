@@ -59,6 +59,7 @@ a.lnk3:hover { border-bottom: solid 1px #f2f2f2;}
 .ru { margin-top: -33.3px;}
 .lh1 { line-height: 0.99;}
 .lh2 { line-height: 1.4;}
+.af0::after { content: " :";}
 .bf0:before { content: "■ ";}
 .bf1:before,
 .bf1a:before { content: "▼"; margin: 0 10px 4px 0; padding-left: 18px; color: rgb(175, 175, 175);}
@@ -366,6 +367,7 @@ a.lnk3:hover { border-bottom: solid 1px #f2f2f2;}
 .m19 { margin-left: 342px;}
 .m19a { margin-left: 356px;}
 .m20 { margin-left: 366px;}
+.m21 { margin-left: 386px;}
 .m22 { margin-left: 396px;}
 .m23 { margin-left: 416px;}
 .m24 { margin-left: 432px;}
@@ -393,7 +395,9 @@ a.lnk3:hover { border-bottom: solid 1px #f2f2f2;}
 .m40 { margin-left: 720px;}
 .m40a { margin-left: 726px;}
 .m41 { margin-left: 738px;}
+.m41a { margin-left: 744px;}
 .m42 { margin-left: 753px;}
+.m42a { margin-left: 763px;}
 .m43 { margin-left: 774px;}
 .m43a { margin-left: 788px;}
 .m44 { margin-left: 792px;}
@@ -405,6 +409,7 @@ a.lnk3:hover { border-bottom: solid 1px #f2f2f2;}
 .m47 { margin-left: 846px;}
 .m47a { margin-left: 850px;}
 .m48 { margin-left: 865.8px;}
+.m48a { margin-left: 885px;}
 .m49 { margin-left: 895px;}
 .m50 { margin-left: 908px;}
 .m51 { margin-left: 918px;}
