@@ -232,7 +232,9 @@ hr {
 .searchArea .searchText:focus {
 	background     : #d3e37f;	/* フォーカス時の背景色  */
 }
-
+.searchArea .searchText:hover {
+	background: #d3e37f;	/* ホバー時の背景色  */
+}
 /*img・ico*/
 img {
 	vertical-align: top;
