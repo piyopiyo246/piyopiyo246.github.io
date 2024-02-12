@@ -44,7 +44,11 @@
 .td3 { color: #f2f2f2;}
 .td3:hover { border-bottom: solid 1.8px #59f3ff; color: #59f3ff;}
 /*文字列*/
-a { text-decoration: none;}
+a {
+  text-decoration: underline;
+  text-decoration-color: #666;
+  text-decoration-thickness: 0.7px;
+}
 a:link { color: #444;}
 a:visited { color: #444;}
 .lnk:hover { color: #000; border-bottom:  solid 1px #000;}
