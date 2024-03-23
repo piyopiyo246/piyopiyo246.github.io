@@ -582,11 +582,6 @@ td {
 	height: 20%;
 }
 
-.mrkm {
-	border: 2px solid #9e9e9e;
-	border-radius: 6px;
-}
-
 figure {
 	padding: 0;
 	max-width: 1210px;
@@ -660,4 +655,8 @@ iframe {
 .yt_video:hover::before {
 	color:#32cd32;/* アイコンカラー */
 	transition:.5s;/* ゆっくり変化 */
+}
+.mrkm {
+	border: 2px solid #9e9e9e;
+	border-radius: 6px;
 }
