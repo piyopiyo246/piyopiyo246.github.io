@@ -330,6 +330,7 @@ a.lnk3:hover { border-bottom: solid 1px #f2f2f2;}
 .m3l { margin-left: 56.6px;}
 .m3p { margin-left: 57.6px;}
 .m3o { margin-left: 59px;}
+.m3ao { margin-left: 60px;}
 .m3a { margin-left: 60.48px;}
 .m3b { margin-left: 61.2px;}
 .m3m { margin-left: 61.7px;}
@@ -485,7 +486,7 @@ a.lnk3:hover { border-bottom: solid 1px #f2f2f2;}
 .w24 { width: 432px;}
 .w30 { width: 630px;}
 /*BOX*/
-.box02, .box04, .box05, .box07, .box07a, .box08, .box09, .box09a, .box11, .box12,.box13,.box13a,
+.box02, .box04, .box05, .box07, .box07a, .box08, .box09, .box09a, .box10, .box11, .box12,.box13,.box13a,
 .box14, .box14b, .box15, .box16, .box17, .box17a, .box18, .box19, .box20, .box21, .box21a, .box22,
 .box23, .box24, .box25, .box26, .box27, .box28, .box30a, .box34,.box35, .box36, .box37, .box39, .box40,
 .box41,.box41a,.box44, .box46, .box47a, .box50, .box51, .box53, .box54, .box56, .box59,
@@ -500,6 +501,7 @@ a.lnk3:hover { border-bottom: solid 1px #f2f2f2;}
 .box08 { width: 82px;}
 .box09 { width: 90px;}
 .box09a { width: 96px;}
+.box10 { width: 100px;}
 .box11 { width: 110px;}
 .box12 { width: 120px;}
 .box13 { width: 130px;}
@@ -559,7 +561,7 @@ a.lnk3:hover { border-bottom: solid 1px #f2f2f2;}
 .box100 { width: 1000px;}
 .box121 { width: 1219px;}
 .box-wide {
- width: 5854px;
+ width: 6041px;
 font-family: 'MS UI Gothic', "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
 
