@@ -325,7 +325,7 @@ a.lnk3:hover { border-bottom: solid 1px #f2f2f2;}
 .m2a { margin-left: 45px;}
 .m2g { margin-left: 46.44px;}
 .m2d { margin-left: 47.4px;}
-/* .m2e { margin-left: 48px;} */
+.m2e { margin-left: 48px;}
 .m2j { margin-left: 49.5px;}
 .m2m { margin-left: 50.5px;}
 .m2k { margin-left: 52px;}
@@ -376,16 +376,19 @@ a.lnk3:hover { border-bottom: solid 1px #f2f2f2;}
 .m07a { margin-left: 130px;}
 .m07b { margin-left: 137px;}
 .m08 { margin-left: 144px;}
+.m08b { margin-left: 145px;}
 .m08a { margin-left: 147.6px;}
 .m09 { margin-left: 162px;}
 .m09a { margin-left: 170px;}
 .m09z { margin-left: 178px;}
 .m10 {	margin-left: 180px;}
+.m10a {	margin-left: 196px;}
 .m11 { margin-left: 198px;}
 .m11a { margin-left: 208px;}
 .m12 { margin-left: 216px;}
 .m12a {	margin-left: 226px;}
 .m13 { margin-left: 234px;}
+.m13b { margin-left: 239px;}
 .m13a { margin-left: 244px;}
 .m14 { margin-left: 252px;}
 .m14a { margin-left: 262px;}
@@ -498,7 +501,7 @@ a.lnk3:hover { border-bottom: solid 1px #f2f2f2;}
 /*BOX*/
 .box02, .box04, .box05, .box07, .box07a, .box08, .box09, .box09a, .box10, .box11, .box12,.box13,.box13a,
 .box14, .box14b, .box15, .box16, .box17, .box17a, .box18, .box19, .box20, .box21, .box21a, .box22,
-.box23, .box24, .box25, .box26, .box27, .box28, .box30a, .box34,.box35, .box36, .box37, .box39, .box40,
+.box23, .box24, .box25, .box26, .box27, .box28, .box31a, .box34,.box35, .box36, .box37, .box39, .box40,
 .box41,.box41a,.box44, .box46, .box47a, .box50, .box51, .box53, .box54, .box56, .box59,
 .box60,.box61, .box62, .box64, .box65, .box64a, .box68, .box70, .box71, .box72,
 .box74,.box76, .box80, .box81, .box82, .box90, .box96,.box99, .box100, .box108
@@ -533,7 +536,7 @@ a.lnk3:hover { border-bottom: solid 1px #f2f2f2;}
 .box26 { width: 260px;}
 .box27 { width: 270px;}
 .box28 { width: 280px;}
-.box30a { width: 313px;}
+.box31a { width: 313px;}
 .box34 { width: 340px;}
 .box35 { width: 350px;}
 .box36 { width: 360px;}
@@ -571,7 +574,7 @@ a.lnk3:hover { border-bottom: solid 1px #f2f2f2;}
 .box100 { width: 1000px;}
 .box121 { width: 1219px;}
 .box-wide {
- width: 6902px;
+ width: 6972px;
 font-family: 'MS UI Gothic', "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
 
