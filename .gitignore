@@ -2,7 +2,7 @@
 *.bak
 *.jbf
 *.xlsx
-history
+history/
 new thread.txt
 test/
 kotou/
