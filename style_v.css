@@ -48,8 +48,9 @@
   box-sizing: border-box;
   max-width: 100%;
   padding: 0 2px;
+  color: #ffffff;
   border: 2px solid #f2f2f2;
-  background: #444;
+  background: #7d7d7d;
   border-radius: 2px;
 }
 /*文字列*/
