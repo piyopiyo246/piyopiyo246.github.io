@@ -342,6 +342,7 @@ a.model:hover { border: solid 2px #f2f2f2;}
 .m2f { margin-left: 43.2px;}
 .m2fa { margin-left: 44px;}
 .m2a { margin-left: 45px;}
+.m2ag { margin-left: 46px;}
 .m2g { margin-left: 46.44px;}
 .m2d { margin-left: 47.4px;}
 .m2e { margin-left: 48px;}
@@ -377,6 +378,7 @@ a.model:hover { border: solid 2px #f2f2f2;}
 .m4d { margin-left: 82px;}
 .m4g { margin-left: 83px;}
 .m4f { margin-left: 87px;}
+.m4i { margin-left: 88px;}
 .m05 { margin-left: 90px;}
 .m05h { margin-left: 91px;}
 .m05a { margin-left: 92px;}
@@ -599,7 +601,7 @@ a.model:hover { border: solid 2px #f2f2f2;}
 .box100 { width: 1000px;}
 .box121 { width: 1219px;}
 .box-wide {
- width: 7667px;
+ width: 7707px;
 font-family: 'MS UI Gothic', "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
 
