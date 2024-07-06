@@ -142,6 +142,7 @@ a.model:hover { border: solid 2px #f2f2f2;}
 .t2c { margin-top: 64px;}
 .t2d { margin-top: 68px;}
 .t2a { margin-top: 72px;}
+.t2b { margin-top: 75px;}
 .t3 { margin-top: 76.8px;}
 .t3a { margin-top: 78px;}
 .t3b { margin-top: 88px;}
@@ -602,7 +603,7 @@ a.model:hover { border: solid 2px #f2f2f2;}
 .box100 { width: 1000px;}
 .box121 { width: 1219px;}
 .box-wide {
- width: 7961px;
+ width: 8000px;
 font-family: 'MS UI Gothic', "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
 
