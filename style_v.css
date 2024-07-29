@@ -182,6 +182,8 @@ a.model:hover { border: solid 2px #f2f2f2;}
 .t30 { margin-top: 556px;}
 .t31 { margin-top: 572.5px;}
 .t35 { margin-top: 644px;}
+.t37 { margin-top: 679px;}
+.t38 { margin-top: 697.5px;}
 .t39 { margin-top: 715px;}
 .t40 { margin-top: 734px;}
 .t40a { margin-top: 751px;}
@@ -401,11 +403,14 @@ a.model:hover { border: solid 2px #f2f2f2;}
 .m06e { margin-left: 113px;}
 .m06a { margin-left: 117px;}
 .m06c { margin-left: 118px;}
+.m06f { margin-left: 119px;}
 .m06b { margin-left: 122.4px;}
+.m06g { margin-left: 124px;}
 .m07 { margin-left: 126px;}
 .m07a { margin-left: 130px;}
 .m07c { margin-left: 135px;}
 .m07b { margin-left: 137px;}
+.m07d { margin-left: 140px;}
 .m08 { margin-left: 144px;}
 .m08a { margin-left: 147.6px;}
 .m08c { margin-left: 155px;}
@@ -606,7 +611,7 @@ a.model:hover { border: solid 2px #f2f2f2;}
 .box100 { width: 1000px;}
 .box121 { width: 1219px;}
 .box-wide {
- width: 8320px;
+ width: 8470px;
 font-family: 'MS UI Gothic', "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
 
