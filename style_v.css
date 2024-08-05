@@ -36,6 +36,7 @@
 .clr-co {color: #cc6600;}
 .clr-gy { color: #006c00;}
 .clr-lb { color: #0e56dd;}
+.clr-dgb { color: #384375;}
 .ls04 { letter-spacing: 0.4pt;}
 .ls411 { letter-spacing: 4.11pt;}
 .ls-13 { letter-spacing: -1.3pt;}
@@ -139,6 +140,7 @@ a.model:hover { border: solid 2px #f2f2f2;}
 .t1b { margin-top: 43px;}
 .t1e { margin-top: 51px;}
 .t1c { margin-top: 53px;}
+.t1h { margin-top: 56px;}
 .t2 { margin-top: 57.6px;}
 .t2c { margin-top: 64px;}
 .t2d { margin-top: 68px;}
@@ -160,13 +162,16 @@ a.model:hover { border: solid 2px #f2f2f2;}
 .t5 {	margin-top: 158px;}
 .t5a { margin-top: 160px;}
 .t6 { margin-top: 162px;}
+.t7 { margin-top: 170px;}
 .t8 { margin-top: 178px;}
+.t8a { margin-top: 185px;}
 .t9 {	margin-top: 194px;}
 .t10 { margin-top: 208px;}
 .t10a { margin-top: 213px;}
 .t11 { margin-top: 222px;}
 .t21 { margin-top: 246px;}
-.t21a {	margin-top: 270px;}
+.t21a {	margin-top: 248px;}
+.t21c {	margin-top: 285px;}
 .t21b { margin-top: 289px;}
 .t22 { margin-top: 316px;}
 .t22b { margin-top: 322px;}
@@ -181,8 +186,10 @@ a.model:hover { border: solid 2px #f2f2f2;}
 .t26 { margin-top: 499px;}
 .t30 { margin-top: 556px;}
 .t31 { margin-top: 572.5px;}
+.t32 { margin-top: 610px;}
 .t35 { margin-top: 644px;}
 .t36 { margin-top: 657px;}
+.t36a { margin-top: 663.5px;}
 .t37 { margin-top: 679px;}
 .t38 { margin-top: 697.5px;}
 .t39 { margin-top: 715px;}
@@ -613,7 +620,7 @@ a.model:hover { border: solid 2px #f2f2f2;}
 .box100 { width: 1000px;}
 .box121 { width: 1219px;}
 .box-wide {
- width: 8430px;
+ width: 8585px;
 font-family: 'MS UI Gothic', "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
 
