@@ -549,7 +549,7 @@ a.model:hover { border: solid 2px #f2f2f2;}
 /*BOX*/
 .box02, .box04, .box05, .box07, .box07a, .box08a, .box09, .box09a, .box10, .box11, .box12,.box13,.box13a,
 .box14, .box14b, .box15, .box16, .box17, .box17a, .box18, .box19, .box20, .box21, .box21a, .box22,
-.box23, .box24, .box25, .box26, .box27, .box28, .box29, .box31a, .box34,.box35, .box36, .box38, .box39, .box40,
+.box23, .box24, .box25, .box26, .box27, .box28, .box29, .box30, .box31a, .box34,.box35, .box36, .box38, .box39, .box40,
 .box44, .box50, .box51, .box53, .box54, .box56, .box59,
 .box60,.box61, .box62, .box64, .box65, .box64a, .box68, .box70, .box71, .box72,
 .box74,.box76, .box80, .box81, .box82, .box90, .box96,.box99, .box100, .box108
@@ -585,6 +585,7 @@ a.model:hover { border: solid 2px #f2f2f2;}
 .box27 { width: 270px;}
 .box28 { width: 280px;}
 .box29 { width: 290px;}
+.box30 { width: 300px;}
 .box31a { width: 324px;}
 .box34 { width: 340px;}
 .box35 { width: 350px;}
@@ -620,7 +621,7 @@ a.model:hover { border: solid 2px #f2f2f2;}
 .box100 { width: 1000px;}
 .box121 { width: 1219px;}
 .box-wide {
- width: 8655px;
+ width: 8705px;
 font-family: 'MS UI Gothic', "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
 
