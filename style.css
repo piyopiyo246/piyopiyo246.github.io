@@ -74,7 +74,7 @@ hr {
 	border-bottom: none;
 	border-left: none;
 }
-
+.tin{	border-top: 0.1px solid #999; }
 /* navi */
 .dashboard,
 .wood,
@@ -460,7 +460,7 @@ td {
 	color: #bdbdbd;
 }
 
-/* close-accordion { */
+/* Accordion btn { */
 #close-accordion {
 	position: fixed;
 	margin-left: 0;
@@ -491,15 +491,16 @@ td {
 	overflow-wrap: break-word;
 }
 
-/*fleXcroll*/
+/*fleXcroll ★変更・削除不可★ */
 .scrollgeneric {
-	/* 変更・省略不可 */
 	line-height: 1px;
 	font-size: 1px;
 	position: absolute;
 	top: 0;
 	left: 0;
 }
+
+/* Accordion Tab */
 .vmenuitem_2,
 .vmenuitem_5,
 .vmenuitem_6 {
@@ -512,11 +513,11 @@ td {
 	margin-right: auto;
 	margin-left: auto;
 }
-.vmenuitem_6 {
-	width: 1180px;
-}
 .vmenuitem_5 {
 	width: 940px;
+}
+.vmenuitem_6 {
+	width: 1180px;
 }
 .vmenuitem_5 :hover,
 .vmenuitem_6 :hover {
