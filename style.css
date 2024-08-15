@@ -543,7 +543,7 @@ td {
 .bk3,
 .bk4,
 .bk5 {
-	top: 4px;
+	top: 0;
 }
 
 /* border-radius: 4px; */
@@ -555,7 +555,6 @@ td {
 
 .bk4 {
 	width: 960px;
-	top: 0;
 	left: 200px;
 	text-align: left;
 }
