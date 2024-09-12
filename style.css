@@ -339,6 +339,8 @@ img {
 .ico-eg {
 	width: 20px;
 	height: 16px;
+	margin-left: 6%;
+	margin-right: 6px;
 	background-image: url('ico/camera.png');
 }
 
