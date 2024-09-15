@@ -420,6 +420,10 @@ td {
 	vertical-align: top;
 }
 
+.row-lg {
+	background-color: #d6ecd4;
+}
+
 .fix {
 	table-layout: fixed;
 }
