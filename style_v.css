@@ -642,6 +642,8 @@ font-family: 'MS UI Gothic', "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 
 .xl_e, .xl_sl, .xl_s, .xl_b, .xl_ce, .xl_a, .xl_clk, .xl_cl,
  .xl_ss, .xl_c, .xl_t1, .xl_v, .xl_g, .xl_old, .xl_100, .xl_w {
+  vertical-align: middle;
+  text-align: center;
   color: white;
   font-size: 12.0pt;
   font-weight: 700;
