@@ -201,8 +201,7 @@ hr {
 	border: solid 1.6px #000;
 }
 
-/* GOTO page-top */
-#page-top {
+#page-top,#close-accordion {
 	position: fixed;
 	bottom: 70px;
 	left: 20px;
@@ -210,7 +209,7 @@ hr {
 	opacity: 0.6;
 }
 
-#page-top a {
+#page-top a,#close-accordion a {
 	background: #666;
 	color: #fff;
 	text-decoration: none;
@@ -223,9 +222,13 @@ hr {
 	-moz-border-radius: 5px;
 }
 
-#page-top a:hover {
+#page-top a:hover,#close-accordion a:hover {
 	text-decoration: none;
 	background: #000;
+}
+
+#close-accordion {
+	bottom: 20px;
 }
 
 /* ---検索全体のBOX--- */
@@ -514,34 +517,6 @@ td {
 	font-size: 52px;
 	line-height: 1.2;
 	color: #bdbdbd;
-}
-
-/* Accordion btn { */
-#close-accordion {
-	position: fixed;
-	margin-left: 0;
-	bottom: 20px;
-	left: 20px;
-	font-weight: bold;
-	opacity: 0.6;
-}
-
-#close-accordion a {
-	background: #666;
-	text-decoration: none;
-	color: #fff;
-	width: 30px;
-	padding: 5px 0;
-	text-align: center;
-	display: block;
-	border-radius: 5px;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-}
-
-#close-accordion a:hover {
-	text-decoration: none;
-	background: #000;
 }
 
 /*lightbox*/
