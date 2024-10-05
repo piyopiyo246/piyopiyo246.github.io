@@ -26,12 +26,7 @@ body {
 	margin-left: auto;
 }
 
-article,
-aside,
-div,
-main,
-nav,
-section {
+article,aside,div,main,nav,section {
 	width: 100%;
 	padding: 0;
 	margin: 0;
@@ -46,28 +41,19 @@ section {
 	margin-right: auto;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1,h2
+ {
 	font-size: 17px;
-	font-weight: normal;
+	font-weight: bold;
+	color: #666;
 	margin: 4px 0 4px 18px;
 }
 
-h3,
-h4,
-h5,
-h6 {
+h3,h4,h5,h6 {
+	font-size: 17px;
+	font-weight: normal;
+	color: #111;
 	margin: 2px 0 4px 8px;
-}
-
-h1,
-h2 {
-	font-weight: bold;
-	color: #666;
 }
 
 p {
