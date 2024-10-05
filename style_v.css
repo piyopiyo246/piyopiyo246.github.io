@@ -62,9 +62,7 @@ a {
 a:link { color: #111;}
 a:visited { color: #111;}
 .lnk:hover { color: #000;}
-
-a.lnk2:hover { color: #2600ff;}
-
+.lnk2:hover { color: #2600ff;}
 a.lnk3 { color: #fbfbfb; line-height: 40px;}
 a.lnk3:visited  { color: #fbfbfb;}
 a.lnk3:hover { border-bottom: solid 1px #f2f2f2;}
