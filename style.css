@@ -35,14 +35,12 @@ article,aside,div,main,nav,section {
 	zoom: 1
 }
 
-.center,
-.style-w {
+.center,.style-w {
 	margin-left: auto;
 	margin-right: auto;
 }
 
-h1,h2
- {
+h1,h2 {
 	font-size: 17px;
 	font-weight: bold;
 	color: #666;
@@ -124,8 +122,7 @@ hr {
 }
 
 /*文字を重ねる*/
-.overlap_1,
-.c-box {
+.overlap_1,.c-box {
 	position: absolute;
 	left: 31.5%;
 	top: 55%;
@@ -136,9 +133,7 @@ hr {
 }
 
 /*btnの後ろ*/
-.b-box,
-.c-box,
-.searchArea {
+.b-box,.c-box,.searchArea {
 	background: #000;
 }
 
@@ -154,8 +149,7 @@ hr {
 	height: 29px;
 }
 
-.top_btn1,
-.top_btn2 {
+.top_btn1,.top_btn2 {
 	background: #444;
 	color: #c6c6c6;
 	text-align: center;
@@ -169,8 +163,7 @@ hr {
 	border-radius: 4px;
 }
 
-.top_btn1,
-.top_btn2 {
+.top_btn1,.top_btn2 {
 	float: left;
 	height: 32px;
 	width: 150px;
@@ -181,8 +174,7 @@ hr {
 	width: 60px;
 }
 
-.top_btn1:hover,
-.top_btn2:hover {
+.top_btn1:hover,.top_btn2:hover {
 	background: #333;
 	color: #e0e0e0;
 	border-top: solid 2px #333;
@@ -247,29 +239,17 @@ hr {
 /* ---テキスト入力欄のSTYLE設定--- */
 .searchArea .searchText {
 	display: block;
-	/*  ブロック化          */
 	float: left;
-	/* 横並び               */
 	box-sizing: border-box;
-	/* 枠線,余白を含んだ長さ */
 	height: 27px;
-	/*  入力の高さ          */
 	width: 207px;
-	/* 入力の幅             */
 	margin: 0;
-	/* 外余白               */
 	padding: 0 12px;
-	/*  内余白              */
 	border: 2px solid #000;
-	/* 枠線　幅,実践,色     */
 	color: #333;
-	/* 文字色              */
 	outline: 0;
-	/* 入力の薄い枠を非表示 */
 	font-size: 12px;
-	/* フォントサイズ        */
 	background: #a7af7c;
-	/* ボタンの色           */
 }
 
 /* --- 検索ボタン欄にフォーカスか来たとき  --- */
@@ -295,17 +275,12 @@ img {
 }
 
 /*ico*/
-.ico-wiki,
-.ico-wiki2,
-.ico-camera,
-.ico-eg,
-.ico-tube {
+.ico-wiki,.ico-wiki2,.ico-camera,.ico-eg,.ico-tube {
 	display: inline-block;
 	background-repeat: no-repeat;
 }
 
-.ico-wiki,
-.ico-wiki2 {
+.ico-wiki,.ico-wiki2 {
 	width: 17px;
 	margin-right: 3px;
 	background-image: url('ico/wiki.png');
@@ -316,8 +291,7 @@ img {
 	height: 14px;
 }
 
-.ico-camera,
-.ico-eg {
+.ico-camera,.ico-eg {
 	width: 20px;
 	height: 16px;
 	margin-left: 6px;
@@ -342,24 +316,18 @@ table {
 	table-layout: auto;
 }
 
-ul,
-li,
-dl,
-dt {
+ul,li,dl,dt {
 	padding: 0;
 	margin: 0;
 }
 
-ul,
-ol,
-dl {
+ul,ol,dl {
 	overflow: hidden;
 	position: relative;
 	zoom: 1;
 }
 
-ul,
-dl {
+ul,dl {
 	list-style: none;
 }
 
@@ -375,9 +343,7 @@ dd {
 	float: left;
 }
 
-table,
-th,
-td {
+table,th,td {
 	border: none;
 }
 
@@ -514,10 +480,7 @@ td {
 }
 
 /*bk*/
-.bk,
-.bk3,
-.bk4,
-.bk5 {
+.bk,.bk3,.bk4,.bk5 {
 	position: absolute;
 	background: no-repeat;
 }
@@ -527,15 +490,12 @@ td {
 	opacity: 1;
 }
 
-.bk3,
-.bk4,
-.bk5 {
+.bk3,.bk4,.bk5 {
 	top: 0;
 }
 
 /* border-radius: 4px; */
-.bk3,
-.bk5 {
+.bk3,.bk5 {
 	width: 320px;
 	left: 800px;
 }
@@ -599,9 +559,7 @@ td {
 }
 
 /* Accordion Tab */
-.vmenuitem_2,
-.vmenuitem_5,
-.vmenuitem_6 {
+.vmenuitem_2,.vmenuitem_5,.vmenuitem_6 {
 	cursor: pointer;
 	width: 400px;
 }
@@ -621,18 +579,15 @@ td {
 	width: 1180px;
 }
 
-.vmenuitem_5 :hover,
-.vmenuitem_6 :hover {
+.vmenuitem_5 :hover,.vmenuitem_6 :hover {
 	background: #fbfbfb;
 }
 
-.vmenu_on .vmenuitem_5,
-.vmenu_on .vmenuitem_6 {
+.vmenu_on .vmenuitem_5,.vmenu_on .vmenuitem_6 {
 	background: #fbfbfb;
 }
 
-.vmenu_on,
-.vmenu_off {
+.vmenu_on,.vmenu_off {
 	clear: both;
 	cursor: auto;
 	margin-top: 8px;
@@ -758,19 +713,14 @@ iframe {
 	position: absolute;
 	font-family: "Font Awesome 5 Free";
 	content: "\f04b";
-	/* アイコン指定 */
 	font-weight: 900;
 	color: #fc0d1c;
-	/* アイコンカラー */
 	font-size: 70px;
-	/* アイコンサイズ */
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	opacity: .90;
-	/* アイコンを少し透明に */
 	transition: .5s;
-	/* ゆっくり変化 */
 }
 
 /* 画像マウスホバー時 */
