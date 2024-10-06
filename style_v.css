@@ -59,8 +59,8 @@ a {
   text-decoration: underline #111;
   text-decoration-thickness: 0.7px;
 }
-a:link { color: #111;}
-a:visited { color: #111;}
+a:link { color: #000;}
+a:visited { color: #000;}
 .lnk:hover { color: #000;}
 .lnk2:hover { color: #2600ff;}
 a.lnk3 { color: #fbfbfb; line-height: 40px;}
