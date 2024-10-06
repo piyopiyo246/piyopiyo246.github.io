@@ -93,7 +93,6 @@ hr {
 
 /* navi */
 .dashboard,.wood,.under_box,.sitemap {
-	position: absolute;
 	background: #4f4f4f;
 	width: 100%;
 	min-width: 1210px;
@@ -110,22 +109,16 @@ hr {
 }
 
 .wood {
-	margin-top: 59px;
-	height: 40px;
+	height: 48px;
 	text-align: center;
-}
-
-.under_box {
-	background-color: #232F3E;
-	margin-top: 99px;
-	height: 10px;
-}
+	clear: both;
+	z-index: 1;}
 
 /*文字を重ねる*/
 .overlap_1,.c-box {
 	position: absolute;
 	left: 31.5%;
-	top: 55%;
+	top: 50%;
 	transform: translate(-50%, -50%);
 	color: #FFF;
 	font-size: 100%;
@@ -623,7 +616,7 @@ td {
 /*スクロールバーの動く部分*/
 ::-webkit-scrollbar-thumb {
 	background: #4f4f4f;
-	height: 20%;
+	height: 19.5%;
 }
 
 figure {
