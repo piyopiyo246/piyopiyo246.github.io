@@ -8,6 +8,7 @@
   vertical-align: middle;
   line-height: 100%;
 }
+.fs97p { font-size: 97%;}
 .fs90p { font-size: 17px;}
 .fs250p { font-size: 250%;}
 .fs300p { font-size: 300%;}
@@ -181,10 +182,10 @@ a.model:hover { border: solid 2px #f2f2f2;}
 .t23a { margin-top: 430px;}
 .t24 { margin-top: 466px;}
 .t25 { margin-top: 482px;}
-.t26 { margin-top: 499px;}
+.t26 { margin-top: 501.5px;}
 .t30 { margin-top: 555px;}
 .t31 { margin-top: 572.5px;}
-.t32 { margin-top: 608.5px;}
+.t32 { margin-top: 590.5px;}
 .t35 { margin-top: 644px;}
 .t36 { margin-top: 657px;}
 .t36a { margin-top: 663.5px;}
@@ -202,7 +203,6 @@ a.model:hover { border: solid 2px #f2f2f2;}
 .t49 { margin-top: 911px;}
 .t50 { margin-top: 929px;}
 .t51 { margin-top: 947px;}
-.t53 { margin-top: 983px;}
 .t54 { margin-top: 990px;}
 .t54c { margin-top: 1001px;}
 .t54a { margin-top: 1018.5px;}/* 変えない */
@@ -437,6 +437,7 @@ a.model:hover { border: solid 2px #f2f2f2;}
 .m12 { margin-left: 216px;}
 .m12b { margin-left: 220px;}
 .m12a {	margin-left: 226px;}
+.m12c {	margin-left: 228px;}
 .m13 { margin-left: 234px;}
 .m13b { margin-left: 239px;}
 .m13a { margin-left: 244px;}
@@ -460,7 +461,7 @@ a.model:hover { border: solid 2px #f2f2f2;}
 .m23a { margin-left: 420px;}
 .m24 { margin-left: 432px;}
 .m25 { margin-left: 447px;}
-.m25a { margin-left: 462px;}
+.m25a { margin-left: 461px;}
 .m25b { margin-left: 474px;}
 .m26 { margin-left: 479px;}
 .m26b { margin-left: 478px;}
@@ -553,7 +554,7 @@ a.model:hover { border: solid 2px #f2f2f2;}
 .box02, .box04, .box05, .box07, .box07a, .box08a, .box09, .box09a, .box10, .box11, .box12,.box13,.box13a,
 .box14, .box14b, .box15, .box16, .box17, .box17a, .box18, .box19, .box20, .box21, .box21a, .box22,
 .box23, .box24, .box25, .box26, .box27, .box28, .box29, .box30,.box31, .box32a, .box34,.box35, .box36, .box38, .box39, .box40,
-.box44, .box50, .box51, .box53, .box54, .box56, .box59,
+.box44, .box53, .box54, .box56, .box59,
 .box60,.box61, .box62, .box64, .box65, .box64a, .box68, .box70, .box71, .box72,
 .box74,.box76, .box80, .box81, .box82, .box90, .box96,.box99, .box100, .box108
   { float: left;}
@@ -598,8 +599,6 @@ a.model:hover { border: solid 2px #f2f2f2;}
 .box39 { width: 387px;}
 .box40 { width: 400px;}
 .box44 { width: 440px;}
-.box50 { width: 500px;}
-.box51 { width: 510px;}
 .box53 { width: 525px;}
 .box54 { width: 540px;}
 .box56 { width: 560px;}
@@ -625,7 +624,7 @@ a.model:hover { border: solid 2px #f2f2f2;}
 .box100 { width: 1000px;}
 .box121 { width: 1219px;}
 .box-wide {
- width: 9465px;
+ width: 9910px;
 font-family: 'MS UI Gothic', "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
 
