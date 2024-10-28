@@ -8,6 +8,7 @@
   vertical-align: middle;
   line-height: 100%;
 }
+.fs96p { font-size: 96%;}
 .fs97p { font-size: 97%;}
 .fs90p { font-size: 17px;}
 .fs250p { font-size: 250%;}
@@ -178,7 +179,7 @@ a.model:hover { border: solid 2px #f2f2f2;}
 .t22d { margin-top: 392px;}
 .t22f { margin-top: 410px;}
 .t23 { margin-top: 429px;}
-.t23a { margin-top: 430px;}
+.t23a { margin-top: 430.5px;}
 .t24 { margin-top: 466px;}
 .t25 { margin-top: 482px;}
 .t26 { margin-top: 501.5px;}
