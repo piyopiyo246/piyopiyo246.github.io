@@ -11,6 +11,7 @@
 .fs96p { font-size: 96%;}
 .fs97p { font-size: 97%;}
 .fs90p { font-size: 90%;}
+.fs88p { font-size: 88%;}
 .fs250p { font-size: 250%;}
 .fs300p { font-size: 300%;}
 .fs17 { font-size: 17px;}
@@ -275,6 +276,7 @@ a.model:hover { border: solid 2px #f2f2f2;}
 .pb28 { padding-bottom: 464px;}
 .pb29 { padding-bottom: 496px;}
 /*M（左 margin）*/
+.m-3 { margin-left: -54px;}
 .m-2 { margin-left: -36px;}
 .m-1 {	margin-left: -18px;}
 .m-05 { margin-left: -10.8px;}
@@ -621,7 +623,7 @@ a.model:hover { border: solid 2px #f2f2f2;}
 .box100 { width: 1000px;}
 .box121 { width: 1219px;}
 .box-wide {
- width: 10350px;
+ width: 10430px;
 font-family: 'MS UI Gothic', "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
 
