@@ -364,6 +364,7 @@ a.model:hover { border: solid 2px #f2f2f2;}
 .m2e { margin-left: 48px;}
 .m2ej { margin-left: 48.5px;}
 .m2j { margin-left: 49.5px;}
+.m2jm { margin-left: 50px;}
 .m2m { margin-left: 50.5px;}
 .m2mk { margin-left: 51px;}
 .m2k { margin-left: 52px;}
@@ -419,6 +420,7 @@ a.model:hover { border: solid 2px #f2f2f2;}
 .m06b { margin-left: 122.4px;}
 .m06g { margin-left: 124px;}
 .m07 { margin-left: 126px;}
+.m07e { margin-left: 127px;}
 .m07a { margin-left: 130px;}
 .m07c { margin-left: 135px;}
 .m07b { margin-left: 137px;}
@@ -436,6 +438,7 @@ a.model:hover { border: solid 2px #f2f2f2;}
 .m10a {	margin-left: 196px;}
 .m11 { margin-left: 198px;}
 .m11a { margin-left: 208px;}
+.m11b { margin-left: 209px;}
 .m12 { margin-left: 216px;}
 .m12b { margin-left: 220px;}
 .m12a {	margin-left: 226px;}
@@ -623,7 +626,7 @@ a.model:hover { border: solid 2px #f2f2f2;}
 .box100 { width: 1000px;}
 .box121 { width: 1219px;}
 .box-wide {
- width: 10430px;
+ width: 10755px;
 font-family: 'MS UI Gothic', "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
 
