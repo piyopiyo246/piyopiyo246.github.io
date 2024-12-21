@@ -532,9 +532,9 @@ a.model:hover { border: solid 2px #f2f2f2;}
 .m63a { margin-left: 1066px;}
 .m64 { margin-left: 1094px;}
 .m100 { margin-left: 1000px;}
-.m-x {	margin-left: 1144px;}	/*【ここで調整】*/
-.m-y {	margin-left: 430px;}	/*m-yは先頭【m-zの1/2】*/
-.m-z {	margin-left: 560px;}	/*m-ｚは中間値【[box-wide - (ボタン全幅 ｘ ボタン数)]/ボタン数】*/
+.m-x {	margin-left: 1100px;}	/*【ここで調整】*/
+.m-y {	margin-left: 360px;}	/*m-yは先頭【m-zの1/2】*/
+.m-z {	margin-left: 490px;}	/*m-ｚは中間値【[box-wide - (ボタン全幅 ｘ ボタン数)]/ボタン数】*/
 /*W（width）*/
 .w1 { width: 18px;}
 .w2 { width: 36px;}
