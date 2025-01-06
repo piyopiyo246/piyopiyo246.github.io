@@ -11,6 +11,9 @@
 		},
 		"search.useParentIgnoreFiles": true,
 		"search.useIgnoreFiles": true,
-		"search.useGlobalIgnoreFiles": true
+		"search.useGlobalIgnoreFiles": true,
+		"editor.cursorSmoothCaretAnimation": "explicit",
+		"editor.fontSize": 22,
+		"breadcrumbs.symbolPath": "on"
 	}
 }

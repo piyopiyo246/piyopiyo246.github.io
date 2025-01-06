@@ -210,8 +210,7 @@ a.model:hover { border: solid 2px #f2f2f2;}
 .t54a { margin-top: 1018.5px;}/* 変えない */
 .t54aa { margin-top: 1018px;}/* 変えない */
 .t55 { margin-top: 1035px;}
-.t55a { margin-top: 1036px;}
-.t57 { margin-top: 1053px;}
+.t57 { margin-top: 1054px;}
 .t58 { margin-top: 1071.5px;}
 .t59 { margin-top: 1080px;}
 .t59a { margin-top: 1089.5px;}
@@ -412,6 +411,7 @@ a.model:hover { border: solid 2px #f2f2f2;}
 .m05k {	margin-left: 107px;}
 .m06 { margin-left: 108px;}
 .m06d { margin-left: 111px;}
+.m06h { margin-left: 112px;}
 .m06e { margin-left: 113px;}
 .m06a { margin-left: 117px;}
 .m06c { margin-left: 118px;}
@@ -424,6 +424,7 @@ a.model:hover { border: solid 2px #f2f2f2;}
 .m07c { margin-left: 135px;}
 .m07b { margin-left: 137px;}
 .m07d { margin-left: 140px;}
+.m07f { margin-left: 142px;}
 .m08 { margin-left: 144px;}
 .m08a { margin-left: 147.6px;}
 .m08d { margin-left: 152px;}
@@ -625,7 +626,7 @@ a.model:hover { border: solid 2px #f2f2f2;}
 .box100 { width: 1000px;}
 .box121 { width: 1219px;}
 .box-wide {
- width: 11280px;
+ width: 11520px;
 font-family: 'MS UI Gothic', "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
 
