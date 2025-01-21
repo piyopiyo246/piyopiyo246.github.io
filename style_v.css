@@ -638,7 +638,8 @@ a.model:hover { border: solid 2px #f2f2f2;}
 .box121 { width: 1219px;}
 .box-wide {
  width: 11680px;
-font-family: 'MS UI Gothic', "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+ font-family: 'MS UI Gothic', "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+ position: relative;
 }
 
 /*height*/

@@ -473,14 +473,21 @@ td {
 }
 
 /*bk*/
-.bk,.bk3,.bk4,.bk5 {
+.bk,.bk2,.bk3,.bk4,.bk5 {
 	position: absolute;
 	background: no-repeat;
 }
 
-.bk {
+.bk,.bk2 {
 	font-family: Lato;
 	opacity: 1;
+}
+
+.bk2 {
+	z-index: 3;
+	font-size: smaller;
+	opacity: 0.7;
+	line-height: 300%;
 }
 
 .bk3,.bk4,.bk5 {
