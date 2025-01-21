@@ -404,7 +404,7 @@ td {
 	opacity: 0;
 	padding: 4px 2px 4px 10px;
 	line-height: 1.4;
-	transition: 1s;
+	transition: 4s;
 	transition-timing-function: step-end;
 	font-weight: 700;
 	font-size: 16px;
