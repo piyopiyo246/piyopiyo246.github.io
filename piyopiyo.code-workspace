@@ -13,7 +13,7 @@
 		"search.useIgnoreFiles": true,
 		"search.useGlobalIgnoreFiles": true,
 		"editor.cursorSmoothCaretAnimation": "explicit",
-		"editor.fontSize": 22,
+		"editor.fontSize": 16,
 		"breadcrumbs.symbolPath": "on"
 	}
 }

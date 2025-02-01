@@ -13,5 +13,6 @@
 		"vscrollerbar",
 		"vscrollerbase",
 		"Xcroll"
-	]
+	],
+	"editor.fontSize": 16
 }
