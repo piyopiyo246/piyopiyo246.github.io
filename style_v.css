@@ -397,6 +397,7 @@ a.model:hover { border: solid 2px #f2f2f2;}
 .m4a { margin-left: 77.94px;}
 .m4c { margin-left: 79.2px;}
 .m4j { margin-left: 80px;}
+.m4n { margin-left: 81px;}
 .m4d { margin-left: 82px;}
 .m4g { margin-left: 83px;}
 .m4l { margin-left: 84px;}
@@ -430,6 +431,7 @@ a.model:hover { border: solid 2px #f2f2f2;}
 .m07e { margin-left: 127px;}
 .m07g { margin-left: 128px;}
 .m07a { margin-left: 130px;}
+.m07h { margin-left: 133px;}
 .m07c { margin-left: 135px;}
 .m07b { margin-left: 137px;}
 .m07d { margin-left: 140px;}
@@ -645,7 +647,7 @@ a.model:hover { border: solid 2px #f2f2f2;}
 .box100 { width: 1000px;}
 .box121 { width: 1219px;}
 .box-wide {
- width: 11900px;
+ width: 12080px;
  font-family: 'MS UI Gothic', "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
  position: relative;
 }
