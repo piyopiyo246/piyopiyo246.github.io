@@ -55,9 +55,9 @@
   box-sizing: border-box;
   max-width: 100%;
   padding: 0 2px;
-  color: #ffffff;
-  border: 2px solid #f2f2f2;
-  background: #7d7d7d;
+  color: #fff;
+  border: 2px solid #fff;
+  background: #666;
   border-radius: 2px;
 }
 /*文字列*/
@@ -75,7 +75,6 @@ a.lnk3:hover { border-bottom: solid 1px #f2f2f2;}
 
 a.model { color: #f2f2f2;}
 a.model:visited  { color: #f2f2f2;}
-a.model:hover { border: solid 2px #fff;}
 
 .top { vertical-align: top;}
 .left { text-align: left;}
