@@ -62,7 +62,7 @@
 }
 /*文字列*/
 a {
-  text-decoration: underline #111;
+  text-decoration: underline;
   text-decoration-thickness: 0.7px;
 }
 a:link { color: #000;}
