@@ -635,6 +635,13 @@ figcaption {
 	text-align: center;
 }
 
+.nomal_title {
+	background-color: #fbfbfb;
+	color: #111;
+	text-align: left;
+}
+
+
 iframe {
 	border-width: 0;
 }
