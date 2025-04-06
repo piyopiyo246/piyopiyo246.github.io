@@ -5,10 +5,10 @@ body {
 	font-size: 22px;
 }
 
-#header_txt {
+nav {
 	font-size: 18px;
 	margin: -8px 0 0 -8px;
-	line-height: 1.2;
+	line-height: 1.4;
 	background-color: #000000;
 	width: 100%;
 	clear: both;
