@@ -34,33 +34,33 @@
 	<link rel="stylesheet" href="../style_v.min.css">
 
 	<!-- アコーディオン用のJavaScript関数を追加 -->
-<script>
-  function doToggleClassName(obj, onClassName, offClassName) { 
-    obj.className = (obj.className != onClassName) ? onClassName : offClassName; 
-  }
-  function getParentObj(obj) { 
-    return obj.parentElement || obj.parentNode; 
-  }
-  function doReplaceClassName(findClassName, replaceClassName, targetTagName) {
-    var elements = document.getElementsByTagName(targetTagName || '*');
-    for (var i = 0; i < elements.length; i++) {
-      if (elements[i].className == findClassName)
-        elements[i].className = replaceClassName;
-    }
-  }
-</script>
+	<script>
+		function doToggleClassName(obj, onClassName, offClassName) {
+			obj.className = (obj.className != onClassName) ? onClassName : offClassName;
+		}
+		function getParentObj(obj) {
+			return obj.parentElement || obj.parentNode;
+		}
+		function doReplaceClassName(findClassName, replaceClassName, targetTagName) {
+			var elements = document.getElementsByTagName(targetTagName || '*');
+			for (var i = 0; i < elements.length; i++) {
+				if (elements[i].className == findClassName)
+					elements[i].className = replaceClassName;
+			}
+		}
+	</script>
 
 	<!-- 6. Cookie Manager -->
 	<script>
 		window._cookiescript = {
 			hasConsent: () => localStorage.getItem('cookie_consent') === 'true',
 			loadGTM: () => {
-				(function(w,d,s,l,i){
-					w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
-					var j=d.createElement(s),f=d.getElementsByTagName(s)[0];
-					j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i;
-					f.parentNode.insertBefore(j,f);
-				})(window,document,'script','dataLayer','GTM-MMJ4PJ3');
+				(function (w, d, s, l, i) {
+					w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+					var j = d.createElement(s), f = d.getElementsByTagName(s)[0];
+					j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i;
+					f.parentNode.insertBefore(j, f);
+				})(window, document, 'script', 'dataLayer', 'GTM-MMJ4PJ3');
 			}
 		};
 		if (window._cookiescript.hasConsent()) window._cookiescript.loadGTM();
@@ -120,18 +120,12 @@
 						<dd class="s2"><a href="#c238" title="Eクラス クーペ カブリオレ C238" class="lnk2">238</a></dd>
 						<dd><a href="#c236" title="CLE C236" class="lnk2">236</a></dd>
 					</dl>
-					<ul>
-						<li class="m1">
-							<a class="vmenu_all_action" title="クリックで全ての開閉部を開く" span onclick="doReplaceClassName('vmenu_off', 'vmenu_on2')">
-								<input class="square_btn" type="button" value="全て開く">
-							</a>
-							<a class="vmenu_all_action" title="クリックで全ての開閉部を閉じる" span onclick="doReplaceClassName('vmenu_on2', 'vmenu_off')">
-								<input class="square_btn" type="button" value="全て閉じる">
-							</a>
-							<button class="square_btn" type="button" onclick="location.href='en_mb_img_ce.html'">En</button>
-							<button class="square_btn" type="button" onclick="location.href='mb_img_ce.html'">De</button>
-						</li>
-					</ul>
+					<span>
+						<button class="vmenu_all_action square_btn" type="button" title="クリックで全ての開閉部を開く" span onclick="doReplaceClassName('vmenu_off', 'vmenu_on2')">全て開く</button>
+						<button class="vmenu_all_action square_btn" type="button" title="クリックで全ての開閉部を閉じる" span onclick="doReplaceClassName('vmenu_on2', 'vmenu_off')">全て閉じる</button>
+						<button class="square_btn" type="button" onclick="location.href='en_mb_img_ce.html'">En</button>
+						<button class="square_btn" type="button" onclick="location.href='mb_img_ce.html'">De</button>
+					</span>
 				</div>
 				<hr>
 				<dl class="m1">
