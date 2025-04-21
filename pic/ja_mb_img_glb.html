@@ -33,22 +33,22 @@
 	<link rel="stylesheet" href="../style.min.css">
 	<link rel="stylesheet" href="../style_v.min.css">
 
-	<!-- アコーディオン用のJavaScript関数を追加 -->
-<script>
-  function doToggleClassName(obj, onClassName, offClassName) { 
-    obj.className = (obj.className != onClassName) ? onClassName : offClassName; 
-  }
-  function getParentObj(obj) { 
-    return obj.parentElement || obj.parentNode; 
-  }
-  function doReplaceClassName(findClassName, replaceClassName, targetTagName) {
-    var elements = document.getElementsByTagName(targetTagName || '*');
-    for (var i = 0; i < elements.length; i++) {
-      if (elements[i].className == findClassName)
-        elements[i].className = replaceClassName;
-    }
-  }
-</script>
+	<!-- アコーディオン用のJavaScript関数を追加 
+	<script>
+		function doToggleClassName(obj, onClassName, offClassName) { 
+			obj.className = (obj.className != onClassName) ? onClassName : offClassName; 
+		}
+		function getParentObj(obj) { 
+			return obj.parentElement || obj.parentNode; 
+		}
+		function doReplaceClassName(findClassName, replaceClassName, targetTagName) {
+			var elements = document.getElementsByTagName(targetTagName || '*');
+			for (var i = 0; i < elements.length; i++) {
+				if (elements[i].className == findClassName)
+					elements[i].className = replaceClassName;
+			}
+		}
+	</script>-->
 
 	<!-- 6. Cookie Manager -->
 	<script>
