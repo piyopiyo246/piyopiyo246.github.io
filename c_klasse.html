@@ -7,17 +7,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
 
-	<!-- GA4計測タグ -->
-	<!-- <script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
-		gtag('config', 'G-5V9EW158CK', {
-			cookie_flags: 'SameSite=None;Secure',
-			debug_mode: true	// 初期検証時のみ有効化
-		});
-	</script> -->
-
 	<script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag() { dataLayer.push(arguments); }
@@ -90,27 +79,35 @@
 						});
 					}
 
-					// ▼▼▼ GTM読み込み（try-catchで囲む）▼▼▼
+					//  GTM読み込み（try-catchで囲む）
 					try {
 						(function (w, d, s, l, i) {
 							w[l] = w[l] || []; w[l].push({
 								'gtm.start': new Date().getTime(),
 								event: 'gtm.js',
-								'gtm.consent': 'granted' // 明示的同意
+								'gtm.consent': 'granted'
 							});
 
-							var j = d.createElement(s), f = d.getElementsByTagName(s)[0];
-							j.onerror = function () {
-								console.error('GTM Load Failed');
+							var j = d.createElement(s);
+							var f = d.getElementsByTagName(s)[0];
+
+							j.onerror = () => {
+								console.error('[GTM Error] Script load failed:', j.src);
+								window.dataLayer.push({
+									event: 'gtm_load_error',
+									error_url: j.src,
+									timestamp: Date.now()
+								});
 								window._cookiescript.fallbackGA4();
 							};
+
 							j.async = true;
 							j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i;
 							f.parentNode.insertBefore(j, f);
 						})(window, document, 'script', 'dataLayer', 'GTM-MMJ4PJ3');
 					} catch (gtmError) {
 						console.error('GTM Init Error:', gtmError);
-						this.fallbackGA4();
+						window._cookiescript.fallbackGA4();
 					}
 
 					// データレイヤー記録（エラーログ付き）
@@ -127,7 +124,7 @@
 				}
 			},
 
-			// ▼▼▼ 強化したリセット関数 ▼▼▼
+			// 強化したリセット関数 
 			resetConsent: () => {
 				try {
 					localStorage.removeItem('cookie_consent');
@@ -148,29 +145,44 @@
 				}
 			},
 
-			// ▼▼▼ 新規追加: フォールバック計測 ▼▼▼
+			//  フォールバック計測 
 			fallbackGA4: () => {
+				console.group('[Fallback GA4]');
 				try {
-					const params = new URLSearchParams({
+					const url = 'https://www.google-analytics.com/g/collect';
+					const params = {
 						v: '2',
 						tid: 'G-5V9EW158CK',
-						en: 'consent_fallback',
-						dl: location.href,
-						_p: Math.random().toString(36).substring(2)
-					});
+						en: 'fallback_pageview',
+						dl: encodeURIComponent(location.href),
+						_p: Math.random().toString(36).slice(2),
+						_z: 'clib'
+					};
 
+					// 送信方法の自動選択
 					if (navigator.sendBeacon) {
-						navigator.sendBeacon('https://www.google-analytics.com/g/collect', params);
+						const success = navigator.sendBeacon(url, new URLSearchParams(params));
+						console.log('sendBeacon Result:', success);
 					} else {
-						new Image().src = `https://www.google-analytics.com/collect?${params}`;
+						new Image().src = `${url}?${new URLSearchParams(params)}`;
+						console.log('Image Ping Sent');
 					}
 				} catch (e) {
-					console.warn('Fallback Failed:', e);
+					console.error('Fallback Failed:', e);
 				}
+				console.groupEnd();
 			}
 		};
 
-		// ▼▼▼ 初期化処理（エラーハンドリング追加）▼▼▼
+		// コンソールから直接実行可能なテスト関数
+		window._testFallback = function () {
+			delete window.gtag;
+			console.clear();
+			console.log('%c=== TESTING FALLBACK MECHANISM ===', 'color:red');
+			window._cookiescript.fallbackGA4();
+		};
+
+		// 初期化処理（エラーハンドリング追加）
 		try {
 			if (window._cookiescript.hasConsent()) {
 				setTimeout(() => {
