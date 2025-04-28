@@ -1,64 +1,79 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
-  <!-- 1. 基本設定（必須） -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- 1. 基本設定（必須） -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
 
-  <!-- 2. コアメタデータ -->
-  <title>Ｃクラス総合スレッドのテンプレ | スペック・総合情報</title>
-  <meta name="description" content="メルセデスＣクラス総合スレッドのテンプレートとして、ほぼ文字情報でスペック等を掲載しています。">
-  <link rel="canonical" href="https://piyopiyo246.github.io/c_klasse.html">
+	<!-- GA4計測タグ -->
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+		gtag('config', 'G-5V9EW158CK', {
+			cookie_flags: 'SameSite=None;Secure',
+			debug_mode: true	// 初期検証時のみ有効化
+		});
+	</script>
+	
+	<!-- 2. コアメタデータ -->
+	<title>Ｃクラス総合スレッドのテンプレ | スペック・総合情報</title>
+	<meta name="description" content="メルセデスＣクラス総合スレッドのテンプレートとして、ほぼ文字情報でスペック等を掲載しています。">
+	<link rel="canonical" href="https://piyopiyo246.github.io/c_klasse.html">
 
-  <!-- 3. パフォーマンス最適化 -->
-  <link rel="preconnect" href="https://www.googletagmanager.com">
-  <link rel="preconnect" href="https://ajax.googleapis.com">
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+	<!-- 3. パフォーマンス最適化 -->
+	<link rel="preconnect" href="https://www.googletagmanager.com">
+	<link rel="preconnect" href="https://ajax.googleapis.com">
+	<link rel="preconnect" href="https://cdnjs.cloudflare.com">
 
-  <!-- 4. ファビコン（マルチデバイス対応） -->
-  <link rel="icon" href="ico/favicon-32x32.ico" sizes="any">
-  <link rel="icon" href="ico/favicon-32x32.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="ico/apple-touch-icon.png">
+	<!-- 4. ファビコン（マルチデバイス対応） -->
+	<link rel="icon" href="ico/favicon-32x32.ico" sizes="any">
+	<link rel="icon" href="ico/favicon-32x32.svg" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="ico/apple-touch-icon.png">
 	<meta name="theme-color" media="(prefers-color-scheme: light)" content="white">
 	<meta name="theme-color" media="(prefers-color-scheme: dark)" content="black">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-  <!-- 5. スタイルシート -->
-  <link rel="stylesheet" href="./style.min.css">
-  <link rel="stylesheet" href="./style_v.min.css">
+	<!-- 5. スタイルシート -->
+	<link rel="stylesheet" href="./style.min.css">
+	<link rel="stylesheet" href="./style_v.min.css">
 
-  <!-- 6. Cookie同意管理システム -->
-  <script>
-    window._cookiescript = {
-      hasConsent: () => localStorage.getItem('cookie_consent') === 'true',
-      loadGTM: () => {
-        (function(w,d,s,l,i){
-          w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
-          var j=d.createElement(s),f=d.getElementsByTagName(s)[0];
-          j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i;
-          f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-MMJ4PJ3');
-      }
-    };
-    if (window._cookiescript.hasConsent()) window._cookiescript.loadGTM();
-  </script>
+	<!-- 6. Cookie同意管理システム -->
+	<script>
+		window._cookiescript = {
+			hasConsent: () => localStorage.getItem('cookie_consent') === 'true',
+			loadGTM: () => {
+				(function (w, d, s, l, i) {
+					w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+					var j = d.createElement(s), f = d.getElementsByTagName(s)[0];
+					j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i;
+					f.parentNode.insertBefore(j, f);
+				})(window, document, 'script', 'dataLayer', 'GTM-MMJ4PJ3');
+			}
+		};
+		if (window._cookiescript.hasConsent()) window._cookiescript.loadGTM();
+	</script>
 </head>
 
-<body>
-  <!-- 7. Cookie同意バナー（最初に読み込み） -->
-  <script>
-    document.addEventListener('CookieScriptAccept', () => {
-      localStorage.setItem('cookie_consent', 'true');
-      window._cookiescript?.loadGTM();
-    });
-  </script>
-  <script src="//cdn.cookie-script.com/s/8e78f8bb08fea7bc4ae66adb24bb7b98.js"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GT-KFG3B2J"></script>
 
-  <!-- 8. GTM noscriptフォールバック -->
-  <noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MMJ4PJ3" height="0" width="0" style="display:none;visibility:hidden"></iframe>
-  </noscript>
+<body>
+	<!-- 7. Cookie同意バナー（最初に読み込み） -->
+	<script>
+		document.addEventListener('CookieScriptAccept', () => {
+			localStorage.setItem('cookie_consent', 'true');
+			window._cookiescript?.loadGTM();
+		});
+	</script>
+	<script src="//cdn.cookie-script.com/s/8e78f8bb08fea7bc4ae66adb24bb7b98.js"></script>
+
+	<!-- 8. GTM noscriptフォールバック -->
+	<noscript>
+		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MMJ4PJ3" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+	</noscript>
 
 	<nav class="dashboard">
 		<ul class="b-box center">
@@ -16046,22 +16061,54 @@
 							<p class="inside t4 m05">Historie</p>
 						</div>
 						<div class="bk"><!--img-->
-							<figure class="f m37 t21"><img loading="lazy" src="ico/his/scirocco.gif" alt="VW Scirocco" width="407" height="267"><figcaption class="nomal_title">VW Scirocco</figcaption></figure>
-							<figure class="f m14 t31"><img loading="lazy" src="ico/his/Motorwagen_Serienversion.gif" alt="Benz Patent-Motorwagen Nummer 1" width="300" height="200"><figcaption class="nomal_title">Benz Patent-Motorwagen Nummer 1</figcaption></figure>
-							<figure class="f m44 t12"><img loading="lazy" src="ico/his/Magirus-Deutz.gif" alt="Magirus-Deutz" width="450" height="338"><figcaption class="nomal_title">Magirus-Deutz</figcaption></figure>
-							<figure class="f m2 t26"><img loading="lazy" src="ico/his/Stratos.gif" alt="Lancia Stratos" width="400" height="246"><figcaption class="nomal_title">Lancia Stratos</figcaption></figure>
-							<figure class="f m05 t26"><img loading="lazy" src="ico/his/02.gif" alt="BMW 02" width="450" height="215"><figcaption class="nomal_title">BMW 02</figcaption></figure>
-							<figure class="f m24a t12"><img loading="lazy" src="ico/his/e_type.gif" alt="Jaguar E-Type" width="450" height="214"><figcaption class="nomal_title">Jaguar E-Type</figcaption></figure>
-							<figure class="f m17b t21"><img loading="lazy" src="ico/his/p6.gif" alt="Rover P6" width="450" height="231"><figcaption class="nomal_title">Rover P6</figcaption></figure>
-							<figure class="f m12 t35"><img loading="lazy" src="ico/his/continental.gif" alt="Lincoln Continental" width="450" height="248"><figcaption class="nomal_title">Lincoln Continental</figcaption></figure>
-							<figure class="f m06 t35"><img loading="lazy" src="ico/his/240.gif" alt="Volvo 240" width="469" height="311"><figcaption class="nomal_title">Volvo 240</figcaption></figure>
-							<figure class="f m24a t23"><img loading="lazy" src="ico/his/imp.gif" alt="Hillman Imp" width="450" height="235"><figcaption class="nomal_title">Hillman Imp</figcaption></figure>
-							<figure class="f m10 t26"><img loading="lazy" src="ico/his/gremlin.gif" alt="AMC Gremlin" width="450" height="264"><figcaption class="nomal_title">AMC Gremlin</figcaption></figure>
-							<figure class="f m29 t12"><img loading="lazy" src="ico/his/a110.gif" alt="Alpine A110" width="450" height="231"><figcaption class="nomal_title">Alpine A110</figcaption></figure>
-							<figure class="f t44"><img loading="lazy" src="ico/his/360.gif" alt="Subaru 360" width="400" height="250"><figcaption class="nomal_title">Subaru 360</figcaption></figure>
-							<figure class="f m29a t21"><img loading="lazy" src="ico/his/crown.gif" alt="Toyota Crown" width="450" height="306"><figcaption class="nomal_title">Toyota Crown</figcaption></figure>
-							<figure class="f m30 t21"><img loading="lazy" src="ico/his/greyhound.gif" alt="Greyhound" width="650" height="288"><figcaption class="nomal_title">Greyhound</figcaption></figure>
-							<figure class="f m3 t37"><img loading="lazy" src="ico/his/corvette.gif" alt="Chevrolet Corvette Stingray" width="450" height="252"><figcaption class="nomal_title">Chevrolet Corvette Stingray</figcaption></figure>
+							<figure class="f m37 t21"><img loading="lazy" src="ico/his/scirocco.gif" alt="VW Scirocco" width="407" height="267">
+								<figcaption class="nomal_title">VW Scirocco</figcaption>
+							</figure>
+							<figure class="f m14 t31"><img loading="lazy" src="ico/his/Motorwagen_Serienversion.gif" alt="Benz Patent-Motorwagen Nummer 1" width="300" height="200">
+								<figcaption class="nomal_title">Benz Patent-Motorwagen Nummer 1</figcaption>
+							</figure>
+							<figure class="f m44 t12"><img loading="lazy" src="ico/his/Magirus-Deutz.gif" alt="Magirus-Deutz" width="450" height="338">
+								<figcaption class="nomal_title">Magirus-Deutz</figcaption>
+							</figure>
+							<figure class="f m2 t26"><img loading="lazy" src="ico/his/Stratos.gif" alt="Lancia Stratos" width="400" height="246">
+								<figcaption class="nomal_title">Lancia Stratos</figcaption>
+							</figure>
+							<figure class="f m05 t26"><img loading="lazy" src="ico/his/02.gif" alt="BMW 02" width="450" height="215">
+								<figcaption class="nomal_title">BMW 02</figcaption>
+							</figure>
+							<figure class="f m24a t12"><img loading="lazy" src="ico/his/e_type.gif" alt="Jaguar E-Type" width="450" height="214">
+								<figcaption class="nomal_title">Jaguar E-Type</figcaption>
+							</figure>
+							<figure class="f m17b t21"><img loading="lazy" src="ico/his/p6.gif" alt="Rover P6" width="450" height="231">
+								<figcaption class="nomal_title">Rover P6</figcaption>
+							</figure>
+							<figure class="f m12 t35"><img loading="lazy" src="ico/his/continental.gif" alt="Lincoln Continental" width="450" height="248">
+								<figcaption class="nomal_title">Lincoln Continental</figcaption>
+							</figure>
+							<figure class="f m06 t35"><img loading="lazy" src="ico/his/240.gif" alt="Volvo 240" width="469" height="311">
+								<figcaption class="nomal_title">Volvo 240</figcaption>
+							</figure>
+							<figure class="f m24a t23"><img loading="lazy" src="ico/his/imp.gif" alt="Hillman Imp" width="450" height="235">
+								<figcaption class="nomal_title">Hillman Imp</figcaption>
+							</figure>
+							<figure class="f m10 t26"><img loading="lazy" src="ico/his/gremlin.gif" alt="AMC Gremlin" width="450" height="264">
+								<figcaption class="nomal_title">AMC Gremlin</figcaption>
+							</figure>
+							<figure class="f m29 t12"><img loading="lazy" src="ico/his/a110.gif" alt="Alpine A110" width="450" height="231">
+								<figcaption class="nomal_title">Alpine A110</figcaption>
+							</figure>
+							<figure class="f t44"><img loading="lazy" src="ico/his/360.gif" alt="Subaru 360" width="400" height="250">
+								<figcaption class="nomal_title">Subaru 360</figcaption>
+							</figure>
+							<figure class="f m29a t21"><img loading="lazy" src="ico/his/crown.gif" alt="Toyota Crown" width="450" height="306">
+								<figcaption class="nomal_title">Toyota Crown</figcaption>
+							</figure>
+							<figure class="f m30 t21"><img loading="lazy" src="ico/his/greyhound.gif" alt="Greyhound" width="650" height="288">
+								<figcaption class="nomal_title">Greyhound</figcaption>
+							</figure>
+							<figure class="f m3 t37"><img loading="lazy" src="ico/his/corvette.gif" alt="Chevrolet Corvette Stingray" width="450" height="252">
+								<figcaption class="nomal_title">Chevrolet Corvette Stingray</figcaption>
+							</figure>
 						</div>
 						<h4 class="displayNone">International Harvester,Neoplan</h4><!--bgc-pp-->
 						<div class="box21">
