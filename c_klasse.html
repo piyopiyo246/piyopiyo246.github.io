@@ -8,7 +8,7 @@
 	<meta name="format-detection" content="telephone=no">
 
 	<!-- GA4計測タグ -->
-	<script>
+	<!-- <script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag() { dataLayer.push(arguments); }
 		gtag('js', new Date());
@@ -16,8 +16,26 @@
 			cookie_flags: 'SameSite=None;Secure',
 			debug_mode: true	// 初期検証時のみ有効化
 		});
+	</script> -->
+
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		// 強化版config設定
+		gtag('config', 'G-5V9EW158CK', {
+			send_page_view: true,
+			cookie_flags: 'SameSite=None;Secure',
+			groups: 'GA4'  // グループ指定で管理しやすく
+		});
+
+		// GTM連携のための追加イベント
+		gtag('event', 'gtm.js', {
+			'gtm.uniqueEventId': Math.floor(Math.random() * 1000000)
+		});
 	</script>
-	
+
 	<!-- 2. コアメタデータ -->
 	<title>Ｃクラス総合スレッドのテンプレ | スペック・総合情報</title>
 	<meta name="description" content="メルセデスＣクラス総合スレッドのテンプレートとして、ほぼ文字情報でスペック等を掲載しています。">
@@ -41,7 +59,7 @@
 	<link rel="stylesheet" href="./style_v.min.css">
 
 	<!-- 6. Cookie同意管理システム -->
-	<script>
+	<!-- <script>
 		window._cookiescript = {
 			hasConsent: () => localStorage.getItem('cookie_consent') === 'true',
 			loadGTM: () => {
@@ -54,6 +72,64 @@
 			}
 		};
 		if (window._cookiescript.hasConsent()) window._cookiescript.loadGTM();
+	</script> -->
+	<!-- 6. Cookie同意管理システム -->
+	<script>
+		window._cookiescript = {
+			hasConsent: () => localStorage.getItem('cookie_consent') === 'true',
+
+			// ▼▼▼ 更新したloadGTM関数 ▼▼▼
+			loadGTM: () => {
+				// GA4同意更新（必須）
+				if (window.gtag) {
+					gtag('consent', 'update', {
+						analytics_storage: 'granted',
+						ad_storage: 'denied',
+						functionality_storage: 'granted'
+					});
+				}
+
+				// GTM読み込み（従来通り）
+				(function (w, d, s, l, i) {
+					w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+					var j = d.createElement(s), f = d.getElementsByTagName(s)[0];
+					j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i;
+					f.parentNode.insertBefore(j, f);
+
+					// 追加イベント送信
+					window.dataLayer.push({
+						event: 'CookieConsentGranted',
+						consentLevel: 'full'
+					});
+				})(window, document, 'script', 'dataLayer', 'GTM-MMJ4PJ3');
+			},
+			// ▲▲▲ 更新終わり ▲▲▲
+
+			// 新規追加: 同意リセット関数
+			resetConsent: () => {
+				localStorage.removeItem('cookie_consent');
+				if (window.gtag) {
+					gtag('consent', 'default', {
+						analytics_storage: 'denied',
+						ad_storage: 'denied'
+					});
+				}
+			}
+		};
+
+		// 初期読み込み時の同意状態チェック
+		if (window._cookiescript.hasConsent()) {
+			window._cookiescript.loadGTM();
+		} else {
+			// 未同意時のデフォルト設定
+			if (window.gtag) {
+				gtag('consent', 'default', {
+					analytics_storage: 'denied',
+					ad_storage: 'denied',
+					wait_for_update: 500
+				});
+			}
+		}
 	</script>
 </head>
 
@@ -22292,6 +22368,17 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.min.css"><!--lightbox css-->
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script> <!-- lightbox js-->
 <!-- <script defer src="js/lazysizes.min.js"></script>lazy -->
-<script defer src="js/flexcroll.js"></script><!-- 横scroll -->
+
+<!-- 横scroll -->
+<!-- <script defer src="js/flexcroll.js"></script> -->
+<!-- 問題のスクリプトを修正 -->
+<script>
+	// 既存のfleXcrollInitスクリプトを以下で置換
+	document.addEventListener('DOMContentLoaded', function () {
+		if (typeof fleXcrollInit === 'function') {
+			fleXcrollInit();
+		}
+	});
+</script>
 
 </html>
