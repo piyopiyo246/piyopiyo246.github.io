@@ -22345,6 +22345,29 @@
 	<p id="close-accordion">
 		<a href="#" class="vmenu_all_action" onclick="doReplaceClassName('vmenu_on','vmenu_off'); return false;" title="全て閉じる / Alle Öffnungen schließen">&#9654;</a>
 	</p>
+
+	<!--  緊急対応スクリプト -->
+	<noscript>
+		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MMJ4PJ3&gtm_auth=XXXXXX&gtm_preview=env-1" height="0" width="0" style="display:none;visibility:hidden">
+		</iframe>
+	</noscript>
+
+	<script>
+		window.addEventListener('load', function () {
+			setTimeout(function () {
+				if (!window.dataLayer?.some(e => e.event === 'page_view')) {
+					navigator.sendBeacon('https://www.google-analytics.com/g/collect',
+						new URLSearchParams({
+							v: '2',
+							tid: 'G-5V9EW158CK',
+							en: 'page_view',
+							dl: window.location.href,
+							sid: Math.floor(Date.now() / 1000) // セッションID追加
+						}));
+				}
+			}, 3000);
+		});
+	</script>
 </body>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script><!-- scrollTop “difer”はダメ絶対！-->
