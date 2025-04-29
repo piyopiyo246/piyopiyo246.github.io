@@ -25,7 +25,7 @@
 		});
 	</script>
 
-	<!-- 2. コアメタデータ -->
+	<!-- 2. Core Metadata -->
 	<title>Ｃクラス総合スレッドのテンプレ | スペック・総合情報</title>
 	<meta name="description" content="メルセデスＣクラス総合スレッドのテンプレートとして、ほぼ文字情報でスペック等を掲載しています。">
 	<link rel="canonical" href="https://piyopiyo246.github.io/c_klasse.html">
@@ -22465,28 +22465,6 @@
 	</script>
 </body>
 
-<!-- スクロールしてトップ -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script><!-- scrollTop “difer”はダメ絶対！-->
-<script>
-	$(function () {
-		var topBtn = $('#page-top'); topBtn.hide();
-		$(window).scroll(function () {
-			if ($(this).scrollTop() > 100) {
-				topBtn.fadeIn();
-			} else {
-				topBtn.fadeOut();
-			}
-		});
-
-		topBtn.click(function () {
-			$('body,html').animate({
-				scrollTop: 0
-			}, 500);
-			return false;
-		});
-	});
-</script>
-
 <!--展開と折りたたみ-->
 <script defer>
 	function doToggleClassName(obj, onClassName, offClassName) { obj.className = (obj.className != onClassName) ? onClassName : offClassName; }
@@ -22510,6 +22488,28 @@
 		if (typeof fleXcrollInit === 'function') {
 			fleXcrollInit();
 		}
+	});
+</script>
+
+<!-- スクロールしてトップ -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script><!-- scrollTop “difer”はダメ絶対！-->
+<script>
+	$(function () {
+		var topBtn = $('#page-top'); topBtn.hide();
+		$(window).scroll(function () {
+			if ($(this).scrollTop() > 100) {
+				topBtn.fadeIn();
+			} else {
+				topBtn.fadeOut();
+			}
+		});
+
+		topBtn.click(function () {
+			$('body,html').animate({
+				scrollTop: 0
+			}, 500);
+			return false;
+		});
 	});
 </script>
 

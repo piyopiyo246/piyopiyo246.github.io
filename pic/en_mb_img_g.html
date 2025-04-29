@@ -2,10 +2,28 @@
 <html lang="en">
 
 <head>
-	<!-- 1. Basic Settings -->
+	<!-- 1. 基本設定（必須） -->
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
+
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		// 強化版config設定
+		gtag('config', 'G-5V9EW158CK', {
+			send_page_view: true,
+			cookie_flags: 'SameSite=None;Secure',
+			groups: 'GA4'  // グループ指定で管理しやすく
+		});
+
+		// GTM連携のための追加イベント
+		gtag('event', 'gtm.js', {
+			'gtm.uniqueEventId': Math.floor(Math.random() * 1000000)
+		});
+	</script>
 
 	<!-- 2. Core Metadata -->
 	<title>G-class | Mercedes-Benz Pkw GALLERY</title>
@@ -50,25 +68,177 @@
 		}
 	</script>
 
-	<!-- 6. Cookie Manager -->
+	<!-- 6. Cookie同意管理システム -->
 	<script>
 		window._cookiescript = {
-			hasConsent: () => localStorage.getItem('cookie_consent') === 'true',
+			hasConsent: () => {
+				try {
+					return localStorage.getItem('cookie_consent') === 'true';
+				} catch (e) {
+					console.error('CookieConsent Read Error:', e);
+					return false; // エラー時は安全側に倒す
+				}
+			},
+
 			loadGTM: () => {
-				(function (w, d, s, l, i) {
-					w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-					var j = d.createElement(s), f = d.getElementsByTagName(s)[0];
-					j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i;
-					f.parentNode.insertBefore(j, f);
-				})(window, document, 'script', 'dataLayer', 'GTM-MMJ4PJ3');
+				try {
+					// ▼▼▼ GA4同意更新（エラーハンドリング追加）▼▼▼
+					if (window.gtag) {
+						gtag('consent', 'update', {
+							analytics_storage: 'granted',
+							ad_storage: 'denied',
+							functionality_storage: 'granted',
+							region: ['JP'],
+							// デバッグ用パラメータ（本番では削除）
+							debug_mode: location.hostname.includes('localhost')
+						});
+
+						// 追加イベントで同意を記録
+						gtag('event', 'consent_update', {
+							consent_type: 'analytics',
+							granted: true
+						});
+					}
+
+					//  GTM読み込み（try-catchで囲む）
+					try {
+						(function (w, d, s, l, i) {
+							w[l] = w[l] || []; w[l].push({
+								'gtm.start': new Date().getTime(),
+								event: 'gtm.js',
+								'gtm.consent': 'granted'
+							});
+
+							var j = d.createElement(s);
+							var f = d.getElementsByTagName(s)[0];
+
+							j.onerror = () => {
+								console.error('[GTM Error] Script load failed:', j.src);
+								window.dataLayer.push({
+									event: 'gtm_load_error',
+									error_url: j.src,
+									timestamp: Date.now()
+								});
+								window._cookiescript.fallbackGA4();
+							};
+
+							j.async = true;
+							j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i;
+							f.parentNode.insertBefore(j, f);
+						})(window, document, 'script', 'dataLayer', 'GTM-MMJ4PJ3');
+					} catch (gtmError) {
+						console.error('GTM Init Error:', gtmError);
+						window._cookiescript.fallbackGA4();
+					}
+
+					// データレイヤー記録（エラーログ付き）
+					window.dataLayer.push({
+						event: 'CookieConsentGranted',
+						consentLevel: 'full',
+						debug_timestamp: new Date().toISOString()
+					});
+
+				} catch (mainError) {
+					console.error('Consent Flow Error:', mainError);
+					// 緊急フォールバック
+					this.fallbackGA4();
+				}
+			},
+
+			// 強化したリセット関数 
+			resetConsent: () => {
+				try {
+					localStorage.removeItem('cookie_consent');
+					if (window.gtag) {
+						gtag('consent', 'default', {
+							analytics_storage: 'denied',
+							ad_storage: 'denied',
+							wait_for_update: 1000
+						});
+						gtag('event', 'consent_reset');
+					}
+					window.dataLayer.push({
+						event: 'CookieConsentReset',
+						reset_time: Date.now()
+					});
+				} catch (e) {
+					console.error('Consent Reset Failed:', e);
+				}
+			},
+
+			//  フォールバック計測 
+			fallbackGA4: () => {
+				console.group('[Fallback GA4]');
+				try {
+					const url = 'https://www.google-analytics.com/g/collect';
+					const params = {
+						v: '2',
+						tid: 'G-5V9EW158CK',
+						en: 'fallback_pageview',
+						dl: encodeURIComponent(location.href),
+						_p: Math.random().toString(36).slice(2),
+						_z: 'clib'
+					};
+
+					// 送信方法の自動選択
+					if (navigator.sendBeacon) {
+						const success = navigator.sendBeacon(url, new URLSearchParams(params));
+						console.log('sendBeacon Result:', success);
+					} else {
+						new Image().src = `${url}?${new URLSearchParams(params)}`;
+						console.log('Image Ping Sent');
+					}
+				} catch (e) {
+					console.error('Fallback Failed:', e);
+				}
+				console.groupEnd();
 			}
 		};
-		if (window._cookiescript.hasConsent()) window._cookiescript.loadGTM();
+
+		// コンソールから直接実行可能なテスト関数
+		window._testFallback = function () {
+			delete window.gtag;
+			console.clear();
+			console.log('%c=== TESTING FALLBACK MECHANISM ===', 'color:red');
+			window._cookiescript.fallbackGA4();
+		};
+
+		// 初期化処理（エラーハンドリング追加）
+		try {
+			if (window._cookiescript.hasConsent()) {
+				setTimeout(() => {
+					window._cookiescript.loadGTM();
+				}, 500); // 遅延実行で競合防止
+			} else {
+				window.gtag?.('consent', 'default', {
+					analytics_storage: 'denied',
+					ad_storage: 'denied',
+					functionality_storage: 'granted',
+					wait_for_update: 500,
+					region: ['JP']
+				});
+			}
+		} catch (initError) {
+			console.error('Initial Consent Error:', initError);
+		}
 	</script>
 </head>
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GT-KFG3B2J"></script>
+<!-- </body>直前に追加 -->
+<script>
+	if (!window.dataLayer.some(e => e.event === 'page_view')) {
+		gtag('event', 'page_view', {
+			page_title: document.title,
+			page_location: location.href,
+			send_to: 'G-5V9EW158CK'
+		});
+	}
+</script>
+
 <body>
-	<!-- 7. Cookie Banner -->
+	<!-- 7. Cookie同意バナー（最初に読み込み） -->
 	<script>
 		document.addEventListener('CookieScriptAccept', () => {
 			localStorage.setItem('cookie_consent', 'true');
@@ -77,7 +247,7 @@
 	</script>
 	<script src="//cdn.cookie-script.com/s/8e78f8bb08fea7bc4ae66adb24bb7b98.js"></script>
 
-	<!-- 8. GTM noscript -->
+	<!-- 8. GTM noscriptフォールバック -->
 	<noscript>
 		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MMJ4PJ3" height="0" width="0" style="display:none;visibility:hidden"></iframe>
 	</noscript>
@@ -478,9 +648,61 @@
 			<a class="vmenu_all_action" onclick="doReplaceClassName ('vmenu_on2','vmenu_off')" title="Close all openings">&#9654;</a>
 		</p>
 	</div>
+
+	<!--  緊急対応スクリプト -->
+	<noscript>
+		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MMJ4PJ3&gtm_auth=XXXXXX&gtm_preview=env-1" height="0" width="0" style="display:none;visibility:hidden">
+		</iframe>
+	</noscript>
+
+	<script>
+		window.addEventListener('load', function () {
+			setTimeout(function () {
+				if (!window.dataLayer?.some(e => e.event === 'page_view')) {
+					navigator.sendBeacon('https://www.google-analytics.com/g/collect',
+						new URLSearchParams({
+							v: '2',
+							tid: 'G-5V9EW158CK',
+							en: 'page_view',
+							dl: window.location.href,
+							sid: Math.floor(Date.now() / 1000) // セッションID追加
+						}));
+				}
+			}, 3000);
+		});
+	</script>
+
+	<!-- </body>直前に追加 -->
+	<script>
+		// 同意状態の強制初期化
+		window.dataLayer = window.dataLayer || [];
+		function initializeConsent() {
+			const defaultConsent = {
+				analytics_storage: 'denied',
+				ad_storage: 'denied',
+				functionality_storage: 'granted',
+				region: ['JP']
+			};
+
+			// GTM用設定
+			window.dataLayer.push({
+				'gtm.consent': defaultConsent,
+				'gtm.uniqueEventId': Date.now()
+			});
+
+			// GA4用設定
+			if (window.gtag) {
+				gtag('consent', 'default', defaultConsent);
+			}
+		}
+
+		// DOM読み込み完了後＆GTM初期化前に実行
+		document.addEventListener('DOMContentLoaded', initializeConsent);
+	</script>
 </body>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<!-- スクロールしてトップ -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script><!-- scrollTop “difer”はダメ絶対！-->
 <script>
 	$(function () {
 		var topBtn = $('#page-top'); topBtn.hide();
