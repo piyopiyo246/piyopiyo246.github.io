@@ -68,6 +68,71 @@ p {
 	margin: 0;
 }
 
+/*文字列*/
+a {
+	text-decoration: underline;
+	text-decoration-thickness: 0.7px;
+}
+
+a:link {
+	color: #000;
+}
+
+a:visited {
+	color: #000;
+}
+
+.lnk:hover {
+	color: #000;
+}
+
+.lnk2:hover {
+	color: #2600ff;
+}
+
+a.lnk3 {
+	color: #fbfbfb;
+	line-height: 40px;
+}
+
+a.lnk3:visited {
+	color: #fbfbfb;
+}
+
+a.lnk3:hover {
+	border-bottom: solid 1px #f2f2f2;
+}
+
+a.model {
+	color: #f2f2f2;
+}
+
+a.model:visited {
+	color: #f2f2f2;
+}
+
+.top {
+	vertical-align: top;
+}
+
+.left {
+	text-align: left;
+}
+
+.mid {
+	text-align: center;
+}
+
+.r,
+.ru {
+	text-align: right;
+	margin-right: 30px;
+}
+
+.ru {
+	margin-top: -33.3px;
+}
+
 .justify {
 	text-align: justify;
 }
@@ -76,15 +141,22 @@ p {
 	font-weight: bold;
 	color: #666
 }
+
 .b_cancel {
 	font-weight: normal;
 }
+
 .aa {
 	font-family: 'MS UI Gothic', "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 	font-size: 16px;
 	line-height: 0.95;
 	margin: 20px 0 15px 30px;
 }
+
+.hiragino {
+	font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+}
+
 .ch {
 	font-family: 'MS UI Gothic', "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
@@ -93,6 +165,7 @@ hr {
 	margin-left: 4px;
 	border-top: 1.4px solid #666;
 }
+
 .tin {
 	border-top: 0.1px solid #999;
 }
@@ -271,6 +344,16 @@ hr {
 
 .searchArea .searchText:hover {
 	background: #d3e37f;
+}
+
+.model {
+	box-sizing: border-box;
+	max-width: 100%;
+	padding: 0 2px;
+	color: #fff;
+	border: 2px solid #fff;
+	background: #666;
+	border-radius: 2px;
 }
 
 /*img・ico*/
@@ -743,7 +826,6 @@ iframe {
 /* 画像マウスホバー時 */
 .yt_video img:hover {
 	cursor: pointer;
-	/* リンクカーソル指定 */
 	width: 100%;
 	height: auto;
 	box-sizing: border-box;
@@ -752,9 +834,7 @@ iframe {
 /* YouTubeアイコンマウスホバー時 */
 .yt_video:hover::before {
 	color: #32cd32;
-	/* アイコンカラー */
 	transition: .5s;
-	/* ゆっくり変化 */
 }
 
 .maker_button {
