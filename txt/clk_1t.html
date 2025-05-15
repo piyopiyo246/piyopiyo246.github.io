@@ -173,14 +173,6 @@
 			}
 		};
 
-		// コンソールから直接実行可能なテスト関数
-		window._testFallback = function () {
-			delete window.gtag;
-			console.clear();
-			console.log('%c=== TESTING FALLBACK MECHANISM ===', 'color:red');
-			window._cookiescript.fallbackGA4();
-		};
-
 		// 初期化処理（エラーハンドリング追加）
 		try {
 			if (window._cookiescript.hasConsent()) {
