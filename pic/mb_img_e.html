@@ -89,7 +89,7 @@
 							analytics_storage: 'granted',
 							ad_storage: 'denied',
 							functionality_storage: 'granted',
-							region: ['DE', 'AT', 'CH'] ,
+							region: ['DE', 'AT', 'CH', 'CZ']  ,
 							// デバッグ用パラメータ（本番では削除）
 							debug_mode: location.hostname.includes('localhost')
 						});
@@ -208,7 +208,7 @@
 					ad_storage: 'denied',
 					functionality_storage: 'granted',
 					wait_for_update: 500,
-					region: ['DE', 'AT', 'CH'] 
+					region: ['DE', 'AT', 'CH', 'CZ']  
 				});
 			}
 		} catch (initError) {
@@ -1065,7 +1065,7 @@
 				analytics_storage: 'denied',
 				ad_storage: 'denied',
 				functionality_storage: 'granted',
-				region: ['DE', 'AT', 'CH'] 
+				region: ['DE', 'AT', 'CH', 'CZ']  
 			};
 
 			// GTM用設定
