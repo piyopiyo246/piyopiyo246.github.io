@@ -65,7 +65,7 @@ span {
 .af1:after {
 	content: "/";
 	color: #999;
-	margin-left: 10px;
+	margin-left: 5px;
 }
 .bf2:before {
 	content: ">>";
