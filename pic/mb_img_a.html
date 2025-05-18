@@ -93,9 +93,9 @@
 							debug_mode: location.hostname.includes('localhost')
 						});
 
+						consent_type: 'analytics',
 						// 追加イベントで同意を記録
 						gtag('event', 'consent_update', {
-							consent_type: 'analytics',
 							granted: true
 						});
 					}

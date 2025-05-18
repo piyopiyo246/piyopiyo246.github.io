@@ -7,24 +7,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
 
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
-
-		// 強化版config設定
-		gtag('config', 'G-5V9EW158CK', {
-			send_page_view: true,
-			cookie_flags: 'SameSite=None;Secure',
-			groups: 'GA4'  // グループ指定で管理しやすく
-		});
-
-		// GTM連携のための追加イベント
-		gtag('event', 'gtm.js', {
-			'gtm.uniqueEventId': Math.floor(Math.random() * 1000000)
-		});
-	</script>
-
 	<!-- 2. Core Metadata -->
 	<title>メルセデス・ベンツ総合スレッド | 過去ログ倉庫</title>
 	<meta name="description" content="メルセデス・ベンツ総合スレッド全過去ログです。検索用にお使い下さい。">
@@ -46,7 +28,62 @@
 	<!-- 5. CSS -->
 	<link rel="stylesheet" href="./log.min.css">
 
-	<!-- 6. Cookie同意管理システム -->
+	<!-- クッキー同意バナー用のカスタムCSS -->
+	<style>
+		/* クッキー同意バナーのスタイル修正 */
+		#cookiescript_injected {
+			z-index: 999999 !important;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.3) !important;
+		}
+
+		#cookiescript_buttons {
+			display: flex !important;
+			justify-content: center !important;
+			gap: 10px !important;
+		}
+
+		#cookiescript_accept {
+			background-color: #1976d2 !important;
+			padding: 8px 16px !important;
+			border-radius: 4px !important;
+		}
+
+		#cookiescript_reject {
+			background-color: #f5f5f5 !important;
+			color: #333 !important;
+			padding: 8px 16px !important;
+			border-radius: 4px !important;
+		}
+
+		@media (max-width: 768px) {
+			#cookiescript_injected {
+				max-width: 90% !important;
+				left: 5% !important;
+				right: 5% !important;
+			}
+		}
+	</style>
+
+	<!-- 6. Google Analytics 設定（トラッキングコード基本設定） -->
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		// 強化版config設定
+		gtag('config', 'G-5V9EW158CK', {
+			send_page_view: true,
+			cookie_flags: 'SameSite=None;Secure',
+			groups: 'GA4'  // グループ指定で管理しやすく
+		});
+
+		// GTM連携のための追加イベント
+		gtag('event', 'gtm.js', {
+			'gtm.uniqueEventId': Math.floor(Math.random() * 1000000)
+		});
+	</script>
+
+	<!-- 7. Cookie同意管理システム -->
 	<script>
 		window._cookiescript = {
 			hasConsent: () => {
@@ -192,23 +229,18 @@
 			console.error('Initial Consent Error:', initError);
 		}
 	</script>
+
+	<!-- Google Analytics タグマネージャー -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=GT-KFG3B2J"></script>
 </head>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=GT-KFG3B2J"></script>
-<!-- </body>直前に追加 -->
-<script>
-	if (!window.dataLayer.some(e => e.event === 'page_view')) {
-		gtag('event', 'page_view', {
-			page_title: document.title,
-			page_location: location.href,
-			send_to: 'G-5V9EW158CK'
-		});
-	}
-</script>
-
 <body>
-	<!-- 7. Cookie同意バナー（最初に読み込み） -->
+	<!-- 8. GTM noscriptフォールバック -->
+	<noscript>
+		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MMJ4PJ3" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+	</noscript>
+
+	<!-- 9. Cookie同意バナー（body直後に移動） -->
 	<script>
 		document.addEventListener('CookieScriptAccept', () => {
 			localStorage.setItem('cookie_consent', 'true');
@@ -216,11 +248,6 @@
 		});
 	</script>
 	<script src="//cdn.cookie-script.com/s/8e78f8bb08fea7bc4ae66adb24bb7b98.js"></script>
-
-	<!-- 8. GTM noscriptフォールバック -->
-	<noscript>
-		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MMJ4PJ3" height="0" width="0" style="display:none;visibility:hidden"></iframe>
-	</noscript>
 
 	<header>
 		<ul class="f" itemscope itemtype="https://schema.org/BreadcrumbList">
@@ -52674,65 +52701,36 @@ zutotototototototototototototoototootoototttttttttt
 (^^)
 (^^)
 (^^)
-		</p>
-		<hr>
-	</article>
-	<p id="page-top"><a href="#head">&#9650;</a></p>
+</p>
+<hr>
+</article>
+<p id="page-top"><a href="#head">&#9650;</a></p>
 
-	<!--  緊急対応スクリプト -->
-	<noscript>
-		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MMJ4PJ3&gtm_auth=XXXXXX&gtm_preview=env-1" height="0" width="0" style="display:none;visibility:hidden">
-		</iframe>
-	</noscript>
+<!--  緊急対応スクリプト -->
+<noscript>
+	<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MMJ4PJ3&gtm_auth=XXXXXX&gtm_preview=env-1" height="0" width="0" style="display:none;visibility:hidden">
+	</iframe>
+</noscript>
 
-	<script>
-		window.addEventListener('load', function () {
-			setTimeout(function () {
-				if (!window.dataLayer?.some(e => e.event === 'page_view')) {
-					navigator.sendBeacon('https://www.google-analytics.com/g/collect',
-						new URLSearchParams({
-							v: '2',
-							tid: 'G-5V9EW158CK',
-							en: 'page_view',
-							dl: window.location.href,
-							sid: Math.floor(Date.now() / 1000) // セッションID追加
-						}));
-				}
-			}, 3000);
-		});
-	</script>
-
-	<!-- </body>直前に追加 -->
-	<script>
-		// 同意状態の強制初期化
-		window.dataLayer = window.dataLayer || [];
-		function initializeConsent() {
-			const defaultConsent = {
-				analytics_storage: 'denied',
-				ad_storage: 'denied',
-				functionality_storage: 'granted',
-				region: ['JP']
-			};
-
-			// GTM用設定
-			window.dataLayer.push({
-				'gtm.consent': defaultConsent,
-				'gtm.uniqueEventId': Date.now()
-			});
-
-			// GA4用設定
-			if (window.gtag) {
-				gtag('consent', 'default', defaultConsent);
+<script>
+	window.addEventListener('load', function () {
+		setTimeout(function () {
+			if (!window.dataLayer?.some(e => e.event === 'page_view')) {
+				navigator.sendBeacon('https://www.google-analytics.com/g/collect',
+					new URLSearchParams({
+						v: '2',
+						tid: 'G-5V9EW158CK',
+						en: 'page_view',
+						dl: window.location.href,
+						sid: Math.floor(Date.now() / 1000) // セッションID追加
+					}));
 			}
-		}
+		}, 3000);
+	});
+</script>
 
-		// DOM読み込み完了後＆GTM初期化前に実行
-		document.addEventListener('DOMContentLoaded', initializeConsent);
-	</script>
-</body>
-
-<!-- スクロールしてトップ -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script><!-- scrollTop “difer”はダメ絶対！-->
+<!-- ページTOPへ戻るスクリプト -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script>
 	$(function () {
 		var topBtn = $('#page-top'); topBtn.hide();
@@ -52752,5 +52750,34 @@ zutotototototototototototototoototootoototttttttttt
 		});
 	});
 </script>
+
+<!-- 同意状態の強制初期化（文書終わりに移動） -->
+<script>
+	// 同意状態の強制初期化
+	window.dataLayer = window.dataLayer || [];
+	function initializeConsent() {
+		const defaultConsent = {
+			analytics_storage: 'denied',
+			ad_storage: 'denied',
+			functionality_storage: 'granted',
+			region: ['JP']
+		};
+
+		// GTM用設定
+		window.dataLayer.push({
+			'gtm.consent': defaultConsent,
+			'gtm.uniqueEventId': Date.now()
+		});
+
+		// GA4用設定
+		if (window.gtag) {
+			gtag('consent', 'default', defaultConsent);
+		}
+	}
+
+	// DOM読み込み完了後＆GTM初期化前に実行
+	document.addEventListener('DOMContentLoaded', initializeConsent);
+</script>
+</body>
 
 </html>
