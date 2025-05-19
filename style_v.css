@@ -2618,7 +2618,6 @@
 .xl_w {
 	vertical-align: middle;
 	text-align: center;
-	color: white;
 	font-size: 12.0pt;
 	font-weight: 700;
 	border: .5pt solid gray;
@@ -2630,17 +2629,14 @@
 }
 
 .xl_s {
-	color: black;
 	background: #ffff4e;
 }
 
 .xl_b {
-	color: black;
 	background: #FFCCFF;
 }
 
 .xl_ce {
-	color: black;
 	background: #CCFFCC;
 }
 
@@ -2649,12 +2645,10 @@
 }
 
 .xl_clk {
-	color: black;
 	background: #CCECFF;
 }
 
 .xl_cl {
-	color: black;
 	background: #FFFF99;
 }
 
@@ -2671,12 +2665,10 @@
 }
 
 .xl_v {
-	color: black;
 	background: #D9D9D9;
 }
 
 .xl_g {
-	color: black;
 	background: #FFC000;
 }
 
@@ -2689,6 +2681,5 @@
 }
 
 .xl_w {
-	color: gray;
 	background: white;
 }
