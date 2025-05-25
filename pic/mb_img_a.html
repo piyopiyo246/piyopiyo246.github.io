@@ -88,16 +88,16 @@
 							analytics_storage: 'granted',
 							ad_storage: 'denied',
 							functionality_storage: 'granted',
-							region: ['DE', 'AT', 'CH', 'CZ']  ,
+							region: ['DE', 'AT', 'CH', 'CZ'],
 							// デバッグ用パラメータ（本番では削除）
 							debug_mode: location.hostname.includes('localhost')
 						});
 
 						consent_type: 'analytics',
-						// 追加イベントで同意を記録
-						gtag('event', 'consent_update', {
-							granted: true
-						});
+							// 追加イベントで同意を記録
+							gtag('event', 'consent_update', {
+								granted: true
+							});
 					}
 
 					//  GTM読み込み（try-catchで囲む）
@@ -206,7 +206,7 @@
 					ad_storage: 'denied',
 					functionality_storage: 'granted',
 					wait_for_update: 500,
-					region: ['DE', 'AT', 'CH', 'CZ']  
+					region: ['DE', 'AT', 'CH', 'CZ']
 				});
 			}
 		} catch (initError) {
@@ -269,7 +269,7 @@
 						<meta itemprop="position" content="3" />
 					</li>
 				</ul>
-				<h1 class="b bf4">A-klasse</h1>
+				<h1 class="b bf4">A-klasse GALERIE</h1>
 				<div style="display: flex; justify-content: space-between;">
 					<dl class="m1">
 						<dt class="s2 af0">Baureihe</dt>
@@ -676,7 +676,7 @@
 				analytics_storage: 'denied',
 				ad_storage: 'denied',
 				functionality_storage: 'granted',
-				region: ['DE', 'AT', 'CH', 'CZ']  
+				region: ['DE', 'AT', 'CH', 'CZ']
 			};
 
 			// GTM用設定
@@ -708,7 +708,7 @@
 				topBtn.fadeOut();
 			}
 		});
-	
+
 		topBtn.click(function () {
 			$('body,html').animate({
 				scrollTop: 0
