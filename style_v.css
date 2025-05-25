@@ -2566,6 +2566,9 @@
 	font-family: 'MS UI Gothic', "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 	position: relative;
 }
+.box-zeit {
+	width: 1300px;
+}
 
 /*height*/
 .ht10 {
