@@ -17,7 +17,7 @@
 		"breadcrumbs.symbolPath": "on",
 		"html.format.enable": true,
 		"editor.defaultFormatter": "vscode.html-language-features",
-		"editor.formatOnSave": true,
-		"editor.formatOnPaste": true
+		"editor.formatOnSave": false,
+		"editor.formatOnPaste": false
 	}
 }
