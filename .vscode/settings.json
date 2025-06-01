@@ -14,5 +14,16 @@
 		"vscrollerbase",
 		"Xcroll"
 	],
-	"editor.fontSize": 16
+	"editor.fontSize": 16,
+  "files.watcherExclude": {
+        "**/.git": true,
+        "**/node_modules": true,
+        "**/.svn": true,
+        "**/tmp": true,
+        "*.log": true,
+        "out/": true,
+        ".cache": true,
+        "{**/*.js,**/*.map}": true
+    }
 }
+
