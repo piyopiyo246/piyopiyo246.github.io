@@ -18,6 +18,9 @@
 		"html.format.enable": true,
 		"editor.defaultFormatter": "vscode.html-language-features",
 		"editor.formatOnSave": false,
-		"editor.formatOnPaste": false
+		"editor.formatOnPaste": false,
+		"[jsonc]": {
+			"editor.defaultFormatter": "vscode.json-language-features"
+		}
 	}
 }
