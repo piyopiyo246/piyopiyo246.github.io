@@ -194,6 +194,7 @@
 				console.groupEnd();
 			}
 		};
+
 		// 初期化処理（エラーハンドリング追加）
 		try {
 			if (window._cookiescript.hasConsent()) {
@@ -708,7 +709,6 @@
 				topBtn.fadeOut();
 			}
 		});
-
 		topBtn.click(function () {
 			$('body,html').animate({
 				scrollTop: 0
