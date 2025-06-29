@@ -89,7 +89,7 @@
 							analytics_storage: 'granted',
 							ad_storage: 'denied',
 							functionality_storage: 'granted',
-							region: ['US', 'GB', 'CA', 'AU', 'NZ', 'IE'] ,
+							region: ['US', 'GB', 'CA', 'AU', 'NZ', 'IE'],
 							// デバッグ用パラメータ（本番では削除）
 							debug_mode: location.hostname.includes('localhost')
 						});
@@ -208,7 +208,7 @@
 					ad_storage: 'denied',
 					functionality_storage: 'granted',
 					wait_for_update: 500,
-					region: ['US', 'GB', 'CA', 'AU', 'NZ', 'IE'] 
+					region: ['US', 'GB', 'CA', 'AU', 'NZ', 'IE']
 				});
 			}
 		} catch (initError) {
@@ -392,7 +392,7 @@
 					</div>
 					<section>
 						<h4 class="displayNone">Commercial vehicle</h4>
-						<h5>Station wagon</h5>
+						<h5>Estate</h5>
 						<a href="full/e/w120k_f.jpg"><img loading="lazy" src="style/e/w120k_f.webp" alt="Mercedes,W120,190,kombi,Front view" width="602" height="452"></a>
 						<a href="full/e/w120k_r.jpg"><img loading="lazy" src="style/e/w120k_r.webp" alt="Mercedes,W120,kombi,Rear view" width="602" height="452"></a>
 						<h5>Pickup Truck</h5>
@@ -406,14 +406,32 @@
 		<section id="w105">
 			<h2>Ponton ( Typ 219 )</h2>
 			<div class="style-w">
-				<a href="https://en.wikipedia.org/wiki/Mercedes-Benz_W105" class="ico-wiki m1" title="Wikipedia(E) W105"></a>
-				<h3 class="i m0">W105</h3>
-				<p class="i m1">1956 - 1959</p><br>
-				<a href="full/e/w105.jpg"><img loading="lazy" src="style/e/w105.webp" alt="Mercedes,W105,Ponton,Typ219" width="800" height="624"></a>
-				<a href="full/e/w105_d.jpg"><img loading="lazy" src="style/e/w105_d.webp" alt="Mercedes,W105,Ponton,Typ219,Dashboard" width="405" height="304"></a><br>
-				<a href="full/e/w105_r.jpg"><img loading="lazy" src="style/e/w105_r.webp" alt="Mercedes,W105,Ponton,Typ219,Rear view" width="640" height="480"></a>
-				<a href="full/e/w105_i.jpg"><img loading="lazy" src="style/e/w105_i.webp" alt="Mercedes,W105,Ponton,Typ219,Interior" width="500" height="274"></a>
-			</div>
+				<div>
+					<div class="box80"><img loading="lazy" src="style/e/w105.webp" alt="Mercedes,W105,Ponton,Typ219" width="797" height="622"></div>
+					<div class="box41">
+						<a href="full/e/w105_d.jpg"><img loading="lazy" src="style/e/w105_d.webp" alt="Mercedes,W105,Ponton,Typ219,Dashboard" width="410" height="308"></a><br>
+						<a href="full/e/w105_m.jpg"><img loading="lazy" src="style/e/w105_m.webp" alt="Mercedes,W105,Ponton,Typ219,Engine" width="410" height="308"></a>
+					</div>
+				</div>
+				<div class="vmenu_off">
+					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')">
+						<a href="https://en.wikipedia.org/wiki/Mercedes-Benz_W105" class="ico-wiki m1" title="Wikipedia(E) W105"></a>
+						<h3 class="i m0">W105</h3>
+						<p class="i m1">1956 - 1959</p><br>
+					</div>
+					<section>
+						<a href="full/e/w105_r.jpg"><img loading="lazy" src="style/e/w105_r.webp" alt="Mercedes,W105,Ponton,Typ219,Rear view" width="509" height="382"></a>
+						<img loading="lazy" src="style/e/w105_i.webp" alt="Mercedes,W105,Ponton,Typ219,Interior" width="697" height="382"><br>
+						<a href="full/e/w105_cat0.jpg"><img loading="lazy" src="style/e/w105_cat0.webp" alt="Mercedes,W105,Ponton,Typ219,Catalog" width="193" height="250"></a>
+						<a href="full/e/w105_cat4.jpg"><img loading="lazy" src="style/e/w105_cat4.webp" alt="Mercedes,W105,Ponton,Typ219,Catalog" width="353" height="250"></a>
+						<a href="full/e/w105_cat1.jpg"><img loading="lazy" src="style/e/w105_cat1.webp" alt="Mercedes,W105,Ponton,Typ219,Catalog" width="550" height="250"></a><br>
+						<a href="full/e/w105_cat2.jpg"><img loading="lazy" src="style/e/w105_cat2.webp" alt="Mercedes,W105,Ponton,Typ219,Catalog" width="569" height="250"></a>
+						<a href="full/e/w105_cat3.jpg"><img loading="lazy" src="style/e/w105_cat3.webp" alt="Mercedes,W105,Ponton,Typ219,Catalog" width="636" height="250"></a>
+						<h5>Estate</h5>
+						<a href="full/e/s105_f.jpg"><img loading="lazy" src="style/e/s105_f.webp" alt="Mercedes,W105,Ponton,Typ219,Estate,Front view" width="603" height="402"></a>
+						<a href="full/e/s105_r.jpg"><img loading="lazy" src="style/e/s105_r.webp" alt="Mercedes,W105,Ponton,Typ219,Estate,Rear view" width="603" height="402"></a>
+					</section>
+				</div>
 		</section>
 
 		<section id="w110">
@@ -1065,7 +1083,7 @@
 				analytics_storage: 'denied',
 				ad_storage: 'denied',
 				functionality_storage: 'granted',
-				region: ['US', 'GB', 'CA', 'AU', 'NZ', 'IE'] 
+				region: ['US', 'GB', 'CA', 'AU', 'NZ', 'IE']
 			};
 
 			// GTM用設定

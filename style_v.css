@@ -2342,6 +2342,7 @@
 .box76,
 .box77,
 .box79,
+.box80,
 .box80a,
 .box80b,
 .box90,
@@ -2544,6 +2545,11 @@
 .box79 {
 	width: 790px;
 }
+
+.box80 {
+	width: 800px;
+}
+
 
 .box80a {
 	width: 804px;
