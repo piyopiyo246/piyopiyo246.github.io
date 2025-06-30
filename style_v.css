@@ -181,6 +181,9 @@
 	line-height: 1.4;
 }
 
+.lh3 {
+	line-height: 2;
+}
 .af0::after {
 	content: " :";
 }
@@ -2327,6 +2330,7 @@
 .box50,
 .box51,
 .box52a,
+.box53,
 .box54,
 .box56,
 .box59a,
@@ -2488,6 +2492,10 @@
 
 .box52a {
 	width: 525px;
+}
+
+.box53 {
+	width: 530px;
 }
 
 .box54 {
