@@ -2349,6 +2349,7 @@
 .box80,
 .box80a,
 .box80b,
+.box81,
 .box90,
 .box124 {
 	float: left;
@@ -2565,6 +2566,10 @@
 
 .box80b {
 	width: 808px;
+}
+
+.box81 {
+	width: 810px;
 }
 
 .box90 {
