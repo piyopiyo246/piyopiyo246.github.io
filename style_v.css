@@ -2340,6 +2340,7 @@
 .box64a,
 .box65a,
 .box68,
+.box68a,
 .box69a,
 .box70a,
 .box74,
@@ -2533,6 +2534,10 @@
 
 .box68 {
 	width: 680px;
+}
+
+.box68a {
+	width: 686px;
 }
 
 .box69a {
