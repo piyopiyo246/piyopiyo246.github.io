@@ -2352,7 +2352,7 @@
 .box80b,
 .box81,
 .box90,
-.box102,
+.box101,
 .box124 {
 	float: left;
 }
@@ -2582,8 +2582,8 @@
 	width: 900px;
 }
 
-.box102 {
-	width: 1020px;
+.box101 {
+	width: 1010px;
 }
 
 .box124 {
