@@ -2336,6 +2336,7 @@
 .box59a,
 .box60,
 .box60a,
+.box60b,
 .box62,
 .box64a,
 .box65a,
@@ -2519,6 +2520,10 @@
 
 .box60a {
 	width: 606px;
+}
+
+.box60b {
+	width: 607px;
 }
 
 .box62 {
