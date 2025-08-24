@@ -922,10 +922,6 @@ iframe {
 #tt_button:target + .highlight-target,
 #rv_button:target ~ .highlight-target,
 #rv_button:target + .highlight-target,
-#vl_button:target ~ .highlight-target,
-#vl_button:target + .highlight-target,
-#gl_button:target ~ .highlight-target,
-#gl_button:target + .highlight-target,
 #mj_button:target ~ .highlight-target,
 #mj_button:target + .highlight-target,
 #ac_button:target ~ .highlight-target,
@@ -946,5 +942,15 @@ background-color: lightblue;
 
 #sb_button:target ~ .subaru-target,
 #sb_button:target + .subaru-target {
+  background-color: lightblue;
+}
+
+#vl_button:target ~ .volvo-target,
+#vl_button:target + .volvo-target {
+  background-color: lightblue;
+}
+
+#gl_button:target ~ .gili-target,
+#gl_button:target + .gili-target {
   background-color: lightblue;
 }
