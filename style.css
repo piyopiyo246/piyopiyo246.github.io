@@ -11,10 +11,13 @@ body {
 	text-align: left;
 	vertical-align: middle;
 	background: #f1f1f1;
-	white-space: nowrap;
 	margin: 0;
 	-webkit-text-size-adjust: none;
 	-ms-text-size-adjust: none;
+}
+
+.ws-n {
+	white-space: nowrap;
 }
 
 .angletoggle:before {
@@ -23,8 +26,12 @@ body {
 
 #contents {
 	width: 1220px;
-	margin-right: auto;
-	margin-left: auto;
+	margin: 0 auto;
+}
+
+#contents2 {
+	width: auto;
+	margin: 0 auto;
 }
 
 article,
@@ -33,7 +40,7 @@ div,
 main,
 nav,
 section {
-	width: 100%;
+	width: auto;
 	padding: 0;
 	margin: 0;
 	overflow: hidden;
@@ -137,9 +144,14 @@ a.model:visited {
 	text-align: justify;
 }
 
-.b {
+.b,
+.bb {
 	font-weight: bold;
 	color: #666
+}
+
+.bb {
+	color: #000;
 }
 
 .b_cancel {
@@ -504,9 +516,11 @@ td {
 
 /*DIV*/
 .style-w {
+	width: 1220px;
+	padding: 5px;
+	box-sizing: border-box;
 	background: #4f4f4f;
 	color: #f2f2f2;
-	padding: 0.4%;
 }
 
 .style-w2 {
@@ -635,6 +649,7 @@ td {
 /*lightbox*/
 .trim_name {
 	overflow-wrap: break-word;
+	font-size: small;
 }
 
 /*fleXcroll ★変更・削除不可★ */
@@ -837,7 +852,8 @@ iframe {
 	transition: .5s;
 }
 
-.maker_button {
+.jump-link,
+.under_button {
 	border: 2px solid #9e9e9e;
 	border-radius: 6px;
 	text-decoration: none;
@@ -857,4 +873,78 @@ iframe {
 	flex-direction: column;
 	gap: 10px;
 	z-index: 100;
+}
+
+/* ジャンプした時だけマーカーを表示 */
+#vw_button:target ~ .highlight-target,
+#vw_button:target + .highlight-target,
+#ps_button:target ~ .highlight-target,
+#ps_button:target + .highlight-target,
+#db_button:target ~ .highlight-target,
+#db_button:target + .highlight-target,
+#ft_button:target ~ .highlight-target,
+#ft_button:target + .highlight-target,
+#bm_button:target ~ .highlight-target,
+#bm_button:target + .highlight-target,
+#jg_button:target ~ .highlight-target,
+#jg_button:target + .highlight-target,
+#bl_button:target ~ .highlight-target,
+#bl_button:target + .highlight-target,
+#fd_button:target ~ .highlight-target,
+#fd_button:target + .highlight-target,
+#gz_button:target ~ .highlight-target,
+#gz_button:target + .highlight-target,
+#hd_button:target ~ .highlight-target,
+#hd_button:target + .highlight-target,
+#ch_button:target ~ .highlight-target,
+#ch_button:target + .highlight-target,
+#pg_button:target ~ .highlight-target,
+#pg_button:target + .highlight-target,
+#rn_button:target ~ .highlight-target,
+#rn_button:target + .highlight-target,
+#hn_button:target ~ .highlight-target,
+#hn_button:target + .highlight-target,
+#km_button:target ~ .highlight-target,
+#km_button:target + .highlight-target,
+#ty_button:target ~ .highlight-target,
+#ty_button:target + .highlight-target,
+#gm_button:target ~ .highlight-target,
+#gm_button:target + .highlight-target,
+#sk_button:target ~ .highlight-target,
+#sk_button:target + .highlight-target,
+#ad_button:target ~ .highlight-target,
+#ad_button:target + .highlight-target,
+#ar_button:target ~ .highlight-target,
+#ar_button:target + .highlight-target,
+#rr_button:target ~ .highlight-target,
+#rr_button:target + .highlight-target,
+#tt_button:target ~ .highlight-target,
+#tt_button:target + .highlight-target,
+#rv_button:target ~ .highlight-target,
+#rv_button:target + .highlight-target,
+#vl_button:target ~ .highlight-target,
+#vl_button:target + .highlight-target,
+#gl_button:target ~ .highlight-target,
+#gl_button:target + .highlight-target,
+#mj_button:target ~ .highlight-target,
+#mj_button:target + .highlight-target,
+#ac_button:target ~ .highlight-target,
+#ac_button:target + .highlight-target,
+#cn_button:target ~ .highlight-target,
+#cn_button:target + .highlight-target,
+#iz_button:target ~ .highlight-target,
+#iz_button:target + .highlight-target,
+#op_button:target ~ .highlight-target,
+#op_button:target + .highlight-target {
+background-color: lightblue;
+}
+
+#ns_button:target ~ .nissan-target,
+#ns_button:target + .nissan-target {
+  background-color: lightblue;
+}
+
+#sb_button:target ~ .subaru-target,
+#sb_button:target + .subaru-target {
+  background-color: lightblue;
 }

@@ -184,6 +184,7 @@
 .lh3 {
 	line-height: 2;
 }
+
 .af0::after {
 	content: " :";
 }
@@ -1377,10 +1378,6 @@
 	margin-left: 59px;
 }
 
-.m3ao {
-	margin-left: 60px;
-}
-
 .m3a {
 	margin-left: 60.48px;
 }
@@ -1699,6 +1696,10 @@
 
 .m10b {
 	margin-left: 191px;
+}
+
+.m10c {
+	margin-left: 194px;
 }
 
 .m10a {
@@ -2285,8 +2286,16 @@
 	width: 432px;
 }
 
+.w25 {
+	width: 450px;
+}
+
 .w28 {
 	width: 504px;
+}
+
+.w29 {
+	width: 602px;
 }
 
 .w30 {
@@ -2335,12 +2344,14 @@
 .box56,
 .box59a,
 .box60,
+.box60c,
 .box60a,
 .box60b,
 .box62,
 .box64a,
 .box65a,
 .box68,
+.box68b,
 .box68a,
 .box69a,
 .box70a,
@@ -2518,8 +2529,12 @@
 	width: 600px;
 }
 
+.box60c {
+	width: 602px;
+}
+
 .box60a {
-	width: 606px;
+	width: 605px;
 }
 
 .box60b {
@@ -2540,6 +2555,10 @@
 
 .box68 {
 	width: 680px;
+}
+
+.box68b {
+	width: 684px;
 }
 
 .box68a {
@@ -2603,9 +2622,19 @@
 	width: 12820px;
 	font-family: 'MS UI Gothic', "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 	position: relative;
+	overflow-x: scroll;
 }
+
 .box-zeit {
 	width: 1300px;
+}
+
+.box-grd {
+	padding: 0.5em 1em;
+	background: -moz-linear-gradient(#ffffff, #393939, #ffffff);
+	background: -webkit-linear-gradient(#ffffff, #393939, #ffffff);
+	background: linear-gradient(to right, #ffffff, #393939, #ffffff);
+	color: #FFF;
 }
 
 /*height*/
