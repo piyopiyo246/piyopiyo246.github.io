@@ -159,10 +159,15 @@ a.model:visited {
 }
 
 .aa {
-	font-family: 'MS UI Gothic','UD デジタル 教科書体 N-R', 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+	font-family: 'MS UI Gothic', 'Noto Sans JP', 'UD デジタル 教科書体 N-R', 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
 	font-size: 18px;
 	line-height: 0.95;
 	margin: 20px 0 15px 30px;
+	src: local("Noto Sans CJK JP Regular"),
+		url(//fonts.gstatic.com/ea/notosansjp/v5/NotoSansJP-Regular.woff2) format('woff2'),
+		url(//fonts.gstatic.com/ea/notosansjp/v5/NotoSansJP-Regular.woff) format('woff'),
+		url(//fonts.gstatic.com/ea/notosansjp/v5/NotoSansJP-Regular.otf) format('opentype');
+
 }
 
 .hiragino {
