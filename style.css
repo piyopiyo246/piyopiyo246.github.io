@@ -159,7 +159,7 @@ a.model:visited {
 }
 
 .aa {
-	font-family: 'MS UI Gothic','Roboto Condensed', 'Roboto', 'Noto Sans JP', 'UD デジタル 教科書体 N-R', 'ＭＳ Ｐゴシック', sans-serif;
+	font-family: 'MS UI Gothic', 'Roboto Condensed', 'Roboto', 'Noto Sans JP', 'UD デジタル 教科書体 N-R', 'ＭＳ Ｐゴシック', sans-serif;
 	font-size: 16px;
 	line-height: 0.95;
 	margin: 20px 0 15px 30px;
@@ -962,21 +962,24 @@ iframe {
 
 /* 新アコーディオン */
 .accordion {
-	margin-bottom: 1rem;
+	margin-bottom: 0.7rem;
 }
 
 .accordion-header {
 	background: #fbfbfb;
 	color: #111;
-	padding: 12px 0 12px 70px; /* stylelint-disable-line */
+	padding: 12px 0 12px 70px;
+	/* stylelint-disable-line */
 	cursor: pointer;
-	border: 0.125rem solid #707070; /* stylelint-disable-line */
+	border: 0.125rem solid #707070;
+	/* stylelint-disable-line */
 	border-radius: 8px;
 	transition: all 0.3s ease;
 	display: flex;
 	align-items: center;
 	max-width: 1200px;
-	width: 90%; /* stylelint-disable-line */
+	width: 90%;
+	/* stylelint-disable-line */
 	margin: 8px auto;
 	text-align: left;
 	font-size: inherit;
@@ -990,10 +993,14 @@ iframe {
 /* 三角形を左側に配置 */
 .accordion-header::before {
 	content: "";
-	width: 0; /* stylelint-disable-line */
-	height: 0; /* stylelint-disable-line */
-	border-style: solid; /* stylelint-disable-line */
-	border-width: 0.625rem 0 0.625rem 1rem; /* stylelint-disable-line */
+	width: 0;
+	/* stylelint-disable-line */
+	height: 0;
+	/* stylelint-disable-line */
+	border-style: solid;
+	/* stylelint-disable-line */
+	border-width: 0.625rem 0 0.625rem 1rem;
+	/* stylelint-disable-line */
 	border-color: transparent transparent transparent #888;
 	transition: all 0.3s ease;
 	position: absolute;
@@ -1151,4 +1158,143 @@ iframe {
 .accordion-nested .accordion-header.active:hover {
 	background: #e8e8e8;
 	/* ホバー時は明度を上げる */
+}
+
+/* サブページ用アコーディオンスタイル */
+.accordion-header.subpage {
+	background: transparent;
+	color: #f2f2f2;
+	padding: 12px 20px 12px 70px;
+	cursor: pointer;
+	border: 2px solid #707070;
+	border-radius: 22px;
+	transition: all 0.3s ease;
+	display: flex;
+	flex-direction: column;
+	/* 縦方向に配置 */
+	align-items: flex-start;
+	/* 左揃え */
+	width: 90%;
+	margin: 12px auto -4px;
+	text-align: left;
+	font-size: inherit;
+	position: relative;
+	gap: 4px;
+	/* 行間のスペース */
+}
+
+.accordion-header.subpage:hover {
+	border: 2px solid #9e9e9e;
+	/* ホバー時のボーダー */
+}
+
+/* サブページ用三角形 */
+.accordion-header.subpage::before {
+	content: "";
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0.625rem 0 0.625rem 1rem;
+	border-color: transparent transparent transparent #f2f2f2;
+	/* 三角形の色をf2f2f2に */
+	transition: all 0.3s ease;
+	position: absolute;
+	left: 25px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+/* サブページ用開いた状態の三角形 */
+.accordion-header.subpage.active::before {
+	border-width: 1rem 0.625rem 0 0.625rem;
+	/* 16px 10px 0 10px */
+	border-color: #f2f2f2 transparent transparent transparent;
+	/* 三角形の色をf2f2f2に */
+	left: 22px;
+	top: 50%;
+	/* 中央揃えに調整 */
+	transform: translateY(-50%);
+}
+
+/* サブページ用コンテンツ背景を透明に */
+.accordion-content.subpage {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.3s ease;
+	background: transparent;
+	/* 背景を透明に */
+	width: 101%;
+	margin: 10px auto 0;
+}
+
+.accordion-content.subpage.active {
+	max-height: 8000px;
+}
+
+/* サブページ用フォーカススタイル */
+.accordion-header.subpage:focus {
+	outline: 2px solid #f2f2f2;
+	/* フォーカス色をf2f2f2に */
+	outline-offset: 2px;
+}
+
+/* サブページ用コンテンツ内側 */
+.accordion-content-inner.subpage {
+	padding: 0;
+	/* 必要に応じてパディングを調整 */
+	color: #f2f2f2;
+	/* コンテンツ文字色もf2f2f2に */
+}
+
+/* ヘッダー内の行スタイル */
+.accordion-row {
+	display: flex;
+	justify-content: space-between;
+	/* 左右に配置 */
+	align-items: center;
+	width: 100%;
+	gap: 10px;
+}
+
+/* 左側のコンテンツ */
+.accordion-left {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 8px;
+	flex: 1;
+}
+
+/* 右側のコンテンツ（Designer情報） */
+.accordion-right {
+	margin-left: auto;
+	/* 右端に配置 */
+	white-space: nowrap;
+}
+
+/* h3スタイル調整 */
+.accordion-header.subpage h3,
+.accordion-header.subpage h4,
+.accordion-header.subpage p {
+	font-size: 17px;
+	font-weight: normal;
+	margin: 0 16px 0 0;
+	display: inline;
+}
+
+.accordion-header.subpage h4 {
+	margin: 0 0 0 45px;
+}
+
+.accordion-header.subpage p {
+	margin: 0 16px 0 0;
+}
+
+/* 複数行の場合の調整 */
+.accordion-multi-line {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 8px 0 0 47px;
+	gap: 8px;
+	width: 100%;
 }
