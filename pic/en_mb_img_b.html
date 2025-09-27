@@ -88,7 +88,7 @@
 							analytics_storage: 'granted',
 							ad_storage: 'denied',
 							functionality_storage: 'granted',
-							region: ['US', 'GB', 'CA', 'AU', 'NZ', 'IE'] ,
+							region: ['US', 'GB', 'CA', 'AU', 'NZ', 'IE'],
 							// デバッグ用パラメータ（本番では削除）
 							debug_mode: location.hostname.includes('localhost')
 						});
@@ -206,7 +206,7 @@
 					ad_storage: 'denied',
 					functionality_storage: 'granted',
 					wait_for_update: 500,
-					region: ['US', 'GB', 'CA', 'AU', 'NZ', 'IE'] 
+					region: ['US', 'GB', 'CA', 'AU', 'NZ', 'IE']
 				});
 			}
 		} catch (initError) {
@@ -270,7 +270,7 @@
 					</li>
 				</ul>
 				<h1 class="b bf4">B-class</h1>
-				 <div style="display: flex; justify-content: space-between; width: 1210px;">
+				<div style="display: flex; justify-content: space-between; width: 1210px;">
 					<dl class="m1">
 						<dt class="s2 af0">Series</dt>
 						<dd class="s2"><a href="#w245" title="The 1st B-class T245" class="lnk2">245</a></dd>
@@ -278,8 +278,8 @@
 						<dd><a href="#w247" title="The 3rd B-class W247" class="lnk2">247</a></dd>
 					</dl>
 					<span>
-						<button class="vmenu_all_action square_btn" type="button" title="Click here to open all openings" span onclick="doReplaceClassName('vmenu_off', 'vmenu_on2')">Open all</button>
-						<button class="vmenu_all_action square_btn" type="button" title="Click here to close all openings" span onclick="doReplaceClassName('vmenu_on2', 'vmenu_off')">Close all</button>
+						<button id="open-all-accordions" class="vmenu_all_action square_btn" type="button" title="Click here to open all openings">Open all</button>
+						<button id="close-all-accordions" class="vmenu_all_action square_btn" type="button" title="Click here to close all openings">Close all</button>
 						<button class="square_btn" type="button" onclick="location.href='ja_mb_img_b.html'">Ja</button>
 						<button class="square_btn" type="button" onclick="location.href='mb_img_b.html'">De</button>
 					</span>
@@ -332,33 +332,43 @@
 			<h2>The 1st B-class</h2>
 			<div class="style-w">
 				<a href="full/b/t245_s.jpg"><img src="style/b/t245_s.webp" alt="Mercedes,T245,B-class,Side view" width="1210" height="756"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<p class="bf1a i"><a href="https://en.wikipedia.org/wiki/Mercedes-Benz_B-Class#First_generation_(W245;_2004)" class="ico-wiki m1" title="Wikipedia(E)_Mercedes-Benz_T_245"></a></p>
-						<h3 class="i m0">T245</h3>
-						<p class="i m1">06/2005 - 06/2011</p>
-						<p class="ru">Designer : Peter Pfeiffer</p>
-					</div>
-					<section>
-						<h4 class="displayNone">T245</h4>
-						<div>
-							<div class="box60a"><br>
-								<a href="full/b/t245_f.jpg"><img loading="lazy" src="style/b/t245_f.webp" alt="Mercedes,T245,B-class,Front view" width="604" height="420"></a><br>
-								<a href="full/b/t245_r.jpg"><img loading="lazy" src="style/b/t245_r.webp" alt="Mercedes,T245,B-class,Rear view" width="604" height="404"></a><br>
-								<a href="full/b/t245_d.jpg"><img loading="lazy" src="style/b/t245_d.webp" alt="Mercedes,T245,B-class,Dashboard" width="604" height="402"></a>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-245" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://en.wikipedia.org/wiki/Mercedes-Benz_B-Class#First_generation_(W245;_2004)" class="ico-wiki" title="Wikipedia(E)_Mercedes-Benz_T_245"></a>
+								<h3>T245<h3>
+										06/2005 - 06/2011
 							</div>
-							<div class="box60a">
-								<h5 class="i">Facelift</h5>
-								<p class="i m1">06/2008</p><br>
-								<a href="full/b/t245_f2.jpg"><img loading="lazy" src="style/b/t245_f2.webp" alt="Mercedes,T245,B-class,Front view" width="604" height="422"></a><br>
-								<a href="full/b/t245_r2.jpg"><img loading="lazy" src="style/b/t245_r2.webp" alt="Mercedes,T245,B-class,Rear view" width="604" height="403"></a><br>
-								<a href="full/b/t245_d2.jpg"><img loading="lazy" src="style/b/t245_d2.webp" alt="Mercedes,T245,B-class,Dashboard" width="604" height="403"></a>
+							<div class="accordion-right">
+								Designer : Peter Pfeiffer
 							</div>
 						</div>
-						<h5>Dimensions</h5>
-						<a href="full/b/t245_a.jpg"><img loading="lazy" src="style/b/t245_a.webp" alt="t245,B-class,Dimensions" width="926" height="542"></a>
-					</section>
+					</button>
+					<div id="accordion-content-245" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">T245</h4>
+							<div>
+								<div class="box60a"><br>
+									<a href="full/b/t245_f.jpg"><img loading="lazy" src="style/b/t245_f.webp" alt="Mercedes,T245,B-class,Front view" width="604" height="420"></a><br>
+									<a href="full/b/t245_r.jpg"><img loading="lazy" src="style/b/t245_r.webp" alt="Mercedes,T245,B-class,Rear view" width="604" height="404"></a><br>
+									<a href="full/b/t245_d.jpg"><img loading="lazy" src="style/b/t245_d.webp" alt="Mercedes,T245,B-class,Dashboard" width="604" height="402"></a>
+								</div>
+								<div class="box60a">
+									<h5 class="i">Facelift</h5>
+									<p class="i m1">06/2008</p><br>
+									<a href="full/b/t245_f2.jpg"><img loading="lazy" src="style/b/t245_f2.webp" alt="Mercedes,T245,B-class,Front view" width="604" height="422"></a><br>
+									<a href="full/b/t245_r2.jpg"><img loading="lazy" src="style/b/t245_r2.webp" alt="Mercedes,T245,B-class,Rear view" width="604" height="403"></a><br>
+									<a href="full/b/t245_d2.jpg"><img loading="lazy" src="style/b/t245_d2.webp" alt="Mercedes,T245,B-class,Dashboard" width="604" height="403"></a>
+								</div>
+							</div>
+							<h5>Dimensions</h5>
+							<a href="full/b/t245_a.jpg"><img loading="lazy" src="style/b/t245_a.webp" alt="t245,B-class,Dimensions" width="926" height="542"></a>
+						</div>
+					</div>
 				</div>
+
 			</div>
 		</section>
 
@@ -366,34 +376,44 @@
 			<h2>The 2nd B-class</h2>
 			<div class="style-w">
 				<a href="full/b/w246.jpg"><img loading="lazy" src="style/b/w246.webp" alt="Mercedes,W246,B-class" width="1210" height="908"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<p class="bf1a i"><a href="https://en.wikipedia.org/wiki/Mercedes-Benz_B-Class_(W246)" class="ico-wiki m1" title="Wikipedia(E)_Mercedes-Benz_W_246"></a></p>
-						<h3 class="i m0">W246</h3>
-						<p class="i m1">09/2011 - 12/2018</p>
-						<p class="ru">Designer : Mark Fetherston (2008)</p>
-					</div>
-					<section>
-						<h4 class="displayNone">W246</h4>
-						<a href="full/b/w246_tp.jpg"><img loading="lazy" src="style/b/w246_tp.webp" alt="Mercedes,W246,B-class,Perspective view" width="1210" height="854"></a><br>
-						<div>
-							<div class="box60a"><br>
-								<a href="full/b/w246_f.jpg"><img loading="lazy" src="style/b/w246_f.webp" alt="Mercedes,W246,B-class,Front view" width="604" height="304"></a><br>
-								<a href="full/b/w246_r.jpg"><img loading="lazy" src="style/b/w246_r.webp" alt="Mercedes,W246,B-class,rear " width="604" height="430"></a><br>
-								<a href="full/b/w246_d.jpg"><img loading="lazy" src="style/b/w246_d.webp" alt="Mercedes,W246,B-class,Dashboard" width="604" height="453"></a>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-246" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://en.wikipedia.org/wiki/Mercedes-Benz_B-Class_(W246)" class="ico-wiki" title="Wikipedia(E)_Mercedes-Benz_W_246"></a>
+								<h3>W246<h3>
+										09/2011 - 12/2018
 							</div>
-							<div class="box60a">
-								<h5 class="i">Facelift</h5>
-								<p class="i m1">11/2014</p><br>
-								<a href="full/b/w246_f2.jpg"><img loading="lazy" src="style/b/w246_f2.webp" alt="Mercedes,W246,B-class,Front view" width="604" height="363"></a><br>
-								<a href="full/b/w246_r2.jpg"><img loading="lazy" src="style/b/w246_r2.webp" alt="Mercedes,W246,B-class,Rear view" width="604" height="390"></a><br>
-								<a href="full/b/w246_d2.jpg"><img loading="lazy" src="style/b/w246_d2.webp" alt="Mercedes,W246,B-class,dashboard " width="604" height="434"></a>
+							<div class="accordion-right">
+								Designer : Mark Fetherston (2008)
 							</div>
 						</div>
-						<h5>Dimensions</h5>
-						<a href="full/b/w246_a.jpg"><img loading="lazy" src="style/b/w246_a.webp" alt="Mercedes,W246,B-class,Dimensions" width="804" height="1102"></a>
-					</section>
+					</button>
+					<div id="accordion-content-246" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">W246</h4>
+							<a href="full/b/w246_tp.jpg"><img loading="lazy" src="style/b/w246_tp.webp" alt="Mercedes,W246,B-class,Perspective view" width="1210" height="854"></a><br>
+							<div>
+								<div class="box60a"><br>
+									<a href="full/b/w246_f.jpg"><img loading="lazy" src="style/b/w246_f.webp" alt="Mercedes,W246,B-class,Front view" width="604" height="304"></a><br>
+									<a href="full/b/w246_r.jpg"><img loading="lazy" src="style/b/w246_r.webp" alt="Mercedes,W246,B-class,rear " width="604" height="430"></a><br>
+									<a href="full/b/w246_d.jpg"><img loading="lazy" src="style/b/w246_d.webp" alt="Mercedes,W246,B-class,Dashboard" width="604" height="453"></a>
+								</div>
+								<div class="box60a">
+									<h5 class="i">Facelift</h5>
+									<p class="i m1">11/2014</p><br>
+									<a href="full/b/w246_f2.jpg"><img loading="lazy" src="style/b/w246_f2.webp" alt="Mercedes,W246,B-class,Front view" width="604" height="363"></a><br>
+									<a href="full/b/w246_r2.jpg"><img loading="lazy" src="style/b/w246_r2.webp" alt="Mercedes,W246,B-class,Rear view" width="604" height="390"></a><br>
+									<a href="full/b/w246_d2.jpg"><img loading="lazy" src="style/b/w246_d2.webp" alt="Mercedes,W246,B-class,dashboard " width="604" height="434"></a>
+								</div>
+							</div>
+							<h5>Dimensions</h5>
+							<a href="full/b/w246_a.jpg"><img loading="lazy" src="style/b/w246_a.webp" alt="Mercedes,W246,B-class,Dimensions" width="804" height="1102"></a>
+						</div>
+					</div>
 				</div>
+
 			</div>
 			<p class="b">Comparison between old and new</p>
 			<div class="style-w">
@@ -406,34 +426,44 @@
 			<h2>The 3rd B-class</h2>
 			<div class="style-w">
 				<a href="full/b/w247_f.jpg"><img loading="lazy" src="style/b/w247_f.webp" alt="Mercedes,W247,B-class,Front view" width="1210" height="600"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<p class="bf1a i"><a href="https://en.wikipedia.org/wiki/Mercedes-Benz_B-Class#Third_generation_(W247;_2019)" class="ico-wiki m1" title="Wikipedia(E)_Mercedes-Benz_W_247"></a></p>
-						<h3 class="i m0">W247</h3>
-						<p class="i m1">12/2018</p>
-						<p class="ru">Designer : Slavche Tanevski</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-247" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://en.wikipedia.org/wiki/Mercedes-Benz_B-Class#Third_generation_(W247;_2019)" class="ico-wiki" title="Wikipedia(E)_Mercedes-Benz_W_247"></a>
+								<h3>W247<h3>
+										12/2018
+							</div>
+							<div class="accordion-right">
+								Designer : Slavche Tanevski
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-247" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">W247</h4>
+							<a href="full/b/w247_r.jpg"><img loading="lazy" src="style/b/w247_r.webp" alt="Mercedes,W247,B-class,Rear view" width="560" height="356"></a>
+							<a href="full/b/w247_d.jpg"><img loading="lazy" src="style/b/w247_d.webp" alt="Mercedes,W247,B-class,Dashboard" width="647" height="356"></a>
+							<h5>AMG-line</h5>
+							<a href="full/b/w247_fa.jpg"><img loading="lazy" src="style/b/w247_fa.webp" alt="Mercedes,W247,B-class,Front view" width="1010" height="568"></a><br>
+							<h5 class="i">Facelift</h5>
+							<p class="i m1">10/2022</p><br>
+							<a href="full/b/w247_f2.jpg"><img loading="lazy" src="style/b/w247_f2.webp" alt="Mercedes,W247,B-class,Front view" width="603" height="339"></a>
+							<a href="full/b/w247_r2.jpg"><img loading="lazy" src="style/b/w247_r2.webp" alt="Mercedes,W247,B-class,rear " width="603" height="339"></a><br>
+							<a href="full/b/w247_d2.jpg"><img loading="lazy" src="style/b/w247_d2.webp" alt="Mercedes,W247,B-class,Dashboard" width="516" height="387"></a>
+							<a href="full/b/w247_i2.jpg"><img loading="lazy" src="style/b/w247_i2.webp" alt="Mercedes,W247,B-class,Interior" width="688" height="387"></a>
+							<h5>AMG-line</h5>
+							<a href="full/b/w247_f2_amgline.jpg"><img loading="lazy" src="style/b/w247_f2_amgline.webp" alt="Mercedes,W247,B-class,Front view" width="603" height="339"></a>
+							<a href="full/b/w247_r2_amgline.jpg"><img loading="lazy" src="style/b/w247_r2_amgline.webp" alt="Mercedes,W247,B-class,rear " width="603" height="339"></a><br>
+							<a href="full/b/w247_d2_amgline.jpg"><img loading="lazy" src="style/b/w247_d2_amgline.webp" alt="Mercedes,W247,B-class,Dashboard" width="603" height="339"></a>
+							<a href="full/b/w247_e2_amgline.jpg"><img loading="lazy" src="style/b/w247_e2_amgline.webp" alt="Mercedes,W247,B-class,exterior" width="603" height="339"></a>
+							<h5>Dimensions</h5>
+							<a href="full/b/w247_a2.jpg"><img loading="lazy" src="style/b/w247_a2.webp" alt="Mercedes,W247,B-class,Dimensions" width="1210" height="527"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">W247</h4>
-						<a href="full/b/w247_r.jpg"><img loading="lazy" src="style/b/w247_r.webp" alt="Mercedes,W247,B-class,Rear view" width="560" height="356"></a>
-						<a href="full/b/w247_d.jpg"><img loading="lazy" src="style/b/w247_d.webp" alt="Mercedes,W247,B-class,Dashboard" width="647" height="356"></a>
-						<h5>AMG-line</h5>
-						<a href="full/b/w247_fa.jpg"><img loading="lazy" src="style/b/w247_fa.webp" alt="Mercedes,W247,B-class,Front view" width="1010" height="568"></a><br>
-						<h5 class="i">Facelift</h5>
-						<p class="i m1">10/2022</p><br>
-						<a href="full/b/w247_f2.jpg"><img loading="lazy" src="style/b/w247_f2.webp" alt="Mercedes,W247,B-class,Front view" width="603" height="339"></a>
-						<a href="full/b/w247_r2.jpg"><img loading="lazy" src="style/b/w247_r2.webp" alt="Mercedes,W247,B-class,rear " width="603" height="339"></a><br>
-						<a href="full/b/w247_d2.jpg"><img loading="lazy" src="style/b/w247_d2.webp" alt="Mercedes,W247,B-class,Dashboard" width="516" height="387"></a>
-						<a href="full/b/w247_i2.jpg"><img loading="lazy" src="style/b/w247_i2.webp" alt="Mercedes,W247,B-class,Interior" width="688" height="387"></a>
-						<h5>AMG-line</h5>
-						<a href="full/b/w247_f2_amgline.jpg"><img loading="lazy" src="style/b/w247_f2_amgline.webp" alt="Mercedes,W247,B-class,Front view" width="603" height="339"></a>
-						<a href="full/b/w247_r2_amgline.jpg"><img loading="lazy" src="style/b/w247_r2_amgline.webp" alt="Mercedes,W247,B-class,rear " width="603" height="339"></a><br>
-						<a href="full/b/w247_d2_amgline.jpg"><img loading="lazy" src="style/b/w247_d2_amgline.webp" alt="Mercedes,W247,B-class,Dashboard" width="603" height="339"></a>
-						<a href="full/b/w247_e2_amgline.jpg"><img loading="lazy" src="style/b/w247_e2_amgline.webp" alt="Mercedes,W247,B-class,exterior" width="603" height="339"></a>
-						<h5>Dimensions</h5>
-						<a href="full/b/w247_a2.jpg"><img loading="lazy" src="style/b/w247_a2.webp" alt="Mercedes,W247,B-class,Dimensions" width="1210" height="527"></a>
-					</section>
 				</div>
+
 			</div>
 		</section>
 
@@ -482,9 +512,10 @@
 			<hr>
 			<p class="mid"><small>@ since 2010 , piyopiyo_246</small></p>
 		</footer>
+
 		<p class="m-05" id="page-top"><a href="#head">&#9650;</a></p>
 		<p id="close-accordion">
-			<a class="vmenu_all_action" onclick="doReplaceClassName ('vmenu_on2','vmenu_off')" title="Close all openings">&#9654;</a>
+			<a id="close-all-accordions-2" class="vmenu_all_action" title="Close all openings">&#9654;</a>
 		</p>
 	</div>
 
@@ -520,7 +551,7 @@
 				analytics_storage: 'denied',
 				ad_storage: 'denied',
 				functionality_storage: 'granted',
-				region: ['US', 'GB', 'CA', 'AU', 'NZ', 'IE'] 
+				region: ['US', 'GB', 'CA', 'AU', 'NZ', 'IE']
 			};
 
 			// GTM用設定
@@ -559,6 +590,120 @@
 			}, 500);
 			return false;
 		});
+	});
+</script>
+
+<script>
+	// シンプル版アコーディオン機能（入れ子非対応）
+	document.addEventListener('DOMContentLoaded', function () {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+		accordionHeaders.forEach(header => {
+			header.addEventListener('click', function () {
+				const content = this.nextElementSibling;
+				const isActive = this.classList.contains('active');
+
+				// クリックされたアコーディオンのみトグル
+				if (isActive) {
+					this.classList.remove('active');
+					this.setAttribute('aria-expanded', 'false');
+					content.classList.remove('active');
+				} else {
+					this.classList.add('active');
+					this.setAttribute('aria-expanded', 'true');
+					content.classList.add('active');
+				}
+			});
+
+			// キーボード操作のサポート
+			header.addEventListener('keydown', function (e) {
+				if (e.key === 'Enter' || e.key === ' ') {
+					e.preventDefault();
+					this.click();
+				}
+			});
+		});
+
+		// 全開/全閉ボタンのイベントリスナー
+		const openAllBtn = document.getElementById('open-all-accordions');
+		const closeAllBtn = document.getElementById('close-all-accordions');
+		const closeAllBtn2 = document.getElementById('close-all-accordions-2');
+
+		if (openAllBtn) {
+			openAllBtn.addEventListener('click', openAllAccordions);
+		}
+
+		if (closeAllBtn) {
+			closeAllBtn.addEventListener('click', closeAllAccordions);
+		}
+
+		if (closeAllBtn2) {
+			closeAllBtn2.addEventListener('click', closeAllAccordions);
+		}
+	});
+
+	// 全アコーディオン操作機能
+	function openAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.add('active');
+			header.setAttribute('aria-expanded', 'true');
+			content.classList.add('active');
+		});
+	}
+
+	function closeAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.remove('active');
+			header.setAttribute('aria-expanded', 'false');
+			content.classList.remove('active');
+		});
+	}
+
+	// 全アコーディオン操作機能
+	function openAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.add('active');
+			header.setAttribute('aria-expanded', 'true');
+			content.classList.add('active');
+		});
+	}
+
+	function closeAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.remove('active');
+			header.setAttribute('aria-expanded', 'false');
+			content.classList.remove('active');
+		});
+	}
+
+	// ボタンにイベントリスナーを追加
+	document.addEventListener('DOMContentLoaded', function () {
+		// 既存のアコーディオンコード...
+
+		// 全開/全閉ボタン
+		const openAllBtn = document.getElementById('open-all-accordions');
+		const closeAllBtn = document.getElementById('close-all-accordions');
+		const closeAllBtn2 = document.getElementById('close-all-accordions-2'); // 追加ボタン
+
+		if (openAllBtn) {
+			openAllBtn.addEventListener('click', openAllAccordions);
+		}
+
+		if (closeAllBtn) {
+			closeAllBtn.addEventListener('click', closeAllAccordions);
+		}
+
+		if (closeAllBtn2) {
+			closeAllBtn2.addEventListener('click', closeAllAccordions);
+		}
 	});
 </script>
 
