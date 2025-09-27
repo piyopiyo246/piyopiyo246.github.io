@@ -270,7 +270,7 @@
 					</li>
 				</ul>
 				<h1 class="b bf4">A-klasse</h1>
-				 <div style="display: flex; justify-content: space-between; width: 1210px;">
+				<div style="display: flex; justify-content: space-between; width: 1210px;">
 					<dl class="m1">
 						<dt class="s2 af0">Baureihe</dt>
 						<dd class="s2"><a href="#w168" title="Die 1ste A-klasse W168/V168" class="lnk2">168</a></dd>
@@ -279,8 +279,8 @@
 						<dd><a href="#w177" title="Die 4te A-klasse W177" class="lnk2">177</a></dd>
 					</dl>
 					<span>
-						<button class="vmenu_all_action square_btn" type="button" title="Klicken Sie hier, um alle Öffnungen zu öffnen" span onclick="doReplaceClassName('vmenu_off', 'vmenu_on2')">Öffne alles</button>
-						<button class="vmenu_all_action square_btn" type="button" title="Klicken Sie hier, um alle Öffnungen zu schließen" span onclick="doReplaceClassName('vmenu_on2', 'vmenu_off')">Alle schließen</button>
+						<button id="open-all-accordions" class="vmenu_all_action square_btn" type="button" title="Klicken Sie hier, um alle Öffnungen zu öffnen">Öffne alles</button>
+						<button id="close-all-accordions" class="vmenu_all_action square_btn" type="button" title="Klicken Sie hier, um alle Öffnungen zu schließen">Alle schließen</button>
 						<button class="square_btn" type="button" onclick="location.href='ja_mb_img_a.html'">Ja</button>
 						<button class="square_btn" type="button" onclick="location.href='en_mb_img_a.html'">En</button>
 					</span>
@@ -334,40 +334,52 @@
 			<h2>Die 1ste A-klasse</h2>
 			<div class="style-w">
 				<a href="full/a/w168_tp.jpg"><img src="style/a/w168_tp.webp" alt="Mercedes,W168,A-klasse,Perspektive" width="1210" height="907"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Klicken Sie hier, um das Akkordeonfenster zu öffnen">
-						<p class="bf1a i"><a href="https://de.wikipedia.org/wiki/Mercedes-Benz_Baureihe_168" class="ico-wiki m1" title="Wikipedia(D) 168"></a></p>
-						<h3 class="i m0">W168</h3>
-						<p class="i m1">09/1997 - 09/2004&nbsp;( 11/1997 - 02/1998 Produktion stoppen )</p>
-						<h3 class="i m2a">V168</h3>
-						<p class="i m1">Lang version</p>
-						<p class="i m1">03/2001 - 2004</p>
-						<p class="r">Designer : Steve Mattin (1994)</p>
-					</div>
-					<section>
-						<div>
-							<div class="box60a"><br>
-								<h4 class="displayNone">W168</h4>
-								<a href="full/a/w168_f.jpg"><img loading="lazy" src="style/a/w168_f.webp" alt="Mercedes,W168,A-klasse,Frontansicht" width="604" height="457"></a><br>
-								<a href="full/a/w168_r.jpg"><img loading="lazy" src="style/a/w168_r.webp" alt="Mercedes,W168,A-klasse,Rückansicht" width="604" height="363"></a><br>
-								<a href="full/a/w168_d.jpg"><img loading="lazy" src="style/a/w168_d.webp" alt="Mercedes,W168,A-klasse,Instrumententafel" width="604" height="429"></a>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-168" title="Klicken Sie hier, um das Akkordeonfenster zu öffnen">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://de.wikipedia.org/wiki/Mercedes-Benz_Baureihe_168" class="ico-wiki" title="Wikipedia(D) 168"></a>
+								<h3>W168<h3>
+										09/1997 - 09/2004&nbsp;( 11/1997 - 02/1998 Produktion stoppen )
 							</div>
-							<div class="box60a">
-								<h5 class="i">Modellpflege</h5>
-								<p class="i m1">03/2001</p><br>
-								<a href="full/a/w168_f2.jpg"><img loading="lazy" src="style/a/w168_f2.webp" alt="Mercedes,W168,A-klasse,Frontansicht" width="604" height="430"></a><br>
-								<a href="full/a/w168_r2.jpg"><img loading="lazy" src="style/a/w168_r2.webp" alt="Mercedes,W168,A-klasse,Rückansicht" width="604" height="412"></a><br>
-								<a href="full/a/w168_d2.jpg"><img loading="lazy" src="style/a/w168_d2.webp" alt="Mercedes,W168,A-klasse,Instrumententafel" width="604" height="410"></a>
+							<div class="accordion-right">
+								Designer : Steve Mattin (1994)
 							</div>
 						</div>
-						<h4>lang</h4>
-						<a href="full/a/w168l_compare.jpg"><img loading="lazy" src="style/a/w168l_compare.webp" alt="Mercedes,W168,A-klasse,Lang,Vergleich" width="804" height="276"></a>
-						<a href="full/a/w168l_r_sheet.jpg"><img loading="lazy" src="style/a/w168l_r_sheet.webp" alt="Mercedes,W168,A-klasse,Lang,Rückansicht,sheet" width="400" height="276"></a>
-						<h5>Abmessungen</h5>
-						<a href="full/a/w168_a.gif"><img loading="lazy" src="style/a/w168_a.gif" alt="Mercedes,W168,A-klasse,Maße" width="600" height="774"></a>
-						<a href="full/a/w168l_a.jpg"><img loading="lazy" src="style/a/w168l_a.webp" alt="Mercedes,W168,A-klasse,Lang,Maße" width="600" height="664"></a>
-					</section>
+						<div class="accordion-multi-line">
+							<h3">V168</h3>
+								<p>Lang version</p>
+								03/2001 - 2004
+						</div>
+					</button>
+					<div id="accordion-content-168" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<div>
+								<div class="box60a"><br>
+									<h4 class="displayNone">W168</h4>
+									<a href="full/a/w168_f.jpg"><img loading="lazy" src="style/a/w168_f.webp" alt="Mercedes,W168,A-klasse,Frontansicht" width="604" height="457"></a><br>
+									<a href="full/a/w168_r.jpg"><img loading="lazy" src="style/a/w168_r.webp" alt="Mercedes,W168,A-klasse,Rückansicht" width="604" height="363"></a><br>
+									<a href="full/a/w168_d.jpg"><img loading="lazy" src="style/a/w168_d.webp" alt="Mercedes,W168,A-klasse,Instrumententafel" width="604" height="429"></a>
+								</div>
+								<div class="box60a">
+									<h5 class="i">Modellpflege</h5>
+									<p class="i m1">03/2001</p><br>
+									<a href="full/a/w168_f2.jpg"><img loading="lazy" src="style/a/w168_f2.webp" alt="Mercedes,W168,A-klasse,Frontansicht" width="604" height="430"></a><br>
+									<a href="full/a/w168_r2.jpg"><img loading="lazy" src="style/a/w168_r2.webp" alt="Mercedes,W168,A-klasse,Rückansicht" width="604" height="412"></a><br>
+									<a href="full/a/w168_d2.jpg"><img loading="lazy" src="style/a/w168_d2.webp" alt="Mercedes,W168,A-klasse,Instrumententafel" width="604" height="410"></a>
+								</div>
+							</div>
+							<h4>lang</h4>
+							<a href="full/a/w168l_compare.jpg"><img loading="lazy" src="style/a/w168l_compare.webp" alt="Mercedes,W168,A-klasse,Lang,Vergleich" width="804" height="276"></a>
+							<a href="full/a/w168l_r_sheet.jpg"><img loading="lazy" src="style/a/w168l_r_sheet.webp" alt="Mercedes,W168,A-klasse,Lang,Rückansicht,sheet" width="400" height="276"></a>
+							<h5>Abmessungen</h5>
+							<a href="full/a/w168_a.gif"><img loading="lazy" src="style/a/w168_a.gif" alt="Mercedes,W168,A-klasse,Maße" width="600" height="774"></a>
+							<a href="full/a/w168l_a.jpg"><img loading="lazy" src="style/a/w168l_a.webp" alt="Mercedes,W168,A-klasse,Lang,Maße" width="600" height="664"></a>
+						</div>
+					</div>
 				</div>
+
 			</div>
 		</section>
 
@@ -375,51 +387,63 @@
 			<h2>Der 2te A-klasse</h2>
 			<div class="style-w">
 				<a href="full/a/c169.jpg"><img loading="lazy" src="style/a/c169.webp" alt="Mercedes,C169,A-klasse,Frontansicht" width="1210" height="807"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Klicken Sie hier, um das Akkordeonfenster zu öffnen">
-						<p class="bf1a i"><a href="https://de.wikipedia.org/wiki/Mercedes-Benz_Baureihe_169" class="ico-wiki m1" title="Wikipedia(D) 169"></a></p>
-						<h3 class="i m0">W169</h3>
-						<p class="i m1">09/2004 - 04/2012</p><br>
-						<h3 class="i m19">C169</h3>
-						<p class="i m1">3-türiges Fließheck</p>
-						<p class="i m1">11/2004 - 07/2010</p>
-						<p class="ru">Designer : Helmut Werner</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-169" title="Klicken Sie hier, um das Akkordeonfenster zu öffnen">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://de.wikipedia.org/wiki/Mercedes-Benz_Baureihe_169" class="ico-wiki" title="Wikipedia(D) 169"></a>
+								<h3>W169<h3>
+										09/2004 - 04/2012
+							</div>
+							<div class="accordion-right">
+								Designer : Helmut Werner
+							</div>
+						</div>
+						<div class="accordion-multi-line">
+							<h3>C169</h3>
+							<p>3-türiges Fließheck</p>
+							11/2004 - 07/2010
+						</div>
+					</button>
+					<div id="accordion-content-169" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<div>
+								<div class="box60a"><br>
+									<h4 class="displayNone">W169</h4>
+									<a href="full/a/w169_f.jpg"><img loading="lazy" src="style/a/w169_f.webp" alt="Mercedes,W169,A-klasse,Frontansicht" width="604" height="377"></a><br>
+									<a href="full/a/w169_r.jpg"><img loading="lazy" src="style/a/w169_r.webp" alt="Mercedes,W169,A-klasse,Rückansicht" width="604" height="389"></a><br>
+									<a href="full/a/w169_d.jpg"><img loading="lazy" src="style/a/w169_d.webp" alt="Mercedes,W169,A-klasse,Instrumententafel" width="604" height="402"></a>
+								</div>
+								<div class="box60a">
+									<h5 class="i">Modellpflege</h5>
+									<p class="i m1">04/2008</p><br>
+									<a href="full/a/w169_f2.jpg"><img loading="lazy" src="style/a/w169_f2.webp" alt="Mercedes,W169,A-klasse,Frontansicht" width="604" height="376"></a><br>
+									<a href="full/a/w169_r2.jpg"><img loading="lazy" src="style/a/w169_r2.webp" alt="Mercedes,W169,A-klasse,Rückansicht" width="604" height="390"></a><br>
+									<a href="full/a/w169_d2.jpg"><img loading="lazy" src="style/a/w169_d2.webp" alt="Mercedes,W169,A-klasse,Instrumententafel" width="604" height="402"></a>
+								</div>
+							</div>
+							<h5>Abmessungen</h5>
+							<a href="full/a/w169_a.gif"><img loading="lazy" src="style/a/w169_a.gif" alt="Mercedes,W169,A-klasse,Maße" width="805" height="492"></a>
+							<div>
+								<div class="box60a">
+									<h4>3-türiges Fließheck</h4>
+									<a href="full/a/c169_f.jpg"><img loading="lazy" src="style/a/c169_f.webp" alt="Mercedes,C169,A-klasse,Frontansicht" width="604" height="360"></a><br>
+									<a href="full/a/c169_r.jpg"><img loading="lazy" src="style/a/c169_r.webp" alt="Mercedes,C169,A-klasse,Rückansicht" width="604" height="398"></a>
+								</div>
+								<div class="box60a">
+									<h5 class="i">Modellpflege</h5>
+									<p class="i m1">04/2008</p><br>
+									<a href="full/a/c169_f2.jpg"><img loading="lazy" src="style/a/c169_f2.webp" alt="Mercedes,C169,A-klasse,Frontansicht" width="604" height="360"></a><br>
+									<a href="full/a/c169_r2.jpg"><img loading="lazy" src="style/a/c169_r2.webp" alt="Mercedes,C169,A-klasse,Rückansicht" width="604" height="398"></a>
+								</div>
+							</div>
+							<h5>Abmessungen</h5>
+							<a href="full/a/c169_a.jpg"><img loading="lazy" src="style/a/c169_a.png" alt="Mercedes,C169,A-klasse,Maße" width="901" height="579"></a>
+						</div>
 					</div>
-					<section>
-						<div>
-							<div class="box60a"><br>
-								<h4 class="displayNone">W169</h4>
-								<a href="full/a/w169_f.jpg"><img loading="lazy" src="style/a/w169_f.webp" alt="Mercedes,W169,A-klasse,Frontansicht" width="604" height="377"></a><br>
-								<a href="full/a/w169_r.jpg"><img loading="lazy" src="style/a/w169_r.webp" alt="Mercedes,W169,A-klasse,Rückansicht" width="604" height="389"></a><br>
-								<a href="full/a/w169_d.jpg"><img loading="lazy" src="style/a/w169_d.webp" alt="Mercedes,W169,A-klasse,Instrumententafel" width="604" height="402"></a>
-							</div>
-							<div class="box60a">
-								<h5 class="i">Modellpflege</h5>
-								<p class="i m1">04/2008</p><br>
-								<a href="full/a/w169_f2.jpg"><img loading="lazy" src="style/a/w169_f2.webp" alt="Mercedes,W169,A-klasse,Frontansicht" width="604" height="376"></a><br>
-								<a href="full/a/w169_r2.jpg"><img loading="lazy" src="style/a/w169_r2.webp" alt="Mercedes,W169,A-klasse,Rückansicht" width="604" height="390"></a><br>
-								<a href="full/a/w169_d2.jpg"><img loading="lazy" src="style/a/w169_d2.webp" alt="Mercedes,W169,A-klasse,Instrumententafel" width="604" height="402"></a>
-							</div>
-						</div>
-						<h5>Abmessungen</h5>
-						<a href="full/a/w169_a.gif"><img loading="lazy" src="style/a/w169_a.gif" alt="Mercedes,W169,A-klasse,Maße" width="805" height="492"></a>
-						<div>
-							<div class="box60a">
-								<h4>3-türiges Fließheck</h4>
-								<a href="full/a/c169_f.jpg"><img loading="lazy" src="style/a/c169_f.webp" alt="Mercedes,C169,A-klasse,Frontansicht" width="604" height="360"></a><br>
-								<a href="full/a/c169_r.jpg"><img loading="lazy" src="style/a/c169_r.webp" alt="Mercedes,C169,A-klasse,Rückansicht" width="604" height="398"></a>
-							</div>
-							<div class="box60a">
-								<h5 class="i">Modellpflege</h5>
-								<p class="i m1">04/2008</p><br>
-								<a href="full/a/c169_f2.jpg"><img loading="lazy" src="style/a/c169_f2.webp" alt="Mercedes,C169,A-klasse,Frontansicht" width="604" height="360"></a><br>
-								<a href="full/a/c169_r2.jpg"><img loading="lazy" src="style/a/c169_r2.webp" alt="Mercedes,C169,A-klasse,Rückansicht" width="604" height="398"></a>
-							</div>
-						</div>
-						<h5>Abmessungen</h5>
-						<a href="full/a/c169_a.jpg"><img loading="lazy" src="style/a/c169_a.png" alt="Mercedes,C169,A-klasse,Maße" width="901" height="579"></a>
-					</section>
 				</div>
+
 			</div>
 		</section>
 
@@ -427,47 +451,62 @@
 			<h2>Der 3te A-klasse</h2>
 			<div class="style-w">
 				<a href="full/a/w176.jpg"><img loading="lazy" src="style/a/w176.webp" alt="Mercedes,W176,A-klasse,Seitenansicht" width="1210" height="807"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Klicken Sie hier, um das Akkordeonfenster zu öffnen">
-						<p class="bf1a i"><a href="https://de.wikipedia.org/wiki/Mercedes-Benz_W_176" class="ico-wiki m1" title="Wikipedia(D) 169"></a></p>
-						<h3 class="i m0">W176</h3>
-						<p class="i m1">07/2012 - 2018</p>
-						<p class="ru">Designer : Mark Fetherston (2009)</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-176" title="Klicken Sie hier, um das Akkordeonfenster zu öffnen">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://de.wikipedia.org/wiki/Mercedes-Benz_W_176" class="ico-wiki" title="Wikipedia(D) 169"></a>
+								<h3>W176<h3>
+										07/2012 - 2018
+							</div>
+							<div class="accordion-right">
+								Designer : Mark Fetherston (2009)
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-176" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">W176</h4>
+							<a href="full/a/w176_f.jpg"><img loading="lazy" src="style/a/w176_f.webp" alt="Mercedes,W176,A-klasse,Frontansicht" width="600" height="310"></a>
+							<a href="full/a/w176_r.jpg"><img loading="lazy" src="style/a/w176_r.webp" alt="Mercedes,W176,A-klasse,Rückansicht" width="604" height="310"></a><br>
+							<a href="full/a/w176_d.jpg"><img loading="lazy" src="style/a/w176_d.webp" alt="Mercedes,W176,A-klasse,Instrumententafel" width="1210" height="757"></a><br>
+							<h5 class="i">Modellpflege</h5>
+							<p class="i m1">07/2015</p><br>
+							<a href="full/a/w176_f2.webp"><img loading="lazy" src="style/a/w176_f2.webp" alt="Mercedes,W176,A-klasse,Frontansicht" width="665" height="360"></a>
+							<a href="full/a/w176_s2.jpg"><img loading="lazy" src="style/a/w176_s2.webp" alt="Mercedes,W176,A-klasse,Seitenansicht" width="540" height="360"></a><br>
+							<a href="full/a/w176_r2.jpg"><img loading="lazy" src="style/a/w176_r2.webp" alt="Mercedes,W176,A-klasse,Rückansicht" width="601" height="401"></a>
+							<a href="full/a/w176_d2.jpg"><img loading="lazy" src="style/a/w176_d2.webp" alt="Mercedes,W176,A-klasse,Instrumententafel" width="601" height="401"></a>
+							<h5>Abmessungen</h5>
+							<a href="full/a/w176_a.jpg"><img loading="lazy" src="style/a/w176_a.webp" alt="Mercedes,W176,A-klasse,Maße" width="806" height="1049"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">W176</h4>
-						<a href="full/a/w176_f.jpg"><img loading="lazy" src="style/a/w176_f.webp" alt="Mercedes,W176,A-klasse,Frontansicht" width="600" height="310"></a>
-						<a href="full/a/w176_r.jpg"><img loading="lazy" src="style/a/w176_r.webp" alt="Mercedes,W176,A-klasse,Rückansicht" width="604" height="310"></a><br>
-						<a href="full/a/w176_d.jpg"><img loading="lazy" src="style/a/w176_d.webp" alt="Mercedes,W176,A-klasse,Instrumententafel" width="1210" height="757"></a><br>
-						<h5 class="i">Modellpflege</h5>
-						<p class="i m1">07/2015</p><br>
-						<a href="full/a/w176_f2.webp"><img loading="lazy" src="style/a/w176_f2.webp" alt="Mercedes,W176,A-klasse,Frontansicht" width="665" height="360"></a>
-						<a href="full/a/w176_s2.jpg"><img loading="lazy" src="style/a/w176_s2.webp" alt="Mercedes,W176,A-klasse,Seitenansicht" width="540" height="360"></a><br>
-						<a href="full/a/w176_r2.jpg"><img loading="lazy" src="style/a/w176_r2.webp" alt="Mercedes,W176,A-klasse,Rückansicht" width="601" height="401"></a>
-						<a href="full/a/w176_d2.jpg"><img loading="lazy" src="style/a/w176_d2.webp" alt="Mercedes,W176,A-klasse,Instrumententafel" width="601" height="401"></a>
-						<h5>Abmessungen</h5>
-						<a href="full/a/w176_a.jpg"><img loading="lazy" src="style/a/w176_a.webp" alt="Mercedes,W176,A-klasse,Maße" width="806" height="1049"></a>
-					</section>
 				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Klicken Sie hier, um das Akkordeonfenster zu öffnen">
-						<h3 class="bf1b i">AMG</h3>
-						<p class="i m1">A45</p>
-						<p class="i m1">2012</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-amg-a45" title="Klicken Sie hier, um das Akkordeonfenster zu öffnen">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h4>AMG A45</h4>
+								2012
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-amg-a45" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<a href="full/a/w176_amg_f.jpg"><img loading="lazy" src="style/a/w176_amg_f.webp" alt="Mercedes,W176,A-klasse,AMG,Frontansicht" width="604" height="305"></a>
+							<a href="full/a/w176_amg_r.jpg"><img loading="lazy" src="style/a/w176_amg_r.webp" alt="Mercedes,W176,A-klasse,AMG,Rückansicht" width="601" height="305"></a><br>
+							<h5 class="i">Modellpflege</h5>
+							<p class="i m1">2015</p><br>
+							<a href="full/a/w176_amg_i2.jpg"><img loading="lazy" src="style/a/w176_amg_i2.webp" alt="Mercedes,w176,A-klasse,AMG,Frontansichtseat" width="1210" height="908"></a><br>
+							<a href="full/a/w176_amg_f2.jpg"><img loading="lazy" src="style/a/w176_amg_f2.webp" alt="Mercedes,W176,A-klasse,AMG,Frontansicht" width="604" height="403"></a>
+							<a href="full/a/w176_amg_r2.jpg"><img loading="lazy" src="style/a/w176_amg_r2.webp" alt="Mercedes,W176,A-klasse,AMG,Rückansicht" width="600" height="403"></a><br>
+							<a href="full/a/w176_amg_d2.jpg"><img loading="lazy" src="style/a/w176_amg_d2.webp" alt="Mercedes,W176,A-klasse,AMG,Instrumententafel" width="604" height="403"></a>
+							<a href="full/a/w176_amg_m2.jpg"><img loading="lazy" src="style/a/w176_amg_m2.webp" alt="Mercedes,W176,A-klasse,AMG,Motor" width="600" height="403"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">A45</h4>
-						<a href="full/a/w176_amg_f.jpg"><img loading="lazy" src="style/a/w176_amg_f.webp" alt="Mercedes,W176,A-klasse,AMG,Frontansicht" width="604" height="305"></a>
-						<a href="full/a/w176_amg_r.jpg"><img loading="lazy" src="style/a/w176_amg_r.webp" alt="Mercedes,W176,A-klasse,AMG,Rückansicht" width="601" height="305"></a><br>
-						<h5 class="i">Modellpflege</h5>
-						<p class="i m1">2015</p><br>
-						<a href="full/a/w176_amg_i2.jpg"><img loading="lazy" src="style/a/w176_amg_i2.webp" alt="Mercedes,w176,A-klasse,AMG,Frontansichtseat" width="1210" height="908"></a><br>
-						<a href="full/a/w176_amg_f2.jpg"><img loading="lazy" src="style/a/w176_amg_f2.webp" alt="Mercedes,W176,A-klasse,AMG,Frontansicht" width="604" height="403"></a>
-						<a href="full/a/w176_amg_r2.jpg"><img loading="lazy" src="style/a/w176_amg_r2.webp" alt="Mercedes,W176,A-klasse,AMG,Rückansicht" width="600" height="403"></a><br>
-						<a href="full/a/w176_amg_d2.jpg"><img loading="lazy" src="style/a/w176_amg_d2.webp" alt="Mercedes,W176,A-klasse,AMG,Instrumententafel" width="604" height="403"></a>
-						<a href="full/a/w176_amg_m2.jpg"><img loading="lazy" src="style/a/w176_amg_m2.webp" alt="Mercedes,W176,A-klasse,AMG,Motor" width="600" height="403"></a>
-					</section>
 				</div>
+
 			</div>
 		</section>
 
@@ -475,119 +514,140 @@
 			<h2>Die 4te A-klasse</h2>
 			<div class="style-w">
 				<a href="full/a/w177_f.jpg"><img loading="lazy" src="style/a/w177_f.webp" alt="Mercedes,W177,A-klasse,Frontansicht" width="1210" height="681"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Klicken Sie hier, um das Akkordeonfenster zu öffnen">
-						<p class="bf1a i"><a href="https://de.wikipedia.org/wiki/Mercedes-Benz_W_177" class="ico-wiki m1" title="Wikipedia(D) W177"></a></p>
-						<h3 class="i m0">W177</h3>
-						<p class="i m1">05/2018 -</p>
-						<p class="ru">Designer : Steve Mattin</p>
-					</div>
-					<section>
-						<h4 class="displayNone">W177</h4>
-						<a href="full/a/w177_r.jpg"><img loading="lazy" src="style/a/w177_r.webp" alt="Mercedes,W177,A-klasse,Rückansicht" width="619" height="391"></a>
-						<a href="full/a/w177_d.jpg"><img loading="lazy" src="style/a/w177_d.webp" alt="Mercedes,W177,A-klasse,Instrumententafel" width="586" height="391"></a><br>
-						<h5 class="i">Modellpflege</h5>
-						<p class="i m1">10/2022</p><br>
-						<a href="full/a/w177_f2.jpg"><img loading="lazy" src="style/a/w177_f2.webp" alt="Mercedes,W177,A-klasse,Frontansicht" width="602" height="339"></a>
-						<a href="full/a/w177_r2.webp"><img loading="lazy" src="style/a/w177_r2.webp" alt="Mercedes,W177,A-klasse,Rückansicht" width="602" height="339"></a><br>
-						<a href="full/a/w177_d2.webp"><img loading="lazy" src="style/a/w177_d2.webp" alt="Mercedes,W177,A-klasse,Instrumententafel" width="602" height="339"></a>
-						<a href="full/a/w177_1i2.jpg"><img loading="lazy" src="style/a/w177_1i2.webp" alt="Mercedes,W177,A-klasse,Innenansicht" width="602" height="339"></a><br>
-						<a href="full/a/w177_2i2.webp"><img loading="lazy" src="style/a/w177_2i2.webp" alt="Mercedes,W177,A-klasse,Innenansicht" width="602" height="339"></a>
-						<a href="full/a/w177_3i2.jpg"><img loading="lazy" src="style/a/w177_3i2.webp" alt="Mercedes,W177,A-klasse,Innenansicht" width="602" height="339"></a>
-						<h5>Abmessungen</h5>
-						<a href="full/a/w177_a1.jpg"><img loading="lazy" src="style/a/w177_a1.webp" alt="Mercedes,W177,A-klasse,Maße Frontansicht" width="394" height="346"></a>
-						<a href="full/a/w177_a2.jpg"><img loading="lazy" src="style/a/w177_a2.webp" alt="Mercedes,W177,A-klasse,Maße Seitenansicht" width="812" height="346"></a>
-					</section>
-				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Klicken Sie hier, um das Akkordeonfenster zu öffnen">
-						<h3 class="bf1b i">AMG</h3>
-						<p class="i m1">A35 A45</p>
-					</div>
-					<section>
-						<h4 class="displayNone">A45</h4>
-						<a href="full/a/w177_amg_f.jpg"><img loading="lazy" src="style/a/w177_amg_f.webp" alt="Mercedes,W177,A-klasse,AMG,Frontansicht" width="492" height="357"></a>
-						<a href="full/a/w177_amg_r.jpg"><img loading="lazy" src="style/a/w177_amg_r.webp" alt="Mercedes,W177,A-klasse,AMG,Rückansicht" width="713" height="357"></a><br>
-						<a href="full/a/w177_amg_d.jpg"><img loading="lazy" src="style/a/w177_amg_d.webp" alt="Mercedes,W177,A-klasse,AMG,Instrumententafel" width="552" height="368"></a>
-						<a href="full/a/w177_amg_i.jpg"><img loading="lazy" src="style/a/w177_amg_i.webp" alt="Mercedes,w177,A-klasse,AMG,Frontansichtseat" width="653" height="368"></a>
-						<figure class="f">
-							<a href="full/a/w177_amg_35_m.jpg"><img loading="lazy" src="style/a/w177_amg_35_m.webp" alt="Mercedes,W177,A-klasse,AMG,Motor" width="602" height="401"></a>
-							<figcaption>A35</figcaption>
-						</figure>
-						<figure>
-							<a href="full/a/w177_amg_45_m.jpg"><img loading="lazy" src="style/a/w177_amg_45_m.webp" alt="Mercedes,W177,A-klasse,AMG,Motor" width="603" height="401"></a>
-							<figcaption>A45</figcaption>
-						</figure>
-						<h5 class="i">Modellpflege</h5>
-						<p class="i m1">10/2022</p><br>
-						<a href="full/a/w177_amg_f2.webp"><img loading="lazy" src="style/a/w177_amg_f2.webp" alt="Mercedes,W177,A-klasse,Frontansicht" width="603" height="340"></a>
-						<a href="full/a/w177_amg_r2.webp"><img loading="lazy" src="style/a/w177_amg_r2.webp" alt="Mercedes,W177,A-klasse,Rückansicht" width="602" height="340"></a><br>
-						<a href="full/a/w177_amg_d2.webp"><img loading="lazy" src="style/a/w177_amg_d2.webp" alt="Mercedes,W177,A-klasse,Instrumententafel" width="603" height="340"></a>
-						<a href="full/a/w177_amg_1i2.webp"><img loading="lazy" src="style/a/w177_amg_1i2.webp" alt="Mercedes,W177,A-klasse,Innenansicht" width="602" height="340"></a><br>
-						<a href="full/a/w177_amg_2i2.webp"><img loading="lazy" src="style/a/w177_amg_2i2.webp" alt="Mercedes,W177,A-klasse,Innenansicht" width="603" height="340"></a>
-						<a href="full/a/w177_amg_ex2.webp"><img loading="lazy" src="style/a/w177_amg_ex2.webp" alt="Mercedes,W177,A-klasse,Innenansicht" width="602" height="340"></a>
-					</section>
-				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Klicken Sie hier, um das Akkordeonfenster zu öffnen">
-						<h3 class="bf1b i">V177 Z177</h3>
-						<p class="i m1">Limousine</p>
-						<p class="i m1">07/2018</p>
-					</div>
-					<section>
-						<h4 class="displayNone">V177</h4>
-						<a href="full/a/v177_f.jpg"><img loading="lazy" src="style/a/v177_f.webp" alt="Mercedes,V177,A-klasse,sedan,Frontansicht" width="1210" height="681"></a><br>
-						<a href="full/a/v177_r.jpg"><img loading="lazy" src="style/a/v177_r.webp" alt="Mercedes,V177,A-klasse,sedan,Rückansicht" width="602" height="339"></a>
-						<a href="full/a/v177_i.jpg"><img loading="lazy" src="style/a/v177_i.webp" alt="Mercedes,V177,A-klasse,sedan,Frontansichtseat" width="602" height="339"></a><br>
-						<h5 class="i">Modellpflege</h5>
-						<p class="i m1">10/2022</p><br>
-						<a href="full/a/v177_f2.jpg"><img loading="lazy" src="style/a/v177_f2.webp" alt="Mercedes,V177,A-klasse,Frontansicht" width="1210" height="806"></a><br>
-						<a href="full/a/v177_r2.jpg"><img loading="lazy" src="style/a/v177_r2.webp" alt="Mercedes,V177,A-klasse,Rückansicht" width="602" height="401"></a>
-						<a href="full/a/v177_d2.jpg"><img loading="lazy" src="style/a/v177_d2.webp" alt="Mercedes,V177,A-klasse,Instrumententafel" width="602" height="401"></a><br>
-						<a href="full/a/v177_1i2.jpg"><img loading="lazy" src="style/a/v177_1i2.webp" alt="Mercedes,V177,A-klasse,Innenansicht" width="602" height="401"></a>
-						<a href="full/a/v177_2i2.jpg"><img loading="lazy" src="style/a/v177_2i2.webp" alt="Mercedes,V177,A-klasse,Innenansicht" width="602" height="401"></a>
-						<h5>Abmessungen</h5>
-						<a href="full/a/v177_a3.jpg"><img loading="lazy" src="style/a/v177_a3.webp" alt="Mercedes,v177,A-klasse,sedan,Maße Ansicht von oben" width="802" height="360"></a>
-						<a href="full/a/v177_a1.jpg"><img loading="lazy" src="style/a/v177_a1.webp" alt="Mercedes,v177,A-klasse,sedan,Maße Frontansicht" width="401" height="360"></a><br>
-						<a href="full/a/v177_a2.jpg"><img loading="lazy" src="style/a/v177_a2.webp" alt="Mercedes,v177,A-klasse,sedan,Maße Seitenansicht" width="802" height="360"></a>
-						<a href="full/a/v177_a4.jpg"><img loading="lazy" src="style/a/v177_a4.webp" alt="Mercedes,v177,A-klasse,sedan,Maße Rückansicht" width="401" height="360"></a><br>
-						<h4 class="i">Z177</h4>
-						<p class="i m1">04/2018 (Version mit langem Radstand für China)</p><br>
-						<a href="full/a/x177_f.jpg"><img loading="lazy" src="style/a/x177_f.webp" alt="Mercedes,Z177,A-klasse,lang,sedan,Frontansicht" width="734" height="352"></a>
-						<a href="full/a/x177_i.jpg"><img loading="lazy" src="style/a/x177_i.webp" alt="Mercedes,Z177,A-klasse,sedan,Rückansichtseat" width="469" height="352"></a>
-						<h5 class="m1">Vergleich zwischen V177 und Z177</h5>
-						<div>
-							<div class="box90">
-								<a href="full/a/v177_s.jpg"><img loading="lazy" src="style/a/v177_s.webp" alt="Mercedes,V177,A-klasse,sedan,Seitenansicht" width="918" height="330"></a><br>
-								<a href="full/a/x177_s.jpg"><img loading="lazy" src="style/a/x177_s.webp" alt="Mercedes,Z177,A-klasse,sedan,Seitenansicht" width="918" height="330"></a>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-177" title="Klicken Sie hier, um das Akkordeonfenster zu öffnen">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://de.wikipedia.org/wiki/Mercedes-Benz_W_177" class="ico-wiki" title="Wikipedia(D) W177"></a>
+								<h3>W177<h3>
+										05/2018 -
 							</div>
-							<div class="box16">
-								<p class="m1">V177</p>
-								<dl class="m1 w14">
-									<dt class="w5">länge</dt>
-									<dd>4,549</dd>
-									<dt class="w5">breite</dt>
-									<dd>1,796</dd>
-									<dt class="w5">höhe</dt>
-									<dd>1,446</dd>
-									<dt class="w5">radstand</dt>
-									<dd>2,729</dd>
-								</dl>
-								<p class="m1 t6">Z177</p>
-								<dl class="m1 w14">
-									<dt class="w5">länge</dt>
-									<dd>4,609</dd>
-									<dt class="w5">breite</dt>
-									<dd>1,796</dd>
-									<dt class="w5">höhe</dt>
-									<dd>1,460</dd>
-									<dt class="w5">radstand</dt>
-									<dd>2,789</dd>
-								</dl>
+							<div class="accordion-right">
+								Designer : Steve Mattin
 							</div>
 						</div>
-					</section>
+					</button>
+					<div id="accordion-content-177" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">W177</h4>
+							<a href="full/a/w177_r.jpg"><img loading="lazy" src="style/a/w177_r.webp" alt="Mercedes,W177,A-klasse,Rückansicht" width="619" height="391"></a>
+							<a href="full/a/w177_d.jpg"><img loading="lazy" src="style/a/w177_d.webp" alt="Mercedes,W177,A-klasse,Instrumententafel" width="586" height="391"></a><br>
+							<h5 class="i">Modellpflege</h5>
+							<p class="i m1">10/2022</p><br>
+							<a href="full/a/w177_f2.jpg"><img loading="lazy" src="style/a/w177_f2.webp" alt="Mercedes,W177,A-klasse,Frontansicht" width="602" height="339"></a>
+							<a href="full/a/w177_r2.webp"><img loading="lazy" src="style/a/w177_r2.webp" alt="Mercedes,W177,A-klasse,Rückansicht" width="602" height="339"></a><br>
+							<a href="full/a/w177_d2.webp"><img loading="lazy" src="style/a/w177_d2.webp" alt="Mercedes,W177,A-klasse,Instrumententafel" width="602" height="339"></a>
+							<a href="full/a/w177_1i2.jpg"><img loading="lazy" src="style/a/w177_1i2.webp" alt="Mercedes,W177,A-klasse,Innenansicht" width="602" height="339"></a><br>
+							<a href="full/a/w177_2i2.webp"><img loading="lazy" src="style/a/w177_2i2.webp" alt="Mercedes,W177,A-klasse,Innenansicht" width="602" height="339"></a>
+							<a href="full/a/w177_3i2.jpg"><img loading="lazy" src="style/a/w177_3i2.webp" alt="Mercedes,W177,A-klasse,Innenansicht" width="602" height="339"></a>
+							<h5>Abmessungen</h5>
+							<a href="full/a/w177_a1.jpg"><img loading="lazy" src="style/a/w177_a1.webp" alt="Mercedes,W177,A-klasse,Maße Frontansicht" width="394" height="346"></a>
+							<a href="full/a/w177_a2.jpg"><img loading="lazy" src="style/a/w177_a2.webp" alt="Mercedes,W177,A-klasse,Maße Seitenansicht" width="812" height="346"></a>
+						</div>
+					</div>
 				</div>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-amg-a35-a45" title="Klicken Sie hier, um das Akkordeonfenster zu öffnen">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h4>AMG A35 / A45</h4>
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-amg-a35-a45" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<a href="full/a/w177_amg_f.jpg"><img loading="lazy" src="style/a/w177_amg_f.webp" alt="Mercedes,W177,A-klasse,AMG,Frontansicht" width="492" height="357"></a>
+							<a href="full/a/w177_amg_r.jpg"><img loading="lazy" src="style/a/w177_amg_r.webp" alt="Mercedes,W177,A-klasse,AMG,Rückansicht" width="713" height="357"></a><br>
+							<a href="full/a/w177_amg_d.jpg"><img loading="lazy" src="style/a/w177_amg_d.webp" alt="Mercedes,W177,A-klasse,AMG,Instrumententafel" width="552" height="368"></a>
+							<a href="full/a/w177_amg_i.jpg"><img loading="lazy" src="style/a/w177_amg_i.webp" alt="Mercedes,w177,A-klasse,AMG,Frontansichtseat" width="653" height="368"></a><br>
+							<figure class="f">
+								<a href="full/a/w177_amg_35_m.jpg"><img loading="lazy" src="style/a/w177_amg_35_m.webp" alt="Mercedes,W177,A-klasse,AMG,Motor" width="602" height="401"></a>
+								<figcaption>A35</figcaption>
+							</figure>
+							<figure>
+								<a href="full/a/w177_amg_45_m.jpg"><img loading="lazy" src="style/a/w177_amg_45_m.webp" alt="Mercedes,W177,A-klasse,AMG,Motor" width="603" height="401"></a>
+								<figcaption>A45</figcaption>
+							</figure>
+							<h5 class="i">Modellpflege</h5>
+							<p class="i m1">10/2022</p><br>
+							<a href="full/a/w177_amg_f2.webp"><img loading="lazy" src="style/a/w177_amg_f2.webp" alt="Mercedes,W177,A-klasse,Frontansicht" width="603" height="340"></a>
+							<a href="full/a/w177_amg_r2.webp"><img loading="lazy" src="style/a/w177_amg_r2.webp" alt="Mercedes,W177,A-klasse,Rückansicht" width="602" height="340"></a><br>
+							<a href="full/a/w177_amg_d2.webp"><img loading="lazy" src="style/a/w177_amg_d2.webp" alt="Mercedes,W177,A-klasse,Instrumententafel" width="603" height="340"></a>
+							<a href="full/a/w177_amg_1i2.webp"><img loading="lazy" src="style/a/w177_amg_1i2.webp" alt="Mercedes,W177,A-klasse,Innenansicht" width="602" height="340"></a><br>
+							<a href="full/a/w177_amg_2i2.webp"><img loading="lazy" src="style/a/w177_amg_2i2.webp" alt="Mercedes,W177,A-klasse,Innenansicht" width="603" height="340"></a>
+							<a href="full/a/w177_amg_ex2.webp"><img loading="lazy" src="style/a/w177_amg_ex2.webp" alt="Mercedes,W177,A-klasse,Innenansicht" width="602" height="340"></a>
+						</div>
+					</div>
+				</div>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-v177-z177" title="Klicken Sie hier, um das Akkordeonfenster zu öffnen">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h4>V177 / Z177<h4>
+										<p>Limousine</p>
+										07/2018
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-v177-z177" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<a href="full/a/v177_f.jpg"><img loading="lazy" src="style/a/v177_f.webp" alt="Mercedes,V177,A-klasse,sedan,Frontansicht" width="1210" height="681"></a><br>
+							<a href="full/a/v177_r.jpg"><img loading="lazy" src="style/a/v177_r.webp" alt="Mercedes,V177,A-klasse,sedan,Rückansicht" width="602" height="339"></a>
+							<a href="full/a/v177_i.jpg"><img loading="lazy" src="style/a/v177_i.webp" alt="Mercedes,V177,A-klasse,sedan,Frontansichtseat" width="602" height="339"></a><br>
+							<h5 class="i">Modellpflege</h5>
+							<p class="i m1">10/2022</p><br>
+							<a href="full/a/v177_f2.jpg"><img loading="lazy" src="style/a/v177_f2.webp" alt="Mercedes,V177,A-klasse,Frontansicht" width="1210" height="806"></a><br>
+							<a href="full/a/v177_r2.jpg"><img loading="lazy" src="style/a/v177_r2.webp" alt="Mercedes,V177,A-klasse,Rückansicht" width="602" height="401"></a>
+							<a href="full/a/v177_d2.jpg"><img loading="lazy" src="style/a/v177_d2.webp" alt="Mercedes,V177,A-klasse,Instrumententafel" width="602" height="401"></a><br>
+							<a href="full/a/v177_1i2.jpg"><img loading="lazy" src="style/a/v177_1i2.webp" alt="Mercedes,V177,A-klasse,Innenansicht" width="602" height="401"></a>
+							<a href="full/a/v177_2i2.jpg"><img loading="lazy" src="style/a/v177_2i2.webp" alt="Mercedes,V177,A-klasse,Innenansicht" width="602" height="401"></a>
+							<h5>Abmessungen</h5>
+							<a href="full/a/v177_a3.jpg"><img loading="lazy" src="style/a/v177_a3.webp" alt="Mercedes,v177,A-klasse,sedan,Maße Ansicht von oben" width="802" height="360"></a>
+							<a href="full/a/v177_a1.jpg"><img loading="lazy" src="style/a/v177_a1.webp" alt="Mercedes,v177,A-klasse,sedan,Maße Frontansicht" width="401" height="360"></a><br>
+							<a href="full/a/v177_a2.jpg"><img loading="lazy" src="style/a/v177_a2.webp" alt="Mercedes,v177,A-klasse,sedan,Maße Seitenansicht" width="802" height="360"></a>
+							<a href="full/a/v177_a4.jpg"><img loading="lazy" src="style/a/v177_a4.webp" alt="Mercedes,v177,A-klasse,sedan,Maße Rückansicht" width="401" height="360"></a><br>
+							<h4 class="i">Z177</h4>
+							<p class="i m1">04/2018 (Version mit langem Radstand für China)</p><br>
+							<a href="full/a/x177_f.jpg"><img loading="lazy" src="style/a/x177_f.webp" alt="Mercedes,Z177,A-klasse,lang,sedan,Frontansicht" width="734" height="352"></a>
+							<a href="full/a/x177_i.jpg"><img loading="lazy" src="style/a/x177_i.webp" alt="Mercedes,Z177,A-klasse,sedan,Rückansichtseat" width="469" height="352"></a>
+							<h5>Vergleich zwischen V177 und Z177</h5>
+							<div>
+								<div class="box90">
+									<a href="full/a/v177_s.jpg"><img loading="lazy" src="style/a/v177_s.webp" alt="Mercedes,V177,A-klasse,sedan,Seitenansicht" width="918" height="330"></a><br>
+									<a href="full/a/x177_s.jpg"><img loading="lazy" src="style/a/x177_s.webp" alt="Mercedes,Z177,A-klasse,sedan,Seitenansicht" width="918" height="330"></a>
+								</div>
+								<div class="box16">
+									<p class="m1">V177</p>
+									<dl class="m1 w14">
+										<dt class="w5">länge</dt>
+										<dd>4,549</dd>
+										<dt class="w5">breite</dt>
+										<dd>1,796</dd>
+										<dt class="w5">höhe</dt>
+										<dd>1,446</dd>
+										<dt class="w5">radstand</dt>
+										<dd>2,729</dd>
+									</dl>
+									<p class="m1 t6">Z177</p>
+									<dl class="m1 w14">
+										<dt class="w5">länge</dt>
+										<dd>4,609</dd>
+										<dt class="w5">breite</dt>
+										<dd>1,796</dd>
+										<dt class="w5">höhe</dt>
+										<dd>1,460</dd>
+										<dt class="w5">radstand</dt>
+										<dd>2,789</dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
 			</div>
 		</section>
 
@@ -640,7 +700,7 @@
 
 		<p class="m-05" id="page-top"><a href="#head">&#9650;</a></p>
 		<p id="close-accordion">
-			<a class="vmenu_all_action" onclick="doReplaceClassName ('vmenu_on2','vmenu_off')" title="Alle Öffnungen schließen">&#9654;</a>
+			<a id="close-all-accordions-2" class="vmenu_all_action" title="Alle Öffnungen schließen">&#9654;</a>
 		</p>
 	</div>
 
@@ -715,6 +775,120 @@
 			}, 500);
 			return false;
 		});
+	});
+</script>
+
+<script>
+	// シンプル版アコーディオン機能（入れ子非対応）
+	document.addEventListener('DOMContentLoaded', function () {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+		accordionHeaders.forEach(header => {
+			header.addEventListener('click', function () {
+				const content = this.nextElementSibling;
+				const isActive = this.classList.contains('active');
+
+				// クリックされたアコーディオンのみトグル
+				if (isActive) {
+					this.classList.remove('active');
+					this.setAttribute('aria-expanded', 'false');
+					content.classList.remove('active');
+				} else {
+					this.classList.add('active');
+					this.setAttribute('aria-expanded', 'true');
+					content.classList.add('active');
+				}
+			});
+
+			// キーボード操作のサポート
+			header.addEventListener('keydown', function (e) {
+				if (e.key === 'Enter' || e.key === ' ') {
+					e.preventDefault();
+					this.click();
+				}
+			});
+		});
+
+		// 全開/全閉ボタンのイベントリスナー
+		const openAllBtn = document.getElementById('open-all-accordions');
+		const closeAllBtn = document.getElementById('close-all-accordions');
+		const closeAllBtn2 = document.getElementById('close-all-accordions-2');
+
+		if (openAllBtn) {
+			openAllBtn.addEventListener('click', openAllAccordions);
+		}
+
+		if (closeAllBtn) {
+			closeAllBtn.addEventListener('click', closeAllAccordions);
+		}
+
+		if (closeAllBtn2) {
+			closeAllBtn2.addEventListener('click', closeAllAccordions);
+		}
+	});
+
+	// 全アコーディオン操作機能
+	function openAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.add('active');
+			header.setAttribute('aria-expanded', 'true');
+			content.classList.add('active');
+		});
+	}
+
+	function closeAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.remove('active');
+			header.setAttribute('aria-expanded', 'false');
+			content.classList.remove('active');
+		});
+	}
+
+	// 全アコーディオン操作機能
+	function openAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.add('active');
+			header.setAttribute('aria-expanded', 'true');
+			content.classList.add('active');
+		});
+	}
+
+	function closeAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.remove('active');
+			header.setAttribute('aria-expanded', 'false');
+			content.classList.remove('active');
+		});
+	}
+
+	// ボタンにイベントリスナーを追加
+	document.addEventListener('DOMContentLoaded', function () {
+		// 既存のアコーディオンコード...
+
+		// 全開/全閉ボタン
+		const openAllBtn = document.getElementById('open-all-accordions');
+		const closeAllBtn = document.getElementById('close-all-accordions');
+		const closeAllBtn2 = document.getElementById('close-all-accordions-2'); // 追加ボタン
+
+		if (openAllBtn) {
+			openAllBtn.addEventListener('click', openAllAccordions);
+		}
+
+		if (closeAllBtn) {
+			closeAllBtn.addEventListener('click', closeAllAccordions);
+		}
+
+		if (closeAllBtn2) {
+			closeAllBtn2.addEventListener('click', closeAllAccordions);
+		}
 	});
 </script>
 
