@@ -1283,7 +1283,7 @@ iframe {
 }
 
 .accordion-header.subpage h4 {
-	margin: 0 16px 0 27px;
+	margin: 0 16px 0 6px;
 }
 
 /* 複数行の場合の調整 */

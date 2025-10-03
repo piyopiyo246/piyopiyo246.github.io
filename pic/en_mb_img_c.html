@@ -50,24 +50,6 @@
 	<!-- 5. CSS -->
 	<link rel="stylesheet" href="../style.min.css">
 	<link rel="stylesheet" href="../style_v.min.css">
-	<link rel="stylesheet" href="../fa.all.min.css">
-
-	<!-- アコーディオン用のJavaScript関数を追加 -->
-	<script>
-		function doToggleClassName(obj, onClassName, offClassName) {
-			obj.className = (obj.className != onClassName) ? onClassName : offClassName;
-		}
-		function getParentObj(obj) {
-			return obj.parentElement || obj.parentNode;
-		}
-		function doReplaceClassName(findClassName, replaceClassName, targetTagName) {
-			var elements = document.getElementsByTagName(targetTagName || '*');
-			for (var i = 0; i < elements.length; i++) {
-				if (elements[i].className == findClassName)
-					elements[i].className = replaceClassName;
-			}
-		}
-	</script>
 
 	<!-- 6. Cookie同意管理システム -->
 	<script>
@@ -272,7 +254,7 @@
 					</li>
 				</ul>
 				<h1 class="b bf4">190 / C-class</h1>
-				 <div style="display: flex; justify-content: space-between; width: 1210px;">
+				<div style="display: flex; justify-content: space-between; width: 1210px;">
 					<dl class="m1">
 						<dt class="s2 af0">Series</dt>
 						<dd class="s2"><a href="#w201" title="190 W201" class="lnk2">201</a></dd>
@@ -283,8 +265,8 @@
 						<dd><a href="#w206" title="The 5th C-class W206/S206" class="lnk2">206</a></dd>
 					</dl>
 					<span>
-						<button class="vmenu_all_action square_btn" type="button" title="Click here to open all openings" span onclick="doReplaceClassName('vmenu_off', 'vmenu_on2')">Open all</button>
-						<button class="vmenu_all_action square_btn" type="button" title="Click here to close all openings" span onclick="doReplaceClassName('vmenu_on2', 'vmenu_off')">Close all</button>
+						<button id="open-all-accordions" class="vmenu_all_action square_btn" type="button" title="Click here to open all openings">Open all</button>
+						<button id="close-all-accordions" class="vmenu_all_action square_btn" type="button" title="Click here to close all openings">Close all</button>
 						<button class="square_btn" type="button" onclick="location.href='ja_mb_img_c.html'">Ja</button>
 						<button class="square_btn" type="button" onclick="location.href='mb_img_c.html'">De</button>
 					</span>
@@ -350,60 +332,77 @@
 			<h2>190</h2>
 			<div class="style-w">
 				<a href="full/c/w201_all.jpg"><img loading="lazy" src="style/c/w201_all.webp" alt="Mercedes,W201,190E,all" width="1210" height="953"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<p class="bf1a i"><a href="https://en.wikipedia.org/wiki/Mercedes-Benz_W201" class="ico-wiki m1" title="Wikipedia(E)_W201"></a></p>
-						<h3 class="i m0">W201</h3>
-						<p class="i m1">190 190E 190D</p>
-						<p class="i m1">12/1982 - 08/1993</p>
-						<p class="ru">Designer : Bruno Sacco (1979)</p>
-					</div>
-					<section>
-						<h4 class="displayNone">W201</h4>
-						<div>
-							<div class="box60a"><br>
-								<a href="full/c/w201_f.jpg"><img loading="lazy" src="style/c/w201_f.webp" alt="Mercedes,W201,190E,Front view" width="604" height="297"></a><br>
-								<a href="full/c/w201_r.jpg"><img loading="lazy" src="style/c/w201_r.webp" alt="Mercedes,W201,190E,Rear view" width="604" height="308"></a><br>
-								<a href="full/c/w201_d.jpg"><img loading="lazy" src="style/c/w201_d.webp" alt="Mercedes,W201,190E,Dashboard" width="604" height="391"></a>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-w201" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://en.wikipedia.org/wiki/Mercedes-Benz_W201" class="ico-wiki" title="Wikipedia(E)_W201"></a>
+								<h3>W201<h3>
+										<p>190 , 190E , 190D</p>
+										12/1982 - 08/1993
 							</div>
-							<div class="box60a">
-								<h5 class="i">Facelift</h5>
-								<p class="i m1">10/1988</p><br>
-								<a href="full/c/w201_f2.jpg"><img loading="lazy" src="style/c/w201_f2.webp" alt="Mercedes,W201,190E,Front view" width="604" height="297"></a><br>
-								<a href="full/c/w201_r2.jpg"><img loading="lazy" src="style/c/w201_r2.webp" alt="Mercedes,W201,190E,Rear view" width="604" height="308"></a><br>
-								<a href="full/c/w201_d2.jpg"><img loading="lazy" src="style/c/w201_d2.webp" alt="Mercedes,W201,190E,Dashboard" width="604" height="394"></a>
+							<div class="accordion-right">
+								Designer : Bruno Sacco (1979)
 							</div>
 						</div>
-						<h5>Dimensions</h5>
-						<a href="full/c/w201_a.jpg"><img loading="lazy" src="style/c/w201_a.webp" alt="Mercedes,W201,190E,Dimensions" width="500" height="701"></a>
-						<a href="full/c/w201_i.jpg"><img loading="lazy" src="style/c/w201_i.webp" alt="Mercedes,W201,190E,Interior" width="705" height="469"></a>
-					</section>
-				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<h3 class="bf1b i">W201</h3>
-						<p class="i m1">190E 2.3 / 2.5 -16</p>
+					</button>
+					<div id="accordion-content-w201" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">W201</h4>
+							<div>
+								<div class="box60a"><br>
+									<a href="full/c/w201_f.jpg"><img loading="lazy" src="style/c/w201_f.webp" alt="Mercedes,W201,190E,Front view" width="604" height="297"></a><br>
+									<a href="full/c/w201_r.jpg"><img loading="lazy" src="style/c/w201_r.webp" alt="Mercedes,W201,190E,Rear view" width="604" height="308"></a><br>
+									<a href="full/c/w201_d.jpg"><img loading="lazy" src="style/c/w201_d.webp" alt="Mercedes,W201,190E,Dashboard" width="604" height="391"></a>
+								</div>
+								<div class="box60a">
+									<h5 class="i">Facelift</h5>
+									<p class="i m1">10/1988</p><br>
+									<a href="full/c/w201_f2.jpg"><img loading="lazy" src="style/c/w201_f2.webp" alt="Mercedes,W201,190E,Front view" width="604" height="297"></a><br>
+									<a href="full/c/w201_r2.jpg"><img loading="lazy" src="style/c/w201_r2.webp" alt="Mercedes,W201,190E,Rear view" width="604" height="308"></a><br>
+									<a href="full/c/w201_d2.jpg"><img loading="lazy" src="style/c/w201_d2.webp" alt="Mercedes,W201,190E,Dashboard" width="604" height="394"></a>
+								</div>
+							</div>
+							<h5>Dimensions</h5>
+							<a href="full/c/w201_a.jpg"><img loading="lazy" src="style/c/w201_a.webp" alt="Mercedes,W201,190E,Dimensions" width="500" height="701"></a>
+							<a href="full/c/w201_i.jpg"><img loading="lazy" src="style/c/w201_i.webp" alt="Mercedes,W201,190E,Interior" width="705" height="469"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="i">190E 2.3-16</h4>
-						<p class="i m1">1982 - 1988</p><br>
-						<a href="full/c/w201_23_16_f.jpg"><img loading="lazy" src="style/c/w201_23_16_f.webp" alt="Mercedes,W201,190E,2.3-16,Front view" width="602" height="340"></a>
-						<a href="full/c/w201_23_16_r.jpg"><img loading="lazy" src="style/c/w201_23_16_r.webp" alt="Mercedes,W201,190E,2.3-16,Rear view" width="602" height="340"></a><br>
-						<a href="full/c/w201_23_16_d.jpg"><img loading="lazy" src="style/c/w201_23_16_d.webp" alt="Mercedes,W201,190E,2.3-16,Dashboard" width="602" height="378"></a>
-						<a href="full/c/w201_23_16_i.jpg"><img loading="lazy" src="style/c/w201_23_16_i.webp" alt="Mercedes,W201,190E,2.3-16,Interior" width="602" height="378"></a><br>
-						<a href="full/c/w201_23_16_da.jpg"><img loading="lazy" src="style/c/w201_23_16_da.webp" alt="Mercedes,W201,190E,2.3-16,meterpanel" width="694" height="463"></a>
-						<a href="full/c/w201_23_16_m.jpg"><img loading="lazy" src="style/c/w201_23_16_m.webp" alt="Mercedes,W201,190E,2.3-16,Engine" width="510" height="463"></a><br>
-						<h4 class="i">190E 2.5-16 Evolution II</h4>
-						<p class="i m1">1990</p><br>
-						<a href="full/c/w201_evo2.jpg"><img loading="lazy" src="style/c/w201_evo2.webp" alt="Mercedes,W201,190E,Evolution2,Front view" width="1210" height="801"></a><br>
-						<a href="full/c/w201_evo2_f.jpg"><img loading="lazy" src="style/c/w201_evo2_f.webp" alt="Mercedes,W201,190E,Evolution2,Front view" width="609" height="323"></a>
-						<a href="full/c/w201_evo2_r.jpg"><img loading="lazy" src="style/c/w201_evo2_r.webp" alt="Mercedes,W201,190E,Evolution2,Rear view" width="595" height="323"></a><br>
-						<a href="full/c/w201_evo2_s.jpg"><img loading="lazy" src="style/c/w201_evo2_s.webp" alt="Mercedes,W201,190E,Evolution2,Side view" width="843" height="450"></a>
-						<a href="full/c/w201_evo2_i.jpg"><img loading="lazy" src="style/c/w201_evo2_i.webp" alt="Mercedes,W201,190E,Evolution2,Interior" width="362" height="450"></a><br>
-						<a href="full/c/w201_evo2_d.jpg"><img loading="lazy" src="style/c/w201_evo2_d.webp" alt="Mercedes,W201,190E,Evolution2,Dashboard" width="603" height="400"></a>
-						<a href="full/c/w201_evo2_m.jpg"><img loading="lazy" src="style/c/w201_evo2_m.webp" alt="Mercedes,W201,190E,Evolution2,Engine" width="602" height="400"></a>
-					</section>
 				</div>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-190e 2.3 / 2.5 -16" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h4>190E 2.3-16<h4>
+										1982 - 1988
+										<h4>2.5-16 Evolution II<h4>
+												1990
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-190e 2.3 / 2.5 -16" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4>190E 2.3-16</h4>
+							<a href="full/c/w201_23_16_f.jpg"><img loading="lazy" src="style/c/w201_23_16_f.webp" alt="Mercedes,W201,190E,2.3-16,Front view" width="602" height="340"></a>
+							<a href="full/c/w201_23_16_r.jpg"><img loading="lazy" src="style/c/w201_23_16_r.webp" alt="Mercedes,W201,190E,2.3-16,Rear view" width="602" height="340"></a><br>
+							<a href="full/c/w201_23_16_d.jpg"><img loading="lazy" src="style/c/w201_23_16_d.webp" alt="Mercedes,W201,190E,2.3-16,Dashboard" width="602" height="378"></a>
+							<a href="full/c/w201_23_16_i.jpg"><img loading="lazy" src="style/c/w201_23_16_i.webp" alt="Mercedes,W201,190E,2.3-16,Interior" width="602" height="378"></a><br>
+							<a href="full/c/w201_23_16_da.jpg"><img loading="lazy" src="style/c/w201_23_16_da.webp" alt="Mercedes,W201,190E,2.3-16,meterpanel" width="694" height="463"></a>
+							<a href="full/c/w201_23_16_m.jpg"><img loading="lazy" src="style/c/w201_23_16_m.webp" alt="Mercedes,W201,190E,2.3-16,Engine" width="510" height="463"></a><br>
+							<h4>190E 2.5-16 Evolution II</h4>
+							<a href="full/c/w201_evo2.jpg"><img loading="lazy" src="style/c/w201_evo2.webp" alt="Mercedes,W201,190E,Evolution2,Front view" width="1210" height="801"></a><br>
+							<a href="full/c/w201_evo2_f.jpg"><img loading="lazy" src="style/c/w201_evo2_f.webp" alt="Mercedes,W201,190E,Evolution2,Front view" width="609" height="323"></a>
+							<a href="full/c/w201_evo2_r.jpg"><img loading="lazy" src="style/c/w201_evo2_r.webp" alt="Mercedes,W201,190E,Evolution2,Rear view" width="595" height="323"></a><br>
+							<a href="full/c/w201_evo2_s.jpg"><img loading="lazy" src="style/c/w201_evo2_s.webp" alt="Mercedes,W201,190E,Evolution2,Side view" width="843" height="450"></a>
+							<a href="full/c/w201_evo2_i.jpg"><img loading="lazy" src="style/c/w201_evo2_i.webp" alt="Mercedes,W201,190E,Evolution2,Interior" width="362" height="450"></a><br>
+							<a href="full/c/w201_evo2_d.jpg"><img loading="lazy" src="style/c/w201_evo2_d.webp" alt="Mercedes,W201,190E,Evolution2,Dashboard" width="603" height="400"></a>
+							<a href="full/c/w201_evo2_m.jpg"><img loading="lazy" src="style/c/w201_evo2_m.webp" alt="Mercedes,W201,190E,Evolution2,Engine" width="602" height="400"></a>
+						</div>
+					</div>
+				</div>
+
 			</div>
 		</section>
 
@@ -411,82 +410,107 @@
 			<h2>The 1st C-class</h2>
 			<div class="style-w">
 				<a href="full/c/w202_f.jpg"><img loading="lazy" src="style/c/w202_f.webp" alt="Mercedes,W202,C-class,Front view" width="1210" height="757"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<p class="bf1a i"><a href="https://en.wikipedia.org/wiki/Mercedes-Benz_C-Class_(W202)" class="ico-wiki m1" title="Wikipedia(E)_Mercedes-Benz_Baureihe_202"></a></p>
-						<h3 class="i m0">W202</h3>
-						<p class="i m1">03/1993 - 06/2000</p>
-						<p class="ru">Designer : Olivier Boulay (1987)</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-202" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://en.wikipedia.org/wiki/Mercedes-Benz_C-Class_(W202)" class="ico-wiki" title="Wikipedia(E)_Mercedes-Benz_Baureihe_202"></a>
+								<h3>W202<h3>
+										03/1993 - 06/2000
+							</div>
+							<div class="accordion-right">
+								Designer : Olivier Boulay (1987)
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-202" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">W202</h4>
+							<a href="full/c/w202_r.jpg"><img loading="lazy" src="style/c/w202_r.webp" alt="Mercedes,W202,C-class,Rear view" width="762" height="443"></a>
+							<a href="full/c/w202_d.jpg"><img loading="lazy" src="style/c/w202_d.webp" alt="Mercedes,W202,C-class,Dashboard" width="443" height="443"></a><br>
+							<a href="full/c/w202_tp.jpg"><img loading="lazy" src="style/c/w202_tp.webp" alt="Mercedes,W202,C-class,Perspective" width="1210" height="728"></a><br>
+							<a href="full/c/w202_s.jpg"><img loading="lazy" src="style/c/w202_s.webp" alt="Mercedes,W202,C-class,Side view" width="746" height="420"></a>
+							<a href="full/c/w202_m.jpg"><img loading="lazy" src="style/c/w202_m.webp" alt="Mercedes,W202,C-class,Engine" width="458" height="420"></a>
+							<p>C-class VS BMW E36</p>
+							<a href="full/c/bmw-e36-mercedes-w202.jpg"><img loading="lazy" src="style/c/bmw-e36-mercedes-w202.webp" alt="Mercedes,W202,C-class-BMW-e36" width="1210" height="807"></a><br>
+							<h5 class="i">Facelift</h5>
+							<p class="i m1">06/1997</p><br>
+							<a href="full/c/w202_f2.jpg"><img loading="lazy" src="style/c/w202_f2.webp" alt="Mercedes,W202,C-class,Front view" width="735" height="315"></a>
+							<a href="full/c/w202_d2.jpg"><img loading="lazy" src="style/c/w202_d2.webp" alt="Mercedes,W202,C-class,Dashboard" width="467" height="315"></a><br>
+							<a href="full/c/w202_r2.jpg"><img loading="lazy" src="style/c/w202_r2.webp" alt="Mercedes,W202,C-class,Rear view" width="737" height="312"></a>
+							<a href="full/c/w202_i2.jpg"><img loading="lazy" src="style/c/w202_i2.webp" alt="Mercedes,W202,C-class,Interior" width="468" height="312"></a><br>
+							<a href="full/c/w202.jpg"><img loading="lazy" src="style/c/w202.webp" alt="Mercedes,W202,C-class" width="603" height="452"></a>
+							<a href="full/c/w202_m2.jpg"><img loading="lazy" src="style/c/w202_m2.webp" alt="Mercedes,W202,C-class,Engine" width="602" height="452"></a>
+							<h5>Dimensions</h5>
+							<a href="full/c/w202_a2.jpg"><img loading="lazy" src="style/c/w202_a2.webp" alt="Mercedes,W202,C-class,Dimensions" width="1210" height="712"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">W202</h4>
-						<a href="full/c/w202_r.jpg"><img loading="lazy" src="style/c/w202_r.webp" alt="Mercedes,W202,C-class,Rear view" width="762" height="443"></a>
-						<a href="full/c/w202_d.jpg"><img loading="lazy" src="style/c/w202_d.webp" alt="Mercedes,W202,C-class,Dashboard" width="443" height="443"></a><br>
-						<a href="full/c/w202_tp.jpg"><img loading="lazy" src="style/c/w202_tp.webp" alt="Mercedes,W202,C-class,Perspective" width="1210" height="728"></a><br>
-						<a href="full/c/w202_s.jpg"><img loading="lazy" src="style/c/w202_s.webp" alt="Mercedes,W202,C-class,Side view" width="746" height="420"></a>
-						<a href="full/c/w202_m.jpg"><img loading="lazy" src="style/c/w202_m.webp" alt="Mercedes,W202,C-class,Engine" width="458" height="420"></a>
-						<h4>C-class VS BMW E36</h4>
-						<a href="full/c/bmw-e36-mercedes-w202.jpg"><img loading="lazy" src="style/c/bmw-e36-mercedes-w202.webp" alt="Mercedes,W202,C-class-BMW-e36" width="1210" height="807"></a><br>
-						<h5 class="i">Facelift</h5>
-						<p class="i m1">06/1997</p><br>
-						<a href="full/c/w202_f2.jpg"><img loading="lazy" src="style/c/w202_f2.webp" alt="Mercedes,W202,C-class,Front view" width="735" height="315"></a>
-						<a href="full/c/w202_d2.jpg"><img loading="lazy" src="style/c/w202_d2.webp" alt="Mercedes,W202,C-class,Dashboard" width="467" height="315"></a><br>
-						<a href="full/c/w202_r2.jpg"><img loading="lazy" src="style/c/w202_r2.webp" alt="Mercedes,W202,C-class,Rear view" width="737" height="312"></a>
-						<a href="full/c/w202_i2.jpg"><img loading="lazy" src="style/c/w202_i2.webp" alt="Mercedes,W202,C-class,Interior" width="468" height="312"></a><br>
-						<a href="full/c/w202.jpg"><img loading="lazy" src="style/c/w202.webp" alt="Mercedes,W202,C-class" width="603" height="452"></a>
-						<a href="full/c/w202_m2.jpg"><img loading="lazy" src="style/c/w202_m2.webp" alt="Mercedes,W202,C-class,Engine" width="602" height="452"></a>
-						<h5>Dimensions</h5>
-						<a href="full/c/w202_a2.jpg"><img loading="lazy" src="style/c/w202_a2.webp" alt="Mercedes,W202,C-class,Dimensions" width="1210" height="712"></a>
-					</section>
 				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<h3 class="bf1b i">S202</h3>
-						<p class="i m1">T-Model</p>
-						<p class="i m1">03/1996 - 01/2001</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-s202" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h3>S202<h3>
+										<p>T-Model</p>
+										03/1996 - 01/2001
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-s202" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">S202</h4>
+							<a href="full/c/s202_f.jpg"><img loading="lazy" src="style/c/s202_f.webp" alt="Mercedes,S202,C-class,Front view" width="602" height="334"></a>
+							<a href="full/c/s202_r.jpg"><img loading="lazy" src="style/c/s202_r.webp" alt="Mercedes,S202,C-class,Rear view" width="602" height="334"></a><br>
+							<h5 class="i">Facelift</h5>
+							<p class="i m1">06/1997</p><br>
+							<a href="full/c/s202_f2.jpg"><img loading="lazy" src="style/c/s202_f2.webp" alt="Mercedes,S202,C-class,Front view" width="602" height="350"></a>
+							<a href="full/c/s202_r2.jpg"><img loading="lazy" src="style/c/s202_r2.webp" alt="Mercedes,S202,C-class,Rear view" width="602" height="350"></a>
+							<h5>Dimensions</h5>
+							<a href="full/c/s202_a.jpg"><img loading="lazy" src="style/c/s202_a.webp" alt="Mercedes,S202,C-class,Dimensions" width="804" height="1042"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">S202</h4>
-						<a href="full/c/s202_f.jpg"><img loading="lazy" src="style/c/s202_f.webp" alt="Mercedes,S202,C-class,Front view" width="602" height="334"></a>
-						<a href="full/c/s202_r.jpg"><img loading="lazy" src="style/c/s202_r.webp" alt="Mercedes,S202,C-class,Rear view" width="602" height="334"></a><br>
-						<h5 class="i">Facelift</h5>
-						<p class="i m1">06/1997</p><br>
-						<a href="full/c/s202_f2.jpg"><img loading="lazy" src="style/c/s202_f2.webp" alt="Mercedes,S202,C-class,Front view" width="602" height="350"></a>
-						<a href="full/c/s202_r2.jpg"><img loading="lazy" src="style/c/s202_r2.webp" alt="Mercedes,S202,C-class,Rear view" width="602" height="350"></a>
-						<h5>Dimensions</h5>
-						<a href="full/c/s202_a.jpg"><img loading="lazy" src="style/c/s202_a.webp" alt="Mercedes,S202,C-class,Dimensions" width="804" height="1042"></a>
-					</section>
 				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<h3 class="bf1b i">AMG</h3>
-						<p class="i m1">C36 / C43 / C55</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-amg-c36-43-55" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h4>AMG C 36<h4>
+										09/1993 - 01/1997
+										<h4>C 43<h4>
+												09/1997 - 05/2000
+												<h4>C 55<h4>
+														06/1998 - 05/2000
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-amg-c36-43-55" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4>C36</h4>
+							<a href="full/c/w202_c36_f.jpg"><img loading="lazy" src="style/c/w202_c36_f.webp" alt="Mercedes,W202,C-class,C36,AMG,Front view" width="602" height="406"></a>
+							<a href="full/c/w202_c36_r.jpg"><img loading="lazy" src="style/c/w202_c36_r.webp" alt="Mercedes,W202,C-class,C36,AMG,Rear view" width="602" height="406"></a><br>
+							<a href="full/c/w202_c36_d.jpg"><img loading="lazy" src="style/c/w202_c36_d.webp" alt="Mercedes,W202,C-class,C36,AMG,Dashboard" width="602" height="453"></a>
+							<a href="full/c/w202_c36_m.jpg"><img loading="lazy" src="style/c/w202_c36_m.webp" alt="Mercedes,W202,C-class,C36,AMG,Engine" width="602" height="453"></a><br>
+							<h4>C43</h4>
+							<a href="full/c/w202_c43_f.jpg"><img loading="lazy" src="style/c/w202_c43_f.webp" alt="Mercedes,W202,C-class,C43,AMG,Front view" width="602" height="452"></a>
+							<a href="full/c/w202_c43_r.jpg"><img loading="lazy" src="style/c/w202_c43_r.webp" alt="Mercedes,W202,C-class,C43,AMG,Rear view" width="602" height="452"></a><br>
+							<a href="full/c/w202_c43_d.jpg"><img loading="lazy" src="style/c/w202_c43_d.webp" alt="Mercedes,W202,C-class,C43,AMG,Dashboard" width="602" height="452"></a>
+							<a href="full/c/w202_c43_m.jpg"><img loading="lazy" src="style/c/w202_c43_m.webp" alt="Mercedes,W202,C-class,C43,AMG,Engine" width="602" height="452"></a><br>
+							<h4>C55</h4>
+							<a href="full/c/w202_c55_f.jpg"><img loading="lazy" src="style/c/w202_c55_f.webp" alt="Mercedes,W202,C-class,C55,AMG,Front view" width="602" height="402"></a>
+							<a href="full/c/w202_c55_r.jpg"><img loading="lazy" src="style/c/w202_c55_r.webp" alt="Mercedes,W202,C-class,C55,AMG,Rear view" width="602" height="402"></a><br>
+							<a href="full/c/w202_c55_d.jpg"><img loading="lazy" src="style/c/w202_c55_d.webp" alt="Mercedes,W202,C-class,C55,AMG,Dashboard" width="602" height="402"></a>
+							<a href="full/c/w202_c55_ia.jpg"><img loading="lazy" src="style/c/w202_c55_ia.webp" alt="Mercedes,W202,C-class,C55,AMG,Innenansicht" width="602" height="402"></a><br>
+							<a href="full/c/w202_c55_da.jpg"><img loading="lazy" src="style/c/w202_c55_da.webp" alt="Mercedes,W202,C-class,C55,AMG,Dashboard" width="602" height="402"></a>
+							<a href="full/c/w202_c55_db.jpg"><img loading="lazy" src="style/c/w202_c55_db.webp" alt="Mercedes,W202,C-class,C55,AMG,Dashboard" width="602" height="402"></a><br>
+							<a href="full/c/w202_c55_m.jpg"><img loading="lazy" src="style/c/w202_c55_m.webp" alt="Mercedes,W202,C-class,C55,AMG,Engine" width="602" height="402"></a>
+							<a href="full/c/w202_c55_ib.jpg"><img loading="lazy" src="style/c/w202_c55_ib.webp" alt="Mercedes,W202,C-class,C55,AMG,Interior" width="602" height="402"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="i">C36</h4>
-						<p class="i m1">09/1993 - 01/1997</p><br>
-						<a href="full/c/w202_c36_f.jpg"><img loading="lazy" src="style/c/w202_c36_f.webp" alt="Mercedes,W202,C-class,C36,AMG,Front view" width="602" height="406"></a>
-						<a href="full/c/w202_c36_r.jpg"><img loading="lazy" src="style/c/w202_c36_r.webp" alt="Mercedes,W202,C-class,C36,AMG,Rear view" width="602" height="406"></a><br>
-						<a href="full/c/w202_c36_d.jpg"><img loading="lazy" src="style/c/w202_c36_d.webp" alt="Mercedes,W202,C-class,C36,AMG,Dashboard" width="602" height="453"></a>
-						<a href="full/c/w202_c36_m.jpg"><img loading="lazy" src="style/c/w202_c36_m.webp" alt="Mercedes,W202,C-class,C36,AMG,Engine" width="602" height="453"></a><br>
-						<h4 class="i">C43</h4>
-						<p class="i m1">09/1997 - 05/2000</p><br>
-						<a href="full/c/w202_c43_f.jpg"><img loading="lazy" src="style/c/w202_c43_f.webp" alt="Mercedes,W202,C-class,C43,AMG,Front view" width="602" height="452"></a>
-						<a href="full/c/w202_c43_r.jpg"><img loading="lazy" src="style/c/w202_c43_r.webp" alt="Mercedes,W202,C-class,C43,AMG,Rear view" width="602" height="452"></a><br>
-						<a href="full/c/w202_c43_d.jpg"><img loading="lazy" src="style/c/w202_c43_d.webp" alt="Mercedes,W202,C-class,C43,AMG,Dashboard" width="602" height="452"></a>
-						<a href="full/c/w202_c43_m.jpg"><img loading="lazy" src="style/c/w202_c43_m.webp" alt="Mercedes,W202,C-class,C43,AMG,Engine" width="602" height="452"></a><br>
-						<h4 class="i">C55</h4>
-						<p class="i m1">6/1998 - 5/2000</p><br>
-						<a href="full/c/w202_c55_f.jpg"><img loading="lazy" src="style/c/w202_c55_f.webp" alt="Mercedes,W202,C-class,C55,AMG,Front view" width="602" height="402"></a>
-						<a href="full/c/w202_c55_r.jpg"><img loading="lazy" src="style/c/w202_c55_r.webp" alt="Mercedes,W202,C-class,C55,AMG,Rear view" width="602" height="402"></a><br>
-						<a href="full/c/w202_c55_d.jpg"><img loading="lazy" src="style/c/w202_c55_d.webp" alt="Mercedes,W202,C-class,C55,AMG,Dashboard" width="602" height="402"></a>
-						<a href="full/c/w202_c55_ia.jpg"><img loading="lazy" src="style/c/w202_c55_ia.webp" alt="Mercedes,W202,C-class,C55,AMG,Innenansicht" width="602" height="402"></a><br>
-						<a href="full/c/w202_c55_da.jpg"><img loading="lazy" src="style/c/w202_c55_da.webp" alt="Mercedes,W202,C-class,C55,AMG,Dashboard" width="602" height="402"></a>
-						<a href="full/c/w202_c55_db.jpg"><img loading="lazy" src="style/c/w202_c55_db.webp" alt="Mercedes,W202,C-class,C55,AMG,Dashboard" width="602" height="402"></a><br>
-						<a href="full/c/w202_c55_m.jpg"><img loading="lazy" src="style/c/w202_c55_m.webp" alt="Mercedes,W202,C-class,C55,AMG,Engine" width="602" height="402"></a>
-						<a href="full/c/w202_c55_ib.jpg"><img loading="lazy" src="style/c/w202_c55_ib.webp" alt="Mercedes,W202,C-class,C55,AMG,Interior" width="602" height="402"></a>
-					</section>
 				</div>
+
 			</div>
 		</section>
 
@@ -494,72 +518,96 @@
 			<h2>The 2nd C-class</h2>
 			<div class="style-w">
 				<a href="full/c/w203.jpg"><img loading="lazy" src="style/c/w203.webp" alt="Mercedes,W203,C-class,Front view" width="1210" height="908"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<p class="bf1a i"><a href="https://en.wikipedia.org/wiki/Mercedes-Benz_C-Class_(W203)" class="ico-wiki m1" title="Wikipedia(E)_Mercedes-Benz_Baureihe_203"></a></p>
-						<h3 class="i m0">W203</h3>
-						<p class="i m1">03/2000 - 10/2007</p>
-						<p class="ru">Designer : Peter Pfeiffer (1995)</p>
-					</div>
-					<section>
-						<h4 class="displayNone">W203</h4>
-						<div>
-							<div class="box60a"><br>
-								<a href="full/c/w203_f.jpg"><img loading="lazy" src="style/c/w203_f.webp" alt="Mercedes,W203,C-class,Front view" width="604" height="360"></a><br>
-								<a href="full/c/w203_r.jpg"><img loading="lazy" src="style/c/w203_r.webp" alt="Mercedes,W203,C-class,Rear view" width="604" height="333"></a><br>
-								<a href="full/c/w203_d.jpg"><img loading="lazy" src="style/c/w203_d.webp" alt="Mercedes,W203,C-class,Dashboard" width="604" height="400"></a>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-203" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://en.wikipedia.org/wiki/Mercedes-Benz_C-Class_(W203)" class="ico-wiki" title="Wikipedia(E)_Mercedes-Benz_Baureihe_203"></a>
+								<h3>W203<h3>
+										03/2000 - 10/2007
 							</div>
-							<div class="box60a">
-								<h5 class="i">Facelift</h5>
-								<p class="i m1">04/2004</p><br>
-								<a href="full/c/w203_f2.jpg"><img loading="lazy" src="style/c/w203_f2.webp" alt="Mercedes,W203,C-class,Front view" width="604" height="315"></a><br>
-								<a href="full/c/w203_r2.jpg"><img loading="lazy" src="style/c/w203_r2.webp" alt="Mercedes,W203,C-class,Rear view" width="604" height="327"></a><br>
-								<a href="full/c/w203_d2.jpg"><img loading="lazy" src="style/c/w203_d2.webp" alt="Mercedes,W203,C-class,Dashboard" width="604" height="445"></a>
+							<div class="accordion-right">
+								Designer : Peter Pfeiffer (1995)
 							</div>
 						</div>
-						<h5>Dimensions</h5>
-						<a href="full/c/w203_a.jpg"><img loading="lazy" src="style/c/w203_a.webp" alt="Mercedes,W202,C-class,Dimensions" width="1210" height="756"></a>
-					</section>
-				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<h3 class="bf1b i">S203</h3>
-						<p class="i m1">T-Model</p>
-						<p class="i m1">01/2001 - 10/2007</p>
+					</button>
+					<div id="accordion-content-203" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">W203</h4>
+							<div>
+								<div class="box60a"><br>
+									<a href="full/c/w203_f.jpg"><img loading="lazy" src="style/c/w203_f.webp" alt="Mercedes,W203,C-class,Front view" width="604" height="360"></a><br>
+									<a href="full/c/w203_r.jpg"><img loading="lazy" src="style/c/w203_r.webp" alt="Mercedes,W203,C-class,Rear view" width="604" height="333"></a><br>
+									<a href="full/c/w203_d.jpg"><img loading="lazy" src="style/c/w203_d.webp" alt="Mercedes,W203,C-class,Dashboard" width="604" height="400"></a>
+								</div>
+								<div class="box60a">
+									<h5 class="i">Facelift</h5>
+									<p class="i m1">04/2004</p><br>
+									<a href="full/c/w203_f2.jpg"><img loading="lazy" src="style/c/w203_f2.webp" alt="Mercedes,W203,C-class,Front view" width="604" height="315"></a><br>
+									<a href="full/c/w203_r2.jpg"><img loading="lazy" src="style/c/w203_r2.webp" alt="Mercedes,W203,C-class,Rear view" width="604" height="327"></a><br>
+									<a href="full/c/w203_d2.jpg"><img loading="lazy" src="style/c/w203_d2.webp" alt="Mercedes,W203,C-class,Dashboard" width="604" height="445"></a>
+								</div>
+							</div>
+							<h5>Dimensions</h5>
+							<a href="full/c/w203_a.jpg"><img loading="lazy" src="style/c/w203_a.webp" alt="Mercedes,W202,C-class,Dimensions" width="1210" height="756"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">T-Model</h4>
-						<a href="full/c/s203.jpg"><img loading="lazy" src="style/c/s203.webp" alt="Mercedes,S203,C-class,Front view" width="1210" height="703"></a><br>
-						<a href="full/c/s203_f.jpg"><img loading="lazy" src="style/c/s203_f.webp" alt="Mercedes,S203,C-class,Front view" width="602" height="402"></a>
-						<a href="full/c/s203_r.jpg"><img loading="lazy" src="style/c/s203_r.webp" alt="Mercedes,S203,C-class,Rear view" width="602" height="402"></a><br>
-						<h5 class="i">Facelift</h5>
-						<p class="i m1">04/2004</p><br>
-						<a href="full/c/s203_f2.jpg"><img loading="lazy" src="style/c/s203_f2.webp" alt="Mercedes,S203,C-class,Front view" width="602" height="335"></a>
-						<a href="full/c/s203_r2.jpg"><img loading="lazy" src="style/c/s203_r2.webp" alt="Mercedes,S203,C-class,Rear view" width="602" height="335"></a>
-						<h5>Dimensions</h5>
-						<a href="full/c/s203_a.jpg"><img loading="lazy" src="style/c/s203_a.webp" alt="Mercedes,S202,C-class,Dimensions" width="804" height="1048"></a>
-					</section>
 				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<h3 class="bf1b i">AMG</h3>
-						<p class="i m1">C32 / C55</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-s203" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h3>S203<h3>
+										<p>T-Model</p>
+										01/2001 - 10/2007
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-s203" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">T-Model</h4>
+							<a href="full/c/s203.jpg"><img loading="lazy" src="style/c/s203.webp" alt="Mercedes,S203,C-class,Front view" width="1210" height="703"></a><br>
+							<a href="full/c/s203_f.jpg"><img loading="lazy" src="style/c/s203_f.webp" alt="Mercedes,S203,C-class,Front view" width="602" height="402"></a>
+							<a href="full/c/s203_r.jpg"><img loading="lazy" src="style/c/s203_r.webp" alt="Mercedes,S203,C-class,Rear view" width="602" height="402"></a><br>
+							<h5 class="i">Facelift</h5>
+							<p class="i m1">04/2004</p><br>
+							<a href="full/c/s203_f2.jpg"><img loading="lazy" src="style/c/s203_f2.webp" alt="Mercedes,S203,C-class,Front view" width="602" height="335"></a>
+							<a href="full/c/s203_r2.jpg"><img loading="lazy" src="style/c/s203_r2.webp" alt="Mercedes,S203,C-class,Rear view" width="602" height="335"></a>
+							<h5>Dimensions</h5>
+							<a href="full/c/s203_a.jpg"><img loading="lazy" src="style/c/s203_a.webp" alt="Mercedes,S202,C-class,Dimensions" width="804" height="1048"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="i">C32</h4>
-						<p class="i m1">2001 - 2003</p><br>
-						<a href="full/c/w203_c32_f.jpg"><img loading="lazy" src="style/c/w203_c32_f.webp" alt="Mercedes,W203,C-class,C32,AMG,Front view" width="602" height="403"></a>
-						<a href="full/c/w203_c32_r.jpg"><img loading="lazy" src="style/c/w203_c32_r.webp" alt="Mercedes,W203,C-class,C32,AMG,Rear view" width="602" height="403"></a><br>
-						<a href="full/c/w203_c32_d.jpg"><img loading="lazy" src="style/c/w203_c32_d.webp" alt="Mercedes,W203,C-class,C32,AMG,Dashboard" width="602" height="340"></a>
-						<a href="full/c/w203_c32_m.jpg"><img loading="lazy" src="style/c/w203_c32_m.webp" alt="Mercedes,W203,C-class,C32,AMG,Engine" width="602" height="340"></a><br>
-						<h4 class="i">C55</h4>
-						<p class="i m1">2004 - 2007</p><br>
-						<a href="full/c/w203_c55_f.jpg"><img loading="lazy" src="style/c/w203_c55_f.webp" alt="Mercedes,W203,C-class,C55,AMG,Front view" width="602" height="340"></a>
-						<a href="full/c/w203_c55_r.jpg"><img loading="lazy" src="style/c/w203_c55_r.webp" alt="Mercedes,W203,C-class,C55,AMG,Rear view" width="602" height="340"></a><br>
-						<a href="full/c/w203_c55_d.jpg"><img loading="lazy" src="style/c/w203_c55_d.webp" alt="Mercedes,W203,C-class,C55,AMG,Dashboard" width="602" height="403"></a>
-						<a href="full/c/w203_c55_m.jpg"><img loading="lazy" src="style/c/w203_c55_m.webp" alt="Mercedes,W203,C-class,C55,AMG,Engine" width="602" height="403"></a>
-					</section>
 				</div>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-amg-c32-55" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h4>AMG C 32<h4>
+										2001 - 2003
+										<h4>C 55<h4>
+												2004 - 2007
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-amg-c32-55" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4>C32</h4>
+							<a href="full/c/w203_c32_f.jpg"><img loading="lazy" src="style/c/w203_c32_f.webp" alt="Mercedes,W203,C-class,C32,AMG,Front view" width="602" height="403"></a>
+							<a href="full/c/w203_c32_r.jpg"><img loading="lazy" src="style/c/w203_c32_r.webp" alt="Mercedes,W203,C-class,C32,AMG,Rear view" width="602" height="403"></a><br>
+							<a href="full/c/w203_c32_d.jpg"><img loading="lazy" src="style/c/w203_c32_d.webp" alt="Mercedes,W203,C-class,C32,AMG,Dashboard" width="602" height="340"></a>
+							<a href="full/c/w203_c32_m.jpg"><img loading="lazy" src="style/c/w203_c32_m.webp" alt="Mercedes,W203,C-class,C32,AMG,Engine" width="602" height="340"></a><br>
+							<h4>C55</h4>
+							<a href="full/c/w203_c55_f.jpg"><img loading="lazy" src="style/c/w203_c55_f.webp" alt="Mercedes,W203,C-class,C55,AMG,Front view" width="602" height="340"></a>
+							<a href="full/c/w203_c55_r.jpg"><img loading="lazy" src="style/c/w203_c55_r.webp" alt="Mercedes,W203,C-class,C55,AMG,Rear view" width="602" height="340"></a><br>
+							<a href="full/c/w203_c55_d.jpg"><img loading="lazy" src="style/c/w203_c55_d.webp" alt="Mercedes,W203,C-class,C55,AMG,Dashboard" width="602" height="403"></a>
+							<a href="full/c/w203_c55_m.jpg"><img loading="lazy" src="style/c/w203_c55_m.webp" alt="Mercedes,W203,C-class,C55,AMG,Engine" width="602" height="403"></a>
+						</div>
+					</div>
+				</div>
+
 			</div>
 		</section>
 
@@ -567,80 +615,103 @@
 			<h2>The 3rd C-class</h2>
 			<div class="style-w">
 				<a href="full/c/w204_f.jpg"><img loading="lazy" src="style/c/w204_f.webp" alt="Mercedes,W204,C-class,Front view" width="1210" height="560"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<p class="bf1a i"><a href="https://en.wikipedia.org/wiki/Mercedes-Benz_C-Class_(W204)" class="ico-wiki m1" title="Wikipedia(E)_Mercedes-Benz_Baureihe_204"></a></p>
-						<h3 class="i m0">W204</h3>
-						<p class="i m1">03/2007 - 06/2015</p>
-						<p class="ru">Designer : Karl Heinz Bauer (2003 - 2004)</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-204" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://en.wikipedia.org/wiki/Mercedes-Benz_C-Class_(W204)" class="ico-wiki" title="Wikipedia(E)_Mercedes-Benz_Baureihe_204"></a>
+								<h3>W204<h3>
+										03/2007 - 06/2015
+							</div>
+							<div class="accordion-right">
+								Designer : Karl Heinz Bauer (2003 - 2004)
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-204" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">W204</h4>
+							<a href="full/c/w204_tp.jpg"><img loading="lazy" src="style/c/w204_tp.webp" alt="Mercedes,W204,C-class,Perspective view" width="1210" height="800"></a><br>
+							<a href="full/c/w204_r.jpg"><img loading="lazy" src="style/c/w204_r.webp" alt="Mercedes,W204,C-class,Rear view" width="602" height="345"></a>
+							<a href="full/c/w204_d.jpg"><img loading="lazy" src="style/c/w204_d.webp" alt="Mercedes,W204,C-class,Dashboard" width="602" height="345"></a>
+							<h5>Avantgarde</h5>
+							<a href="full/c/w204_f_ava.jpg"><img loading="lazy" src="style/c/w204_f_ava.webp" alt="Mercedes,W204,C-class,Avantgarde,Front view" width="602" height="340"></a>
+							<a href="full/c/w204_r_ava.jpg"><img loading="lazy" src="style/c/w204_r_ava.webp" alt="Mercedes,W204,C-class,Avantgarde,Rear view" width="602" height="340"></a><br>
+							<a href="full/c/w204_d_ava.jpg"><img loading="lazy" src="style/c/w204_d_ava.webp" alt="Mercedes,W204,C-class,Avantgarde,Dashboard" width="602" height="453"></a>
+							<a href="full/c/w204_i_ava.jpg"><img loading="lazy" src="style/c/w204_i_ava.webp" alt="Mercedes,W204,C-class,Avantgarde,Interior" width="602" height="453"></a><br>
+							<h5 class="i">Facelift</h5>
+							<p class="i m1">03/2011</p><br>
+							<a href="full/c/w204_f2.jpg"><img loading="lazy" src="style/c/w204_f2.webp" alt="Mercedes,W204,C-class,Front view" width="1210" height="624"></a><br>
+							<a href="full/c/w204_r2.jpg"><img loading="lazy" src="style/c/w204_r2.webp" alt="Mercedes,W204,C-class,Rear view" width="602" height="313"></a>
+							<a href="full/c/w204_d2.jpg"><img loading="lazy" src="style/c/w204_d2.webp" alt="Mercedes,W204,C-class,Dashboard" width="602" height="313"></a>
+							<h5>Avantgarde</h5>
+							<a href="full/c/w204_f2_ava.jpg"><img loading="lazy" src="style/c/w204_f2_ava.webp" alt="Mercedes,W204,C-class,Avantgarde,Front view" width="1210" height="908"></a><br>
+							<a href="full/c/w204_r2_ava.jpg"><img loading="lazy" src="style/c/w204_r2_ava.webp" alt="Mercedes,W204,C-class,Avantgarde,Rear view" width="653" height="344"></a>
+							<a href="full/c/w204_d2_ava.jpg"><img loading="lazy" src="style/c/w204_d2_ava.webp" alt="Mercedes,W204,C-class,Avantgarde,Dashboard" width="550" height="344"></a>
+							<h5>Dimensions</h5>
+							<a href="full/c/w204_a.gif"><img loading="lazy" src="style/c/w204_a.gif" alt="Mercedes,W204,C-class,Dimensions" width="1064" height="581"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">W204</h4>
-						<a href="full/c/w204_tp.jpg"><img loading="lazy" src="style/c/w204_tp.webp" alt="Mercedes,W204,C-class,Perspective view" width="1210" height="800"></a><br>
-						<a href="full/c/w204_r.jpg"><img loading="lazy" src="style/c/w204_r.webp" alt="Mercedes,W204,C-class,Rear view" width="602" height="345"></a>
-						<a href="full/c/w204_d.jpg"><img loading="lazy" src="style/c/w204_d.webp" alt="Mercedes,W204,C-class,Dashboard" width="602" height="345"></a>
-						<h5>Avantgarde</h5>
-						<a href="full/c/w204_f_ava.jpg"><img loading="lazy" src="style/c/w204_f_ava.webp" alt="Mercedes,W204,C-class,Avantgarde,Front view" width="602" height="340"></a>
-						<a href="full/c/w204_r_ava.jpg"><img loading="lazy" src="style/c/w204_r_ava.webp" alt="Mercedes,W204,C-class,Avantgarde,Rear view" width="602" height="340"></a><br>
-						<a href="full/c/w204_d_ava.jpg"><img loading="lazy" src="style/c/w204_d_ava.webp" alt="Mercedes,W204,C-class,Avantgarde,Dashboard" width="602" height="453"></a>
-						<a href="full/c/w204_i_ava.jpg"><img loading="lazy" src="style/c/w204_i_ava.webp" alt="Mercedes,W204,C-class,Avantgarde,Interior" width="602" height="453"></a><br>
-						<h5 class="i">Facelift</h5>
-						<p class="i m1">03/2011</p><br>
-						<a href="full/c/w204_f2.jpg"><img loading="lazy" src="style/c/w204_f2.webp" alt="Mercedes,W204,C-class,Front view" width="1210" height="624"></a><br>
-						<a href="full/c/w204_r2.jpg"><img loading="lazy" src="style/c/w204_r2.webp" alt="Mercedes,W204,C-class,Rear view" width="602" height="313"></a>
-						<a href="full/c/w204_d2.jpg"><img loading="lazy" src="style/c/w204_d2.webp" alt="Mercedes,W204,C-class,Dashboard" width="602" height="313"></a>
-						<h5>Avantgarde</h5>
-						<a href="full/c/w204_f2_ava.jpg"><img loading="lazy" src="style/c/w204_f2_ava.webp" alt="Mercedes,W204,C-class,Avantgarde,Front view" width="1210" height="908"></a><br>
-						<a href="full/c/w204_r2_ava.jpg"><img loading="lazy" src="style/c/w204_r2_ava.webp" alt="Mercedes,W204,C-class,Avantgarde,Rear view" width="653" height="344"></a>
-						<a href="full/c/w204_d2_ava.jpg"><img loading="lazy" src="style/c/w204_d2_ava.webp" alt="Mercedes,W204,C-class,Avantgarde,Dashboard" width="550" height="344"></a>
-						<h5>Dimensions</h5>
-						<a href="full/c/w204_a.gif"><img loading="lazy" src="style/c/w204_a.gif" alt="Mercedes,W204,C-class,Dimensions" width="1064" height="581"></a>
-					</section>
 				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<h3 class="bf1b i">S204</h3>
-						<p class="i m1">T-Model</p>
-						<p class="i m1">12/2007 - 03/2014</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-s204" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h3>S204<h3>
+										<p>T-Model</p>
+										12/2007 - 03/2014
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-s204" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">T-Model</h4>
+							<a href="full/c/s204_f.jpg"><img loading="lazy" src="style/c/s204_f.webp" alt="Mercedes,S204,C-class,Front view" width="602" height="302"></a>
+							<a href="full/c/s204_r.jpg"><img loading="lazy" src="style/c/s204_r.webp" alt="Mercedes,S204,C-class,Rear view" width="602" height="302"></a>
+							<h5>Avantgarde</h5>
+							<a href="full/c/s204_f_ava.jpg"><img loading="lazy" src="style/c/s204_f_ava.webp" alt="Mercedes,S204,C-class,Avantgarde,Front view" width="602" height="337"></a>
+							<a href="full/c/s204_r_ava.jpg"><img loading="lazy" src="style/c/s204_r_ava.webp" alt="Mercedes,S204,C-class,Avantgarde,Rear view" width="602" height="337"></a><br>
+							<h5 class="i">Facelift</h5>
+							<p class="i m1">03/2011</p><br>
+							<a href="full/c/s204_f2.jpg"><img loading="lazy" src="style/c/s204_f2.webp" alt="Mercedes,S204,C-class,Front view" width="608" height="313"></a>
+							<a href="full/c/s204_r2.jpg"><img loading="lazy" src="style/c/s204_r2.webp" alt="Mercedes,S204,C-class,Rear view" width="596" height="313"></a>
+							<h5>Avantgarde</h5>
+							<a href="full/c/s204_f2_ava.jpg"><img loading="lazy" src="style/c/s204_f2_ava.webp" alt="Mercedes,S204,C-class,Avantgarde,Front view" width="593" height="319"></a>
+							<a href="full/c/s204_r2_ava.jpg"><img loading="lazy" src="style/c/s204_r2_ava.webp" alt="Mercedes,S204,C-class,Avantgarde,Rear view" width="610" height="319"></a>
+							<h5>Dimensions</h5>
+							<a href="full/c/s204_a.gif"><img loading="lazy" src="style/c/s204_a.webp" alt="Mercedes,S204,C-class,Dimensions" width="804" height="1003"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">T-Model</h4>
-						<a href="full/c/s204_f.jpg"><img loading="lazy" src="style/c/s204_f.webp" alt="Mercedes,S204,C-class,Front view" width="602" height="302"></a>
-						<a href="full/c/s204_r.jpg"><img loading="lazy" src="style/c/s204_r.webp" alt="Mercedes,S204,C-class,Rear view" width="602" height="302"></a>
-						<h5>Avantgarde</h5>
-						<a href="full/c/s204_f_ava.jpg"><img loading="lazy" src="style/c/s204_f_ava.webp" alt="Mercedes,S204,C-class,Avantgarde,Front view" width="602" height="337"></a>
-						<a href="full/c/s204_r_ava.jpg"><img loading="lazy" src="style/c/s204_r_ava.webp" alt="Mercedes,S204,C-class,Avantgarde,Rear view" width="602" height="337"></a><br>
-						<h5 class="i">Facelift</h5>
-						<p class="i m1">03/2011</p><br>
-						<a href="full/c/s204_f2.jpg"><img loading="lazy" src="style/c/s204_f2.webp" alt="Mercedes,S204,C-class,Front view" width="608" height="313"></a>
-						<a href="full/c/s204_r2.jpg"><img loading="lazy" src="style/c/s204_r2.webp" alt="Mercedes,S204,C-class,Rear view" width="596" height="313"></a>
-						<h5>Avantgarde</h5>
-						<a href="full/c/s204_f2_ava.jpg"><img loading="lazy" src="style/c/s204_f2_ava.webp" alt="Mercedes,S204,C-class,Avantgarde,Front view" width="593" height="319"></a>
-						<a href="full/c/s204_r2_ava.jpg"><img loading="lazy" src="style/c/s204_r2_ava.webp" alt="Mercedes,S204,C-class,Avantgarde,Rear view" width="610" height="319"></a>
-						<h5>Dimensions</h5>
-						<a href="full/c/s204_a.gif"><img loading="lazy" src="style/c/s204_a.webp" alt="Mercedes,S204,C-class,Dimensions" width="804" height="1003"></a>
-					</section>
 				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<h3 class="bf1b i">AMG</h3>
-						<p class="i m1">C63</p>
-						<p class="i m1">07/2007 - 06/2015</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-amg-c63" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h4>AMG C 63<h4>
+										07/2007 - 06/2015
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-amg-c63" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">C63</h4>
+							<a href="full/c/w204_c63_f.jpg"><img loading="lazy" src="style/c/w204_c63_f.webp" alt="Mercedes,W204,C-class,C63,AMG,Front view" width="602" height="378"></a>
+							<a href="full/c/w204_c63_r.jpg"><img loading="lazy" src="style/c/w204_c63_r.webp" alt="Mercedes,W204,C-class,C63,AMG,Rear view" width="602" height="378"></a><br>
+							<a href="full/c/w204_c63_d.jpg"><img loading="lazy" src="style/c/w204_c63_d.webp" alt="Mercedes,W204,C-class,C63,AMG,Dashboard" width="602" height="378"></a>
+							<a href="full/c/w204_c63_i.jpg"><img loading="lazy" src="style/c/w204_c63_i.webp" alt="Mercedes,W204,C-class,C63,AMG,Interior" width="602" height="378"></a><br>
+							<h5 class="i">Facelift</h5>
+							<p class="i m1">2011</p><br>
+							<a href="full/c/w204_c63_f2.jpg"><img loading="lazy" src="style/c/w204_c63_f2.webp" alt="Mercedes,W204,C-class,C63,AMG,Front view" width="602" height="453"></a>
+							<a href="full/c/w204_c63_m2.jpg"><img loading="lazy" src="style/c/w204_c63_m2.webp" alt="Mercedes,W204,C-class,C63,AMG,Engine" width="602" height="453"></a><br>
+							<a href="full/c/w204_c63_d2.jpg"><img loading="lazy" src="style/c/w204_c63_d2.webp" alt="Mercedes,W204,C-class,C63,AMG,Dashboard" width="602" height="340"></a>
+							<a href="full/c/w204_c63_r2.jpg"><img loading="lazy" src="style/c/w204_c63_r2.webp" alt="Mercedes,W204,C-class,C63,AMG,Rear view" width="602" height="369"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">C63</h4>
-						<a href="full/c/w204_c63_f.jpg"><img loading="lazy" src="style/c/w204_c63_f.webp" alt="Mercedes,W204,C-class,C63,AMG,Front view" width="602" height="378"></a>
-						<a href="full/c/w204_c63_r.jpg"><img loading="lazy" src="style/c/w204_c63_r.webp" alt="Mercedes,W204,C-class,C63,AMG,Rear view" width="602" height="378"></a><br>
-						<a href="full/c/w204_c63_d.jpg"><img loading="lazy" src="style/c/w204_c63_d.webp" alt="Mercedes,W204,C-class,C63,AMG,Dashboard" width="602" height="378"></a>
-						<a href="full/c/w204_c63_i.jpg"><img loading="lazy" src="style/c/w204_c63_i.webp" alt="Mercedes,W204,C-class,C63,AMG,Interior" width="602" height="378"></a><br>
-						<h5 class="i">Facelift</h5>
-						<p class="i m1">2011</p><br>
-						<a href="full/c/w204_c63_f2.jpg"><img loading="lazy" src="style/c/w204_c63_f2.webp" alt="Mercedes,W204,C-class,C63,AMG,Front view" width="602" height="453"></a>
-						<a href="full/c/w204_c63_m2.jpg"><img loading="lazy" src="style/c/w204_c63_m2.webp" alt="Mercedes,W204,C-class,C63,AMG,Engine" width="602" height="453"></a><br>
-						<a href="full/c/w204_c63_d2.jpg"><img loading="lazy" src="style/c/w204_c63_d2.webp" alt="Mercedes,W204,C-class,C63,AMG,Dashboard" width="602" height="340"></a>
-						<a href="full/c/w204_c63_r2.jpg"><img loading="lazy" src="style/c/w204_c63_r2.webp" alt="Mercedes,W204,C-class,C63,AMG,Rear view" width="602" height="369"></a>
-					</section>
 				</div>
+
 			</div>
 		</section>
 
@@ -648,74 +719,97 @@
 			<h2>The 4th C-class</h2>
 			<div class="style-w">
 				<a href="full/c/w205_f.jpg"><img loading="lazy" src="style/c/w205_f.webp" alt="Mercedes,W205,C-class,Front view" width="1210" height="621"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<p class="bf1a i"><a href="https://en.wikipedia.org/wiki/Mercedes-Benz_C-Class_(W205)" class="ico-wiki m1" title="Wikipedia(E)_Mercedes-Benz_Baureihe_205"></a></p>
-						<h3 class="i m0">W205</h3>
-						<p class="i m1">02/2014 - 11/2020</p>
-						<p class="r">Designer : Robert Lesnik (2010) Michele Jauch-Paganetti (Interior) , Gorden Wagener</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-205" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://en.wikipedia.org/wiki/Mercedes-Benz_C-Class_(W205)" class="ico-wiki" title="Wikipedia(E)_Mercedes-Benz_Baureihe_205"></a>
+								<h3>W205<h3>
+										02/2014 - 11/2020
+							</div>
+							<div class="accordion-right">
+								Designer : Robert Lesnik (2010) Michele Jauch-Paganetti (Interior) , Gorden Wagener
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-205" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">W205</h4>
+							<a href="full/c/w205_tp.jpg"><img loading="lazy" src="style/c/w205_tp.webp" alt="Mercedes,W205,C-class,Perspective view" width="1210" height="757"></a><br>
+							<a href="full/c/w205_r.jpg"><img loading="lazy" src="style/c/w205_r.webp" alt="Mercedes,W205,C-class,Rear view" width="721" height="363"></a>
+							<a href="full/c/w205_d.jpg"><img loading="lazy" src="style/c/w205_d.webp" alt="Mercedes,W205,C-class,Dashboard" width="484" height="363"></a><br>
+							<h5 class="i">Facelift</h5>
+							<p class="i m1">03/2018</p><br>
+							<a href="full/c/w205_f2.jpg"><img loading="lazy" src="style/c/w205_f2.webp" alt="Mercedes,W205,C-class,Front view" width="1210" height="806"></a><br>
+							<a href="full/c/w205_s2.jpg"><img loading="lazy" src="style/c/w205_s2.webp" alt="Mercedes,W205,C-class,Side view" width="700" height="350"></a>
+							<a href="full/c/w205_d2a.jpg"><img loading="lazy" src="style/c/w205_d2a.webp" alt="Mercedes,W205,C-class,Dashboard" width="504" height="350"></a>
+							<h5>AMG Line</h5>
+							<a href="full/c/w205_f_amg.jpg"><img loading="lazy" src="style/c/w205_f_amg.webp" alt="Mercedes,W205,C-class,AMG Line,Front view" width="602" height="279"></a>
+							<a href="full/c/w205_r_amg.jpg"><img loading="lazy" src="style/c/w205_r_amg.webp" alt="Mercedes,W205,C-class,AMG Line,Rear view" width="602" height="279"></a>
+							<h5>Avantgarde</h5>
+							<a href="full/c/w205_f_ava.jpg"><img loading="lazy" src="style/c/w205_f_ava.webp" alt="Mercedes,W205,C-class,Avantgarde,Front view" width="634" height="372"></a>
+							<a href="full/c/w205_i_ava.jpg"><img loading="lazy" src="style/c/w205_i_ava.webp" alt="Mercedes,W205,C-class,Avantgarde,Interior" width="571" height="372"></a><br>
+							<h5 class="i">Facelift</h5>
+							<p class="i m1">03/2018</p><br>
+							<a href="full/c/w205_f2_ava.jpg"><img loading="lazy" src="style/c/w205_f2_ava.webp" alt="Mercedes,W205,C-class,Avantgarde,Front view" width="602" height="300"></a>
+							<a href="full/c/w205_r2_ava.jpg"><img loading="lazy" src="style/c/w205_r2_ava.webp" alt="Mercedes,W205,C-class,Avantgarde,Rear view" width="602" height="300"></a><br>
+							<a href="full/c/w205_d2.jpg"><img loading="lazy" src="style/c/w205_d2.webp" alt="Mercedes,W205,C-class,Avantgarde,Dashboard" width="1210" height="691"></a>
+							<h5>Dimensions</h5>
+							<a href="full/c/w205_a.jpg"><img loading="lazy" src="style/c/w205_a.webp" alt="Mercedes,W205,C-class,Dimensions" width="804" height="929"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">W205</h4>
-						<a href="full/c/w205_tp.jpg"><img loading="lazy" src="style/c/w205_tp.webp" alt="Mercedes,W205,C-class,Perspective view" width="1210" height="757"></a><br>
-						<a href="full/c/w205_r.jpg"><img loading="lazy" src="style/c/w205_r.webp" alt="Mercedes,W205,C-class,Rear view" width="721" height="363"></a>
-						<a href="full/c/w205_d.jpg"><img loading="lazy" src="style/c/w205_d.webp" alt="Mercedes,W205,C-class,Dashboard" width="484" height="363"></a><br>
-						<h5 class="i">Facelift</h5>
-						<p class="i m1">03/2018</p><br>
-						<a href="full/c/w205_f2.jpg"><img loading="lazy" src="style/c/w205_f2.webp" alt="Mercedes,W205,C-class,Front view" width="1210" height="806"></a><br>
-						<a href="full/c/w205_s2.jpg"><img loading="lazy" src="style/c/w205_s2.webp" alt="Mercedes,W205,C-class,Side view" width="700" height="350"></a>
-						<a href="full/c/w205_d2a.jpg"><img loading="lazy" src="style/c/w205_d2a.webp" alt="Mercedes,W205,C-class,Dashboard" width="504" height="350"></a>
-						<h5>AMG Line</h5>
-						<a href="full/c/w205_f_amg.jpg"><img loading="lazy" src="style/c/w205_f_amg.webp" alt="Mercedes,W205,C-class,AMG Line,Front view" width="602" height="279"></a>
-						<a href="full/c/w205_r_amg.jpg"><img loading="lazy" src="style/c/w205_r_amg.webp" alt="Mercedes,W205,C-class,AMG Line,Rear view" width="602" height="279"></a>
-						<h5>Avantgarde</h5>
-						<a href="full/c/w205_f_ava.jpg"><img loading="lazy" src="style/c/w205_f_ava.webp" alt="Mercedes,W205,C-class,Avantgarde,Front view" width="634" height="372"></a>
-						<a href="full/c/w205_i_ava.jpg"><img loading="lazy" src="style/c/w205_i_ava.webp" alt="Mercedes,W205,C-class,Avantgarde,Interior" width="571" height="372"></a><br>
-						<h5 class="i">Facelift</h5>
-						<p class="i m1">03/2018</p><br>
-						<a href="full/c/w205_f2_ava.jpg"><img loading="lazy" src="style/c/w205_f2_ava.webp" alt="Mercedes,W205,C-class,Avantgarde,Front view" width="602" height="300"></a>
-						<a href="full/c/w205_r2_ava.jpg"><img loading="lazy" src="style/c/w205_r2_ava.webp" alt="Mercedes,W205,C-class,Avantgarde,Rear view" width="602" height="300"></a><br>
-						<a href="full/c/w205_d2.jpg"><img loading="lazy" src="style/c/w205_d2.webp" alt="Mercedes,W205,C-class,Avantgarde,Dashboard" width="1210" height="691"></a>
-						<h5>Dimensions</h5>
-						<a href="full/c/w205_a.jpg"><img loading="lazy" src="style/c/w205_a.webp" alt="Mercedes,W205,C-class,Dimensions" width="804" height="929"></a>
-					</section>
 				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<h3 class="bf1b i">S205</h3>
-						<p class="i m1">T-Model</p>
-						<p class="i m1">05/2014 - 02/2021</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-s205" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h3>S205<h3>
+										<p>T-Model</p>
+										05/2014 - 02/2021
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-s205" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">T-Model</h4>
+							<a href="full/c/s205.jpg"><img loading="lazy" src="style/c/s205.webp" alt="Mercedes,S205,C-class,spy photo" width="1210" height="829"></a><br>
+							<a href="full/c/s205_f.jpg"><img loading="lazy" src="style/c/s205_f.webp" alt="Mercedes,S205,C-class,Front view" width="633" height="358"></a>
+							<a href="full/c/s205_r.jpg"><img loading="lazy" src="style/c/s205_r.webp" alt="Mercedes,S205,C-class,Rear view" width="572" height="358"></a>
+							<h5>Avantgarde</h5>
+							<a href="full/c/s205_f_ava.jpg"><img loading="lazy" src="style/c/s205_f_ava.webp" alt="Mercedes,S205,C-class,Avantgarde,Front view" width="580" height="340"></a>
+							<a href="full/c/s205_r_ava.jpg"><img loading="lazy" src="style/c/s205_r_ava.webp" alt="Mercedes,S205,C-class,Avantgarde,Rear view" width="625" height="340"></a><br>
+							<h5 class="i">Facelift</h5>
+							<p class="i m1">03/2018</p><br>
+							<a href="full/c/s205_f2.jpg"><img loading="lazy" src="style/c/s205_f2.webp" alt="Mercedes,S205,C-class,Front view" width="577" height="304"></a>
+							<a href="full/c/s205_r2.jpg"><img loading="lazy" src="style/c/s205_r2.webp" alt="Mercedes,S205,C-class,Rear view" width="628" height="304"></a>
+							<h5>Dimensions</h5>
+							<img loading="lazy" src="style/c/s205_a.webp" alt="Mercedes,S205,C-class,Dimensions" width="1210" height="509">
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">T-Model</h4>
-						<a href="full/c/s205.jpg"><img loading="lazy" src="style/c/s205.webp" alt="Mercedes,S205,C-class,spy photo" width="1210" height="829"></a><br>
-						<a href="full/c/s205_f.jpg"><img loading="lazy" src="style/c/s205_f.webp" alt="Mercedes,S205,C-class,Front view" width="633" height="358"></a>
-						<a href="full/c/s205_r.jpg"><img loading="lazy" src="style/c/s205_r.webp" alt="Mercedes,S205,C-class,Rear view" width="572" height="358"></a>
-						<h5>Avantgarde</h5>
-						<a href="full/c/s205_f_ava.jpg"><img loading="lazy" src="style/c/s205_f_ava.webp" alt="Mercedes,S205,C-class,Avantgarde,Front view" width="580" height="340"></a>
-						<a href="full/c/s205_r_ava.jpg"><img loading="lazy" src="style/c/s205_r_ava.webp" alt="Mercedes,S205,C-class,Avantgarde,Rear view" width="625" height="340"></a><br>
-						<h5 class="i">Facelift</h5>
-						<p class="i m1">03/2018</p><br>
-						<a href="full/c/s205_f2.jpg"><img loading="lazy" src="style/c/s205_f2.webp" alt="Mercedes,S205,C-class,Front view" width="577" height="304"></a>
-						<a href="full/c/s205_r2.jpg"><img loading="lazy" src="style/c/s205_r2.webp" alt="Mercedes,S205,C-class,Rear view" width="628" height="304"></a>
-						<h5>Dimensions</h5>
-						<img loading="lazy" src="style/c/s205_a.webp" alt="Mercedes,S205,C-class,Dimensions" width="1210" height="509">
-					</section>
 				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<h3 class="bf1b i">AMG</h3>
-						<p class="i m1">C43 / C450 / C63 / C63A</p>
-						<p class="i m1">02/2015 - 03/2023</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-amg-c43 / C450 / C63 / C63A" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h4>AMG C 43 / C450 / C63 / C63A<h4>
+										02/2015 - 03/2023
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-amg-c43 / C450 / C63 / C63A" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">C63</h4>
+							<a href="full/c/w205_c63_f.jpg"><img loading="lazy" src="style/c/w205_c63_f.webp" alt="Mercedes,W205,C-class,C63,AMG,Front view" width="602" height="403"></a>
+							<a href="full/c/w205_c63_i.jpg"><img loading="lazy" src="style/c/w205_c63_i.webp" alt="Mercedes,W205,C-class,C63,AMG,Interior" width="602" height="403"></a><br>
+							<a href="full/c/w205_c63_d.jpg"><img loading="lazy" src="style/c/w205_c63_d.webp" alt="Mercedes,W205,C-class,C63,AMG,Dashboard" width="602" height="430"></a>
+							<a href="full/c/w205_c63_r.jpg"><img loading="lazy" src="style/c/w205_c63_r.webp" alt="Mercedes,W205,C-class,C63,AMG,Rear view" width="602" height="430"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">C63</h4>
-						<a href="full/c/w205_c63_f.jpg"><img loading="lazy" src="style/c/w205_c63_f.webp" alt="Mercedes,W205,C-class,C63,AMG,Front view" width="602" height="403"></a>
-						<a href="full/c/w205_c63_i.jpg"><img loading="lazy" src="style/c/w205_c63_i.webp" alt="Mercedes,W205,C-class,C63,AMG,Interior" width="602" height="403"></a><br>
-						<a href="full/c/w205_c63_d.jpg"><img loading="lazy" src="style/c/w205_c63_d.webp" alt="Mercedes,W205,C-class,C63,AMG,Dashboard" width="602" height="430"></a>
-						<a href="full/c/w205_c63_r.jpg"><img loading="lazy" src="style/c/w205_c63_r.webp" alt="Mercedes,W205,C-class,C63,AMG,Rear view" width="602" height="430"></a>
-					</section>
 				</div>
+
 			</div>
 		</section>
 
@@ -723,73 +817,96 @@
 			<h2>The 5th C-class</h2>
 			<div class="style-w">
 				<a href="full/c/w206_f.webp"><img loading="lazy" src="style/c/w206_f.webp" alt="Mercedes,W206,C-class,Front view" width="1210" height="809"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<p class="bf1a i"><a href="https://en.wikipedia.org/wiki/Mercedes-Benz_C-Class_(W206)" class="ico-wiki m1" title="Wikipedia(E) 206"></a></p>
-						<h3 class="i m0">W206</h3>
-						<p class="i m1">02/2021 -</p><br>
-						<p class="ru">Balázs Filczer under Gorden Wagener</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-w206" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://en.wikipedia.org/wiki/Mercedes-Benz_C-Class_(W206)" class="ico-wiki" title="Wikipedia(E) 206"></a>
+								<h3>W206<h3>
+										02/2021 -
+							</div>
+							<div class="accordion-right">
+								Balázs Filczer under Gorden Wagener
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-w206" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">W206</h4>
+							<a href="full/c/w206_b.jpg"><img loading="lazy" src="style/c/w206_b.webp" alt="Mercedes,W206,C-class,Head lite" width="602" height="403"></a>
+							<a href="full/c/w206_x.jpg"><img loading="lazy" src="style/c/w206_x.webp" alt="Mercedes,W206,C-class,Air conditioning fan" width="602" height="403"></a><br>
+							<a href="full/c/w206_r.jpg"><img loading="lazy" src="style/c/w206_r.webp" alt="Mercedes,W206,C-class,Rear view" width="695" height="340"></a>
+							<a href="full/c/w206_xx.jpg"><img loading="lazy" src="style/c/w206_xx.webp" alt="Mercedes,W206,C-class,Taillight" width="510" height="340"></a><br>
+							<a href="full/c/w206_d.jpg"><img loading="lazy" src="style/c/w206_d.webp" alt="Mercedes,W206,C-class,Dashboard" width="602" height="340"></a>
+							<a href="full/c/w206_i.webp"><img loading="lazy" src="style/c/w206_i.webp" alt="Mercedes,W206,C-class,Interior" width="602" height="340"></a>
+							<h5>Dimensions</h5>
+							<a href="full/c/w206_a.jpg"><img loading="lazy" src="style/c/w206_a.webp" alt="Mercedes,W206,C-class,Dimensions" width="1210" height="528"></a><br>
+							<a href="full/c/w206_a1.jpg"><img loading="lazy" src="style/c/w206_a1.webp" alt="Mercedes,W206,C-class,Dimensions" width="527" height="400"></a>
+							<a href="full/c/w206_a2.jpg"><img loading="lazy" src="style/c/w206_a2.webp" alt="Mercedes,W206,C-class,Dimensions" width="467" height="400"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">W206</h4>
-						<a href="full/c/w206_b.jpg"><img loading="lazy" src="style/c/w206_b.webp" alt="Mercedes,W206,C-class,Head lite" width="602" height="403"></a>
-						<a href="full/c/w206_x.jpg"><img loading="lazy" src="style/c/w206_x.webp" alt="Mercedes,W206,C-class,Air conditioning fan" width="602" height="403"></a><br>
-						<a href="full/c/w206_r.jpg"><img loading="lazy" src="style/c/w206_r.webp" alt="Mercedes,W206,C-class,Rear view" width="695" height="340"></a>
-						<a href="full/c/w206_xx.jpg"><img loading="lazy" src="style/c/w206_xx.webp" alt="Mercedes,W206,C-class,Taillight" width="510" height="340"></a><br>
-						<a href="full/c/w206_d.jpg"><img loading="lazy" src="style/c/w206_d.webp" alt="Mercedes,W206,C-class,Dashboard" width="602" height="340"></a>
-						<a href="full/c/w206_i.webp"><img loading="lazy" src="style/c/w206_i.webp" alt="Mercedes,W206,C-class,Interior" width="602" height="340"></a>
-						<h5>Dimensions</h5>
-						<a href="full/c/w206_a.jpg"><img loading="lazy" src="style/c/w206_a.webp" alt="Mercedes,W206,C-class,Dimensions" width="1210" height="528"></a><br>
-						<a href="full/c/w206_a1.jpg"><img loading="lazy" src="style/c/w206_a1.webp" alt="Mercedes,W206,C-class,Dimensions" width="527" height="400"></a>
-						<a href="full/c/w206_a2.jpg"><img loading="lazy" src="style/c/w206_a2.webp" alt="Mercedes,W206,C-class,Dimensions" width="467" height="400"></a>
-					</section>
 				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<h3 class="bf1b i">S206</h3>
-						<p class="i m1">T-Model</p>
-						<p class="i m1">02/2021 -</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-s206" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h3>S206<h3>
+										<p>T-Model</p>
+										02/2021 -
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-s206" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">S206</h4>
+							<a href="full/c/s206_f.jpg"><img loading="lazy" src="style/c/s206_f.webp" alt="Mercedes,S206,C-class,Front view" width="604" height="340"></a>
+							<a href="full/c/s206_r.jpg"><img loading="lazy" src="style/c/s206_r.webp" alt="Mercedes,S206,C-class,Rear view" width="600" height="340"></a><br>
+							<a href="full/c/s206_i.jpg"><img loading="lazy" src="style/c/s206_i.webp" alt="Mercedes,S206,C-class,Interior" width="604" height="403"></a>
+							<a href="full/c/w206_m.jpg"><img loading="lazy" src="style/c/w206_m.webp" alt="Mercedes,W206,C-class,Engine" width="600" height="403"></a>
+							<h5 class="i">All-Terrain</h5>
+							<p class="i m1">10/2021</p><br>
+							<a href="full/c/s206_all-terrain_r.jpg"><img loading="lazy" src="style/c/s206_all-terrain_r.webp" alt="Mercedes,S206,C-class,All-Terrain,Rear view" width="1210" height="681"></a><br>
+							<a href="full/c/s206_all-terrain_f.jpg"><img loading="lazy" src="style/c/s206_all-terrain_f.webp" alt="Mercedes,S206,C-class,All-Terrain,Front view" width="600" height="403"></a>
+							<a href="full/c/s206_all-terrain_d.jpg"><img loading="lazy" src="style/c/s206_all-terrain_d.webp" alt="Mercedes,S206,C-class,All-Terrain,Dashboard" width="604" height="403"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">S206</h4>
-						<a href="full/c/s206_f.jpg"><img loading="lazy" src="style/c/s206_f.webp" alt="Mercedes,S206,C-class,Front view" width="604" height="340"></a>
-						<a href="full/c/s206_r.jpg"><img loading="lazy" src="style/c/s206_r.webp" alt="Mercedes,S206,C-class,Rear view" width="600" height="340"></a><br>
-						<a href="full/c/s206_i.jpg"><img loading="lazy" src="style/c/s206_i.webp" alt="Mercedes,S206,C-class,Interior" width="604" height="403"></a>
-						<a href="full/c/w206_m.jpg"><img loading="lazy" src="style/c/w206_m.webp" alt="Mercedes,W206,C-class,Engine" width="600" height="403"></a>
-						<h5 class="i">All-Terrain</h5>
-						<p class="i m1">10/2021</p><br>
-						<a href="full/c/s206_all-terrain_r.jpg"><img loading="lazy" src="style/c/s206_all-terrain_r.webp" alt="Mercedes,S206,C-class,All-Terrain,Rear view" width="1210" height="681"></a><br>
-						<a href="full/c/s206_all-terrain_f.jpg"><img loading="lazy" src="style/c/s206_all-terrain_f.webp" alt="Mercedes,S206,C-class,All-Terrain,Front view" width="600" height="403"></a>
-						<a href="full/c/s206_all-terrain_d.jpg"><img loading="lazy" src="style/c/s206_all-terrain_d.webp" alt="Mercedes,S206,C-class,All-Terrain,Dashboard" width="604" height="403"></a>
-					</section>
 				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<h3 class="bf1b i">AMG</h3>
-						<p class="i m1">C43</p>
-						<p class="i m1">05/2022 - </p>
-						<p class="i m2">C63</p>
-						<p class="i m1">06/2023 - </p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-amg-c43-63" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h4>AMG C 43<h4>
+										05/2022 -
+										<h4>C 63<h4>
+												06/2023 -
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-amg-c43-63" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">C43</h4>
+							<a href="full/c/w206_c43_f.jpg"><img loading="lazy" src="style/c/w206_c43_f.webp" alt="Mercedes,W206,C-class,C43,AMG,Front view" width="1210" height="600"></a><br>
+							<a href="full/c/w206_c43_m.jpg"><img loading="lazy" src="style/c/w206_c43_m.webp" alt="Mercedes,W206,C-class,C43,AMG,Engine" width="602" height="402"></a>
+							<a href="full/c/w206_c43_d.jpg"><img loading="lazy" src="style/c/w206_c43_d.webp" alt="Mercedes,W206,C-class,C43,AMG,Dashboard" width="603" height="402"></a><br>
+							<a href="full/c/w206_c43_r.jpg"><img loading="lazy" src="style/c/w206_c43_r.webp" alt="Mercedes,W206,C-class,C43,AMG,Rear view" width="679" height="382"></a>
+							<a href="full/c/s206_c43_r.jpg"><img loading="lazy" src="style/c/s206_c43_r.webp" alt="Mercedes,S206,C-class,C43,AMG,Rear view" width="526" height="382"></a>
+							<h4>C63s</h4>
+							<a href="full/c/w206_c63s_f.jpg"><img loading="lazy" src="style/c/w206_c63s_f.webp" alt="Mercedes,W206,C-class,C63s,AMG,Front view" width="1210" height="642"></a><br>
+							<a href="full/c/w206_c63s_r.jpg"><img loading="lazy" src="style/c/w206_c63s_r.webp" alt="Mercedes,W206,C-class,C63s,AMG,Rear view" width="649" height="371"></a>
+							<a href="full/c/w206_c63s_d.jpg"><img loading="lazy" src="style/c/w206_c63s_d.webp" alt="Mercedes,W206,C-class,C63s,AMG,Dashboard" width="556" height="371"></a><br>
+							<a href="full/c/w206_c63s_tp.webp"><img loading="lazy" src="style/c/w206_c63s_tp.webp" alt="Mercedes,W206,C-class,C63s,Perspective" width="602" height="401"></a>
+							<a href="full/c/w206_c63s_m.webp"><img loading="lazy" src="style/c/w206_c63s_m.webp" alt="Mercedes,W206,C-class,C63s,AMG,Engine" width="602" height="401"></a><br>
+							<a href="full/c/w206_c63s_ib.webp"><img loading="lazy" src="style/c/w206_c63s_ib.webp" alt="Mercedes,W206,C-class,C63s,Interior" width="602" height="402"></a>
+							<a href="full/c/w206_c63s_ia.webp"><img loading="lazy" src="style/c/w206_c63s_ia.webp" alt="Mercedes,W206,C-class,C63s,Interior" width="603" height="402"></a><br>
+							<a href="full/c/s206_c63s_ib.webp"><img loading="lazy" src="style/c/s206_c63s_ib.webp" alt="Mercedes,s206,C-class,C63s,Interior" width="582" height="402"></a>
+							<a href="full/c/s206_c63s_r.jpg"><img loading="lazy" src="style/c/s206_c63s_r.webp" alt="Mercedes,S206,C-class,C63s,AMG,Rear view" width="623" height="402"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">C43</h4>
-						<a href="full/c/w206_c43_f.jpg"><img loading="lazy" src="style/c/w206_c43_f.webp" alt="Mercedes,W206,C-class,C43,AMG,Front view" width="1210" height="600"></a><br>
-						<a href="full/c/w206_c43_m.jpg"><img loading="lazy" src="style/c/w206_c43_m.webp" alt="Mercedes,W206,C-class,C43,AMG,Engine" width="602" height="402"></a>
-						<a href="full/c/w206_c43_d.jpg"><img loading="lazy" src="style/c/w206_c43_d.webp" alt="Mercedes,W206,C-class,C43,AMG,Dashboard" width="603" height="402"></a><br>
-						<a href="full/c/w206_c43_r.jpg"><img loading="lazy" src="style/c/w206_c43_r.webp" alt="Mercedes,W206,C-class,C43,AMG,Rear view" width="679" height="382"></a>
-						<a href="full/c/s206_c43_r.jpg"><img loading="lazy" src="style/c/s206_c43_r.webp" alt="Mercedes,S206,C-class,C43,AMG,Rear view" width="526" height="382"></a>
-						<h4>C63s</h4>
-						<a href="full/c/w206_c63s_f.jpg"><img loading="lazy" src="style/c/w206_c63s_f.webp" alt="Mercedes,W206,C-class,C63s,AMG,Front view" width="1210" height="642"></a><br>
-						<a href="full/c/w206_c63s_r.jpg"><img loading="lazy" src="style/c/w206_c63s_r.webp" alt="Mercedes,W206,C-class,C63s,AMG,Rear view" width="649" height="371"></a>
-						<a href="full/c/w206_c63s_d.jpg"><img loading="lazy" src="style/c/w206_c63s_d.webp" alt="Mercedes,W206,C-class,C63s,AMG,Dashboard" width="556" height="371"></a><br>
-						<a href="full/c/w206_c63s_tp.webp"><img loading="lazy" src="style/c/w206_c63s_tp.webp" alt="Mercedes,W206,C-class,C63s,Perspective" width="602" height="401"></a>
-						<a href="full/c/w206_c63s_m.webp"><img loading="lazy" src="style/c/w206_c63s_m.webp" alt="Mercedes,W206,C-class,C63s,AMG,Engine" width="602" height="401"></a><br>
-						<a href="full/c/w206_c63s_ib.webp"><img loading="lazy" src="style/c/w206_c63s_ib.webp" alt="Mercedes,W206,C-class,C63s,Interior" width="602" height="402"></a>
-						<a href="full/c/w206_c63s_ia.webp"><img loading="lazy" src="style/c/w206_c63s_ia.webp" alt="Mercedes,W206,C-class,C63s,Interior" width="603" height="402"></a><br>
-						<a href="full/c/s206_c63s_ib.webp"><img loading="lazy" src="style/c/s206_c63s_ib.webp" alt="Mercedes,s206,C-class,C63s,Interior" width="582" height="402"></a>
-						<a href="full/c/s206_c63s_r.jpg"><img loading="lazy" src="style/c/s206_c63s_r.webp" alt="Mercedes,S206,C-class,C63s,AMG,Rear view" width="623" height="402"></a>
-					</section>
 				</div>
+
 			</div>
 		</section>
 
@@ -841,9 +958,10 @@
 			<hr>
 			<p class="mid"><small>@ since 2010 , piyopiyo_246</small></p>
 		</footer>
+
 		<p class="m-05" id="page-top"><a href="#head">&#9650;</a></p>
 		<p id="close-accordion">
-			<a class="vmenu_all_action" onclick="doReplaceClassName ('vmenu_on2','vmenu_off')" title="Close all openings">&#9654;</a>
+			<a id="close-all-accordions-2" class="vmenu_all_action" title="Close all openings">&#9654;</a>
 		</p>
 	</div>
 
@@ -923,6 +1041,120 @@
 			}, 500);
 			return false;
 		});
+	});
+</script>
+
+<script>
+	// シンプル版アコーディオン機能（入れ子非対応）
+	document.addEventListener('DOMContentLoaded', function () {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+		accordionHeaders.forEach(header => {
+			header.addEventListener('click', function () {
+				const content = this.nextElementSibling;
+				const isActive = this.classList.contains('active');
+
+				// クリックされたアコーディオンのみトグル
+				if (isActive) {
+					this.classList.remove('active');
+					this.setAttribute('aria-expanded', 'false');
+					content.classList.remove('active');
+				} else {
+					this.classList.add('active');
+					this.setAttribute('aria-expanded', 'true');
+					content.classList.add('active');
+				}
+			});
+
+			// キーボード操作のサポート
+			header.addEventListener('keydown', function (e) {
+				if (e.key === 'Enter' || e.key === ' ') {
+					e.preventDefault();
+					this.click();
+				}
+			});
+		});
+
+		// 全開/全閉ボタンのイベントリスナー
+		const openAllBtn = document.getElementById('open-all-accordions');
+		const closeAllBtn = document.getElementById('close-all-accordions');
+		const closeAllBtn2 = document.getElementById('close-all-accordions-2');
+
+		if (openAllBtn) {
+			openAllBtn.addEventListener('click', openAllAccordions);
+		}
+
+		if (closeAllBtn) {
+			closeAllBtn.addEventListener('click', closeAllAccordions);
+		}
+
+		if (closeAllBtn2) {
+			closeAllBtn2.addEventListener('click', closeAllAccordions);
+		}
+	});
+
+	// 全アコーディオン操作機能
+	function openAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.add('active');
+			header.setAttribute('aria-expanded', 'true');
+			content.classList.add('active');
+		});
+	}
+
+	function closeAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.remove('active');
+			header.setAttribute('aria-expanded', 'false');
+			content.classList.remove('active');
+		});
+	}
+
+	// 全アコーディオン操作機能
+	function openAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.add('active');
+			header.setAttribute('aria-expanded', 'true');
+			content.classList.add('active');
+		});
+	}
+
+	function closeAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.remove('active');
+			header.setAttribute('aria-expanded', 'false');
+			content.classList.remove('active');
+		});
+	}
+
+	// ボタンにイベントリスナーを追加
+	document.addEventListener('DOMContentLoaded', function () {
+		// 既存のアコーディオンコード...
+
+		// 全開/全閉ボタン
+		const openAllBtn = document.getElementById('open-all-accordions');
+		const closeAllBtn = document.getElementById('close-all-accordions');
+		const closeAllBtn2 = document.getElementById('close-all-accordions-2'); // 追加ボタン
+
+		if (openAllBtn) {
+			openAllBtn.addEventListener('click', openAllAccordions);
+		}
+
+		if (closeAllBtn) {
+			closeAllBtn.addEventListener('click', closeAllAccordions);
+		}
+
+		if (closeAllBtn2) {
+			closeAllBtn2.addEventListener('click', closeAllAccordions);
+		}
 	});
 </script>
 
