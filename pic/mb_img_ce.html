@@ -51,23 +51,6 @@
 	<link rel="stylesheet" href="../style.min.css">
 	<link rel="stylesheet" href="../style_v.min.css">
 
-	<!-- アコーディオン用のJavaScript関数を追加 -->
-	<script>
-		function doToggleClassName(obj, onClassName, offClassName) {
-			obj.className = (obj.className != onClassName) ? onClassName : offClassName;
-		}
-		function getParentObj(obj) {
-			return obj.parentElement || obj.parentNode;
-		}
-		function doReplaceClassName(findClassName, replaceClassName, targetTagName) {
-			var elements = document.getElementsByTagName(targetTagName || '*');
-			for (var i = 0; i < elements.length; i++) {
-				if (elements[i].className == findClassName)
-					elements[i].className = replaceClassName;
-			}
-		}
-	</script>
-
 	<!-- 6. Cookie同意管理システム -->
 	<script>
 		window._cookiescript = {
@@ -272,7 +255,7 @@
 					</li>
 				</ul>
 				<h1 class="b bf4">CE / E-klasse Coupé , Cabriolet / CLE</h1>
-				 <div style="display: flex; justify-content: space-between; width: 1210px;">
+				<div style="display: flex; justify-content: space-between; width: 1210px;">
 					<dl class="m1">
 						<dt class="s2 af0">Baureihe</dt>
 						<dd class="s2"><a href="#c120" title="Ponton W120" class="lnk2">120</a></dd>
@@ -284,8 +267,8 @@
 						<dd><a href="#c236" title="CLE C236" class="lnk2">236</a></dd>
 					</dl>
 					<span>
-						<button class="vmenu_all_action square_btn" type="button" title="Klicken Sie hier, um alle Öffnungen zu öffnen" span onclick="doReplaceClassName('vmenu_off', 'vmenu_on2')">Öffne alles</button>
-						<button class="vmenu_all_action square_btn" type="button" title="Klicken Sie hier, um alle Öffnungen zu schließen" span onclick="doReplaceClassName('vmenu_on2', 'vmenu_off')">Alle schließen</button>
+						<button id="open-all-accordions" class="vmenu_all_action square_btn" type="button" title="Klicken Sie hier, um alle Öffnungen zu öffnen">Öffne alles</button>
+						<button id="close-all-accordions" class="vmenu_all_action square_btn" type="button" title="Klicken Sie hier, um alle Öffnungen zu schließen">Alle schließen</button>
 						<button class="square_btn" type="button" onclick="location.href='ja_mb_img_ce.html'">Ja</button>
 						<button class="square_btn" type="button" onclick="location.href='en_mb_img_ce.html'">En</button>
 					</span>
@@ -356,33 +339,44 @@
 			<h2>Strich Acht</h2>
 			<div class="style-w">
 				<a href="full/ce/w114c.jpg"><img loading="lazy" src="style/ce/w114c.webp" alt="Mercedes,W114c" width="1210" height="831"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Klicken Sie hier, um das Akkordeonfenster zu öffnen">
-						<p class="bf1a i"><a href="https://de.wikipedia.org/wiki/Mercedes-Benz_W_114#Coup.C3.A9" class="ico-wiki m1" title="Wikipedia(D) W114 Coupé"></a></p>
-						<h3 class="i m0">W114</h3>
-						<h3 class="i m1">Coupé</h3>
-						<p class="i m1">1969- 1976</p>
-					</div>
-					<section>
-						<h4 class="displayNone">Coupé</h4>
-						<div>
-							<div class="box60a"><br>
-								<a href="full/ce/w114c_f.jpg"><img loading="lazy" src="style/ce/w114c_f.webp" alt="Mercedes,W114c,Frontansicht" width="604" height="380"></a><br>
-								<a href="full/ce/w114c_r.jpg"><img loading="lazy" src="style/ce/w114c_r.webp" alt="Mercedes,W114c,Rückansicht" width="604" height="380"></a><br>
-								<a href="full/ce/w114c_d.jpg"><img loading="lazy" src="style/ce/w114c_d.webp" alt="Mercedes,W114c,Instrumententafel" width="604" height="453"></a>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-w114" title="Klicken Sie hier, um das Akkordeonfenster zu öffnen">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://de.wikipedia.org/wiki/Mercedes-Benz_W_114#Coup.C3.A9" class="ico-wiki" title="Wikipedia(D) W114 Coupé"></a>
+								<h3>W114<h3>
+										<p>Coupé</p>
+										1969- 1976
 							</div>
-							<div class="box60a">
-								<h5 class="i">Modellpflege</h5>
-								<p class="i m1">1973</p><br>
-								<a href="full/ce/w114c_f2.jpg"><img loading="lazy" src="style/ce/w114c_f2.webp" alt="Mercedes,W114c,Frontansicht" width="604" height="380"></a><br>
-								<a href="full/ce/w114c_r2.jpg"><img loading="lazy" src="style/ce/w114c_r2.webp" alt="Mercedes,W114c,Rückansicht" width="604" height="380"></a><br>
-								<a href="full/ce/w114c_d2.jpg"><img loading="lazy" src="style/ce/w114c_d2.webp" alt="Mercedes,W114c,Instrumententafel" width="604" height="453"></a>
+							<div class="accordion-right">
+								Designer : Paul Bracq
 							</div>
 						</div>
-						<h5>Abmessungen</h5>
-						<a href="full/ce/w114c_a.gif"><img loading="lazy" src="style/ce/w114c_a.webp" alt="Mercedes,W114c,Maße" width="804" height="1093"></a>
-					</section>
+					</button>
+					<div id="accordion-content-w114" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">Coupé</h4>
+							<div>
+								<div class="box60a"><br>
+									<a href="full/ce/w114c_f.jpg"><img loading="lazy" src="style/ce/w114c_f.webp" alt="Mercedes,W114c,Frontansicht" width="604" height="380"></a><br>
+									<a href="full/ce/w114c_r.jpg"><img loading="lazy" src="style/ce/w114c_r.webp" alt="Mercedes,W114c,Rückansicht" width="604" height="380"></a><br>
+									<a href="full/ce/w114c_d.jpg"><img loading="lazy" src="style/ce/w114c_d.webp" alt="Mercedes,W114c,Instrumententafel" width="604" height="453"></a>
+								</div>
+								<div class="box60a">
+									<h5 class="i">Modellpflege</h5>
+									<p class="i m1">1973</p><br>
+									<a href="full/ce/w114c_f2.jpg"><img loading="lazy" src="style/ce/w114c_f2.webp" alt="Mercedes,W114c,Frontansicht" width="604" height="380"></a><br>
+									<a href="full/ce/w114c_r2.jpg"><img loading="lazy" src="style/ce/w114c_r2.webp" alt="Mercedes,W114c,Rückansicht" width="604" height="380"></a><br>
+									<a href="full/ce/w114c_d2.jpg"><img loading="lazy" src="style/ce/w114c_d2.webp" alt="Mercedes,W114c,Instrumententafel" width="604" height="453"></a>
+								</div>
+							</div>
+							<h5>Abmessungen</h5>
+							<a href="full/ce/w114c_a.gif"><img loading="lazy" src="style/ce/w114c_a.webp" alt="Mercedes,W114c,Maße" width="804" height="1093"></a>
+						</div>
+					</div>
 				</div>
+
 			</div>
 		</section>
 
@@ -390,21 +384,32 @@
 			<h2>Coupé (123)</h2>
 			<div class="style-w">
 				<a href="full/ce/w123c.jpg"><img loading="lazy" src="style/ce/w123c.webp" alt="Mercedes,W123c" width="1210" height="540"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Klicken Sie hier, um das Akkordeonfenster zu öffnen">
-						<p class="bf1a i"><a href="https://de.wikipedia.org/wiki/Mercedes-Benz_Baureihe_123#Coup.C3.A9_.28C_123.29" class="ico-wiki m1" title="Wikipedia(D) 123 Coupé (C123)"></a></p>
-						<h3 class="i m0">C123</h3>
-						<p class="i m1">Coupé</p>
-						<p class="i m1">06/1977 - 08/1985</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-c123" title="Klicken Sie hier, um das Akkordeonfenster zu öffnen">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://de.wikipedia.org/wiki/Mercedes-Benz_Baureihe_123#Coup.C3.A9_.28C_123.29" class="ico-wiki" title="Wikipedia(D) 123 Coupé (C123)"></a>
+								<h3>C123<h3>
+										<p>Coupé</p>
+										06/1977 - 08/1985
+							</div>
+							<div class="accordion-right">
+								Designer : Bruno Sacco , Friedrich Geiger
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-c123" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">Coupé</h4>
+							<a href="full/ce/w123c_f.jpg"><img loading="lazy" src="style/ce/w123c_f.webp" alt="Mercedes,W123c,Frontansicht" width="667" height="358"></a>
+							<a href="full/ce/w123c_d.jpg"><img loading="lazy" src="style/ce/w123c_d.webp" alt="Mercedes,W123c,Instrumententafel" width="537" height="358"></a><br>
+							<a href="full/ce/w123c_r.jpg"><img loading="lazy" src="style/ce/w123c_r.webp" alt="Mercedes,W123c,Rückansicht" width="557" height="419"></a>
+							<a href="full/ce/w123c_i.jpg"><img loading="lazy" src="style/ce/w123c_i.webp" alt="Mercedes,W123c,Innenansicht" width="647" height="419"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">Coupé</h4>
-						<a href="full/ce/w123c_f.jpg"><img loading="lazy" src="style/ce/w123c_f.webp" alt="Mercedes,W123c,Frontansicht" width="667" height="358"></a>
-						<a href="full/ce/w123c_d.jpg"><img loading="lazy" src="style/ce/w123c_d.webp" alt="Mercedes,W123c,Instrumententafel" width="537" height="358"></a><br>
-						<a href="full/ce/w123c_r.jpg"><img loading="lazy" src="style/ce/w123c_r.webp" alt="Mercedes,W123c,Rückansicht" width="557" height="419"></a>
-						<a href="full/ce/w123c_i.jpg"><img loading="lazy" src="style/ce/w123c_i.webp" alt="Mercedes,W123c,Innenansicht" width="647" height="419"></a>
-					</section>
 				</div>
+
 			</div>
 		</section>
 
@@ -412,45 +417,62 @@
 			<h2>CE / E-klasse Coupé , Cabriolet (124)</h2>
 			<div class="style-w">
 				<a href="full/ce/a124.jpg"><img loading="lazy" src="style/ce/a124.webp" alt="Mercedes,A124,E-klasse,cabriolet,Frontansicht" width="1210" height="641"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Klicken Sie hier, um das Akkordeonfenster zu öffnen">
-						<p class="bf1a i"><a href="https://de.wikipedia.org/wiki/Mercedes-Benz_Baureihe_124#Coup.C3.A9_.28C_124.29" class="ico-wiki m1" title="Wikipedia(D) 124 Coupé (C124)"></a></p>
-						<h3 class="i m0">C124</h3>
-						<p class="i m1">Coupé</p>
-						<p class="i m1">03/1987 - 1996</p>
-						<p class="ru">Designer : Bruno Sacco</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-c124" title="Klicken Sie hier, um das Akkordeonfenster zu öffnen">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://de.wikipedia.org/wiki/Mercedes-Benz_Baureihe_124#Coup.C3.A9_.28C_124.29" class="ico-wiki" title="Wikipedia(D) 124 Coupé (C124)"></a>
+								<h3>C124<h3>
+										<p>Coupé</p>
+										03/1987 - 1996
+							</div>
+							<div class="accordion-right">
+								Designer : Bruno Sacco
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-c124" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">Coupé</h4>
+							<a href="full/ce/c124_d.jpg"><img loading="lazy" src="style/ce/c124_d.webp" alt="Mercedes,C124,Instrumententafel" width="1210" height="807"></a><br>
+							<a href="full/ce/c124_f.jpg"><img loading="lazy" src="style/ce/c124_f.webp" alt="Mercedes,C124,Frontansicht" width="572" height="317"></a>
+							<a href="full/ce/c124_r.jpg"><img loading="lazy" src="style/ce/c124_r.webp" alt="Mercedes,C124,Rückansicht" width="633" height="317"></a><br>
+							<h5 class="i">Modellpflege</h5>
+							<p class="i m1">09/1993</p><br>
+							<a href="full/ce/c124_f2.jpg"><img loading="lazy" src="style/ce/c124_f2.webp" alt="Mercedes,C124,E-klasse,Coupé,Frontansicht" width="618" height="318"></a>
+							<a href="full/ce/c124_r2.jpg"><img loading="lazy" src="style/ce/c124_r2.webp" alt="Mercedes,C124,E-klasse,Coupé,Rückansicht" width="586" height="318"></a>
+							<h5>Abmessungen</h5>
+							<a href="full/ce/c124_a.jpg"><img loading="lazy" class="m0f" src="style/ce/c124_a.webp" alt="Mercedes,C124,E-klasse,Coupé,Maße" width="1200" height="700"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">Coupé</h4>
-						<a href="full/ce/c124_d.jpg"><img loading="lazy" src="style/ce/c124_d.webp" alt="Mercedes,C124,Instrumententafel" width="1210" height="807"></a><br>
-						<a href="full/ce/c124_f.jpg"><img loading="lazy" src="style/ce/c124_f.webp" alt="Mercedes,C124,Frontansicht" width="572" height="317"></a>
-						<a href="full/ce/c124_r.jpg"><img loading="lazy" src="style/ce/c124_r.webp" alt="Mercedes,C124,Rückansicht" width="633" height="317"></a><br>
-						<h5 class="i">Modellpflege</h5>
-						<p class="i m1">09/1993</p><br>
-						<a href="full/ce/c124_f2.jpg"><img loading="lazy" src="style/ce/c124_f2.webp" alt="Mercedes,C124,E-klasse,Coupé,Frontansicht" width="618" height="318"></a>
-						<a href="full/ce/c124_r2.jpg"><img loading="lazy" src="style/ce/c124_r2.webp" alt="Mercedes,C124,E-klasse,Coupé,Rückansicht" width="586" height="318"></a>
-						<h5>Abmessungen</h5>
-						<a href="full/ce/c124_a.jpg"><img loading="lazy" class="m0f" src="style/ce/c124_a.webp" alt="Mercedes,C124,E-klasse,Coupé,Maße" width="1200" height="700"></a>
-					</section>
 				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Klicken Sie hier, um das Akkordeonfenster zu öffnen">
-						<p class="bf1a i"><a href="https://de.wikipedia.org/wiki/Mercedes-Benz_Baureihe_124#Cabriolet_.28A_124.29" class="ico-wiki m1" title="Wikipedia(D) 124 Cabriolet (A124)"></a></p>
-						<h3 class="i m0">A124</h3>
-						<p class="i m1">Cabriolet</p>
-						<p class="i m1">09/1991 - 07/1997</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-a124" title="Klicken Sie hier, um das Akkordeonfenster zu öffnen">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://de.wikipedia.org/wiki/Mercedes-Benz_Baureihe_124#Cabriolet_.28A_124.29" class="ico-wiki" title="Wikipedia(D) 124 Cabriolet (A124)"></a>
+								<h3>A124<h3>
+										<p>Cabriolet</p>
+										09/1991 - 07/1997
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-a124" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">Cabriolet</h4>
+							<a href="full/ce/a124_f.jpg"><img loading="lazy" src="style/ce/a124_f.webp" alt="Mercedes,A124,E-klasse,cabriolet,Frontansicht" width="631" height="379"></a>
+							<a href="full/ce/a124_r.jpg"><img loading="lazy" src="style/ce/a124_r.webp" alt="Mercedes,A124,E-klasse,cabriolet,Rückansicht" width="573" height="379"></a><br>
+							<h5 class="i">Modellpflege</h5>
+							<p class="i m1">1993</p><br>
+							<a href="full/ce/a124_r2.jpg"><img loading="lazy" src="style/ce/a124_r2.webp" alt="Mercedes,A124,E-klasse,cabriolet,Rückansicht" width="1210" height="908"></a><br>
+							<a href="full/ce/a124_f2.jpg"><img loading="lazy" src="style/ce/a124_f2.webp" alt="Mercedes,A124,E-klasse,cabriolet,Frontansicht" width="753" height="339"></a>
+							<a href="full/ce/a124_d2.jpg"><img loading="lazy" src="style/ce/a124_d2.webp" alt="Mercedes,A124,E-klasse,cabriolet,Instrumententafel" width="452" height="339"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">Cabriolet</h4>
-						<a href="full/ce/a124_f.jpg"><img loading="lazy" src="style/ce/a124_f.webp" alt="Mercedes,A124,E-klasse,cabriolet,Frontansicht" width="631" height="379"></a>
-						<a href="full/ce/a124_r.jpg"><img loading="lazy" src="style/ce/a124_r.webp" alt="Mercedes,A124,E-klasse,cabriolet,Rückansicht" width="573" height="379"></a><br>
-						<h5 class="i">Modellpflege</h5>
-						<p class="i m1">1993</p><br>
-						<a href="full/ce/a124_r2.jpg"><img loading="lazy" src="style/ce/a124_r2.webp" alt="Mercedes,A124,E-klasse,cabriolet,Rückansicht" width="1210" height="908"></a><br>
-						<a href="full/ce/a124_f2.jpg"><img loading="lazy" src="style/ce/a124_f2.webp" alt="Mercedes,A124,E-klasse,cabriolet,Frontansicht" width="753" height="339"></a>
-						<a href="full/ce/a124_d2.jpg"><img loading="lazy" src="style/ce/a124_d2.webp" alt="Mercedes,A124,E-klasse,cabriolet,Instrumententafel" width="452" height="339"></a>
-					</section>
 				</div>
+
 			</div>
 		</section>
 
@@ -458,49 +480,67 @@
 			<h2>E-klasse Coupé / Cabriolet (207)</h2>
 			<div class="style-w">
 				<a href="full/ce/c_a_207.jpg"><img loading="lazy" src="style/ce/c_a_207.webp" alt="Mercedes,C207,E-klasse Coupé und cabriolet" width="1210" height="530"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Klicken Sie hier, um das Akkordeonfenster zu öffnen">
-						<p class="bf1a i"><a href="https://de.wikipedia.org/wiki/Mercedes-Benz_Baureihe_207" class="ico-wiki m1" title="Wikipedia(D) 207"></a></p>
-						<h3 class="i m0">C207</h3>
-						<p class="i m1">Coupé</p>
-						<p class="i m1">05/2009 - 2017</p>
-					</div>
-					<section>
-						<h4 class="displayNone">Coupé</h4>
-						<div>
-							<div class="box60a"><br>
-								<a href="full/ce/c207_f.jpg"><img loading="lazy" src="style/ce/c207_f.webp" alt="Mercedes,C207,E-klasse Coupé,Frontansicht" width="604" height="283"></a><br>
-								<a href="full/ce/c207_r.jpg"><img loading="lazy" src="style/ce/c207_r.webp" alt="Mercedes,C207,E-klasse Coupé,Rückansicht" width="604" height="283"></a><br>
-								<a href="full/ce/c207_d.jpg"><img loading="lazy" src="style/ce/c207_d.webp" alt="Mercedes,C207,E-klasse Coupé,Instrumententafel" width="604" height="400"></a>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-c207" title="Klicken Sie hier, um das Akkordeonfenster zu öffnen">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://de.wikipedia.org/wiki/Mercedes-Benz_Baureihe_207" class="ico-wiki" title="Wikipedia(D) 207"></a>
+								<h3>C207<h3>
+										<p>Coupé</p>
+										05/2009 - 2017
 							</div>
-							<div class="box60a">
-								<h5 class="i">Modellpflege</h5>
-								<p class="i m1">05/2013</p><br>
-								<a href="full/ce/c207_f2.jpg"><img loading="lazy" src="style/ce/c207_f2.webp" alt="Mercedes,C207,E-klasse Coupé,Frontansicht" width="604" height="283"></a><br>
-								<a href="full/ce/c207_r2.jpg"><img loading="lazy" src="style/ce/c207_r2.webp" alt="Mercedes,C207,E-klasse Coupé,Rückansicht" width="604" height="283"></a><br>
-								<a href="full/ce/c207_d2.jpg"><img loading="lazy" src="style/ce/c207_d2.webp" alt="Mercedes,C207,E-klasse Coupé,Instrumententafel" width="604" height="400"></a>
+							<div class="accordion-right">
+								Designer : Gorden Wagener
 							</div>
 						</div>
-						<h5>Abmessungen</h5>
-						<a href="full/ce/c207_a.jpg"><img loading="lazy" src="style/ce/c207_a.webp" alt="Mercedes,C207,E-klasse Coupé,Maße" width="804" height="1096"></a>
-					</section>
-				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Klicken Sie hier, um das Akkordeonfenster zu öffnen">
-						<h3 class="bf1b i">A207</h3>
-						<p class="i m1">Cabriolet</p>
-						<p class="i m1">05/2009 - 2017</p>
+					</button>
+					<div id="accordion-content-c207" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">Coupé</h4>
+							<div>
+								<div class="box60a"><br>
+									<a href="full/ce/c207_f.jpg"><img loading="lazy" src="style/ce/c207_f.webp" alt="Mercedes,C207,E-klasse Coupé,Frontansicht" width="604" height="283"></a><br>
+									<a href="full/ce/c207_r.jpg"><img loading="lazy" src="style/ce/c207_r.webp" alt="Mercedes,C207,E-klasse Coupé,Rückansicht" width="604" height="283"></a><br>
+									<a href="full/ce/c207_d.jpg"><img loading="lazy" src="style/ce/c207_d.webp" alt="Mercedes,C207,E-klasse Coupé,Instrumententafel" width="604" height="400"></a>
+								</div>
+								<div class="box60a">
+									<h5 class="i">Modellpflege</h5>
+									<p class="i m1">05/2013</p><br>
+									<a href="full/ce/c207_f2.jpg"><img loading="lazy" src="style/ce/c207_f2.webp" alt="Mercedes,C207,E-klasse Coupé,Frontansicht" width="604" height="283"></a><br>
+									<a href="full/ce/c207_r2.jpg"><img loading="lazy" src="style/ce/c207_r2.webp" alt="Mercedes,C207,E-klasse Coupé,Rückansicht" width="604" height="283"></a><br>
+									<a href="full/ce/c207_d2.jpg"><img loading="lazy" src="style/ce/c207_d2.webp" alt="Mercedes,C207,E-klasse Coupé,Instrumententafel" width="604" height="400"></a>
+								</div>
+							</div>
+							<h5>Abmessungen</h5>
+							<a href="full/ce/c207_a.jpg"><img loading="lazy" src="style/ce/c207_a.webp" alt="Mercedes,C207,E-klasse Coupé,Maße" width="804" height="1096"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">Cabriolet</h4>
-						<a href="full/ce/a207_f.jpg"><img loading="lazy" src="style/ce/a207_f.webp" alt="Mercedes,A207,E-klasse cabriolet,Frontansicht" width="568" height="402"></a>
-						<a href="full/ce/a207_r.jpg"><img loading="lazy" src="style/ce/a207_r.webp" alt="Mercedes,A207,E-klasse cabriolet,Rückansicht" width="637" height="402"></a><br>
-						<h5 class="i">Modellpflege</h5>
-						<p class="i m1">05/2013</p><br>
-						<a href="full/ce/a207_f2.jpg"><img loading="lazy" src="style/ce/a207_f2.webp" alt="Mercedes,A207,E-klasse cabriolet,Frontansicht" width="594" height="362"></a>
-						<a href="full/ce/a207_r2.jpg"><img loading="lazy" src="style/ce/a207_r2.webp" alt="Mercedes,A207,E-klasse cabriolet,Rückansicht" width="611" height="362"></a>
-					</section>
 				</div>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-a207" title="Klicken Sie hier, um das Akkordeonfenster zu öffnen">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h3>A207<h3>
+										<p>Cabriolet</p>
+										05/2009 - 2017
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-a207" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">Cabriolet</h4>
+							<a href="full/ce/a207_f.jpg"><img loading="lazy" src="style/ce/a207_f.webp" alt="Mercedes,A207,E-klasse cabriolet,Frontansicht" width="568" height="402"></a>
+							<a href="full/ce/a207_r.jpg"><img loading="lazy" src="style/ce/a207_r.webp" alt="Mercedes,A207,E-klasse cabriolet,Rückansicht" width="637" height="402"></a><br>
+							<h5 class="i">Modellpflege</h5>
+							<p class="i m1">05/2013</p><br>
+							<a href="full/ce/a207_f2.jpg"><img loading="lazy" src="style/ce/a207_f2.webp" alt="Mercedes,A207,E-klasse cabriolet,Frontansicht" width="594" height="362"></a>
+							<a href="full/ce/a207_r2.jpg"><img loading="lazy" src="style/ce/a207_r2.webp" alt="Mercedes,A207,E-klasse cabriolet,Rückansicht" width="611" height="362"></a>
+						</div>
+					</div>
+				</div>
+
 			</div>
 		</section>
 
@@ -508,49 +548,67 @@
 			<h2>E-klasse Coupé / Cabriolet (238)</h2>
 			<div class="style-w">
 				<a href="full/ce/c238.jpg"><img loading="lazy" src="style/ce/c238.webp" alt="Mercedes,C238" width="1210" height="681"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Klicken Sie hier, um das Akkordeonfenster zu öffnen">
-						<p class="bf1a i"><a href="https://de.wikipedia.org/wiki/Mercedes-Benz_Baureihe_238" class="ico-wiki m1" title="Wikipedia(D) 238"></a></p>
-						<h3 class="i m0">C238</h3>
-						<p class="i m1">Coupé</p>
-						<p class="i m1">12/2016 - 10/2023</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-c238" title="Klicken Sie hier, um das Akkordeonfenster zu öffnen">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://de.wikipedia.org/wiki/Mercedes-Benz_Baureihe_238" class="ico-wiki" title="Wikipedia(D) 238"></a>
+								<h3>C238<h3>
+										<p>Coupé</p>
+										12/2016 - 10/2023
+							</div>
+							<div class="accordion-right">
+								Designer : Gorden Wagener
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-c238" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">Coupé</h4>
+							<a href="full/ce/c238_f.jpg"><img loading="lazy" src="style/ce/c238_f.webp" alt="Mercedes,C238,Frontansicht" width="602" height="402"></a>
+							<a href="full/ce/c238_r.jpg"><img loading="lazy" src="style/ce/c238_r.webp" alt="Mercedes,C238,Rückansicht" width="602" height="402"></a><br>
+							<a href="full/ce/c238_d.jpg"><img loading="lazy" src="style/ce/c238_d.webp" alt="Mercedes,C238,Instrumententafel" width="1210" height="412"></a><br>
+							<a href="full/ce/c238_i.jpg"><img loading="lazy" src="style/ce/c238_i.webp" alt="Mercedes,C238,Innenansicht" width="755" height="513"></a><br>
+							<h5 class="i">Modellpflege</h5>
+							<p class="i m1">2020</p><br>
+							<a href="full/ce/c238_f2.jpg"><img loading="lazy" src="style/ce/c238_f2.webp" alt="Mercedes,C238,E-klasse Coupé,Frontansicht" width="602" height="452"></a>
+							<a href="full/ce/c238_r2.jpg"><img loading="lazy" src="style/ce/c238_r2.webp" alt="Mercedes,C238,E-klasse Coupé,Rückansicht" width="602" height="452"></a><br>
+							<a href="full/ce/c238_d2.jpg"><img loading="lazy" src="style/ce/c238_d2.webp" alt="Mercedes,C238,E-klasse Coupé,Instrumententafel" width="661" height="370"></a>
+							<a href="full/ce/c238_m2.jpg"><img loading="lazy" src="style/ce/c238_m2.webp" alt="Mercedes,C238,E-klasse Coupé,Motor" width="543" height="370"></a>
+							<h5>Abmessungen</h5>
+							<a href="full/ce/c238_a.gif"><img loading="lazy" src="style/ce/c238_a.webp" alt="Mercedes,C238,E-klasse,Coupé,Maße" width="1210" height="732"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">Coupé</h4>
-						<a href="full/ce/c238_f.jpg"><img loading="lazy" src="style/ce/c238_f.webp" alt="Mercedes,C238,Frontansicht" width="602" height="402"></a>
-						<a href="full/ce/c238_r.jpg"><img loading="lazy" src="style/ce/c238_r.webp" alt="Mercedes,C238,Rückansicht" width="602" height="402"></a><br>
-						<a href="full/ce/c238_d.jpg"><img loading="lazy" src="style/ce/c238_d.webp" alt="Mercedes,C238,Instrumententafel" width="1210" height="412"></a><br>
-						<a href="full/ce/c238_i.jpg"><img loading="lazy" src="style/ce/c238_i.webp" alt="Mercedes,C238,Innenansicht" width="755" height="513"></a><br>
-						<h5 class="i">Modellpflege</h5>
-						<p class="i m1">2020</p><br>
-						<a href="full/ce/c238_f2.jpg"><img loading="lazy" src="style/ce/c238_f2.webp" alt="Mercedes,C238,E-klasse Coupé,Frontansicht" width="602" height="452"></a>
-						<a href="full/ce/c238_r2.jpg"><img loading="lazy" src="style/ce/c238_r2.webp" alt="Mercedes,C238,E-klasse Coupé,Rückansicht" width="602" height="452"></a><br>
-						<a href="full/ce/c238_d2.jpg"><img loading="lazy" src="style/ce/c238_d2.webp" alt="Mercedes,C238,E-klasse Coupé,Instrumententafel" width="661" height="370"></a>
-						<a href="full/ce/c238_m2.jpg"><img loading="lazy" src="style/ce/c238_m2.webp" alt="Mercedes,C238,E-klasse Coupé,Motor" width="543" height="370"></a>
-						<h5>Abmessungen</h5>
-						<a href="full/ce/c238_a.gif"><img loading="lazy" src="style/ce/c238_a.webp" alt="Mercedes,C238,E-klasse,Coupé,Maße" width="1210" height="732"></a>
-					</section>
 				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Klicken Sie hier, um das Akkordeonfenster zu öffnen">
-						<h3 class="bf1b i">A238</h3>
-						<p class="i m1">Cabriolet</p>
-						<p class="i m1">09/2017 - 10/2023</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-a238" title="Klicken Sie hier, um das Akkordeonfenster zu öffnen">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h3>A238<h3>
+										<p>Cabriolet</p>
+										09/2017 - 10/2023
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-a238" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">Cabriolet</h4>
+							<a href="full/ce/a238_f.jpg"><img loading="lazy" src="style/ce/a238_f.webp" alt="Mercedes,A238,E-klasse cabriolet,Frontansicht" width="556" height="365"></a>
+							<a href="full/ce/a238_r.jpg"><img loading="lazy" src="style/ce/a238_r.webp" alt="Mercedes,A238,E-klasse cabriolet,Rückansicht" width="649" height="365"></a><br>
+							<a href="full/ce/a238_i.jpg"><img loading="lazy" src="style/ce/a238_i.webp" alt="Mercedes,A238,E-klasse cabriolet,Innenansicht" width="1210" height="756"></a><br>
+							<a href="full/ce/a238_d.jpg"><img loading="lazy" src="style/ce/a238_d.webp" alt="Mercedes,A238,E-klasse cabriolet,Instrumententafel" width="652" height="367"></a>
+							<a href="full/ce/a238_def.jpg"><img loading="lazy" src="style/ce/a238_def.webp" alt="Mercedes,A238,E-klasse cabriolet,Innenansicht" width="553" height="367"></a><br>
+							<h5 class="i">Modellpflege</h5>
+							<p class="i m1">2020</p><br>
+							<a href="full/ce/a238_f2.jpg"><img loading="lazy" src="style/ce/a238_f2.webp" alt="Mercedes,A238,E-klasse cabriolet,Frontansicht" width="602" height="339"></a>
+							<a href="full/ce/a238_r2.jpg"><img loading="lazy" src="style/ce/a238_r2.webp" alt="Mercedes,A238,E-klasse cabriolet,Rückansicht" width="602" height="339"></a><br>
+							<a href="full/ce/a238_d2.jpg"><img loading="lazy" src="style/ce/a238_d2.webp" alt="Mercedes,A238,E-klasse cabriolet,Instrumententafel" width="1210" height="807"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">Cabriolet</h4>
-						<a href="full/ce/a238_f.jpg"><img loading="lazy" src="style/ce/a238_f.webp" alt="Mercedes,A238,E-klasse cabriolet,Frontansicht" width="556" height="365"></a>
-						<a href="full/ce/a238_r.jpg"><img loading="lazy" src="style/ce/a238_r.webp" alt="Mercedes,A238,E-klasse cabriolet,Rückansicht" width="649" height="365"></a><br>
-						<a href="full/ce/a238_i.jpg"><img loading="lazy" src="style/ce/a238_i.webp" alt="Mercedes,A238,E-klasse cabriolet,Innenansicht" width="1210" height="756"></a><br>
-						<a href="full/ce/a238_d.jpg"><img loading="lazy" src="style/ce/a238_d.webp" alt="Mercedes,A238,E-klasse cabriolet,Instrumententafel" width="652" height="367"></a>
-						<a href="full/ce/a238_def.jpg"><img loading="lazy" src="style/ce/a238_def.webp" alt="Mercedes,A238,E-klasse cabriolet,Innenansicht" width="553" height="367"></a><br>
-						<h5 class="i">Modellpflege</h5>
-						<p class="i m1">2020</p><br>
-						<a href="full/ce/a238_f2.jpg"><img loading="lazy" src="style/ce/a238_f2.webp" alt="Mercedes,A238,E-klasse cabriolet,Frontansicht" width="602" height="339"></a>
-						<a href="full/ce/a238_r2.jpg"><img loading="lazy" src="style/ce/a238_r2.webp" alt="Mercedes,A238,E-klasse cabriolet,Rückansicht" width="602" height="339"></a><br>
-						<a href="full/ce/a238_d2.jpg"><img loading="lazy" src="style/ce/a238_d2.webp" alt="Mercedes,A238,E-klasse cabriolet,Instrumententafel" width="1210" height="807"></a>
-					</section>
 				</div>
+
 			</div>
 		</section>
 
@@ -558,47 +616,65 @@
 			<h2>CLE (236)</h2>
 			<div class="style-w">
 				<a href="full/ce/a_c236.jpg"><img loading="lazy" src="style/ce/a_c236.webp" alt="Mercedes,C236,A236" width="1210" height="519"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Klicken Sie hier, um das Akkordeonfenster zu öffnen">
-						<p class="bf1a i"><a href="https://de.wikipedia.org/wiki/Mercedes-Benz_Baureihe_236" class="ico-wiki m1" title="Wikipedia(D) 236"></a></p>
-						<h3 class="i m0">C236</h3>
-						<p class="i m1">Coupé</p>
-						<p class="i m1">07/2023 -</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-c236" title="Klicken Sie hier, um das Akkordeonfenster zu öffnen">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://de.wikipedia.org/wiki/Mercedes-Benz_Baureihe_236" class="ico-wiki" title="Wikipedia(D) 236"></a>
+								<h3>C236<h3>
+										<p>Coupé</p>
+										07/2023 -
+							</div>
+							<div class="accordion-right">
+								Designer : Gorden Wagener
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-c236" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">Coupé</h4>
+							<a href="full/ce/c236.jpg"><img loading="lazy" src="style/ce/c236.webp" alt="Mercedes,C236" width="1210" height="806"></a><br>
+							<a href="full/ce/c236_f.jpg"><img loading="lazy" src="style/ce/c236_f.webp" alt="Mercedes,C236,E-klasse Coupé,Frontansicht" width="586" height="355"></a>
+							<a href="full/ce/c236_r.jpg"><img loading="lazy" src="style/ce/c236_r.webp" alt="Mercedes,C236,E-klasse Coupé,Rückansicht" width="618" height="355"></a><br>
+							<a href="full/ce/c236_d.jpg"><img loading="lazy" src="style/ce/c236_d.webp" alt="Mercedes,C236,E-klasse Coupé,Instrumententafel" width="652" height="368"></a>
+							<a href="full/ce/c236_i.jpg"><img loading="lazy" src="style/ce/c236_i.webp" alt="Mercedes,C236,E-klasse Coupé,Innenansicht" width="552" height="368"></a><br>
+							<a href="full/ce/c236_ra.jpg"><img loading="lazy" src="style/ce/c236_ra.webp" alt="Mercedes,C236,E-klasse Coupé,Rückansicht" width="602" height="401"></a>
+							<a href="full/ce/c236_ir.jpg"><img loading="lazy" src="style/ce/c236_ir.webp" alt="Mercedes,C236,E-klasse Coupé,Innenansicht" width="602" height="401"></a>
+							<h5>Abmessungen</h5>
+							<a href="full/ce/c236_1a.jpg"><img loading="lazy" src="style/ce/c236_1a.webp" alt="Mercedes,C236,E-klasse,Coupé,Maße" width="1210" height="500"></a><br>
+							<a href="full/ce/c236_2a.jpg"><img loading="lazy" src="style/ce/c236_2a.webp" alt="Mercedes,C236,E-klasse,Coupé,Maße" width="628" height="504"></a>
+							<a href="full/ce/c236_3a.jpg"><img loading="lazy" src="style/ce/c236_3a.webp" alt="Mercedes,C236,E-klasse,Coupé,Maße" width="576" height="504"></a><br>
+							<a href="full/ce/c236_4a.jpg"><img loading="lazy" src="style/ce/c236_4a.webp" alt="Mercedes,C236,E-klasse,Coupé,Maße" width="1210" height="500"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">Coupé</h4>
-						<a href="full/ce/c236.jpg"><img loading="lazy" src="style/ce/c236.webp" alt="Mercedes,C236" width="1210" height="806"></a><br>
-						<a href="full/ce/c236_f.jpg"><img loading="lazy" src="style/ce/c236_f.webp" alt="Mercedes,C236,E-klasse Coupé,Frontansicht" width="586" height="355"></a>
-						<a href="full/ce/c236_r.jpg"><img loading="lazy" src="style/ce/c236_r.webp" alt="Mercedes,C236,E-klasse Coupé,Rückansicht" width="618" height="355"></a><br>
-						<a href="full/ce/c236_d.jpg"><img loading="lazy" src="style/ce/c236_d.webp" alt="Mercedes,C236,E-klasse Coupé,Instrumententafel" width="652" height="368"></a>
-						<a href="full/ce/c236_i.jpg"><img loading="lazy" src="style/ce/c236_i.webp" alt="Mercedes,C236,E-klasse Coupé,Innenansicht" width="552" height="368"></a><br>
-						<a href="full/ce/c236_ra.jpg"><img loading="lazy" src="style/ce/c236_ra.webp" alt="Mercedes,C236,E-klasse Coupé,Rückansicht" width="602" height="401"></a>
-						<a href="full/ce/c236_ir.jpg"><img loading="lazy" src="style/ce/c236_ir.webp" alt="Mercedes,C236,E-klasse Coupé,Innenansicht" width="602" height="401"></a>
-						<h5>Abmessungen</h5>
-						<a href="full/ce/c236_1a.jpg"><img loading="lazy" src="style/ce/c236_1a.webp" alt="Mercedes,C236,E-klasse,Coupé,Maße" width="1210" height="500"></a><br>
-						<a href="full/ce/c236_2a.jpg"><img loading="lazy" src="style/ce/c236_2a.webp" alt="Mercedes,C236,E-klasse,Coupé,Maße" width="628" height="504"></a>
-						<a href="full/ce/c236_3a.jpg"><img loading="lazy" src="style/ce/c236_3a.webp" alt="Mercedes,C236,E-klasse,Coupé,Maße" width="576" height="504"></a><br>
-						<a href="full/ce/c236_4a.jpg"><img loading="lazy" src="style/ce/c236_4a.webp" alt="Mercedes,C236,E-klasse,Coupé,Maße" width="1210" height="500"></a>
-					</section>
 				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Klicken Sie hier, um das Akkordeonfenster zu öffnen">
-						<h3 class="bf1b i">A236</h3>
-						<p class="i m1">Cabriolet</p>
-						<p class="i m1">04/2024 -</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-a236" title="Klicken Sie hier, um das Akkordeonfenster zu öffnen">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h3>A236<h3>
+										<p>Cabriolet</p>
+										04/2024 -
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-a236" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<a href="full/ce/a236_s.jpg"><img loading="lazy" src="style/ce/a236_s.webp" alt="Mercedes,A236,E-klasse,Cabriolet,Frontansicht" width="1210" height="806"></a><br>
+							<a href="full/ce/a236_f.jpg"><img loading="lazy" src="style/ce/a236_f.webp" alt="Mercedes,A236,E-klasse,Cabriolet,Frontansicht" width="654" height="367"></a>
+							<a href="full/ce/a236_ia.jpg"><img loading="lazy" src="style/ce/a236_ia.webp" alt="Mercedes,A236,E-klasse,Cabriolet" width="551" height="367"></a><br>
+							<a href="full/ce/a236_r.jpg"><img loading="lazy" src="style/ce/a236_r.webp" alt="Mercedes,A236,E-klasse,Cabriolet,Rückansicht" width="604" height="290.5"></a>
+							<a href="full/ce/a236_ra.jpg"><img loading="lazy" src="style/ce/a236_ra.webp" alt="Mercedes,A236,E-klasse,Cabriolet,Rückansicht" width="601" height="290.5"></a><br>
+							<a href="full/ce/a236_d.jpg"><img loading="lazy" src="style/ce/a236_d.webp" alt="Mercedes,A236,E-klasse,Cabriolet,Instrumententafel" width="602" height="401"></a>
+							<a href="full/ce/a236_i.jpg"><img loading="lazy" src="style/ce/a236_i.webp" alt="Mercedes,A236,E-klasse,Cabriolet,Innenansicht" width="602" height="401"></a><br>
+							<a href="full/ce/a236_ic.jpg"><img loading="lazy" src="style/ce/a236_ic.webp" alt="Mercedes,A236,E-klasse,Cabriolet,Innenansicht" width="602" height="401"></a>
+							<a href="full/ce/a236_fa.jpg"><img loading="lazy" src="style/ce/a236_fa.webp" alt="Mercedes,A236,E-klasse,Cabriolet,Frontansicht" width="602" height="401"></a>
+						</div>
 					</div>
-					<section>
-						<a href="full/ce/a236_s.jpg"><img loading="lazy" src="style/ce/a236_s.webp" alt="Mercedes,A236,E-klasse,Cabriolet,Frontansicht" width="1210" height="806"></a><br>
-						<a href="full/ce/a236_f.jpg"><img loading="lazy" src="style/ce/a236_f.webp" alt="Mercedes,A236,E-klasse,Cabriolet,Frontansicht" width="654" height="367"></a>
-						<a href="full/ce/a236_ia.jpg"><img loading="lazy" src="style/ce/a236_ia.webp" alt="Mercedes,A236,E-klasse,Cabriolet" width="551" height="367"></a><br>
-						<a href="full/ce/a236_r.jpg"><img loading="lazy" src="style/ce/a236_r.webp" alt="Mercedes,A236,E-klasse,Cabriolet,Rückansicht" width="604" height="290.5"></a>
-						<a href="full/ce/a236_ra.jpg"><img loading="lazy" src="style/ce/a236_ra.webp" alt="Mercedes,A236,E-klasse,Cabriolet,Rückansicht" width="601" height="290.5"></a><br>
-						<a href="full/ce/a236_d.jpg"><img loading="lazy" src="style/ce/a236_d.webp" alt="Mercedes,A236,E-klasse,Cabriolet,Instrumententafel" width="602" height="401"></a>
-						<a href="full/ce/a236_i.jpg"><img loading="lazy" src="style/ce/a236_i.webp" alt="Mercedes,A236,E-klasse,Cabriolet,Innenansicht" width="602" height="401"></a><br>
-						<a href="full/ce/a236_ic.jpg"><img loading="lazy" src="style/ce/a236_ic.webp" alt="Mercedes,A236,E-klasse,Cabriolet,Innenansicht" width="602" height="401"></a>
-						<a href="full/ce/a236_fa.jpg"><img loading="lazy" src="style/ce/a236_fa.webp" alt="Mercedes,A236,E-klasse,Cabriolet,Frontansicht" width="602" height="401"></a>
-					</section>
 				</div>
+
 			</div>
 		</section>
 
@@ -651,9 +727,10 @@
 			<hr>
 			<p class="mid"><small>@ seit 2010 , piyopiyo_246</small></p>
 		</footer>
+
 		<p class="m-05" id="page-top"><a href="#head">&#9650;</a></p>
 		<p id="close-accordion">
-			<a class="vmenu_all_action" onclick="doReplaceClassName ('vmenu_on2','vmenu_off')" title="Alle Öffnungen schließen">&#9654;</a>
+			<a id="close-all-accordions-2" class="vmenu_all_action" title="Alle Öffnungen schließen">&#9654;</a>
 		</p>
 	</div>
 
@@ -728,6 +805,120 @@
 			}, 500);
 			return false;
 		});
+	});
+</script>
+
+<script>
+	// シンプル版アコーディオン機能（入れ子非対応）
+	document.addEventListener('DOMContentLoaded', function () {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+		accordionHeaders.forEach(header => {
+			header.addEventListener('click', function () {
+				const content = this.nextElementSibling;
+				const isActive = this.classList.contains('active');
+
+				// クリックされたアコーディオンのみトグル
+				if (isActive) {
+					this.classList.remove('active');
+					this.setAttribute('aria-expanded', 'false');
+					content.classList.remove('active');
+				} else {
+					this.classList.add('active');
+					this.setAttribute('aria-expanded', 'true');
+					content.classList.add('active');
+				}
+			});
+
+			// キーボード操作のサポート
+			header.addEventListener('keydown', function (e) {
+				if (e.key === 'Enter' || e.key === ' ') {
+					e.preventDefault();
+					this.click();
+				}
+			});
+		});
+
+		// 全開/全閉ボタンのイベントリスナー
+		const openAllBtn = document.getElementById('open-all-accordions');
+		const closeAllBtn = document.getElementById('close-all-accordions');
+		const closeAllBtn2 = document.getElementById('close-all-accordions-2');
+
+		if (openAllBtn) {
+			openAllBtn.addEventListener('click', openAllAccordions);
+		}
+
+		if (closeAllBtn) {
+			closeAllBtn.addEventListener('click', closeAllAccordions);
+		}
+
+		if (closeAllBtn2) {
+			closeAllBtn2.addEventListener('click', closeAllAccordions);
+		}
+	});
+
+	// 全アコーディオン操作機能
+	function openAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.add('active');
+			header.setAttribute('aria-expanded', 'true');
+			content.classList.add('active');
+		});
+	}
+
+	function closeAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.remove('active');
+			header.setAttribute('aria-expanded', 'false');
+			content.classList.remove('active');
+		});
+	}
+
+	// 全アコーディオン操作機能
+	function openAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.add('active');
+			header.setAttribute('aria-expanded', 'true');
+			content.classList.add('active');
+		});
+	}
+
+	function closeAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.remove('active');
+			header.setAttribute('aria-expanded', 'false');
+			content.classList.remove('active');
+		});
+	}
+
+	// ボタンにイベントリスナーを追加
+	document.addEventListener('DOMContentLoaded', function () {
+		// 既存のアコーディオンコード...
+
+		// 全開/全閉ボタン
+		const openAllBtn = document.getElementById('open-all-accordions');
+		const closeAllBtn = document.getElementById('close-all-accordions');
+		const closeAllBtn2 = document.getElementById('close-all-accordions-2'); // 追加ボタン
+
+		if (openAllBtn) {
+			openAllBtn.addEventListener('click', openAllAccordions);
+		}
+
+		if (closeAllBtn) {
+			closeAllBtn.addEventListener('click', closeAllAccordions);
+		}
+
+		if (closeAllBtn2) {
+			closeAllBtn2.addEventListener('click', closeAllAccordions);
+		}
 	});
 </script>
 
