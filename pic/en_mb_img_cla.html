@@ -51,23 +51,6 @@
 	<link rel="stylesheet" href="../style.min.css">
 	<link rel="stylesheet" href="../style_v.min.css">
 
-	<!-- アコーディオン用のJavaScript関数を追加 -->
-	<script>
-		function doToggleClassName(obj, onClassName, offClassName) {
-			obj.className = (obj.className != onClassName) ? onClassName : offClassName;
-		}
-		function getParentObj(obj) {
-			return obj.parentElement || obj.parentNode;
-		}
-		function doReplaceClassName(findClassName, replaceClassName, targetTagName) {
-			var elements = document.getElementsByTagName(targetTagName || '*');
-			for (var i = 0; i < elements.length; i++) {
-				if (elements[i].className == findClassName)
-					elements[i].className = replaceClassName;
-			}
-		}
-	</script>
-
 	<!-- 6. Cookie同意管理システム -->
 	<script>
 		window._cookiescript = {
@@ -88,7 +71,7 @@
 							analytics_storage: 'granted',
 							ad_storage: 'denied',
 							functionality_storage: 'granted',
-							region: ['US', 'GB', 'CA', 'AU', 'NZ', 'IE'] ,
+							region: ['US', 'GB', 'CA', 'AU', 'NZ', 'IE'],
 							// デバッグ用パラメータ（本番では削除）
 							debug_mode: location.hostname.includes('localhost')
 						});
@@ -206,7 +189,7 @@
 					ad_storage: 'denied',
 					functionality_storage: 'granted',
 					wait_for_update: 500,
-					region: ['US', 'GB', 'CA', 'AU', 'NZ', 'IE'] 
+					region: ['US', 'GB', 'CA', 'AU', 'NZ', 'IE']
 				});
 			}
 		} catch (initError) {
@@ -270,7 +253,7 @@
 					</li>
 				</ul>
 				<h1 class="b bf4">CLA-class</h1>
-				 <div style="display: flex; justify-content: space-between; width: 1210px;">
+				<div style="display: flex; justify-content: space-between; width: 1210px;">
 					<dl class="m1">
 						<dt class="s2 af0">Series</dt>
 						<dd class="s2"><a href="#c117" title="The 1st CLA C117/X117" class="lnk2">117</a></dd>
@@ -278,8 +261,8 @@
 						<dd class="s2"><a href="#c174/178" title="The 3rd CLA C174/178" class="lnk2">174/178</a></dd>
 					</dl>
 					<span>
-						<button class="vmenu_all_action square_btn" type="button" title="Click here to open all openings" span onclick="doReplaceClassName('vmenu_off', 'vmenu_on2')">Open all</button>
-						<button class="vmenu_all_action square_btn" type="button" title="Click here to close all openings" span onclick="doReplaceClassName('vmenu_on2', 'vmenu_off')">Close all</button>
+						<button id="open-all-accordions" class="vmenu_all_action square_btn" type="button" title="Click here to open all openings">Open all</button>
+						<button id="close-all-accordions" class="vmenu_all_action square_btn" type="button" title="Click here to close all openings">Close all</button>
 						<button class="square_btn" type="button" onclick="location.href='ja_mb_img_cla.html'">Ja</button>
 						<button class="square_btn" type="button" onclick="location.href='mb_img_cla.html'">De</button>
 					</span>
@@ -332,57 +315,76 @@
 			<h2>The 1st CLA</h2>
 			<div class="style-w">
 				<a href="full/cla/c117.jpg"><img src="style/cla/c117.webp" alt="Mercedes,C117,CLA,Front view" width="1210" height="802"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<p class="bf1a i"><a href="https://en.wikipedia.org/wiki/Mercedes-Benz_CLA#First_generation_(C117;_2013)" class="ico-wiki m1" title="Wikipedia(E) C117"></a></p>
-						<h3 class="i m0">C117</h3>
-						<p class="i m1">01/2013 - 2018</p>
-						<p class="ru">Designer : Mark Fetherston</p>
-					</div>
-					<section>
-						<h4 class="displayNone">C117</h4>
-						<a href="full/cla/c117_r.jpg"><img loading="lazy" src="style/cla/c117_r.webp" alt="Mercedes,C117,CLA,Rear view" width="622" height="389"></a>
-						<a href="full/cla/c117_d.jpg"><img loading="lazy" src="style/cla/c117_d.webp" alt="Mercedes,C117,CLA,Dashboard" width="583" height="389"></a><br>
-						<h5 class="i">Facelift</h5>
-						<p class="i m1">03/2016</p><br>
-						<a href="full/cla/c117_f2.jpg"><img loading="lazy" src="style/cla/c117_f2.webp" alt="Mercedes,C117,CLA,Front view" width="1210" height="445"></a><br>
-						<a href="full/cla/c117_r2.jpg"><img loading="lazy" src="style/cla/c117_r2.webp" alt="Mercedes,C117,CLA,Rear view" width="638" height="380"></a>
-						<a href="full/cla/c117_d2.jpg"><img loading="lazy" src="style/cla/c117_d2.webp" alt="Mercedes,C117,CLA,Dashboard" width="570" height="380"></a><br>
-						<a href="full/cla/c117_4mtc.jpg"><img loading="lazy" src="style/cla/c117_4mtc.webp" alt="Mercedes,C117,CLA,4-matic" width="1210" height="684"></a>
-						<h5>Dimensions</h5>
-						<a href="full/cla/c117_a.jpg"><img loading="lazy" src="style/cla/c117_a.webp" alt="Mercedes,C117,CLA,Dimensions" width="1024" height="671"></a><br>
-						<h4 class="i"><a id="x117">X117</a></h4>
-						<p class="i m1">Shooting brake&nbsp;12/2014</p><br>
-						<a href="full/cla/x117_f.jpg"><img loading="lazy" src="style/cla/x117_f.webp" alt="Mercedes,X117,CLA,Front view" width="602" height="399"></a>
-						<a href="full/cla/x117_r.jpg"><img loading="lazy" src="style/cla/x117_r.webp" alt="Mercedes,X117,CLA,Rear view" width="602" height="399"></a><br>
-						<h5 class="i">Facelift</h5>
-						<p class="i m1">03/2016</p><br>
-						<a href="full/cla/x117_f2.jpg"><img loading="lazy" src="style/cla/x117_f2.webp" alt="Mercedes,X117,CLA,Front view" width="593" height="340"></a>
-						<a href="full/cla/x117_r2.jpg"><img loading="lazy" src="style/cla/x117_r2.webp" alt="Mercedes,X117,CLA,Rear view" width="611" height="340"></a>
-						<div>
-							<div class="box52a">
-								<h5>Interior</h5>
-								<a href="full/cla/x117_i.jpg"><img loading="lazy" src="style/cla/x117_i.webp" alt="Mercedes,X117,CLA,Interior" width="520" height="349"></a>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-c117" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://en.wikipedia.org/wiki/Mercedes-Benz_CLA#First_generation_(C117;_2013)" class="ico-wiki" title="Wikipedia(E) C117"></a>
+								<h3>C117<h3>
+										01/2013 - 2019
+										<h3>X117<h3>
+												<p>Shooting brake</p>
+												2015 - 2019
 							</div>
-							<div class="box68b">
-								<h5>Dimensions</h5>
-								<a href="full/cla/x117_a.jpg"><img loading="lazy" src="style/cla/x117_a.webp" alt="Mercedes,X117,CLA,Dimensions" width="686" height="286"></a>
+							<div class="accordion-right">
+								Designer : Mark Fetherston
 							</div>
 						</div>
-					</section>
-				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<h3 class="bf1b i">AMG</h3>
-						<p class="i m1">CLA45</p>
+					</button>
+					<div id="accordion-content-c117" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">C117</h4>
+							<a href="full/cla/c117_r.jpg"><img loading="lazy" src="style/cla/c117_r.webp" alt="Mercedes,C117,CLA,Rear view" width="622" height="389"></a>
+							<a href="full/cla/c117_d.jpg"><img loading="lazy" src="style/cla/c117_d.webp" alt="Mercedes,C117,CLA,Dashboard" width="583" height="389"></a><br>
+							<h5 class="i">Facelift</h5>
+							<p class="i m1">03/2016</p><br>
+							<a href="full/cla/c117_f2.jpg"><img loading="lazy" src="style/cla/c117_f2.webp" alt="Mercedes,C117,CLA,Front view" width="1210" height="445"></a><br>
+							<a href="full/cla/c117_r2.jpg"><img loading="lazy" src="style/cla/c117_r2.webp" alt="Mercedes,C117,CLA,Rear view" width="638" height="380"></a>
+							<a href="full/cla/c117_d2.jpg"><img loading="lazy" src="style/cla/c117_d2.webp" alt="Mercedes,C117,CLA,Dashboard" width="570" height="380"></a><br>
+							<a href="full/cla/c117_4mtc.jpg"><img loading="lazy" src="style/cla/c117_4mtc.webp" alt="Mercedes,C117,CLA,4-matic" width="1210" height="684"></a>
+							<h5>Dimensions</h5>
+							<a href="full/cla/c117_a.jpg"><img loading="lazy" src="style/cla/c117_a.webp" alt="Mercedes,C117,CLA,Dimensions" width="1024" height="671"></a><br>
+							<h4 class="i"><a id="x117">X117</a></h4>
+							<p class="i m1">Shooting brake&nbsp;12/2014</p><br>
+							<a href="full/cla/x117_f.jpg"><img loading="lazy" src="style/cla/x117_f.webp" alt="Mercedes,X117,CLA,Front view" width="602" height="399"></a>
+							<a href="full/cla/x117_r.jpg"><img loading="lazy" src="style/cla/x117_r.webp" alt="Mercedes,X117,CLA,Rear view" width="602" height="399"></a><br>
+							<h5 class="i">Facelift</h5>
+							<p class="i m1">03/2016</p><br>
+							<a href="full/cla/x117_f2.jpg"><img loading="lazy" src="style/cla/x117_f2.webp" alt="Mercedes,X117,CLA,Front view" width="593" height="340"></a>
+							<a href="full/cla/x117_r2.jpg"><img loading="lazy" src="style/cla/x117_r2.webp" alt="Mercedes,X117,CLA,Rear view" width="611" height="340"></a>
+							<div>
+								<div class="box52a">
+									<h5>Interior</h5>
+									<a href="full/cla/x117_i.jpg"><img loading="lazy" src="style/cla/x117_i.webp" alt="Mercedes,X117,CLA,Interior" width="520" height="349"></a>
+								</div>
+								<div class="box68b">
+									<h5>Dimensions</h5>
+									<a href="full/cla/x117_a.jpg"><img loading="lazy" src="style/cla/x117_a.webp" alt="Mercedes,X117,CLA,Dimensions" width="686" height="286"></a>
+								</div>
+							</div>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">CLA45</h4>
-						<a href="full/cla/c117_45_f2.jpg"><img loading="lazy" src="style/cla/c117_45_f2.webp" alt="Mercedes,C117,CLA,AMG,Front view" width="1210" height="756"></a><br>
-						<a href="full/cla/c117_45_r2.jpg"><img loading="lazy" src="style/cla/c117_45_r2.webp" alt="Mercedes,C117,CLA,AMG,Rear view" width="678" height="394"></a>
-						<a href="full/cla/c117_45_i2.jpg"><img loading="lazy" src="style/cla/c117_45_i2.webp" alt="Mercedes,C117,CLA,AMG,Rear view" width="525" height="394"></a>
-					</section>
 				</div>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-amg-cla45" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h4>AMG CLA 45<h4>
+										01/2013 - 12/2018
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-amg-cla45" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<a href="full/cla/c117_45_f2.jpg"><img loading="lazy" src="style/cla/c117_45_f2.webp" alt="Mercedes,C117,CLA,AMG,Front view" width="1210" height="756"></a><br>
+							<a href="full/cla/c117_45_r2.jpg"><img loading="lazy" src="style/cla/c117_45_r2.webp" alt="Mercedes,C117,CLA,AMG,Rear view" width="678" height="394"></a>
+							<a href="full/cla/c117_45_i2.jpg"><img loading="lazy" src="style/cla/c117_45_i2.webp" alt="Mercedes,C117,CLA,AMG,Rear view" width="525" height="394"></a>
+						</div>
+					</div>
+				</div>
+
 			</div>
 		</section>
 
@@ -390,73 +392,92 @@
 			<h2>The 2nd CLA</h2>
 			<div class="style-w">
 				<a href="full/cla/c118_f.jpg"><img loading="lazy" src="style/cla/c118_f.webp" alt="Mercedes,C117,CLA,Front view" width="1209" height="564"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<p class="bf1a i"><a href="https://en.wikipedia.org/wiki/Mercedes-Benz_CLA#Second_generation_(C118;_2019)" class="ico-wiki m1" title="Wikipedia(E) C118"></a></p>
-						<h3 class="i m0">C118</h3>
-						<p class="i m1">01/2019 - 03/2025</p>
-						<p class="ru">Designer : Gorden Wagener</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-c118" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://en.wikipedia.org/wiki/Mercedes-Benz_CLA#Second_generation_(C118;_2019)" class="ico-wiki" title="Wikipedia(E) C118"></a>
+								<h3>C118<h3>
+										01/2019 - 03/2025
+										<h3>X118<h3>
+												<p>Shooting brake</p>
+												06/2019-
+							</div>
+							<div class="accordion-right">
+								Designer : Balázs Filczer
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-c118" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">C118</h4>
+							<a href="full/cla/c118_r.jpg"><img loading="lazy" src="style/cla/c118_r.webp" alt="Mercedes,C118,CLA,Rear view" width="1210" height="564"></a><br>
+							<a href="full/cla/c118_ava.jpg"><img loading="lazy" src="style/cla/c118_ava.webp" alt="Mercedes,C118,CLA,avantgarde,Front view" width="713" height="369"></a>
+							<a href="full/cla/c118_d.jpg"><img loading="lazy" src="style/cla/c118_d.webp" alt="Mercedes,C118,CLA,Dashboard" width="492" height="369"></a><br>
+							<h4 class="i"><a id="x118">X118</a></h4>
+							<h5 class="i">Facelift</h5>
+							<p class="i m1">01/2023</p><br>
+							<a href="full/cla/c118_f2.webp"><img loading="lazy" src="style/cla/c118_f2.webp" alt="Mercedes,C118,CLA,Front view" width="600" height="282"></a>
+							<a href="full/cla/c118_r2.webp"><img loading="lazy" src="style/cla/c118_r2.webp" alt="Mercedes,C118,CLA,Rear view" width="604" height="282"></a><br>
+							<a href="full/cla/c118_d2.webp"><img loading="lazy" src="style/cla/c118_d2.webp" alt="Mercedes,C118,CLA,Dashboard" width="602" height="452"></a>
+							<a href="full/cla/c118_m2.webp"><img loading="lazy" src="style/cla/c118_m2.webp" alt="Mercedes,C118,CLA,Engine" width="602" height="452"></a><br>
+							<p class="i m1">Shooting brake</p>
+							<p class="i m1">03/2019</p><br>
+							<a href="full/cla/x118_f.jpg"><img loading="lazy" src="style/cla/x118_f.webp" alt="Mercedes,X118,CLA,Front view" width="598" height="317"></a>
+							<a href="full/cla/x118_r.jpg"><img loading="lazy" src="style/cla/x118_r.webp" alt="Mercedes,X118,CLA,Rear view" width="605" height="317"></a><br>
+							<a href="full/cla/x118.jpg"><img loading="lazy" src="style/cla/x118.webp" alt="Mercedes,x118,CLA" width="545" height="433"></a>
+							<a href="full/cla/x118_i.jpg"><img loading="lazy" src="style/cla/x118_i.webp" alt="Mercedes,x118,CLA,Interior" width="660" height="433"></a><br>
+							<h5 class="i">Facelift</h5>
+							<p class="i m1">01/2023</p><br>
+							<a href="full/cla/x118_f2.jpg"><img loading="lazy" src="style/cla/x118_f2.webp" alt="Mercedes,X118,CLA,Front view" width="602" height="402"></a>
+							<a href="full/cla/x118_r2.jpg"><img loading="lazy" src="style/cla/x118_r2.webp" alt="Mercedes,X118,CLA,Rear view" width="602" height="402"></a><br>
+							<a href="full/cla/x118_i2.jpg"><img loading="lazy" src="style/cla/x118_i2.webp" alt="Mercedes,X118,CLA,Interior" width="602" height="402"></a>
+							<a href="full/cla/x118_ir2.jpg"><img loading="lazy" src="style/cla/x118_ir2.webp" alt="Mercedes,C118,CLA,Interior" width="602" height="402"></a><br>
+							<h5>Dimensions</h5>
+							<a href="full/cla/c118_a1.jpg"><img loading="lazy" src="style/cla/c118_a1.webp" alt="Mercedes,C118,CLA,Dimensions" width="384" height="340"></a>
+							<a href="full/cla/c118_a2.jpg"><img loading="lazy" src="style/cla/c118_a2.webp" alt="Mercedes,C118,CLA,Dimensions" width="821" height="340"></a><br>
+							<a href="full/cla/x118_a1.jpg"><img loading="lazy" src="style/cla/x118_a1.webp" alt="Mercedes,X118,CLA,Dimensions" width="384" height="340"></a>
+							<a href="full/cla/x118_a2.jpg"><img loading="lazy" src="style/cla/x118_a2.webp" alt="Mercedes,X118,CLA,Dimensions" width="821" height="340"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">C118</h4>
-						<a href="full/cla/c118_r.jpg"><img loading="lazy" src="style/cla/c118_r.webp" alt="Mercedes,C118,CLA,Rear view" width="1210" height="564"></a><br>
-						<a href="full/cla/c118_ava.jpg"><img loading="lazy" src="style/cla/c118_ava.webp" alt="Mercedes,C118,CLA,avantgarde,Front view" width="713" height="369"></a>
-						<a href="full/cla/c118_d.jpg"><img loading="lazy" src="style/cla/c118_d.webp" alt="Mercedes,C118,CLA,Dashboard" width="492" height="369"></a><br>
-						<h4 class="i"><a id="x118">X118</a></h4>
-						<h5 class="i">Facelift</h5>
-						<p class="i m1">01/2023</p><br>
-						<a href="full/cla/c118_f2.webp"><img loading="lazy" src="style/cla/c118_f2.webp" alt="Mercedes,C118,CLA,Front view" width="600" height="282"></a>
-						<a href="full/cla/c118_r2.webp"><img loading="lazy" src="style/cla/c118_r2.webp" alt="Mercedes,C118,CLA,Rear view" width="604" height="282"></a><br>
-						<a href="full/cla/c118_d2.webp"><img loading="lazy" src="style/cla/c118_d2.webp" alt="Mercedes,C118,CLA,Dashboard" width="602" height="452"></a>
-						<a href="full/cla/c118_m2.webp"><img loading="lazy" src="style/cla/c118_m2.webp" alt="Mercedes,C118,CLA,Engine" width="602" height="452"></a><br>
-						<p class="i m1">Shooting brake</p>
-						<p class="i m1">03/2019</p><br>
-						<a href="full/cla/x118_f.jpg"><img loading="lazy" src="style/cla/x118_f.webp" alt="Mercedes,X118,CLA,Front view" width="598" height="317"></a>
-						<a href="full/cla/x118_r.jpg"><img loading="lazy" src="style/cla/x118_r.webp" alt="Mercedes,X118,CLA,Rear view" width="605" height="317"></a><br>
-						<a href="full/cla/x118.jpg"><img loading="lazy" src="style/cla/x118.webp" alt="Mercedes,x118,CLA" width="545" height="433"></a>
-						<a href="full/cla/x118_i.jpg"><img loading="lazy" src="style/cla/x118_i.webp" alt="Mercedes,x118,CLA,Interior" width="660" height="433"></a><br>
-						<h5 class="i">Facelift</h5>
-						<p class="i m1">01/2023</p><br>
-						<a href="full/cla/x118_f2.jpg"><img loading="lazy" src="style/cla/x118_f2.webp" alt="Mercedes,X118,CLA,Front view" width="602" height="402"></a>
-						<a href="full/cla/x118_r2.jpg"><img loading="lazy" src="style/cla/x118_r2.webp" alt="Mercedes,X118,CLA,Rear view" width="602" height="402"></a><br>
-						<a href="full/cla/x118_i2.jpg"><img loading="lazy" src="style/cla/x118_i2.webp" alt="Mercedes,X118,CLA,Interior" width="602" height="402"></a>
-						<a href="full/cla/x118_ir2.jpg"><img loading="lazy" src="style/cla/x118_ir2.webp" alt="Mercedes,C118,CLA,Interior" width="602" height="402"></a><br>
-						<h5>Dimensions</h5>
-						<a href="full/cla/c118_a1.jpg"><img loading="lazy" src="style/cla/c118_a1.webp" alt="Mercedes,C118,CLA,Dimensions" width="384" height="340"></a>
-						<a href="full/cla/c118_a2.jpg"><img loading="lazy" src="style/cla/c118_a2.webp" alt="Mercedes,C118,CLA,Dimensions" width="821" height="340"></a><br>
-						<a href="full/cla/x118_a1.jpg"><img loading="lazy" src="style/cla/x118_a1.webp" alt="Mercedes,X118,CLA,Dimensions" width="384" height="340"></a>
-						<a href="full/cla/x118_a2.jpg"><img loading="lazy" src="style/cla/x118_a2.webp" alt="Mercedes,X118,CLA,Dimensions" width="821" height="340"></a>
-					</section>
 				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<h3 class="bf1b i">AMG</h3>
-						<p class="i m1">04/2019</p>
-						<h3 class="i m3">X118 AMG</h3>
-						<p class="i m1">06/2019</p>
-						<p class="i m3">CLA35 CLA45 CLA45-S</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-amg-cla35-45 CLA45-S" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h4>AMG CLA 35<h4>
+										04/2019 -
+										<h4>CLA 45 / CLA45-S<h4>
+												06/2019 -
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-amg-cla35-45 CLA45-S" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4>CLA35</h4>
+							<a href="full/cla/c118_amg_f.jpg"><img loading="lazy" src="style/cla/c118_amg_f.webp" alt="Mercedes,C117,CLA,AMG,Front view" width="604" height="403"></a>
+							<a href="full/cla/c118_amg_r.jpg"><img loading="lazy" src="style/cla/c118_amg_r.webp" alt="Mercedes,C118,CLA,AMG,Rear view" width="604" height="403"></a>
+							<h4>CLA45 S</h4>
+							<a href="full/cla/c118_amg_45s_f.jpg"><img loading="lazy" src="style/cla/c118_amg_45s_f.webp" alt="Mercedes,C118,CLA,AMG,Front view" width="604" height="402"></a>
+							<a href="full/cla/c118_amg_45s_r.jpg"><img loading="lazy" src="style/cla/c118_amg_45s_r.webp" alt="Mercedes,C118,CLA,AMG,Rear view" width="604" height="402"></a><br>
+							<a href="full/cla/c118_amg_45s_d.jpg"><img loading="lazy" src="style/cla/c118_amg_45s_d.webp" alt="Mercedes,C118,CLA,AMG,Dashboard" width="604" height="402"></a>
+							<a href="full/cla/c118_amg_45s_i.jpg"><img loading="lazy" src="style/cla/c118_amg_45s_i.webp" alt="Mercedes,C118,CLA,AMG,Interior" width="604" height="402"></a><br>
+							<h4 class="i">CLA35</h4>
+							<p class="i m1">Shooting brake</p><br>
+							<a href="full/cla/x118_amg_f.jpg"><img loading="lazy" src="style/cla/x118_amg_f.webp" alt="Mercedes,X118,CLA,AMG,Front view" width="604" height="403"></a>
+							<a href="full/cla/x118_amg_r.jpg"><img loading="lazy" src="style/cla/x118_amg_r.webp" alt="Mercedes,X118,CLA,AMG,Rear view" width="604" height="403"></a><br>
+							<a href="full/cla/x118_amg_d.jpg"><img loading="lazy" src="style/cla/x118_amg_d.webp" alt="Mercedes,X118,CLA,AMG,Dashboard" width="604" height="403"></a>
+							<a href="full/cla/x118_amg_i.jpg"><img loading="lazy" src="style/cla/x118_amg_i.webp" alt="Mercedes,X118,CLA,AMG,Interior" width="604" height="403"></a><br>
+							<h4 class="i">CLA45 S</h4>
+							<p class="i m1">Shooting brake</p><br>
+							<a href="full/cla/x118_amg_45s_f.jpg"><img loading="lazy" src="style/cla/x118_amg_45s_f.webp" alt="Mercedes,X118,CLA,AMG,Front view" width="1210" height="708"></a><br>
+							<a href="full/cla/x118_amg_45s_r.jpg"><img loading="lazy" src="style/cla/x118_amg_45s_r.webp" alt="Mercedes,X118,CLA,AMG,Rear view" width="1210" height="681"></a>
+						</div>
 					</div>
-					<section>
-						<h4>CLA35</h4>
-						<a href="full/cla/c118_amg_f.jpg"><img loading="lazy" src="style/cla/c118_amg_f.webp" alt="Mercedes,C117,CLA,AMG,Front view" width="604" height="403"></a>
-						<a href="full/cla/c118_amg_r.jpg"><img loading="lazy" src="style/cla/c118_amg_r.webp" alt="Mercedes,C118,CLA,AMG,Rear view" width="604" height="403"></a>
-						<h4>CLA45 S</h4>
-						<a href="full/cla/c118_amg_45s_f.jpg"><img loading="lazy" src="style/cla/c118_amg_45s_f.webp" alt="Mercedes,C118,CLA,AMG,Front view" width="604" height="402"></a>
-						<a href="full/cla/c118_amg_45s_r.jpg"><img loading="lazy" src="style/cla/c118_amg_45s_r.webp" alt="Mercedes,C118,CLA,AMG,Rear view" width="604" height="402"></a><br>
-						<a href="full/cla/c118_amg_45s_d.jpg"><img loading="lazy" src="style/cla/c118_amg_45s_d.webp" alt="Mercedes,C118,CLA,AMG,Dashboard" width="604" height="402"></a>
-						<a href="full/cla/c118_amg_45s_i.jpg"><img loading="lazy" src="style/cla/c118_amg_45s_i.webp" alt="Mercedes,C118,CLA,AMG,Interior" width="604" height="402"></a><br>
-						<h4 class="i">CLA35</h4>
-						<p class="i m1">Shooting brake</p><br>
-						<a href="full/cla/x118_amg_f.jpg"><img loading="lazy" src="style/cla/x118_amg_f.webp" alt="Mercedes,X118,CLA,AMG,Front view" width="604" height="403"></a>
-						<a href="full/cla/x118_amg_r.jpg"><img loading="lazy" src="style/cla/x118_amg_r.webp" alt="Mercedes,X118,CLA,AMG,Rear view" width="604" height="403"></a><br>
-						<a href="full/cla/x118_amg_d.jpg"><img loading="lazy" src="style/cla/x118_amg_d.webp" alt="Mercedes,X118,CLA,AMG,Dashboard" width="604" height="403"></a>
-						<a href="full/cla/x118_amg_i.jpg"><img loading="lazy" src="style/cla/x118_amg_i.webp" alt="Mercedes,X118,CLA,AMG,Interior" width="604" height="403"></a><br>
-						<h4 class="i">CLA45 S</h4>
-						<p class="i m1">Shooting brake</p><br>
-						<a href="full/cla/x118_amg_45s_f.jpg"><img loading="lazy" src="style/cla/x118_amg_45s_f.webp" alt="Mercedes,X118,CLA,AMG,Front view" width="1210" height="708"></a><br>
-						<a href="full/cla/x118_amg_45s_r.jpg"><img loading="lazy" src="style/cla/x118_amg_45s_r.webp" alt="Mercedes,X118,CLA,AMG,Rear view" width="1210" height="681"></a>
-					</section>
 				</div>
+
 			</div>
 		</section>
 
@@ -464,36 +485,47 @@
 			<h2>The 3rd CLA</h2>
 			<div class="style-w">
 				<a href="full/cla/c174_f.jpg"><img loading="lazy" src="style/cla/c174_f.webp" alt="Mercedes,C174,CLA,Front view" width="1210" height="630"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<p class="bf1a i"><a href="https://en.wikipedia.org/wiki/Mercedes-Benz_CLA#Third_generation_(C178/174;_2025)" class="ico-wiki m1" title="Wikipedia(E) C174"></a></p>
-						<h3 class="i m0">C174 / C178</h3>
-						<p class="i m1">03/2025</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-c174 / C178" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://en.wikipedia.org/wiki/Mercedes-Benz_CLA#Third_generation_(C178/174;_2025)" class="ico-wiki" title="Wikipedia(E) C174"></a>
+								<h3>C174 / C178<h3>
+										03/2025
+							</div>
+							<div class="accordion-right">
+								Designer : Mayya Markova
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-c174 / C178" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="i">C174</h4>
+							<p class="i">EQ-Technologie</p><br>
+							<a href="full/cla/c174_tp.jpg"><img loading="lazy" src="style/cla/c174_tp.webp" alt="Mercedes,C174,CLA,Perspective" width="1210" height="681"></a><br>
+							<a href="full/cla/c174_r.jpg"><img loading="lazy" src="style/cla/c174_r.webp" alt="Mercedes,C174,CLA,Rear view" width="496" height="295"></a>
+							<a href="full/cla/c174_s.jpg"><img loading="lazy" src="style/cla/c174_s.webp" alt="Mercedes,C174,CLA,Side view" width="709" height="295"></a><br>
+							<a href="full/cla/c174_d.jpg"><img loading="lazy" src="style/cla/c174_d.webp" alt="Mercedes,C174,CLA,Dashboard" width="602" height="339"></a>
+							<a href="full/cla/c174_m.jpg"><img loading="lazy" src="style/cla/c174_m.webp" alt="Mercedes,C118,CLA,front luggage room" width="602" height="339"></a><br>
+							<h4 class="i">V174</h4>
+							<p class="i m1">Long wheelbase version for China</p><br>
+							<a href="full/cla/v174_r.jpg"><img loading="lazy" src="style/cla/v174_r.webp" alt="Mercedes,v174,CLA L,Rear view" width="475" height="333"></a>
+							<a href="full/cla/v174_s.jpg"><img loading="lazy" src="style/cla/v174_s.webp" alt="Mercedes,C174,CLA L,Side view" width="730" height="333"></a><br>
+							<h4 class="i">C178</h4>
+							<p class="i">Mild-Hybrid</p><br>
+							<a href="full/cla/c178_f.jpg"><img loading="lazy" src="style/cla/c178_f.webp" alt="Mercedes,C178,CLA,Front view" width="602" height="339"></a>
+							<a href="full/cla/c178_r.jpg"><img loading="lazy" src="style/cla/c178_r.webp" alt="Mercedes,C178,CLA,Rear view" width="602" height="339"></a><br>
+							<a href="full/cla/c178_i.jpg"><img loading="lazy" src="style/cla/c178_i.webp" alt="Mercedes,C178,CLA,Interior" width="602" height="339"></a>
+							<a href="full/cla/c178_m.jpg"><img loading="lazy" src="style/cla/c178_m.webp" alt="Mercedes,C178,CLA,Engine" width="602" height="339"></a><br>
+							<h5>Dimensions</h5>
+							<a href="full/cla/c174_a2.jpg"><img loading="lazy" src="style/cla/c174_a2.webp" alt="Mercedes,C174,CLA,Dimensions" width="790" height="342"></a>
+							<a href="full/cla/c174_a1.jpg"><img loading="lazy" src="style/cla/c174_a1.webp" alt="Mercedes,C174,CLA,Dimensions" width="412" height="342"></a><br>
+							<a href="full/cla/c174_a3.jpg"><img loading="lazy" src="style/cla/c174_a3.webp" alt="Mercedes,C174,CLA,Dimensions" width="791" height="342"></a><br>
+						</div>
 					</div>
-					<section>
-						<h4 class="i">C174</h4>
-						<p class="i">EQ-Technologie</p><br>
-						<a href="full/cla/c174_tp.jpg"><img loading="lazy" src="style/cla/c174_tp.webp" alt="Mercedes,C174,CLA,Perspective" width="1210" height="681"></a><br>
-						<a href="full/cla/c174_r.jpg"><img loading="lazy" src="style/cla/c174_r.webp" alt="Mercedes,C174,CLA,Rear view" width="496" height="295"></a>
-						<a href="full/cla/c174_s.jpg"><img loading="lazy" src="style/cla/c174_s.webp" alt="Mercedes,C174,CLA,Side view" width="709" height="295"></a><br>
-						<a href="full/cla/c174_d.jpg"><img loading="lazy" src="style/cla/c174_d.webp" alt="Mercedes,C174,CLA,Dashboard" width="602" height="339"></a>
-						<a href="full/cla/c174_m.jpg"><img loading="lazy" src="style/cla/c174_m.webp" alt="Mercedes,C118,CLA,front luggage room" width="602" height="339"></a><br>
-						<h4 class="i">V174</h4>
-						<p class="i m1">Long wheelbase version for China</p><br>
-						<a href="full/cla/v174_r.jpg"><img loading="lazy" src="style/cla/v174_r.webp" alt="Mercedes,v174,CLA L,Rear view" width="475" height="333"></a>
-						<a href="full/cla/v174_s.jpg"><img loading="lazy" src="style/cla/v174_s.webp" alt="Mercedes,C174,CLA L,Side view" width="730" height="333"></a><br>
-						<h4 class="i">C178</h4>
-						<p class="i">Mild-Hybrid</p><br>
-						<a href="full/cla/c178_f.jpg"><img loading="lazy" src="style/cla/c178_f.webp" alt="Mercedes,C178,CLA,Front view" width="602" height="339"></a>
-						<a href="full/cla/c178_r.jpg"><img loading="lazy" src="style/cla/c178_r.webp" alt="Mercedes,C178,CLA,Rear view" width="602" height="339"></a><br>
-						<a href="full/cla/c178_i.jpg"><img loading="lazy" src="style/cla/c178_i.webp" alt="Mercedes,C178,CLA,Interior" width="602" height="339"></a>
-						<a href="full/cla/c178_m.jpg"><img loading="lazy" src="style/cla/c178_m.webp" alt="Mercedes,C178,CLA,Engine" width="602" height="339"></a><br>
-						<h5>Dimensions</h5>
-						<a href="full/cla/c174_a2.jpg"><img loading="lazy" src="style/cla/c174_a2.webp" alt="Mercedes,C174,CLA,Dimensions" width="790" height="342"></a>
-						<a href="full/cla/c174_a1.jpg"><img loading="lazy" src="style/cla/c174_a1.webp" alt="Mercedes,C174,CLA,Dimensions" width="412" height="342"></a><br>
-						<a href="full/cla/c174_a3.jpg"><img loading="lazy" src="style/cla/c174_a3.webp" alt="Mercedes,C174,CLA,Dimensions" width="791" height="342"></a><br>
-					</section>
 				</div>
+
 			</div>
 		</section>
 
@@ -542,9 +574,10 @@
 			<hr>
 			<p class="mid"><small>@ since 2010 , piyopiyo_246</small></p>
 		</footer>
+
 		<p class="m-05" id="page-top"><a href="#head">&#9650;</a></p>
 		<p id="close-accordion">
-			<a class="vmenu_all_action" onclick="doReplaceClassName ('vmenu_on2','vmenu_off')" title="Close all openings">&#9654;</a>
+			<a id="close-all-accordions-2" class="vmenu_all_action" title="Close all openings">&#9654;</a>
 		</p>
 	</div>
 
@@ -580,7 +613,7 @@
 				analytics_storage: 'denied',
 				ad_storage: 'denied',
 				functionality_storage: 'granted',
-				region: ['US', 'GB', 'CA', 'AU', 'NZ', 'IE'] 
+				region: ['US', 'GB', 'CA', 'AU', 'NZ', 'IE']
 			};
 
 			// GTM用設定
@@ -619,6 +652,120 @@
 			}, 500);
 			return false;
 		});
+	});
+</script>
+
+<script>
+	// シンプル版アコーディオン機能（入れ子非対応）
+	document.addEventListener('DOMContentLoaded', function () {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+		accordionHeaders.forEach(header => {
+			header.addEventListener('click', function () {
+				const content = this.nextElementSibling;
+				const isActive = this.classList.contains('active');
+
+				// クリックされたアコーディオンのみトグル
+				if (isActive) {
+					this.classList.remove('active');
+					this.setAttribute('aria-expanded', 'false');
+					content.classList.remove('active');
+				} else {
+					this.classList.add('active');
+					this.setAttribute('aria-expanded', 'true');
+					content.classList.add('active');
+				}
+			});
+
+			// キーボード操作のサポート
+			header.addEventListener('keydown', function (e) {
+				if (e.key === 'Enter' || e.key === ' ') {
+					e.preventDefault();
+					this.click();
+				}
+			});
+		});
+
+		// 全開/全閉ボタンのイベントリスナー
+		const openAllBtn = document.getElementById('open-all-accordions');
+		const closeAllBtn = document.getElementById('close-all-accordions');
+		const closeAllBtn2 = document.getElementById('close-all-accordions-2');
+
+		if (openAllBtn) {
+			openAllBtn.addEventListener('click', openAllAccordions);
+		}
+
+		if (closeAllBtn) {
+			closeAllBtn.addEventListener('click', closeAllAccordions);
+		}
+
+		if (closeAllBtn2) {
+			closeAllBtn2.addEventListener('click', closeAllAccordions);
+		}
+	});
+
+	// 全アコーディオン操作機能
+	function openAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.add('active');
+			header.setAttribute('aria-expanded', 'true');
+			content.classList.add('active');
+		});
+	}
+
+	function closeAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.remove('active');
+			header.setAttribute('aria-expanded', 'false');
+			content.classList.remove('active');
+		});
+	}
+
+	// 全アコーディオン操作機能
+	function openAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.add('active');
+			header.setAttribute('aria-expanded', 'true');
+			content.classList.add('active');
+		});
+	}
+
+	function closeAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.remove('active');
+			header.setAttribute('aria-expanded', 'false');
+			content.classList.remove('active');
+		});
+	}
+
+	// ボタンにイベントリスナーを追加
+	document.addEventListener('DOMContentLoaded', function () {
+		// 既存のアコーディオンコード...
+
+		// 全開/全閉ボタン
+		const openAllBtn = document.getElementById('open-all-accordions');
+		const closeAllBtn = document.getElementById('close-all-accordions');
+		const closeAllBtn2 = document.getElementById('close-all-accordions-2'); // 追加ボタン
+
+		if (openAllBtn) {
+			openAllBtn.addEventListener('click', openAllAccordions);
+		}
+
+		if (closeAllBtn) {
+			closeAllBtn.addEventListener('click', closeAllAccordions);
+		}
+
+		if (closeAllBtn2) {
+			closeAllBtn2.addEventListener('click', closeAllAccordions);
+		}
 	});
 </script>
 
