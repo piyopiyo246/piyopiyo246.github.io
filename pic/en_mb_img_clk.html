@@ -51,23 +51,6 @@
 	<link rel="stylesheet" href="../style.min.css">
 	<link rel="stylesheet" href="../style_v.min.css">
 
-	<!-- アコーディオン用のJavaScript関数を追加 -->
-	<script>
-		function doToggleClassName(obj, onClassName, offClassName) {
-			obj.className = (obj.className != onClassName) ? onClassName : offClassName;
-		}
-		function getParentObj(obj) {
-			return obj.parentElement || obj.parentNode;
-		}
-		function doReplaceClassName(findClassName, replaceClassName, targetTagName) {
-			var elements = document.getElementsByTagName(targetTagName || '*');
-			for (var i = 0; i < elements.length; i++) {
-				if (elements[i].className == findClassName)
-					elements[i].className = replaceClassName;
-			}
-		}
-	</script>
-
 	<!-- 6. Cookie同意管理システム -->
 	<script>
 		window._cookiescript = {
@@ -88,7 +71,7 @@
 							analytics_storage: 'granted',
 							ad_storage: 'denied',
 							functionality_storage: 'granted',
-							region: ['US', 'GB', 'CA', 'AU', 'NZ', 'IE'] ,
+							region: ['US', 'GB', 'CA', 'AU', 'NZ', 'IE'],
 							// デバッグ用パラメータ（本番では削除）
 							debug_mode: location.hostname.includes('localhost')
 						});
@@ -206,7 +189,7 @@
 					ad_storage: 'denied',
 					functionality_storage: 'granted',
 					wait_for_update: 500,
-					region: ['US', 'GB', 'CA', 'AU', 'NZ', 'IE'] 
+					region: ['US', 'GB', 'CA', 'AU', 'NZ', 'IE']
 				});
 			}
 		} catch (initError) {
@@ -270,15 +253,15 @@
 					</li>
 				</ul>
 				<h1 class="b bf4">CLK-class</h1>
-				 <div style="display: flex; justify-content: space-between; width: 1210px;">
+				<div style="display: flex; justify-content: space-between; width: 1210px;">
 					<dl class="m1">
 						<dt class="s2 af0">Series</dt>
 						<dd class="s2"><a href="#c208" title="The 1st CLK-class C208/A208" class="lnk2">208</a></dd>
 						<dd class="s2"><a href="#c209" title="The 2nd CLK-class C209/A209" class="lnk2">209</a></dd>
 					</dl>
 					<span>
-						<button class="vmenu_all_action square_btn" type="button" title="Click here to open all openings" span onclick="doReplaceClassName('vmenu_off', 'vmenu_on2')">Open all</button>
-						<button class="vmenu_all_action square_btn" type="button" title="Click here to close all openings" span onclick="doReplaceClassName('vmenu_on2', 'vmenu_off')">Close all</button>
+						<button id="open-all-accordions" class="vmenu_all_action square_btn" type="button" title="Click here to open all openings">Open all</button>
+						<button id="close-all-accordions" class="vmenu_all_action square_btn" type="button" title="Click here to close all openings">Close all</button>
 						<button class="square_btn" type="button" onclick="location.href='ja_mb_img_clk.html'">Ja</button>
 						<button class="square_btn" type="button" onclick="location.href='mb_img_clk.html'">De</button>
 					</span>
@@ -318,7 +301,7 @@
 			</nav>
 			<hr>
 			<div class="mid style-w t1">
-				<div class="box74 t0b">
+				<div class="box60 t0b">
 					<p class="fl-w">CLK-CLASS</p>
 				</div>
 				<a href="#c208" title="The 1st CLK-class C208/A208"><img loading="lazy" src="thumb/clk/c208.webp" alt="208" width="160" height="100"></a>
@@ -330,65 +313,89 @@
 			<h2>The 1st CLK-class</h2>
 			<div class="style-w">
 				<a href="full/clk/c208.jpg"><img src="style/clk/c208.webp" alt="Mercedes,C208" width="1210" height="484"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<p class="bf1a i"><a href="https://en.wikipedia.org/wiki/Mercedes-Benz_CLK-Class#C208" class="ico-wiki m1" title="Wikipedia(E)_Mercedes-Benz_208"></a></p>
-						<h3 class="i m0">C208</h3>
-						<p class="i m1">Coupe</p>
-						<p class="i m1">1997 - 2002</p>
-						<p class="ru">Designer : Michael L. Fink(1993)</p>
-					</div>
-					<section>
-						<h4 class="displayNone">C208</h4>
-						<div>
-							<div class="box60a"><br>
-								<a href="full/clk/c208_f.jpg"><img loading="lazy" src="style/clk/c208_f.webp" alt="Mercedes,C208,CLK,Front view" width="604" height="335"></a><br>
-								<a href="full/clk/c208_r.jpg"><img loading="lazy" src="style/clk/c208_r.webp" alt="Mercedes,C208,CLK,Rear view" width="604" height="350"></a><br>
-								<a href="full/clk/c208_d.jpg"><img loading="lazy" src="style/clk/c208_d.webp" alt="Mercedes,C208,CLK,Dashboard" width="604" height="396"></a>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-c208" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://en.wikipedia.org/wiki/Mercedes-Benz_CLK-Class#C208" class="ico-wiki" title="Wikipedia(E)_Mercedes-Benz_208"></a>
+								<h3>C208<h3>
+										<p>Coupe</p>
+										1997 - 2002
 							</div>
-							<div class="box60a">
-								<h5 class="i">Facelift</h5>
-								<p class="i m1">1999</p><br>
-								<a href="full/clk/c208_f2.jpg"><img loading="lazy" src="style/clk/c208_f2.webp" alt="Mercedes,C208,CLK,Front view" width="604" height="335"></a><br>
-								<a href="full/clk/c208_r2.jpg"><img loading="lazy" src="style/clk/c208_r2.webp" alt="Mercedes,C208,CLK,Rear view" width="604" height="350"></a><br>
-								<a href="full/clk/c208_d2.jpg"><img loading="lazy" src="style/clk/c208_d2.webp" alt="Mercedes,C208,CLK,Dashboard" width="604" height="396"></a>
+							<div class="accordion-right">
+								Designer : Michael L. Fink(1993)
 							</div>
 						</div>
-						<h5>Dimensions</h5>
-						<a href="full/clk/c208_a.jpg"><img loading="lazy" src="style/clk/c208_a.webp" alt="Mercedes,C208,CLK,Dimensions" width="999" height="1107"></a>
-					</section>
-				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<h3 class="bf1b i">A208</h3>
-						<p class="i m1">Cabriolet</p>
-						<p class="i m1">1998 - 2003</p>
+					</button>
+					<div id="accordion-content-c208" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">C208</h4>
+							<div>
+								<div class="box60a"><br>
+									<a href="full/clk/c208_f.jpg"><img loading="lazy" src="style/clk/c208_f.webp" alt="Mercedes,C208,CLK,Front view" width="604" height="335"></a><br>
+									<a href="full/clk/c208_r.jpg"><img loading="lazy" src="style/clk/c208_r.webp" alt="Mercedes,C208,CLK,Rear view" width="604" height="350"></a><br>
+									<a href="full/clk/c208_d.jpg"><img loading="lazy" src="style/clk/c208_d.webp" alt="Mercedes,C208,CLK,Dashboard" width="604" height="396"></a>
+								</div>
+								<div class="box60a">
+									<h5 class="i">Facelift</h5>
+									<p class="i m1">1999</p><br>
+									<a href="full/clk/c208_f2.jpg"><img loading="lazy" src="style/clk/c208_f2.webp" alt="Mercedes,C208,CLK,Front view" width="604" height="335"></a><br>
+									<a href="full/clk/c208_r2.jpg"><img loading="lazy" src="style/clk/c208_r2.webp" alt="Mercedes,C208,CLK,Rear view" width="604" height="350"></a><br>
+									<a href="full/clk/c208_d2.jpg"><img loading="lazy" src="style/clk/c208_d2.webp" alt="Mercedes,C208,CLK,Dashboard" width="604" height="396"></a>
+								</div>
+							</div>
+							<h5>Dimensions</h5>
+							<a href="full/clk/c208_a.jpg"><img loading="lazy" src="style/clk/c208_a.webp" alt="Mercedes,C208,CLK,Dimensions" width="999" height="1107"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">A208</h4>
-						<a href="full/clk/a208_f.jpg"><img loading="lazy" src="style/clk/a208_f.webp" alt="Mercedes,A208,CLK,cabriolet,Front view" width="603" height="452"></a>
-						<a href="full/clk/a208_r.jpg"><img loading="lazy" src="style/clk/a208_r.webp" alt="Mercedes,A208,CLK,cabriolet,Rear view" width="603" height="452"></a><br>
-						<h5 class="i">Facelift</h5>
-						<p class="i m1">1999</p><br>
-						<a href="full/clk/a208_f2.jpg"><img loading="lazy" src="style/clk/a208_f2.webp" alt="Mercedes,A208,CLK,cabriolet,Front view" width="616" height="311"></a>
-						<a href="full/clk/a208_r2.jpg"><img loading="lazy" src="style/clk/a208_r2.webp" alt="Mercedes,A208,CLK,cabriolet,Rear view" width="588" height="311"></a>
-					</section>
 				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<h3 class="bf1b i">AMG</h3>
-						<p class="i m1">CLK55</p>
-						<p class="i m1">Coupe</p>
-						<p class="i m1">08/1999 - 06/2002</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-a208" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h3>A208<h3>
+										<p>Cabriolet</p>
+										1998 - 2003
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-a208" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">A208</h4>
+							<a href="full/clk/a208_f.jpg"><img loading="lazy" src="style/clk/a208_f.webp" alt="Mercedes,A208,CLK,cabriolet,Front view" width="603" height="452"></a>
+							<a href="full/clk/a208_r.jpg"><img loading="lazy" src="style/clk/a208_r.webp" alt="Mercedes,A208,CLK,cabriolet,Rear view" width="603" height="452"></a><br>
+							<h5 class="i">Facelift</h5>
+							<p class="i m1">1999</p><br>
+							<a href="full/clk/a208_f2.jpg"><img loading="lazy" src="style/clk/a208_f2.webp" alt="Mercedes,A208,CLK,cabriolet,Front view" width="616" height="311"></a>
+							<a href="full/clk/a208_r2.jpg"><img loading="lazy" src="style/clk/a208_r2.webp" alt="Mercedes,A208,CLK,cabriolet,Rear view" width="588" height="311"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">CLK55</h4>
-						<a href="full/clk/c208_clk55_f.jpg"><img loading="lazy" src="style/clk/c208_clk55_f.webp" alt="Mercedes,C208,CLK55,AMG,Front view" width="604" height="403"></a>
-						<a href="full/clk/c208_clk55_r.jpg"><img loading="lazy" src="style/clk/c208_clk55_r.webp" alt="Mercedes,C208,CLK55,AMG,Rear view" width="604" height="403"></a><br>
-						<a href="full/clk/c208_clk55_i.jpg"><img loading="lazy" src="style/clk/c208_clk55_i.webp" alt="Mercedes,C208,CLK55,AMG,Interior" width="604" height="403"></a>
-						<a href="full/clk/c208_clk55_m.jpg"><img loading="lazy" src="style/clk/c208_clk55_m.webp" alt="Mercedes,C208,CLK55,AMG,Engine" width="604" height="403"></a>
-					</section>
 				</div>
+
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-amg-clk55" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h4>AMG CLK 55<h4>
+										<p>Coupe</p>
+										08/1999 - 06/2002
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-amg-clk55" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">CLK55</h4>
+							<a href="full/clk/c208_clk55_f.jpg"><img loading="lazy" src="style/clk/c208_clk55_f.webp" alt="Mercedes,C208,CLK55,AMG,Front view" width="604" height="403"></a>
+							<a href="full/clk/c208_clk55_r.jpg"><img loading="lazy" src="style/clk/c208_clk55_r.webp" alt="Mercedes,C208,CLK55,AMG,Rear view" width="604" height="403"></a><br>
+							<a href="full/clk/c208_clk55_i.jpg"><img loading="lazy" src="style/clk/c208_clk55_i.webp" alt="Mercedes,C208,CLK55,AMG,Interior" width="604" height="403"></a>
+							<a href="full/clk/c208_clk55_m.jpg"><img loading="lazy" src="style/clk/c208_clk55_m.webp" alt="Mercedes,C208,CLK55,AMG,Engine" width="604" height="403"></a>
+						</div>
+					</div>
+				</div>
+
 			</div>
 		</section>
 
@@ -396,74 +403,99 @@
 			<h2>The 2nd CLK-class</h2>
 			<div class="style-w">
 				<a href="full/clk/c209_tp.jpg"><img loading="lazy" src="style/clk/c209_tp.webp" alt="Mercedes,C209,CLK,Perspective" width="1210" height="730"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<p class="bf1a i"><a href="https://en.wikipedia.org/wiki/Mercedes-Benz_CLK-Class_(C209)" class="ico-wiki m1" title="Wikipedia(E)_Mercedes-Benz_209"></a></p>
-						<h3 class="i m0">C209</h3>
-						<p class="i m1">Coupe</p>
-						<p class="i m1">2002 - 2010</p>
-					</div>
-					<section>
-						<h4 class="displayNone">Coupe</h4>
-						<div>
-							<div class="box60a"><br>
-								<a href="full/clk/c209_f.jpg"><img loading="lazy" src="style/clk/c209_f.webp" alt="Mercedes,C209,CLK,Front view" width="604" height="316"></a><br>
-								<a href="full/clk/c209_r.jpg"><img loading="lazy" src="style/clk/c209_r.webp" alt="Mercedes,C209,CLK,Rear view" width="604" height="300"></a><br>
-								<a href="full/clk/c209_d.jpg"><img loading="lazy" src="style/clk/c209_d.webp" alt="Mercedes,C209,CLK,Dashboard" width="604" height="300"></a><br>
-								<a href="full/clk/c209_i.jpg"><img loading="lazy" src="style/clk/c209_i.webp" alt="Mercedes,C209,CLK,Interior" width="604" height="440"></a>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-c209" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://en.wikipedia.org/wiki/Mercedes-Benz_CLK-Class_(C209)" class="ico-wiki" title="Wikipedia(E)_Mercedes-Benz_209"></a>
+								<h3>C209<h3>
+										<p>Coupe</p>
+										2002 - 2010
 							</div>
-							<div class="box60a">
-								<h5 class="i">Facelift</h5>
-								<p class="i m1">2005</p><br>
-								<a href="full/clk/c209_f2.jpg"><img loading="lazy" src="style/clk/c209_f2.webp" alt="Mercedes,C209,CLK,Front view" width="604" height="453"></a><br>
-								<a href="full/clk/c209_r2.jpg"><img loading="lazy" src="style/clk/c209_r2.webp" alt="Mercedes,C209,CLK,Rear view" width="604" height="453"></a><br>
-								<a href="full/clk/c209_d2.jpg"><img loading="lazy" src="style/clk/c209_d2.webp" alt="Mercedes,C209,CLK,Dashboard" width="604" height="453"></a>
+							<div class="accordion-right">
+								Designer : Gorden Wagener
 							</div>
 						</div>
-						<h5>Dimensions</h5>
-						<a href="full/clk/c209_a.jpg"><img loading="lazy" src="style/clk/c209_a.webp" alt="Mercedes,C209,CLK,Dimensions" width="804" height="1051"></a>
-					</section>
-				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<h3 class="bf1b i">A209</h3>
-						<p class="i m1">Cabriolet</p>
-						<p class="i m1">2002 -2010</p>
-					</div>
-					<section>
-						<h4 class="displayNone">Cabriolet</h4>
-						<div>
-							<div class="box80b"><br>
-								<a href="full/clk/a209_f.jpg"><img loading="lazy" src="style/clk/a209_f.webp" alt="Mercedes,A209,CLK,Front view" width="400" height="247"></a>
-								<a href="full/clk/a209_r.jpg"><img loading="lazy" src="style/clk/a209_r.webp" alt="Mercedes,A209,CLK,Rear view" width="400" height="247"></a>
+					</button>
+					<div id="accordion-content-c209" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">Coupe</h4>
+							<div>
+								<div class="box60a"><br>
+									<a href="full/clk/c209_f.jpg"><img loading="lazy" src="style/clk/c209_f.webp" alt="Mercedes,C209,CLK,Front view" width="604" height="316"></a><br>
+									<a href="full/clk/c209_r.jpg"><img loading="lazy" src="style/clk/c209_r.webp" alt="Mercedes,C209,CLK,Rear view" width="604" height="300"></a><br>
+									<a href="full/clk/c209_d.jpg"><img loading="lazy" src="style/clk/c209_d.webp" alt="Mercedes,C209,CLK,Dashboard" width="604" height="300"></a><br>
+									<a href="full/clk/c209_i.jpg"><img loading="lazy" src="style/clk/c209_i.webp" alt="Mercedes,C209,CLK,Interior" width="604" height="440"></a>
+								</div>
+								<div class="box60a">
+									<h5 class="i">Facelift</h5>
+									<p class="i m1">2005</p><br>
+									<a href="full/clk/c209_f2.jpg"><img loading="lazy" src="style/clk/c209_f2.webp" alt="Mercedes,C209,CLK,Front view" width="604" height="453"></a><br>
+									<a href="full/clk/c209_r2.jpg"><img loading="lazy" src="style/clk/c209_r2.webp" alt="Mercedes,C209,CLK,Rear view" width="604" height="453"></a><br>
+									<a href="full/clk/c209_d2.jpg"><img loading="lazy" src="style/clk/c209_d2.webp" alt="Mercedes,C209,CLK,Dashboard" width="604" height="453"></a>
+								</div>
 							</div>
-							<div class="box40">
-								<h5 class="i">Facelift</h5>
-								<p class="i m1">2005</p><br>
-								<a href="full/clk/a209_f2.jpg"><img loading="lazy" src="style/clk/a209_f2.webp" alt="Mercedes,A209,CLK,Front view" width="400" height="243"></a>
+							<h5>Dimensions</h5>
+							<a href="full/clk/c209_a.jpg"><img loading="lazy" src="style/clk/c209_a.webp" alt="Mercedes,C209,CLK,Dimensions" width="804" height="1051"></a>
+						</div>
+					</div>
+				</div>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-a209" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h3>A209<h3>
+										<p>Cabriolet</p>
+										2002 -2010
 							</div>
 						</div>
-						<a href="full/clk/a209_r2.jpg"><img loading="lazy" src="style/clk/a209_r2.webp" alt="Mercedes,A209,CLK,Rear view" width="1210" height="806"></a>
-						<h5>Dimensions</h5>
-						<a href="full/clk/a209_a.jpg"><img loading="lazy" src="style/clk/a209_a.webp" alt="Mercedes,A209CLK,Dimensions" width="960" height="560"></a>
-					</section>
-				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<h3 class="bf1b i">AMG</h3>
-						<p class="i m1">CLK55</p>
-						<p class="i m1">Coupe</p>
-						<p class="i m1">09/2002 - 05/2006</p>
+					</button>
+					<div id="accordion-content-a209" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">Cabriolet</h4>
+							<div>
+								<div class="box80b"><br>
+									<a href="full/clk/a209_f.jpg"><img loading="lazy" src="style/clk/a209_f.webp" alt="Mercedes,A209,CLK,Front view" width="400" height="247"></a>
+									<a href="full/clk/a209_r.jpg"><img loading="lazy" src="style/clk/a209_r.webp" alt="Mercedes,A209,CLK,Rear view" width="400" height="247"></a>
+								</div>
+								<div class="box40">
+									<h5 class="i">Facelift</h5>
+									<p class="i m1">2005</p><br>
+									<a href="full/clk/a209_f2.jpg"><img loading="lazy" src="style/clk/a209_f2.webp" alt="Mercedes,A209,CLK,Front view" width="400" height="243"></a>
+								</div>
+							</div>
+							<a href="full/clk/a209_r2.jpg"><img loading="lazy" src="style/clk/a209_r2.webp" alt="Mercedes,A209,CLK,Rear view" width="1210" height="806"></a>
+							<h5>Dimensions</h5>
+							<a href="full/clk/a209_a.jpg"><img loading="lazy" src="style/clk/a209_a.webp" alt="Mercedes,A209CLK,Dimensions" width="960" height="560"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">CLK55</h4>
-						<a href="full/clk/c209_clk55_m.jpg"><img loading="lazy" src="style/clk/c209_clk55_m.webp" alt="Mercedes,C208,CLK55,AMG,Engine" width="1210" height="802"></a><br>
-						<a href="full/clk/c209_clk55_f.jpg"><img loading="lazy" src="style/clk/c209_clk55_f.webp" alt="Mercedes,C208,CLK55,AMG,Front view" width="604" height="453"></a>
-						<a href="full/clk/c209_clk55_r.jpg"><img loading="lazy" src="style/clk/c209_clk55_r.webp" alt="Mercedes,C208,CLK55,AMG,Rear view" width="604" height="453"></a><br>
-						<a href="full/clk/c209_clk55_d.jpg"><img loading="lazy" src="style/clk/c209_clk55_d.webp" alt="Mercedes,C209,CLK55,AMG,Dashboard" width="604" height="415"></a>
-						<a href="full/clk/c209_clk55_i.jpg"><img loading="lazy" src="style/clk/c209_clk55_i.webp" alt="Mercedes,C208,CLK55,AMG,Interior" width="604" height="415"></a>
-					</section>
 				</div>
+
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-amg-clk55" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h4>AMG CLK 55<h4>
+										<p>Coupe</p>
+										09/2002 - 05/2006
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-amg-clk55" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">CLK55</h4>
+							<a href="full/clk/c209_clk55_m.jpg"><img loading="lazy" src="style/clk/c209_clk55_m.webp" alt="Mercedes,C208,CLK55,AMG,Engine" width="1210" height="802"></a><br>
+							<a href="full/clk/c209_clk55_f.jpg"><img loading="lazy" src="style/clk/c209_clk55_f.webp" alt="Mercedes,C208,CLK55,AMG,Front view" width="604" height="453"></a>
+							<a href="full/clk/c209_clk55_r.jpg"><img loading="lazy" src="style/clk/c209_clk55_r.webp" alt="Mercedes,C208,CLK55,AMG,Rear view" width="604" height="453"></a><br>
+							<a href="full/clk/c209_clk55_d.jpg"><img loading="lazy" src="style/clk/c209_clk55_d.webp" alt="Mercedes,C209,CLK55,AMG,Dashboard" width="604" height="415"></a>
+							<a href="full/clk/c209_clk55_i.jpg"><img loading="lazy" src="style/clk/c209_clk55_i.webp" alt="Mercedes,C208,CLK55,AMG,Interior" width="604" height="415"></a>
+						</div>
+					</div>
+				</div>
+
 			</div>
 		</section>
 
@@ -511,9 +543,10 @@
 			<hr>
 			<p class="mid"><small>@ since 2010 , piyopiyo_246</small></p>
 		</footer>
+
 		<p class="m-05" id="page-top"><a href="#head">&#9650;</a></p>
 		<p id="close-accordion">
-			<a class="vmenu_all_action" onclick="doReplaceClassName ('vmenu_on2','vmenu_off')" title="Close all openings">&#9654;</a>
+			<a id="close-all-accordions-2" class="vmenu_all_action" title="Close all openings">&#9654;</a>
 		</p>
 	</div>
 
@@ -549,7 +582,7 @@
 				analytics_storage: 'denied',
 				ad_storage: 'denied',
 				functionality_storage: 'granted',
-				region: ['US', 'GB', 'CA', 'AU', 'NZ', 'IE'] 
+				region: ['US', 'GB', 'CA', 'AU', 'NZ', 'IE']
 			};
 
 			// GTM用設定
@@ -588,6 +621,120 @@
 			}, 500);
 			return false;
 		});
+	});
+</script>
+
+<script>
+	// シンプル版アコーディオン機能（入れ子非対応）
+	document.addEventListener('DOMContentLoaded', function () {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+		accordionHeaders.forEach(header => {
+			header.addEventListener('click', function () {
+				const content = this.nextElementSibling;
+				const isActive = this.classList.contains('active');
+
+				// クリックされたアコーディオンのみトグル
+				if (isActive) {
+					this.classList.remove('active');
+					this.setAttribute('aria-expanded', 'false');
+					content.classList.remove('active');
+				} else {
+					this.classList.add('active');
+					this.setAttribute('aria-expanded', 'true');
+					content.classList.add('active');
+				}
+			});
+
+			// キーボード操作のサポート
+			header.addEventListener('keydown', function (e) {
+				if (e.key === 'Enter' || e.key === ' ') {
+					e.preventDefault();
+					this.click();
+				}
+			});
+		});
+
+		// 全開/全閉ボタンのイベントリスナー
+		const openAllBtn = document.getElementById('open-all-accordions');
+		const closeAllBtn = document.getElementById('close-all-accordions');
+		const closeAllBtn2 = document.getElementById('close-all-accordions-2');
+
+		if (openAllBtn) {
+			openAllBtn.addEventListener('click', openAllAccordions);
+		}
+
+		if (closeAllBtn) {
+			closeAllBtn.addEventListener('click', closeAllAccordions);
+		}
+
+		if (closeAllBtn2) {
+			closeAllBtn2.addEventListener('click', closeAllAccordions);
+		}
+	});
+
+	// 全アコーディオン操作機能
+	function openAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.add('active');
+			header.setAttribute('aria-expanded', 'true');
+			content.classList.add('active');
+		});
+	}
+
+	function closeAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.remove('active');
+			header.setAttribute('aria-expanded', 'false');
+			content.classList.remove('active');
+		});
+	}
+
+	// 全アコーディオン操作機能
+	function openAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.add('active');
+			header.setAttribute('aria-expanded', 'true');
+			content.classList.add('active');
+		});
+	}
+
+	function closeAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.remove('active');
+			header.setAttribute('aria-expanded', 'false');
+			content.classList.remove('active');
+		});
+	}
+
+	// ボタンにイベントリスナーを追加
+	document.addEventListener('DOMContentLoaded', function () {
+		// 既存のアコーディオンコード...
+
+		// 全開/全閉ボタン
+		const openAllBtn = document.getElementById('open-all-accordions');
+		const closeAllBtn = document.getElementById('close-all-accordions');
+		const closeAllBtn2 = document.getElementById('close-all-accordions-2'); // 追加ボタン
+
+		if (openAllBtn) {
+			openAllBtn.addEventListener('click', openAllAccordions);
+		}
+
+		if (closeAllBtn) {
+			closeAllBtn.addEventListener('click', closeAllAccordions);
+		}
+
+		if (closeAllBtn2) {
+			closeAllBtn2.addEventListener('click', closeAllAccordions);
+		}
 	});
 </script>
 
