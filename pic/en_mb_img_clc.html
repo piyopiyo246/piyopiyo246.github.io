@@ -51,23 +51,6 @@
 	<link rel="stylesheet" href="../style.min.css">
 	<link rel="stylesheet" href="../style_v.min.css">
 
-	<!-- アコーディオン用のJavaScript関数を追加 -->
-	<script>
-		function doToggleClassName(obj, onClassName, offClassName) {
-			obj.className = (obj.className != onClassName) ? onClassName : offClassName;
-		}
-		function getParentObj(obj) {
-			return obj.parentElement || obj.parentNode;
-		}
-		function doReplaceClassName(findClassName, replaceClassName, targetTagName) {
-			var elements = document.getElementsByTagName(targetTagName || '*');
-			for (var i = 0; i < elements.length; i++) {
-				if (elements[i].className == findClassName)
-					elements[i].className = replaceClassName;
-			}
-		}
-	</script>
-
 	<!-- 6. Cookie同意管理システム -->
 	<script>
 		window._cookiescript = {
@@ -278,8 +261,8 @@
 						<dd class="s2"><a href="#c205" title="C-class Coupe C205" class="lnk2">205</a></dd>
 					</dl>
 					<span>
-						<button class="vmenu_all_action square_btn" type="button" title="Click here to open all openings" span onclick="doReplaceClassName('vmenu_off', 'vmenu_on2')">Open all</button>
-						<button class="vmenu_all_action square_btn" type="button" title="Click here to close all openings" span onclick="doReplaceClassName('vmenu_on2', 'vmenu_off')">Close all</button>
+						<button id="open-all-accordions" class="vmenu_all_action square_btn" type="button" title="Click here to open all openings">Open all</button>
+						<button id="close-all-accordions" class="vmenu_all_action square_btn" type="button" title="Click here to close all openings">Close all</button>
 						<button class="square_btn" type="button" onclick="location.href='ja_mb_img_clc.html'">Ja</button>
 						<button class="square_btn" type="button" onclick="location.href='mb_img_clc.html'">De</button>
 					</span>
@@ -332,15 +315,24 @@
 			<h2>C-class SportCoupe / CLC</h2>
 			<div class="style-w">
 				<a href="full/clc/cl203.jpg"><img src="style/clc/cl203.webp" alt="Mercedes,Cl203,C-class,sport Coupe" width="1210" height="880"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<p class="bf1a i"><a href="https://de.wikipedia.org/wiki/Mercedes-Benz_CL_203" class="ico-wiki m1" title="Wikipedia(D)_Mercedes-Benz_CL_203"></a></p>
-						<h3 class="i m0">CL203</h3>
-						<p class="i m1">Sport Coupe</p>
-						<p class="i m1">10/2000 - 05/2008</p>
+
+			<div class="accordion">
+				<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-cl203" title="Click to open the accordion panel">
+					<div class="accordion-row">
+						<div class="accordion-left">
+							<a href="https://de.wikipedia.org/wiki/Mercedes-Benz_CL_203" class="ico-wiki" title="Wikipedia(D)_Mercedes-Benz_CL_203"></a>
+							<h3>CL203<h3>
+							<p>Sport Coupe</p>
+							10/2000 - 05/2008
+						</div>
+						<div class="accordion-right">
+							Designer : Peter Pfeiffer
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">Sport Coupe</h4>
+				</button>
+				<div id="accordion-content-cl203" class="accordion-content subpage" role="region">
+					<div class="accordion-content-inner subpage">
+												<h4 class="displayNone">Sport Coupe</h4>
 						<div>
 							<div class="box60a"><br>
 								<a href="full/clc/cl203_f.jpg"><img loading="lazy" src="style/clc/cl203_f.webp" alt="Mercedes,Cl203,C-class,sport Coupe,Front view" width="604" height="296"></a><br>
@@ -357,15 +349,22 @@
 						</div>
 						<h5>Dimensions</h5>
 						<a href="full/clc/cl203_a.gif"><img loading="lazy" src="style/clc/cl203_a.gif" alt="Mercedes,Cl203,Dimensions" width="1000" height="542"></a>
-					</section>
-				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<h3 class="bf1b i">CL203</h3>
-						<p class="i m1">CLC</p>
-						<p class="i m1">05/2008 - 02/2011</p>
 					</div>
-					<section>
+				</div>
+			</div>
+
+			<div class="accordion">
+				<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-cl203" title="Click to open the accordion panel">
+					<div class="accordion-row">
+						<div class="accordion-left">
+							<h3>CL203<h3>
+							<p>CLC</p>
+							05/2008 - 02/2011
+						</div>
+					</div>
+				</button>
+				<div id="accordion-content-cl203" class="accordion-content subpage" role="region">
+					<div class="accordion-content-inner subpage">
 						<h4 class="displayNone">CLC</h4>
 						<a href="full/clc/cl203_r3x.jpg"><img loading="lazy" src="style/clc/cl203_r3x.webp" alt="Mercedes,Cl203,CLC,Rear view" width="1210" height="756"></a><br>
 						<div>
@@ -379,8 +378,10 @@
 								<a href="full/clc/cl203_a3.jpg"><img loading="lazy" src="style/clc/cl203_a3.webp" alt="Mercedes,Cl203,Dimensions" width="700" height="896"></a>
 							</div>
 						</div>
-					</section>
+					</div>
 				</div>
+			</div>
+
 			</div>
 		</section>
 
@@ -388,38 +389,55 @@
 			<h2>The 1st C-class Coupe</h2>
 			<div class="style-w">
 				<a href="full/clc/c204.jpg"><img loading="lazy" src="style/clc/c204.webp" alt="Mercedes,C204,C-class,Coupe" width="1210" height="803"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<p class="bf1a i"><a href="https://en.wikipedia.org/wiki/Mercedes-Benz_C-Class_(W204)" class="ico-wiki m1" title="Wikipedia(E)_Mercedes-Benz_Coupe (C 204)"></a></p>
-						<h3 class="i m0">C204</h3>
-						<p class="i m1">Coupe</p>
-						<p class="i m1">06/2011 - 2015</p>
+
+			<div class="accordion">
+				<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-c204" title="Click to open the accordion panel">
+					<div class="accordion-row">
+						<div class="accordion-left">
+							<a href="https://en.wikipedia.org/wiki/Mercedes-Benz_C-Class_(W204)" class="ico-wiki" title="Wikipedia(E)_Mercedes-Benz_Coupe (C 204)"></a>
+							<h3>C204<h3>
+							<p>Coupe</p>
+							06/2011 - 2015
+						</div>
+						<div class="accordion-right">
+							Designer : Peter Pfeiffer , Karlheinz Bauer
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">Coupe</h4>
+				</button>
+				<div id="accordion-content-c204" class="accordion-content subpage" role="region">
+					<div class="accordion-content-inner subpage">
+												<h4 class="displayNone">Coupe</h4>
 						<a href="full/clc/c204_f.jpg"><img loading="lazy" src="style/clc/c204_f.webp" alt="Mercedes,C204,C-class,Coupe,Front view" width="602" height="400"></a>
 						<a href="full/clc/c204_r.jpg"><img loading="lazy" src="style/clc/c204_r.webp" alt="Mercedes,C204,C-class,Coupe,Rear view" width="602" height="400"></a><br>
 						<a href="full/clc/c204_d.jpg"><img loading="lazy" src="style/clc/c204_d.webp" alt="Mercedes,C204,C-class,Coupe,Dashboard" width="652" height="413"></a>
 						<a href="full/clc/c204_i.jpg"><img loading="lazy" src="style/clc/c204_i.webp" alt="Mercedes,C204,C-class,Coupe,Interior" width="551" height="413"></a>
 						<h5>Dimensions</h5>
 						<a href="full/clc/c204_a.jpg"><img loading="lazy" src="style/clc/c204_a.webp" alt="Mercedes,C204,C-class,Coupe,Dimensions" width="804" height="1003"></a>
-					</section>
-				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<h3 class="bf1b i">AMG</h3>
-						<p class="i m1">C63</p>
-						<p class="i m1">Coupe</p>
-						<p class="i m1">2014 - 2015</p>
 					</div>
-					<section>
-						<h4 class="displayNone">C63</h4>
+				</div>
+			</div>
+
+			<div class="accordion">
+				<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-amg-c63" title="Click to open the accordion panel">
+					<div class="accordion-row">
+						<div class="accordion-left">
+							<h4>AMG C 63<h4>
+							<p>Coupe</p>
+									2014 - 2015
+						</div>
+					</div>
+				</button>
+				<div id="accordion-content-amg-c63" class="accordion-content subpage" role="region">
+					<div class="accordion-content-inner subpage">
+												<h4 class="displayNone">C63</h4>
 						<a href="full/clc/c204_amg_f.jpg"><img loading="lazy" src="style/clc/c204_amg_f.webp" alt="Mercedes,C205,C-klasse,AMG,c63s,Coupe,Front view" width="602" height="378"></a>
 						<a href="full/clc/c204_amg_r.jpg"><img loading="lazy" src="style/clc/c204_amg_r.webp" alt="Mercedes,C205,C-klasse,AMG,c63s,Coupe,Rear view" width="602" height="378"></a><br>
 						<a href="full/clc/c204_amg_e.jpg"><img loading="lazy" src="style/clc/c204_amg_e.webp" alt="Mercedes,C205,C-klasse,AMG,c63s,Coupe,Engine" width="602" height="378"></a>
 						<a href="full/clc/c204_amg_d.jpg"><img loading="lazy" src="style/clc/c204_amg_d.webp" alt="Mercedes,C205,C-klasse,AMG,c63s,Coupe,Dashboard" width="602" height="378"></a>
-					</section>
+					</div>
 				</div>
+			</div>
+
 			</div>
 		</section>
 
@@ -427,15 +445,24 @@
 			<h2>The 2nd C-class Coupe / Cabriolet</h2>
 			<div class="style-w">
 				<a href="full/clc/c205.jpg"><img loading="lazy" src="style/clc/c205.webp" alt="Mercedes,C205,C-class,Coupe,Front view" width="1210" height="804"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<p class="bf1a i"><a href="https://en.wikipedia.org/wiki/Mercedes-Benz_C-Class_(W205)" class="ico-wiki m1" title="Wikipedia(E)_Coupe (C 205) and Cabriolet (A 205)"></a></p>
-						<h3 class="i m0">C205</h3>
-						<p class="i m1">Coupe</p>
-						<p class="i m1">10/2015 – 03/2023</p>
+
+			<div class="accordion">
+				<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-c205" title="Click to open the accordion panel">
+					<div class="accordion-row">
+						<div class="accordion-left">
+							<a href="https://en.wikipedia.org/wiki/Mercedes-Benz_C-Class_(W205)" class="ico-wiki" title="Wikipedia(E)_Coupe (C 205) and Cabriolet (A 205)"></a>
+							<h3>C205<h3>
+							<p>Coupe</p>
+							10/2015 – 03/2023
+						</div>
+						<div class="accordion-right">
+							Designer : Gorden Wagener , Exterior : Jong-Bae Kim , Interior : Jan Kaul
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">Coupe</h4>
+				</button>
+				<div id="accordion-content-c205" class="accordion-content subpage" role="region">
+					<div class="accordion-content-inner subpage">
+												<h4 class="displayNone">Coupe</h4>
 						<h5>With Mustang</h5>
 						<img loading="lazy" class="m0d" src="style/clc/c205_f_with_mustang.webp" alt="Mercedes,C205,C-class,c205_with_mustang,Front view" width="1200" height="446"><br>
 						<img loading="lazy" class="m0d" src="style/clc/c205_r_with_mustang.webp" alt="Mercedes,C205,C-class,c205_with_mustang,Rear view" width="1200" height="392"><br>
@@ -446,15 +473,22 @@
 						<h5>Dimensions</h5>
 						<a href="full/clc/c205_a1.jpg"><img loading="lazy" src="style/clc/c205_a1.webp" alt="Mercedes,C205,C-class,Coupe,Dimensions" width="384" height="340"></a>
 						<a href="full/clc/c205_a2.jpg"><img loading="lazy" src="style/clc/c205_a2.webp" alt="Mercedes,C205,C-class,Coupe,Dimensions" width="821" height="340"></a>
-					</section>
-				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<h3 class="bf1b i">A205</h3>
-						<p class="i m1">Cabriolet</p>
-						<p class="i m1">07/2016 – 03/2023</p>
 					</div>
-					<section>
+				</div>
+			</div>
+
+			<div class="accordion">
+				<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-a205" title="Click to open the accordion panel">
+					<div class="accordion-row">
+						<div class="accordion-left">
+							<h3>A205<h3>
+							<p>Cabriolet</p>
+							07/2016 – 03/2023
+						</div>
+					</div>
+				</button>
+				<div id="accordion-content-a205" class="accordion-content subpage" role="region">
+					<div class="accordion-content-inner subpage">
 						<h4 class="displayNone">Cabriolet</h4>
 						<a href="full/clc/a205.jpg"><img loading="lazy" src="style/clc/a205.webp" alt="Mercedes,A205,C-class,cabriolet" width="1210" height="756"></a><br>
 						<a href="full/clc/a205_f.jpg"><img loading="lazy" src="style/clc/a205_f.webp" alt="Mercedes,A205,C-class,cabriolet,Front view" width="575" height="287"></a>
@@ -462,23 +496,32 @@
 						<h5>Dimensions</h5>
 						<a href="full/clc/a205_a1.jpg"><img loading="lazy" src="style/clc/a205_a1.webp" alt="Mercedes,A205,C-class,cabriolet,Dimensions" width="384" height="340"></a>
 						<a href="full/clc/a205_a2.jpg"><img loading="lazy" src="style/clc/a205_a2.webp" alt="Mercedes,A205,C-class,cabriolet,Dimensions" width="821" height="340"></a>
-					</section>
-				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<h3 class="bf1b i">AMG</h3>
-						<p class="i m1">C63S</p>
-						<p class="i m1">Coupe</p>
-						<p class="i m1">2016</p>
 					</div>
-					<section>
-						<h4 class="displayNone">C63S</h4>
+				</div>
+			</div>
+
+
+			<div class="accordion">
+				<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-amg-c63s" title="Click to open the accordion panel">
+					<div class="accordion-row">
+						<div class="accordion-left">
+							<h4>AMG C 63S<h4>
+							<p>Coupe</p>
+									2016
+						</div>
+					</div>
+				</button>
+				<div id="accordion-content-amg-c63s" class="accordion-content subpage" role="region">
+					<div class="accordion-content-inner subpage">
+												<h4 class="displayNone">C63S</h4>
 						<a href="full/clc/c205_amg_f.jpg"><img loading="lazy" src="style/clc/c205_amg_f.webp" alt="Mercedes,C205,C-klasse,AMG,c63s,Coupe,Front view" width="602" height="378"></a>
 						<a href="full/clc/c205_amg_r.jpg"><img loading="lazy" src="style/clc/c205_amg_r.webp" alt="Mercedes,C205,C-klasse,AMG,c63s,Coupe,Rear view" width="602" height="378"></a><br>
 						<a href="full/clc/c205_amg_e.jpg"><img loading="lazy" src="style/clc/c205_amg_e.webp" alt="Mercedes,C205,C-klasse,AMG,c63s,Coupe,Engine" width="602" height="378"></a>
 						<a href="full/clc/c205_amg_i.jpg"><img loading="lazy" src="style/clc/c205_amg_i.webp" alt="Mercedes,C205,C-klasse,AMG,c63s,Coupe,Interior" width="602" height="378"></a>
-					</section>
+					</div>
 				</div>
+			</div>
+
 			</div>
 		</section>
 
@@ -527,9 +570,10 @@
 			<hr>
 			<p class="mid"><small>@ since 2010 , piyopiyo_246</small></p>
 		</footer>
+
 		<p class="m-05" id="page-top"><a href="#head">&#9650;</a></p>
 		<p id="close-accordion">
-			<a class="vmenu_all_action" onclick="doReplaceClassName ('vmenu_on2','vmenu_off')" title="Close all openings">&#9654;</a>
+			<a id="close-all-accordions-2" class="vmenu_all_action" title="Close all openings">&#9654;</a>
 		</p>
 	</div>
 
@@ -604,6 +648,120 @@
 			}, 500);
 			return false;
 		});
+	});
+</script>
+
+<script>
+	// シンプル版アコーディオン機能（入れ子非対応）
+	document.addEventListener('DOMContentLoaded', function () {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+		accordionHeaders.forEach(header => {
+			header.addEventListener('click', function () {
+				const content = this.nextElementSibling;
+				const isActive = this.classList.contains('active');
+
+				// クリックされたアコーディオンのみトグル
+				if (isActive) {
+					this.classList.remove('active');
+					this.setAttribute('aria-expanded', 'false');
+					content.classList.remove('active');
+				} else {
+					this.classList.add('active');
+					this.setAttribute('aria-expanded', 'true');
+					content.classList.add('active');
+				}
+			});
+
+			// キーボード操作のサポート
+			header.addEventListener('keydown', function (e) {
+				if (e.key === 'Enter' || e.key === ' ') {
+					e.preventDefault();
+					this.click();
+				}
+			});
+		});
+
+		// 全開/全閉ボタンのイベントリスナー
+		const openAllBtn = document.getElementById('open-all-accordions');
+		const closeAllBtn = document.getElementById('close-all-accordions');
+		const closeAllBtn2 = document.getElementById('close-all-accordions-2');
+
+		if (openAllBtn) {
+			openAllBtn.addEventListener('click', openAllAccordions);
+		}
+
+		if (closeAllBtn) {
+			closeAllBtn.addEventListener('click', closeAllAccordions);
+		}
+
+		if (closeAllBtn2) {
+			closeAllBtn2.addEventListener('click', closeAllAccordions);
+		}
+	});
+
+	// 全アコーディオン操作機能
+	function openAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.add('active');
+			header.setAttribute('aria-expanded', 'true');
+			content.classList.add('active');
+		});
+	}
+
+	function closeAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.remove('active');
+			header.setAttribute('aria-expanded', 'false');
+			content.classList.remove('active');
+		});
+	}
+
+	// 全アコーディオン操作機能
+	function openAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.add('active');
+			header.setAttribute('aria-expanded', 'true');
+			content.classList.add('active');
+		});
+	}
+
+	function closeAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.remove('active');
+			header.setAttribute('aria-expanded', 'false');
+			content.classList.remove('active');
+		});
+	}
+
+	// ボタンにイベントリスナーを追加
+	document.addEventListener('DOMContentLoaded', function () {
+		// 既存のアコーディオンコード...
+
+		// 全開/全閉ボタン
+		const openAllBtn = document.getElementById('open-all-accordions');
+		const closeAllBtn = document.getElementById('close-all-accordions');
+		const closeAllBtn2 = document.getElementById('close-all-accordions-2'); // 追加ボタン
+
+		if (openAllBtn) {
+			openAllBtn.addEventListener('click', openAllAccordions);
+		}
+
+		if (closeAllBtn) {
+			closeAllBtn.addEventListener('click', closeAllAccordions);
+		}
+
+		if (closeAllBtn2) {
+			closeAllBtn2.addEventListener('click', closeAllAccordions);
+		}
 	});
 </script>
 
