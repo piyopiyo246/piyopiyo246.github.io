@@ -51,23 +51,6 @@
 	<link rel="stylesheet" href="../style.min.css">
 	<link rel="stylesheet" href="../style_v.min.css">
 
-	<!-- アコーディオン用のJavaScript関数を追加 -->
-	<script>
-		function doToggleClassName(obj, onClassName, offClassName) {
-			obj.className = (obj.className != onClassName) ? onClassName : offClassName;
-		}
-		function getParentObj(obj) {
-			return obj.parentElement || obj.parentNode;
-		}
-		function doReplaceClassName(findClassName, replaceClassName, targetTagName) {
-			var elements = document.getElementsByTagName(targetTagName || '*');
-			for (var i = 0; i < elements.length; i++) {
-				if (elements[i].className == findClassName)
-					elements[i].className = replaceClassName;
-			}
-		}
-	</script>
-
 	<!-- 6. Cookie同意管理システム -->
 	<script>
 		window._cookiescript = {
@@ -88,7 +71,7 @@
 							analytics_storage: 'granted',
 							ad_storage: 'denied',
 							functionality_storage: 'granted',
-							region: ['US', 'GB', 'CA', 'AU', 'NZ', 'IE'] ,
+							region: ['US', 'GB', 'CA', 'AU', 'NZ', 'IE'],
 							// デバッグ用パラメータ（本番では削除）
 							debug_mode: location.hostname.includes('localhost')
 						});
@@ -206,7 +189,7 @@
 					ad_storage: 'denied',
 					functionality_storage: 'granted',
 					wait_for_update: 500,
-					region: ['US', 'GB', 'CA', 'AU', 'NZ', 'IE'] 
+					region: ['US', 'GB', 'CA', 'AU', 'NZ', 'IE']
 				});
 			}
 		} catch (initError) {
@@ -270,7 +253,7 @@
 					</li>
 				</ul>
 				<h1 class="b bf4">CLS-class</h1>
-				 <div style="display: flex; justify-content: space-between; width: 1210px;">
+				<div style="display: flex; justify-content: space-between; width: 1210px;">
 					<dl class="m1">
 						<dt class="s2 af0">Series</dt>
 						<dd class="s2"><a href="#c219" title="The 1st CLS-class C219" class="lnk2">219</a></dd>
@@ -278,8 +261,8 @@
 						<dd class="s2"><a href="#c257" title="The 3rd CLS-class C257" class="lnk2">257</a></dd>
 					</dl>
 					<span>
-						<button class="vmenu_all_action square_btn" type="button" title="Click here to open all openings" span onclick="doReplaceClassName('vmenu_off', 'vmenu_on2')">Open all</button>
-						<button class="vmenu_all_action square_btn" type="button" title="Click here to close all openings" span onclick="doReplaceClassName('vmenu_on2', 'vmenu_off')">Close all</button>
+						<button id="open-all-accordions" class="vmenu_all_action square_btn" type="button" title="Click here to open all openings">Open all</button>
+						<button id="close-all-accordions" class="vmenu_all_action square_btn" type="button" title="Click here to close all openings">Close all</button>
 						<button class="square_btn" type="button" onclick="location.href='ja_mb_img_cls.html'">Ja</button>
 						<button class="square_btn" type="button" onclick="location.href='mb_img_cls.html'">De</button>
 					</span>
@@ -332,26 +315,36 @@
 			<h2>The 1st CLS-class</h2>
 			<div class="style-w">
 				<a href="full/cls/c219_r.jpg"><img src="style/cls/c219_r.webp" alt="Mercedes,C219,CLS,primary,Rear view" width="1210" height="756"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<p class="bf1a i"><a href="https://en.wikipedia.org/wiki/Mercedes-Benz_CLS-Class_(C219)" class="ico-wiki m1" title="Wikipedia(E)_C219"></a></p>
-						<h3 class="i m0">C219</h3>
-						<p class="i m1">10/2004 - 07/2010</p>
-						<p class="ru">Designer : Michael Fink , Peter Arcadipane (2001)</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-c219" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://en.wikipedia.org/wiki/Mercedes-Benz_CLS-Class_(C219)" class="ico-wiki" title="Wikipedia(E)_C219"></a>
+								<h3>C219<h3>
+										10/2004 - 07/2010
+							</div>
+							<div class="accordion-right">
+								Designer : Michael Fink , Peter Arcadipane (2001)
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-c219" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">C219</h4>
+							<a href="full/cls/c219_f.jpg"><img loading="lazy" src="style/cls/c219_f.webp" alt="Mercedes,C219,CLS,primary,Front view" width="681" height="383"></a>
+							<a href="full/cls/c219_d.jpg"><img loading="lazy" src="style/cls/c219_d.webp" alt="Mercedes,C219,CLS,primary,Dashboard" width="524" height="383"></a><br>
+							<h5 class="i">Facelift</h5>
+							<p class="i m1">2008</p><br>
+							<a href="full/cls/c219_f2.jpg"><img loading="lazy" src="style/cls/c219_f2.webp" alt="Mercedes,C219,CLS,primary,Front view" width="1210" height="681"></a><br>
+							<a href="full/cls/c219_r2.jpg"><img loading="lazy" src="style/cls/c219_r2.webp" alt="Mercedes,C219,CLS,primary,Rear view" width="688" height="387"></a>
+							<a href="full/cls/c219_d2.jpg"><img loading="lazy" src="style/cls/c219_d2.webp" alt="Mercedes,C219,CLS,primary,Dashboard" width="516" height="387"></a>
+							<h5>Dimensions</h5>
+							<img loading="lazy" src="style/cls/c219_a.webp" alt="Mercedes,C219,CLS,Dimensions" width="1210" height="653">
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">C219</h4>
-						<a href="full/cls/c219_f.jpg"><img loading="lazy" src="style/cls/c219_f.webp" alt="Mercedes,C219,CLS,primary,Front view" width="681" height="383"></a>
-						<a href="full/cls/c219_d.jpg"><img loading="lazy" src="style/cls/c219_d.webp" alt="Mercedes,C219,CLS,primary,Dashboard" width="524" height="383"></a><br>
-						<h5 class="i">Facelift</h5>
-						<p class="i m1">2008</p><br>
-						<a href="full/cls/c219_f2.jpg"><img loading="lazy" src="style/cls/c219_f2.webp" alt="Mercedes,C219,CLS,primary,Front view" width="1210" height="681"></a><br>
-						<a href="full/cls/c219_r2.jpg"><img loading="lazy" src="style/cls/c219_r2.webp" alt="Mercedes,C219,CLS,primary,Rear view" width="688" height="387"></a>
-						<a href="full/cls/c219_d2.jpg"><img loading="lazy" src="style/cls/c219_d2.webp" alt="Mercedes,C219,CLS,primary,Dashboard" width="516" height="387"></a>
-						<h5>Dimensions</h5>
-						<img loading="lazy" src="style/cls/c219_a.webp" alt="Mercedes,C219,CLS,Dimensions" width="1210" height="653">
-					</section>
 				</div>
+
 			</div>
 		</section>
 
@@ -359,61 +352,80 @@
 			<h2>The 2nd CLS-class</h2>
 			<div class="style-w">
 				<a href="full/cls/c218.jpg"><img loading="lazy" src="style/cls/c218.webp" alt="Mercedes,C218,CLS,2nd" width="1210" height="681"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<p class="bf1a i"><a href="https://en.wikipedia.org/wiki/Mercedes-Benz_CLS-Class_(C218)" class="ico-wiki m1" title="Wikipedia(E)_C218"></a></p>
-						<h3 class="i m0">C218</h3>
-						<p class="i m1">01/2011 - 2018</p>
-						<p class="ru">Designer : Hubert Lee</p>
-					</div>
-					<section>
-						<h4 class="displayNone">C218</h4>
-						<div>
-							<div class="box60b"><br>
-								<a href="full/cls/c218_f.jpg"><img loading="lazy" src="style/cls/c218_f.webp" alt="Mercedes,C218,CLS,2nd,Front view" width="602" height="400"></a><br>
-								<a href="full/cls/c218_r.jpg"><img loading="lazy" src="style/cls/c218_r.webp" alt="Mercedes,C218,CLS,2nd,Rear view" width="602" height="340"></a><br>
-								<a href="full/cls/c218_d.png"><img loading="lazy" src="style/cls/c218_d.webp" alt="Mercedes,C218,CLS,2nd,Dashboard" width="602" height="412"></a><br>
-								<a href="full/cls/c218_d.png"><img loading="lazy" src="style/cls/c218_m.webp" alt="Mercedes,C218,CLS,2nd,Engine" width="602" height="400"></a>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-c218" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://en.wikipedia.org/wiki/Mercedes-Benz_CLS-Class_(C218)" class="ico-wiki" title="Wikipedia(E)_C218"></a>
+								<h3>C218<h3>
+										01/2011 - 2018
 							</div>
-							<div class="box60c">
-								<h5 class="i">Facelift</h5>
-								<p class="i m1">09/2014 - 2018</p><br>
-								<a href="full/cls/c218_f2.jpg"><img loading="lazy" src="style/cls/c218_f2.webp" alt="Mercedes,C218,CLS,2nd,Front view" width="602" height="400"></a><br>
-								<a href="full/cls/c218_r2.jpg"><img loading="lazy" src="style/cls/c218_r2.webp" alt="Mercedes,C218,CLS,2nd,Rear view" width="602" height="340"></a><br>
-								<a href="full/cls/c218_d2.jpg"><img loading="lazy" src="style/cls/c218_d2.webp" alt="Mercedes,C218,CLS,2nd,Dashboard" width="602" height="412"></a><br>
-								<a href="full/cls/c218_i2.jpg"><img loading="lazy" src="style/cls/c218_i2.webp" alt="Mercedes,C218,CLS,2nd,Interior" width="602" height="400"></a>
+							<div class="accordion-right">
+								Designer : Hubert Lee
 							</div>
 						</div>
-						<h5>Dimensions</h5>
-						<img loading="lazy" src="style/cls/c218_a_1.webp" alt="Mercedes,C218,CLS,Dimensions" width="403" height="333">
-						<img loading="lazy" src="style/cls/c218_a_2.webp" alt="Mercedes,C218,CLS,Dimensions" width="802" height="333"><br>
-						<img loading="lazy" src="style/cls/c218_a_3.webp" alt="Mercedes,C218,CLS,Dimensions" width="403" height="333">
-						<img loading="lazy" src="style/cls/c218_a_4.webp" alt="Mercedes,C218,CLS,Dimensions" width="802" height="333">
-					</section>
-				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<h3 class="bf1b i"><a id="x218">X218</a></h3>
-						<p class="i m1">Shooting Brake</p>
-						<p class="i m1">10/2012 - 2018</p>
-						<p class="ru">Designer : Michael Frei</p>
+					</button>
+					<div id="accordion-content-c218" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">C218</h4>
+							<div>
+								<div class="box60b"><br>
+									<a href="full/cls/c218_f.jpg"><img loading="lazy" src="style/cls/c218_f.webp" alt="Mercedes,C218,CLS,2nd,Front view" width="602" height="400"></a><br>
+									<a href="full/cls/c218_r.jpg"><img loading="lazy" src="style/cls/c218_r.webp" alt="Mercedes,C218,CLS,2nd,Rear view" width="602" height="340"></a><br>
+									<a href="full/cls/c218_d.png"><img loading="lazy" src="style/cls/c218_d.webp" alt="Mercedes,C218,CLS,2nd,Dashboard" width="602" height="412"></a><br>
+									<a href="full/cls/c218_d.png"><img loading="lazy" src="style/cls/c218_m.webp" alt="Mercedes,C218,CLS,2nd,Engine" width="602" height="400"></a>
+								</div>
+								<div class="box60c">
+									<h5 class="i">Facelift</h5>
+									<p class="i m1">09/2014 - 2018</p><br>
+									<a href="full/cls/c218_f2.jpg"><img loading="lazy" src="style/cls/c218_f2.webp" alt="Mercedes,C218,CLS,2nd,Front view" width="602" height="400"></a><br>
+									<a href="full/cls/c218_r2.jpg"><img loading="lazy" src="style/cls/c218_r2.webp" alt="Mercedes,C218,CLS,2nd,Rear view" width="602" height="340"></a><br>
+									<a href="full/cls/c218_d2.jpg"><img loading="lazy" src="style/cls/c218_d2.webp" alt="Mercedes,C218,CLS,2nd,Dashboard" width="602" height="412"></a><br>
+									<a href="full/cls/c218_i2.jpg"><img loading="lazy" src="style/cls/c218_i2.webp" alt="Mercedes,C218,CLS,2nd,Interior" width="602" height="400"></a>
+								</div>
+							</div>
+							<h5>Dimensions</h5>
+							<img loading="lazy" src="style/cls/c218_a_1.webp" alt="Mercedes,C218,CLS,Dimensions" width="403" height="333">
+							<img loading="lazy" src="style/cls/c218_a_2.webp" alt="Mercedes,C218,CLS,Dimensions" width="802" height="333"><br>
+							<img loading="lazy" src="style/cls/c218_a_3.webp" alt="Mercedes,C218,CLS,Dimensions" width="403" height="333">
+							<img loading="lazy" src="style/cls/c218_a_4.webp" alt="Mercedes,C218,CLS,Dimensions" width="802" height="333">
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">Shooting Brake</h4>
-						<a href="full/cls/x218_f.jpg"><img loading="lazy" src="style/cls/x218_f.webp" alt="Mercedes,X218,CLS,2nd,Front view" width="624" height="361"></a>
-						<a href="full/cls/x218_r.jpg"><img loading="lazy" src="style/cls/x218_r.webp" alt="Mercedes,X218,CLS,2nd,Rear view" width="579" height="361"></a>
-						<h5>Inner</h5>
-						<a href="full/cls/x218_i_1.jpg"><img loading="lazy" src="style/cls/x218_i_1.webp" alt="Mercedes,X218,CLS,Interior" width="567" height="425"></a>
-						<a href="full/cls/x218_i_2.jpg"><img loading="lazy" src="style/cls/x218_i_2.webp" alt="Mercedes,X218,CLS,Interior" width="637" height="425"></a><br>
-						<img loading="lazy" src="style/cls/x218_i_3.webp" alt="Mercedes,X218,CLS,Interior" width="602" height="398">
-						<img loading="lazy" src="style/cls/x218_i_4.webp" alt="Mercedes,X218,CLS,Interior" width="600" height="398">
-						<h5>Dimensions</h5>
-						<img loading="lazy" src="style/cls/x218_a_1.webp" alt="Mercedes,X218,CLS,Dimensions" width="403" height="333">
-						<img loading="lazy" src="style/cls/x218_a_2.webp" alt="Mercedes,X218,CLS,Dimensions" width="802" height="333"><br>
-						<img loading="lazy" src="style/cls/x218_a_3.webp" alt="Mercedes,X218,CLS,Dimensions" width="403" height="333">
-						<img loading="lazy" src="style/cls/x218_a_4.webp" alt="Mercedes,X218,CLS,Dimensions" width="802" height="333">
-					</section>
 				</div>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-x218" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h3>X218<h3>
+										<p>Shooting Brake</p>
+										10/2012 - 2018
+							</div>
+							<div class="accordion-right">
+								Designer : Michael Frei
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-x218" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">Shooting Brake</h4>
+							<a href="full/cls/x218_f.jpg"><img loading="lazy" src="style/cls/x218_f.webp" alt="Mercedes,X218,CLS,2nd,Front view" width="624" height="361"></a>
+							<a href="full/cls/x218_r.jpg"><img loading="lazy" src="style/cls/x218_r.webp" alt="Mercedes,X218,CLS,2nd,Rear view" width="579" height="361"></a>
+							<h5>Inner</h5>
+							<a href="full/cls/x218_i_1.jpg"><img loading="lazy" src="style/cls/x218_i_1.webp" alt="Mercedes,X218,CLS,Interior" width="567" height="425"></a>
+							<a href="full/cls/x218_i_2.jpg"><img loading="lazy" src="style/cls/x218_i_2.webp" alt="Mercedes,X218,CLS,Interior" width="637" height="425"></a><br>
+							<img loading="lazy" src="style/cls/x218_i_3.webp" alt="Mercedes,X218,CLS,Interior" width="602" height="398">
+							<img loading="lazy" src="style/cls/x218_i_4.webp" alt="Mercedes,X218,CLS,Interior" width="600" height="398">
+							<h5>Dimensions</h5>
+							<img loading="lazy" src="style/cls/x218_a_1.webp" alt="Mercedes,X218,CLS,Dimensions" width="403" height="333">
+							<img loading="lazy" src="style/cls/x218_a_2.webp" alt="Mercedes,X218,CLS,Dimensions" width="802" height="333"><br>
+							<img loading="lazy" src="style/cls/x218_a_3.webp" alt="Mercedes,X218,CLS,Dimensions" width="403" height="333">
+							<img loading="lazy" src="style/cls/x218_a_4.webp" alt="Mercedes,X218,CLS,Dimensions" width="802" height="333">
+						</div>
+					</div>
+				</div>
+
 			</div>
 		</section>
 
@@ -421,33 +433,43 @@
 			<h2>The 3rd CLS-class</h2>
 			<div class="style-w">
 				<a href="full/cls/c257_f.jpg"><img loading="lazy" src="style/cls/c257_f.webp" alt="Mercedes,C257,CLS,3rd,Front view" width="1210" height="807"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<p class="bf1a i"><a href="https://en.wikipedia.org/wiki/Mercedes-Benz_CLS_(C257)" class="ico-wiki m1" title="Wikipedia(E)_C257"></a></p>
-						<h3 class="i m0">C257</h3>
-						<p class="i m1">11/2017 - 08/2023</p>
-						<p class="ru">Designer : Rovert Resnick</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-c257" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://en.wikipedia.org/wiki/Mercedes-Benz_CLS_(C257)" class="ico-wiki" title="Wikipedia(E)_C257"></a>
+								<h3>C257<h3>
+										11/2017 - 08/2023
+							</div>
+							<div class="accordion-right">
+								Designer : Rovert Resnick
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-c257" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">C257</h4>
+							<a href="full/cls/c257_r.jpg"><img loading="lazy" src="style/cls/c257_r.webp" alt="Mercedes,C257,CLS,3rd,Rear view" width="660" height="362"></a>
+							<a href="full/cls/c257_d.jpg"><img loading="lazy" src="style/cls/c257_d.webp" alt="Mercedes,C257,CLS,3rd,Dashboard" width="544" height="362"></a><br>
+							<h5 class="i">Facelift</h5>
+							<p class="i m1">04/2021</p><br>
+							<a href="full/cls/c257_f2.jpg"><img loading="lazy" src="style/cls/c257_f2.webp" alt="Mercedes,C257,CLS,3rd,Front view" width="602" height="340"></a>
+							<a href="full/cls/c257_r2.jpg"><img loading="lazy" src="style/cls/c257_r2.webp" alt="Mercedes,C257,CLS,3rd,Rear view" width="602" height="340"></a><br>
+							<a href="full/cls/c257_d2.jpg"><img loading="lazy" src="style/cls/c257_d2.webp" alt="Mercedes,C257,CLS,3rd,Dashboard" width="602" height="340"></a>
+							<a href="full/cls/c257_i2.jpg"><img loading="lazy" src="style/cls/c257_i2.webp" alt="Mercedes,C257,CLS,3rd,Interior" width="602" height="340"></a>
+							<h5>Dimensions</h5>
+							<a href="full/cls/c257_a_2.jpg"><img loading="lazy" src="style/cls/c257_a_2.webp" alt="Mercedes,C257,CLS,Dimensions" width="378" height="376"></a>
+							<a href="full/cls/c257_a_1.jpg"><img loading="lazy" src="style/cls/c257_a_1.webp" alt="Mercedes,C257,CLS,Dimensions" width="826" height="376"></a>
+							<h4>AMG CLS53 4MATIC</h4>
+							<a href="full/cls/c257_f2_amg.jpg"><img loading="lazy" src="style/cls/c257_f2_amg.webp" alt="Mercedes,AMG,C257,CLS,3rd,Front view" width="556" height="366"></a>
+							<a href="full/cls/c257_r2_amg.jpg"><img loading="lazy" src="style/cls/c257_r2_amg.webp" alt="Mercedes,AMG,C257,CLS,3rd,Rear view" width="649" height="366"></a><br>
+							<a href="full/cls/c257_d2_amg.jpg"><img loading="lazy" src="style/cls/c257_d2_amg.webp" alt="Mercedes,AMG,C257,CLS,3rd,Dashboard" width="658" height="370"></a>
+							<a href="full/cls/c257_m2_amg.jpg"><img loading="lazy" src="style/cls/c257_m2_amg.webp" alt="Mercedes,AMG,C257,CLS,3rd,Engine" width="547" height="367"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">C257</h4>
-						<a href="full/cls/c257_r.jpg"><img loading="lazy" src="style/cls/c257_r.webp" alt="Mercedes,C257,CLS,3rd,Rear view" width="660" height="362"></a>
-						<a href="full/cls/c257_d.jpg"><img loading="lazy" src="style/cls/c257_d.webp" alt="Mercedes,C257,CLS,3rd,Dashboard" width="544" height="362"></a><br>
-						<h5 class="i">Facelift</h5>
-						<p class="i m1">04/2021</p><br>
-						<a href="full/cls/c257_f2.jpg"><img loading="lazy" src="style/cls/c257_f2.webp" alt="Mercedes,C257,CLS,3rd,Front view" width="602" height="340"></a>
-						<a href="full/cls/c257_r2.jpg"><img loading="lazy" src="style/cls/c257_r2.webp" alt="Mercedes,C257,CLS,3rd,Rear view" width="602" height="340"></a><br>
-						<a href="full/cls/c257_d2.jpg"><img loading="lazy" src="style/cls/c257_d2.webp" alt="Mercedes,C257,CLS,3rd,Dashboard" width="602" height="340"></a>
-						<a href="full/cls/c257_i2.jpg"><img loading="lazy" src="style/cls/c257_i2.webp" alt="Mercedes,C257,CLS,3rd,Interior" width="602" height="340"></a>
-						<h5>Dimensions</h5>
-						<a href="full/cls/c257_a_2.jpg"><img loading="lazy" src="style/cls/c257_a_2.webp" alt="Mercedes,C257,CLS,Dimensions" width="378" height="376"></a>
-						<a href="full/cls/c257_a_1.jpg"><img loading="lazy" src="style/cls/c257_a_1.webp" alt="Mercedes,C257,CLS,Dimensions" width="826" height="376"></a>
-						<h4>AMG CLS53 4MATIC</h4>
-						<a href="full/cls/c257_f2_amg.jpg"><img loading="lazy" src="style/cls/c257_f2_amg.webp" alt="Mercedes,AMG,C257,CLS,3rd,Front view" width="556" height="366"></a>
-						<a href="full/cls/c257_r2_amg.jpg"><img loading="lazy" src="style/cls/c257_r2_amg.webp" alt="Mercedes,AMG,C257,CLS,3rd,Rear view" width="649" height="366"></a><br>
-						<a href="full/cls/c257_d2_amg.jpg"><img loading="lazy" src="style/cls/c257_d2_amg.webp" alt="Mercedes,AMG,C257,CLS,3rd,Dashboard" width="658" height="370"></a>
-						<a href="full/cls/c257_m2_amg.jpg"><img loading="lazy" src="style/cls/c257_m2_amg.webp" alt="Mercedes,AMG,C257,CLS,3rd,Engine" width="547" height="367"></a>
-					</section>
 				</div>
+
 			</div>
 		</section>
 
@@ -496,9 +518,10 @@
 			<hr>
 			<p class="mid"><small>@ since 2010 , piyopiyo_246</small></p>
 		</footer>
+
 		<p class="m-05" id="page-top"><a href="#head">&#9650;</a></p>
 		<p id="close-accordion">
-			<a class="vmenu_all_action" onclick="doReplaceClassName ('vmenu_on2','vmenu_off')" title="Close all openings">&#9654;</a>
+			<a id="close-all-accordions-2" class="vmenu_all_action" title="Close all openings">&#9654;</a>
 		</p>
 	</div>
 
@@ -534,7 +557,7 @@
 				analytics_storage: 'denied',
 				ad_storage: 'denied',
 				functionality_storage: 'granted',
-				region: ['US', 'GB', 'CA', 'AU', 'NZ', 'IE'] 
+				region: ['US', 'GB', 'CA', 'AU', 'NZ', 'IE']
 			};
 
 			// GTM用設定
@@ -573,6 +596,120 @@
 			}, 500);
 			return false;
 		});
+	});
+</script>
+
+<script>
+	// シンプル版アコーディオン機能（入れ子非対応）
+	document.addEventListener('DOMContentLoaded', function () {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+		accordionHeaders.forEach(header => {
+			header.addEventListener('click', function () {
+				const content = this.nextElementSibling;
+				const isActive = this.classList.contains('active');
+
+				// クリックされたアコーディオンのみトグル
+				if (isActive) {
+					this.classList.remove('active');
+					this.setAttribute('aria-expanded', 'false');
+					content.classList.remove('active');
+				} else {
+					this.classList.add('active');
+					this.setAttribute('aria-expanded', 'true');
+					content.classList.add('active');
+				}
+			});
+
+			// キーボード操作のサポート
+			header.addEventListener('keydown', function (e) {
+				if (e.key === 'Enter' || e.key === ' ') {
+					e.preventDefault();
+					this.click();
+				}
+			});
+		});
+
+		// 全開/全閉ボタンのイベントリスナー
+		const openAllBtn = document.getElementById('open-all-accordions');
+		const closeAllBtn = document.getElementById('close-all-accordions');
+		const closeAllBtn2 = document.getElementById('close-all-accordions-2');
+
+		if (openAllBtn) {
+			openAllBtn.addEventListener('click', openAllAccordions);
+		}
+
+		if (closeAllBtn) {
+			closeAllBtn.addEventListener('click', closeAllAccordions);
+		}
+
+		if (closeAllBtn2) {
+			closeAllBtn2.addEventListener('click', closeAllAccordions);
+		}
+	});
+
+	// 全アコーディオン操作機能
+	function openAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.add('active');
+			header.setAttribute('aria-expanded', 'true');
+			content.classList.add('active');
+		});
+	}
+
+	function closeAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.remove('active');
+			header.setAttribute('aria-expanded', 'false');
+			content.classList.remove('active');
+		});
+	}
+
+	// 全アコーディオン操作機能
+	function openAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.add('active');
+			header.setAttribute('aria-expanded', 'true');
+			content.classList.add('active');
+		});
+	}
+
+	function closeAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.remove('active');
+			header.setAttribute('aria-expanded', 'false');
+			content.classList.remove('active');
+		});
+	}
+
+	// ボタンにイベントリスナーを追加
+	document.addEventListener('DOMContentLoaded', function () {
+		// 既存のアコーディオンコード...
+
+		// 全開/全閉ボタン
+		const openAllBtn = document.getElementById('open-all-accordions');
+		const closeAllBtn = document.getElementById('close-all-accordions');
+		const closeAllBtn2 = document.getElementById('close-all-accordions-2'); // 追加ボタン
+
+		if (openAllBtn) {
+			openAllBtn.addEventListener('click', openAllAccordions);
+		}
+
+		if (closeAllBtn) {
+			closeAllBtn.addEventListener('click', closeAllAccordions);
+		}
+
+		if (closeAllBtn2) {
+			closeAllBtn2.addEventListener('click', closeAllAccordions);
+		}
 	});
 </script>
 
