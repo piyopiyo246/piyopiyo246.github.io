@@ -51,23 +51,6 @@
 	<link rel="stylesheet" href="../style.min.css">
 	<link rel="stylesheet" href="../style_v.min.css">
 
-	<!-- アコーディオン用のJavaScript関数を追加 -->
-	<script>
-		function doToggleClassName(obj, onClassName, offClassName) {
-			obj.className = (obj.className != onClassName) ? onClassName : offClassName;
-		}
-		function getParentObj(obj) {
-			return obj.parentElement || obj.parentNode;
-		}
-		function doReplaceClassName(findClassName, replaceClassName, targetTagName) {
-			var elements = document.getElementsByTagName(targetTagName || '*');
-			for (var i = 0; i < elements.length; i++) {
-				if (elements[i].className == findClassName)
-					elements[i].className = replaceClassName;
-			}
-		}
-	</script>
-
 	<!-- 6. Cookie同意管理システム -->
 	<script>
 		window._cookiescript = {
@@ -88,7 +71,7 @@
 							analytics_storage: 'granted',
 							ad_storage: 'denied',
 							functionality_storage: 'granted',
-							region: ['US', 'GB', 'CA', 'AU', 'NZ', 'IE'] ,
+							region: ['US', 'GB', 'CA', 'AU', 'NZ', 'IE'],
 							// デバッグ用パラメータ（本番では削除）
 							debug_mode: location.hostname.includes('localhost')
 						});
@@ -207,7 +190,7 @@
 					ad_storage: 'denied',
 					functionality_storage: 'granted',
 					wait_for_update: 500,
-					region: ['US', 'GB', 'CA', 'AU', 'NZ', 'IE'] 
+					region: ['US', 'GB', 'CA', 'AU', 'NZ', 'IE']
 				});
 			}
 		} catch (initError) {
@@ -271,7 +254,7 @@
 					</li>
 				</ul>
 				<h1 class="b bf4">G-class GALLERY ( Gel&auml;ndewagen )</h1>
-				 <div style="display: flex; justify-content: space-between; width: 1210px;">
+				<div style="display: flex; justify-content: space-between; width: 1210px;">
 					<dl class="m1">
 						<dt class="s2 af0">Series</dt>
 						<dd class="s2"><a href="#w460" title="Geländewagen W460" class="lnk2">460</a></dd>
@@ -282,8 +265,8 @@
 						<dd class="s2"><a href="#w465" title="G-class W465" class="lnk2">465</a></dd>
 					</dl>
 					<span>
-						<button class="vmenu_all_action square_btn" type="button" title="Click here to open all openings" span onclick="doReplaceClassName('vmenu_off', 'vmenu_on2')">Open all</button>
-						<button class="vmenu_all_action square_btn" type="button" title="Click here to close all openings" span onclick="doReplaceClassName('vmenu_on2', 'vmenu_off')">Close all</button>
+						<button id="open-all-accordions" class="vmenu_all_action square_btn" type="button" title="Click here to open all openings">Open all</button>
+						<button id="close-all-accordions" class="vmenu_all_action square_btn" type="button" title="Click here to close all openings">Close all</button>
 						<button class="square_btn" type="button" onclick="location.href='ja_mb_img_g.html'">Ja</button>
 						<button class="square_btn" type="button" onclick="location.href='mb_img_g.html'">De</button>
 					</span>
@@ -342,55 +325,78 @@
 			<h2>W460</h2>
 			<div class="style-w">
 				<a href="full/g/w460_all.jpg"><img src="style/g/w460_all.webp" alt="Mercedes,W460,G-class" width="1210" height="862"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<p class="bf1a i">
-							<a href="https://en.wikipedia.org/wiki/Mercedes-Benz_G-Class" class="ico-wiki m1" title="Wikipedia(E)"></a>
-							<a href="https://en.wikipedia.org/wiki/Mercedes-Benz_G-Class#W460_(1979–1991)" class="ico-wiki m1" title="Wikipedia(E)"></a>
-						</p>
-						<h3 class="i">W460</h3>
-						<p class="i m1">1979 - 1990</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-w460" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://en.wikipedia.org/wiki/Mercedes-Benz_G-Class#W460_(1979–1991)" class="ico-wiki" title="Wikipedia(E)"></a>
+								<h3>W460<h3>
+										1979 - 1990
+							</div>
+							<div class="accordion-right">
+								Designer : Erich Ledwinka
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-w460" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">W460</h4>
+							<a href="full/g/w460_a.jpg"><img loading="lazy" src="style/g/w460_a.webp" alt="Mercedes,W460_1997,G-class" width="1210" height="847"></a><br>
+							<a href="full/g/w460_a2.jpg"><img loading="lazy" src="style/g/w460_a2.webp" alt="Mercedes,W460_1997,G-class" width="1210" height="1711"></a><br>
+							<a href="full/g/w460_chassis.jpg"><img loading="lazy" src="style/g/w460_chassis.webp" alt="Mercedes,W460_chassis" width="1210" height="815"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">W460</h4>
-						<a href="full/g/w460_a.jpg"><img loading="lazy" src="style/g/w460_a.webp" alt="Mercedes,W460_1997,G-class" width="1210" height="847"></a><br>
-						<a href="full/g/w460_a2.jpg"><img loading="lazy" src="style/g/w460_a2.webp" alt="Mercedes,W460_1997,G-class" width="1210" height="1711"></a><br>
-						<a href="full/g/w460_chassis.jpg"><img loading="lazy" src="style/g/w460_chassis.webp" alt="Mercedes,W460_chassis" width="1210" height="815"></a>
-					</section>
 				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<h4 class="bf1a i m0">Long</h4>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-long" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h4>Long<h4>
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-long" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">W460</h4>
+							<a href="full/g/w460l_f.jpg"><img loading="lazy" src="style/g/w460l_f.webp" alt="Mercedes,W460,G-class,Long,Front view" width="1210" height="757"></a><br>
+							<a href="full/g/w460l_r.jpg"><img loading="lazy" src="style/g/w460l_r.webp" alt="Mercedes,W460,G-class,long,Rear view" width="530" height="433"></a>
+							<a href="full/g/w460l_d.jpg"><img loading="lazy" src="style/g/w460l_d.webp" alt="Mercedes,W460,G-class,long,Dashboard" width="675" height="433"></a><br>
+							<h5 class="i">Interior</h5>
+							<p class="i m1">1986</p><br>
+							<a href="full/g/w460_d_1986.jpg"><img loading="lazy" src="style/g/w460_d_1986.webp" alt="Mercedes,W460,G-class,long,dashboard,1986" width="792" height="570"></a>
+							<a href="full/g/w460_shift.jpg"><img loading="lazy" src="style/g/w460_shift.webp" alt="Mercedes,W460,G-class,long,shift" width="412" height="570"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">W460</h4>
-						<a href="full/g/w460l_f.jpg"><img loading="lazy" src="style/g/w460l_f.webp" alt="Mercedes,W460,G-class,Long,Front view" width="1210" height="757"></a><br>
-						<a href="full/g/w460l_r.jpg"><img loading="lazy" src="style/g/w460l_r.webp" alt="Mercedes,W460,G-class,long,Rear view" width="530" height="433"></a>
-						<a href="full/g/w460l_d.jpg"><img loading="lazy" src="style/g/w460l_d.webp" alt="Mercedes,W460,G-class,long,Dashboard" width="675" height="433"></a><br>
-						<h5 class="i">Interior</h5>
-						<p class="i m1">1986</p><br>
-						<a href="full/g/w460_d_1986.jpg"><img loading="lazy" src="style/g/w460_d_1986.webp" alt="Mercedes,W460,G-class,long,dashboard,1986" width="792" height="570"></a>
-						<a href="full/g/w460_shift.jpg"><img loading="lazy" src="style/g/w460_shift.webp" alt="Mercedes,W460,G-class,long,shift" width="412" height="570"></a>
-					</section>
 				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<h4 class="bf1a i m0">Short / Cabriolet</h4>
+
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-short / cabriolet" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h4>Short / Cabriolet<h4>
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-short / cabriolet" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h5>Short</h5>
+							<a href="full/g/w460k_f.jpg"><img loading="lazy" src="style/g/w460k_f.webp" alt="Mercedes,W460,G-class,short,Front view" width="656" height="399"></a>
+							<a href="full/g/w460k_r.jpg"><img loading="lazy" src="style/g/w460k_r.webp" alt="Mercedes,W460,G-class,short,Rear view" width="549" height="399"></a><br>
+							<a href="full/g/w460k_d.jpg"><img loading="lazy" src="style/g/w460k_d.webp" alt="Mercedes,W460,G-class,short,Dashboard" width="675" height="400"></a>
+							<a href="full/g/w460k_tp.jpg"><img loading="lazy" src="style/g/w460k_tp.webp" alt="Mercedes,W460,G-class,Perspective view" width="530" height="400"></a>
+							<h5>Cabriolet</h5>
+							<a href="full/g/w460a.jpg"><img loading="lazy" src="style/g/w460a.webp" alt="Mercedes,W460,G-class,cabriolet" width="1210" height="1041"></a><br>
+							<a href="full/g/w460a_f.jpg"><img loading="lazy" src="style/g/w460a_f.webp" alt="Mercedes,W460,G-class,cabriolet,Front view" width="604" height="453"></a>
+							<a href="full/g/w460a_r.jpg"><img loading="lazy" src="style/g/w460a_r.webp" alt="Mercedes,W460,G-class,cabriolet,Rear view" width="601" height="453"></a>
+							<h5>Jacky Ickx and Claude Brasseur won the Paris-Dakar Rally in this Mercedes-Benz 280 GE from model series 460.</h5>
+							<a href="full/g/w460_rallye_paris_dakar.jpg"><img loading="lazy" src="style/g/w460_rallye_paris_dakar.webp" alt="Mercedes,W460,G-class,cabriolet" width="1210" height="780"></a>
+						</div>
 					</div>
-					<section>
-						<h5>Short</h5>
-						<a href="full/g/w460k_f.jpg"><img loading="lazy" src="style/g/w460k_f.webp" alt="Mercedes,W460,G-class,short,Front view" width="656" height="399"></a>
-						<a href="full/g/w460k_r.jpg"><img loading="lazy" src="style/g/w460k_r.webp" alt="Mercedes,W460,G-class,short,Rear view" width="549" height="399"></a><br>
-						<a href="full/g/w460k_d.jpg"><img loading="lazy" src="style/g/w460k_d.webp" alt="Mercedes,W460,G-class,short,Dashboard" width="675" height="400"></a>
-						<a href="full/g/w460k_tp.jpg"><img loading="lazy" src="style/g/w460k_tp.webp" alt="Mercedes,W460,G-class,Perspective view" width="530" height="400"></a>
-						<h5>Cabriolet</h5>
-						<a href="full/g/w460a.jpg"><img loading="lazy" src="style/g/w460a.webp" alt="Mercedes,W460,G-class,cabriolet" width="1210" height="1041"></a><br>
-						<a href="full/g/w460a_f.jpg"><img loading="lazy" src="style/g/w460a_f.webp" alt="Mercedes,W460,G-class,cabriolet,Front view" width="604" height="453"></a>
-						<a href="full/g/w460a_r.jpg"><img loading="lazy" src="style/g/w460a_r.webp" alt="Mercedes,W460,G-class,cabriolet,Rear view" width="601" height="453"></a>
-						<h5>Jacky Ickx and Claude Brasseur won the Paris-Dakar Rally in this Mercedes-Benz 280 GE from model series 460.</h5>
-						<a href="full/g/w460_rallye_paris_dakar.jpg"><img loading="lazy" src="style/g/w460_rallye_paris_dakar.webp" alt="Mercedes,W460,G-class,cabriolet" width="1210" height="780"></a>
-					</section>
 				</div>
+
 			</div>
 		</section>
 
@@ -398,75 +404,97 @@
 			<h2>W461 (Professional use)</h2>
 			<div class="style-w">
 				<a href="full/g/w461l.jpg"><img loading="lazy" src="style/g/w461l.webp" alt="Mercedes,W461,G-class,long" width="1210" height="756"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<p class="bf1a i"><a href="https://de.wikipedia.org/wiki/Wolf_(Fahrzeug)" class="ico-wiki m1" title="Wikipedia(D)_Mercedes-Benz_250_GD_Wolf"></a></p>
-						<h3 class="i">250 GD Wolf</h3>
-						<p class="i m1">German Federal Armed Forces</p> /
-						<p class="i m1">1982 - </p> /
-						<a href="https://en.wikipedia.org/wiki/Mercedes-Benz_G-Class#W461_(1992–2022)" class="ico-wiki m1" title="Wikipedia(E) 461"></a>
-						<h3 class="i">W461</h3>
-						<p class="i m1">1992 - 2013</p>
-						<h4 class="i m1">Long / Short / Cabriolet</h4>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-250 gd wolf-w461" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://de.wikipedia.org/wiki/Wolf_(Fahrzeug)" class="ico-wiki" title="Wikipedia(D)_Mercedes-Benz_250_GD_Wolf"></a>
+								<h3>250 GD Wolf<h3>
+										<p style="margin-left: 0;">German Federal Armed Forces</p>
+										1982 -
+										<a href="https://en.wikipedia.org/wiki/Mercedes-Benz_G-Class#W461_(1992–2022)" class="ico-wiki m10" title="Wikipedia(E) 461"></a>
+										<h3>W461<h3>
+												1992 - 2013
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-250 gd wolf-w461" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">W461</h4>
+							<h5>2012-2013 model</h5>
+							<a href="full/g/w461l_f2.jpg"><img loading="lazy" src="style/g/w461l_f2.webp" alt="Mercedes,W461,G-class,long,Front view" width="1210" height="694"></a><br>
+							<a href="full/g/w461l_r2.jpg"><img loading="lazy" src="style/g/w461l_r2.webp" alt="Mercedes,W461,G-class,long,Rear view" width="645" height="419"></a>
+							<a href="full/g/w461l_d2.jpg"><img loading="lazy" src="style/g/w461l_d2.webp" alt="Mercedes,W461,G-class,long,Dashboard" width="558" height="419"></a>
+							<h5>Short</h5>
+							<a href="full/g/w461k_s.jpg"><img loading="lazy" src="style/g/w461k_s.webp" alt="Mercedes,W461,G-class,short,Side view" width="1210" height="726"></a><br>
+							<a href="full/g/w461k_f.jpg"><img loading="lazy" src="style/g/w461k_f.webp" alt="Mercedes,W461,G-class,short,Front view" width="601" height="452"></a>
+							<a href="full/g/w461k_i.jpg"><img loading="lazy" src="style/g/w461k_i.webp" alt="Mercedes,W463,G-class,short,Interior" width="603" height="452"></a><br>
+							<h5 class="i">Cabriolet</h5>
+							<p class="i m1">Puch230</p><br>
+							<a href="full/g/w461a_f.jpg"><img loading="lazy" src="style/g/w461a_f.webp" alt="Mercedes,W461,G-class,cabriolet,Front view" width="604" height="402"></a>
+							<a href="full/g/w461a_r.jpg"><img loading="lazy" src="style/g/w461a_r.webp" alt="Mercedes,W461,G-class,cabriolet,Rear view" width="600" height="402"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">W461</h4>
-						<h5>2012-2013 model</h5>
-						<a href="full/g/w461l_f2.jpg"><img loading="lazy" src="style/g/w461l_f2.webp" alt="Mercedes,W461,G-class,long,Front view" width="1210" height="694"></a><br>
-						<a href="full/g/w461l_r2.jpg"><img loading="lazy" src="style/g/w461l_r2.webp" alt="Mercedes,W461,G-class,long,Rear view" width="645" height="419"></a>
-						<a href="full/g/w461l_d2.jpg"><img loading="lazy" src="style/g/w461l_d2.webp" alt="Mercedes,W461,G-class,long,Dashboard" width="558" height="419"></a>
-						<h5>Short</h5>
-						<a href="full/g/w461k_s.jpg"><img loading="lazy" src="style/g/w461k_s.webp" alt="Mercedes,W461,G-class,short,Side view" width="1210" height="726"></a><br>
-						<a href="full/g/w461k_f.jpg"><img loading="lazy" src="style/g/w461k_f.webp" alt="Mercedes,W461,G-class,short,Front view" width="601" height="452"></a>
-						<a href="full/g/w461k_i.jpg"><img loading="lazy" src="style/g/w461k_i.webp" alt="Mercedes,W463,G-class,short,Interior" width="603" height="452"></a><br>
-						<h5 class="i">Cabriolet</h5>
-						<p class="i m1">Puch230</p><br>
-						<a href="full/g/w461a_f.jpg"><img loading="lazy" src="style/g/w461a_f.webp" alt="Mercedes,W461,G-class,cabriolet,Front view" width="604" height="402"></a>
-						<a href="full/g/w461a_r.jpg"><img loading="lazy" src="style/g/w461a_r.webp" alt="Mercedes,W461,G-class,cabriolet,Rear view" width="600" height="402"></a>
-					</section>
 				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<h4 class="bf1a i m0">Pickup Truck</h4>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-pickup truck" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h4>Pickup Truck<h4>
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-pickup truck" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">wolf</h4>
+							<a href="full/g/wolf_250gd_t_f.jpg"><img loading="lazy" src="style/g/wolf_250gd_t_f.webp" alt="Mercedes,wolf_250GD,track,Front view" width="602" height="404"></a>
+							<a href="full/g/wolf_250gd_t_r.jpg"><img loading="lazy" src="style/g/wolf_250gd_t_r.webp" alt="Mercedes,wolf_250GD,track,Rear view" width="602" height="404"></a><br>
+							<a href="full/g/wolf_250gd_t_d.jpg"><img loading="lazy" src="style/g/wolf_250gd_t_d.webp" alt="Mercedes,wolf_250GD,track,Dashboard" width="602" height="404"></a>
+							<a href="full/g/wolf_250gd_t_i.jpg"><img loading="lazy" src="style/g/wolf_250gd_t_i.webp" alt="Mercedes,wolf_250GD,track,Interior" width="602" height="404"></a><br>
+							<a href="full/g/wolf_250gd_t_m.jpg"><img loading="lazy" src="style/g/wolf_250gd_t_m.webp" alt="Mercedes,wolf_250GD,track,Engine" width="602" height="404"></a>
+							<a href="full/g/wolf_250gd_t_shift.jpg"><img loading="lazy" src="style/g/wolf_250gd_t_shift.webp" alt="Mercedes,wolf_250GD,track,shift" width="602" height="404"></a><br>
+							<a href="full/g/w461t_f2.jpg"><img loading="lazy" src="style/g/w461t_f2.webp" alt="Mercedes,W461,G-class,track,Front view" width="650" height="487"></a>
+							<a href="full/g/w461t_r2.jpg"><img loading="lazy" src="style/g/w461t_r2.webp" alt="Mercedes,W461,G-class,track,Rear view" width="554" height="487"></a><br>
+							<p>2012</p>
+							<a href="full/g/w461t_f.jpg"><img loading="lazy" src="style/g/w461t_f.webp" alt="Mercedes,W461,G-class,track,Front view" width="611" height="315"></a>
+							<a href="full/g/w461t_r.jpg"><img loading="lazy" src="style/g/w461t_r.webp" alt="Mercedes,W461,G-class,track,Rear view" width="594" height="315"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">wolf</h4>
-						<a href="full/g/wolf_250gd_t_f.jpg"><img loading="lazy" src="style/g/wolf_250gd_t_f.webp" alt="Mercedes,wolf_250GD,track,Front view" width="602" height="404"></a>
-						<a href="full/g/wolf_250gd_t_r.jpg"><img loading="lazy" src="style/g/wolf_250gd_t_r.webp" alt="Mercedes,wolf_250GD,track,Rear view" width="602" height="404"></a><br>
-						<a href="full/g/wolf_250gd_t_d.jpg"><img loading="lazy" src="style/g/wolf_250gd_t_d.webp" alt="Mercedes,wolf_250GD,track,Dashboard" width="602" height="404"></a>
-						<a href="full/g/wolf_250gd_t_i.jpg"><img loading="lazy" src="style/g/wolf_250gd_t_i.webp" alt="Mercedes,wolf_250GD,track,Interior" width="602" height="404"></a><br>
-						<a href="full/g/wolf_250gd_t_m.jpg"><img loading="lazy" src="style/g/wolf_250gd_t_m.webp" alt="Mercedes,wolf_250GD,track,Engine" width="602" height="404"></a>
-						<a href="full/g/wolf_250gd_t_shift.jpg"><img loading="lazy" src="style/g/wolf_250gd_t_shift.webp" alt="Mercedes,wolf_250GD,track,shift" width="602" height="404"></a><br>
-						<a href="full/g/w461t_f2.jpg"><img loading="lazy" src="style/g/w461t_f2.webp" alt="Mercedes,W461,G-class,track,Front view" width="650" height="487"></a>
-						<a href="full/g/w461t_r2.jpg"><img loading="lazy" src="style/g/w461t_r2.webp" alt="Mercedes,W461,G-class,track,Rear view" width="554" height="487"></a><br>
-						<p>2012</p>
-						<a href="full/g/w461t_f.jpg"><img loading="lazy" src="style/g/w461t_f.webp" alt="Mercedes,W461,G-class,track,Front view" width="611" height="315"></a>
-						<a href="full/g/w461t_r.jpg"><img loading="lazy" src="style/g/w461t_r.webp" alt="Mercedes,W461,G-class,track,Rear view" width="594" height="315"></a>
-					</section>
 				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<h4 class="bf1a i m0">Police and Military version</h4>
+
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-police and military version" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h4>Police and Military version<h4>
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-police and military version" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">W461</h4>
+							<h5>Police version</h5>
+							<a href="full/g/w461k_p_f.jpg"><img loading="lazy" src="style/g/w461k_p_f.webp" alt="Mercedes,W461,G-class,short,Polizei,Front view" width="599" height="449"></a>
+							<a href="full/g/w461k_p_r.jpg"><img loading="lazy" src="style/g/w461k_p_r.webp" alt="Mercedes,W461,G-class,Polizei,Rear view" width="599" height="449"></a>
+							<h5>Military version</h5>
+							<a href="full/g/w461l_m1_f.jpg"><img loading="lazy" src="style/g/w461l_m1_f.webp" alt="Mercedes,W461,G-class,long,military1,Front view" width="639" height="425"></a>
+							<a href="full/g/w461l_m1_r.jpg"><img loading="lazy" src="style/g/w461l_m1_r.webp" alt="Mercedes,W461,G-class,long,military1,Rear view" width="567" height="425"></a><br>
+							<a href="full/g/w461l_m2_f.jpg"><img loading="lazy" src="style/g/w461l_m2_f.webp" alt="Mercedes,W461,G-class,long,military1,Front view" width="566" height="425"></a>
+							<a href="full/g/w461l_m0_f.jpg"><img loading="lazy" src="style/g/w461l_m0_f.webp" alt="Mercedes,W461,G-class,long,military3,Front view" width="637" height="425"></a><br>
+							<a href="full/g/w461la_m1_f.jpg"><img loading="lazy" src="style/g/w461la_m1_f.webp" alt="Mercedes,W461,G-class,long,military4,Front view" width="1210" height="586"></a><br>
+							<a href="full/g/w461la_m1_r.jpg"><img loading="lazy" src="style/g/w461la_m1_r.webp" alt="Mercedes,W461,G-class,long,military5,Rear view" width="656" height="473"></a>
+							<a href="full/g/w460_ambulanz.jpg"><img loading="lazy" src="style/g/w460_ambulanz.webp" alt="Mercedes,W461,G-class,long,military6,Front view" width="549" height="473"></a><br>
+							<h5 class="i">6×6</h5>
+							<p class="i m1">Australian Defense Forces 10/2008</p><br>
+							<a href="full/g/w461l_m4_f.jpg"><img loading="lazy" src="style/g/w461l_m4_f.webp" alt="Mercedes,W461,G-class,long,military4,Front view" width="603" height="401"></a>
+							<a href="full/g/w461l_m5_f.jpg"><img loading="lazy" src="style/g/w461l_m5_f.webp" alt="Mercedes,W461,G-class,long,military5,Front view" width="603" height="401"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">W461</h4>
-						<h5>Police version</h5>
-						<a href="full/g/w461k_p_f.jpg"><img loading="lazy" src="style/g/w461k_p_f.webp" alt="Mercedes,W461,G-class,short,Polizei,Front view" width="599" height="449"></a>
-						<a href="full/g/w461k_p_r.jpg"><img loading="lazy" src="style/g/w461k_p_r.webp" alt="Mercedes,W461,G-class,Polizei,Rear view" width="599" height="449"></a>
-						<h5>Military version</h5>
-						<a href="full/g/w461l_m1_f.jpg"><img loading="lazy" src="style/g/w461l_m1_f.webp" alt="Mercedes,W461,G-class,long,military1,Front view" width="639" height="425"></a>
-						<a href="full/g/w461l_m1_r.jpg"><img loading="lazy" src="style/g/w461l_m1_r.webp" alt="Mercedes,W461,G-class,long,military1,Rear view" width="567" height="425"></a><br>
-						<a href="full/g/w461l_m2_f.jpg"><img loading="lazy" src="style/g/w461l_m2_f.webp" alt="Mercedes,W461,G-class,long,military1,Front view" width="566" height="425"></a>
-						<a href="full/g/w461l_m0_f.jpg"><img loading="lazy" src="style/g/w461l_m0_f.webp" alt="Mercedes,W461,G-class,long,military3,Front view" width="637" height="425"></a><br>
-						<a href="full/g/w461la_m1_f.jpg"><img loading="lazy" src="style/g/w461la_m1_f.webp" alt="Mercedes,W461,G-class,long,military4,Front view" width="1210" height="586"></a><br>
-						<a href="full/g/w461la_m1_r.jpg"><img loading="lazy" src="style/g/w461la_m1_r.webp" alt="Mercedes,W461,G-class,long,military5,Rear view" width="656" height="473"></a>
-						<a href="full/g/w460_ambulanz.jpg"><img loading="lazy" src="style/g/w460_ambulanz.webp" alt="Mercedes,W461,G-class,long,military6,Front view" width="549" height="473"></a><br>
-						<h5 class="i">6×6</h5>
-						<p class="i m1">Australian Defense Forces 10/2008</p><br>
-						<a href="full/g/w461l_m4_f.jpg"><img loading="lazy" src="style/g/w461l_m4_f.webp" alt="Mercedes,W461,G-class,long,military4,Front view" width="603" height="401"></a>
-						<a href="full/g/w461l_m5_f.jpg"><img loading="lazy" src="style/g/w461l_m5_f.webp" alt="Mercedes,W461,G-class,long,military5,Front view" width="603" height="401"></a>
-					</section>
 				</div>
+
 			</div>
 		</section>
 
@@ -474,89 +502,118 @@
 			<h2>W463 ( For civilians )</h2>
 			<div class="style-w">
 				<div class="mid"><a href="full/g/w463l.jpg"><img loading="lazy" src="style/g/w463l.webp" alt="Mercedes,W463,G-class,long" width="1024" height="600"></a></div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<p class="bf1a i"><a href="https://en.wikipedia.org/wiki/Mercedes-Benz_G-class#W463,_first_generation_(1990–2018)" class="ico-wiki m1" title="Wikipedia(E) W463(1990-2018)"></a></p>
-						<h3 class="i">W463</h3>
-						<p class="i m1">1990-2018</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-w463" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://en.wikipedia.org/wiki/Mercedes-Benz_G-class#W463,_first_generation_(1990–2018)" class="ico-wiki" title="Wikipedia(E) W463(1990-2018)"></a>
+								<h3>W463<h3>
+										1990-2018
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-w463" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">W463</h4>
+							<h5>Long</h5>
+							<a href="full/g/w463l_f.jpg"><img loading="lazy" src="style/g/w463l_f.webp" alt="Mercedes,W463,G-class,long,Front view" width="615" height="418"></a>
+							<a href="full/g/w463l_r.jpg"><img loading="lazy" src="style/g/w463l_r.webp" alt="Mercedes,W463,G-class,long,Rear view" width="592" height="418"></a>
+							<h5>Short</h5>
+							<a href="full/g/w463k_tp.jpg"><img loading="lazy" src="style/g/w463k_tp.webp" alt="Mercedes,W463,G-class,short,Perspective view" width="1210" height="928"></a><br>
+							<a href="full/g/w463k_f.jpg"><img loading="lazy" src="style/g/w463k_f.webp" alt="Mercedes,W463,G-class,short,Front view" width="596" height="389"></a>
+							<a href="full/g/w463k_r.jpg"><img loading="lazy" src="style/g/w463k_r.webp" alt="Mercedes,W463,G-class,short,Rear view" width="610" height="389"></a><br>
+							<h5 class="i">Cabriolet</h5>
+							<p class="i m1">1990</p><br>
+							<a href="full/g/w463a_f_1990.jpg"><img loading="lazy" src="style/g/w463a_f_1990.webp" alt="Mercedes,W463,G-class,1990,cabriolet,Front view" width="606" height="401"></a>
+							<a href="full/g/w463a_r_1990.jpg"><img loading="lazy" src="style/g/w463a_r_1990.webp" alt="Mercedes,W463,G-class,1990,cabriolet,Rear view" width="601" height="401"></a><br>
+							<a href="full/g/w463a_d_1990.jpg"><img loading="lazy" src="style/g/w463a_d_1990.webp" alt="Mercedes,W463,G-class,1990,cabriolet,Dashboard" width="603" height="402"></a>
+							<a href="full/g/w463a_i_1990.jpg"><img loading="lazy" src="style/g/w463a_i_1990.webp" alt="Mercedes,W463,G-class,1990,cabriolet,Interior" width="603" height="402"></a><br>
+							<p>1994</p>
+							<a href="full/g/w463a_f.jpg"><img loading="lazy" src="style/g/w463a_f.webp" alt="Mercedes,W463,G-class,cabriolet,Front view" width="625" height="428"></a>
+							<a href="full/g/w463a_r.jpg"><img loading="lazy" src="style/g/w463a_r.webp" alt="Mercedes,W463,G-class,cabriolet,Rear view" width="580" height="428"></a><br>
+							<a href="full/g/w463a_s_1994.jpg"><img loading="lazy" src="style/g/w463a_s_1994.webp" alt="Mercedes,W463,G-class,cabriolet,Side view" width="565" height="424"></a>
+							<a href="full/g/w463a_d.jpg"><img loading="lazy" src="style/g/w463a_d.webp" alt="Mercedes,W463,G-class,cabriolet,Dashboard" width="638" height="424"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">W463</h4>
-						<h5>Long</h5>
-						<a href="full/g/w463l_f.jpg"><img loading="lazy" src="style/g/w463l_f.webp" alt="Mercedes,W463,G-class,long,Front view" width="615" height="418"></a>
-						<a href="full/g/w463l_r.jpg"><img loading="lazy" src="style/g/w463l_r.webp" alt="Mercedes,W463,G-class,long,Rear view" width="592" height="418"></a>
-						<h5>Short</h5>
-						<a href="full/g/w463k_tp.jpg"><img loading="lazy" src="style/g/w463k_tp.webp" alt="Mercedes,W463,G-class,short,Perspective view" width="1210" height="928"></a><br>
-						<a href="full/g/w463k_f.jpg"><img loading="lazy" src="style/g/w463k_f.webp" alt="Mercedes,W463,G-class,short,Front view" width="596" height="389"></a>
-						<a href="full/g/w463k_r.jpg"><img loading="lazy" src="style/g/w463k_r.webp" alt="Mercedes,W463,G-class,short,Rear view" width="610" height="389"></a><br>
-						<h5 class="i">Cabriolet</h5>
-						<p class="i m1">1990</p><br>
-						<a href="full/g/w463a_f_1990.jpg"><img loading="lazy" src="style/g/w463a_f_1990.webp" alt="Mercedes,W463,G-class,1990,cabriolet,Front view" width="606" height="401"></a>
-						<a href="full/g/w463a_r_1990.jpg"><img loading="lazy" src="style/g/w463a_r_1990.webp" alt="Mercedes,W463,G-class,1990,cabriolet,Rear view" width="601" height="401"></a><br>
-						<a href="full/g/w463a_d_1990.jpg"><img loading="lazy" src="style/g/w463a_d_1990.webp" alt="Mercedes,W463,G-class,1990,cabriolet,Dashboard" width="603" height="402"></a>
-						<a href="full/g/w463a_i_1990.jpg"><img loading="lazy" src="style/g/w463a_i_1990.webp" alt="Mercedes,W463,G-class,1990,cabriolet,Interior" width="603" height="402"></a><br>
-						<p>1994</p>
-						<a href="full/g/w463a_f.jpg"><img loading="lazy" src="style/g/w463a_f.webp" alt="Mercedes,W463,G-class,cabriolet,Front view" width="625" height="428"></a>
-						<a href="full/g/w463a_r.jpg"><img loading="lazy" src="style/g/w463a_r.webp" alt="Mercedes,W463,G-class,cabriolet,Rear view" width="580" height="428"></a><br>
-						<a href="full/g/w463a_s_1994.jpg"><img loading="lazy" src="style/g/w463a_s_1994.webp" alt="Mercedes,W463,G-class,cabriolet,Side view" width="565" height="424"></a>
-						<a href="full/g/w463a_d.jpg"><img loading="lazy" src="style/g/w463a_d.webp" alt="Mercedes,W463,G-class,cabriolet,Dashboard" width="638" height="424"></a>
-					</section>
 				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<h4 class="bf1a i m0">Facelift I</h4>
-						<p class="i m1">2007-2008</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-facelift i" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h4>Facelift I<h4>
+										2007-2008
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-facelift i" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h5>Long</h5>
+							<a href="full/g/w463l_f2.jpg"><img loading="lazy" src="style/g/w463l_f2.webp" alt="Mercedes,W463,G-class,long,Front view" width="603" height="452"></a>
+							<a href="full/g/w463l_r2.jpg"><img loading="lazy" src="style/g/w463l_r2.webp" alt="Mercedes,W463,G-class,long,Rear view" width="603" height="452"></a>
+							<h5>Short</h5>
+							<a href="full/g/w463k_f2.jpg"><img loading="lazy" src="style/g/w463k_f2.webp" alt="Mercedes,W463,G-class,short,Front view" width="612" height="371"></a>
+							<a href="full/g/w463k_r2.jpg"><img loading="lazy" src="style/g/w463k_r2.webp" alt="Mercedes,W463,G-class,short,Rear view" width="594" height="371"></a>
+							<h5>Cabriolet</h5>
+							<a href="full/g/w463a_f2.jpg"><img loading="lazy" src="style/g/w463a_f2.webp" alt="Mercedes,W463,G-class,cabriolet,Front view" width="540" height="372"></a>
+							<a href="full/g/w463a_r2.jpg"><img loading="lazy" src="style/g/w463a_r2.webp" alt="Mercedes,W463,G-class,cabriolet,Rear view" width="661" height="372"></a><br>
+							<a href="full/g/w463a_d2.jpg"><img loading="lazy" src="style/g/w463a_d2.webp" alt="Mercedes,W463,G-class,cabriolet,Dashboard" width="566" height="425"></a>
+							<a href="full/g/w463a_i2.webp"><img loading="lazy" src="style/g/w463a_i2.webp" alt="Mercedes,W463,G-class,Cabriolet,Interior" width="638" height="425"></a>
+						</div>
 					</div>
-					<section>
-						<h5>Long</h5>
-						<a href="full/g/w463l_f2.jpg"><img loading="lazy" src="style/g/w463l_f2.webp" alt="Mercedes,W463,G-class,long,Front view" width="603" height="452"></a>
-						<a href="full/g/w463l_r2.jpg"><img loading="lazy" src="style/g/w463l_r2.webp" alt="Mercedes,W463,G-class,long,Rear view" width="603" height="452"></a>
-						<h5>Short</h5>
-						<a href="full/g/w463k_f2.jpg"><img loading="lazy" src="style/g/w463k_f2.webp" alt="Mercedes,W463,G-class,short,Front view" width="612" height="371"></a>
-						<a href="full/g/w463k_r2.jpg"><img loading="lazy" src="style/g/w463k_r2.webp" alt="Mercedes,W463,G-class,short,Rear view" width="594" height="371"></a>
-						<h5>Cabriolet</h5>
-						<a href="full/g/w463a_f2.jpg"><img loading="lazy" src="style/g/w463a_f2.webp" alt="Mercedes,W463,G-class,cabriolet,Front view" width="540" height="372"></a>
-						<a href="full/g/w463a_r2.jpg"><img loading="lazy" src="style/g/w463a_r2.webp" alt="Mercedes,W463,G-class,cabriolet,Rear view" width="661" height="372"></a><br>
-						<a href="full/g/w463a_d2.jpg"><img loading="lazy" src="style/g/w463a_d2.webp" alt="Mercedes,W463,G-class,cabriolet,Dashboard" width="566" height="425"></a>
-						<a href="full/g/w463a_i2.webp"><img loading="lazy" src="style/g/w463a_i2.webp" alt="Mercedes,W463,G-class,Cabriolet,Interior" width="638" height="425"></a>
-					</section>
 				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<h4 class="bf1a i m0">Facelift II</h4>
-						<p class="i m1">09/2008</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-facelift ii" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h4>Facelift II<h4>
+										09/2008
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-facelift ii" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h5>Long</h5>
+							<a href="full/g/w463l_f21.jpg"><img loading="lazy" src="style/g/w463l_f21.webp" alt="Mercedes,W463,G-class,long,Front view" width="603" height="452"></a>
+							<a href="full/g/w463l_r21.jpg"><img loading="lazy" src="style/g/w463l_r21.webp" alt="Mercedes,W463,G-class,long,Rear view" width="603" height="452"></a>
+							<h5>Short</h5>
+							<a href="full/g/w463k_f21.jpg"><img loading="lazy" src="style/g/w463k_f21.webp" alt="Mercedes,W463,G-class,short,Front view" width="609" height="448"></a>
+							<a href="full/g/w463k_r21.jpg"><img loading="lazy" src="style/g/w463k_r21.webp" alt="Mercedes,W463,G-class,short,Rear view" width="597" height="448"></a>
+							<h5>Cabriolet</h5>
+							<a href="full/g/w463a_f21.jpg"><img loading="lazy" src="style/g/w463a_f21.webp" alt="Mercedes,W463,G-class,cabriolet,Front view" width="603" height="452"></a>
+							<a href="full/g/w463l_d21.jpg"><img loading="lazy" src="style/g/w463l_d21.webp" alt="Mercedes,W463,G-class,long,Dashboard" width="603" height="452"></a>
+						</div>
 					</div>
-					<section>
-						<h5>Long</h5>
-						<a href="full/g/w463l_f21.jpg"><img loading="lazy" src="style/g/w463l_f21.webp" alt="Mercedes,W463,G-class,long,Front view" width="603" height="452"></a>
-						<a href="full/g/w463l_r21.jpg"><img loading="lazy" src="style/g/w463l_r21.webp" alt="Mercedes,W463,G-class,long,Rear view" width="603" height="452"></a>
-						<h5>Short</h5>
-						<a href="full/g/w463k_f21.jpg"><img loading="lazy" src="style/g/w463k_f21.webp" alt="Mercedes,W463,G-class,short,Front view" width="609" height="448"></a>
-						<a href="full/g/w463k_r21.jpg"><img loading="lazy" src="style/g/w463k_r21.webp" alt="Mercedes,W463,G-class,short,Rear view" width="597" height="448"></a>
-						<h5>Cabriolet</h5>
-						<a href="full/g/w463a_f21.jpg"><img loading="lazy" src="style/g/w463a_f21.webp" alt="Mercedes,W463,G-class,cabriolet,Front view" width="603" height="452"></a>
-						<a href="full/g/w463l_d21.jpg"><img loading="lazy" src="style/g/w463l_d21.webp" alt="Mercedes,W463,G-class,long,Dashboard" width="603" height="452"></a>
-					</section>
 				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<h4 class="bf1a i m0">Facelift III</h4>
-						<p class="i m1">2012-2018</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-facelift iii" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h4>Facelift III<h4>
+										2012-2018
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-facelift iii" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h5>Long</h5>
+							<a href="full/g/w463l_f3.jpg"><img loading="lazy" src="style/g/w463l_f3.webp" alt="Mercedes,W463,G-class,long,Front view" width="430" height="287"></a>
+							<a href="full/g/w463l_r3.jpg"><img loading="lazy" src="style/g/w463l_r3.webp" alt="Mercedes,W463,G-class,long,Rear view" width="387" height="287"></a>
+							<a href="full/g/w463l_d3.jpg"><img loading="lazy" src="style/g/w463l_d3.webp" alt="Mercedes,W463,G-class,long,Dashboard" width="383" height="287"></a>
+							<h5>Cabriolet</h5>
+							<a href="full/g/w463a_f3.jpg"><img loading="lazy" src="style/g/w463a_f3.webp" alt="Mercedes,W463,G-class,cabriolet,Front view" width="602" height="376"></a>
+							<a href="full/g/w463a_r3.jpg"><img loading="lazy" src="style/g/w463a_r3.webp" alt="Mercedes,W463,G-class,cabriolet,Rear view" width="602" height="376"></a><br>
+							<h5 class="i">G63 AMG 6×6</h5>
+							<p class="i m1">2014</p><br>
+							<a href="full/g/w463l_f3_6x6.jpg"><img loading="lazy" src="style/g/w463l_f3_6x6.webp" alt="Mercedes,W463,6x6,G-class,Front view" width="567" height="425"></a>
+							<a href="full/g/w463l_d3_6x6.jpg"><img loading="lazy" src="style/g/w463l_d3_6x6.webp" alt="Mercedes,W463,6x6,G-class,Dashboard" width="638" height="425"></a>
+						</div>
 					</div>
-					<section>
-						<h5>Long</h5>
-						<a href="full/g/w463l_f3.jpg"><img loading="lazy" src="style/g/w463l_f3.webp" alt="Mercedes,W463,G-class,long,Front view" width="430" height="287"></a>
-						<a href="full/g/w463l_r3.jpg"><img loading="lazy" src="style/g/w463l_r3.webp" alt="Mercedes,W463,G-class,long,Rear view" width="387" height="287"></a>
-						<a href="full/g/w463l_d3.jpg"><img loading="lazy" src="style/g/w463l_d3.webp" alt="Mercedes,W463,G-class,long,Dashboard" width="383" height="287"></a>
-						<h5>Cabriolet</h5>
-						<a href="full/g/w463a_f3.jpg"><img loading="lazy" src="style/g/w463a_f3.webp" alt="Mercedes,W463,G-class,cabriolet,Front view" width="602" height="376"></a>
-						<a href="full/g/w463a_r3.jpg"><img loading="lazy" src="style/g/w463a_r3.webp" alt="Mercedes,W463,G-class,cabriolet,Rear view" width="602" height="376"></a><br>
-						<h5 class="i">G63 AMG 6×6</h5>
-						<p class="i m1">2014</p><br>
-						<a href="full/g/w463l_f3_6x6.jpg"><img loading="lazy" src="style/g/w463l_f3_6x6.webp" alt="Mercedes,W463,6x6,G-class,Front view" width="567" height="425"></a>
-						<a href="full/g/w463l_d3_6x6.jpg"><img loading="lazy" src="style/g/w463l_d3_6x6.webp" alt="Mercedes,W463,6x6,G-class,Dashboard" width="638" height="425"></a>
-					</section>
 				</div>
+
 			</div>
 		</section>
 
@@ -564,36 +621,44 @@
 			<h2>W463 II ( Full model change )</h2>
 			<div class="style-w">
 				<a href="full/g/w463_2.jpg"><img loading="lazy" src="style/g/w463_2.webp" alt="Mercedes,W463_2,G-class,Lang" width="1210" height="681"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<p class="bf1a i"><a href="https://en.wikipedia.org/wiki/Mercedes-Benz_G-Class#W463,_second_generation_(2018–2024)" class="ico-wiki m1" title="Wikipedia(E) W463(2018-)"></a></p>
-						<h3 class="i">W463 II</h3>
-						<p class="i m1">01/2018-</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-w463 ii" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://en.wikipedia.org/wiki/Mercedes-Benz_G-Class#W463,_second_generation_(2018–2024)" class="ico-wiki" title="Wikipedia(E) W463(2018-)"></a>
+								<h3>W463 II<h3>
+										01/2018-
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-w463 ii" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">W463 II</h4>
+							<a href="full/g/w463_2_chassi.jpg"><img loading="lazy" src="style/g/w463_2_chassi.webp" alt="Mercedes,W463_2,chassis" width="604" height="340"></a>
+							<a href="full/g/w463_2_chassi2.jpg"><img loading="lazy" src="style/g/w463_2_chassi2.webp" alt="Mercedes,W463_2,chassis" width="604" height="340"></a>
+							<a href="full/g/w463_2_f.jpg"><img loading="lazy" src="style/g/w463_2_f.webp" alt="Mercedes,W463_2,G-class,Long,Front view" width="604" height="340"></a>
+							<a href="full/g/w463_2_r.jpg"><img loading="lazy" src="style/g/w463_2_r.webp" alt="Mercedes,W463_2,G-class,Long,Rear view" width="604" height="340"></a><br>
+							<a href="full/g/w463_2_d.jpg"><img loading="lazy" src="style/g/w463_2_d.webp" alt="Mercedes,W463_2,G-class,Long,Dashboard" width="604" height="340"></a>
+							<a href="full/g/w463_2_i.jpg"><img loading="lazy" src="style/g/w463_2_i.webp" alt="Mercedes,W463_2,G-class,Long,Interior" width="604" height="340"></a><br>
+							<h5>Professional Line</h5>
+							<a href="full/g/w463_2_pro_f.jpg"><img loading="lazy" src="style/g/w463_2_pro_f.webp" alt="Mercedes,W463_2,G-class,Professional Line,Front view" width="603" height="402"></a>
+							<a href="full/g/w463_2_pro_r.jpg"><img loading="lazy" src="style/g/w463_2_pro_r.webp" alt="Mercedes,W463_2,G-class,Professional Line,Rear view" width="602" height="402"></a>
+							<h5>Dimensions</h5>
+							<a href="full/g/w463_2_aa.webp"><img loading="lazy" src="style/g/w463_2_aa.webp" alt="Mercedes,W463_2,G-class,Long,Dimensions" width="820" height="405"></a>
+							<a href="full/g/w463_2_ab.webp"><img loading="lazy" src="style/g/w463_2_ab.webp" alt="Mercedes,W463_2,G-class,Long,Dimensions" width="386" height="405"></a><br>
+							<a href="full/g/w463_2_ac.webp"><img loading="lazy" src="style/g/w463_2_ac.webp" alt="Mercedes,W463_2,G-class,Long,Dimensions" width="820" height="405"></a>
+							<a href="full/g/w463_2_ad.webp"><img loading="lazy" src="style/g/w463_2_ad.webp" alt="Mercedes,W463_2,G-class,Long,Dimensions" width="386" height="405"></a><br>
+							<h4 class="bf1b i">G63 AMG</h4>
+							<p class="i m1">01/2018 - 2024</p><br>
+							<a href="full/g/w463_2_f_amg.jpg"><img loading="lazy" src="style/g/w463_2_f_amg.webp" alt="Mercedes,W463_2,G-class,AMG,Long,Front view" width="603" height="339"></a>
+							<a href="full/g/w463_2_r_amg.jpg"><img loading="lazy" src="style/g/w463_2_r_amg.webp" alt="Mercedes,W463_2,G-class,AMG,Long,Rear view" width="603" height="339"></a><br>
+							<a href="full/g/w463_2_d_amg.jpg"><img loading="lazy" src="style/g/w463_2_d_amg.webp" alt="Mercedes,W463_2,G-class,Long,Dashboard" width="603" height="400"></a>
+							<a href="full/g/w463_2_m_amg.jpg"><img loading="lazy" src="style/g/w463_2_m_amg.webp" alt="Mercedes,W463_2,G-class,Long,Engine" width="603" height="400"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">W463 II</h4>
-						<a href="full/g/w463_2_chassi.jpg"><img loading="lazy" src="style/g/w463_2_chassi.webp" alt="Mercedes,W463_2,chassis" width="604" height="340"></a>
-						<a href="full/g/w463_2_chassi2.jpg"><img loading="lazy" src="style/g/w463_2_chassi2.webp" alt="Mercedes,W463_2,chassis" width="604" height="340"></a>
-						<a href="full/g/w463_2_f.jpg"><img loading="lazy" src="style/g/w463_2_f.webp" alt="Mercedes,W463_2,G-class,Long,Front view" width="604" height="340"></a>
-						<a href="full/g/w463_2_r.jpg"><img loading="lazy" src="style/g/w463_2_r.webp" alt="Mercedes,W463_2,G-class,Long,Rear view" width="604" height="340"></a><br>
-						<a href="full/g/w463_2_d.jpg"><img loading="lazy" src="style/g/w463_2_d.webp" alt="Mercedes,W463_2,G-class,Long,Dashboard" width="604" height="340"></a>
-						<a href="full/g/w463_2_i.jpg"><img loading="lazy" src="style/g/w463_2_i.webp" alt="Mercedes,W463_2,G-class,Long,Interior" width="604" height="340"></a><br>
-						<h5>Professional Line</h5>
-						<a href="full/g/w463_2_pro_f.jpg"><img loading="lazy" src="style/g/w463_2_pro_f.webp" alt="Mercedes,W463_2,G-class,Professional Line,Front view" width="603" height="402"></a>
-						<a href="full/g/w463_2_pro_r.jpg"><img loading="lazy" src="style/g/w463_2_pro_r.webp" alt="Mercedes,W463_2,G-class,Professional Line,Rear view" width="602" height="402"></a>
-						<h5>Dimensions</h5>
-						<a href="full/g/w463_2_aa.webp"><img loading="lazy" src="style/g/w463_2_aa.webp" alt="Mercedes,W463_2,G-class,Long,Dimensions" width="820" height="405"></a>
-						<a href="full/g/w463_2_ab.webp"><img loading="lazy" src="style/g/w463_2_ab.webp" alt="Mercedes,W463_2,G-class,Long,Dimensions" width="386" height="405"></a><br>
-						<a href="full/g/w463_2_ac.webp"><img loading="lazy" src="style/g/w463_2_ac.webp" alt="Mercedes,W463_2,G-class,Long,Dimensions" width="820" height="405"></a>
-						<a href="full/g/w463_2_ad.webp"><img loading="lazy" src="style/g/w463_2_ad.webp" alt="Mercedes,W463_2,G-class,Long,Dimensions" width="386" height="405"></a><br>
-						<h4 class="bf1b i">G63 AMG</h4>
-						<p class="i m1">01/2018 - 2024</p><br>
-						<a href="full/g/w463_2_f_amg.jpg"><img loading="lazy" src="style/g/w463_2_f_amg.webp" alt="Mercedes,W463_2,G-class,AMG,Long,Front view" width="603" height="339"></a>
-						<a href="full/g/w463_2_r_amg.jpg"><img loading="lazy" src="style/g/w463_2_r_amg.webp" alt="Mercedes,W463_2,G-class,AMG,Long,Rear view" width="603" height="339"></a><br>
-						<a href="full/g/w463_2_d_amg.jpg"><img loading="lazy" src="style/g/w463_2_d_amg.webp" alt="Mercedes,W463_2,G-class,Long,Dashboard" width="603" height="400"></a>
-						<a href="full/g/w463_2_m_amg.jpg"><img loading="lazy" src="style/g/w463_2_m_amg.webp" alt="Mercedes,W463_2,G-class,Long,Engine" width="603" height="400"></a>
-					</section>
 				</div>
+
 			</div>
 		</section>
 
@@ -601,22 +666,30 @@
 			<h2>W464 ( Successor to the W461 )</h2>
 			<div class="style-w">
 				<img loading="lazy" src="style/g/w464.webp" alt="Mercedes,W464,G-class,Front view" width="1210" height="605">
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<p class="bf1a i"><a href="https://de.wikipedia.org/wiki/Mercedes-Benz_G-Klasse#W_464_(seit_2023)" class="ico-wiki m1" title="Wikipedia(D)"></a></p>
-						<h3 class="i">W464</h3>
-						<p class="i m1">8/2023 - </p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-w464" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://de.wikipedia.org/wiki/Mercedes-Benz_G-Klasse#W_464_(seit_2023)" class="ico-wiki" title="Wikipedia(D)"></a>
+								<h3>W464<h3>
+										08/2023 -
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-w464" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<a href="full/g/w464_f.jpg"><img loading="lazy" src="style/g/w464_f.webp" alt="Mercedes,W464,G-class,Front view" width="321" height="326"></a>
+							<a href="full/g/w464_s.jpg"><img loading="lazy" src="style/g/w464_s.webp" alt="Mercedes,W464,G-class,Side view" width="585" height="326"></a>
+							<a href="full/g/w464_r.jpg"><img loading="lazy" src="style/g/w464_r.webp" alt="Mercedes,W464,G-class,Rear view" width="293" height="326"></a><br>
+							<a href="full/g/w464_chassi_f.jpg"><img loading="lazy" src="style/g/w464_chassi_f.webp" alt="Mercedes,W464,G-class,Chassis,Front view" width="660" height="381"></a>
+							<a href="full/g/w464_chassi_r.jpg"><img loading="lazy" src="style/g/w464_chassi_r.webp" alt="Mercedes,W464,G-class,Chassis,Rear view" width="545" height="381"></a><br>
+							<a href="full/g/w464_chassi_s.jpg"><img loading="lazy" src="style/g/w464_chassi_s.webp" alt="Mercedes,W464,G-class,Chassis,Side view" width="743" height="346"></a>
+							<a href="full/g/w464_d.jpg"><img loading="lazy" src="style/g/w464_d.webp" alt="Mercedes,W464,G-class,Dashboard" width="461" height="346"></a><br>
+						</div>
 					</div>
-					<section>
-						<a href="full/g/w464_f.jpg"><img loading="lazy" src="style/g/w464_f.webp" alt="Mercedes,W464,G-class,Front view" width="321" height="326"></a>
-						<a href="full/g/w464_s.jpg"><img loading="lazy" src="style/g/w464_s.webp" alt="Mercedes,W464,G-class,Side view" width="585" height="326"></a>
-						<a href="full/g/w464_r.jpg"><img loading="lazy" src="style/g/w464_r.webp" alt="Mercedes,W464,G-class,Rear view" width="293" height="326"></a><br>
-						<a href="full/g/w464_chassi_f.jpg"><img loading="lazy" src="style/g/w464_chassi_f.webp" alt="Mercedes,W464,G-class,Chassis,Front view" width="660" height="381"></a>
-						<a href="full/g/w464_chassi_r.jpg"><img loading="lazy" src="style/g/w464_chassi_r.webp" alt="Mercedes,W464,G-class,Chassis,Rear view" width="545" height="381"></a><br>
-						<a href="full/g/w464_chassi_s.jpg"><img loading="lazy" src="style/g/w464_chassi_s.webp" alt="Mercedes,W464,G-class,Chassis,Side view" width="743" height="346"></a>
-						<a href="full/g/w464_d.jpg"><img loading="lazy" src="style/g/w464_d.webp" alt="Mercedes,W464,G-class,Dashboard" width="461" height="346"></a><br>
-					</section>
 				</div>
+
 			</div>
 		</section>
 
@@ -624,28 +697,36 @@
 			<h2>W465 ( Successor to the W463 II )</h2>
 			<div class="style-w">
 				<img loading="lazy" src="style/g/w465.webp" alt="Mercedes,W465,G-class,Front view" width="1210" height="850">
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<p class="bf1a i"><a href="https://en.wikipedia.org/wiki/Mercedes-Benz_G-Class#W465_(2024–present)" class="ico-wiki m1" title="Wikipedia(D)"></a></p>
-						<h3 class="i">W465</h3>
-						<p class="i m1">3/2024 - </p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-w465" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://en.wikipedia.org/wiki/Mercedes-Benz_G-Class#W465_(2024–present)" class="ico-wiki" title="Wikipedia(D)"></a>
+								<h3>W465<h3>
+										03/2024 -
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-w465" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<a href="full/g/w465_f.jpg"><img loading="lazy" src="style/g/w465_f.webp" alt="Mercedes,W465,G-class,Front view" width="588" height="411"></a>
+							<a href="full/g/w465_m.jpg"><img loading="lazy" src="style/g/w465_m.webp" alt="Mercedes,W465,G-class,Engine" width="617" height="411"></a><br>
+							<a href="full/g/w465_s.jpg"><img loading="lazy" src="style/g/w465_s.webp" alt="Mercedes,W465,G-class,側面" width="631" height="361"></a>
+							<a href="full/g/w465_r.webp"><img loading="lazy" src="style/g/w465_r.webp" alt="Mercedes,W465,G-class,Rear view" width="574" height="361"></a><br>
+							<a href="full/g/w465_d.webp"><img loading="lazy" src="style/g/w465_d.webp" alt="Mercedes,W465,G-class,Dashboard" width="586" height="412"></a>
+							<a href="full/g/w465_ic.jpg"><img loading="lazy" src="style/g/w465_ic.webp" alt="Mercedes,W465,G-class,Interior" width="619" height="412"></a><br>
+							<a href="full/g/w465_ib.jpg"><img loading="lazy" src="style/g/w465_ib.webp" alt="Mercedes,W465,G-class,Interior" width="602" height="401"></a>
+							<a href="full/g/w465_ia.jpg"><img loading="lazy" src="style/g/w465_ia.webp" alt="Mercedes,W465,G-class,Interior" width="602" height="401"></a><br>
+							<h4 class="i">G63 AMG</h4><br>
+							<a href="full/g/w465_f_amg.webp"><img loading="lazy" src="style/g/w465_f_amg.webp" alt="Mercedes,W465,G-class,AMG,Front view" width="637" height="378"></a>
+							<a href="full/g/w465_r_amg.jpg"><img loading="lazy" src="style/g/w465_r_amg.webp" alt="Mercedes,W465,G-class,AMG,Rear view" width="568" height="378"></a><br>
+							<a href="full/g/w465_d_amg.avif"><img loading="lazy" src="style/g/w465_d_amg.webp" alt="Mercedes,W465,G-class,AMG,Dashboard" width="654" height="368"></a>
+							<a href="full/g/w465_m_amg.avif"><img loading="lazy" src="style/g/w465_m_amg.webp" alt="Mercedes,W465,G-class,AMG,Engine" width="552" height="368"></a><br>
+						</div>
 					</div>
-					<section>
-						<a href="full/g/w465_f.jpg"><img loading="lazy" src="style/g/w465_f.webp" alt="Mercedes,W465,G-class,Front view" width="588" height="411"></a>
-						<a href="full/g/w465_m.jpg"><img loading="lazy" src="style/g/w465_m.webp" alt="Mercedes,W465,G-class,Engine" width="617" height="411"></a><br>
-						<a href="full/g/w465_s.jpg"><img loading="lazy" src="style/g/w465_s.webp" alt="Mercedes,W465,G-class,側面" width="631" height="361"></a>
-						<a href="full/g/w465_r.webp"><img loading="lazy" src="style/g/w465_r.webp" alt="Mercedes,W465,G-class,Rear view" width="574" height="361"></a><br>
-						<a href="full/g/w465_d.webp"><img loading="lazy" src="style/g/w465_d.webp" alt="Mercedes,W465,G-class,Dashboard" width="586" height="412"></a>
-						<a href="full/g/w465_ic.jpg"><img loading="lazy" src="style/g/w465_ic.webp" alt="Mercedes,W465,G-class,Interior" width="619" height="412"></a><br>
-						<a href="full/g/w465_ib.jpg"><img loading="lazy" src="style/g/w465_ib.webp" alt="Mercedes,W465,G-class,Interior" width="602" height="401"></a>
-						<a href="full/g/w465_ia.jpg"><img loading="lazy" src="style/g/w465_ia.webp" alt="Mercedes,W465,G-class,Interior" width="602" height="401"></a><br>
-						<h4 class="i">G63 AMG</h4><br>
-						<a href="full/g/w465_f_amg.webp"><img loading="lazy" src="style/g/w465_f_amg.webp" alt="Mercedes,W465,G-class,AMG,Front view" width="637" height="378"></a>
-						<a href="full/g/w465_r_amg.jpg"><img loading="lazy" src="style/g/w465_r_amg.webp" alt="Mercedes,W465,G-class,AMG,Rear view" width="568" height="378"></a><br>
-						<a href="full/g/w465_d_amg.avif"><img loading="lazy" src="style/g/w465_d_amg.webp" alt="Mercedes,W465,G-class,AMG,Dashboard" width="654" height="368"></a>
-						<a href="full/g/w465_m_amg.avif"><img loading="lazy" src="style/g/w465_m_amg.webp" alt="Mercedes,W465,G-class,AMG,Engine" width="552" height="368"></a><br>
-					</section>
 				</div>
+
 			</div>
 		</section>
 
@@ -697,9 +778,10 @@
 			<hr>
 			<p class="mid"><small>@ since 2010 , piyopiyo_246</small></p>
 		</footer>
+
 		<p class="m-05" id="page-top"><a href="#head">&#9650;</a></p>
 		<p id="close-accordion">
-			<a class="vmenu_all_action" onclick="doReplaceClassName ('vmenu_on2','vmenu_off')" title="Close all openings">&#9654;</a>
+			<a id="close-all-accordions-2" class="vmenu_all_action" title="Close all openings">&#9654;</a>
 		</p>
 	</div>
 
@@ -735,7 +817,7 @@
 				analytics_storage: 'denied',
 				ad_storage: 'denied',
 				functionality_storage: 'granted',
-				region: ['US', 'GB', 'CA', 'AU', 'NZ', 'IE'] 
+				region: ['US', 'GB', 'CA', 'AU', 'NZ', 'IE']
 			};
 
 			// GTM用設定
@@ -773,6 +855,120 @@
 			}, 500);
 			return false;
 		});
+	});
+</script>
+
+<script>
+	// シンプル版アコーディオン機能（入れ子非対応）
+	document.addEventListener('DOMContentLoaded', function () {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+		accordionHeaders.forEach(header => {
+			header.addEventListener('click', function () {
+				const content = this.nextElementSibling;
+				const isActive = this.classList.contains('active');
+
+				// クリックされたアコーディオンのみトグル
+				if (isActive) {
+					this.classList.remove('active');
+					this.setAttribute('aria-expanded', 'false');
+					content.classList.remove('active');
+				} else {
+					this.classList.add('active');
+					this.setAttribute('aria-expanded', 'true');
+					content.classList.add('active');
+				}
+			});
+
+			// キーボード操作のサポート
+			header.addEventListener('keydown', function (e) {
+				if (e.key === 'Enter' || e.key === ' ') {
+					e.preventDefault();
+					this.click();
+				}
+			});
+		});
+
+		// 全開/全閉ボタンのイベントリスナー
+		const openAllBtn = document.getElementById('open-all-accordions');
+		const closeAllBtn = document.getElementById('close-all-accordions');
+		const closeAllBtn2 = document.getElementById('close-all-accordions-2');
+
+		if (openAllBtn) {
+			openAllBtn.addEventListener('click', openAllAccordions);
+		}
+
+		if (closeAllBtn) {
+			closeAllBtn.addEventListener('click', closeAllAccordions);
+		}
+
+		if (closeAllBtn2) {
+			closeAllBtn2.addEventListener('click', closeAllAccordions);
+		}
+	});
+
+	// 全アコーディオン操作機能
+	function openAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.add('active');
+			header.setAttribute('aria-expanded', 'true');
+			content.classList.add('active');
+		});
+	}
+
+	function closeAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.remove('active');
+			header.setAttribute('aria-expanded', 'false');
+			content.classList.remove('active');
+		});
+	}
+
+	// 全アコーディオン操作機能
+	function openAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.add('active');
+			header.setAttribute('aria-expanded', 'true');
+			content.classList.add('active');
+		});
+	}
+
+	function closeAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.remove('active');
+			header.setAttribute('aria-expanded', 'false');
+			content.classList.remove('active');
+		});
+	}
+
+	// ボタンにイベントリスナーを追加
+	document.addEventListener('DOMContentLoaded', function () {
+		// 既存のアコーディオンコード...
+
+		// 全開/全閉ボタン
+		const openAllBtn = document.getElementById('open-all-accordions');
+		const closeAllBtn = document.getElementById('close-all-accordions');
+		const closeAllBtn2 = document.getElementById('close-all-accordions-2'); // 追加ボタン
+
+		if (openAllBtn) {
+			openAllBtn.addEventListener('click', openAllAccordions);
+		}
+
+		if (closeAllBtn) {
+			closeAllBtn.addEventListener('click', closeAllAccordions);
+		}
+
+		if (closeAllBtn2) {
+			closeAllBtn2.addEventListener('click', closeAllAccordions);
+		}
 	});
 </script>
 

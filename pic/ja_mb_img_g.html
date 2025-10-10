@@ -51,23 +51,6 @@
 	<link rel="stylesheet" href="../style.min.css">
 	<link rel="stylesheet" href="../style_v.min.css">
 
-	<!-- アコーディオン用のJavaScript関数を追加 -->
-	<script>
-		function doToggleClassName(obj, onClassName, offClassName) {
-			obj.className = (obj.className != onClassName) ? onClassName : offClassName;
-		}
-		function getParentObj(obj) {
-			return obj.parentElement || obj.parentNode;
-		}
-		function doReplaceClassName(findClassName, replaceClassName, targetTagName) {
-			var elements = document.getElementsByTagName(targetTagName || '*');
-			for (var i = 0; i < elements.length; i++) {
-				if (elements[i].className == findClassName)
-					elements[i].className = replaceClassName;
-			}
-		}
-	</script>
-
 	<!-- 6. Cookie同意管理システム -->
 	<script>
 		window._cookiescript = {
@@ -271,7 +254,7 @@
 					</li>
 				</ul>
 				<h1 class="b bf4">G クラス ( ゲレンデヴァーゲン )</h1>
-				 <div style="display: flex; justify-content: space-between; width: 1210px;">
+				<div style="display: flex; justify-content: space-between; width: 1210px;">
 					<dl class="m1">
 						<dt class="s2 af0">Series</dt>
 						<dd class="s2"><a href="#w460" title="ゲレンデヴァーゲン W460" class="lnk2">460</a></dd>
@@ -282,8 +265,8 @@
 						<dd class="s2"><a href="#w465" title="Gクラス W465" class="lnk2">465</a></dd>
 					</dl>
 					<span>
-						<button class="vmenu_all_action square_btn" type="button" title="クリックで全ての開閉部を開く" span onclick="doReplaceClassName('vmenu_off', 'vmenu_on2')">全て開く</button>
-						<button class="vmenu_all_action square_btn" type="button" title="クリックで全ての開閉部を閉じる" span onclick="doReplaceClassName('vmenu_on2', 'vmenu_off')">全て閉じる</button>
+						<button id="open-all-accordions" class="vmenu_all_action square_btn" type="button" title="クリックで全ての開閉部を開く">全て開く</button>
+						<button id="close-all-accordions" class="vmenu_all_action square_btn" type="button" title="クリックで全ての開閉部を閉じる">全て閉じる</button>
 						<button class="square_btn" type="button" onclick="location.href='en_mb_img_g.html'">En</button>
 						<button class="square_btn" type="button" onclick="location.href='mb_img_g.html'">De</button>
 					</span>
@@ -342,55 +325,78 @@
 			<h2>W460</h2>
 			<div class="style-w">
 				<a href="full/g/w460_all.jpg"><img src="style/g/w460_all.webp" alt="メルセデス,W460,ゲレンデヴァーゲン" width="1210" height="862"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<p class="bf1a i">
-							<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBG%E3%82%AF%E3%83%A9%E3%82%B9" class="ico-wiki m1" title="Wikipedia(J)"></a>
-							<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBG%E3%82%AF%E3%83%A9%E3%82%B9#W460%E5%9E%8B" class="ico-wiki m1" title="Wikipedia(J)"></a>
-						</p>
-						<h3 class="i">W460</h3>
-						<p class="i m1">1979 - 1990</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-w460" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBG%E3%82%AF%E3%83%A9%E3%82%B9#W460%E5%9E%8B" class="ico-wiki" title="Wikipedia(J)"></a>
+								<h3>W460<h3>
+										1979 - 1990
+							</div>
+							<div class="accordion-right">
+								Designer : Erich Ledwinka
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-w460" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">W460</h4>
+							<a href="full/g/w460_a.jpg"><img loading="lazy" src="style/g/w460_a.webp" alt="メルセデス,W460_1997,ゲレンデヴァーゲン" width="1210" height="847"></a><br>
+							<a href="full/g/w460_a2.jpg"><img loading="lazy" src="style/g/w460_a2.webp" alt="メルセデス,W460_1997,ゲレンデヴァーゲン" width="1210" height="1711"></a><br>
+							<a href="full/g/w460_chassis.jpg"><img loading="lazy" src="style/g/w460_chassis.webp" alt="メルセデス,W460_シャーシ,ゲレンデヴァーゲン" width="1210" height="815"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">W460</h4>
-						<a href="full/g/w460_a.jpg"><img loading="lazy" src="style/g/w460_a.webp" alt="メルセデス,W460_1997,ゲレンデヴァーゲン" width="1210" height="847"></a><br>
-						<a href="full/g/w460_a2.jpg"><img loading="lazy" src="style/g/w460_a2.webp" alt="メルセデス,W460_1997,ゲレンデヴァーゲン" width="1210" height="1711"></a><br>
-						<a href="full/g/w460_chassis.jpg"><img loading="lazy" src="style/g/w460_chassis.webp" alt="メルセデス,W460_シャーシ,ゲレンデヴァーゲン" width="1210" height="815"></a>
-					</section>
 				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<h4 class="bf1a i m0">Long</h4>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-long" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h4>Long<h4>
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-long" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">W460</h4>
+							<a href="full/g/w460l_f.jpg"><img loading="lazy" src="style/g/w460l_f.webp" alt="メルセデス,W460,ゲレンデヴァーゲン,ロング,フロント" width="1210" height="757"></a><br>
+							<a href="full/g/w460l_r.jpg"><img loading="lazy" src="style/g/w460l_r.webp" alt="メルセデス,W460,ゲレンデヴァーゲン,ロング,リヤ" width="530" height="433"></a>
+							<a href="full/g/w460l_d.jpg"><img loading="lazy" src="style/g/w460l_d.webp" alt="メルセデス,W460,ゲレンデヴァーゲン,ロング,ダッシュボード" width="675" height="433"></a><br>
+							<h5 class="i">内装</h5>
+							<p class="i m1">1986</p><br>
+							<a href="full/g/w460_d_1986.jpg"><img loading="lazy" src="style/g/w460_d_1986.webp" alt="メルセデス,W460,ゲレンデヴァーゲン,ロング,ダッシュボード,1986" width="792" height="570"></a>
+							<a href="full/g/w460_shift.jpg"><img loading="lazy" src="style/g/w460_shift.webp" alt="メルセデス,W460,ゲレンデヴァーゲン,ロング,ギアシフトレバー" width="412" height="570"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">W460</h4>
-						<a href="full/g/w460l_f.jpg"><img loading="lazy" src="style/g/w460l_f.webp" alt="メルセデス,W460,ゲレンデヴァーゲン,ロング,フロント" width="1210" height="757"></a><br>
-						<a href="full/g/w460l_r.jpg"><img loading="lazy" src="style/g/w460l_r.webp" alt="メルセデス,W460,ゲレンデヴァーゲン,ロング,リヤ" width="530" height="433"></a>
-						<a href="full/g/w460l_d.jpg"><img loading="lazy" src="style/g/w460l_d.webp" alt="メルセデス,W460,ゲレンデヴァーゲン,ロング,ダッシュボード" width="675" height="433"></a><br>
-						<h5 class="i">内装</h5>
-						<p class="i m1">1986</p><br>
-						<a href="full/g/w460_d_1986.jpg"><img loading="lazy" src="style/g/w460_d_1986.webp" alt="メルセデス,W460,ゲレンデヴァーゲン,ロング,ダッシュボード,1986" width="792" height="570"></a>
-						<a href="full/g/w460_shift.jpg"><img loading="lazy" src="style/g/w460_shift.webp" alt="メルセデス,W460,ゲレンデヴァーゲン,ロング,ギアシフトレバー" width="412" height="570"></a>
-					</section>
 				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<h4 class="bf1a i m0">Short / カブリオレ</h4>
+
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-short / カブリオレ" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h4>Short / カブリオレ<h4>
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-short / カブリオレ" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h5>Short</h5>
+							<a href="full/g/w460k_f.jpg"><img loading="lazy" src="style/g/w460k_f.webp" alt="メルセデス,W460,ゲレンデヴァーゲン,ショート,フロント" width="656" height="399"></a>
+							<a href="full/g/w460k_r.jpg"><img loading="lazy" src="style/g/w460k_r.webp" alt="メルセデス,W460,ゲレンデヴァーゲン,ショート,リヤ" width="549" height="399"></a><br>
+							<a href="full/g/w460k_d.jpg"><img loading="lazy" src="style/g/w460k_d.webp" alt="メルセデス,W460,ゲレンデヴァーゲン,ショート,ダッシュボード" width="675" height="400"></a>
+							<a href="full/g/w460k_tp.jpg"><img loading="lazy" src="style/g/w460k_tp.webp" alt="メルセデス,W460,ゲレンデヴァーゲン,透視図" width="530" height="400"></a>
+							<h5>カブリオレ</h5>
+							<a href="full/g/w460a.jpg"><img loading="lazy" src="style/g/w460a.webp" alt="メルセデス,W460,ゲレンデヴァーゲン,カブリオレ" width="1210" height="1041"></a><br>
+							<a href="full/g/w460a_f.jpg"><img loading="lazy" src="style/g/w460a_f.webp" alt="メルセデス,W460,ゲレンデヴァーゲン,カブリオレ,フロント" width="604" height="453"></a>
+							<a href="full/g/w460a_r.jpg"><img loading="lazy" src="style/g/w460a_r.webp" alt="メルセデス,W460,ゲレンデヴァーゲン,カブリオレ,リヤ" width="601" height="453"></a>
+							<h5>1983年、ジャッキー・イクスとクロード・ブラッスールが280 GE（W460）でパリ-ダカールラリーで優勝しました。</h5>
+							<a href="full/g/w460_rallye_paris_dakar.jpg"><img loading="lazy" src="style/g/w460_rallye_paris_dakar.webp" alt="メルセデス,W460,ゲレンデヴァーゲン,カブリオレ" width="1210" height="780"></a>
+						</div>
 					</div>
-					<section>
-						<h5>Short</h5>
-						<a href="full/g/w460k_f.jpg"><img loading="lazy" src="style/g/w460k_f.webp" alt="メルセデス,W460,ゲレンデヴァーゲン,ショート,フロント" width="656" height="399"></a>
-						<a href="full/g/w460k_r.jpg"><img loading="lazy" src="style/g/w460k_r.webp" alt="メルセデス,W460,ゲレンデヴァーゲン,ショート,リヤ" width="549" height="399"></a><br>
-						<a href="full/g/w460k_d.jpg"><img loading="lazy" src="style/g/w460k_d.webp" alt="メルセデス,W460,ゲレンデヴァーゲン,ショート,ダッシュボード" width="675" height="400"></a>
-						<a href="full/g/w460k_tp.jpg"><img loading="lazy" src="style/g/w460k_tp.webp" alt="メルセデス,W460,ゲレンデヴァーゲン,透視図" width="530" height="400"></a>
-						<h5>カブリオレ</h5>
-						<a href="full/g/w460a.jpg"><img loading="lazy" src="style/g/w460a.webp" alt="メルセデス,W460,ゲレンデヴァーゲン,カブリオレ" width="1210" height="1041"></a><br>
-						<a href="full/g/w460a_f.jpg"><img loading="lazy" src="style/g/w460a_f.webp" alt="メルセデス,W460,ゲレンデヴァーゲン,カブリオレ,フロント" width="604" height="453"></a>
-						<a href="full/g/w460a_r.jpg"><img loading="lazy" src="style/g/w460a_r.webp" alt="メルセデス,W460,ゲレンデヴァーゲン,カブリオレ,リヤ" width="601" height="453"></a>
-						<h5>1983年、ジャッキー・イクスとクロード・ブラッスールが280 GE（W460）でパリ-ダカールラリーで優勝しました。</h5>
-						<a href="full/g/w460_rallye_paris_dakar.jpg"><img loading="lazy" src="style/g/w460_rallye_paris_dakar.webp" alt="メルセデス,W460,ゲレンデヴァーゲン,カブリオレ" width="1210" height="780"></a>
-					</section>
 				</div>
+
 			</div>
 		</section>
 
@@ -398,75 +404,97 @@
 			<h2>W461 (Professional use)</h2>
 			<div class="style-w">
 				<a href="full/g/w461l.jpg"><img loading="lazy" src="style/g/w461l.webp" alt="メルセデス,W461,ゲレンデヴァーゲン,Gクラス,ロング" width="1210" height="756"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<p class="bf1a i"><a href="https://pl.wikipedia.org/wiki/Mercedes-Benz_250_GD_Wolf" class="ico-wiki m1" title="Wikipedia(D)_Mercedes-Benz_250_GD_Wolf"></a></p>
-						<h3 class="i m0">250 GD Wolf</h3>
-						<p class="i m1">ドイツ連邦軍</p> /
-						<p class="i m1">1982 - 1991</p> /
-						<p class="bf1a i"><a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBG%E3%82%AF%E3%83%A9%E3%82%B9#W461型" class="ico-wiki m1" title="Wikipedia(D)_Mercedes-Benz_250_GD_Wolf"></a></p>
-						<h3 class="i">W461</h3>
-						<p class="i m1">1992 - 2022</p>
-						<h4 class="i m2a">Long / Short / カブリオレ</h4>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-250 gd wolf-w461" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://pl.wikipedia.org/wiki/Mercedes-Benz_250_GD_Wolf" class="ico-wiki m10" title="Wikipedia(D)_Mercedes-Benz_250_GD_Wolf"></a>
+								<h3>250 GD Wolf<h3>
+										<p style="margin-left: 0;">ドイツ連邦軍</p>
+										1982 - 1991
+										<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBG%E3%82%AF%E3%83%A9%E3%82%B9#W461型" class="ico-wiki" title="Wikipedia(J)_461"></a>
+										<h3>W461<h3>
+												1992 - 2022
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-250 gd wolf-w461" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">W461</h4>
+							<h5>2012-2013 model</h5>
+							<a href="full/g/w461l_f2.jpg"><img loading="lazy" src="style/g/w461l_f2.webp" alt="メルセデス,W461,Gクラス,ロング,フロント" width="1210" height="694"></a><br>
+							<a href="full/g/w461l_r2.jpg"><img loading="lazy" src="style/g/w461l_r2.webp" alt="メルセデス,W461,Gクラス,ロング,リヤ" width="645" height="419"></a>
+							<a href="full/g/w461l_d2.jpg"><img loading="lazy" src="style/g/w461l_d2.webp" alt="メルセデス,W461,Gクラス,ロング,ダッシュボード" width="558" height="419"></a>
+							<h5>Short</h5>
+							<a href="full/g/w461k_s.jpg"><img loading="lazy" src="style/g/w461k_s.webp" alt="メルセデス,W461,Gクラス,ショート,側面" width="1210" height="726"></a>
+							<a href="full/g/w461k_f.jpg"><img loading="lazy" src="style/g/w461k_f.webp" alt="メルセデス,W461,G,クラス,ショート,フロント" width="601" height="452"></a>
+							<a href="full/g/w461k_i.jpg"><img loading="lazy" src="style/g/w461k_i.webp" alt="メルセデス,W463,Gクラス,ショート,内装" width="603" height="452"></a><br>
+							<h5 class="i">カブリオレ</h5>
+							<p class="i m1">Puch230</p><br>
+							<a href="full/g/w461a_f.jpg"><img loading="lazy" src="style/g/w461a_f.webp" alt="メルセデス,W461,Gクラス,カブリオレ,フロント" width="604" height="402"></a>
+							<a href="full/g/w461a_r.jpg"><img loading="lazy" src="style/g/w461a_r.webp" alt="メルセデス,W461,Gクラス,カブリオレ,リヤ" width="600" height="402"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">W461</h4>
-						<h5>2012-2013 model</h5>
-						<a href="full/g/w461l_f2.jpg"><img loading="lazy" src="style/g/w461l_f2.webp" alt="メルセデス,W461,Gクラス,ロング,フロント" width="1210" height="694"></a><br>
-						<a href="full/g/w461l_r2.jpg"><img loading="lazy" src="style/g/w461l_r2.webp" alt="メルセデス,W461,Gクラス,ロング,リヤ" width="645" height="419"></a>
-						<a href="full/g/w461l_d2.jpg"><img loading="lazy" src="style/g/w461l_d2.webp" alt="メルセデス,W461,Gクラス,ロング,ダッシュボード" width="558" height="419"></a>
-						<h5>Short</h5>
-						<a href="full/g/w461k_s.jpg"><img loading="lazy" src="style/g/w461k_s.webp" alt="メルセデス,W461,Gクラス,ショート,側面" width="1210" height="726"></a>
-						<a href="full/g/w461k_f.jpg"><img loading="lazy" src="style/g/w461k_f.webp" alt="メルセデス,W461,G,クラス,ショート,フロント" width="601" height="452"></a>
-						<a href="full/g/w461k_i.jpg"><img loading="lazy" src="style/g/w461k_i.webp" alt="メルセデス,W463,Gクラス,ショート,内装" width="603" height="452"></a><br>
-						<h5 class="i">カブリオレ</h5>
-						<p class="i m1">Puch230</p><br>
-						<a href="full/g/w461a_f.jpg"><img loading="lazy" src="style/g/w461a_f.webp" alt="メルセデス,W461,Gクラス,カブリオレ,フロント" width="604" height="402"></a>
-						<a href="full/g/w461a_r.jpg"><img loading="lazy" src="style/g/w461a_r.webp" alt="メルセデス,W461,Gクラス,カブリオレ,リヤ" width="600" height="402"></a>
-					</section>
 				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<h4 class="bf1a i m0">Pickup Truck</h4>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-pickup truck" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h4>Pickup Truck<h4>
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-pickup truck" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">wolf</h4>
+							<a href="full/g/wolf_250gd_t_f.jpg"><img loading="lazy" src="style/g/wolf_250gd_t_f.webp" alt="メルセデス,wolf_250GD,トラック,フロント" width="602" height="404"></a>
+							<a href="full/g/wolf_250gd_t_r.jpg"><img loading="lazy" src="style/g/wolf_250gd_t_r.webp" alt="メルセデス,wolf_250GD,トラック,リヤ" width="602" height="404"></a><br>
+							<a href="full/g/wolf_250gd_t_d.jpg"><img loading="lazy" src="style/g/wolf_250gd_t_d.webp" alt="メルセデス,wolf_250GD,トラック,ダッシュボード" width="602" height="404"></a>
+							<a href="full/g/wolf_250gd_t_i.jpg"><img loading="lazy" src="style/g/wolf_250gd_t_i.webp" alt="メルセデス,wolf_250GD,トラック,内装" width="602" height="404"></a><br>
+							<a href="full/g/wolf_250gd_t_m.jpg"><img loading="lazy" src="style/g/wolf_250gd_t_m.webp" alt="メルセデス,wolf_250GD,トラック,エンジン" width="602" height="404"></a>
+							<a href="full/g/wolf_250gd_t_shift.jpg"><img loading="lazy" src="style/g/wolf_250gd_t_shift.webp" alt="メルセデス,wolf_250GD,トラック,ギアシフトレバー" width="602" height="404"></a><br>
+							<a href="full/g/w461t_f2.jpg"><img loading="lazy" src="style/g/w461t_f2.webp" alt="メルセデス,W461,Gクラス,トラック,フロント" width="650" height="487"></a>
+							<a href="full/g/w461t_r2.jpg"><img loading="lazy" src="style/g/w461t_r2.webp" alt="メルセデス,W461,Gクラス,トラック,リヤ" width="554" height="487"></a><br>
+							<h5>2012</h5>
+							<a href="full/g/w461t_f.jpg"><img loading="lazy" src="style/g/w461t_f.webp" alt="メルセデス,W461,Gクラス,トラック,フロント" width="611" height="315"></a>
+							<a href="full/g/w461t_r.jpg"><img loading="lazy" src="style/g/w461t_r.webp" alt="メルセデス,W461,Gクラス,トラック,リヤ" width="594" height="315"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">wolf</h4>
-						<a href="full/g/wolf_250gd_t_f.jpg"><img loading="lazy" src="style/g/wolf_250gd_t_f.webp" alt="メルセデス,wolf_250GD,トラック,フロント" width="602" height="404"></a>
-						<a href="full/g/wolf_250gd_t_r.jpg"><img loading="lazy" src="style/g/wolf_250gd_t_r.webp" alt="メルセデス,wolf_250GD,トラック,リヤ" width="602" height="404"></a><br>
-						<a href="full/g/wolf_250gd_t_d.jpg"><img loading="lazy" src="style/g/wolf_250gd_t_d.webp" alt="メルセデス,wolf_250GD,トラック,ダッシュボード" width="602" height="404"></a>
-						<a href="full/g/wolf_250gd_t_i.jpg"><img loading="lazy" src="style/g/wolf_250gd_t_i.webp" alt="メルセデス,wolf_250GD,トラック,内装" width="602" height="404"></a><br>
-						<a href="full/g/wolf_250gd_t_m.jpg"><img loading="lazy" src="style/g/wolf_250gd_t_m.webp" alt="メルセデス,wolf_250GD,トラック,エンジン" width="602" height="404"></a>
-						<a href="full/g/wolf_250gd_t_shift.jpg"><img loading="lazy" src="style/g/wolf_250gd_t_shift.webp" alt="メルセデス,wolf_250GD,トラック,ギアシフトレバー" width="602" height="404"></a><br>
-						<a href="full/g/w461t_f2.jpg"><img loading="lazy" src="style/g/w461t_f2.webp" alt="メルセデス,W461,Gクラス,トラック,フロント" width="650" height="487"></a>
-						<a href="full/g/w461t_r2.jpg"><img loading="lazy" src="style/g/w461t_r2.webp" alt="メルセデス,W461,Gクラス,トラック,リヤ" width="554" height="487"></a><br>
-						<h5>2012</h5>
-						<a href="full/g/w461t_f.jpg"><img loading="lazy" src="style/g/w461t_f.webp" alt="メルセデス,W461,Gクラス,トラック,フロント" width="611" height="315"></a>
-						<a href="full/g/w461t_r.jpg"><img loading="lazy" src="style/g/w461t_r.webp" alt="メルセデス,W461,Gクラス,トラック,リヤ" width="594" height="315"></a>
-					</section>
 				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<h4 class="bf1a i m0">Police and Military version</h4>
+
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-police and military version" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h4>Police and Military version<h4>
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-police and military version" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">W461</h4>
+							<h5>Police</h5>
+							<a href="full/g/w461k_p_f.jpg"><img loading="lazy" src="style/g/w461k_p_f.webp" alt="メルセデス,W461,Gクラス,ショート,警察,フロント" width="599" height="449"></a>
+							<a href="full/g/w461k_p_r.jpg"><img loading="lazy" src="style/g/w461k_p_r.webp" alt="メルセデス,W461,Gクラス,警察,リヤ" width="599" height="449"></a>
+							<h5>Military</h5>
+							<a href="full/g/w461l_m1_f.jpg"><img loading="lazy" src="style/g/w461l_m1_f.webp" alt="メルセデス,W461,Gクラス,ロング,ミリタリー,フロント" width="639" height="425"></a>
+							<a href="full/g/w461l_m1_r.jpg"><img loading="lazy" src="style/g/w461l_m1_r.webp" alt="メルセデス,W461,Gクラス,ロング,ミリタリー,リヤ" width="567" height="425"></a><br>
+							<a href="full/g/w461l_m2_f.jpg"><img loading="lazy" src="style/g/w461l_m2_f.webp" alt="メルセデス,W461,Gクラス,ロング,ミリタリー,フロント" width="566" height="425"></a>
+							<a href="full/g/w461l_m0_f.jpg"><img loading="lazy" src="style/g/w461l_m0_f.webp" alt="メルセデス,W461,Gクラス,ロング,ミリタリー,フロント" width="637" height="425"></a><br>
+							<a href="full/g/w461la_m1_f.jpg"><img loading="lazy" src="style/g/w461la_m1_f.webp" alt="メルセデス,W461,Gクラス,ロング,ミリタリー,フロント" width="1210" height="586"></a><br>
+							<a href="full/g/w461la_m1_r.jpg"><img loading="lazy" src="style/g/w461la_m1_r.webp" alt="メルセデス,W461,Gクラス,ロング,ミリタリー,リヤ" width="656" height="473"></a>
+							<a href="full/g/w460_ambulanz.jpg"><img loading="lazy" src="style/g/w460_ambulanz.webp" alt="メルセデス,W461,Gクラス,ロング,ミリタリー,フロント" width="549" height="473"></a><br>
+							<h5 class="i">6×6</h5>
+							<p class="i m1">Australian Defense Forces 10/2008</p><br>
+							<a href="full/g/w461l_m4_f.jpg"><img loading="lazy" src="style/g/w461l_m4_f.webp" alt="メルセデス,W461,Gクラス,ロング,ミリタリー,フロント" width="603" height="401"></a>
+							<a href="full/g/w461l_m5_f.jpg"><img loading="lazy" src="style/g/w461l_m5_f.webp" alt="メルセデス,W461,Gクラス,ロング,ミリタリー,フロント" width="603" height="401"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">W461</h4>
-						<h5>Police</h5>
-						<a href="full/g/w461k_p_f.jpg"><img loading="lazy" src="style/g/w461k_p_f.webp" alt="メルセデス,W461,Gクラス,ショート,警察,フロント" width="599" height="449"></a>
-						<a href="full/g/w461k_p_r.jpg"><img loading="lazy" src="style/g/w461k_p_r.webp" alt="メルセデス,W461,Gクラス,警察,リヤ" width="599" height="449"></a>
-						<h5>Military</h5>
-						<a href="full/g/w461l_m1_f.jpg"><img loading="lazy" src="style/g/w461l_m1_f.webp" alt="メルセデス,W461,Gクラス,ロング,ミリタリー,フロント" width="639" height="425"></a>
-						<a href="full/g/w461l_m1_r.jpg"><img loading="lazy" src="style/g/w461l_m1_r.webp" alt="メルセデス,W461,Gクラス,ロング,ミリタリー,リヤ" width="567" height="425"></a><br>
-						<a href="full/g/w461l_m2_f.jpg"><img loading="lazy" src="style/g/w461l_m2_f.webp" alt="メルセデス,W461,Gクラス,ロング,ミリタリー,フロント" width="566" height="425"></a>
-						<a href="full/g/w461l_m0_f.jpg"><img loading="lazy" src="style/g/w461l_m0_f.webp" alt="メルセデス,W461,Gクラス,ロング,ミリタリー,フロント" width="637" height="425"></a><br>
-						<a href="full/g/w461la_m1_f.jpg"><img loading="lazy" src="style/g/w461la_m1_f.webp" alt="メルセデス,W461,Gクラス,ロング,ミリタリー,フロント" width="1210" height="586"></a><br>
-						<a href="full/g/w461la_m1_r.jpg"><img loading="lazy" src="style/g/w461la_m1_r.webp" alt="メルセデス,W461,Gクラス,ロング,ミリタリー,リヤ" width="656" height="473"></a>
-						<a href="full/g/w460_ambulanz.jpg"><img loading="lazy" src="style/g/w460_ambulanz.webp" alt="メルセデス,W461,Gクラス,ロング,ミリタリー,フロント" width="549" height="473"></a><br>
-						<h5 class="i">6×6</h5>
-						<p class="i m1">Australian Defense Forces 10/2008</p><br>
-						<a href="full/g/w461l_m4_f.jpg"><img loading="lazy" src="style/g/w461l_m4_f.webp" alt="メルセデス,W461,Gクラス,ロング,ミリタリー,フロント" width="603" height="401"></a>
-						<a href="full/g/w461l_m5_f.jpg"><img loading="lazy" src="style/g/w461l_m5_f.webp" alt="メルセデス,W461,Gクラス,ロング,ミリタリー,フロント" width="603" height="401"></a>
-					</section>
 				</div>
+
 			</div>
 		</section>
 
@@ -474,89 +502,118 @@
 			<h2>W463 (民生用)</h2>
 			<div class="style-w">
 				<div class="mid"><a href="full/g/w463l.jpg"><img loading="lazy" src="style/g/w463l.webp" alt="メルセデス,W463,Gクラス,ロング" width="1024" height="600"></a></div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<p class="bf1a i"><a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBG%E3%82%AF%E3%83%A9%E3%82%B9#W463%E5%9E%8B%EF%BC%881990%E5%B9%B4-_%EF%BC%89" class="ico-wiki m1" title="Wikipedia(J) W463(1990-2018)"></a></p>
-						<h3 class="i">W463</h3>
-						<p class="i m1">1990-2018</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-w463" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBG%E3%82%AF%E3%83%A9%E3%82%B9#W463%E5%9E%8B%EF%BC%881990%E5%B9%B4-_%EF%BC%89" class="ico-wiki" title="Wikipedia(J) W463(1990-2018)"></a>
+								<h3>W463<h3>
+										1990-2018
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-w463" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">W463</h4>
+							<h5>Long</h5>
+							<a href="full/g/w463l_f.jpg"><img loading="lazy" src="style/g/w463l_f.webp" alt="Mercedes,W463,Gクラス,ロング,フロント" width="615" height="418"></a>
+							<a href="full/g/w463l_r.jpg"><img loading="lazy" src="style/g/w463l_r.webp" alt="メルセデス,W463,Gクラス,ロング,リヤ" width="592" height="418"></a>
+							<h5>Short</h5>
+							<a href="full/g/w463k_tp.jpg"><img loading="lazy" src="style/g/w463k_tp.webp" alt="メルセデス,W463,Gクラス,ショート,透視図" width="1210" height="928"></a><br>
+							<a href="full/g/w463k_f.jpg"><img loading="lazy" src="style/g/w463k_f.webp" alt="メルセデス,W463,Gクラス,ショート,フロント" width="596" height="389"></a>
+							<a href="full/g/w463k_r.jpg"><img loading="lazy" src="style/g/w463k_r.webp" alt="メルセデス,W463,Gクラス,ショート,リヤ" width="610" height="389"></a><br>
+							<h5 class="i">カブリオレ</h5>
+							<p class="i m1">1990</p><br>
+							<a href="full/g/w463a_f_1990.jpg"><img loading="lazy" src="style/g/w463a_f_1990.webp" alt="メルセデス,W463,Gクラス,1990,カブリオレ,フロント" width="606" height="401"></a>
+							<a href="full/g/w463a_r_1990.jpg"><img loading="lazy" src="style/g/w463a_r_1990.webp" alt="メルセデス,W463,Gクラス,1990,カブリオレ,リヤ" width="601" height="401"></a><br>
+							<a href="full/g/w463a_d_1990.jpg"><img loading="lazy" src="style/g/w463a_d_1990.webp" alt="メルセデス,W463,Gクラス,1990,カブリオレ,ダッシュボード" width="603" height="402"></a>
+							<a href="full/g/w463a_i_1990.jpg"><img loading="lazy" src="style/g/w463a_i_1990.webp" alt="メルセデス,W463,Gクラス,1990,カブリオレ,内装" width="603" height="402"></a><br>
+							<p>1994</p>
+							<a href="full/g/w463a_f.jpg"><img loading="lazy" src="style/g/w463a_f.webp" alt="メルセデス,W463,Gクラス,カブリオレ,フロント" width="625" height="428"></a>
+							<a href="full/g/w463a_r.jpg"><img loading="lazy" src="style/g/w463a_r.webp" alt="メルセデス,W463,Gクラス,カブリオレ,リヤ" width="580" height="428"></a><br>
+							<a href="full/g/w463a_s_1994.jpg"><img loading="lazy" src="style/g/w463a_s_1994.webp" alt="メルセデス,W463,Gクラス,カブリオレ,側面" width="565" height="424"></a>
+							<a href="full/g/w463a_d.jpg"><img loading="lazy" src="style/g/w463a_d.webp" alt="メルセデス,W463,Gクラス,カブリオレ,ダッシュボード" width="638" height="424"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">W463</h4>
-						<h5>Long</h5>
-						<a href="full/g/w463l_f.jpg"><img loading="lazy" src="style/g/w463l_f.webp" alt="Mercedes,W463,Gクラス,ロング,フロント" width="615" height="418"></a>
-						<a href="full/g/w463l_r.jpg"><img loading="lazy" src="style/g/w463l_r.webp" alt="メルセデス,W463,Gクラス,ロング,リヤ" width="592" height="418"></a>
-						<h5>Short</h5>
-						<a href="full/g/w463k_tp.jpg"><img loading="lazy" src="style/g/w463k_tp.webp" alt="メルセデス,W463,Gクラス,ショート,透視図" width="1210" height="928"></a><br>
-						<a href="full/g/w463k_f.jpg"><img loading="lazy" src="style/g/w463k_f.webp" alt="メルセデス,W463,Gクラス,ショート,フロント" width="596" height="389"></a>
-						<a href="full/g/w463k_r.jpg"><img loading="lazy" src="style/g/w463k_r.webp" alt="メルセデス,W463,Gクラス,ショート,リヤ" width="610" height="389"></a><br>
-						<h5 class="i">カブリオレ</h5>
-						<p class="i m1">1990</p><br>
-						<a href="full/g/w463a_f_1990.jpg"><img loading="lazy" src="style/g/w463a_f_1990.webp" alt="メルセデス,W463,Gクラス,1990,カブリオレ,フロント" width="606" height="401"></a>
-						<a href="full/g/w463a_r_1990.jpg"><img loading="lazy" src="style/g/w463a_r_1990.webp" alt="メルセデス,W463,Gクラス,1990,カブリオレ,リヤ" width="601" height="401"></a><br>
-						<a href="full/g/w463a_d_1990.jpg"><img loading="lazy" src="style/g/w463a_d_1990.webp" alt="メルセデス,W463,Gクラス,1990,カブリオレ,ダッシュボード" width="603" height="402"></a>
-						<a href="full/g/w463a_i_1990.jpg"><img loading="lazy" src="style/g/w463a_i_1990.webp" alt="メルセデス,W463,Gクラス,1990,カブリオレ,内装" width="603" height="402"></a><br>
-						<p>1994</p>
-						<a href="full/g/w463a_f.jpg"><img loading="lazy" src="style/g/w463a_f.webp" alt="メルセデス,W463,Gクラス,カブリオレ,フロント" width="625" height="428"></a>
-						<a href="full/g/w463a_r.jpg"><img loading="lazy" src="style/g/w463a_r.webp" alt="メルセデス,W463,Gクラス,カブリオレ,リヤ" width="580" height="428"></a><br>
-						<a href="full/g/w463a_s_1994.jpg"><img loading="lazy" src="style/g/w463a_s_1994.webp" alt="メルセデス,W463,Gクラス,カブリオレ,側面" width="565" height="424"></a>
-						<a href="full/g/w463a_d.jpg"><img loading="lazy" src="style/g/w463a_d.webp" alt="メルセデス,W463,Gクラス,カブリオレ,ダッシュボード" width="638" height="424"></a>
-					</section>
 				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<h4 class="bf1a i m0">フェイスリフト I</h4>
-						<p class="i m1">2007-2008</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-フェイスリフト i" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h4>フェイスリフト I<h4>
+										2007-2008
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-フェイスリフト i" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h5>Long</h5>
+							<a href="full/g/w463l_f2.jpg"><img loading="lazy" src="style/g/w463l_f2.webp" alt="メルセデス,W463,Gクラス,ロング,フロント" width="603" height="452"></a>
+							<a href="full/g/w463l_r2.jpg"><img loading="lazy" src="style/g/w463l_r2.webp" alt="メルセデス,W463,Gクラス,ロング,リヤ" width="603" height="452"></a>
+							<h5>Short</h5>
+							<a href="full/g/w463k_f2.jpg"><img loading="lazy" src="style/g/w463k_f2.webp" alt="メルセデス,W463,Gクラス,ショート,フロント" width="612" height="371"></a>
+							<a href="full/g/w463k_r2.jpg"><img loading="lazy" src="style/g/w463k_r2.webp" alt="メルセデス,W463,Gクラス,ショート,リヤ" width="594" height="371"></a>
+							<h5>カブリオレ</h5>
+							<a href="full/g/w463a_f2.jpg"><img loading="lazy" src="style/g/w463a_f2.webp" alt="メルセデス,W463,Gクラス,カブリオレ,フロント" width="540" height="372"></a>
+							<a href="full/g/w463a_r2.jpg"><img loading="lazy" src="style/g/w463a_r2.webp" alt="メルセデス,W463,Gクラス,カブリオレ,リヤ" width="661" height="372"></a><br>
+							<a href="full/g/w463a_d2.jpg"><img loading="lazy" src="style/g/w463a_d2.webp" alt="メルセデス,W463,Gクラス,カブリオレ,ダッシュボード" width="566" height="425"></a>
+							<a href="full/g/w463a_i2.webp"><img loading="lazy" src="style/g/w463a_i2.webp" alt="メルセデス,W463,Gクラス,カブリオレ,内装" width="638" height="425"></a>
+						</div>
 					</div>
-					<section>
-						<h5>Long</h5>
-						<a href="full/g/w463l_f2.jpg"><img loading="lazy" src="style/g/w463l_f2.webp" alt="メルセデス,W463,Gクラス,ロング,フロント" width="603" height="452"></a>
-						<a href="full/g/w463l_r2.jpg"><img loading="lazy" src="style/g/w463l_r2.webp" alt="メルセデス,W463,Gクラス,ロング,リヤ" width="603" height="452"></a>
-						<h5>Short</h5>
-						<a href="full/g/w463k_f2.jpg"><img loading="lazy" src="style/g/w463k_f2.webp" alt="メルセデス,W463,Gクラス,ショート,フロント" width="612" height="371"></a>
-						<a href="full/g/w463k_r2.jpg"><img loading="lazy" src="style/g/w463k_r2.webp" alt="メルセデス,W463,Gクラス,ショート,リヤ" width="594" height="371"></a>
-						<h5>カブリオレ</h5>
-						<a href="full/g/w463a_f2.jpg"><img loading="lazy" src="style/g/w463a_f2.webp" alt="メルセデス,W463,Gクラス,カブリオレ,フロント" width="540" height="372"></a>
-						<a href="full/g/w463a_r2.jpg"><img loading="lazy" src="style/g/w463a_r2.webp" alt="メルセデス,W463,Gクラス,カブリオレ,リヤ" width="661" height="372"></a><br>
-						<a href="full/g/w463a_d2.jpg"><img loading="lazy" src="style/g/w463a_d2.webp" alt="メルセデス,W463,Gクラス,カブリオレ,ダッシュボード" width="566" height="425"></a>
-						<a href="full/g/w463a_i2.webp"><img loading="lazy" src="style/g/w463a_i2.webp" alt="メルセデス,W463,Gクラス,カブリオレ,内装" width="638" height="425"></a>
-					</section>
 				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<h4 class="bf1a i m0">フェイスリフト II</h4>
-						<p class="i m1">09/2008</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-フェイスリフト ii" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h4>フェイスリフト II<h4>
+										09/2008
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-フェイスリフト ii" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h5>Long</h5>
+							<a href="full/g/w463l_f21.jpg"><img loading="lazy" src="style/g/w463l_f21.webp" alt="メルセデス,W463,Gクラス,ロング,フロント" width="603" height="452"></a>
+							<a href="full/g/w463l_r21.jpg"><img loading="lazy" src="style/g/w463l_r21.webp" alt="メルセデス,W463,Gクラス,ロング,リヤ" width="603" height="452"></a>
+							<h5>Short</h5>
+							<a href="full/g/w463k_f21.jpg"><img loading="lazy" src="style/g/w463k_f21.webp" alt="メルセデス,W463,Gクラス,ショート,フロント" width="609" height="448"></a>
+							<a href="full/g/w463k_r21.jpg"><img loading="lazy" src="style/g/w463k_r21.webp" alt="メルセデス,W463,Gクラス,ショート,リヤ" width="597" height="448"></a>
+							<h5>カブリオレ</h5>
+							<a href="full/g/w463a_f21.jpg"><img loading="lazy" src="style/g/w463a_f21.webp" alt="メルセデス,W463,Gクラス,カブリオレ,フロント" width="603" height="452"></a>
+							<a href="full/g/w463l_d21.jpg"><img loading="lazy" src="style/g/w463l_d21.webp" alt="メルセデス,W463,Gクラス,ロング,ダッシュボード" width="603" height="452"></a>
+						</div>
 					</div>
-					<section>
-						<h5>Long</h5>
-						<a href="full/g/w463l_f21.jpg"><img loading="lazy" src="style/g/w463l_f21.webp" alt="メルセデス,W463,Gクラス,ロング,フロント" width="603" height="452"></a>
-						<a href="full/g/w463l_r21.jpg"><img loading="lazy" src="style/g/w463l_r21.webp" alt="メルセデス,W463,Gクラス,ロング,リヤ" width="603" height="452"></a>
-						<h5>Short</h5>
-						<a href="full/g/w463k_f21.jpg"><img loading="lazy" src="style/g/w463k_f21.webp" alt="メルセデス,W463,Gクラス,ショート,フロント" width="609" height="448"></a>
-						<a href="full/g/w463k_r21.jpg"><img loading="lazy" src="style/g/w463k_r21.webp" alt="メルセデス,W463,Gクラス,ショート,リヤ" width="597" height="448"></a>
-						<h5>カブリオレ</h5>
-						<a href="full/g/w463a_f21.jpg"><img loading="lazy" src="style/g/w463a_f21.webp" alt="メルセデス,W463,Gクラス,カブリオレ,フロント" width="603" height="452"></a>
-						<a href="full/g/w463l_d21.jpg"><img loading="lazy" src="style/g/w463l_d21.webp" alt="メルセデス,W463,Gクラス,ロング,ダッシュボード" width="603" height="452"></a>
-					</section>
 				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<h4 class="bf1a i m0">フェイスリフト III</h4>
-						<p class="i m1">2012</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-フェイスリフト iii" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h4>フェイスリフト III<h4>
+										2012
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-フェイスリフト iii" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h5>Long</h5>
+							<a href="full/g/w463l_f3.jpg"><img loading="lazy" src="style/g/w463l_f3.webp" alt="メルセデス,W463,Gクラス,ロング,フロント" width="430" height="287"></a>
+							<a href="full/g/w463l_r3.jpg"><img loading="lazy" src="style/g/w463l_r3.webp" alt="メルセデス,W463,Gクラス,ロング,リヤ" width="387" height="287"></a>
+							<a href="full/g/w463l_d3.jpg"><img loading="lazy" src="style/g/w463l_d3.webp" alt="メルセデス,W463,Gクラス,ロング,ダッシュボード" width="383" height="287"></a>
+							<h5>カブリオレ</h5>
+							<a href="full/g/w463a_f3.jpg"><img loading="lazy" src="style/g/w463a_f3.webp" alt="メルセデス,W463,Gクラス,カブリオレ,フロント" width="602" height="376"></a>
+							<a href="full/g/w463a_r3.jpg"><img loading="lazy" src="style/g/w463a_r3.webp" alt="メルセデス,W463,Gクラス,カブリオレ,リヤ" width="602" height="376"></a><br>
+							<h5 class="i">G63 AMG 6×6</h5>
+							<p class="i m1">2014</p><br>
+							<a href="full/g/w463l_f3_6x6.jpg"><img loading="lazy" src="style/g/w463l_f3_6x6.webp" alt="メルセデス,W463,6x6,Gクラス,カブリオレ,フロント" width="567" height="425"></a>
+							<a href="full/g/w463l_d3_6x6.jpg"><img loading="lazy" src="style/g/w463l_d3_6x6.webp" alt="メルセデス,W463,6x6,Gクラス,カブリオレ,ダッシュボード" width="638" height="425"></a>
+						</div>
 					</div>
-					<section>
-						<h5>Long</h5>
-						<a href="full/g/w463l_f3.jpg"><img loading="lazy" src="style/g/w463l_f3.webp" alt="メルセデス,W463,Gクラス,ロング,フロント" width="430" height="287"></a>
-						<a href="full/g/w463l_r3.jpg"><img loading="lazy" src="style/g/w463l_r3.webp" alt="メルセデス,W463,Gクラス,ロング,リヤ" width="387" height="287"></a>
-						<a href="full/g/w463l_d3.jpg"><img loading="lazy" src="style/g/w463l_d3.webp" alt="メルセデス,W463,Gクラス,ロング,ダッシュボード" width="383" height="287"></a>
-						<h5>カブリオレ</h5>
-						<a href="full/g/w463a_f3.jpg"><img loading="lazy" src="style/g/w463a_f3.webp" alt="メルセデス,W463,Gクラス,カブリオレ,フロント" width="602" height="376"></a>
-						<a href="full/g/w463a_r3.jpg"><img loading="lazy" src="style/g/w463a_r3.webp" alt="メルセデス,W463,Gクラス,カブリオレ,リヤ" width="602" height="376"></a><br>
-						<h5 class="i">G63 AMG 6×6</h5>
-						<p class="i m1">2014</p><br>
-						<a href="full/g/w463l_f3_6x6.jpg"><img loading="lazy" src="style/g/w463l_f3_6x6.webp" alt="メルセデス,W463,6x6,Gクラス,カブリオレ,フロント" width="567" height="425"></a>
-						<a href="full/g/w463l_d3_6x6.jpg"><img loading="lazy" src="style/g/w463l_d3_6x6.webp" alt="メルセデス,W463,6x6,Gクラス,カブリオレ,ダッシュボード" width="638" height="425"></a>
-					</section>
 				</div>
+
 			</div>
 		</section>
 
@@ -564,36 +621,44 @@
 			<h2>W463 II ( Full model change )</h2>
 			<div class="style-w">
 				<a href="full/g/w463_2.jpg"><img loading="lazy" src="style/g/w463_2.webp" alt="Mercedes,W463_2,Gクラス,ロング" width="1210" height="681"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<p class="bf1a i"><a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBG%E3%82%AF%E3%83%A9%E3%82%B9#W463%E5%9E%8B%EF%BC%882018%E5%B9%B4-_%EF%BC%89" class="ico-wiki m1" title="Wikipedia(J) W463(2018-)"></a></p>
-						<h3 class="i">W463 II</h3>
-						<p class="i m1">01/2018 - 2024</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-w463 ii" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBG%E3%82%AF%E3%83%A9%E3%82%B9#W463%E5%9E%8B%EF%BC%882018%E5%B9%B4-_%EF%BC%89" class="ico-wiki" title="Wikipedia(J) W463(2018-)"></a>
+								<h3>W463 II<h3>
+										01/2018 - 2024
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-w463 ii" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">W463 II</h4>
+							<a href="full/g/w463_2_chassi.jpg"><img loading="lazy" src="style/g/w463_2_chassi.webp" alt="メルセデス,W463_2,シャーシ" width="604" height="340"></a>
+							<a href="full/g/w463_2_chassi2.jpg"><img loading="lazy" src="style/g/w463_2_chassi2.webp" alt="メルセデス,W463_2,シャーシ" width="604" height="340"></a><br>
+							<a href="full/g/w463_2_f.jpg"><img loading="lazy" src="style/g/w463_2_f.webp" alt="メルセデス,W463_2,Gクラス,フロント" width="604" height="340"></a>
+							<a href="full/g/w463_2_r.jpg"><img loading="lazy" src="style/g/w463_2_r.webp" alt="メルセデス,W463_2,Gクラス,リヤ" width="604" height="340"></a><br>
+							<a href="full/g/w463_2_d.jpg"><img loading="lazy" src="style/g/w463_2_d.webp" alt="メルセデス,W463_2,Gクラス,ダッシュボード" width="604" height="340"></a>
+							<a href="full/g/w463_2_i.jpg"><img loading="lazy" src="style/g/w463_2_i.webp" alt="メルセデス,W463_2,Gクラス,内装" width="604" height="340"></a><br>
+							<h5>Professional Line</h5>
+							<a href="full/g/w463_2_pro_f.jpg"><img loading="lazy" src="style/g/w463_2_pro_f.webp" alt="メルセデス,W463_2,Gクラス,Professional Line,フロント" width="602" height="402"></a>
+							<a href="full/g/w463_2_pro_r.jpg"><img loading="lazy" src="style/g/w463_2_pro_r.webp" alt="メルセデス,W463_2,Gクラス,Professional Line,リヤ" width="602" height="402"></a>
+							<h5>ボディサイズ</h5>
+							<a href="full/g/w463_2_aa.webp"><img loading="lazy" src="style/g/w463_2_aa.webp" alt="メルセデス,W463_2,Gクラス,寸法" width="820" height="405"></a>
+							<a href="full/g/w463_2_ab.webp"><img loading="lazy" src="style/g/w463_2_ab.webp" alt="メルセデス,W463_2,Gクラス,寸法" width="386" height="405"></a><br>
+							<a href="full/g/w463_2_ac.webp"><img loading="lazy" src="style/g/w463_2_ac.webp" alt="メルセデス,W463_2,Gクラス,寸法" width="820" height="405"></a>
+							<a href="full/g/w463_2_ad.webp"><img loading="lazy" src="style/g/w463_2_ad.webp" alt="メルセデス,W463_2,Gクラス,寸法" width="386" height="405"></a><br>
+							<h4 class="i">G63 AMG</h4>
+							<p class="i m1">01/2018 - 2024</p><br>
+							<a href="full/g/w463_2_f_amg.jpg"><img loading="lazy" src="style/g/w463_2_f_amg.webp" alt="メルセデス,W463_2,Gクラス,AMG,フロント" width="603" height="339"></a>
+							<a href="full/g/w463_2_r_amg.jpg"><img loading="lazy" src="style/g/w463_2_r_amg.webp" alt="メルセデス,W463_2,Gクラス,AMG,リヤ" width="603" height="339"></a><br>
+							<a href="full/g/w463_2_d_amg.jpg"><img loading="lazy" src="style/g/w463_2_d_amg.webp" alt="メルセデス,W463_2,Gクラス,AMG,ダッシュボード" width="603" height="400"></a>
+							<a href="full/g/w463_2_m_amg.jpg"><img loading="lazy" src="style/g/w463_2_m_amg.webp" alt="メルセデス,W463_2,Gクラス,AMG,エンジン" width="603" height="400"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">W463 II</h4>
-						<a href="full/g/w463_2_chassi.jpg"><img loading="lazy" src="style/g/w463_2_chassi.webp" alt="メルセデス,W463_2,シャーシ" width="604" height="340"></a>
-						<a href="full/g/w463_2_chassi2.jpg"><img loading="lazy" src="style/g/w463_2_chassi2.webp" alt="メルセデス,W463_2,シャーシ" width="604" height="340"></a><br>
-						<a href="full/g/w463_2_f.jpg"><img loading="lazy" src="style/g/w463_2_f.webp" alt="メルセデス,W463_2,Gクラス,フロント" width="604" height="340"></a>
-						<a href="full/g/w463_2_r.jpg"><img loading="lazy" src="style/g/w463_2_r.webp" alt="メルセデス,W463_2,Gクラス,リヤ" width="604" height="340"></a><br>
-						<a href="full/g/w463_2_d.jpg"><img loading="lazy" src="style/g/w463_2_d.webp" alt="メルセデス,W463_2,Gクラス,ダッシュボード" width="604" height="340"></a>
-						<a href="full/g/w463_2_i.jpg"><img loading="lazy" src="style/g/w463_2_i.webp" alt="メルセデス,W463_2,Gクラス,内装" width="604" height="340"></a><br>
-						<h5>Professional Line</h5>
-						<a href="full/g/w463_2_pro_f.jpg"><img loading="lazy" src="style/g/w463_2_pro_f.webp" alt="メルセデス,W463_2,Gクラス,Professional Line,フロント" width="602" height="402"></a>
-						<a href="full/g/w463_2_pro_r.jpg"><img loading="lazy" src="style/g/w463_2_pro_r.webp" alt="メルセデス,W463_2,Gクラス,Professional Line,リヤ" width="602" height="402"></a>
-						<h5>ボディサイズ</h5>
-						<a href="full/g/w463_2_aa.webp"><img loading="lazy" src="style/g/w463_2_aa.webp" alt="メルセデス,W463_2,Gクラス,寸法" width="820" height="405"></a>
-						<a href="full/g/w463_2_ab.webp"><img loading="lazy" src="style/g/w463_2_ab.webp" alt="メルセデス,W463_2,Gクラス,寸法" width="386" height="405"></a><br>
-						<a href="full/g/w463_2_ac.webp"><img loading="lazy" src="style/g/w463_2_ac.webp" alt="メルセデス,W463_2,Gクラス,寸法" width="820" height="405"></a>
-						<a href="full/g/w463_2_ad.webp"><img loading="lazy" src="style/g/w463_2_ad.webp" alt="メルセデス,W463_2,Gクラス,寸法" width="386" height="405"></a><br>
-						<h4 class="i">G63 AMG</h4>
-						<p class="i m1">01/2018 - 2024</p><br>
-						<a href="full/g/w463_2_f_amg.jpg"><img loading="lazy" src="style/g/w463_2_f_amg.webp" alt="メルセデス,W463_2,Gクラス,AMG,フロント" width="603" height="339"></a>
-						<a href="full/g/w463_2_r_amg.jpg"><img loading="lazy" src="style/g/w463_2_r_amg.webp" alt="メルセデス,W463_2,Gクラス,AMG,リヤ" width="603" height="339"></a><br>
-						<a href="full/g/w463_2_d_amg.jpg"><img loading="lazy" src="style/g/w463_2_d_amg.webp" alt="メルセデス,W463_2,Gクラス,AMG,ダッシュボード" width="603" height="400"></a>
-						<a href="full/g/w463_2_m_amg.jpg"><img loading="lazy" src="style/g/w463_2_m_amg.webp" alt="メルセデス,W463_2,Gクラス,AMG,エンジン" width="603" height="400"></a>
-					</section>
 				</div>
+
 			</div>
 		</section>
 
@@ -601,22 +666,30 @@
 			<h2>W464 ( W461 後継 )</h2>
 			<div class="style-w">
 				<img loading="lazy" src="style/g/w464.webp" alt="メルセデス,W464,Gクラス,フロント" width="1210" height="605">
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<p class="bf1a i"><a href="https://de.wikipedia.org/wiki/Mercedes-Benz_G-Klasse#W_464_(seit_2023)" class="ico-wiki m1" title="Wikipedia(D)"></a></p>
-						<h3 class="i">W464</h3>
-						<p class="i m1">8/2023 - </p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-w464" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://de.wikipedia.org/wiki/Mercedes-Benz_G-Klasse#W_464_(seit_2023)" class="ico-wiki" title="Wikipedia(D)"></a>
+								<h3>W464<h3>
+										08/2023 -
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-w464" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<a href="full/g/w464_f.jpg"><img loading="lazy" src="style/g/w464_f.webp" alt="メルセデス,W464,Gクラス,フロント" width="321" height="326"></a>
+							<a href="full/g/w464_s.jpg"><img loading="lazy" src="style/g/w464_s.webp" alt="メルセデス,W464,Gクラス,側面" width="585" height="326"></a>
+							<a href="full/g/w464_r.jpg"><img loading="lazy" src="style/g/w464_r.webp" alt="メルセデス,W464,Gクラス,リヤ" width="293" height="326"></a><br>
+							<a href="full/g/w464_chassi_f.jpg"><img loading="lazy" src="style/g/w464_chassi_f.webp" alt="メルセデス,W464,Gクラス,シャーシ,フロント" width="660" height="381"></a>
+							<a href="full/g/w464_chassi_r.jpg"><img loading="lazy" src="style/g/w464_chassi_r.webp" alt="メルセデス,W464,Gクラス,シャーシ,リヤ" width="545" height="381"></a><br>
+							<a href="full/g/w464_chassi_s.jpg"><img loading="lazy" src="style/g/w464_chassi_s.webp" alt="メルセデス,W464,Gクラス,シャーシ,側面" width="743" height="346"></a>
+							<a href="full/g/w464_d.jpg"><img loading="lazy" src="style/g/w464_d.webp" alt="メルセデス,W464,Gクラス,ダッシュボード" width="461" height="346"></a><br>
+						</div>
 					</div>
-					<section>
-						<a href="full/g/w464_f.jpg"><img loading="lazy" src="style/g/w464_f.webp" alt="メルセデス,W464,Gクラス,フロント" width="321" height="326"></a>
-						<a href="full/g/w464_s.jpg"><img loading="lazy" src="style/g/w464_s.webp" alt="メルセデス,W464,Gクラス,側面" width="585" height="326"></a>
-						<a href="full/g/w464_r.jpg"><img loading="lazy" src="style/g/w464_r.webp" alt="メルセデス,W464,Gクラス,リヤ" width="293" height="326"></a><br>
-						<a href="full/g/w464_chassi_f.jpg"><img loading="lazy" src="style/g/w464_chassi_f.webp" alt="メルセデス,W464,Gクラス,シャーシ,フロント" width="660" height="381"></a>
-						<a href="full/g/w464_chassi_r.jpg"><img loading="lazy" src="style/g/w464_chassi_r.webp" alt="メルセデス,W464,Gクラス,シャーシ,リヤ" width="545" height="381"></a><br>
-						<a href="full/g/w464_chassi_s.jpg"><img loading="lazy" src="style/g/w464_chassi_s.webp" alt="メルセデス,W464,Gクラス,シャーシ,側面" width="743" height="346"></a>
-						<a href="full/g/w464_d.jpg"><img loading="lazy" src="style/g/w464_d.webp" alt="メルセデス,W464,Gクラス,ダッシュボード" width="461" height="346"></a><br>
-					</section>
 				</div>
+
 			</div>
 		</section>
 
@@ -624,28 +697,36 @@
 			<h2>W465 ( W463 II 後継 )</h2>
 			<div class="style-w">
 				<img loading="lazy" src="style/g/w465.webp" alt="メルセデス,W465,Gクラス,フロント" width="1210" height="850">
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<p class="bf1a i"><a href="https://de.wikipedia.org/wiki/Mercedes-Benz_G-Klasse#W_465_(seit_2024)" class="ico-wiki m1" title="Wikipedia(D)"></a></p>
-						<h3 class="i">W465</h3>
-						<p class="i m1">3/2024 - </p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-w465" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://de.wikipedia.org/wiki/Mercedes-Benz_G-Klasse#W_465_(seit_2024)" class="ico-wiki" title="Wikipedia(D)"></a>
+								<h3>W465<h3>
+										03/2024 -
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-w465" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<a href="full/g/w465_f.jpg"><img loading="lazy" src="style/g/w465_f.webp" alt="メルセデス,W465,Gクラス,フロント" width="588" height="411"></a>
+							<a href="full/g/w465_m.jpg"><img loading="lazy" src="style/g/w465_m.webp" alt="メルセデス,W465,Gクラス,エンジン" width="617" height="411"></a><br>
+							<a href="full/g/w465_s.jpg"><img loading="lazy" src="style/g/w465_s.webp" alt="メルセデス,W465,Gクラス,側面" width="631" height="361"></a>
+							<a href="full/g/w465_r.webp"><img loading="lazy" src="style/g/w465_r.webp" alt="メルセデス,W465,Gクラス,リヤ" width="574" height="361"></a><br>
+							<a href="full/g/w465_d.webp"><img loading="lazy" src="style/g/w465_d.webp" alt="メルセデス,W465,Gクラス,ダッシュボード" width="586" height="412"></a>
+							<a href="full/g/w465_ic.jpg"><img loading="lazy" src="style/g/w465_ic.webp" alt="メルセデス,W465,Gクラス,内装" width="619" height="412"></a><br>
+							<a href="full/g/w465_ib.jpg"><img loading="lazy" src="style/g/w465_ib.webp" alt="メルセデス,W465,Gクラス,内装" width="602" height="401"></a>
+							<a href="full/g/w465_ia.jpg"><img loading="lazy" src="style/g/w465_ia.webp" alt="メルセデス,W465,Gクラス,内装" width="602" height="401"></a><br>
+							<h4 class="i">G63 AMG</h4><br>
+							<a href="full/g/w465_f_amg.webp"><img loading="lazy" src="style/g/w465_f_amg.webp" alt="メルセデス,W465,Gクラス,AMG,フロント" width="637" height="378"></a>
+							<a href="full/g/w465_r_amg.jpg"><img loading="lazy" src="style/g/w465_r_amg.webp" alt="メルセデス,W465,Gクラス,AMG,リヤ" width="568" height="378"></a><br>
+							<a href="full/g/w465_d_amg.avif"><img loading="lazy" src="style/g/w465_d_amg.webp" alt="メルセデス,W465,Gクラス,AMG,ダッシュボード" width="654" height="368"></a>
+							<a href="full/g/w465_m_amg.avif"><img loading="lazy" src="style/g/w465_m_amg.webp" alt="メルセデス,W465,Gクラス,AMG,エンジン" width="552" height="368"></a><br>
+						</div>
 					</div>
-					<section>
-						<a href="full/g/w465_f.jpg"><img loading="lazy" src="style/g/w465_f.webp" alt="メルセデス,W465,Gクラス,フロント" width="588" height="411"></a>
-						<a href="full/g/w465_m.jpg"><img loading="lazy" src="style/g/w465_m.webp" alt="メルセデス,W465,Gクラス,エンジン" width="617" height="411"></a><br>
-						<a href="full/g/w465_s.jpg"><img loading="lazy" src="style/g/w465_s.webp" alt="メルセデス,W465,Gクラス,側面" width="631" height="361"></a>
-						<a href="full/g/w465_r.webp"><img loading="lazy" src="style/g/w465_r.webp" alt="メルセデス,W465,Gクラス,リヤ" width="574" height="361"></a><br>
-						<a href="full/g/w465_d.webp"><img loading="lazy" src="style/g/w465_d.webp" alt="メルセデス,W465,Gクラス,ダッシュボード" width="586" height="412"></a>
-						<a href="full/g/w465_ic.jpg"><img loading="lazy" src="style/g/w465_ic.webp" alt="メルセデス,W465,Gクラス,内装" width="619" height="412"></a><br>
-						<a href="full/g/w465_ib.jpg"><img loading="lazy" src="style/g/w465_ib.webp" alt="メルセデス,W465,Gクラス,内装" width="602" height="401"></a>
-						<a href="full/g/w465_ia.jpg"><img loading="lazy" src="style/g/w465_ia.webp" alt="メルセデス,W465,Gクラス,内装" width="602" height="401"></a><br>
-						<h4 class="i">G63 AMG</h4><br>
-						<a href="full/g/w465_f_amg.webp"><img loading="lazy" src="style/g/w465_f_amg.webp" alt="メルセデス,W465,Gクラス,AMG,フロント" width="637" height="378"></a>
-						<a href="full/g/w465_r_amg.jpg"><img loading="lazy" src="style/g/w465_r_amg.webp" alt="メルセデス,W465,Gクラス,AMG,リヤ" width="568" height="378"></a><br>
-						<a href="full/g/w465_d_amg.avif"><img loading="lazy" src="style/g/w465_d_amg.webp" alt="メルセデス,W465,Gクラス,AMG,ダッシュボード" width="654" height="368"></a>
-						<a href="full/g/w465_m_amg.avif"><img loading="lazy" src="style/g/w465_m_amg.webp" alt="メルセデス,W465,Gクラス,AMG,エンジン" width="552" height="368"></a><br>
-					</section>
 				</div>
+
 			</div>
 		</section>
 
@@ -697,9 +778,10 @@
 			<hr>
 			<p class="mid"><small>@ since 2010 , piyopiyo_246</small></p>
 		</footer>
+
 		<p class="m-05" id="page-top"><a href="#head">&#9650;</a></p>
 		<p id="close-accordion">
-			<a class="vmenu_all_action" onclick="doReplaceClassName ('vmenu_on2','vmenu_off')" title="全ての開閉部を閉じる">&#9654;</a>
+			<a id="close-all-accordions-2" class="vmenu_all_action" title="全ての開閉部を閉じる">&#9654;</a>
 		</p>
 	</div>
 
@@ -773,6 +855,120 @@
 			}, 500);
 			return false;
 		});
+	});
+</script>
+
+<script>
+	// シンプル版アコーディオン機能（入れ子非対応）
+	document.addEventListener('DOMContentLoaded', function () {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+		accordionHeaders.forEach(header => {
+			header.addEventListener('click', function () {
+				const content = this.nextElementSibling;
+				const isActive = this.classList.contains('active');
+
+				// クリックされたアコーディオンのみトグル
+				if (isActive) {
+					this.classList.remove('active');
+					this.setAttribute('aria-expanded', 'false');
+					content.classList.remove('active');
+				} else {
+					this.classList.add('active');
+					this.setAttribute('aria-expanded', 'true');
+					content.classList.add('active');
+				}
+			});
+
+			// キーボード操作のサポート
+			header.addEventListener('keydown', function (e) {
+				if (e.key === 'Enter' || e.key === ' ') {
+					e.preventDefault();
+					this.click();
+				}
+			});
+		});
+
+		// 全開/全閉ボタンのイベントリスナー
+		const openAllBtn = document.getElementById('open-all-accordions');
+		const closeAllBtn = document.getElementById('close-all-accordions');
+		const closeAllBtn2 = document.getElementById('close-all-accordions-2');
+
+		if (openAllBtn) {
+			openAllBtn.addEventListener('click', openAllAccordions);
+		}
+
+		if (closeAllBtn) {
+			closeAllBtn.addEventListener('click', closeAllAccordions);
+		}
+
+		if (closeAllBtn2) {
+			closeAllBtn2.addEventListener('click', closeAllAccordions);
+		}
+	});
+
+	// 全アコーディオン操作機能
+	function openAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.add('active');
+			header.setAttribute('aria-expanded', 'true');
+			content.classList.add('active');
+		});
+	}
+
+	function closeAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.remove('active');
+			header.setAttribute('aria-expanded', 'false');
+			content.classList.remove('active');
+		});
+	}
+
+	// 全アコーディオン操作機能
+	function openAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.add('active');
+			header.setAttribute('aria-expanded', 'true');
+			content.classList.add('active');
+		});
+	}
+
+	function closeAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.remove('active');
+			header.setAttribute('aria-expanded', 'false');
+			content.classList.remove('active');
+		});
+	}
+
+	// ボタンにイベントリスナーを追加
+	document.addEventListener('DOMContentLoaded', function () {
+		// 既存のアコーディオンコード...
+
+		// 全開/全閉ボタン
+		const openAllBtn = document.getElementById('open-all-accordions');
+		const closeAllBtn = document.getElementById('close-all-accordions');
+		const closeAllBtn2 = document.getElementById('close-all-accordions-2'); // 追加ボタン
+
+		if (openAllBtn) {
+			openAllBtn.addEventListener('click', openAllAccordions);
+		}
+
+		if (closeAllBtn) {
+			closeAllBtn.addEventListener('click', closeAllAccordions);
+		}
+
+		if (closeAllBtn2) {
+			closeAllBtn2.addEventListener('click', closeAllAccordions);
+		}
 	});
 </script>
 
