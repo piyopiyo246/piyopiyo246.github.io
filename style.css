@@ -968,7 +968,7 @@ iframe {
 .accordion-header {
 	background: #fbfbfb;
 	color: #111;
-	padding: 12px 0 12px 70px;
+	padding: 12px 0 12px 60px;
 	/* stylelint-disable-line */
 	cursor: pointer;
 	border: 0.125rem solid #707070;
@@ -1278,12 +1278,20 @@ iframe {
 .accordion-header.subpage p {
 	font-size: 17px;
 	font-weight: normal;
-	margin: 0 16px 0 0;
+	margin: 0 0 0 30px;
 	display: inline;
 }
 
 .accordion-header.subpage h4 {
-	margin: 0 16px 0 6px;
+	margin: 0 6px 0 24px;
+}
+
+.accordion-header.subpage p {
+	margin: 0 6px 0 30px;
+}
+
+.accordion-header.subpage a {
+	margin-right: -24px;
 }
 
 /* 複数行の場合の調整 */

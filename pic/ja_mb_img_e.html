@@ -50,24 +50,6 @@
 	<!-- 5. CSS -->
 	<link rel="stylesheet" href="../style.min.css">
 	<link rel="stylesheet" href="../style_v.min.css">
-	<link rel="stylesheet" href="../fa.all.min.css">
-
-	<!-- アコーディオン用のJavaScript関数を追加 -->
-	<script>
-		function doToggleClassName(obj, onClassName, offClassName) {
-			obj.className = (obj.className != onClassName) ? onClassName : offClassName;
-		}
-		function getParentObj(obj) {
-			return obj.parentElement || obj.parentNode;
-		}
-		function doReplaceClassName(findClassName, replaceClassName, targetTagName) {
-			var elements = document.getElementsByTagName(targetTagName || '*');
-			for (var i = 0; i < elements.length; i++) {
-				if (elements[i].className == findClassName)
-					elements[i].className = replaceClassName;
-			}
-		}
-	</script>
 
 	<!-- 6. Cookie同意管理システム -->
 	<script>
@@ -272,7 +254,7 @@
 					</li>
 				</ul>
 				<h1 class="b bf4">E クラス</h1>
-				 <div style="display: flex; justify-content: space-between; width: 1210px;">
+				<div style="display: flex; justify-content: space-between; width: 1210px;">
 					<dl class="m1">
 						<dt class="s2 af0">Series</dt>
 						<dd class="s2"><a href="#w120" title="ポントン,Typ180/Typ190 W120/W121" class="lnk2">120 / 121</a></dd>
@@ -288,8 +270,8 @@
 						<dd><a href="#w214" title="第６世代 Eクラス ,W214" class="lnk2">214</a></dd>
 					</dl>
 					<span>
-						<button class="vmenu_all_action square_btn" type="button" title="クリックで全ての開閉部を開く" span onclick="doReplaceClassName('vmenu_off', 'vmenu_on2')">全て開く</button>
-						<button class="vmenu_all_action square_btn" type="button" title="クリックで全ての開閉部を閉じる" span onclick="doReplaceClassName('vmenu_on2', 'vmenu_off')">全て閉じる</button>
+						<button id="open-all-accordions" class="vmenu_all_action square_btn" type="button" title="クリックで全ての開閉部を開く">全て開く</button>
+						<button id="close-all-accordions" class="vmenu_all_action square_btn" type="button" title="クリックで全ての開閉部を閉じる">全て閉じる</button>
 						<button class="square_btn" type="button" onclick="location.href='en_mb_img_e.html'">En</button>
 						<button class="square_btn" type="button" onclick="location.href='mb_img_e.html'">De</button>
 					</span>
@@ -360,46 +342,71 @@
 			<h2>ポントン ( Typ180 / Typ190 )</h2>
 			<div class="style-w">
 				<a href="full/e/w120_s.jpg"><img loading="lazy" src="style/e/w120_s.webp" alt="メルセデス,W120,側面" width="1210" height="871"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<p class="bf1a i"><a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBW120" class="ico-wiki m1" title="Wikipedia(J) W120"></a></p>
-						<h3 class="i m0">W120</h3>
-						<p class="i m1">1.8-2.0L</p>
-						<p class="i m1">180 / 180D 1953 - 1959</p>
-						<p class="i m3">180a 1957 - 1959</p>
-						<p class="i m05">180b/c / 180 Db/Dc 1959 - 1962</p><br>
-						<a href="https://de.wikipedia.org/wiki/Mercedes-Benz_W_121" class="ico-wiki m4" title="Wikipedia(D) W121"></a>
-						<h3 class="i m0">W121</h3>
-						<p class="i m1">1.9L</p>
-						<p class="i m2e">190 / 190D 1956 - 1959</p>
-						<p class="i m3">190b / 190Db 1959 - 1961</p><br>
-						<img loading="lazy" class="i m1" src="style/e/w120_tp.gif" alt="メルセデス,W120,190,Perspektive" width="400" height="142"><br>
-						<p class="ru">デザイナー : Fritz Nallinger</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-w120" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBW120" class="ico-wiki" title="Wikipedia(J) W120"></a>
+								<h3>W120</h3>
+								<h4>1.8-2.0L</h4>
+								<p>180 / 180D</p>
+								1953 - 1959
+								<p>180a</p>
+								1957 - 1959
+								<p>180b/c / 180 Db/Dc</p>
+								1959 - 1962
+							</div>
+						</div>
+						<div class="accordion-multi-line">
+
+							<h3 style="margin-left: 2px;">W121</h3>
+							<h4>1.9L</h4>
+							<p>190 / 190D</p>
+							1956 - 1959
+							<p>190b / 190Db</p>
+							1959 - 1961
+						</div>
+						<div class="accordion-multi-line">
+							<img loading="lazy" src="style/e/w120_tp.gif" alt="メルセデス,,W120,190,寸法" width="400" height="142"><br>
+							<div class="accordion-right" style="margin-right: 25px;">
+								デザイナー : Fritz Nallinger
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-w120" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">W120</h4>
+							<a href="full/e/w120_f.jpg"><img loading="lazy" src="style/e/w120_f.webp" alt="メルセデス,W120,190,フロント" width="618" height="391"></a>
+							<a href="full/e/w120_r.jpg"><img loading="lazy" src="style/e/w120_r.webp" alt="メルセデス,W120,190,リヤ" width="587" height="391"></a><br>
+							<a href="full/e/w120_d.jpg"><img loading="lazy" src="style/e/w120_d.webp" alt="メルセデス,W120,190,ダッシュボード" width="1210" height="794"></a>
+							<h5>ボディサイズ</h5>
+							<a href="full/e/w120_a.jpg"><img loading="lazy" src="style/e/w120_a.webp" alt="メルセデス,W120,190,寸法" width="800" height="608"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">W120</h4>
-						<a href="full/e/w120_f.jpg"><img loading="lazy" src="style/e/w120_f.webp" alt="メルセデス,W120,190,フロント" width="618" height="391"></a>
-						<a href="full/e/w120_r.jpg"><img loading="lazy" src="style/e/w120_r.webp" alt="メルセデス,W120,190,リヤ" width="587" height="391"></a><br>
-						<a href="full/e/w120_d.jpg"><img loading="lazy" src="style/e/w120_d.webp" alt="メルセデス,W120,190,ダッシュボード" width="1210" height="794"></a>
-						<h5>ボディサイズ</h5>
-						<a href="full/e/w120_a.jpg"><img loading="lazy" src="style/e/w120_a.webp" alt="メルセデス,W120,190,寸法" width="800" height="608"></a>
-					</section>
 				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<h3 class="bf1b i">W120</h3>
-						<p class="i m2a">商用車</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-w120-commercial" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h4>商用車<h4>
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-w120-commercial" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">商用車</h4>
+							<h5>エステート</h5>
+							<a href="full/e/w120k_f.jpg"><img loading="lazy" src="style/e/w120k_f.webp" alt="メルセデス,W120,エステートワゴン,フロント" width="602" height="452"></a>
+							<a href="full/e/w120k_r.jpg"><img loading="lazy" src="style/e/w120k_r.webp" alt="メルセデス,W120,エステートワゴン,リヤ" width="602" height="452"></a>
+							<h5>ピックアップトラック</h5>
+							<a href="full/e/w120t_f.jpg"><img loading="lazy" src="style/e/w120t_f.webp" alt="メルセデス,W120,ピックアップトラック,フロント" width="632" height="314"></a>
+							<a href="full/e/w120t_r.jpg"><img loading="lazy" src="style/e/w120t_r.webp" alt="メルセデス,W120,ピックアップトラック,リヤ" width="572" height="314"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">商用車</h4>
-						<h5>エステート</h5>
-						<a href="full/e/w120k_f.jpg"><img loading="lazy" src="style/e/w120k_f.webp" alt="メルセデス,W120,エステートワゴン,フロント" width="602" height="452"></a>
-						<a href="full/e/w120k_r.jpg"><img loading="lazy" src="style/e/w120k_r.webp" alt="メルセデス,W120,エステートワゴン,リヤ" width="602" height="452"></a>
-						<h5>ピックアップトラック</h5>
-						<a href="full/e/w120t_f.jpg"><img loading="lazy" src="style/e/w120t_f.webp" alt="メルセデス,W120,ピックアップトラック,フロント" width="632" height="314"></a>
-						<a href="full/e/w120t_r.jpg"><img loading="lazy" src="style/e/w120t_r.webp" alt="メルセデス,W120,ピックアップトラック,リヤ" width="572" height="314"></a>
-					</section>
 				</div>
+
 			</div>
 		</section>
 
@@ -413,59 +420,92 @@
 						<a href="full/e/w105_m.jpg"><img loading="lazy" src="style/e/w105_m.webp" alt="メルセデス,W105,ポントン,Typ219,エンジン" width="410" height="308"></a>
 					</div>
 				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<a href="https://en.wikipedia.org/wiki/Mercedes-Benz_W105" class="ico-wiki m1" title="Wikipedia(E) W105"></a>
-						<h3 class="i m0">W105</h3>
-						<p class="i m1">1956 - 1959</p><br>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-w105" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://en.wikipedia.org/wiki/Mercedes-Benz_W105" class="ico-wiki" title="Wikipedia(E) W105"></a>
+								<h3>W105<h3>
+										1956 - 1959
+							</div>
+							<div class="accordion-right">
+								デザイナー : Friedrich Geiger
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-w105" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<a href="full/e/w105_r.jpg"><img loading="lazy" src="style/e/w105_r.webp" alt="メルセデス,W105,ポントン,Typ219,リア" width="509" height="382"></a>
+							<img loading="lazy" src="style/e/w105_i.webp" alt="メルセデス,W105,ポントン,Typ219,内装" width="697" height="382"><br>
+							<a href="full/e/w105_cat0.jpg"><img loading="lazy" src="style/e/w105_cat0.webp" alt="メルセデス,W105,ポントン,Typ219,カタログ" width="193" height="250"></a>
+							<a href="full/e/w105_cat4.jpg"><img loading="lazy" src="style/e/w105_cat4.webp" alt="メルセデス,W105,ポントン,Typ219,カタログ" width="353" height="250"></a>
+							<a href="full/e/w105_cat1.jpg"><img loading="lazy" src="style/e/w105_cat1.webp" alt="メルセデス,W105,ポントン,Typ219,カタログ" width="550" height="250"></a><br>
+							<a href="full/e/w105_cat2.jpg"><img loading="lazy" src="style/e/w105_cat2.webp" alt="メルセデス,W105,ポントン,Typ219,カタログ" width="569" height="250"></a>
+							<a href="full/e/w105_cat3.jpg"><img loading="lazy" src="style/e/w105_cat3.webp" alt="メルセデス,W105,ポントン,Typ219,カタログ" width="636" height="250"></a>
+							<h5>エステート</h5>
+							<a href="full/e/s105_f.jpg"><img loading="lazy" src="style/e/s105_f.webp" alt="メルセデス,W105,ポントン,Typ219,エステート,フロント" width="602" height="402"></a>
+							<a href="full/e/s105_r.jpg"><img loading="lazy" src="style/e/s105_r.webp" alt="メルセデス,W105,ポントン,Typ219,エステート,リア" width="602" height="402"></a>
+						</div>
 					</div>
-					<section>
-						<a href="full/e/w105_r.jpg"><img loading="lazy" src="style/e/w105_r.webp" alt="メルセデス,W105,ポントン,Typ219,リア" width="509" height="382"></a>
-						<img loading="lazy" src="style/e/w105_i.webp" alt="メルセデス,W105,ポントン,Typ219,内装" width="697" height="382"><br>
-						<a href="full/e/w105_cat0.jpg"><img loading="lazy" src="style/e/w105_cat0.webp" alt="メルセデス,W105,ポントン,Typ219,カタログ" width="193" height="250"></a>
-						<a href="full/e/w105_cat4.jpg"><img loading="lazy" src="style/e/w105_cat4.webp" alt="メルセデス,W105,ポントン,Typ219,カタログ" width="353" height="250"></a>
-						<a href="full/e/w105_cat1.jpg"><img loading="lazy" src="style/e/w105_cat1.webp" alt="メルセデス,W105,ポントン,Typ219,カタログ" width="550" height="250"></a><br>
-						<a href="full/e/w105_cat2.jpg"><img loading="lazy" src="style/e/w105_cat2.webp" alt="メルセデス,W105,ポントン,Typ219,カタログ" width="569" height="250"></a>
-						<a href="full/e/w105_cat3.jpg"><img loading="lazy" src="style/e/w105_cat3.webp" alt="メルセデス,W105,ポントン,Typ219,カタログ" width="636" height="250"></a>
-						<h5>エステート</h5>
-						<a href="full/e/s105_f.jpg"><img loading="lazy" src="style/e/s105_f.webp" alt="メルセデス,W105,ポントン,Typ219,エステート,フロント" width="602" height="402"></a>
-						<a href="full/e/s105_r.jpg"><img loading="lazy" src="style/e/s105_r.webp" alt="メルセデス,W105,ポントン,Typ219,エステート,リア" width="602" height="402"></a>
-					</section>
 				</div>
+
 		</section>
 
 		<section id="w110">
 			<h2>フィンテール</h2>
 			<div class="style-w">
 				<a href="full/e/w110_f.jpg"><img loading="lazy" src="style/e/w110_f.webp" alt="image,メルセデス,ベンツ,kleine,Heckflosse,Fintail,w110,フロント" width="1210" height="841"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<p class="bf1a i"><a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBW110" class="ico-wiki m1" title="Wikipedia(J) W110"></a></p>
-						<h3 class="i m0">W110</h3>
-						<p class="i m1">190 / 190D 1961 - 1965</p>
-						<p class="i m2">200 / 200D 1965 - 1968</p>
-						<p class="i m2">230 1965 - 1968</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-w110" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBW110" class="ico-wiki" title="Wikipedia(J) W110"></a>
+								<h3>W110</h3>
+								<p>190 / 190D</p>
+								1961 - 1965
+								<p>200 / 200D</p>
+								1965 - 1968
+								<p>230</p>
+								1965 - 1968
+							</div>
+						</div>
+						<div class="accordion-multi-line">
+							<div class="accordion-right" style="margin-right: 25px;">
+								デザイナー : Friedrich Geiger , Paul Bracq
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-w110" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">W110</h4>
+							<a href="full/e/w110_r.jpg"><img loading="lazy" src="style/e/w110_r.webp" alt="メルセデス,W110,リヤ" width="637" height="425"></a>
+							<a href="full/e/w110_d.jpg"><img loading="lazy" src="style/e/w110_d.webp" alt="メルセデス,W110,ダッシュボード" width="567" height="425"></a>
+							<h5>Long</h5>
+							<a href="full/e/w110_fl.jpg"><img loading="lazy" src="style/e/w110_fl.webp" alt="メルセデス,W110,ロングホイールベース,フロント" width="800" height="551"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">W110</h4>
-						<a href="full/e/w110_r.jpg"><img loading="lazy" src="style/e/w110_r.webp" alt="メルセデス,W110,リヤ" width="637" height="425"></a>
-						<a href="full/e/w110_d.jpg"><img loading="lazy" src="style/e/w110_d.webp" alt="メルセデス,W110,ダッシュボード" width="567" height="425"></a>
-						<h5>Long</h5>
-						<a href="full/e/w110_fl.jpg"><img loading="lazy" src="style/e/w110_fl.webp" alt="メルセデス,W110,ロングホイールベース,フロント" width="800" height="551"></a>
-					</section>
 				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<h3 class="bf1b i">W110</h3>
-						<p class="i m1">Universal</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-universal" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h4>Universal<h4>
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-universal" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<a href="full/e/w110k_f.jpg"><img loading="lazy" src="style/e/w110k_f.webp" alt="メルセデス,W110,Universal,フロント" width="611" height="420"></a>
+							<a href="full/e/w110k_r.jpg"><img loading="lazy" src="style/e/w110k_r.webp" alt="メルセデス,W110,Universal,リヤ" width="594" height="420"></a><br>
+							<a href="full/e/w110k_f2.jpg"><img loading="lazy" src="style/e/w110k_f2.webp" alt="メルセデス,W110,Universal2,フロント" width="500" height="375"></a>
+							<a href="full/e/w110k_r2.jpg"><img loading="lazy" src="style/e/w110k_r2.webp" alt="メルセデス,W110,Universal2,リヤ" width="500" height="375"></a>
+						</div>
 					</div>
-					<section>
-						<a href="full/e/w110k_f.jpg"><img loading="lazy" src="style/e/w110k_f.webp" alt="メルセデス,W110,Universal,フロント" width="611" height="420"></a>
-						<a href="full/e/w110k_r.jpg"><img loading="lazy" src="style/e/w110k_r.webp" alt="メルセデス,W110,Universal,リヤ" width="594" height="420"></a><br>
-						<a href="full/e/w110k_f2.jpg"><img loading="lazy" src="style/e/w110k_f2.webp" alt="メルセデス,W110,Universal2,フロント" width="500" height="375"></a>
-						<a href="full/e/w110k_r2.jpg"><img loading="lazy" src="style/e/w110k_r2.webp" alt="メルセデス,W110,Universal2,リヤ" width="500" height="375"></a>
-					</section>
 				</div>
+
 			</div>
 		</section>
 
@@ -473,54 +513,74 @@
 			<h2>Strich Acht</h2>
 			<div class="style-w">
 				<a href="full/e/w115_fv.jpg"><img loading="lazy" src="style/e/w115_fv.webp" alt="メルセデス,W115,taxi" width="1210" height="908"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<p class="bf1a i"><a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBW114" class="ico-wiki m1" title="Wikipedia(J) W114/W115"></a></p>
 
-						<h3 class="i m0">W114 (6気筒)</h3>
-						<h3 class="i m1">W115 (4気筒)</h3>
-						<p class="i m1">1967 - 1976</p>
-						<p class="i m2">※ このタクシーは後期モデル</p>
-						<p class="ru">デザイナー : Paul Bracq</p>
-					</div>
-					<section>
-						<h4 class="displayNone">W114/W115</h4>
-						<a href="full/e/w115_f.jpg"><img loading="lazy" src="style/e/w115_f.webp" alt="メルセデス,W115,フロント" width="616" height="322"></a>
-						<a href="full/e/w115_r.jpg"><img loading="lazy" src="style/e/w115_r.webp" alt="メルセデス,W115,リヤ" width="589" height="322"></a><br>
-						<a href="full/e/w115_d.jpg"><img loading="lazy" src="style/e/w115_d.webp" alt="メルセデス,W115,ダッシュボード" width="1210" height="877"></a><br>
-						<h5 class="i">フェイスリフト</h5>
-						<p class="i m1">1973</p><br>
-						<a href="full/e/w114_f2.jpg"><img loading="lazy" src="style/e/w114_f2.webp" alt="メルセデス,W114,フロント" width="553" height="343"></a>
-						<a href="full/e/w114_r2.jpg"><img loading="lazy" src="style/e/w114_r2.webp" alt="メルセデス,W114,リヤ" width="652" height="343"></a><br>
-						<a href="full/e/w115_d2.jpg"><img loading="lazy" src="style/e/w115_d2.webp" alt="メルセデス,W115,ダッシュボード" width="465" height="349"></a>
-						<a href="full/e/w114_a.jpg"><img loading="lazy" src="style/e/w114_a.webp" alt="メルセデス,W114,寸法" width="740" height="349"></a>
-					</section>
-				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<h3 class="bf1b i">W114 / W115</h3>
-						<p class="i m1">他のバージョン</p>
-					</div>
-					<section>
-						<a href="full/e/w115l_f.jpg"><img loading="lazy" src="style/e/w115l_f.webp" alt="メルセデス,W115,long" width="896" height="504"></a>
-						<h4 class="i">ロング バージョン</h4><br>
-						<a href="full/e/w114l_s.jpg"><img loading="lazy" src="style/e/w114l_s.webp" alt="メルセデス,W114,ロング,側面" width="1024" height="416"></a><br>
-						<a href="full/e/w114l_s2.jpg"><img loading="lazy" src="style/e/w114l_s2.webp" alt="メルセデス,W114,long_2,側面" width="1024" height="416"></a>
-						<h5 class="i">フェイスリフト</h5><br>
-						<a href="full/e/w114_rettungswagen.jpg"><img loading="lazy" src="style/e/w114_rettungswagen.webp" alt="メルセデス,W114,Ambulance" width="1000" height="633"></a>
-						<h4 class="i">救急車</h4><br>
-						<div class="box101">
-							<a href="full/e/w115t_f.jpg"><img loading="lazy" src="style/e/w115t_f.webp" alt="メルセデス,W115,ピックアップトラック,フロント" width="1000" height="484"></a>
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-w114" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBW114" class="ico-wiki m1" title="Wikipedia(D) W114"></a>
+								<h3>W114</h3>
+								<p>6気筒</p>
+
+								<h3>W115</h3>
+								<p>4気筒</p>
+								1967 - 1976
+							</div>
+							<div class="accordion-right">
+								デザイナー : Paul Bracq , Friedrich Geiger
+							</div>
 						</div>
-						<div class="box18">
-							<h4>ピックアップトラック</h4>
-							<p class="m1">
-								1972-'76<br>
-								アルゼンチン
-							</p>
-						</div><br class="cb">
-					</section>
+						<div class="accordion-multi-line">
+							※ このタクシーは後期モデル
+						</div>
+					</button>
+					<div id="accordion-content-w114" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">W114/W115</h4>
+							<a href="full/e/w115_f.jpg"><img loading="lazy" src="style/e/w115_f.webp" alt="メルセデス,W115,フロント" width="616" height="322"></a>
+							<a href="full/e/w115_r.jpg"><img loading="lazy" src="style/e/w115_r.webp" alt="メルセデス,W115,リヤ" width="589" height="322"></a><br>
+							<a href="full/e/w115_d.jpg"><img loading="lazy" src="style/e/w115_d.webp" alt="メルセデス,W115,ダッシュボード" width="1210" height="877"></a><br>
+							<h5 class="i">フェイスリフト</h5>
+							<p class="i m1">1973</p><br>
+							<a href="full/e/w114_f2.jpg"><img loading="lazy" src="style/e/w114_f2.webp" alt="メルセデス,W114,フロント" width="553" height="343"></a>
+							<a href="full/e/w114_r2.jpg"><img loading="lazy" src="style/e/w114_r2.webp" alt="メルセデス,W114,リヤ" width="652" height="343"></a><br>
+							<a href="full/e/w115_d2.jpg"><img loading="lazy" src="style/e/w115_d2.webp" alt="メルセデス,W115,ダッシュボード" width="465" height="349"></a>
+							<a href="full/e/w114_a.jpg"><img loading="lazy" src="style/e/w114_a.webp" alt="メルセデス,W114,寸法" width="740" height="349"></a>
+						</div>
+					</div>
 				</div>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-他のバージョン" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h4>他のバージョン<h4>
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-他のバージョン" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<a href="full/e/w115l_f.jpg"><img loading="lazy" src="style/e/w115l_f.webp" alt="メルセデス,W115,long" width="896" height="504"></a>
+							<h4 class="i">ロング バージョン</h4><br>
+							<a href="full/e/w114l_s.jpg"><img loading="lazy" src="style/e/w114l_s.webp" alt="メルセデス,W114,ロング,側面" width="1024" height="416"></a><br>
+							<a href="full/e/w114l_s2.jpg"><img loading="lazy" src="style/e/w114l_s2.webp" alt="メルセデス,W114,long_2,側面" width="1024" height="416"></a>
+							<h5 class="i">フェイスリフト</h5><br>
+							<a href="full/e/w114_rettungswagen.jpg"><img loading="lazy" src="style/e/w114_rettungswagen.webp" alt="メルセデス,W114,Ambulance" width="1000" height="633"></a>
+							<h4 class="i">救急車</h4><br>
+							<div class="box101">
+								<a href="full/e/w115t_f.jpg"><img loading="lazy" src="style/e/w115t_f.webp" alt="メルセデス,W115,ピックアップトラック,フロント" width="1000" height="484"></a>
+							</div>
+							<div class="box18">
+								<h4>ピックアップトラック</h4>
+								<p class="m1">
+									1972-'76<br>
+									アルゼンチン
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
 			</div>
 		</section>
 
@@ -529,54 +589,71 @@
 			<div class="style-w">
 				<a href="full/e/w123_f.jpg"><img loading="lazy" src="style/e/w123_f.webp" alt="メルセデス,W123,フロント" width="1024" height="465"></a>
 				<a href="full/e/ochsenaugen2.jpg"><img loading="lazy" src="style/e/ochsenaugen2.webp" alt="ochsenaugen" width="180" height="120"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<p class="bf1a i"><a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBW123" class="ico-wiki m1" title="Wikipedia(J) 123"></a></p>
-						<h3 class="i m0">W123</h3>
-						<p class="i m1">11/1975 - 01/1986</p>
-						<p class="ru">デザイナー : Bruno Sacco , Friedrich Geiger (Saloon &amp; Coupe: 1973, T モデル: 1975)</p>
-					</div>
-					<section>
-						<h4 class="displayNone">W123</h4>
-						<a href="full/e/w123_r.jpg"><img loading="lazy" src="style/e/w123_r.webp" alt="メルセデス,W123,リヤ" width="665" height="360"></a>
-						<a href="full/e/w123_d.jpg"><img loading="lazy" src="style/e/w123_d.webp" alt="メルセデス,W123,ダッシュボード" width="540" height="360"></a><br>
-						<h5 class="i">フェイスリフト</h5>
-						<p class="i m1">(1) 08/1976</p>
-						<p class="i m1">(2) 08/1979</p>
-						<p class="i m1">(3) 09/1982</p>
-						<div>
-							<div class="box59a">
-								<a href="full/e/w123_f2.jpg"><img loading="lazy" src="style/e/w123_f2.webp" alt="メルセデス,W123,フロント" width="587" height="318"></a><br>
-								<a href="full/e/w123_r2.jpg"><img loading="lazy" src="style/e/w123_r2.webp" alt="メルセデス,W123,リヤ" width="587" height="288"></a>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-w123" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBW123" class="ico-wiki" title="Wikipedia(J) 123"></a>
+								<h3>W123<h3>
+										11/1975 - 01/1986
 							</div>
-							<a href="full/e/w123_d2.jpg"><img loading="lazy" src="style/e/w123_d2.webp" alt="メルセデス,W123,ダッシュボード" width="618" height="608"></a>
+							<div class="accordion-right">
+								デザイナー : Bruno Sacco , Friedrich Geiger (Saloon &amp; Coupe: 1973, T モデル: 1975)
+							</div>
 						</div>
-						<a href="full/e/w123_tp.jpg"><img loading="lazy" src="style/e/w123_tp.webp" alt="メルセデス,W123,透視図" width="1210" height="572"></a>
-						<h5>ボディサイズ</h5>
-						<img loading="lazy" class="i" src="style/e/w123_a.webp" alt="メルセデス,W123,寸法" width="849" height="467"><br>
-						<h4 class="i">V123</h4>
-						<p class="i m1">1977 - 1985</p><br>
-						<a href="full/e/v123_s.jpg"><img loading="lazy" src="style/e/v123_s.webp" alt="メルセデス,V123,側面" width="1024" height="716"></a>
-					</section>
-				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<h3 class="bf1b i">S123</h3>
-						<p class="i m1">T モデル</p>
-						<p class="i m1">04/1978 - 01/1986</p>
+					</button>
+					<div id="accordion-content-w123" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">W123</h4>
+							<a href="full/e/w123_r.jpg"><img loading="lazy" src="style/e/w123_r.webp" alt="メルセデス,W123,リヤ" width="665" height="360"></a>
+							<a href="full/e/w123_d.jpg"><img loading="lazy" src="style/e/w123_d.webp" alt="メルセデス,W123,ダッシュボード" width="540" height="360"></a><br>
+							<h5 class="i">フェイスリフト</h5>
+							<p class="i m1">(1) 08/1976</p>
+							<p class="i m1">(2) 08/1979</p>
+							<p class="i m1">(3) 09/1982</p>
+							<div>
+								<div class="box59a">
+									<a href="full/e/w123_f2.jpg"><img loading="lazy" src="style/e/w123_f2.webp" alt="メルセデス,W123,フロント" width="587" height="318"></a><br>
+									<a href="full/e/w123_r2.jpg"><img loading="lazy" src="style/e/w123_r2.webp" alt="メルセデス,W123,リヤ" width="587" height="288"></a>
+								</div>
+								<a href="full/e/w123_d2.jpg"><img loading="lazy" src="style/e/w123_d2.webp" alt="メルセデス,W123,ダッシュボード" width="618" height="608"></a>
+							</div>
+							<a href="full/e/w123_tp.jpg"><img loading="lazy" src="style/e/w123_tp.webp" alt="メルセデス,W123,透視図" width="1210" height="572"></a>
+							<h5>ボディサイズ</h5>
+							<img loading="lazy" class="i" src="style/e/w123_a.webp" alt="メルセデス,W123,寸法" width="849" height="467"><br>
+							<h4 class="i">V123</h4>
+							<p class="i m1">1977 - 1985</p><br>
+							<a href="full/e/v123_s.jpg"><img loading="lazy" src="style/e/v123_s.webp" alt="メルセデス,V123,側面" width="1024" height="716"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">T モデル</h4>
-						<a href="full/e/s123_f.jpg"><img loading="lazy" src="style/e/s123_f.webp" alt="メルセデス,S123,フロント" width="1210" height="649"></a><br>
-						<a href="full/e/s123_r.jpg"><img loading="lazy" src="style/e/s123_r.webp" alt="メルセデス,S123,リヤ" width="1210" height="649"></a><br>
-						<h5 class="i">フェイスリフト</h5>
-						<p class="i m1">(1) 08/1976</p>
-						<p class="i m2">(2) 08/1979</p>
-						<p class="i m2">(3) 09/1982</p><br>
-						<a href="full/e/s123_f2.jpg"><img loading="lazy" src="style/e/s123_f2.webp" alt="メルセデス,S123,フロント" width="602" height="325"></a>
-						<a href="full/e/s123_r2.jpg"><img loading="lazy" src="style/e/s123_r2.webp" alt="メルセデス,S123,リヤ" width="602" height="325"></a>
-					</section>
 				</div>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-s123" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h3>S123<h3>
+										<p>T モデル</p>
+										04/1978 - 01/1986
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-s123" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">T モデル</h4>
+							<a href="full/e/s123_f.jpg"><img loading="lazy" src="style/e/s123_f.webp" alt="メルセデス,S123,フロント" width="1210" height="649"></a><br>
+							<a href="full/e/s123_r.jpg"><img loading="lazy" src="style/e/s123_r.webp" alt="メルセデス,S123,リヤ" width="1210" height="649"></a><br>
+							<h5 class="i">フェイスリフト</h5>
+							<p class="i m1">(1) 08/1976</p>
+							<p class="i m2">(2) 08/1979</p>
+							<p class="i m2">(3) 09/1982</p><br>
+							<a href="full/e/s123_f2.jpg"><img loading="lazy" src="style/e/s123_f2.webp" alt="メルセデス,S123,フロント" width="602" height="325"></a>
+							<a href="full/e/s123_r2.jpg"><img loading="lazy" src="style/e/s123_r2.webp" alt="メルセデス,S123,リヤ" width="602" height="325"></a>
+						</div>
+					</div>
+				</div>
+
 			</div>
 		</section>
 
@@ -584,55 +661,72 @@
 			<h2>第１世代 Eクラス</h2>
 			<div class="style-w">
 				<a href="full/e/w124_f.jpg"><img loading="lazy" src="style/e/w124_f.webp" alt="メルセデス,W124,フロント" width="1210" height="908"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<p class="bf1a i"><a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBW124" class="ico-wiki m1" title="Wikipedia(J) 124"></a></p>
-						<h3 class="i m0">W124</h3>
-						<p class="i m1">12/1984 - 08/1995</p>
-						<p class="ru">デザイナー : Joseph Gallitzend&ouml;rfer, Peter Pfeiffer and Bruno Sacco</p>
-					</div>
-					<section>
-						<h4 class="displayNone">W124</h4>
-						<a href="full/e/w124_r.jpg"><img loading="lazy" src="style/e/w124_r.webp" alt="メルセデス,W124,リヤ" width="618" height="391"></a>
-						<a href="full/e/w124_d.jpg"><img loading="lazy" src="style/e/w124_d.webp" alt="メルセデス,W124,ダッシュボード" width="586" height="391"></a><br>
-						<h5 class="i">フェイスリフト</h5>
-						<p class="i m1">(1) 09/1989</p>
-						<p class="i m2">(2) 1993 (これより Daimler Benz は、&quot;E&quot;を車名先頭に付けるようになった。)</p>
-						<div>
-							<div class="box59a">
-								<a href="full/e/w124_f2.jpg"><img loading="lazy" src="style/e/w124_f2.webp" alt="メルセデス,W124,Eクラス,フロント" width="587" height="285"></a><br>
-								<a href="full/e/w124_r2.jpg"><img loading="lazy" src="style/e/w124_r2.webp" alt="メルセデス,W124,Eクラス,リヤ" width="587" height="291"></a>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-w124" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBW124" class="ico-wiki" title="Wikipedia(J) 124"></a>
+								<h3>W124<h3>
+										12/1984 - 08/1995
 							</div>
-							<a href="full/e/w124_d2.jpg"><img loading="lazy" src="style/e/w124_d2.webp" alt="メルセデス,W124,Eクラス,ダッシュボード" width="618" height="464"></a>
+							<div class="accordion-right">
+								デザイナー : Joseph Gallitzend&ouml;rfer, Peter Pfeiffer and Bruno Sacco
+							</div>
 						</div>
-						<h5>ボディサイズ</h5>
-						<a href="full/e/w124_a.jpg"><img loading="lazy" src="style/e/w124_a.webp" alt="メルセデス,W124,寸法" width="1210" height="666"></a><br>
-						<h4 class="i">V124</h4>
-						<p class="i m1">1989 - 1993</p><br>
-						<a href="full/e/v124_s.jpg"><img loading="lazy" src="style/e/v124_s.webp" alt="メルセデス,V124,フロント" width="1210" height="504"></a><br>
-						<a href="full/e/v124_f2.jpg"><img loading="lazy" src="style/e/v124_f.webp" alt="メルセデス,V124,フロント" width="579" height="243"></a>
-						<a href="full/e/v124_r.jpg"><img loading="lazy" src="style/e/v124_r.webp" alt="メルセデス,V124,リヤ" width="434" height="243"></a>
-					</section>
-				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<h3 class="bf1b i">S124</h3>
-						<p class="i m1">T モデル</p>
-						<p class="i m1">09/1985 - 08/1995</p>
+					</button>
+					<div id="accordion-content-w124" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">W124</h4>
+							<a href="full/e/w124_r.jpg"><img loading="lazy" src="style/e/w124_r.webp" alt="メルセデス,W124,リヤ" width="618" height="391"></a>
+							<a href="full/e/w124_d.jpg"><img loading="lazy" src="style/e/w124_d.webp" alt="メルセデス,W124,ダッシュボード" width="586" height="391"></a><br>
+							<h5 class="i">フェイスリフト</h5>
+							<p class="i m1">(1) 09/1989</p>
+							<p class="i m2">(2) 1993 (これより Daimler Benz は、&quot;E&quot;を車名先頭に付けるようになった。)</p>
+							<div>
+								<div class="box59a">
+									<a href="full/e/w124_f2.jpg"><img loading="lazy" src="style/e/w124_f2.webp" alt="メルセデス,W124,Eクラス,フロント" width="587" height="285"></a><br>
+									<a href="full/e/w124_r2.jpg"><img loading="lazy" src="style/e/w124_r2.webp" alt="メルセデス,W124,Eクラス,リヤ" width="587" height="291"></a>
+								</div>
+								<a href="full/e/w124_d2.jpg"><img loading="lazy" src="style/e/w124_d2.webp" alt="メルセデス,W124,Eクラス,ダッシュボード" width="618" height="464"></a>
+							</div>
+							<h5>ボディサイズ</h5>
+							<a href="full/e/w124_a.jpg"><img loading="lazy" src="style/e/w124_a.webp" alt="メルセデス,W124,寸法" width="1210" height="666"></a><br>
+							<h4 class="i">V124</h4>
+							<p class="i m1">1989 - 1993</p><br>
+							<a href="full/e/v124_s.jpg"><img loading="lazy" src="style/e/v124_s.webp" alt="メルセデス,V124,フロント" width="1210" height="504"></a><br>
+							<a href="full/e/v124_f2.jpg"><img loading="lazy" src="style/e/v124_f.webp" alt="メルセデス,V124,フロント" width="579" height="243"></a>
+							<a href="full/e/v124_r.jpg"><img loading="lazy" src="style/e/v124_r.webp" alt="メルセデス,V124,リヤ" width="434" height="243"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">T モデル</h4>
-						<a href="full/e/s124_f.jpg"><img loading="lazy" src="style/e/s124_f.webp" alt="メルセデス,S124,Eクラス,フロント" width="592" height="359"></a>
-						<a href="full/e/s124_r.jpg"><img loading="lazy" src="style/e/s124_r.webp" alt="メルセデス,S124,Eクラス,リヤ" width="613" height="359"></a><br>
-						<h5 class="i">フェイスリフト</h5>
-						<p class="i m1">(1)09/1989</p>
-						<p class="i m2">(2)1993</p><br>
-						<a href="full/e/s124_f2.jpg"><img loading="lazy" src="style/e/s124_f2.webp" alt="メルセデス,S124,Eクラス,フロント" width="588" height="313"></a>
-						<a href="full/e/s124_r2.jpg"><img loading="lazy" src="style/e/s124_r2.webp" alt="メルセデス,S124,Eクラス,リヤ" width="617" height="313"></a>
-						<h5>ボディサイズ</h5>
-						<img loading="lazy" src="style/e/s124_a.webp" alt="メルセデス,S124,寸法" width="880" height="448">
-					</section>
 				</div>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-s124" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h3>S124<h3>
+										<p>T モデル</p>
+										09/1985 - 08/1995
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-s124" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">T モデル</h4>
+							<a href="full/e/s124_f.jpg"><img loading="lazy" src="style/e/s124_f.webp" alt="メルセデス,S124,Eクラス,フロント" width="592" height="359"></a>
+							<a href="full/e/s124_r.jpg"><img loading="lazy" src="style/e/s124_r.webp" alt="メルセデス,S124,Eクラス,リヤ" width="613" height="359"></a><br>
+							<h5 class="i">フェイスリフト</h5>
+							<p class="i m1">(1)09/1989</p>
+							<p class="i m2">(2)1993</p><br>
+							<a href="full/e/s124_f2.jpg"><img loading="lazy" src="style/e/s124_f2.webp" alt="メルセデス,S124,Eクラス,フロント" width="588" height="313"></a>
+							<a href="full/e/s124_r2.jpg"><img loading="lazy" src="style/e/s124_r2.webp" alt="メルセデス,S124,Eクラス,リヤ" width="617" height="313"></a>
+							<h5>ボディサイズ</h5>
+							<img loading="lazy" src="style/e/s124_a.webp" alt="メルセデス,S124,寸法" width="880" height="448">
+						</div>
+					</div>
+				</div>
+
 			</div>
 		</section>
 
@@ -640,54 +734,71 @@
 			<h2>第２世代 Eクラス</h2>
 			<div class="style-w">
 				<a href="full/e/w210_r.jpg"><img loading="lazy" src="style/e/w210_r.webp" alt="メルセデス,W210,Eクラス,リヤ" width="1210" height="760"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<p class="bf1a i"><a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBW210" class="ico-wiki m1" title="Wikipedia(J) 210"></a></p>
-						<h3 class="i m0">W210</h3>
-						<p class="i m1">05/1995 - 2002</p>
-						<p class="ru">デザイナー : Karl Heinz Bauer, Steve Mattin, Bruno Sacco (1991, 1993)</p>
-					</div>
-					<section>
-						<h4 class="displayNone">W210</h4>
-						<a href="full/e/w210_f.jpg"><img loading="lazy" src="style/e/w210_f.webp" alt="メルセデス,W210,Eクラス,フロント" width="538" height="431"></a>
-						<a href="full/e/w210_d.jpg"><img loading="lazy" src="style/e/w210_d.webp" alt="メルセデス,W210,Eクラス,ダッシュボード" width="666" height="431"></a><br>
-						<div>
-							<div class="box53">
-								<h5 class="i">フェイスリフト</h5>
-								<p class="i m1">08/1999</p><br>
-								<a href="full/e/w210_f2.jpg"><img loading="lazy" src="style/e/w210_f2.webp" alt="メルセデス,W210,Eクラス,フロント" width="524" height="309"></a><br>
-								<a href="full/e/w210_r2.jpg"><img loading="lazy" src="style/e/w210_r2.webp" alt="メルセデス,W210,Eクラス,リヤ" width="524" height="281"></a><br>
-								<a href="full/e/w210_d2.jpg"><img loading="lazy" src="style/e/w210_d2.webp" alt="メルセデス,W210,Eクラス,ダッシュボード" width="524" height="327"></a>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-w210" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBW210" class="ico-wiki" title="Wikipedia(J) 210"></a>
+								<h3>W210<h3>
+										05/1995 - 2002
 							</div>
-							<div class="box68">
-								<h5 class="lh3">ボディサイズ</h5>
-								<a href="full/e/w210_a.jpg"><img loading="lazy" src="style/e/w210_a.webp" alt="メルセデス,W210,Eクラス,寸法" width="680" height="924"></a>
+							<div class="accordion-right">
+								デザイナー : Karl Heinz Bauer, Steve Mattin, Bruno Sacco (1991, 1993)
 							</div>
 						</div>
-						<h4 class="i">V210</h4>
-						<p class="i m1">1996</p><br>
-						<a href="full/e/v210_f.jpg"><img loading="lazy" src="style/e/v210_f.webp" alt="メルセデス,V210,Eクラス,フロント" width="450" height="284"></a>
-						<a href="full/e/v210_r.jpg"><img loading="lazy" src="style/e/v210_r.webp" alt="メルセデス,V210,Eクラス,リヤ" width="715" height="284"></a>
-					</section>
-				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<h3 class="bf1b i">S210</h3>
-						<p class="i m1">T モデル</p>
-						<p class="i m1">06/1996 - 12/2002</p>
+					</button>
+					<div id="accordion-content-w210" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">W210</h4>
+							<a href="full/e/w210_f.jpg"><img loading="lazy" src="style/e/w210_f.webp" alt="メルセデス,W210,Eクラス,フロント" width="538" height="431"></a>
+							<a href="full/e/w210_d.jpg"><img loading="lazy" src="style/e/w210_d.webp" alt="メルセデス,W210,Eクラス,ダッシュボード" width="666" height="431"></a><br>
+							<div>
+								<div class="box53">
+									<h5 class="i">フェイスリフト</h5>
+									<p class="i m1">08/1999</p><br>
+									<a href="full/e/w210_f2.jpg"><img loading="lazy" src="style/e/w210_f2.webp" alt="メルセデス,W210,Eクラス,フロント" width="524" height="309"></a><br>
+									<a href="full/e/w210_r2.jpg"><img loading="lazy" src="style/e/w210_r2.webp" alt="メルセデス,W210,Eクラス,リヤ" width="524" height="281"></a><br>
+									<a href="full/e/w210_d2.jpg"><img loading="lazy" src="style/e/w210_d2.webp" alt="メルセデス,W210,Eクラス,ダッシュボード" width="524" height="327"></a>
+								</div>
+								<div class="box68">
+									<h5 class="lh3">ボディサイズ</h5>
+									<a href="full/e/w210_a.jpg"><img loading="lazy" src="style/e/w210_a.webp" alt="メルセデス,W210,Eクラス,寸法" width="680" height="924"></a>
+								</div>
+							</div>
+							<h4 class="i">V210</h4>
+							<p class="i m1">1996</p><br>
+							<a href="full/e/v210_f.jpg"><img loading="lazy" src="style/e/v210_f.webp" alt="メルセデス,V210,Eクラス,フロント" width="450" height="284"></a>
+							<a href="full/e/v210_r.jpg"><img loading="lazy" src="style/e/v210_r.webp" alt="メルセデス,V210,Eクラス,リヤ" width="715" height="284"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">T モデル</h4>
-						<a href="full/e/s210_f.jpg"><img loading="lazy" src="style/e/s210_f.webp" alt="メルセデス,S210,Eクラス,フロント" width="583" height="310"></a>
-						<a href="full/e/s210_r.jpg"><img loading="lazy" src="style/e/s210_r.webp" alt="メルセデス,S210,Eクラス,リヤ" width="621" height="310"></a><br>
-						<h5 class="i">フェイスリフト</h5>
-						<p class="i m1">08/1999　(アヴァンギャルド)</p><br>
-						<a href="full/e/s210_f2.jpg"><img loading="lazy" src="style/e/s210_f2.webp" alt="メルセデス,S210,Eクラス,フロント" width="602" height="453"></a>
-						<a href="full/e/s210_r2.jpg"><img loading="lazy" src="style/e/s210_r2.webp" alt="メルセデス,S210,Eクラス,リヤ" width="602" height="453"></a>
-						<h5>ボディサイズ</h5>
-						<a href="full/e/s210_a.jpg"><img loading="lazy" src="style/e/s210_a.webp" alt="メルセデス,S210,Eクラス,寸法" width="804" height="631"></a>
-					</section>
 				</div>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-s210" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h3>S210<h3>
+										<p>T モデル</p>
+										06/1996 - 12/2002
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-s210" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">T モデル</h4>
+							<a href="full/e/s210_f.jpg"><img loading="lazy" src="style/e/s210_f.webp" alt="メルセデス,S210,Eクラス,フロント" width="583" height="310"></a>
+							<a href="full/e/s210_r.jpg"><img loading="lazy" src="style/e/s210_r.webp" alt="メルセデス,S210,Eクラス,リヤ" width="621" height="310"></a><br>
+							<h5 class="i">フェイスリフト</h5>
+							<p class="i m1">08/1999　(アヴァンギャルド)</p><br>
+							<a href="full/e/s210_f2.jpg"><img loading="lazy" src="style/e/s210_f2.webp" alt="メルセデス,S210,Eクラス,フロント" width="602" height="453"></a>
+							<a href="full/e/s210_r2.jpg"><img loading="lazy" src="style/e/s210_r2.webp" alt="メルセデス,S210,Eクラス,リヤ" width="602" height="453"></a>
+							<h5>ボディサイズ</h5>
+							<a href="full/e/s210_a.jpg"><img loading="lazy" src="style/e/s210_a.webp" alt="メルセデス,S210,Eクラス,寸法" width="804" height="631"></a>
+						</div>
+					</div>
+				</div>
+
 			</div>
 		</section>
 
@@ -695,51 +806,68 @@
 			<h2>第３世代 Eクラス</h2>
 			<div class="style-w">
 				<a href="full/e/w211.jpg"><img loading="lazy" src="style/e/w211.webp" alt="メルセデス,W211,Eクラス" width="1210" height="681"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<p class="bf1a i"><a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBW211" class="ico-wiki m1" title="Wikipedia(J) 211"></a></p>
-						<h3 class="i m0">W211</h3>
-						<p class="i m1">01/2002 - 2009</p>
-						<p class="ru">デザイナー : Hartmut Sinkwitz (1999)</p>
-					</div>
-					<section>
-						<div>
-							<div class="box60a"><br>
-								<h4 class="displayNone">W211</h4>
-								<a href="full/e/w211_f.jpg"><img loading="lazy" src="style/e/w211_f.webp" alt="メルセデス,W211,Eクラス,フロント" width="604" height="403"></a><br>
-								<a href="full/e/w211_r.jpg"><img loading="lazy" src="style/e/w211_r.webp" alt="メルセデス,W211,Eクラス,リヤ" width="604" height="385"></a><br>
-								<a href="full/e/w211_d.jpg"><img loading="lazy" src="style/e/w211_d.webp" alt="メルセデス,W211,Eクラス,ダッシュボード" width="604" height="402"></a>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-w211" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBW211" class="ico-wiki" title="Wikipedia(J) 211"></a>
+								<h3>W211<h3>
+										01/2002 - 2009
 							</div>
-							<div class="box60a">
-								<h5 class="i">フェイスリフト</h5>
-								<p class="i m1">06/2006</p><br>
-								<a href="full/e/w211_f2.jpg"><img loading="lazy" src="style/e/w211_f2.webp" alt="メルセデス,W211,Eクラス,フロント" width="604" height="383"></a><br>
-								<a href="full/e/w211_r2.jpg"><img loading="lazy" src="style/e/w211_r2.webp" alt="メルセデス,W211,Eクラス,リヤ" width="604" height="379"></a><br>
-								<a href="full/e/w211_d2.jpg"><img loading="lazy" src="style/e/w211_d2.webp" alt="メルセデス,W211,Eクラス,ダッシュボード" width="604" height="431"></a>
+							<div class="accordion-right">
+								デザイナー : Hartmut Sinkwitz (1999)
 							</div>
 						</div>
-						<h5>ボディサイズ</h5>
-						<a href="full/e/w211_a.jpg"><img loading="lazy" src="style/e/w211_a.webp" alt="メルセデス,W211,Eクラス,寸法" width="804" height="1015"></a>
-					</section>
-				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<h3 class="bf1b i">S211</h3>
-						<p class="i m1">T モデル</p>
-						<p class="i m1">01/2003 - 2009</p>
+					</button>
+					<div id="accordion-content-w211" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<div>
+								<div class="box60a"><br>
+									<h4 class="displayNone">W211</h4>
+									<a href="full/e/w211_f.jpg"><img loading="lazy" src="style/e/w211_f.webp" alt="メルセデス,W211,Eクラス,フロント" width="604" height="403"></a><br>
+									<a href="full/e/w211_r.jpg"><img loading="lazy" src="style/e/w211_r.webp" alt="メルセデス,W211,Eクラス,リヤ" width="604" height="385"></a><br>
+									<a href="full/e/w211_d.jpg"><img loading="lazy" src="style/e/w211_d.webp" alt="メルセデス,W211,Eクラス,ダッシュボード" width="604" height="402"></a>
+								</div>
+								<div class="box60a">
+									<h5 class="i">フェイスリフト</h5>
+									<p class="i m1">06/2006</p><br>
+									<a href="full/e/w211_f2.jpg"><img loading="lazy" src="style/e/w211_f2.webp" alt="メルセデス,W211,Eクラス,フロント" width="604" height="383"></a><br>
+									<a href="full/e/w211_r2.jpg"><img loading="lazy" src="style/e/w211_r2.webp" alt="メルセデス,W211,Eクラス,リヤ" width="604" height="379"></a><br>
+									<a href="full/e/w211_d2.jpg"><img loading="lazy" src="style/e/w211_d2.webp" alt="メルセデス,W211,Eクラス,ダッシュボード" width="604" height="431"></a>
+								</div>
+							</div>
+							<h5>ボディサイズ</h5>
+							<a href="full/e/w211_a.jpg"><img loading="lazy" src="style/e/w211_a.webp" alt="メルセデス,W211,Eクラス,寸法" width="804" height="1015"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">T モデル</h4>
-						<a href="full/e/s211_f.jpg"><img loading="lazy" src="style/e/s211_f.webp" alt="メルセデス,S211,Eクラス,フロント" width="585" height="356"></a>
-						<a href="full/e/s211_r.jpg"><img loading="lazy" src="style/e/s211_r.webp" alt="メルセデス,S211,Eクラス,リヤ" width="620" height="356"></a><br>
-						<h5 class="i">フェイスリフト</h5>
-						<p class="i m1">06/2006</p><br>
-						<a href="full/e/s211_f2.jpg"><img loading="lazy" src="style/e/s211_f2.webp" alt="メルセデス,S211,Eクラス,フロント" width="541" height="376"></a>
-						<a href="full/e/s211_r2.jpg"><img loading="lazy" src="style/e/s211_r2.webp" alt="メルセデス,S211,Eクラス,リヤ" width="663" height="376"></a>
-						<h5>ボディサイズ</h5>
-						<a href="full/e/s211_a.jpg"><img loading="lazy" src="style/e/s211_a.png" alt="メルセデス,S211,Eクラス,寸法" width="803" height="1031"></a>
-					</section>
 				</div>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-s211" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h3>S211<h3>
+										<p>T モデル</p>
+										01/2003 - 2009
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-s211" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">T モデル</h4>
+							<a href="full/e/s211_f.jpg"><img loading="lazy" src="style/e/s211_f.webp" alt="メルセデス,S211,Eクラス,フロント" width="585" height="356"></a>
+							<a href="full/e/s211_r.jpg"><img loading="lazy" src="style/e/s211_r.webp" alt="メルセデス,S211,Eクラス,リヤ" width="620" height="356"></a><br>
+							<h5 class="i">フェイスリフト</h5>
+							<p class="i m1">06/2006</p><br>
+							<a href="full/e/s211_f2.jpg"><img loading="lazy" src="style/e/s211_f2.webp" alt="メルセデス,S211,Eクラス,フロント" width="541" height="376"></a>
+							<a href="full/e/s211_r2.jpg"><img loading="lazy" src="style/e/s211_r2.webp" alt="メルセデス,S211,Eクラス,リヤ" width="663" height="376"></a>
+							<h5>ボディサイズ</h5>
+							<a href="full/e/s211_a.jpg"><img loading="lazy" src="style/e/s211_a.png" alt="メルセデス,S211,Eクラス,寸法" width="803" height="1031"></a>
+						</div>
+					</div>
+				</div>
+
 			</div>
 		</section>
 
@@ -747,74 +875,91 @@
 			<h2>第４世代 Eクラス</h2>
 			<div class="style-w">
 				<a href="full/e/w212.jpg"><img loading="lazy" src="style/e/w212.webp" alt="メルセデス,W212,Eクラス" width="1210" height="806"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<p class="bf1a i"><a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBW212" class="ico-wiki m1" title="Wikipedia(J) 212"></a></p>
-						<h3 class="i m0">W212</h3>
-						<p class="i m1">01/2009 - 01/2016</p>
-						<p class="ru">デザイナー : Thomas Stopka (2005)</p>
-					</div>
-					<section>
-						<h4 class="displayNone">W212</h4>
-						<div>
-							<div class="box60a"><br>
-								<a href="full/e/w212_f.jpg"><img loading="lazy" src="style/e/w212_f.webp" alt="メルセデス,W212,Eクラス,フロント" width="604" height="314"></a><br>
-								<a href="full/e/w212_r.jpg"><img loading="lazy" src="style/e/w212_r.webp" alt="メルセデス,W212,Eクラス,リヤ" width="604" height="299"></a><br>
-								<a href="full/e/w212_d.jpg"><img loading="lazy" src="style/e/w212_d.webp" alt="メルセデス,W212,Eクラス,ダッシュボード" width="604" height="340"></a>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-w212" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBW212" class="ico-wiki" title="Wikipedia(J) 212"></a>
+								<h3>W212<h3>
+										01/2009 - 01/2016
 							</div>
-							<div class="box60a">
-								<h5 class="i">フェイスリフト</h5>
-								<p class="i">01/2013　デザイナー : Michael Frei (2011)</p><br>
-								<a href="full/e/w212_f2.jpg"><img loading="lazy" src="style/e/w212_f2.webp" alt="メルセデス,W212,Eクラス,フロント" width="604" height="314"></a><br>
-								<a href="full/e/w212_r2.jpg"><img loading="lazy" src="style/e/w212_r2.webp" alt="メルセデス,W212,Eクラス,リヤ" width="604" height="299"></a><br>
-								<a href="full/e/w212_d2.jpg"><img loading="lazy" src="style/e/w212_d2.webp" alt="メルセデス,W212,Eクラス,ダッシュボード" width="604" height="340"></a>
+							<div class="accordion-right">
+								デザイナー : Thomas Stopka (2005)
 							</div>
 						</div>
-						<h5>アヴァンギャルド</h5>
-						<a href="full/e/w212_f2_ava.jpg"><img loading="lazy" src="style/e/w212_f2_ava.webp" alt="メルセデス,W212,Eクラス,アヴァンギャルド,フロント" width="606" height="277"></a>
-						<a href="full/e/w212_r2_ava.jpg"><img loading="lazy" src="style/e/w212_r2_ava.webp" alt="メルセデス,W212,Eクラス,アヴァンギャルド,リヤ" width="599" height="277"></a><br>
-						<a href="full/e/w212_d2_ava.jpg"><img loading="lazy" src="style/e/w212_d2_ava.webp" alt="メルセデス,W212,Eクラス,アヴァンギャルド,ダッシュボード" width="1210" height="756"></a><br>
-						<a href="full/e/w212_i.jpg"><img loading="lazy" src="style/e/w212_i.webp" alt="メルセデス,W212,Eクラス,内装" width="801" height="601"></a>
-						<a href="full/e/w212_i_2.jpg"><img loading="lazy" src="style/e/w212_i_2.webp" alt="メルセデス,W212,Eクラス,内装" width="404" height="601"></a><br>
-						<a href="full/e/w212_tp.jpg"><img loading="lazy" src="style/e/w212_tp.webp" alt="メルセデス,W212,Eクラス,透視図" width="1210" height="776"></a>
-						<div>
-							<div class="box81">
-								<h5 class="lh3">ボディサイズ</h5>
-								<a href="full/e/w212_a.jpg"><img loading="lazy" src="style/e/w212_a.webp" alt="メルセデス,W212,Eクラス,寸法" width="804" height="995"></a>
+					</button>
+					<div id="accordion-content-w212" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">W212</h4>
+							<div>
+								<div class="box60a"><br>
+									<a href="full/e/w212_f.jpg"><img loading="lazy" src="style/e/w212_f.webp" alt="メルセデス,W212,Eクラス,フロント" width="604" height="314"></a><br>
+									<a href="full/e/w212_r.jpg"><img loading="lazy" src="style/e/w212_r.webp" alt="メルセデス,W212,Eクラス,リヤ" width="604" height="299"></a><br>
+									<a href="full/e/w212_d.jpg"><img loading="lazy" src="style/e/w212_d.webp" alt="メルセデス,W212,Eクラス,ダッシュボード" width="604" height="340"></a>
+								</div>
+								<div class="box60a">
+									<h5 class="i">フェイスリフト</h5>
+									<p class="i">01/2013　デザイナー : Michael Frei (2011)</p><br>
+									<a href="full/e/w212_f2.jpg"><img loading="lazy" src="style/e/w212_f2.webp" alt="メルセデス,W212,Eクラス,フロント" width="604" height="314"></a><br>
+									<a href="full/e/w212_r2.jpg"><img loading="lazy" src="style/e/w212_r2.webp" alt="メルセデス,W212,Eクラス,リヤ" width="604" height="299"></a><br>
+									<a href="full/e/w212_d2.jpg"><img loading="lazy" src="style/e/w212_d2.webp" alt="メルセデス,W212,Eクラス,ダッシュボード" width="604" height="340"></a>
+								</div>
 							</div>
-							<div class="box40">
-								<h4 class="i">V212</h4>
-								<p class="i m1">中国向け ロングバージョン</p><br>
-								<a href="full/e/v212_f.jpg"><img loading="lazy" src="style/e/v212_f.webp" alt="メルセデス,V212,Eクラス,フロント" width="404" height="196"></a><br>
-								<a href="full/e/v212_r.jpg"><img loading="lazy" src="style/e/v212_r.webp" alt="メルセデス,V212,Eクラス,リヤ" width="404" height="222"></a><br>
-								<h5 class="i">フェイスリフト</h5>
-								<p class="i m1">01/2013 (アヴァンギャルド)</p><br>
-								<a href="full/e/v212_f2.jpg"><img loading="lazy" src="style/e/v212_f2.webp" alt="メルセデス,V212,Eクラス,フロント" width="404" height="234"></a><br>
-								<a href="full/e/v212_r2.jpg"><img loading="lazy" src="style/e/v212_r2.webp" alt="メルセデス,V212,Eクラス,リヤ" width="404" height="227"></a>
+							<h5>アヴァンギャルド</h5>
+							<a href="full/e/w212_f2_ava.jpg"><img loading="lazy" src="style/e/w212_f2_ava.webp" alt="メルセデス,W212,Eクラス,アヴァンギャルド,フロント" width="606" height="277"></a>
+							<a href="full/e/w212_r2_ava.jpg"><img loading="lazy" src="style/e/w212_r2_ava.webp" alt="メルセデス,W212,Eクラス,アヴァンギャルド,リヤ" width="599" height="277"></a><br>
+							<a href="full/e/w212_d2_ava.jpg"><img loading="lazy" src="style/e/w212_d2_ava.webp" alt="メルセデス,W212,Eクラス,アヴァンギャルド,ダッシュボード" width="1210" height="756"></a><br>
+							<a href="full/e/w212_i.jpg"><img loading="lazy" src="style/e/w212_i.webp" alt="メルセデス,W212,Eクラス,内装" width="801" height="601"></a>
+							<a href="full/e/w212_i_2.jpg"><img loading="lazy" src="style/e/w212_i_2.webp" alt="メルセデス,W212,Eクラス,内装" width="404" height="601"></a><br>
+							<a href="full/e/w212_tp.jpg"><img loading="lazy" src="style/e/w212_tp.webp" alt="メルセデス,W212,Eクラス,透視図" width="1210" height="776"></a>
+							<div>
+								<div class="box81">
+									<h5 class="lh3">ボディサイズ</h5>
+									<a href="full/e/w212_a.jpg"><img loading="lazy" src="style/e/w212_a.webp" alt="メルセデス,W212,Eクラス,寸法" width="804" height="995"></a>
+								</div>
+								<div class="box40">
+									<h4 class="i">V212</h4>
+									<p class="i m1">中国向け ロングバージョン</p><br>
+									<a href="full/e/v212_f.jpg"><img loading="lazy" src="style/e/v212_f.webp" alt="メルセデス,V212,Eクラス,フロント" width="404" height="196"></a><br>
+									<a href="full/e/v212_r.jpg"><img loading="lazy" src="style/e/v212_r.webp" alt="メルセデス,V212,Eクラス,リヤ" width="404" height="222"></a><br>
+									<h5 class="i">フェイスリフト</h5>
+									<p class="i m1">01/2013 (アヴァンギャルド)</p><br>
+									<a href="full/e/v212_f2.jpg"><img loading="lazy" src="style/e/v212_f2.webp" alt="メルセデス,V212,Eクラス,フロント" width="404" height="234"></a><br>
+									<a href="full/e/v212_r2.jpg"><img loading="lazy" src="style/e/v212_r2.webp" alt="メルセデス,V212,Eクラス,リヤ" width="404" height="227"></a>
+								</div>
 							</div>
 						</div>
-					</section>
-				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<h3 class="bf1b i">S212</h3>
-						<p class="i m1">T モデル</p>
-						<p class="i m1">11/2009 - 05/2016</p>
 					</div>
-					<section>
-						<h4 class="displayNone">T モデル</h4>
-						<a href="full/e/s212_f.jpg"><img loading="lazy" src="style/e/s212_f.webp" alt="メルセデス,S212,Eクラス,フロント" width="595" height="364"></a>
-						<a href="full/e/s212_r.jpg"><img loading="lazy" src="style/e/s212_r.webp" alt="メルセデス,S212,Eクラス,リヤ" width="610" height="364"></a><br>
-						<a href="full/e/s212_i_1.jpg"><img loading="lazy" src="style/e/s212_i_1.webp" alt="メルセデス,S212,Eクラス,内装" width="602" height="452"></a>
-						<a href="full/e/s212_i_2.jpg"><img loading="lazy" src="style/e/s212_i_2.webp" alt="メルセデス,S212,Eクラス,内装" width="602" height="452"></a><br>
-						<h5 class="i">フェイスリフト</h5>
-						<p class="i m1">01/2013 (アヴァンギャルド)</p><br>
-						<a href="full/e/s212_f2_ava.jpg"><img loading="lazy" src="style/e/s212_f2_ava.webp" alt="メルセデス,S212,Eクラス,アヴァンギャルド,フロント" width="598" height="399"></a>
-						<a href="full/e/s212_r2_ava.jpg"><img loading="lazy" src="style/e/s212_r2_ava.webp" alt="メルセデス,S212,Eクラス,アヴァンギャルド,リヤ" width="607" height="399"></a>
-						<h5>ボディサイズ</h5>
-						<a href="full/e/s212_a.jpg"><img loading="lazy" src="style/e/s212_a.webp" alt="メルセデス,S212,寸法" width="1210" height="1406"></a>
-					</section>
 				</div>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-s212" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h3>S212<h3>
+										<p>T モデル</p>
+										11/2009 - 05/2016
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-s212" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">T モデル</h4>
+							<a href="full/e/s212_f.jpg"><img loading="lazy" src="style/e/s212_f.webp" alt="メルセデス,S212,Eクラス,フロント" width="595" height="364"></a>
+							<a href="full/e/s212_r.jpg"><img loading="lazy" src="style/e/s212_r.webp" alt="メルセデス,S212,Eクラス,リヤ" width="610" height="364"></a><br>
+							<a href="full/e/s212_i_1.jpg"><img loading="lazy" src="style/e/s212_i_1.webp" alt="メルセデス,S212,Eクラス,内装" width="602" height="452"></a>
+							<a href="full/e/s212_i_2.jpg"><img loading="lazy" src="style/e/s212_i_2.webp" alt="メルセデス,S212,Eクラス,内装" width="602" height="452"></a><br>
+							<h5 class="i">フェイスリフト</h5>
+							<p class="i m1">01/2013 (アヴァンギャルド)</p><br>
+							<a href="full/e/s212_f2_ava.jpg"><img loading="lazy" src="style/e/s212_f2_ava.webp" alt="メルセデス,S212,Eクラス,アヴァンギャルド,フロント" width="598" height="399"></a>
+							<a href="full/e/s212_r2_ava.jpg"><img loading="lazy" src="style/e/s212_r2_ava.webp" alt="メルセデス,S212,Eクラス,アヴァンギャルド,リヤ" width="607" height="399"></a>
+							<h5>ボディサイズ</h5>
+							<a href="full/e/s212_a.jpg"><img loading="lazy" src="style/e/s212_a.webp" alt="メルセデス,S212,寸法" width="1210" height="1406"></a>
+						</div>
+					</div>
+				</div>
+
 			</div>
 		</section>
 
@@ -827,116 +972,140 @@
 			<h2>第５世代 Eクラス</h2>
 			<div class="style-w">
 				<a href="full/e/w213.jpg"><img loading="lazy" src="style/e/w213.webp" alt="メルセデス,W213,Eクラス" width="1210" height="908"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<p class="bf1a i"><a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBW213" class="ico-wiki m1" title="Wikipedia(J) 213"></a></p>
-						<h3 class="i m0">W213</h3>
-						<p class="i m1">02/2016 - 10/2023</p>
-						<p class="ru">デザイナー : Drummond Jacoy</p>
-					</div>
-					<section>
-						<h4 class="displayNone">W213</h4>
-						<a href="full/e/w213_f.jpg"><img loading="lazy" src="style/e/w213_f.webp" alt="メルセデス,W213,Eクラス,フロント" width="601" height="354"></a>
-						<a href="full/e/w213_r.jpg"><img loading="lazy" src="style/e/w213_r.webp" alt="メルセデス,W213,Eクラス,リヤ" width="604" height="354"></a><br>
-						<a href="full/e/w213_d.jpg"><img loading="lazy" src="style/e/w213_d.webp" alt="メルセデス,W213,Eクラス,ダッシュボード" width="1210" height="806"></a><br>
-						<a href="full/e/w213_ch.jpg"><img loading="lazy" src="style/e/w213_ch.webp" alt="メルセデス,W213,Eクラス,シャーシ" width="1210" height="680"></a>
-						<h5>アヴァンギャルド</h5>
-						<a href="full/e/w213_f_ava.jpg"><img loading="lazy" src="style/e/w213_f_ava.webp" alt="メルセデス,W213,Eクラス,アヴァンギャルド,フロント" width="1210" height="641"></a><br>
-						<a href="full/e/w213_s_ava.jpg"><img loading="lazy" src="style/e/w213_s_ava.webp" alt="メルセデス,W213,Eクラス,アヴァンギャルド,側面" width="1210" height="681"></a><br>
-						<a href="full/e/w213_r_ava.jpg"><img loading="lazy" src="style/e/w213_r_ava.webp" alt="メルセデス,W213,Eクラス,アヴァンギャルド,リヤ" width="723" height="321"></a>
-						<a href="full/e/w213_d_ava.jpg"><img loading="lazy" src="style/e/w213_d_ava.webp" alt="メルセデス,W213,Eクラス,アヴァンギャルド,ダッシュボード" width="481" height="321"></a><br>
-						<h5 class="i" id="w213f">フェイスリフト</h5>
-						<p class="i m1">03/2020</p><br>
-						<a href="full/e/w213_f2.webp"><img loading="lazy" src="style/e/w213_f2.webp" alt="メルセデス,W213,Eクラス,フロント" width="602" height="340"></a>
-						<a href="full/e/w213_r2.jpg"><img loading="lazy" src="style/e/w213_r2.webp" alt="メルセデス,W213,Eクラス,リヤ" width="602" height="340"></a><br>
-						<a href="full/e/w213_d2.jpg"><img loading="lazy" src="style/e/w213_d2.webp" alt="メルセデス,W213,Eクラス,ダッシュボード" width="602" height="340"></a>
-						<a href="full/e/w213_i2.jpg"><img loading="lazy" src="style/e/w213_i2.webp" alt="メルセデス,W213,Eクラス,内装" width="602" height="340"></a>
-						<h5>AMG line</h5>
-						<a href="full/e/w213_f2_amgline.jpg"><img loading="lazy" src="style/e/w213_f2_amgline.webp" alt="メルセデス,W213,Eクラス,amgline,フロント" width="602" height="340"></a>
-						<a href="full/e/w213_r2_amgline.jpg"><img loading="lazy" src="style/e/w213_r2_amgline.webp" alt="メルセデス,W213,Eクラス,amgline,リヤ" width="602" height="340"></a><br>
-						<a href="full/e/w213_d2_amgline.jpg"><img loading="lazy" src="style/e/w213_d2_amgline.webp" alt="メルセデス,W213,Eクラス,amgline,ダッシュボード" width="602" height="340"></a>
-						<a href="full/e/w213_i2_amgline.jpg"><img loading="lazy" src="style/e/w213_i2_amgline.webp" alt="メルセデス,W213,Eクラス,amgline,内装" width="602" height="340"></a>
-						<div>
-							<div class="box69a">
-								<h5>ボディサイズ</h5>
-								<a href="full/e/w213_a1.jpg"><img loading="lazy" src="style/e/w213_a1.webp" alt="メルセデス,W213,寸法" width="690" height="230"></a><br>
-								<a href="full/e/w213_a2.jpg"><img loading="lazy" src="style/e/w213_a2.webp" alt="メルセデス,W213,寸法" width="690" height="230"></a><br>
-								<a href="full/e/w213_a3.jpg"><img loading="lazy" src="style/e/w213_a3.webp" alt="メルセデス,W213,寸法" width="690" height="255"></a><br>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-w213" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBW213" class="ico-wiki" title="Wikipedia(J) 213"></a>
+								<h3>W213<h3>
+										02/2016 - 10/2023
 							</div>
-							<div class="box51">
-								<h4 class="i">V213</h4>
-								<p class="i m1">中国向け ロングバージョン</p><br>
-								<a href="full/e/v213_f.jpg"><img loading="lazy" src="style/e/v213_f.webp" alt="メルセデス,V213,Eクラス,フロント" width="510" height="246"></a><br>
-								<a href="full/e/v213_r.jpg"><img loading="lazy" src="style/e/v213_r.webp" alt="メルセデス,V213,Eクラス,リヤ" width="510" height="264"></a><br>
-								<a href="full/e/v213_i.jpg"><img loading="lazy" src="style/e/v213_i.webp" alt="メルセデス,V213,Eクラス,ダッシュボード" width="510" height="340"></a>
+							<div class="accordion-right">
+								デザイナー : Drummond Jacoy
 							</div>
 						</div>
-					</section>
-				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<h3 class="bf1b i">S213</h3>
-						<p class="i m1">T モデル</p>
-						<p class="i m1">10/2016</p>
-					</div>
-					<section>
-						<h4 class="displayNone">T モデル</h4>
-						<a href="full/e/s213_f.jpg"><img loading="lazy" src="style/e/s213_f.webp" alt="メルセデス,S213,Eクラス,フロント" width="614" height="370"></a>
-						<a href="full/e/s213_r.jpg"><img loading="lazy" src="style/e/s213_r.webp" alt="メルセデス,S213,Eクラス,リヤ" width="591" height="370"></a>
-						<h5>アヴァンギャルド</h5>
-						<a href="full/e/s213_f_ava.jpg"><img loading="lazy" src="style/e/s213_f_ava.webp" alt="メルセデス,S213,Eクラス,アヴァンギャルド,フロント" width="671" height="368"></a>
-						<a href="full/e/s213_r_ava.jpg"><img loading="lazy" src="style/e/s213_r_ava.webp" alt="メルセデス,S213,Eクラス,アヴァンギャルド,リヤ" width="534" height="368"></a>
-						<h5>内装とラゲッジルーム</h5>
-						<a href="full/e/s213_i.jpg"><img loading="lazy" src="style/e/s213_i.webp" alt="メルセデス,S213,Eクラス,内装" width="400" height="365"></a>
-						<a href="full/e/s213_i2.jpg"><img loading="lazy" src="style/e/s213_i2.webp" alt="メルセデス,S213,Eクラス,内装" width="400" height="365"></a>
-						<a href="full/e/s213_i3.jpg"><img loading="lazy" src="style/e/s213_i3.webp" alt="メルセデス,S213,Eクラス,内装" width="400" height="365"></a><br>
-						<div>
-							<div class="box60a">
-								<h4 class="i">All-Terrain</h4>
-								<p class="i m1">03/2017</p><br>
-								<a href="full/e/s213-all-terrain_f.jpg"><img loading="lazy" src="style/e/s213-all-terrain_f.webp" alt="メルセデス,S213,Eクラス,オールテレーン,フロント" width="604" height="349"></a><br>
-								<a href="full/e/s213-all-terrain_r.jpg"><img loading="lazy" src="style/e/s213-all-terrain_r.webp" alt="メルセデス,S213,Eクラス,オールテレーン,リヤ" width="604" height="328"></a><br>
-								<a href="full/e/s213-all-terrain_d.jpg"><img loading="lazy" src="style/e/s213-all-terrain_d.webp" alt="メルセデス,S213,Eクラス,オールテレーン,ダッシュボード" width="604" height="340"></a>
-							</div>
-							<div class="box60a">
-								<h5 class="i">フェイスリフト</h5>
-								<p class="i m1">03/2020</p><br>
-								<a href="full/e/s213-all-terrain_f2.jpg"><img loading="lazy" src="style/e/s213-all-terrain_f2.webp" alt="メルセデス,S213,Eクラス,オールテレーン,フロント" width="604" height="349"></a><br>
-								<a href="full/e/s213-all-terrain_r2.jpg"><img loading="lazy" src="style/e/s213-all-terrain_r2.webp" alt="メルセデス,S213,Eクラス,オールテレーン,リヤ" width="604" height="328"></a><br>
-								<a href="full/e/s213-all-terrain_d2.jpg"><img loading="lazy" src="style/e/s213-all-terrain_d2.webp" alt="メルセデス,S213,Eクラス,オールテレーン,ダッシュボード" width="604" height="340"></a>
+					</button>
+					<div id="accordion-content-w213" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">W213</h4>
+							<a href="full/e/w213_f.jpg"><img loading="lazy" src="style/e/w213_f.webp" alt="メルセデス,W213,Eクラス,フロント" width="601" height="354"></a>
+							<a href="full/e/w213_r.jpg"><img loading="lazy" src="style/e/w213_r.webp" alt="メルセデス,W213,Eクラス,リヤ" width="604" height="354"></a><br>
+							<a href="full/e/w213_d.jpg"><img loading="lazy" src="style/e/w213_d.webp" alt="メルセデス,W213,Eクラス,ダッシュボード" width="1210" height="806"></a><br>
+							<a href="full/e/w213_ch.jpg"><img loading="lazy" src="style/e/w213_ch.webp" alt="メルセデス,W213,Eクラス,シャーシ" width="1210" height="680"></a>
+							<h5>アヴァンギャルド</h5>
+							<a href="full/e/w213_f_ava.jpg"><img loading="lazy" src="style/e/w213_f_ava.webp" alt="メルセデス,W213,Eクラス,アヴァンギャルド,フロント" width="1210" height="641"></a><br>
+							<a href="full/e/w213_s_ava.jpg"><img loading="lazy" src="style/e/w213_s_ava.webp" alt="メルセデス,W213,Eクラス,アヴァンギャルド,側面" width="1210" height="681"></a><br>
+							<a href="full/e/w213_r_ava.jpg"><img loading="lazy" src="style/e/w213_r_ava.webp" alt="メルセデス,W213,Eクラス,アヴァンギャルド,リヤ" width="723" height="321"></a>
+							<a href="full/e/w213_d_ava.jpg"><img loading="lazy" src="style/e/w213_d_ava.webp" alt="メルセデス,W213,Eクラス,アヴァンギャルド,ダッシュボード" width="481" height="321"></a><br>
+							<h5 class="i" id="w213f">フェイスリフト</h5>
+							<p class="i m1">03/2020</p><br>
+							<a href="full/e/w213_f2.webp"><img loading="lazy" src="style/e/w213_f2.webp" alt="メルセデス,W213,Eクラス,フロント" width="602" height="340"></a>
+							<a href="full/e/w213_r2.jpg"><img loading="lazy" src="style/e/w213_r2.webp" alt="メルセデス,W213,Eクラス,リヤ" width="602" height="340"></a><br>
+							<a href="full/e/w213_d2.jpg"><img loading="lazy" src="style/e/w213_d2.webp" alt="メルセデス,W213,Eクラス,ダッシュボード" width="602" height="340"></a>
+							<a href="full/e/w213_i2.jpg"><img loading="lazy" src="style/e/w213_i2.webp" alt="メルセデス,W213,Eクラス,内装" width="602" height="340"></a>
+							<h5>AMG line</h5>
+							<a href="full/e/w213_f2_amgline.jpg"><img loading="lazy" src="style/e/w213_f2_amgline.webp" alt="メルセデス,W213,Eクラス,amgline,フロント" width="602" height="340"></a>
+							<a href="full/e/w213_r2_amgline.jpg"><img loading="lazy" src="style/e/w213_r2_amgline.webp" alt="メルセデス,W213,Eクラス,amgline,リヤ" width="602" height="340"></a><br>
+							<a href="full/e/w213_d2_amgline.jpg"><img loading="lazy" src="style/e/w213_d2_amgline.webp" alt="メルセデス,W213,Eクラス,amgline,ダッシュボード" width="602" height="340"></a>
+							<a href="full/e/w213_i2_amgline.jpg"><img loading="lazy" src="style/e/w213_i2_amgline.webp" alt="メルセデス,W213,Eクラス,amgline,内装" width="602" height="340"></a>
+							<div>
+								<div class="box69a">
+									<h5>ボディサイズ</h5>
+									<a href="full/e/w213_a1.jpg"><img loading="lazy" src="style/e/w213_a1.webp" alt="メルセデス,W213,寸法" width="690" height="230"></a><br>
+									<a href="full/e/w213_a2.jpg"><img loading="lazy" src="style/e/w213_a2.webp" alt="メルセデス,W213,寸法" width="690" height="230"></a><br>
+									<a href="full/e/w213_a3.jpg"><img loading="lazy" src="style/e/w213_a3.webp" alt="メルセデス,W213,寸法" width="690" height="255"></a><br>
+								</div>
+								<div class="box51">
+									<h4 class="i">V213</h4>
+									<p class="i m1">中国向け ロングバージョン</p><br>
+									<a href="full/e/v213_f.jpg"><img loading="lazy" src="style/e/v213_f.webp" alt="メルセデス,V213,Eクラス,フロント" width="510" height="246"></a><br>
+									<a href="full/e/v213_r.jpg"><img loading="lazy" src="style/e/v213_r.webp" alt="メルセデス,V213,Eクラス,リヤ" width="510" height="264"></a><br>
+									<a href="full/e/v213_i.jpg"><img loading="lazy" src="style/e/v213_i.webp" alt="メルセデス,V213,Eクラス,ダッシュボード" width="510" height="340"></a>
+								</div>
 							</div>
 						</div>
-					</section>
-				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<h3 class="bf1b i">AMG</h3>
-						<p class="i m1">E63</p>
-						<p class="i m1">03/2017 - 08/2023</p>
-						<p class="i m2">E53</p>
-						<p class="i m1">04/2018 - 08/2023</p>
 					</div>
-					<section>
-						<h4>E63</h4>
-						<a href="full/e/w213_f_e63.webp"><img loading="lazy" src="style/e/w213_f_e63.webp" alt="メルセデス,AMG,W213,Eクラス,フロント" width="602" height="401"></a>
-						<a href="full/e/w213_r_e63.webp"><img loading="lazy" src="style/e/w213_r_e63.webp" alt="メルセデス,AMG,W213,Eクラス,リヤ" width="602" height="401"></a><br>
-						<a href="full/e/w213_i_e63.webp"><img loading="lazy" src="style/e/w213_ia_e63.webp" alt="メルセデス,AMG,W213,Eクラス,内装" width="602" height="401"></a>
-						<a href="full/e/w213_i_e63.webp"><img loading="lazy" src="style/e/w213_ib_e63.webp" alt="メルセデス,AMG,W213,Eクラス,内装" width="602" height="401"></a><br>
-						<a href="full/e/w213_d_e63.webp"><img loading="lazy" src="style/e/w213_d_e63.webp" alt="メルセデス,AMG,W213,Eクラス,ダッシュボード" width="551" height="367"></a>
-						<a href="full/e/w213_m_e63.jpg"><img loading="lazy" src="style/e/w213_m_e63.webp" alt="メルセデス,AMG,W213,Eクラス,エンジン" width="653" height="367"></a>
-						<h4>E53</h4>
-						<a href="full/e/s213_m_e53.jpg"><img loading="lazy" src="style/e/s213_m_e53.webp" alt="メルセデス,AMG,s213,Eクラス,エンジン" width="1210" height="681"></a><br>
-						<a href="full/e/s213_f_e53.webp"><img loading="lazy" src="style/e/s213_f_e53.webp" alt="メルセデス,AMG,s213,Eクラス,フロント" width="722" height="384"></a>
-						<a href="full/e/s213_r_e53.webp"><img loading="lazy" src="style/e/s213_r_e53.webp" alt="メルセデス,AMG,s213,Eクラス,リヤ" width="481" height="384"></a><br>
-						<a href="full/e/s213_d_e53.webp"><img loading="lazy" src="style/e/s213_d_e53.webp" alt="メルセデス,AMG,s213,Eクラス,ダッシュボード" width="602" height="339"></a>
-						<a href="full/e/s213_i_e53.webp"><img loading="lazy" src="style/e/s213_i_e53.webp" alt="メルセデス,AMG,s213,Eクラス,内装" width="602" height="339"></a>
-						<h5>Modellpflege</h5>
-						<a href="full/e/w213_f2_e53.jpg"><img loading="lazy" src="style/e/w213_f2_e53.webp" alt="メルセデス,AMG,w213,Eクラス,フロント" width="602" height="340"></a>
-						<a href="full/e/w213_r2_e53.jpg"><img loading="lazy" src="style/e/w213_r2_e53.webp" alt="メルセデス,AMG,w213,Eクラス,リヤ" width="602" height="340"></a><br>
-						<a href="full/e/w213_d2_e53.jpg"><img loading="lazy" src="style/e/w213_d2_e53.webp" alt="メルセデス,AMG,W213,Eクラス,ダッシュボード" width="602" height="340"></a>
-						<a href="full/e/w213_i2_e53.jpg"><img loading="lazy" src="style/e/w213_i2_e53.webp" alt="メルセデス,AMG,W213,Eクラス,内装" width="602" height="340"></a>
-					</section>
 				</div>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-s213" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h3>S213<h3>
+										<p>T モデル</p>
+										10/2016
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-s213" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">T モデル</h4>
+							<a href="full/e/s213_f.jpg"><img loading="lazy" src="style/e/s213_f.webp" alt="メルセデス,S213,Eクラス,フロント" width="614" height="370"></a>
+							<a href="full/e/s213_r.jpg"><img loading="lazy" src="style/e/s213_r.webp" alt="メルセデス,S213,Eクラス,リヤ" width="591" height="370"></a>
+							<h5>アヴァンギャルド</h5>
+							<a href="full/e/s213_f_ava.jpg"><img loading="lazy" src="style/e/s213_f_ava.webp" alt="メルセデス,S213,Eクラス,アヴァンギャルド,フロント" width="671" height="368"></a>
+							<a href="full/e/s213_r_ava.jpg"><img loading="lazy" src="style/e/s213_r_ava.webp" alt="メルセデス,S213,Eクラス,アヴァンギャルド,リヤ" width="534" height="368"></a>
+							<h5>内装とラゲッジルーム</h5>
+							<a href="full/e/s213_i.jpg"><img loading="lazy" src="style/e/s213_i.webp" alt="メルセデス,S213,Eクラス,内装" width="400" height="365"></a>
+							<a href="full/e/s213_i2.jpg"><img loading="lazy" src="style/e/s213_i2.webp" alt="メルセデス,S213,Eクラス,内装" width="400" height="365"></a>
+							<a href="full/e/s213_i3.jpg"><img loading="lazy" src="style/e/s213_i3.webp" alt="メルセデス,S213,Eクラス,内装" width="400" height="365"></a><br>
+							<div>
+								<div class="box60a">
+									<h4 class="i">All-Terrain</h4>
+									<p class="i m1">03/2017</p><br>
+									<a href="full/e/s213-all-terrain_f.jpg"><img loading="lazy" src="style/e/s213-all-terrain_f.webp" alt="メルセデス,S213,Eクラス,オールテレーン,フロント" width="604" height="349"></a><br>
+									<a href="full/e/s213-all-terrain_r.jpg"><img loading="lazy" src="style/e/s213-all-terrain_r.webp" alt="メルセデス,S213,Eクラス,オールテレーン,リヤ" width="604" height="328"></a><br>
+									<a href="full/e/s213-all-terrain_d.jpg"><img loading="lazy" src="style/e/s213-all-terrain_d.webp" alt="メルセデス,S213,Eクラス,オールテレーン,ダッシュボード" width="604" height="340"></a>
+								</div>
+								<div class="box60a">
+									<h5 class="i">フェイスリフト</h5>
+									<p class="i m1">03/2020</p><br>
+									<a href="full/e/s213-all-terrain_f2.jpg"><img loading="lazy" src="style/e/s213-all-terrain_f2.webp" alt="メルセデス,S213,Eクラス,オールテレーン,フロント" width="604" height="349"></a><br>
+									<a href="full/e/s213-all-terrain_r2.jpg"><img loading="lazy" src="style/e/s213-all-terrain_r2.webp" alt="メルセデス,S213,Eクラス,オールテレーン,リヤ" width="604" height="328"></a><br>
+									<a href="full/e/s213-all-terrain_d2.jpg"><img loading="lazy" src="style/e/s213-all-terrain_d2.webp" alt="メルセデス,S213,Eクラス,オールテレーン,ダッシュボード" width="604" height="340"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-amg-e63-53" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h4>AMG E 63<h4>
+										03/2017 - 08/2023
+										<h4>E 53<h4>
+												04/2018 - 08/2023
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-amg-e63-53" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4>E63</h4>
+							<a href="full/e/w213_f_e63.webp"><img loading="lazy" src="style/e/w213_f_e63.webp" alt="メルセデス,AMG,W213,Eクラス,フロント" width="602" height="401"></a>
+							<a href="full/e/w213_r_e63.webp"><img loading="lazy" src="style/e/w213_r_e63.webp" alt="メルセデス,AMG,W213,Eクラス,リヤ" width="602" height="401"></a><br>
+							<a href="full/e/w213_i_e63.webp"><img loading="lazy" src="style/e/w213_ia_e63.webp" alt="メルセデス,AMG,W213,Eクラス,内装" width="602" height="401"></a>
+							<a href="full/e/w213_i_e63.webp"><img loading="lazy" src="style/e/w213_ib_e63.webp" alt="メルセデス,AMG,W213,Eクラス,内装" width="602" height="401"></a><br>
+							<a href="full/e/w213_d_e63.webp"><img loading="lazy" src="style/e/w213_d_e63.webp" alt="メルセデス,AMG,W213,Eクラス,ダッシュボード" width="551" height="367"></a>
+							<a href="full/e/w213_m_e63.jpg"><img loading="lazy" src="style/e/w213_m_e63.webp" alt="メルセデス,AMG,W213,Eクラス,エンジン" width="653" height="367"></a>
+							<h4>E53</h4>
+							<a href="full/e/s213_m_e53.jpg"><img loading="lazy" src="style/e/s213_m_e53.webp" alt="メルセデス,AMG,s213,Eクラス,エンジン" width="1210" height="681"></a><br>
+							<a href="full/e/s213_f_e53.webp"><img loading="lazy" src="style/e/s213_f_e53.webp" alt="メルセデス,AMG,s213,Eクラス,フロント" width="722" height="384"></a>
+							<a href="full/e/s213_r_e53.webp"><img loading="lazy" src="style/e/s213_r_e53.webp" alt="メルセデス,AMG,s213,Eクラス,リヤ" width="481" height="384"></a><br>
+							<a href="full/e/s213_d_e53.webp"><img loading="lazy" src="style/e/s213_d_e53.webp" alt="メルセデス,AMG,s213,Eクラス,ダッシュボード" width="602" height="339"></a>
+							<a href="full/e/s213_i_e53.webp"><img loading="lazy" src="style/e/s213_i_e53.webp" alt="メルセデス,AMG,s213,Eクラス,内装" width="602" height="339"></a>
+							<h5>Modellpflege</h5>
+							<a href="full/e/w213_f2_e53.jpg"><img loading="lazy" src="style/e/w213_f2_e53.webp" alt="メルセデス,AMG,w213,Eクラス,フロント" width="602" height="340"></a>
+							<a href="full/e/w213_r2_e53.jpg"><img loading="lazy" src="style/e/w213_r2_e53.webp" alt="メルセデス,AMG,w213,Eクラス,リヤ" width="602" height="340"></a><br>
+							<a href="full/e/w213_d2_e53.jpg"><img loading="lazy" src="style/e/w213_d2_e53.webp" alt="メルセデス,AMG,W213,Eクラス,ダッシュボード" width="602" height="340"></a>
+							<a href="full/e/w213_i2_e53.jpg"><img loading="lazy" src="style/e/w213_i2_e53.webp" alt="メルセデス,AMG,W213,Eクラス,内装" width="602" height="340"></a>
+						</div>
+					</div>
+				</div>
+
 			</div>
 		</section>
 
@@ -944,77 +1113,101 @@
 			<h2>第６世代 Eクラス</h2>
 			<div class="style-w">
 				<a href="full/e/w214.jpg"><img loading="lazy" src="style/e/w214.webp" alt="メルセデス,w214,Eクラス" width="1210" height="807"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<p class="bf1a i"><a href="https://de.wikipedia.org/wiki/Mercedes-Benz_Baureihe_214" class="ico-wiki m1" title="Wikipedia(D) 214"></a></p>
-						<h3 class="i m0">W214</h3>
-						<p class="i m1">04/2023</p>
-						<p class="ru">デザイナー : Gorden Wagener</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-w214" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://de.wikipedia.org/wiki/Mercedes-Benz_Baureihe_214" class="ico-wiki" title="Wikipedia(D) 214"></a>
+								<h3>W214<h3>
+										04/2023
+							</div>
+							<div class="accordion-right">
+								デザイナー : Gorden Wagener
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-w214" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">W214</h4>
+							<a href="full/e/w214_f.jpg"><img loading="lazy" src="style/e/w214_f.webp" alt="メルセデス,w214,Eクラス,フロント" width="638" height="399"></a>
+							<a href="full/e/w214_r.jpg"><img loading="lazy" src="style/e/w214_r.webp" alt="メルセデス,w214,Eクラス,リヤ" width="567" height="399"></a><br>
+							<a href="full/e/w214_d.jpg"><img loading="lazy" src="style/e/w214_d.webp" alt="メルセデス,w214,Eクラス,ダッシュボード" width="602" height="336"></a>
+							<a href="full/e/w214_i.jpg"><img loading="lazy" src="style/e/w214_i.webp" alt="メルセデス,w214,Eクラス,内装" width="602" height="339"></a>
+							<h5>AMG line</h5>
+							<a href="full/e/w214_amgline.jpg"><img loading="lazy" src="style/e/w214_amgline.webp" alt="メルセデス,w214,Eクラス,amgline,フロント" width="561" height="374"></a>
+							<a href="full/e/w214_f_amgline.jpg"><img loading="lazy" src="style/e/w214_f_amgline.webp" alt="メルセデス,w214,Eクラス,amgline,フロント" width="644" height="374"></a><br>
+							<a href="full/e/w214_r_amgline.jpg"><img loading="lazy" src="style/e/w214_r_amgline.webp" alt="メルセデス,w214,Eクラス,amgline,リヤ" width="776" height="380"></a>
+							<a href="full/e/w214_d_amgline.jpg"><img loading="lazy" src="style/e/w214_d_amgline.webp" alt="メルセデス,w214,Eクラス,amgline,ダッシュボード" width="428" height="380"></a><br>
+							<a href="full/e/w214_ir_amgline.jpg"><img loading="lazy" src="style/e/w214_ir_amgline.webp" alt="メルセデス,w214,Eクラス,amgline,内装" width="602" height="340"></a>
+							<a href="full/e/w214_i_amgline.jpg"><img loading="lazy" src="style/e/w214_i_amgline.webp" alt="メルセデス,w214,Eクラス,amgline,内装" width="602" height="340"></a>
+							<h5>Abmessungen</h5>
+							<a href="full/e/w214_a1.jpg"><img loading="lazy" src="style/e/w214_a1.webp" alt="メルセデス,w214,Eクラス,寸法" width="401" height="344"></a>
+							<a href="full/e/w214_a2.jpg"><img loading="lazy" src="style/e/w214_a2.webp" alt="メルセデス,w214,Eクラス,寸法" width="803" height="344"></a><br>
+							<a href="full/e/w214_a4.jpg"><img loading="lazy" src="style/e/w214_a4.webp" alt="メルセデス,w214,Eクラス,寸法" width="401" height="344"></a>
+							<a href="full/e/w214_a3.jpg"><img loading="lazy" src="style/e/w214_a3.webp" alt="メルセデス,w214,Eクラス,寸法" width="803" height="344"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">W214</h4>
-						<a href="full/e/w214_f.jpg"><img loading="lazy" src="style/e/w214_f.webp" alt="メルセデス,w214,Eクラス,フロント" width="638" height="399"></a>
-						<a href="full/e/w214_r.jpg"><img loading="lazy" src="style/e/w214_r.webp" alt="メルセデス,w214,Eクラス,リヤ" width="567" height="399"></a><br>
-						<a href="full/e/w214_d.jpg"><img loading="lazy" src="style/e/w214_d.webp" alt="メルセデス,w214,Eクラス,ダッシュボード" width="602" height="336"></a>
-						<a href="full/e/w214_i.jpg"><img loading="lazy" src="style/e/w214_i.webp" alt="メルセデス,w214,Eクラス,内装" width="602" height="339"></a>
-						<h5>AMG line</h5>
-						<a href="full/e/w214_amgline.jpg"><img loading="lazy" src="style/e/w214_amgline.webp" alt="メルセデス,w214,Eクラス,amgline,フロント" width="561" height="374"></a>
-						<a href="full/e/w214_f_amgline.jpg"><img loading="lazy" src="style/e/w214_f_amgline.webp" alt="メルセデス,w214,Eクラス,amgline,フロント" width="644" height="374"></a><br>
-						<a href="full/e/w214_r_amgline.jpg"><img loading="lazy" src="style/e/w214_r_amgline.webp" alt="メルセデス,w214,Eクラス,amgline,リヤ" width="776" height="380"></a>
-						<a href="full/e/w214_d_amgline.jpg"><img loading="lazy" src="style/e/w214_d_amgline.webp" alt="メルセデス,w214,Eクラス,amgline,ダッシュボード" width="428" height="380"></a><br>
-						<a href="full/e/w214_ir_amgline.jpg"><img loading="lazy" src="style/e/w214_ir_amgline.webp" alt="メルセデス,w214,Eクラス,amgline,内装" width="602" height="340"></a>
-						<a href="full/e/w214_i_amgline.jpg"><img loading="lazy" src="style/e/w214_i_amgline.webp" alt="メルセデス,w214,Eクラス,amgline,内装" width="602" height="340"></a>
-						<h5>Abmessungen</h5>
-						<a href="full/e/w214_a1.jpg"><img loading="lazy" src="style/e/w214_a1.webp" alt="メルセデス,w214,Eクラス,寸法" width="401" height="344"></a>
-						<a href="full/e/w214_a2.jpg"><img loading="lazy" src="style/e/w214_a2.webp" alt="メルセデス,w214,Eクラス,寸法" width="803" height="344"></a><br>
-						<a href="full/e/w214_a4.jpg"><img loading="lazy" src="style/e/w214_a4.webp" alt="メルセデス,w214,Eクラス,寸法" width="401" height="344"></a>
-						<a href="full/e/w214_a3.jpg"><img loading="lazy" src="style/e/w214_a3.webp" alt="メルセデス,w214,Eクラス,寸法" width="803" height="344"></a>
-					</section>
 				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<h3 class="bf1b i" id="s214">S214</h3>
-						<p class="i m1">エステート</p>
-						<p class="i m1">06/2023</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-s214" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h3>S214<h3>
+										<p>エステート</p>
+										06/2023
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-s214" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<a href="full/e/s214.jpg"><img loading="lazy" src="style/e/s214.webp" alt="メルセデス,S214,Eクラス" width="1210" height="807"></a><br>
+							<a href="full/e/s214_f.jpg"><img loading="lazy" src="style/e/s214_f.webp" alt="メルセデス,S214,Eクラス,フロント" width="602" height="402"></a>
+							<a href="full/e/s214_r.jpg"><img loading="lazy" src="style/e/s214_r.webp" alt="メルセデス,S214,Eクラス,リヤ" width="602" height="402"></a><br>
+							<a href="full/e/s214_d.jpg"><img loading="lazy" src="style/e/s214_d.webp" alt="メルセデス,S214,Eクラス,ダッシュボード" width="551" height="368"></a>
+							<a href="full/e/s214_i.webp"><img loading="lazy" src="style/e/s214_i.webp" alt="メルセデス,S214,Eクラス,内装" width="653" height="368"></a><br>
+							<a href="full/e/s214_s.jpg"><img loading="lazy" src="style/e/s214_s.webp" alt="メルセデス,S214,Eクラス,サイドビュー" width="551" height="368"></a>
+							<a href="full/e/s214_ra.jpg"><img loading="lazy" src="style/e/s214_ra.webp" alt="メルセデス,S214,Eクラス,リヤ" width="653" height="368"></a><br>
+							<h4 class="i">All-Terrain</h4>
+							<p class="i m1">09/2023</p><br>
+							<a href="full/e/s214-all-terrain_f.jpg"><img loading="lazy" src="style/e/s214-all-terrain_f.webp" alt="メルセデス,S214,Eクラス,オールテレーン,フロント" width="579" height="378"></a>
+							<a href="full/e/s214-all-terrain_r.jpg"><img loading="lazy" src="style/e/s214-all-terrain_r.webp" alt="メルセデス,S214,Eクラス,オールテレーン,リヤ" width="625" height="378"></a><br>
+							<a href="full/e/s214-all-terrain_d.jpg"><img loading="lazy" src="style/e/s214-all-terrain_d.webp" alt="メルセデス,S214,Eクラス,オールテレーン,ダッシュボード" width="602" height="402"></a>
+							<a href="full/e/s214-all-terrain_1i.jpg"><img loading="lazy" src="style/e/s214-all-terrain_1i.webp" alt="メルセデス,S214,Eクラス,オールテレーン,内装" width="602" height="402"></a><br>
+							<a href="full/e/s214-all-terrain_2i.jpg"><img loading="lazy" src="style/e/s214-all-terrain_2i.webp" alt="メルセデス,S214,Eクラス,オールテレーン,内装" width="602" height="402"></a>
+							<a href="full/e/s214-all-terrain_ex.jpg"><img loading="lazy" src="style/e/s214-all-terrain_ex.webp" alt="メルセデス,S214,Eクラス,オールテレーン,リヤ" width="602" height="402"></a>
+						</div>
 					</div>
-					<section>
-						<a href="full/e/s214.jpg"><img loading="lazy" src="style/e/s214.webp" alt="メルセデス,S214,Eクラス" width="1210" height="807"></a><br>
-						<a href="full/e/s214_f.jpg"><img loading="lazy" src="style/e/s214_f.webp" alt="メルセデス,S214,Eクラス,フロント" width="602" height="402"></a>
-						<a href="full/e/s214_r.jpg"><img loading="lazy" src="style/e/s214_r.webp" alt="メルセデス,S214,Eクラス,リヤ" width="602" height="402"></a><br>
-						<a href="full/e/s214_d.jpg"><img loading="lazy" src="style/e/s214_d.webp" alt="メルセデス,S214,Eクラス,ダッシュボード" width="551" height="368"></a>
-						<a href="full/e/s214_i.webp"><img loading="lazy" src="style/e/s214_i.webp" alt="メルセデス,S214,Eクラス,内装" width="653" height="368"></a><br>
-						<a href="full/e/s214_s.jpg"><img loading="lazy" src="style/e/s214_s.webp" alt="メルセデス,S214,Eクラス,サイドビュー" width="551" height="368"></a>
-						<a href="full/e/s214_ra.jpg"><img loading="lazy" src="style/e/s214_ra.webp" alt="メルセデス,S214,Eクラス,リヤ" width="653" height="368"></a><br>
-						<h4 class="i">All-Terrain</h4>
-						<p class="i m1">09/2023</p><br>
-						<a href="full/e/s214-all-terrain_f.jpg"><img loading="lazy" src="style/e/s214-all-terrain_f.webp" alt="メルセデス,S214,Eクラス,オールテレーン,フロント" width="579" height="378"></a>
-						<a href="full/e/s214-all-terrain_r.jpg"><img loading="lazy" src="style/e/s214-all-terrain_r.webp" alt="メルセデス,S214,Eクラス,オールテレーン,リヤ" width="625" height="378"></a><br>
-						<a href="full/e/s214-all-terrain_d.jpg"><img loading="lazy" src="style/e/s214-all-terrain_d.webp" alt="メルセデス,S214,Eクラス,オールテレーン,ダッシュボード" width="602" height="402"></a>
-						<a href="full/e/s214-all-terrain_1i.jpg"><img loading="lazy" src="style/e/s214-all-terrain_1i.webp" alt="メルセデス,S214,Eクラス,オールテレーン,内装" width="602" height="402"></a><br>
-						<a href="full/e/s214-all-terrain_2i.jpg"><img loading="lazy" src="style/e/s214-all-terrain_2i.webp" alt="メルセデス,S214,Eクラス,オールテレーン,内装" width="602" height="402"></a>
-						<a href="full/e/s214-all-terrain_ex.jpg"><img loading="lazy" src="style/e/s214-all-terrain_ex.webp" alt="メルセデス,S214,Eクラス,オールテレーン,リヤ" width="602" height="402"></a>
-					</section>
 				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<h3 class="bf1b i">AMG</h3>
-						<p class="i m1">E53</p>
-						<p class="i m1">04/2024</p>
+
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-amg-e53" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h4>AMG E 53<h4>
+										04/2024
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-amg-e53" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<a href="full/e/w214_f_e53.webp"><img loading="lazy" src="style/e/w214_f_e53.webp" alt="メルセデス,AMG,w214,Eクラス,E53,フロント" width="605" height="356"></a>
+							<a href="full/e/w214_r_e53.webp"><img loading="lazy" src="style/e/w214_r_e53.webp" alt="メルセデス,AMG,w214,Eクラス,E53,リヤ" width="600" height="356"></a><br>
+							<a href="full/e/w214_d_e53.webp"><img loading="lazy" src="style/e/w214_d_e53.webp" alt="メルセデス,AMG,W214,Eクラス,E53,ダッシュボード" width="602" height="346"></a>
+							<a href="full/e/w214_i_e53.webp"><img loading="lazy" src="style/e/w214_i_e53.webp" alt="メルセデス,AMG,W214,Eクラス,E53,内装" width="602" height="346"></a>
+							<h4>エステート</h4>
+							<a href="full/e/s214_f_e53.webp"><img loading="lazy" src="style/e/s214_f_e53.webp" alt="メルセデス,AMG,S214,Eクラス,E53,フロント" width="602" height="339"></a>
+							<a href="full/e/s214_r_e53.webp"><img loading="lazy" src="style/e/s214_r_e53.webp" alt="メルセデス,AMG,S214,Eクラス,E53,リヤ" width="602" height="339"></a><br>
+							<a href="full/e/s214_ib_e53.webp"><img loading="lazy" src="style/e/s214_ib_e53.webp" alt="メルセデス,AMG,S214,Eクラス,E53,内装" width="602" height="339"></a>
+							<a href="full/e/s214_ia_e53.webp"><img loading="lazy" src="style/e/s214_ia_e53.webp" alt="メルセデス,AMG,S214,Eクラス,E53,内装" width="602" height="339"></a><br>
+							<a href="full/e/s214_ic_e53.webp"><img loading="lazy" src="style/e/s214_ic_e53.webp" alt="メルセデス,AMG,S214,Eクラス,E53,内装" width="602" height="339"></a>
+							<a href="full/e/s214_m_e53.webp"><img loading="lazy" src="style/e/s214_m_e53.webp" alt="メルセデス,AMG,S214,Eクラス,E53,エンジン" width="602" height="339"></a>
+						</div>
 					</div>
-					<section>
-						<a href="full/e/w214_f_e53.webp"><img loading="lazy" src="style/e/w214_f_e53.webp" alt="メルセデス,AMG,w214,Eクラス,E53,フロント" width="605" height="356"></a>
-						<a href="full/e/w214_r_e53.webp"><img loading="lazy" src="style/e/w214_r_e53.webp" alt="メルセデス,AMG,w214,Eクラス,E53,リヤ" width="600" height="356"></a><br>
-						<a href="full/e/w214_d_e53.webp"><img loading="lazy" src="style/e/w214_d_e53.webp" alt="メルセデス,AMG,W214,Eクラス,E53,ダッシュボード" width="602" height="346"></a>
-						<a href="full/e/w214_i_e53.webp"><img loading="lazy" src="style/e/w214_i_e53.webp" alt="メルセデス,AMG,W214,Eクラス,E53,内装" width="602" height="346"></a>
-						<h4>エステート</h4>
-						<a href="full/e/s214_f_e53.webp"><img loading="lazy" src="style/e/s214_f_e53.webp" alt="メルセデス,AMG,S214,Eクラス,E53,フロント" width="602" height="339"></a>
-						<a href="full/e/s214_r_e53.webp"><img loading="lazy" src="style/e/s214_r_e53.webp" alt="メルセデス,AMG,S214,Eクラス,E53,リヤ" width="602" height="339"></a><br>
-						<a href="full/e/s214_ib_e53.webp"><img loading="lazy" src="style/e/s214_ib_e53.webp" alt="メルセデス,AMG,S214,Eクラス,E53,内装" width="602" height="339"></a>
-						<a href="full/e/s214_ia_e53.webp"><img loading="lazy" src="style/e/s214_ia_e53.webp" alt="メルセデス,AMG,S214,Eクラス,E53,内装" width="602" height="339"></a><br>
-						<a href="full/e/s214_ic_e53.webp"><img loading="lazy" src="style/e/s214_ic_e53.webp" alt="メルセデス,AMG,S214,Eクラス,E53,内装" width="602" height="339"></a>
-						<a href="full/e/s214_m_e53.webp"><img loading="lazy" src="style/e/s214_m_e53.webp" alt="メルセデス,AMG,S214,Eクラス,E53,エンジン" width="602" height="339"></a>
-					</section>
 				</div>
+
 			</div>
 		</section>
 
@@ -1071,9 +1264,10 @@
 			<hr>
 			<p class="mid"><small>@ since 2010 , piyopiyo_246</small></p>
 		</footer>
+
 		<p class="m-05" id="page-top"><a href="#head">&#9650;</a></p>
 		<p id="close-accordion">
-			<a class="vmenu_all_action" onclick="doReplaceClassName ('vmenu_on2','vmenu_off')" title="全ての開閉部を閉じる">&#9654;</a>
+			<a id="close-all-accordions-2" class="vmenu_all_action" title="全ての開閉部を閉じる">&#9654;</a>
 		</p>
 	</div>
 
@@ -1153,6 +1347,120 @@
 			}, 500);
 			return false;
 		});
+	});
+</script>
+
+<script>
+	// シンプル版アコーディオン機能（入れ子非対応）
+	document.addEventListener('DOMContentLoaded', function () {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+		accordionHeaders.forEach(header => {
+			header.addEventListener('click', function () {
+				const content = this.nextElementSibling;
+				const isActive = this.classList.contains('active');
+
+				// クリックされたアコーディオンのみトグル
+				if (isActive) {
+					this.classList.remove('active');
+					this.setAttribute('aria-expanded', 'false');
+					content.classList.remove('active');
+				} else {
+					this.classList.add('active');
+					this.setAttribute('aria-expanded', 'true');
+					content.classList.add('active');
+				}
+			});
+
+			// キーボード操作のサポート
+			header.addEventListener('keydown', function (e) {
+				if (e.key === 'Enter' || e.key === ' ') {
+					e.preventDefault();
+					this.click();
+				}
+			});
+		});
+
+		// 全開/全閉ボタンのイベントリスナー
+		const openAllBtn = document.getElementById('open-all-accordions');
+		const closeAllBtn = document.getElementById('close-all-accordions');
+		const closeAllBtn2 = document.getElementById('close-all-accordions-2');
+
+		if (openAllBtn) {
+			openAllBtn.addEventListener('click', openAllAccordions);
+		}
+
+		if (closeAllBtn) {
+			closeAllBtn.addEventListener('click', closeAllAccordions);
+		}
+
+		if (closeAllBtn2) {
+			closeAllBtn2.addEventListener('click', closeAllAccordions);
+		}
+	});
+
+	// 全アコーディオン操作機能
+	function openAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.add('active');
+			header.setAttribute('aria-expanded', 'true');
+			content.classList.add('active');
+		});
+	}
+
+	function closeAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.remove('active');
+			header.setAttribute('aria-expanded', 'false');
+			content.classList.remove('active');
+		});
+	}
+
+	// 全アコーディオン操作機能
+	function openAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.add('active');
+			header.setAttribute('aria-expanded', 'true');
+			content.classList.add('active');
+		});
+	}
+
+	function closeAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.remove('active');
+			header.setAttribute('aria-expanded', 'false');
+			content.classList.remove('active');
+		});
+	}
+
+	// ボタンにイベントリスナーを追加
+	document.addEventListener('DOMContentLoaded', function () {
+		// 既存のアコーディオンコード...
+
+		// 全開/全閉ボタン
+		const openAllBtn = document.getElementById('open-all-accordions');
+		const closeAllBtn = document.getElementById('close-all-accordions');
+		const closeAllBtn2 = document.getElementById('close-all-accordions-2'); // 追加ボタン
+
+		if (openAllBtn) {
+			openAllBtn.addEventListener('click', openAllAccordions);
+		}
+
+		if (closeAllBtn) {
+			closeAllBtn.addEventListener('click', closeAllAccordions);
+		}
+
+		if (closeAllBtn2) {
+			closeAllBtn2.addEventListener('click', closeAllAccordions);
+		}
 	});
 </script>
 
