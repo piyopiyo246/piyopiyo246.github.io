@@ -51,23 +51,6 @@
 	<link rel="stylesheet" href="../style.min.css">
 	<link rel="stylesheet" href="../style_v.min.css">
 
-	<!-- アコーディオン用のJavaScript関数を追加 -->
-	<script>
-		function doToggleClassName(obj, onClassName, offClassName) {
-			obj.className = (obj.className != onClassName) ? onClassName : offClassName;
-		}
-		function getParentObj(obj) {
-			return obj.parentElement || obj.parentNode;
-		}
-		function doReplaceClassName(findClassName, replaceClassName, targetTagName) {
-			var elements = document.getElementsByTagName(targetTagName || '*');
-			for (var i = 0; i < elements.length; i++) {
-				if (elements[i].className == findClassName)
-					elements[i].className = replaceClassName;
-			}
-		}
-	</script>
-
 	<!-- 6. Cookie同意管理システム -->
 	<script>
 		window._cookiescript = {
@@ -88,7 +71,7 @@
 							analytics_storage: 'granted',
 							ad_storage: 'denied',
 							functionality_storage: 'granted',
-							region: ['US', 'GB', 'CA', 'AU', 'NZ', 'IE'] ,
+							region: ['US', 'GB', 'CA', 'AU', 'NZ', 'IE'],
 							// デバッグ用パラメータ（本番では削除）
 							debug_mode: location.hostname.includes('localhost')
 						});
@@ -206,7 +189,7 @@
 					ad_storage: 'denied',
 					functionality_storage: 'granted',
 					wait_for_update: 500,
-					region: ['US', 'GB', 'CA', 'AU', 'NZ', 'IE'] 
+					region: ['US', 'GB', 'CA', 'AU', 'NZ', 'IE']
 				});
 			}
 		} catch (initError) {
@@ -270,7 +253,7 @@
 					</li>
 				</ul>
 				<h1 class="b bf4">GLK / GLC-class , GLC-coupe</h1>
-				 <div style="display: flex; justify-content: space-between; width: 1210px;">
+				<div style="display: flex; justify-content: space-between; width: 1210px;">
 					<dl class="m1">
 						<dt class="s2 af0">Series</dt>
 						<dd class="s2"><a href="#x204" title="GLK-class X204" class="lnk2">X204</a></dd>
@@ -280,8 +263,8 @@
 						<dd class="s2"><a href="#c254" title="GLC-class Coupe C254" class="lnk2">C254</a></dd>
 					</dl>
 					<span>
-						<button class="vmenu_all_action square_btn" type="button" title="Click here to open all openings" span onclick="doReplaceClassName('vmenu_off', 'vmenu_on2')">Open all</button>
-						<button class="vmenu_all_action square_btn" type="button" title="Click here to close all openings" span onclick="doReplaceClassName('vmenu_on2', 'vmenu_off')">Close all</button>
+						<button id="open-all-accordions" class="vmenu_all_action square_btn" type="button" title="Click here to open all openings">Open all</button>
+						<button id="close-all-accordions" class="vmenu_all_action square_btn" type="button" title="Click here to close all openings">Close all</button>
 						<button class="square_btn" type="button" onclick="location.href='ja_mb_img_glk.html'">Ja</button>
 						<button class="square_btn" type="button" onclick="location.href='mb_img_glk.html'">De</button>
 					</span>
@@ -336,36 +319,46 @@
 			<h2>GLK-class</h2>
 			<div class="style-w">
 				<a href="full/glk/x204.jpg"><img src="style/glk/x204.webp" alt="Mercedes,X204,GLK" width="1210" height="857"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<p class="bf1a i"><a href="https://en.wikipedia.org/wiki/Mercedes-Benz_GLK-Class" class="ico-wiki m1" title="Wikipedia(E) X204"></a></p>
-						<h3 class="i m0">X204</h3>
-						<p class="i m1">10/2008</p>
-						<p class="ru">Designer : Drummond Jacoy</p>
-					</div>
-					<section>
-						<h4 class="displayNone">X204</h4>
-						<a href="full/glk/x204_tp.jpg"><img loading="lazy" src="style/glk/x204_tp.webp" alt="Mercedes,X204,GLK,Perspective view" width="1210" height="800"></a><br>
-						<a href="full/glk/x204_tp1.jpg"><img loading="lazy" src="style/glk/x204_tp1.webp" alt="Mercedes,X204,GLK,Perspective view" width="639" height="411"></a>
-						<a href="full/glk/x204_tp2.jpg"><img loading="lazy" src="style/glk/x204_tp2.webp" alt="Mercedes,X204,GLK,Perspective view" width="565" height="412"></a><br>
-						<div>
-							<div class="box60a"><br>
-								<a href="full/glk/x204_f.jpg"><img loading="lazy" src="style/glk/x204_f.webp" alt="Mercedes,X204,GLK,Front view" width="604" height="346"></a><br>
-								<a href="full/glk/x204_r.jpg"><img loading="lazy" src="style/glk/x204_r.webp" alt="Mercedes,X204,GLK,Rear view" width="604" height="409"></a><br>
-								<a href="full/glk/x204_d.jpg"><img loading="lazy" src="style/glk/x204_d.webp" alt="Mercedes,X204,GLK,Dashboard" width="604" height="378"></a>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-x204" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://en.wikipedia.org/wiki/Mercedes-Benz_GLK-Class" class="ico-wiki" title="Wikipedia(E) X204"></a>
+								<h3>X204</h3>
+								10/2008
 							</div>
-							<div class="box60a">
-								<h5 class="i">Facelift</h5>
-								<p class="i m1">03/2012</p><br>
-								<a href="full/glk/x204_f2.jpg"><img loading="lazy" src="style/glk/x204_f2.webp" alt="Mercedes,X204,GLK,Front view" width="604" height="378"></a><br>
-								<a href="full/glk/x204_r2.jpg"><img loading="lazy" src="style/glk/x204_r2.webp" alt="Mercedes,X204,GLK,Rear view" width="604" height="378"></a><br>
-								<a href="full/glk/x204_d2.jpg"><img loading="lazy" src="style/glk/x204_d2.webp" alt="Mercedes,X204,GLK,Dashboard" width="604" height="378"></a>
+							<div class="accordion-right">
+								Designer : Michael Friess , Mark Fetherston , Gorden Wagener , Peter Pfeiffer
 							</div>
 						</div>
-						<h5>Dimensions</h5>
-						<a href="full/glk/x204_a.jpg"><img loading="lazy" src="style/glk/x204_a.webp" alt="Mercedes,Xx204,GLK,Dimensions" width="804" height="984"></a>
-					</section>
+					</button>
+					<div id="accordion-content-x204" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">X204</h4>
+							<a href="full/glk/x204_tp.jpg"><img loading="lazy" src="style/glk/x204_tp.webp" alt="Mercedes,X204,GLK,Perspective view" width="1210" height="800"></a><br>
+							<a href="full/glk/x204_tp1.jpg"><img loading="lazy" src="style/glk/x204_tp1.webp" alt="Mercedes,X204,GLK,Perspective view" width="639" height="411"></a>
+							<a href="full/glk/x204_tp2.jpg"><img loading="lazy" src="style/glk/x204_tp2.webp" alt="Mercedes,X204,GLK,Perspective view" width="565" height="412"></a><br>
+							<div>
+								<div class="box60a"><br>
+									<a href="full/glk/x204_f.jpg"><img loading="lazy" src="style/glk/x204_f.webp" alt="Mercedes,X204,GLK,Front view" width="604" height="346"></a><br>
+									<a href="full/glk/x204_r.jpg"><img loading="lazy" src="style/glk/x204_r.webp" alt="Mercedes,X204,GLK,Rear view" width="604" height="409"></a><br>
+									<a href="full/glk/x204_d.jpg"><img loading="lazy" src="style/glk/x204_d.webp" alt="Mercedes,X204,GLK,Dashboard" width="604" height="378"></a>
+								</div>
+								<div class="box60a">
+									<h5 class="i">Facelift</h5>
+									<p class="i m1">03/2012</p><br>
+									<a href="full/glk/x204_f2.jpg"><img loading="lazy" src="style/glk/x204_f2.webp" alt="Mercedes,X204,GLK,Front view" width="604" height="378"></a><br>
+									<a href="full/glk/x204_r2.jpg"><img loading="lazy" src="style/glk/x204_r2.webp" alt="Mercedes,X204,GLK,Rear view" width="604" height="378"></a><br>
+									<a href="full/glk/x204_d2.jpg"><img loading="lazy" src="style/glk/x204_d2.webp" alt="Mercedes,X204,GLK,Dashboard" width="604" height="378"></a>
+								</div>
+							</div>
+							<h5>Dimensions</h5>
+							<a href="full/glk/x204_a.jpg"><img loading="lazy" src="style/glk/x204_a.webp" alt="Mercedes,Xx204,GLK,Dimensions" width="804" height="984"></a>
+						</div>
+					</div>
 				</div>
+
 			</div>
 		</section>
 
@@ -373,55 +366,71 @@
 			<h2>The 1st GLC-class</h2>
 			<div class="style-w">
 				<a href="full/glk/x253.jpg"><img loading="lazy" src="style/glk/x253.webp" alt="Mercedes,X253,GLC" width="1210" height="690"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<p class="bf1a i"><a href="https://en.wikipedia.org/wiki/Mercedes-Benz_GLC-Class" class="ico-wiki m1" title="Wikipedia(E) X253"></a></p>
-						<h3 class="i m0">X253</h3>
-						<p class="i m1">09/2016 - 2022</p>
-						<p class="ru">Designer : Gorden Wagener</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-x253" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://en.wikipedia.org/wiki/Mercedes-Benz_GLC-Class" class="ico-wiki" title="Wikipedia(E) X253"></a>
+								<h3>X253</h3>
+								09/2016 - 2022
+							</div>
+						</div>
+						<div class="accordion-right">
+							Designer : Robert Lešnik , Mark Fetherston (Exterior) , Hans Peter Wunderlich (Interior) , Gorden Wagener
+						</div>
+					</button>
+					<div id="accordion-content-x253" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">X253</h4>
+							<a href="full/glk/x253_tp.jpg"><img loading="lazy" src="style/glk/x253_tp.webp" alt="Mercedes,X253,GLC,Perspective view" width="1210" height="807"></a><br>
+							<a href="full/glk/x253_f.jpg"><img loading="lazy" src="style/glk/x253_f.webp" alt="Mercedes,X253,GLC,Front view" width="603" height="377"></a>
+							<a href="full/glk/x253_r.jpg"><img loading="lazy" src="style/glk/x253_r.webp" alt="Mercedes,X253,GLC,Rear view" width="603" height="377"></a><br>
+							<a href="full/glk/x253_d.jpg"><img loading="lazy" src="style/glk/x253_d.webp" alt="Mercedes,X253,GLC,Dashboard" width="603" height="402"></a>
+							<a href="full/glk/x253_i.jpg"><img loading="lazy" src="style/glk/x253_i.webp" alt="Mercedes,X253,GLC,Interior" width="603" height="402"></a><br>
+							<h5 class="i">Facelift</h5>
+							<p class="i m1">3/2019 - 2022</p><br>
+							<a href="full/glk/x253_2.jpg"><img loading="lazy" src="style/glk/x253_2.webp" alt="Mercedes,X253,GLC" width="1210" height="806"></a><br>
+							<a href="full/glk/x253_f2.jpg"><img loading="lazy" src="style/glk/x253_f2.webp" alt="Mercedes,X253,GLC,Front view" width="603" height="377"></a>
+							<a href="full/glk/x253_r2.jpg"><img loading="lazy" src="style/glk/x253_r2.webp" alt="Mercedes,X253,GLC,Rear view" width="603" height="377"></a><br>
+							<a href="full/glk/x253_d2.jpg"><img loading="lazy" src="style/glk/x253_d2.webp" alt="Mercedes,X253,GLC,Dashboard" width="1210" height="554"></a>
+							<h5>Dimensions</h5>
+							<a href="full/glk/x253_a1.jpg"><img loading="lazy" src="style/glk/x253_a1.webp" alt="Mercedes,X253,GLC,Dimensions" width="540" height="504"></a>
+							<a href="full/glk/x253_a3.jpg"><img loading="lazy" src="style/glk/x253_a3.webp" alt="Mercedes,X253,GLC,Dimensions" width="540" height="504"></a><br>
+							<a href="full/glk/x253_a2.jpg"><img loading="lazy" src="style/glk/x253_a2.webp" alt="Mercedes,X253,GLC,Dimensions" width="1210" height="504"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">X253</h4>
-						<a href="full/glk/x253_tp.jpg"><img loading="lazy" src="style/glk/x253_tp.webp" alt="Mercedes,X253,GLC,Perspective view" width="1210" height="807"></a><br>
-						<a href="full/glk/x253_f.jpg"><img loading="lazy" src="style/glk/x253_f.webp" alt="Mercedes,X253,GLC,Front view" width="603" height="377"></a>
-						<a href="full/glk/x253_r.jpg"><img loading="lazy" src="style/glk/x253_r.webp" alt="Mercedes,X253,GLC,Rear view" width="603" height="377"></a><br>
-						<a href="full/glk/x253_d.jpg"><img loading="lazy" src="style/glk/x253_d.webp" alt="Mercedes,X253,GLC,Dashboard" width="603" height="402"></a>
-						<a href="full/glk/x253_i.jpg"><img loading="lazy" src="style/glk/x253_i.webp" alt="Mercedes,X253,GLC,Interior" width="603" height="402"></a><br>
-						<h5 class="i">Facelift</h5>
-						<p class="i m1">3/2019 - 2022</p><br>
-						<a href="full/glk/x253_2.jpg"><img loading="lazy" src="style/glk/x253_2.webp" alt="Mercedes,X253,GLC" width="1210" height="806"></a><br>
-						<a href="full/glk/x253_f2.jpg"><img loading="lazy" src="style/glk/x253_f2.webp" alt="Mercedes,X253,GLC,Front view" width="603" height="377"></a>
-						<a href="full/glk/x253_r2.jpg"><img loading="lazy" src="style/glk/x253_r2.webp" alt="Mercedes,X253,GLC,Rear view" width="603" height="377"></a><br>
-						<a href="full/glk/x253_d2.jpg"><img loading="lazy" src="style/glk/x253_d2.webp" alt="Mercedes,X253,GLC,Dashboard" width="1210" height="554"></a>
-						<h5>Dimensions</h5>
-						<a href="full/glk/x253_a1.jpg"><img loading="lazy" src="style/glk/x253_a1.webp" alt="Mercedes,X253,GLC,Dimensions" width="540" height="504"></a>
-						<a href="full/glk/x253_a3.jpg"><img loading="lazy" src="style/glk/x253_a3.webp" alt="Mercedes,X253,GLC,Dimensions" width="540" height="504"></a><br>
-						<a href="full/glk/x253_a2.jpg"><img loading="lazy" src="style/glk/x253_a2.webp" alt="Mercedes,X253,GLC,Dimensions" width="1210" height="504"></a>
-					</section>
 				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<h3 class="bf1b i">AMG</h3>
-						<h4 class="i m1">GLC43</h4>
-						<p class="i m1">06/2016-05/2019</p>
-						<p class="i m1">07/2019 - 2022</p>
-						<h4 class="i m2">GLC63</h4>
-						<p class="i m1">04/2017 - 2022</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-amg-glc43-63" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h4>AMG</h4>
+								<p>GLC 43</p>
+								06/2016 - 2022
+								<p>GLC 63</p>
+								04/2017 - 2022
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-amg-glc43-63" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">X253 AMG</h4>
+							<a href="full/glk/x253_amg_f.jpg"><img loading="lazy" src="style/glk/x253_amg_f.webp" alt="Mercedes,X253,GLC,AMG,Front view" width="597" height="340"></a>
+							<a href="full/glk/x253_amg_r.jpg"><img loading="lazy" src="style/glk/x253_amg_r.webp" alt="Mercedes,X253,GLC,AMG,Rear view" width="608" height="340"></a><br>
+							<a href="full/glk/x253_amg_d.jpg"><img loading="lazy" src="style/glk/x253_amg_d.webp" alt="Mercedes,X253,GLC,AMG,Dashboard" width="567" height="425"></a>
+							<a href="full/glk/x253_amg_i.jpg"><img loading="lazy" src="style/glk/x253_amg_i.webp" alt="Mercedes,X253,GLC,AMG,Interior" width="638" height="425"></a><br>
+							<h5 class="i">Facelift</h5>
+							<p class="i m1">2019 - 2022</p><br>
+							<a href="full/glk/x253_amg_f2.jpg"><img loading="lazy" src="style/glk/x253_amg_f2.webp" alt="Mercedes,X253,GLC,AMG,Front view" width="587" height="390"></a>
+							<a href="full/glk/x253_amg_r2.jpg"><img loading="lazy" src="style/glk/x253_amg_r2.webp" alt="Mercedes,X253,GLC,AMG,Rear view" width="616" height="390"></a><br>
+							<a href="full/glk/x253_amg_d2.jpg"><img loading="lazy" src="style/glk/x253_amg_d2.webp" alt="Mercedes,X253,GLC,AMG,Dashboard" width="551" height="367"></a>
+							<a href="full/glk/x253_amg_i2.jpg"><img loading="lazy" src="style/glk/x253_amg_i2.webp" alt="Mercedes,X253,GLC,AMG,Interior" width="652" height="367"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">X253 AMG</h4>
-						<a href="full/glk/x253_amg_f.jpg"><img loading="lazy" src="style/glk/x253_amg_f.webp" alt="Mercedes,X253,GLC,AMG,Front view" width="597" height="340"></a>
-						<a href="full/glk/x253_amg_r.jpg"><img loading="lazy" src="style/glk/x253_amg_r.webp" alt="Mercedes,X253,GLC,AMG,Rear view" width="608" height="340"></a><br>
-						<a href="full/glk/x253_amg_d.jpg"><img loading="lazy" src="style/glk/x253_amg_d.webp" alt="Mercedes,X253,GLC,AMG,Dashboard" width="567" height="425"></a>
-						<a href="full/glk/x253_amg_i.jpg"><img loading="lazy" src="style/glk/x253_amg_i.webp" alt="Mercedes,X253,GLC,AMG,Interior" width="638" height="425"></a><br>
-						<h5 class="i">Facelift</h5>
-						<p class="i m1">2019 - 2022</p><br>
-						<a href="full/glk/x253_amg_f2.jpg"><img loading="lazy" src="style/glk/x253_amg_f2.webp" alt="Mercedes,X253,GLC,AMG,Front view" width="587" height="390"></a>
-						<a href="full/glk/x253_amg_r2.jpg"><img loading="lazy" src="style/glk/x253_amg_r2.webp" alt="Mercedes,X253,GLC,AMG,Rear view" width="616" height="390"></a><br>
-						<a href="full/glk/x253_amg_d2.jpg"><img loading="lazy" src="style/glk/x253_amg_d2.webp" alt="Mercedes,X253,GLC,AMG,Dashboard" width="551" height="367"></a>
-						<a href="full/glk/x253_amg_i2.jpg"><img loading="lazy" src="style/glk/x253_amg_i2.webp" alt="Mercedes,X253,GLC,AMG,Interior" width="652" height="367"></a>
-					</section>
 				</div>
+
 			</div>
 		</section>
 
@@ -429,51 +438,68 @@
 			<h2>GLC-coupe</h2>
 			<div class="style-w">
 				<a href="full/glk/c253.jpg"><img loading="lazy" src="style/glk/c253.webp" alt="Mercedes,C253,GLC-coupe" width="1210" height="512"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<p class="bf1a i"><a href="https://de.wikipedia.org/wiki/Mercedes-Benz_C_253" class="ico-wiki m1" title="Wikipedia(D)_C253"></a></p>
-						<h3 class="i m0">C253</h3>
-						<p class="i m1">03/2016 - 2023</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-c253" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://de.wikipedia.org/wiki/Mercedes-Benz_C_253" class="ico-wiki" title="Wikipedia(D)_C253"></a>
+								<h3>C253</h3>
+								03/2016 - 2023
+							</div>
+						</div>
+						<div class="accordion-right">
+							Designer : Robert Lešnik , Mark Fetherston (Exterior) , Hans Peter Wunderlich (Interior) , Gorden Wagener
+						</div>
+					</button>
+					<div id="accordion-content-c253" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">C253</h4>
+							<a href="full/glk/c253_f.jpg"><img loading="lazy" src="style/glk/c253_f.webp" alt="Mercedes,C253,GLC-coupe,Front view" width="603" height="377"></a>
+							<a href="full/glk/c253_r.jpg"><img loading="lazy" src="style/glk/c253_r.webp" alt="Mercedes,C253,GLC-coupe,Rear view" width="603" height="377"></a><br>
+							<h5 class="i">Facelift</h5>
+							<p class="i m1">2019 - 2023</p><br>
+							<a href="full/glk/c253_f2.jpg"><img loading="lazy" src="style/glk/c253_f2.webp" alt="Mercedes,C253,GLC-coupe,Front view" width="603" height="402"></a>
+							<a href="full/glk/c253_r2.jpg"><img loading="lazy" src="style/glk/c253_r2.webp" alt="Mercedes,C253,GLC-coupe,Rear view" width="603" height="402"></a><br>
+							<a href="full/glk/c253_d2.jpg"><img loading="lazy" src="style/glk/c253_d2.webp" alt="Mercedes,C253,GLC-coupe,Dashboard" width="1210" height="681"></a><br>
+							<a href="full/glk/c253_i2.jpg"><img loading="lazy" src="style/glk/c253_i2.webp" alt="Mercedes,C253,GLC-coupe,Interior" width="1210" height="726"></a>
+							<h5>Dimensions</h5>
+							<a href="full/glk/c253_a1.jpg"><img loading="lazy" src="style/glk/c253_a1.webp" alt="Mercedes,C253,GLC-coupe,Dimensions" width="540" height="504"></a>
+							<a href="full/glk/c253_a3.jpg"><img loading="lazy" src="style/glk/c253_a3.webp" alt="Mercedes,C253,GLC-coupe,Dimensions" width="540" height="504"></a><br>
+							<a href="full/glk/c253_a2.jpg"><img loading="lazy" src="style/glk/c253_a2.webp" alt="Mercedes,C253,GLC-coupe,Dimensions" width="1210" height="504"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">C253</h4>
-						<a href="full/glk/c253_f.jpg"><img loading="lazy" src="style/glk/c253_f.webp" alt="Mercedes,C253,GLC-coupe,Front view" width="603" height="377"></a>
-						<a href="full/glk/c253_r.jpg"><img loading="lazy" src="style/glk/c253_r.webp" alt="Mercedes,C253,GLC-coupe,Rear view" width="603" height="377"></a><br>
-						<h5 class="i">Facelift</h5>
-						<p class="i m1">2019 - 2023</p><br>
-						<a href="full/glk/c253_f2.jpg"><img loading="lazy" src="style/glk/c253_f2.webp" alt="Mercedes,C253,GLC-coupe,Front view" width="603" height="402"></a>
-						<a href="full/glk/c253_r2.jpg"><img loading="lazy" src="style/glk/c253_r2.webp" alt="Mercedes,C253,GLC-coupe,Rear view" width="603" height="402"></a><br>
-						<a href="full/glk/c253_d2.jpg"><img loading="lazy" src="style/glk/c253_d2.webp" alt="Mercedes,C253,GLC-coupe,Dashboard" width="1210" height="681"></a><br>
-						<a href="full/glk/c253_i2.jpg"><img loading="lazy" src="style/glk/c253_i2.webp" alt="Mercedes,C253,GLC-coupe,Interior" width="1210" height="726"></a>
-						<h5>Dimensions</h5>
-						<a href="full/glk/c253_a1.jpg"><img loading="lazy" src="style/glk/c253_a1.webp" alt="Mercedes,C253,GLC-coupe,Dimensions" width="540" height="504"></a>
-						<a href="full/glk/c253_a3.jpg"><img loading="lazy" src="style/glk/c253_a3.webp" alt="Mercedes,C253,GLC-coupe,Dimensions" width="540" height="504"></a><br>
-						<a href="full/glk/c253_a2.jpg"><img loading="lazy" src="style/glk/c253_a2.webp" alt="Mercedes,C253,GLC-coupe,Dimensions" width="1210" height="504"></a>
-					</section>
 				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<h3 class="bf1b i">AMG</h3>
-						<p class="i m1">Coupe</p>
-						<p class="i m1">GLC43</p>
-						<p class="i m1">12/2016-05/2019</p>
-						<p class="i m2">GLC63</p>
-						<p class="i m1">09/2017-2023</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-amg-glc43-63" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h4>AMG</h4>
+								<p>GLC 43</p>
+								12/2016-05/2019
+								<p>GLC 63</p>
+								09/2017-2023
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-amg-glc43-63" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">GLC63</h4>
+							<a href="full/glk/c253_amg_f.jpg"><img loading="lazy" src="style/glk/c253_amg_f.webp" alt="Mercedes,C253,GLC-coupe,AMG,Front view" width="636" height="338"></a>
+							<a href="full/glk/c253_amg_r.jpg"><img loading="lazy" src="style/glk/c253_amg_r.webp" alt="Mercedes,C253,GLC-coupe,AMG,Rear view" width="571" height="338"></a><br>
+							<a href="full/glk/c253_amg_d.jpg"><img loading="lazy" src="style/glk/c253_amg_d.webp" alt="Mercedes,C253,GLC-coupe,AMG,Dashboard" width="723" height="482"></a>
+							<a href="full/glk/c253_amg_m.jpg"><img loading="lazy" src="style/glk/c253_amg_m.webp" alt="Mercedes,C253,GLC-coupe,AMG,Engine" width="482" height="482"></a><br>
+							<h5 class="i">Facelift</h5>
+							<p class="i m1">2019 - 2023</p><br>
+							<a href="full/glk/c253_amg_f2.jpg"><img loading="lazy" src="style/glk/c253_amg_f2.webp" alt="Mercedes,C253,GLC-coupe,AMG,Front view" width="603" height="339"></a>
+							<a href="full/glk/c253_amg_r2.jpg"><img loading="lazy" src="style/glk/c253_amg_r2.webp" alt="Mercedes,C253,GLC-coupe,AMG,Rear view" width="603" height="339"></a><br>
+							<a href="full/glk/c253_amg_d2.jpg"><img loading="lazy" src="style/glk/c253_amg_d2.webp" alt="Mercedes,C253,GLC-coupe,AMG,Dashboard" width="603" height="339"></a>
+							<a href="full/glk/c253_amg_i2.jpg"><img loading="lazy" src="style/glk/c253_amg_i2.webp" alt="Mercedes,C253,GLC-coupe,AMG,Interior" width="603" height="339"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">GLC63</h4>
-						<a href="full/glk/c253_amg_f.jpg"><img loading="lazy" src="style/glk/c253_amg_f.webp" alt="Mercedes,C253,GLC-coupe,AMG,Front view" width="636" height="338"></a>
-						<a href="full/glk/c253_amg_r.jpg"><img loading="lazy" src="style/glk/c253_amg_r.webp" alt="Mercedes,C253,GLC-coupe,AMG,Rear view" width="571" height="338"></a><br>
-						<a href="full/glk/c253_amg_d.jpg"><img loading="lazy" src="style/glk/c253_amg_d.webp" alt="Mercedes,C253,GLC-coupe,AMG,Dashboard" width="723" height="482"></a>
-						<a href="full/glk/c253_amg_m.jpg"><img loading="lazy" src="style/glk/c253_amg_m.webp" alt="Mercedes,C253,GLC-coupe,AMG,Engine" width="482" height="482"></a><br>
-						<h5 class="i">Facelift</h5>
-						<p class="i m1">2019 - 2023</p><br>
-						<a href="full/glk/c253_amg_f2.jpg"><img loading="lazy" src="style/glk/c253_amg_f2.webp" alt="Mercedes,C253,GLC-coupe,AMG,Front view" width="603" height="339"></a>
-						<a href="full/glk/c253_amg_r2.jpg"><img loading="lazy" src="style/glk/c253_amg_r2.webp" alt="Mercedes,C253,GLC-coupe,AMG,Rear view" width="603" height="339"></a><br>
-						<a href="full/glk/c253_amg_d2.jpg"><img loading="lazy" src="style/glk/c253_amg_d2.webp" alt="Mercedes,C253,GLC-coupe,AMG,Dashboard" width="603" height="339"></a>
-						<a href="full/glk/c253_amg_i2.jpg"><img loading="lazy" src="style/glk/c253_amg_i2.webp" alt="Mercedes,C253,GLC-coupe,AMG,Interior" width="603" height="339"></a>
-					</section>
 				</div>
+
 			</div>
 		</section>
 		<section>
@@ -488,25 +514,35 @@
 			<h2>The 2nd GLC-klasse</h2>
 			<div class="style-w">
 				<a href="full/glk/x254.jpg"><img loading="lazy" src="style/glk/x254.webp" alt="Mercedes,X254,GLC" width="1210" height="447"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<p class="bf1a i"><a href="https://de.wikipedia.org/wiki/Mercedes-Benz_X_254" class="ico-wiki m1" title="Wikipedia(D) X254"></a></p>
-						<h3 class="i m0">X254</h3>
-						<p class="i m1">06/2022 -</p>
-						<!-- <p class="ru">Designer : Gorden Wagener</p> -->
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-x254" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://de.wikipedia.org/wiki/Mercedes-Benz_X_254" class="ico-wiki" title="Wikipedia(D) X254"></a>
+								<h3>X254</h3>
+								06/2022 -
+							</div>
+							<div class="accordion-right">
+								Designer : Robert Lešnik , Laurent Olivier , Balázs Filczer , Bastian Baudy , Gorden Wagener
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-x254" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">X254</h4>
+							<a href="full/glk/x254_f.jpg"><img loading="lazy" src="style/glk/x254_f.webp" alt="Mercedes,x254,GLC,Front view" width="603" height="340"></a>
+							<a href="full/glk/x254_r.jpg"><img loading="lazy" src="style/glk/x254_r.webp" alt="Mercedes,x254,GLC,Rear view" width="603" height="323"></a><br>
+							<a href="full/glk/x254_d.jpg"><img loading="lazy" src="style/glk/x254_d.webp" alt="Mercedes,x254,GLC,Dashboard" width="1210" height="807"></a><br>
+							<a href="full/glk/x254_i.jpg"><img loading="lazy" src="style/glk/x254_i.webp" alt="Mercedes,x254,GLC,Interior" width="603" height="403"></a>
+							<a href="full/glk/x254_ia.jpg"><img loading="lazy" src="style/glk/x254_ia.webp" alt="Mercedes,x254,GLC,Interior" width="603" height="403"></a>
+							<h5>Dimensions</h5>
+							<a href="full/glk/x254_a2.jpg"><img loading="lazy" src="style/glk/x254_a2.webp" alt="Mercedes,x254,GLK,Dimensions" width="412" height="376"></a>
+							<a href="full/glk/x254_a1.jpg"><img loading="lazy" src="style/glk/x254_a1.webp" alt="Mercedes,x254,GLK,Dimensions" width="794" height="376"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">X254</h4>
-						<a href="full/glk/x254_f.jpg"><img loading="lazy" src="style/glk/x254_f.webp" alt="Mercedes,x254,GLC,Front view" width="603" height="340"></a>
-						<a href="full/glk/x254_r.jpg"><img loading="lazy" src="style/glk/x254_r.webp" alt="Mercedes,x254,GLC,Rear view" width="603" height="323"></a><br>
-						<a href="full/glk/x254_d.jpg"><img loading="lazy" src="style/glk/x254_d.webp" alt="Mercedes,x254,GLC,Dashboard" width="1210" height="807"></a><br>
-						<a href="full/glk/x254_i.jpg"><img loading="lazy" src="style/glk/x254_i.webp" alt="Mercedes,x254,GLC,Interior" width="603" height="403"></a>
-						<a href="full/glk/x254_ia.jpg"><img loading="lazy" src="style/glk/x254_ia.webp" alt="Mercedes,x254,GLC,Interior" width="603" height="403"></a>
-						<h5>Dimensions</h5>
-						<a href="full/glk/x254_a2.jpg"><img loading="lazy" src="style/glk/x254_a2.webp" alt="Mercedes,x254,GLK,Dimensions" width="412" height="376"></a>
-						<a href="full/glk/x254_a1.jpg"><img loading="lazy" src="style/glk/x254_a1.webp" alt="Mercedes,x254,GLK,Dimensions" width="794" height="376"></a>
-					</section>
 				</div>
+
 			</div>
 		</section>
 
@@ -514,44 +550,61 @@
 			<h2>The 2nd GLC-coupe</h2>
 			<div class="style-w">
 				<a href="full/glk/c254_r.jpg"><img loading="lazy" src="style/glk/c254_r.webp" alt="Mercedes,C254,GLC,Coupe,Rear view" width="1210" height="681"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<p class="bf1a i"><a href="https://de.wikipedia.org/wiki/Mercedes-Benz_C_254" class="ico-wiki m1" title="Wikipedia(D)_C254"></a></p>
-						<h3 class="i m0">C254</h3>
-						<p class="i m1">03/2023 -</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-c254" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://de.wikipedia.org/wiki/Mercedes-Benz_C_254" class="ico-wiki" title="Wikipedia(D)_C254"></a>
+								<h3>C254</h3>
+								03/2023 -
+							</div>
+							<div class="accordion-right">
+								Designer : Robert Lešnik , Laurent Olivier , Balázs Filczer , Bastian Baudy , Gorden Wagener
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-c254" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">C254</h4>
+							<a href="full/glk/c254_f.jpg"><img loading="lazy" src="style/glk/c254_f.webp" alt="Mercedes,C254,GLC-coupe,Front view" width="603" height="339"></a>
+							<a href="full/glk/c254_d.jpg"><img loading="lazy" src="style/glk/c254_d.webp" alt="Mercedes,C254,GLC,Dashboard" width="603" height="339"></a><br>
+							<a href="full/glk/c254_ir.jpg"><img loading="lazy" src="style/glk/c254_ir.webp" alt="Mercedes,C254,GLC,Interior" width="603" height="339"></a>
+							<a href="full/glk/c254_if.jpg"><img loading="lazy" src="style/glk/c254_if.webp" alt="Mercedes,C254,GLC,Interior" width="603" height="339"></a>
+							<h5>Dimensions</h5>
+							<a href="full/glk/c254_a2.jpg"><img loading="lazy" src="style/glk/c254_a2.webp" alt="Mercedes,C254,GLC-coupe,Dimensions" width="637" height="501"></a>
+							<a href="full/glk/c254_a3.jpg"><img loading="lazy" src="style/glk/c254_a3.webp" alt="Mercedes,C254,GLC-coupe,Dimensions" width="568" height="501"></a><br>
+							<a href="full/glk/c254_a1.webp"><img loading="lazy" src="style/glk/c254_a1.webp" alt="Mercedes,C254,GLC-coupe,Dimensions" width="1210" height="467"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">C254</h4>
-						<a href="full/glk/c254_f.jpg"><img loading="lazy" src="style/glk/c254_f.webp" alt="Mercedes,C254,GLC-coupe,Front view" width="603" height="339"></a>
-						<a href="full/glk/c254_d.jpg"><img loading="lazy" src="style/glk/c254_d.webp" alt="Mercedes,C254,GLC,Dashboard" width="603" height="339"></a><br>
-						<a href="full/glk/c254_ir.jpg"><img loading="lazy" src="style/glk/c254_ir.webp" alt="Mercedes,C254,GLC,Interior" width="603" height="339"></a>
-						<a href="full/glk/c254_if.jpg"><img loading="lazy" src="style/glk/c254_if.webp" alt="Mercedes,C254,GLC,Interior" width="603" height="339"></a>
-						<h5>Dimensions</h5>
-						<a href="full/glk/c254_a2.jpg"><img loading="lazy" src="style/glk/c254_a2.webp" alt="Mercedes,C254,GLC-coupe,Dimensions" width="637" height="501"></a>
-						<a href="full/glk/c254_a3.jpg"><img loading="lazy" src="style/glk/c254_a3.webp" alt="Mercedes,C254,GLC-coupe,Dimensions" width="568" height="501"></a><br>
-						<a href="full/glk/c254_a1.webp"><img loading="lazy" src="style/glk/c254_a1.webp" alt="Mercedes,C254,GLC-coupe,Dimensions" width="1210" height="467"></a>
-					</section>
 				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<h3 class="bf1b i">AMG</h3>
-						<p class="i m1">Coupe</p>
-						<p class="i m1">GLC43</p>
-						<p class="i m1">09/2023-</p>
-						<p class="i m2">GLC63</p>
-						<p class="i m1">09/2023-</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-amg-glc43-63" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h4>AMG</h4>
+								<p>GLC 43</p>
+								09/2023-
+								<p>GLC 63</p>
+								09/2023-
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-amg-glc43-63" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">GLC63</h4>
+							<a href="full/glk/c254_amg_63s.webp"><img loading="lazy" src="style/glk/c254_amg_63s.webp" alt="Mercedes,C254,GLC-coupe,AMG,Front view" width="1210" height="681"></a><br>
+							<a href="full/glk/c254_amg_f.webp"><img loading="lazy" src="style/glk/c254_amg_f.webp" alt="Mercedes,C254,GLC-coupe,AMG,Front view" width="603" height="339"></a>
+							<a href="full/glk/c254_amg_r.webp"><img loading="lazy" src="style/glk/c254_amg_r.webp" alt="Mercedes,C254,GLC-coupe,AMG,Rear view" width="603" height="339"></a><br>
+							<a href="full/glk/c254_amg_d.webp"><img loading="lazy" src="style/glk/c254_amg_d.webp" alt="Mercedes,C254,GLC-coupe,AMG,Dashboard" width="603" height="339"></a>
+							<a href="full/glk/c254_amg_m.webp"><img loading="lazy" src="style/glk/c254_amg_m.webp" alt="Mercedes,C254,GLC-coupe,AMG,Engine" width="603" height="339"></a><br>
+							<a href="full/glk/c254_amg_ir.webp"><img loading="lazy" src="style/glk/c254_amg_ir.webp" alt="Mercedes,C254,GLC-coupe,AMG,,Interior" width="603" height="339"></a>
+							<a href="full/glk/c254_amg_if.webp"><img loading="lazy" src="style/glk/c254_amg_if.webp" alt="Mercedes,C254,GLC-coupe,AMG,,Interior" width="603" height="339"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">GLC63</h4>
-						<a href="full/glk/c254_amg_63s.webp"><img loading="lazy" src="style/glk/c254_amg_63s.webp" alt="Mercedes,C254,GLC-coupe,AMG,Front view" width="1210" height="681"></a><br>
-						<a href="full/glk/c254_amg_f.webp"><img loading="lazy" src="style/glk/c254_amg_f.webp" alt="Mercedes,C254,GLC-coupe,AMG,Front view" width="603" height="339"></a>
-						<a href="full/glk/c254_amg_r.webp"><img loading="lazy" src="style/glk/c254_amg_r.webp" alt="Mercedes,C254,GLC-coupe,AMG,Rear view" width="603" height="339"></a><br>
-						<a href="full/glk/c254_amg_d.webp"><img loading="lazy" src="style/glk/c254_amg_d.webp" alt="Mercedes,C254,GLC-coupe,AMG,Dashboard" width="603" height="339"></a>
-						<a href="full/glk/c254_amg_m.webp"><img loading="lazy" src="style/glk/c254_amg_m.webp" alt="Mercedes,C254,GLC-coupe,AMG,Engine" width="603" height="339"></a><br>
-						<a href="full/glk/c254_amg_ir.webp"><img loading="lazy" src="style/glk/c254_amg_ir.webp" alt="Mercedes,C254,GLC-coupe,AMG,,Interior" width="603" height="339"></a>
-						<a href="full/glk/c254_amg_if.webp"><img loading="lazy" src="style/glk/c254_amg_if.webp" alt="Mercedes,C254,GLC-coupe,AMG,,Interior" width="603" height="339"></a>
-					</section>
 				</div>
+
 			</div>
 		</section>
 
@@ -601,9 +654,10 @@
 			<hr>
 			<p class="mid"><small>@ since 2010 , piyopiyo_246</small></p>
 		</footer>
+
 		<p class="m-05" id="page-top"><a href="#head">&#9650;</a></p>
 		<p id="close-accordion">
-			<a class="vmenu_all_action" onclick="doReplaceClassName ('vmenu_on2','vmenu_off')" title="Close all openings">&#9654;</a>
+			<a id="close-all-accordions-2" class="vmenu_all_action" title="Close all openings">&#9654;</a>
 		</p>
 	</div>
 
@@ -639,7 +693,7 @@
 				analytics_storage: 'denied',
 				ad_storage: 'denied',
 				functionality_storage: 'granted',
-				region: ['US', 'GB', 'CA', 'AU', 'NZ', 'IE'] 
+				region: ['US', 'GB', 'CA', 'AU', 'NZ', 'IE']
 			};
 
 			// GTM用設定
@@ -678,6 +732,120 @@
 			}, 500);
 			return false;
 		});
+	});
+</script>
+
+<script>
+	// シンプル版アコーディオン機能（入れ子非対応）
+	document.addEventListener('DOMContentLoaded', function () {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+		accordionHeaders.forEach(header => {
+			header.addEventListener('click', function () {
+				const content = this.nextElementSibling;
+				const isActive = this.classList.contains('active');
+
+				// クリックされたアコーディオンのみトグル
+				if (isActive) {
+					this.classList.remove('active');
+					this.setAttribute('aria-expanded', 'false');
+					content.classList.remove('active');
+				} else {
+					this.classList.add('active');
+					this.setAttribute('aria-expanded', 'true');
+					content.classList.add('active');
+				}
+			});
+
+			// キーボード操作のサポート
+			header.addEventListener('keydown', function (e) {
+				if (e.key === 'Enter' || e.key === ' ') {
+					e.preventDefault();
+					this.click();
+				}
+			});
+		});
+
+		// 全開/全閉ボタンのイベントリスナー
+		const openAllBtn = document.getElementById('open-all-accordions');
+		const closeAllBtn = document.getElementById('close-all-accordions');
+		const closeAllBtn2 = document.getElementById('close-all-accordions-2');
+
+		if (openAllBtn) {
+			openAllBtn.addEventListener('click', openAllAccordions);
+		}
+
+		if (closeAllBtn) {
+			closeAllBtn.addEventListener('click', closeAllAccordions);
+		}
+
+		if (closeAllBtn2) {
+			closeAllBtn2.addEventListener('click', closeAllAccordions);
+		}
+	});
+
+	// 全アコーディオン操作機能
+	function openAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.add('active');
+			header.setAttribute('aria-expanded', 'true');
+			content.classList.add('active');
+		});
+	}
+
+	function closeAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.remove('active');
+			header.setAttribute('aria-expanded', 'false');
+			content.classList.remove('active');
+		});
+	}
+
+	// 全アコーディオン操作機能
+	function openAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.add('active');
+			header.setAttribute('aria-expanded', 'true');
+			content.classList.add('active');
+		});
+	}
+
+	function closeAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.remove('active');
+			header.setAttribute('aria-expanded', 'false');
+			content.classList.remove('active');
+		});
+	}
+
+	// ボタンにイベントリスナーを追加
+	document.addEventListener('DOMContentLoaded', function () {
+		// 既存のアコーディオンコード...
+
+		// 全開/全閉ボタン
+		const openAllBtn = document.getElementById('open-all-accordions');
+		const closeAllBtn = document.getElementById('close-all-accordions');
+		const closeAllBtn2 = document.getElementById('close-all-accordions-2'); // 追加ボタン
+
+		if (openAllBtn) {
+			openAllBtn.addEventListener('click', openAllAccordions);
+		}
+
+		if (closeAllBtn) {
+			closeAllBtn.addEventListener('click', closeAllAccordions);
+		}
+
+		if (closeAllBtn2) {
+			closeAllBtn2.addEventListener('click', closeAllAccordions);
+		}
 	});
 </script>
 

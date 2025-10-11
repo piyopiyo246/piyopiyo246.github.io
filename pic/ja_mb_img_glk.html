@@ -51,23 +51,6 @@
 	<link rel="stylesheet" href="../style.min.css">
 	<link rel="stylesheet" href="../style_v.min.css">
 
-	<!-- アコーディオン用のJavaScript関数を追加 -->
-	<script>
-		function doToggleClassName(obj, onClassName, offClassName) {
-			obj.className = (obj.className != onClassName) ? onClassName : offClassName;
-		}
-		function getParentObj(obj) {
-			return obj.parentElement || obj.parentNode;
-		}
-		function doReplaceClassName(findClassName, replaceClassName, targetTagName) {
-			var elements = document.getElementsByTagName(targetTagName || '*');
-			for (var i = 0; i < elements.length; i++) {
-				if (elements[i].className == findClassName)
-					elements[i].className = replaceClassName;
-			}
-		}
-	</script>
-
 	<!-- 6. Cookie同意管理システム -->
 	<script>
 		window._cookiescript = {
@@ -270,7 +253,7 @@
 					</li>
 				</ul>
 				<h1 class="b bf4">GLK / GLC クラス , GLC クーペ</h1>
-				 <div style="display: flex; justify-content: space-between; width: 1210px;">
+				<div style="display: flex; justify-content: space-between; width: 1210px;">
 					<dl class="m1">
 						<dt class="s2 af0">Series</dt>
 						<dd class="s2"><a href="#x204" title="GLKクラス X204" class="lnk2">204</a></dd>
@@ -280,8 +263,8 @@
 						<dd class="s2"><a href="#c254" title="GLCクラス クーペ C254" class="lnk2">C254</a></dd>
 					</dl>
 					<span>
-						<button class="vmenu_all_action square_btn" type="button" title="クリックで全ての開閉部を開く" span onclick="doReplaceClassName('vmenu_off', 'vmenu_on2')">全て開く</button>
-						<button class="vmenu_all_action square_btn" type="button" title="クリックで全ての開閉部を閉じる" span onclick="doReplaceClassName('vmenu_on2', 'vmenu_off')">全て閉じる</button>
+						<button id="open-all-accordions" class="vmenu_all_action square_btn" type="button" title="クリックで全ての開閉部を開く">全て開く</button>
+						<button id="close-all-accordions" class="vmenu_all_action square_btn" type="button" title="クリックで全ての開閉部を閉じる">全て閉じる</button>
 						<button class="square_btn" type="button" onclick="location.href='en_mb_img_glk.html'">En</button>
 						<button class="square_btn" type="button" onclick="location.href='mb_img_glk.html'">De</button>
 					</span>
@@ -336,36 +319,46 @@
 			<h2>GLK</h2>
 			<div class="style-w">
 				<a href="full/glk/x204.jpg"><img src="style/glk/x204.webp" alt="メルセデス,X204,GLK" width="1210" height="857"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<p class="bf1a i"><a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBGLK%E3%82%AF%E3%83%A9%E3%82%B9" class="ico-wiki m1" title="Wikipedia(J) X204"></a></p>
-						<h3 class="i m0">X204</h3>
-						<p class="i m1">10/2008</p>
-						<p class="ru">デザイナー : Drummond Jacoy</p>
-					</div>
-					<section>
-						<h4 class="displayNone">X204</h4>
-						<a href="full/glk/x204_tp.jpg"><img loading="lazy" src="style/glk/x204_tp.webp" alt="メルセデス,X204,GLK,透視図" width="1210" height="800"></a><br>
-						<a href="full/glk/x204_tp1.jpg"><img loading="lazy" src="style/glk/x204_tp1.webp" alt="メルセデス,X204,GLK,透視図" width="639" height="411"></a>
-						<a href="full/glk/x204_tp2.jpg"><img loading="lazy" src="style/glk/x204_tp2.webp" alt="メルセデス,X204,GLK,透視図" width="565" height="412"></a><br>
-						<div>
-							<div class="box60a"><br>
-								<a href="full/glk/x204_f.jpg"><img loading="lazy" src="style/glk/x204_f.webp" alt="メルセデス,X204,GLK,フロント" width="604" height="346"></a><br>
-								<a href="full/glk/x204_r.jpg"><img loading="lazy" src="style/glk/x204_r.webp" alt="メルセデス,X204,GLK,リヤ" width="604" height="409"></a><br>
-								<a href="full/glk/x204_d.jpg"><img loading="lazy" src="style/glk/x204_d.webp" alt="メルセデス,X204,GLK,ダッシュボード" width="604" height="378"></a>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-x204" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBGLK%E3%82%AF%E3%83%A9%E3%82%B9" class="ico-wiki" title="Wikipedia(J) X204"></a>
+								<h3>X204</h3>
+								10/2008
 							</div>
-							<div class="box60a">
-								<h5 class="i">フェイスリフト</h5>
-								<p class="i m1">03/2012</p><br>
-								<a href="full/glk/x204_f2.jpg"><img loading="lazy" src="style/glk/x204_f2.webp" alt="メルセデス,X204,GLK,フロント" width="604" height="378"></a><br>
-								<a href="full/glk/x204_r2.jpg"><img loading="lazy" src="style/glk/x204_r2.webp" alt="メルセデス,X204,GLK,リヤ" width="604" height="378"></a><br>
-								<a href="full/glk/x204_d2.jpg"><img loading="lazy" src="style/glk/x204_d2.webp" alt="メルセデス,X204,GLK,ダッシュボード" width="604" height="378"></a>
+							<div class="accordion-right">
+								デザイナー : Michael Friess , Mark Fetherston , Gorden Wagener , Peter Pfeiffer
 							</div>
 						</div>
-						<h5>ボディサイズ</h5>
-						<a href="full/glk/x204_a.jpg"><img loading="lazy" src="style/glk/x204_a.webp" alt="メルセデス,Xx204,GLK,寸法" width="804" height="984"></a>
-					</section>
+					</button>
+					<div id="accordion-content-x204" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">X204</h4>
+							<a href="full/glk/x204_tp.jpg"><img loading="lazy" src="style/glk/x204_tp.webp" alt="メルセデス,X204,GLK,透視図" width="1210" height="800"></a><br>
+							<a href="full/glk/x204_tp1.jpg"><img loading="lazy" src="style/glk/x204_tp1.webp" alt="メルセデス,X204,GLK,透視図" width="639" height="411"></a>
+							<a href="full/glk/x204_tp2.jpg"><img loading="lazy" src="style/glk/x204_tp2.webp" alt="メルセデス,X204,GLK,透視図" width="565" height="412"></a><br>
+							<div>
+								<div class="box60a"><br>
+									<a href="full/glk/x204_f.jpg"><img loading="lazy" src="style/glk/x204_f.webp" alt="メルセデス,X204,GLK,フロント" width="604" height="346"></a><br>
+									<a href="full/glk/x204_r.jpg"><img loading="lazy" src="style/glk/x204_r.webp" alt="メルセデス,X204,GLK,リヤ" width="604" height="409"></a><br>
+									<a href="full/glk/x204_d.jpg"><img loading="lazy" src="style/glk/x204_d.webp" alt="メルセデス,X204,GLK,ダッシュボード" width="604" height="378"></a>
+								</div>
+								<div class="box60a">
+									<h5 class="i">フェイスリフト</h5>
+									<p class="i m1">03/2012</p><br>
+									<a href="full/glk/x204_f2.jpg"><img loading="lazy" src="style/glk/x204_f2.webp" alt="メルセデス,X204,GLK,フロント" width="604" height="378"></a><br>
+									<a href="full/glk/x204_r2.jpg"><img loading="lazy" src="style/glk/x204_r2.webp" alt="メルセデス,X204,GLK,リヤ" width="604" height="378"></a><br>
+									<a href="full/glk/x204_d2.jpg"><img loading="lazy" src="style/glk/x204_d2.webp" alt="メルセデス,X204,GLK,ダッシュボード" width="604" height="378"></a>
+								</div>
+							</div>
+							<h5>ボディサイズ</h5>
+							<a href="full/glk/x204_a.jpg"><img loading="lazy" src="style/glk/x204_a.webp" alt="メルセデス,Xx204,GLK,寸法" width="804" height="984"></a>
+						</div>
+					</div>
 				</div>
+
 			</div>
 		</section>
 
@@ -373,55 +366,71 @@
 			<h2>第１世代 GLCクラス</h2>
 			<div class="style-w">
 				<a href="full/glk/x253.jpg"><img loading="lazy" src="style/glk/x253.webp" alt="メルセデス,X253,GLC" width="1210" height="690"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<p class="bf1a i"><a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBGLC%E3%82%AF%E3%83%A9%E3%82%B9" class="ico-wiki m1" title="Wikipedia(J) X253"></a></p>
-						<h3 class="i m0">X253</h3>
-						<p class="i m1">10/2015 - 2022</p>
-						<p class="ru">デザイナー : Gorden Wagener</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-x253" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBGLC%E3%82%AF%E3%83%A9%E3%82%B9" class="ico-wiki" title="Wikipedia(J) X253"></a>
+								<h3>X253</h3>
+								10/2015 - 2022
+							</div>
+						</div>
+						<div class="accordion-right">
+							デザイナー : Robert Lešnik , Mark Fetherston (外装) , Hans Peter Wunderlich (内装) , Gorden Wagener
+						</div>
+					</button>
+					<div id="accordion-content-x253" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">X253</h4>
+							<a href="full/glk/x253_tp.jpg"><img loading="lazy" src="style/glk/x253_tp.webp" alt="メルセデス,X253,GLC,透視図" width="1210" height="807"></a><br>
+							<a href="full/glk/x253_f.jpg"><img loading="lazy" src="style/glk/x253_f.webp" alt="メルセデス,X253,GLC,フロント" width="603" height="377"></a>
+							<a href="full/glk/x253_r.jpg"><img loading="lazy" src="style/glk/x253_r.webp" alt="メルセデス,X253,GLC,リヤ" width="603" height="377"></a><br>
+							<a href="full/glk/x253_d.jpg"><img loading="lazy" src="style/glk/x253_d.webp" alt="メルセデス,X253,GLC,ダッシュボード" width="603" height="402"></a>
+							<a href="full/glk/x253_i.jpg"><img loading="lazy" src="style/glk/x253_i.webp" alt="メルセデス,X253,GLC,内装" width="603" height="402"></a>
+							<h5 class="i">フェイスリフト</h5>
+							<p class="i m1">2019 - 2022</p><br>
+							<a href="full/glk/x253_2.jpg"><img loading="lazy" src="style/glk/x253_2.webp" alt="メルセデス,X253,GLC" width="1210" height="806"></a><br>
+							<a href="full/glk/x253_f2.jpg"><img loading="lazy" src="style/glk/x253_f2.webp" alt="メルセデス,X253,GLC,フロント" width="595" height="368"></a>
+							<a href="full/glk/x253_r2.jpg"><img loading="lazy" src="style/glk/x253_r2.webp" alt="メルセデス,X253,GLC,リヤ" width="609" height="368"></a><br>
+							<a href="full/glk/x253_d2.jpg"><img loading="lazy" src="style/glk/x253_d2.webp" alt="メルセデス,X253,GLC,ダッシュボード" width="1210" height="554"></a>
+							<h5>ボディサイズ</h5>
+							<a href="full/glk/x253_a1.jpg"><img loading="lazy" src="style/glk/x253_a1.webp" alt="メルセデス,X253,GLC,寸法" width="540" height="504"></a>
+							<a href="full/glk/x253_a3.jpg"><img loading="lazy" src="style/glk/x253_a3.webp" alt="メルセデス,X253,GLC,寸法" width="540" height="504"></a><br>
+							<a href="full/glk/x253_a2.jpg"><img loading="lazy" src="style/glk/x253_a2.webp" alt="メルセデス,X253,GLC,寸法" width="1210" height="504"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">X253</h4>
-						<a href="full/glk/x253_tp.jpg"><img loading="lazy" src="style/glk/x253_tp.webp" alt="メルセデス,X253,GLC,透視図" width="1210" height="807"></a><br>
-						<a href="full/glk/x253_f.jpg"><img loading="lazy" src="style/glk/x253_f.webp" alt="メルセデス,X253,GLC,フロント" width="603" height="377"></a>
-						<a href="full/glk/x253_r.jpg"><img loading="lazy" src="style/glk/x253_r.webp" alt="メルセデス,X253,GLC,リヤ" width="603" height="377"></a><br>
-						<a href="full/glk/x253_d.jpg"><img loading="lazy" src="style/glk/x253_d.webp" alt="メルセデス,X253,GLC,ダッシュボード" width="603" height="402"></a>
-						<a href="full/glk/x253_i.jpg"><img loading="lazy" src="style/glk/x253_i.webp" alt="メルセデス,X253,GLC,内装" width="603" height="402"></a>
-						<h5 class="i">フェイスリフト</h5>
-						<p class="i m1">2019 - 2022</p><br>
-						<a href="full/glk/x253_2.jpg"><img loading="lazy" src="style/glk/x253_2.webp" alt="メルセデス,X253,GLC" width="1210" height="806"></a><br>
-						<a href="full/glk/x253_f2.jpg"><img loading="lazy" src="style/glk/x253_f2.webp" alt="メルセデス,X253,GLC,フロント" width="595" height="368"></a>
-						<a href="full/glk/x253_r2.jpg"><img loading="lazy" src="style/glk/x253_r2.webp" alt="メルセデス,X253,GLC,リヤ" width="609" height="368"></a><br>
-						<a href="full/glk/x253_d2.jpg"><img loading="lazy" src="style/glk/x253_d2.webp" alt="メルセデス,X253,GLC,ダッシュボード" width="1210" height="554"></a>
-						<h5>ボディサイズ</h5>
-						<a href="full/glk/x253_a1.jpg"><img loading="lazy" src="style/glk/x253_a1.webp" alt="メルセデス,X253,GLC,寸法" width="540" height="504"></a>
-						<a href="full/glk/x253_a3.jpg"><img loading="lazy" src="style/glk/x253_a3.webp" alt="メルセデス,X253,GLC,寸法" width="540" height="504"></a><br>
-						<a href="full/glk/x253_a2.jpg"><img loading="lazy" src="style/glk/x253_a2.webp" alt="メルセデス,X253,GLC,寸法" width="1210" height="504"></a>
-					</section>
 				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<h3 class="bf1b i">AMG</h3>
-						<h4 class="i m1">GLC43</h4>
-						<p class="i m1">06/2016-05/2019</p>
-						<p class="i m1">07/2019 - 2022</p>
-						<h4 class="i m2">GLC63</h4>
-						<p class="i m1">04/2017 - 2022</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-amg-glc43-63" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h4>AMG</h4>
+								<p>GLC 43</p>
+								06/2016 - 2022
+								<p>GLC 63</p>
+								04/2017 - 2022
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-amg-glc43-63" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">X253 AMG</h4>
+							<a href="full/glk/x253_amg_f.jpg"><img loading="lazy" src="style/glk/x253_amg_f.webp" alt="メルセデス,X253,GLC,AMG,フロント" width="597" height="340"></a>
+							<a href="full/glk/x253_amg_r.jpg"><img loading="lazy" src="style/glk/x253_amg_r.webp" alt="メルセデス,X253,GLC,AMG,リヤ" width="608" height="340"></a><br>
+							<a href="full/glk/x253_amg_d.jpg"><img loading="lazy" src="style/glk/x253_amg_d.webp" alt="メルセデス,X253,GLC,AMG,ダッシュボード" width="567" height="425"></a>
+							<a href="full/glk/x253_amg_i.jpg"><img loading="lazy" src="style/glk/x253_amg_i.webp" alt="メルセデス,X253,GLC,AMG,内装" width="638" height="425"></a><br>
+							<h5 class="i">フェイスリフト</h5>
+							<p class="i m1">2019 - 2022</p><br>
+							<a href="full/glk/x253_amg_f2.jpg"><img loading="lazy" src="style/glk/x253_amg_f2.webp" alt="メルセデス,X253,GLC,AMG,フロント" width="587" height="390"></a>
+							<a href="full/glk/x253_amg_r2.jpg"><img loading="lazy" src="style/glk/x253_amg_r2.webp" alt="メルセデス,X253,GLC,AMG,リヤ" width="616" height="390"></a><br>
+							<a href="full/glk/x253_amg_d2.jpg"><img loading="lazy" src="style/glk/x253_amg_d2.webp" alt="メルセデス,X253,GLC,AMG,ダッシュボード" width="551" height="367"></a>
+							<a href="full/glk/x253_amg_i2.jpg"><img loading="lazy" src="style/glk/x253_amg_i2.webp" alt="メルセデス,X253,GLC,AMG,内装" width="652" height="367"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">X253 AMG</h4>
-						<a href="full/glk/x253_amg_f.jpg"><img loading="lazy" src="style/glk/x253_amg_f.webp" alt="メルセデス,X253,GLC,AMG,フロント" width="597" height="340"></a>
-						<a href="full/glk/x253_amg_r.jpg"><img loading="lazy" src="style/glk/x253_amg_r.webp" alt="メルセデス,X253,GLC,AMG,リヤ" width="608" height="340"></a><br>
-						<a href="full/glk/x253_amg_d.jpg"><img loading="lazy" src="style/glk/x253_amg_d.webp" alt="メルセデス,X253,GLC,AMG,ダッシュボード" width="567" height="425"></a>
-						<a href="full/glk/x253_amg_i.jpg"><img loading="lazy" src="style/glk/x253_amg_i.webp" alt="メルセデス,X253,GLC,AMG,内装" width="638" height="425"></a><br>
-						<h5 class="i">フェイスリフト</h5>
-						<p class="i m1">2019 - 2022</p><br>
-						<a href="full/glk/x253_amg_f2.jpg"><img loading="lazy" src="style/glk/x253_amg_f2.webp" alt="メルセデス,X253,GLC,AMG,フロント" width="587" height="390"></a>
-						<a href="full/glk/x253_amg_r2.jpg"><img loading="lazy" src="style/glk/x253_amg_r2.webp" alt="メルセデス,X253,GLC,AMG,リヤ" width="616" height="390"></a><br>
-						<a href="full/glk/x253_amg_d2.jpg"><img loading="lazy" src="style/glk/x253_amg_d2.webp" alt="メルセデス,X253,GLC,AMG,ダッシュボード" width="551" height="367"></a>
-						<a href="full/glk/x253_amg_i2.jpg"><img loading="lazy" src="style/glk/x253_amg_i2.webp" alt="メルセデス,X253,GLC,AMG,内装" width="652" height="367"></a>
-					</section>
 				</div>
+
 			</div>
 		</section>
 
@@ -429,51 +438,68 @@
 			<h2>第１世代 GLC-coupe</h2>
 			<div class="style-w">
 				<a href="full/glk/c253.jpg"><img loading="lazy" src="style/glk/c253.webp" alt="メルセデス,C253,GLCクーペ" width="1210" height="512"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<p class="bf1a i"><a href="https://de.wikipedia.org/wiki/Mercedes-Benz_C_253" class="ico-wiki m1" title="Wikipedia(D)_C253"></a></p>
-						<h3 class="i m0">C253</h3>
-						<p class="i m1">03/2016 - 2023</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-c253" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://de.wikipedia.org/wiki/Mercedes-Benz_C_253" class="ico-wiki" title="Wikipedia(D)_C253"></a>
+								<h3>C253</h3>
+								03/2016 - 2023
+							</div>
+						</div>
+						<div class="accordion-right">
+							デザイナー : Robert Lešnik , Mark Fetherston (外装) , Hans Peter Wunderlich (内装) , Gorden Wagener
+						</div>
+					</button>
+					<div id="accordion-content-c253" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">C253</h4>
+							<a href="full/glk/c253_f.jpg"><img loading="lazy" src="style/glk/c253_f.webp" alt="メルセデス,C253,GLCクーペ,フロント" width="603" height="377"></a>
+							<a href="full/glk/c253_r.jpg"><img loading="lazy" src="style/glk/c253_r.webp" alt="メルセデス,C253,GLC,クーペリヤ" width="603" height="377"></a><br>
+							<h5 class="i">フェイスリフト</h5>
+							<p class="i m1">2019 - 2023</p><br>
+							<a href="full/glk/c253_f2.jpg"><img loading="lazy" src="style/glk/c253_f2.webp" alt="メルセデス,C253,GLCクーペ,フロント" width="603" height="402"></a>
+							<a href="full/glk/c253_r2.jpg"><img loading="lazy" src="style/glk/c253_r2.webp" alt="メルセデス,C253,GLCクーペ,リヤ" width="603" height="402"></a><br>
+							<a href="full/glk/c253_d2.jpg"><img loading="lazy" src="style/glk/c253_d2.webp" alt="メルセデス,c253,GLCクーペ,ダッシュボード" width="1210" height="681"></a><br>
+							<a href="full/glk/c253_i2.jpg"><img loading="lazy" src="style/glk/c253_i2.webp" alt="メルセデス,C253,GLCクーペ,内装" width="1210" height="726"></a>
+							<h5>ボディサイズ</h5>
+							<a href="full/glk/c253_a1.jpg"><img loading="lazy" src="style/glk/c253_a1.webp" alt="メルセデス,C253,GLCクーペ,寸法" width="540" height="504"></a>
+							<a href="full/glk/c253_a3.jpg"><img loading="lazy" src="style/glk/c253_a3.webp" alt="メルセデス,C253,GLCクーペ,寸法" width="540" height="504"></a><br>
+							<a href="full/glk/c253_a2.jpg"><img loading="lazy" src="style/glk/c253_a2.webp" alt="メルセデス,C253,GLCクーペ,寸法" width="1210" height="504"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">C253</h4>
-						<a href="full/glk/c253_f.jpg"><img loading="lazy" src="style/glk/c253_f.webp" alt="メルセデス,C253,GLCクーペ,フロント" width="603" height="377"></a>
-						<a href="full/glk/c253_r.jpg"><img loading="lazy" src="style/glk/c253_r.webp" alt="メルセデス,C253,GLC,クーペリヤ" width="603" height="377"></a><br>
-						<h5 class="i">フェイスリフト</h5>
-						<p class="i m1">2019 - 2023</p><br>
-						<a href="full/glk/c253_f2.jpg"><img loading="lazy" src="style/glk/c253_f2.webp" alt="メルセデス,C253,GLCクーペ,フロント" width="603" height="402"></a>
-						<a href="full/glk/c253_r2.jpg"><img loading="lazy" src="style/glk/c253_r2.webp" alt="メルセデス,C253,GLCクーペ,リヤ" width="603" height="402"></a><br>
-						<a href="full/glk/c253_d2.jpg"><img loading="lazy" src="style/glk/c253_d2.webp" alt="メルセデス,c253,GLCクーペ,ダッシュボード" width="1210" height="681"></a><br>
-						<a href="full/glk/c253_i2.jpg"><img loading="lazy" src="style/glk/c253_i2.webp" alt="メルセデス,C253,GLCクーペ,内装" width="1210" height="726"></a>
-						<h5>ボディサイズ</h5>
-						<a href="full/glk/c253_a1.jpg"><img loading="lazy" src="style/glk/c253_a1.webp" alt="メルセデス,C253,GLCクーペ,寸法" width="540" height="504"></a>
-						<a href="full/glk/c253_a3.jpg"><img loading="lazy" src="style/glk/c253_a3.webp" alt="メルセデス,C253,GLCクーペ,寸法" width="540" height="504"></a><br>
-						<a href="full/glk/c253_a2.jpg"><img loading="lazy" src="style/glk/c253_a2.webp" alt="メルセデス,C253,GLCクーペ,寸法" width="1210" height="504"></a>
-					</section>
 				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<h3 class="bf1b i">AMG</h3>
-						<p class="i m1">Coupe</p>
-						<p class="i m1">GLC43</p>
-						<p class="i m1">12/2016-05/2019</p>
-						<p class="i m2">GLC63</p>
-						<p class="i m1">09/2017-2023</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-amg-glc43-63" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h4>AMG</h4>
+								<p>GLC 43</p>
+								12/2016-05/2019
+								<p>GLC 63</p>
+								09/2017-2023
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-amg-glc43-63" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">GLC63</h4>
+							<a href="full/glk/c253_amg_f.jpg"><img loading="lazy" src="style/glk/c253_amg_f.webp" alt="メルセデス,C253,GLクーペC,AMG,フロント" width="636" height="338"></a>
+							<a href="full/glk/c253_amg_r.jpg"><img loading="lazy" src="style/glk/c253_amg_r.webp" alt="メルセデス,C253,GLクーペC,AMG,リヤ" width="571" height="338"></a><br>
+							<a href="full/glk/c253_amg_d.jpg"><img loading="lazy" src="style/glk/c253_amg_d.webp" alt="メルセデス,C253,GLクーペC,AMG,ダッシュボード" width="723" height="482"></a>
+							<a href="full/glk/c253_amg_m.jpg"><img loading="lazy" src="style/glk/c253_amg_m.webp" alt="メルセデス,C253,GLクーペC,AMG,エンジン" width="482" height="482"></a><br>
+							<h5 class="i">フェイスリフト</h5>
+							<p class="i m1">2019 - 2023</p><br>
+							<a href="full/glk/c253_amg_f2.jpg"><img loading="lazy" src="style/glk/c253_amg_f2.webp" alt="メルセデス,C253,GLCクーペ,AMG,フロント" width="603" height="339"></a>
+							<a href="full/glk/c253_amg_r2.jpg"><img loading="lazy" src="style/glk/c253_amg_r2.webp" alt="メルセデス,C253,GLCクーペ,AMG,リヤ" width="603" height="339"></a><br>
+							<a href="full/glk/c253_amg_d2.jpg"><img loading="lazy" src="style/glk/c253_amg_d2.webp" alt="メルセデス,C253,GLCクーペ,AMG,ダッシュボード" width="603" height="339"></a>
+							<a href="full/glk/c253_amg_i2.jpg"><img loading="lazy" src="style/glk/c253_amg_i2.webp" alt="メルセデス,C253,GLCクーペ,AMG,内装" width="603" height="339"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">GLC63</h4>
-						<a href="full/glk/c253_amg_f.jpg"><img loading="lazy" src="style/glk/c253_amg_f.webp" alt="メルセデス,C253,GLクーペC,AMG,フロント" width="636" height="338"></a>
-						<a href="full/glk/c253_amg_r.jpg"><img loading="lazy" src="style/glk/c253_amg_r.webp" alt="メルセデス,C253,GLクーペC,AMG,リヤ" width="571" height="338"></a><br>
-						<a href="full/glk/c253_amg_d.jpg"><img loading="lazy" src="style/glk/c253_amg_d.webp" alt="メルセデス,C253,GLクーペC,AMG,ダッシュボード" width="723" height="482"></a>
-						<a href="full/glk/c253_amg_m.jpg"><img loading="lazy" src="style/glk/c253_amg_m.webp" alt="メルセデス,C253,GLクーペC,AMG,エンジン" width="482" height="482"></a><br>
-						<h5 class="i">フェイスリフト</h5>
-						<p class="i m1">2019 - 2023</p><br>
-						<a href="full/glk/c253_amg_f2.jpg"><img loading="lazy" src="style/glk/c253_amg_f2.webp" alt="メルセデス,C253,GLCクーペ,AMG,フロント" width="603" height="339"></a>
-						<a href="full/glk/c253_amg_r2.jpg"><img loading="lazy" src="style/glk/c253_amg_r2.webp" alt="メルセデス,C253,GLCクーペ,AMG,リヤ" width="603" height="339"></a><br>
-						<a href="full/glk/c253_amg_d2.jpg"><img loading="lazy" src="style/glk/c253_amg_d2.webp" alt="メルセデス,C253,GLCクーペ,AMG,ダッシュボード" width="603" height="339"></a>
-						<a href="full/glk/c253_amg_i2.jpg"><img loading="lazy" src="style/glk/c253_amg_i2.webp" alt="メルセデス,C253,GLCクーペ,AMG,内装" width="603" height="339"></a>
-					</section>
 				</div>
+
 			</div>
 		</section>
 		<section>
@@ -488,25 +514,35 @@
 			<h2>第２世代 GLCクラス</h2>
 			<div class="style-w">
 				<a href="full/glk/x254.jpg"><img loading="lazy" src="style/glk/x254.webp" alt="メルセデス,X254,GLC" width="1210" height="447"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<p class="bf1a i"><a href="https://de.wikipedia.org/wiki/Mercedes-Benz_X_254" class="ico-wiki m1" title="Wikipedia(D) X254"></a></p>
-						<h3 class="i m0">X254</h3>
-						<p class="i m1">06/2022 -</p><br>
-						<!-- <p class="ru">デザイナー : Gorden Wagener</p> -->
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-x254" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://de.wikipedia.org/wiki/Mercedes-Benz_X_254" class="ico-wiki" title="Wikipedia(D) X254"></a>
+								<h3>X254</h3>
+								06/2022 -
+							</div>
+							<div class="accordion-right">
+								デザイナー : Robert Lešnik , Laurent Olivier , Balázs Filczer , Bastian Baudy , Gorden Wagener
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-x254" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">X254</h4>
+							<a href="full/glk/x254_f.jpg"><img loading="lazy" src="style/glk/x254_f.webp" alt="メルセデス,x254,GLC,フロント" width="603" height="340"></a>
+							<a href="full/glk/x254_r.jpg"><img loading="lazy" src="style/glk/x254_r.webp" alt="メルセデス,x254,GLC,リヤ" width="603" height="323"></a><br>
+							<a href="full/glk/x254_d.jpg"><img loading="lazy" src="style/glk/x254_d.webp" alt="メルセデス,x254,GLC,ダッシュボード" width="1210" height="807"></a><br>
+							<a href="full/glk/x254_i.jpg"><img loading="lazy" src="style/glk/x254_i.webp" alt="メルセデス,x254,GLC,内装" width="603" height="403"></a>
+							<a href="full/glk/x254_ia.jpg"><img loading="lazy" src="style/glk/x254_ia.webp" alt="メルセデス,x254,GLC,内装" width="603" height="403"></a>
+							<h5>ボディサイズ</h5>
+							<a href="full/glk/x254_a2.jpg"><img loading="lazy" src="style/glk/x254_a2.webp" alt="メルセデス,x254,GLK,寸法" width="412" height="376"></a>
+							<a href="full/glk/x254_a1.jpg"><img loading="lazy" src="style/glk/x254_a1.webp" alt="メルセデス,x254,GLK,寸法" width="794" height="376"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">X254</h4>
-						<a href="full/glk/x254_f.jpg"><img loading="lazy" src="style/glk/x254_f.webp" alt="メルセデス,x254,GLC,フロント" width="603" height="340"></a>
-						<a href="full/glk/x254_r.jpg"><img loading="lazy" src="style/glk/x254_r.webp" alt="メルセデス,x254,GLC,リヤ" width="603" height="323"></a><br>
-						<a href="full/glk/x254_d.jpg"><img loading="lazy" src="style/glk/x254_d.webp" alt="メルセデス,x254,GLC,ダッシュボード" width="1210" height="807"></a><br>
-						<a href="full/glk/x254_i.jpg"><img loading="lazy" src="style/glk/x254_i.webp" alt="メルセデス,x254,GLC,内装" width="603" height="403"></a>
-						<a href="full/glk/x254_ia.jpg"><img loading="lazy" src="style/glk/x254_ia.webp" alt="メルセデス,x254,GLC,内装" width="603" height="403"></a>
-						<h5>ボディサイズ</h5>
-						<a href="full/glk/x254_a2.jpg"><img loading="lazy" src="style/glk/x254_a2.webp" alt="メルセデス,x254,GLK,寸法" width="412" height="376"></a>
-						<a href="full/glk/x254_a1.jpg"><img loading="lazy" src="style/glk/x254_a1.webp" alt="メルセデス,x254,GLK,寸法" width="794" height="376"></a>
-					</section>
 				</div>
+
 			</div>
 		</section>
 
@@ -514,44 +550,61 @@
 			<h2>第２世代 GLC-coupe</h2>
 			<div class="style-w">
 				<a href="full/glk/c254_r.jpg"><img loading="lazy" src="style/glk/c254_r.webp" alt="メルセデス,C254,GLC,クーペリヤ" width="1210" height="681"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<p class="bf1a i"><a href="https://de.wikipedia.org/wiki/Mercedes-Benz_C_254" class="ico-wiki m1" title="Wikipedia(D)_C254"></a></p>
-						<h3 class="i m0">C254</h3>
-						<p class="i m1">03/2023 -</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-c254" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://de.wikipedia.org/wiki/Mercedes-Benz_C_254" class="ico-wiki" title="Wikipedia(D)_C254"></a>
+								<h3>C254</h3>
+								03/2023 -
+							</div>
+							<div class="accordion-right">
+								デザイナー : Robert Lešnik , Laurent Olivier , Balázs Filczer , Bastian Baudy , Gorden Wagener
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-c254" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">C254</h4>
+							<a href="full/glk/c254_f.jpg"><img loading="lazy" src="style/glk/c254_f.webp" alt="メルセデス,C254,GLCクーペ,フロント" width="603" height="339"></a>
+							<a href="full/glk/c254_d.jpg"><img loading="lazy" src="style/glk/c254_d.webp" alt="メルセデス,C254,GLC,ダッシュボード" width="603" height="339"></a><br>
+							<a href="full/glk/c254_ir.jpg"><img loading="lazy" src="style/glk/c254_ir.webp" alt="メルセデス,C254,GLC,内装" width="603" height="339"></a>
+							<a href="full/glk/c254_if.jpg"><img loading="lazy" src="style/glk/c254_if.webp" alt="メルセデス,C254,GLC,内装" width="603" height="339"></a>
+							<h5>ボディサイズ</h5>
+							<a href="full/glk/c254_a2.jpg"><img loading="lazy" src="style/glk/c254_a2.webp" alt="メルセデス,C254,GLCクーペ,寸法" width="637" height="501"></a>
+							<a href="full/glk/c254_a3.jpg"><img loading="lazy" src="style/glk/c254_a3.webp" alt="メルセデス,C254,GLCクーペ,寸法" width="568" height="501"></a><br>
+							<a href="full/glk/c254_a1.webp"><img loading="lazy" src="style/glk/c254_a1.webp" alt="メルセデス,C254,GLCクーペ,寸法" width="1210" height="467"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">C254</h4>
-						<a href="full/glk/c254_f.jpg"><img loading="lazy" src="style/glk/c254_f.webp" alt="メルセデス,C254,GLCクーペ,フロント" width="603" height="339"></a>
-						<a href="full/glk/c254_d.jpg"><img loading="lazy" src="style/glk/c254_d.webp" alt="メルセデス,C254,GLC,ダッシュボード" width="603" height="339"></a><br>
-						<a href="full/glk/c254_ir.jpg"><img loading="lazy" src="style/glk/c254_ir.webp" alt="メルセデス,C254,GLC,内装" width="603" height="339"></a>
-						<a href="full/glk/c254_if.jpg"><img loading="lazy" src="style/glk/c254_if.webp" alt="メルセデス,C254,GLC,内装" width="603" height="339"></a>
-						<h5>ボディサイズ</h5>
-						<a href="full/glk/c254_a2.jpg"><img loading="lazy" src="style/glk/c254_a2.webp" alt="メルセデス,C254,GLCクーペ,寸法" width="637" height="501"></a>
-						<a href="full/glk/c254_a3.jpg"><img loading="lazy" src="style/glk/c254_a3.webp" alt="メルセデス,C254,GLCクーペ,寸法" width="568" height="501"></a><br>
-						<a href="full/glk/c254_a1.webp"><img loading="lazy" src="style/glk/c254_a1.webp" alt="メルセデス,C254,GLCクーペ,寸法" width="1210" height="467"></a>
-					</section>
 				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<h3 class="bf1b i">AMG</h3>
-						<p class="i m1">Coupe</p>
-						<p class="i m1">GLC43</p>
-						<p class="i m1">09/2023-</p>
-						<p class="i m2">GLC63</p>
-						<p class="i m1">09/2023-</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-amg-glc43-63" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h4>AMG</h4>
+								<p>GLC 43</p>
+								09/2023-
+								<p>GLC 63</p>
+								09/2023-
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-amg-glc43-63" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">GLC63</h4>
+							<a href="full/glk/c254_amg_63s.webp"><img loading="lazy" src="style/glk/c254_amg_63s.webp" alt="メルセデス,C254,GLクーペC,AMG,フロント" width="1210" height="681"></a><br>
+							<a href="full/glk/c254_amg_f.webp"><img loading="lazy" src="style/glk/c254_amg_f.webp" alt="メルセデス,C254,GLCクーペ,AMG,フロント" width="603" height="339"></a>
+							<a href="full/glk/c254_amg_r.webp"><img loading="lazy" src="style/glk/c254_amg_r.webp" alt="メルセデス,C254,GLCクーペ,AMG,リヤ" width="603" height="339"></a><br>
+							<a href="full/glk/c254_amg_d.webp"><img loading="lazy" src="style/glk/c254_amg_d.webp" alt="メルセデス,C254,GLCクーペ,AMG,ダッシュボード" width="603" height="339"></a>
+							<a href="full/glk/c254_amg_m.webp"><img loading="lazy" src="style/glk/c254_amg_m.webp" alt="メルセデス,C254,GLCクーペ,AMG,エンジン" width="603" height="339"></a><br>
+							<a href="full/glk/c254_amg_ir.webp"><img loading="lazy" src="style/glk/c254_amg_ir.webp" alt="メルセデス,C254,GLCクーペ,AMG,,内装" width="603" height="339"></a>
+							<a href="full/glk/c254_amg_if.webp"><img loading="lazy" src="style/glk/c254_amg_if.webp" alt="メルセデス,C254,GLCクーペ,AMG,,内装" width="603" height="339"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">GLC63</h4>
-						<a href="full/glk/c254_amg_63s.webp"><img loading="lazy" src="style/glk/c254_amg_63s.webp" alt="メルセデス,C254,GLクーペC,AMG,フロント" width="1210" height="681"></a><br>
-						<a href="full/glk/c254_amg_f.webp"><img loading="lazy" src="style/glk/c254_amg_f.webp" alt="メルセデス,C254,GLCクーペ,AMG,フロント" width="603" height="339"></a>
-						<a href="full/glk/c254_amg_r.webp"><img loading="lazy" src="style/glk/c254_amg_r.webp" alt="メルセデス,C254,GLCクーペ,AMG,リヤ" width="603" height="339"></a><br>
-						<a href="full/glk/c254_amg_d.webp"><img loading="lazy" src="style/glk/c254_amg_d.webp" alt="メルセデス,C254,GLCクーペ,AMG,ダッシュボード" width="603" height="339"></a>
-						<a href="full/glk/c254_amg_m.webp"><img loading="lazy" src="style/glk/c254_amg_m.webp" alt="メルセデス,C254,GLCクーペ,AMG,エンジン" width="603" height="339"></a><br>
-						<a href="full/glk/c254_amg_ir.webp"><img loading="lazy" src="style/glk/c254_amg_ir.webp" alt="メルセデス,C254,GLCクーペ,AMG,,内装" width="603" height="339"></a>
-						<a href="full/glk/c254_amg_if.webp"><img loading="lazy" src="style/glk/c254_amg_if.webp" alt="メルセデス,C254,GLCクーペ,AMG,,内装" width="603" height="339"></a>
-					</section>
 				</div>
+
 			</div>
 		</section>
 
@@ -601,9 +654,10 @@
 			<hr>
 			<p class="mid"><small>@ since 2010 , piyopiyo_246</small></p>
 		</footer>
+
 		<p class="m-05" id="page-top"><a href="#head">&#9650;</a></p>
 		<p id="close-accordion">
-			<a class="vmenu_all_action" onclick="doReplaceClassName ('vmenu_on2','vmenu_off')" title="全ての開閉部を閉じる">&#9654;</a>
+			<a id="close-all-accordions-2" class="vmenu_all_action" title="全ての開閉部を閉じる">&#9654;</a>
 		</p>
 	</div>
 
@@ -677,6 +731,120 @@
 			}, 500);
 			return false;
 		});
+	});
+</script>
+
+<script>
+	// シンプル版アコーディオン機能（入れ子非対応）
+	document.addEventListener('DOMContentLoaded', function () {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+		accordionHeaders.forEach(header => {
+			header.addEventListener('click', function () {
+				const content = this.nextElementSibling;
+				const isActive = this.classList.contains('active');
+
+				// クリックされたアコーディオンのみトグル
+				if (isActive) {
+					this.classList.remove('active');
+					this.setAttribute('aria-expanded', 'false');
+					content.classList.remove('active');
+				} else {
+					this.classList.add('active');
+					this.setAttribute('aria-expanded', 'true');
+					content.classList.add('active');
+				}
+			});
+
+			// キーボード操作のサポート
+			header.addEventListener('keydown', function (e) {
+				if (e.key === 'Enter' || e.key === ' ') {
+					e.preventDefault();
+					this.click();
+				}
+			});
+		});
+
+		// 全開/全閉ボタンのイベントリスナー
+		const openAllBtn = document.getElementById('open-all-accordions');
+		const closeAllBtn = document.getElementById('close-all-accordions');
+		const closeAllBtn2 = document.getElementById('close-all-accordions-2');
+
+		if (openAllBtn) {
+			openAllBtn.addEventListener('click', openAllAccordions);
+		}
+
+		if (closeAllBtn) {
+			closeAllBtn.addEventListener('click', closeAllAccordions);
+		}
+
+		if (closeAllBtn2) {
+			closeAllBtn2.addEventListener('click', closeAllAccordions);
+		}
+	});
+
+	// 全アコーディオン操作機能
+	function openAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.add('active');
+			header.setAttribute('aria-expanded', 'true');
+			content.classList.add('active');
+		});
+	}
+
+	function closeAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.remove('active');
+			header.setAttribute('aria-expanded', 'false');
+			content.classList.remove('active');
+		});
+	}
+
+	// 全アコーディオン操作機能
+	function openAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.add('active');
+			header.setAttribute('aria-expanded', 'true');
+			content.classList.add('active');
+		});
+	}
+
+	function closeAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.remove('active');
+			header.setAttribute('aria-expanded', 'false');
+			content.classList.remove('active');
+		});
+	}
+
+	// ボタンにイベントリスナーを追加
+	document.addEventListener('DOMContentLoaded', function () {
+		// 既存のアコーディオンコード...
+
+		// 全開/全閉ボタン
+		const openAllBtn = document.getElementById('open-all-accordions');
+		const closeAllBtn = document.getElementById('close-all-accordions');
+		const closeAllBtn2 = document.getElementById('close-all-accordions-2'); // 追加ボタン
+
+		if (openAllBtn) {
+			openAllBtn.addEventListener('click', openAllAccordions);
+		}
+
+		if (closeAllBtn) {
+			closeAllBtn.addEventListener('click', closeAllAccordions);
+		}
+
+		if (closeAllBtn2) {
+			closeAllBtn2.addEventListener('click', closeAllAccordions);
+		}
 	});
 </script>
 
