@@ -51,23 +51,6 @@
 	<link rel="stylesheet" href="../style.min.css">
 	<link rel="stylesheet" href="../style_v.min.css">
 
-	<!-- アコーディオン用のJavaScript関数を追加 -->
-	<script>
-		function doToggleClassName(obj, onClassName, offClassName) {
-			obj.className = (obj.className != onClassName) ? onClassName : offClassName;
-		}
-		function getParentObj(obj) {
-			return obj.parentElement || obj.parentNode;
-		}
-		function doReplaceClassName(findClassName, replaceClassName, targetTagName) {
-			var elements = document.getElementsByTagName(targetTagName || '*');
-			for (var i = 0; i < elements.length; i++) {
-				if (elements[i].className == findClassName)
-					elements[i].className = replaceClassName;
-			}
-		}
-	</script>
-
 	<!-- 6. Cookie同意管理システム -->
 	<script>
 		window._cookiescript = {
@@ -270,15 +253,15 @@
 					</li>
 				</ul>
 				<h1 class="b bf4">GLA-klasse</h1>
-				 <div style="display: flex; justify-content: space-between; width: 1210px;">
+				<div style="display: flex; justify-content: space-between; width: 1210px;">
 					<dl class="m1">
 						<dt class="s2 af0">Baureihe</dt>
 						<dd class="s2"><a href="#x156" title="GLA-klasse X156" class="lnk2">156</a></dd>
 						<dd class="s2"><a href="#h247" title="GLA-klasse H247" class="lnk2">247</a></dd>
 					</dl>
 					<span>
-						<button class="vmenu_all_action square_btn" type="button" title="Klicken Sie hier, um alle Öffnungen zu öffnen" span onclick="doReplaceClassName('vmenu_off', 'vmenu_on2')">Öffne alles</button>
-						<button class="vmenu_all_action square_btn" type="button" title="Klicken Sie hier, um alle Öffnungen zu schließen" span onclick="doReplaceClassName('vmenu_on2', 'vmenu_off')">Alle schließen</button>
+						<button id="open-all-accordions" class="vmenu_all_action square_btn" type="button" title="Klicken Sie hier, um alle Öffnungen zu öffnen">Öffne alles</button>
+						<button id="close-all-accordions" class="vmenu_all_action square_btn" type="button" title="Klicken Sie hier, um alle Öffnungen zu schließen">Alle schließen</button>
 						<button class="square_btn" type="button" onclick="location.href='ja_mb_img_gla.html'">Ja</button>
 						<button class="square_btn" type="button" onclick="location.href='en_mb_img_gla.html'">En</button>
 					</span>
@@ -330,28 +313,38 @@
 			<h2>Die 1ste GLA-klasse</h2>
 			<div class="style-w">
 				<a href="full/gla/x156.jpg"><img src="style/gla/x156.webp" alt="Mercedes,X156,GLA" width="1210" height="756"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Klicken Sie hier, um das Akkordeonfenster zu öffnen">
-						<p class="bf1a i"><a href="https://de.wikipedia.org/wiki/Mercedes-Benz_X_156" class="ico-wiki m1" title="Wikipedia(D) X156"></a></p>
-						<h3 class="i m0">X156</h3>
-						<p class="i m2">12/2013 - 11/2019</p>
-						<p class="ru">Designer : Robert Le&scaron;nik , Mark Fetherston , Hans Peter Wunderlich</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-x156" title="Klicken Sie hier, um das Akkordeonfenster zu öffnen">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://de.wikipedia.org/wiki/Mercedes-Benz_X_156" class="ico-wiki" title="Wikipedia(D) X156"></a>
+								<h3>X156<h3>
+										12/2013 - 11/2019
+							</div>
+						</div>
+						<div class="accordion-right">
+							Designer : Robert Le&scaron;nik , Mark Fetherston (Exterieur) , Hans Peter Wunderlich (Innere) , Gorden Wagener
+						</div>
+					</button>
+					<div id="accordion-content-x156" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">X156</h4>
+							<a href="full/gla/x156_f.jpg"><img loading="lazy" src="style/gla/x156_f.webp" alt="Mercedes,X156,GLA,Frontansicht" width="710" height="372"></a>
+							<a href="full/gla/x156_d.jpg"><img loading="lazy" src="style/gla/x156_d.webp" alt="Mercedes,X156,GLA,Instrumententafel" width="496" height="372"></a><br>
+							<h5 class="i">Modellpflege</h5>
+							<p class="i m1">2017</p><br>
+							<a href="full/gla/x156_f2.jpg"><img loading="lazy" src="style/gla/x156_f2.webp" alt="Mercedes,X156,GLA,Frontansicht" width="665" height="360"></a>
+							<a href="full/gla/x156_d2.jpg"><img loading="lazy" src="style/gla/x156_d2.webp" alt="Mercedes,X156,GLA,Instrumententafel" width="540" height="360"></a><br>
+							<a href="full/gla/x156_r2.jpg"><img loading="lazy" src="style/gla/x156_r2.webp" alt="Mercedes,X156,GLA,Rückansicht" width="665" height="405"></a>
+							<a href="full/gla/x156_i.jpg"><img loading="lazy" src="style/gla/x156_i.webp" alt="Mercedes,X156,GLA,Innenansicht" width="540" height="405"></a>
+							<h5>Abmessungen</h5>
+							<a href="full/gla/x156_a1.jpg"><img loading="lazy" src="style/gla/x156_a1.webp" alt="Mercedes,X156,GLA,Maße" width="815" height="326"></a>
+							<a href="full/gla/x156_a2.jpg"><img loading="lazy" src="style/gla/x156_a2.webp" alt="Mercedes,X156,GLA,Maße" width="391" height="326"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">X156</h4>
-						<a href="full/gla/x156_f.jpg"><img loading="lazy" src="style/gla/x156_f.webp" alt="Mercedes,X156,GLA,Frontansicht" width="710" height="372"></a>
-						<a href="full/gla/x156_d.jpg"><img loading="lazy" src="style/gla/x156_d.webp" alt="Mercedes,X156,GLA,Instrumententafel" width="496" height="372"></a><br>
-						<h5 class="i">Modellpflege</h5>
-						<p class="i m1">2017</p><br>
-						<a href="full/gla/x156_f2.jpg"><img loading="lazy" src="style/gla/x156_f2.webp" alt="Mercedes,X156,GLA,Frontansicht" width="665" height="360"></a>
-						<a href="full/gla/x156_d2.jpg"><img loading="lazy" src="style/gla/x156_d2.webp" alt="Mercedes,X156,GLA,Instrumententafel" width="540" height="360"></a><br>
-						<a href="full/gla/x156_r2.jpg"><img loading="lazy" src="style/gla/x156_r2.webp" alt="Mercedes,X156,GLA,Rückansicht" width="665" height="405"></a>
-						<a href="full/gla/x156_i.jpg"><img loading="lazy" src="style/gla/x156_i.webp" alt="Mercedes,X156,GLA,Innenansicht" width="540" height="405"></a>
-						<h5>Abmessungen</h5>
-						<a href="full/gla/x156_a1.jpg"><img loading="lazy" src="style/gla/x156_a1.webp" alt="Mercedes,X156,GLA,Maße" width="815" height="326"></a>
-						<a href="full/gla/x156_a2.jpg"><img loading="lazy" src="style/gla/x156_a2.webp" alt="Mercedes,X156,GLA,Maße" width="391" height="326"></a>
-					</section>
 				</div>
+
 			</div>
 		</section>
 
@@ -359,41 +352,51 @@
 			<h2>Der 2te GLA-klasse</h2>
 			<div class="style-w">
 				<a href="full/gla/h247.jpg"><img loading="lazy" src="style/gla/h247.webp" alt="Mercedes,h247,GLA,Frontansicht" width="1210" height="908"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Klicken Sie hier, um das Akkordeonfenster zu öffnen">
-						<p class="bf1a i"><a href="https://de.wikipedia.org/wiki/Mercedes-Benz_H_247" class="ico-wiki m1" title="Wikipedia(D) H247"></a></p>
-						<h3 class="i m0">H247</h3>
-						<p class="i m2">12/2019 -</p>
-						<p class="ru">Designer : Gorden Wagener</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-h247" title="Klicken Sie hier, um das Akkordeonfenster zu öffnen">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://de.wikipedia.org/wiki/Mercedes-Benz_H_247" class="ico-wiki" title="Wikipedia(D) H247"></a>
+								<h3>H247<h3>
+										12/2019 -
+							</div>
+						</div>
+						<div class="accordion-right">
+							Designer : Balázs Filczer , Gordon Schlie (Exterieur) , Jonathan Wienert (Innere) , Gorden Wagener
+						</div>
+					</button>
+					<div id="accordion-content-h247" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">H247</h4>
+							<a href="full/gla/h247_f.jpg"><img loading="lazy" src="style/gla/h247_f.webp" alt="Mercedes,h247,GLA,Frontansicht" width="602" height="414"></a>
+							<a href="full/gla/h247_r.jpg"><img loading="lazy" src="style/gla/h247_r.webp" alt="Mercedes,h247,GLA,Rückansicht" width="602" height="414"></a><br>
+							<a href="full/gla/h247_i.jpg"><img loading="lazy" src="style/gla/h247_i.webp" alt="Mercedes,h247,GLA,Innenansicht" width="602" height="402"></a>
+							<a href="full/gla/h247_ir.webp"><img loading="lazy" src="style/gla/h247_ir.webp" alt="Mercedes,h247,GLA,Innenansicht" width="602" height="401"></a><br>
+							<a href="full/gla/h247_d.jpg"><img loading="lazy" src="style/gla/h247_d.webp" alt="Mercedes,h247,GLA,Instrumententafel" width="657" height="365"></a>
+							<a href="full/gla/h247_m.jpg"><img loading="lazy" src="style/gla/h247_m.webp" alt="Mercedes,h247,GLA,Motor" width="547" height="365"></a><br>
+							<h5 class="i">Modellpflege</h5>
+							<p class="i m1">3/2023</p><br>
+							<a href="full/gla/h247_f2.webp"><img loading="lazy" src="style/gla/h247_f2.webp" alt="Mercedes,h247,GLA,Frontansicht" width="602" height="339"></a>
+							<a href="full/gla/h247_r2.jpg"><img loading="lazy" src="style/gla/h247_r2.webp" alt="Mercedes,h247,GLA,Rückansicht" width="602" height="339"></a><br>
+							<a href="full/gla/h247_d2.webp"><img loading="lazy" src="style/gla/h247_d2.webp" alt="Mercedes,h247,GLA,Instrumententafel" width="602" height="339"></a>
+							<a href="full/gla/h247_ir2.webp"><img loading="lazy" src="style/gla/h247_ir2.webp" alt="Mercedes,h247,GLA,Innenansicht" width="602" height="339"></a><br>
+							<a href="full/gla/h247_ic2.jpg"><img loading="lazy" src="style/gla/h247_ic2.webp" alt="Mercedes,h247,GLA,Innenansicht" width="602" height="339"></a>
+							<a href="full/gla/h247_i2.webp"><img loading="lazy" src="style/gla/h247_i2.webp" alt="Mercedes,h247,GLA,Innenansicht" width="602" height="339"></a><br>
+							<h5 class="i m0">AMG GLA45</h5>
+							<p class="i m2">6/2020 -</p><br>
+							<a href="full/gla/h247_amg_f.jpg"><img loading="lazy" src="style/gla/h247_amg_f.webp" alt="Mercedes,h247,GLA,AMG,Frontansicht" width="604" height="340"></a>
+							<a href="full/gla/h247_amg_r.jpg"><img loading="lazy" src="style/gla/h247_amg_r.webp" alt="Mercedes,h247,GLA,AMG,Rückansicht" width="604" height="340"></a><br>
+							<a href="full/gla/h247_amg_d.jpg"><img loading="lazy" src="style/gla/h247_amg_d.webp" alt="Mercedes,h247,GLA,AMG,Instrumententafel" width="654" height="368"></a>
+							<a href="full/gla/h247_amg_i.jpg"><img loading="lazy" src="style/gla/h247_amg_i.webp" alt="Mercedes,h247,GLA,AMG,Innenansicht" width="552" height="368"></a>
+							<h5>Abmessungen</h5>
+							<a href="full/gla/h247_a1.jpg"><img loading="lazy" src="style/gla/h247_a1.webp" alt="Mercedes,h247,GLA,Seitenansicht" width="799" height="345"></a>
+							<a href="full/gla/h247_a2.jpg"><img loading="lazy" src="style/gla/h247_a2.webp" alt="Mercedes,h247,GLA,Frontansicht" width="408" height="345"></a><br>
+							<a href="full/gla/h247_a3.jpg"><img loading="lazy" src="style/gla/h247_a3.webp" alt="Mercedes,h247,GLA,Draufsicht" width="799" height="355"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">H247</h4>
-						<a href="full/gla/h247_f.jpg"><img loading="lazy" src="style/gla/h247_f.webp" alt="Mercedes,h247,GLA,Frontansicht" width="602" height="414"></a>
-						<a href="full/gla/h247_r.jpg"><img loading="lazy" src="style/gla/h247_r.webp" alt="Mercedes,h247,GLA,Rückansicht" width="602" height="414"></a><br>
-						<a href="full/gla/h247_i.jpg"><img loading="lazy" src="style/gla/h247_i.webp" alt="Mercedes,h247,GLA,Innenansicht" width="602" height="402"></a>
-						<a href="full/gla/h247_ir.webp"><img loading="lazy" src="style/gla/h247_ir.webp" alt="Mercedes,h247,GLA,Innenansicht" width="602" height="401"></a><br>
-						<a href="full/gla/h247_d.jpg"><img loading="lazy" src="style/gla/h247_d.webp" alt="Mercedes,h247,GLA,Instrumententafel" width="657" height="365"></a>
-						<a href="full/gla/h247_m.jpg"><img loading="lazy" src="style/gla/h247_m.webp" alt="Mercedes,h247,GLA,Motor" width="547" height="365"></a><br>
-						<h5 class="i">Modellpflege</h5>
-						<p class="i m1">3/2023</p><br>
-						<a href="full/gla/h247_f2.webp"><img loading="lazy" src="style/gla/h247_f2.webp" alt="Mercedes,h247,GLA,Frontansicht" width="602" height="339"></a>
-						<a href="full/gla/h247_r2.jpg"><img loading="lazy" src="style/gla/h247_r2.webp" alt="Mercedes,h247,GLA,Rückansicht" width="602" height="339"></a><br>
-						<a href="full/gla/h247_d2.webp"><img loading="lazy" src="style/gla/h247_d2.webp" alt="Mercedes,h247,GLA,Instrumententafel" width="602" height="339"></a>
-						<a href="full/gla/h247_ir2.webp"><img loading="lazy" src="style/gla/h247_ir2.webp" alt="Mercedes,h247,GLA,Innenansicht" width="602" height="339"></a><br>
-						<a href="full/gla/h247_ic2.jpg"><img loading="lazy" src="style/gla/h247_ic2.webp" alt="Mercedes,h247,GLA,Innenansicht" width="602" height="339"></a>
-						<a href="full/gla/h247_i2.webp"><img loading="lazy" src="style/gla/h247_i2.webp" alt="Mercedes,h247,GLA,Innenansicht" width="602" height="339"></a><br>
-						<h5 class="i m0">AMG GLA45</h5>
-						<p class="i m2">6/2020 -</p><br>
-						<a href="full/gla/h247_amg_f.jpg"><img loading="lazy" src="style/gla/h247_amg_f.webp" alt="Mercedes,h247,GLA,AMG,Frontansicht" width="604" height="340"></a>
-						<a href="full/gla/h247_amg_r.jpg"><img loading="lazy" src="style/gla/h247_amg_r.webp" alt="Mercedes,h247,GLA,AMG,Rückansicht" width="604" height="340"></a><br>
-						<a href="full/gla/h247_amg_d.jpg"><img loading="lazy" src="style/gla/h247_amg_d.webp" alt="Mercedes,h247,GLA,AMG,Instrumententafel" width="654" height="368"></a>
-						<a href="full/gla/h247_amg_i.jpg"><img loading="lazy" src="style/gla/h247_amg_i.webp" alt="Mercedes,h247,GLA,AMG,Innenansicht" width="552" height="368"></a>
-						<h5>Abmessungen</h5>
-						<a href="full/gla/h247_a1.jpg"><img loading="lazy" src="style/gla/h247_a1.webp" alt="Mercedes,h247,GLA,Seitenansicht" width="799" height="345"></a>
-						<a href="full/gla/h247_a2.jpg"><img loading="lazy" src="style/gla/h247_a2.webp" alt="Mercedes,h247,GLA,Frontansicht" width="408" height="345"></a><br>
-						<a href="full/gla/h247_a3.jpg"><img loading="lazy" src="style/gla/h247_a3.webp" alt="Mercedes,h247,GLA,Draufsicht" width="799" height="355"></a>
-					</section>
 				</div>
+
 			</div>
 		</section>
 
@@ -441,9 +444,10 @@
 			<hr>
 			<p class="mid"><small>@ seit 2010 , piyopiyo_246</small></p>
 		</footer>
+
 		<p class="m-05" id="page-top"><a href="#head">&#9650;</a></p>
 		<p id="close-accordion">
-			<a class="vmenu_all_action" onclick="doReplaceClassName ('vmenu_on2','vmenu_off')" title="Alle Öffnungen schließen">&#9654;</a>
+			<a id="close-all-accordions-2" class="vmenu_all_action" title="Alle Öffnungen schließen">&#9654;</a>
 		</p>
 	</div>
 
@@ -511,13 +515,127 @@
 				topBtn.fadeOut();
 			}
 		});
-
+		//スクロールしてトップ
 		topBtn.click(function () {
 			$('body,html').animate({
 				scrollTop: 0
 			}, 500);
 			return false;
 		});
+	});
+</script>
+
+<script>
+	// シンプル版アコーディオン機能（入れ子非対応）
+	document.addEventListener('DOMContentLoaded', function () {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+		accordionHeaders.forEach(header => {
+			header.addEventListener('click', function () {
+				const content = this.nextElementSibling;
+				const isActive = this.classList.contains('active');
+
+				// クリックされたアコーディオンのみトグル
+				if (isActive) {
+					this.classList.remove('active');
+					this.setAttribute('aria-expanded', 'false');
+					content.classList.remove('active');
+				} else {
+					this.classList.add('active');
+					this.setAttribute('aria-expanded', 'true');
+					content.classList.add('active');
+				}
+			});
+
+			// キーボード操作のサポート
+			header.addEventListener('keydown', function (e) {
+				if (e.key === 'Enter' || e.key === ' ') {
+					e.preventDefault();
+					this.click();
+				}
+			});
+		});
+
+		// 全開/全閉ボタンのイベントリスナー
+		const openAllBtn = document.getElementById('open-all-accordions');
+		const closeAllBtn = document.getElementById('close-all-accordions');
+		const closeAllBtn2 = document.getElementById('close-all-accordions-2');
+
+		if (openAllBtn) {
+			openAllBtn.addEventListener('click', openAllAccordions);
+		}
+
+		if (closeAllBtn) {
+			closeAllBtn.addEventListener('click', closeAllAccordions);
+		}
+
+		if (closeAllBtn2) {
+			closeAllBtn2.addEventListener('click', closeAllAccordions);
+		}
+	});
+
+	// 全アコーディオン操作機能
+	function openAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.add('active');
+			header.setAttribute('aria-expanded', 'true');
+			content.classList.add('active');
+		});
+	}
+
+	function closeAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.remove('active');
+			header.setAttribute('aria-expanded', 'false');
+			content.classList.remove('active');
+		});
+	}
+
+	// 全アコーディオン操作機能
+	function openAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.add('active');
+			header.setAttribute('aria-expanded', 'true');
+			content.classList.add('active');
+		});
+	}
+
+	function closeAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.remove('active');
+			header.setAttribute('aria-expanded', 'false');
+			content.classList.remove('active');
+		});
+	}
+
+	// ボタンにイベントリスナーを追加
+	document.addEventListener('DOMContentLoaded', function () {
+		// 既存のアコーディオンコード...
+
+		// 全開/全閉ボタン
+		const openAllBtn = document.getElementById('open-all-accordions');
+		const closeAllBtn = document.getElementById('close-all-accordions');
+		const closeAllBtn2 = document.getElementById('close-all-accordions-2'); // 追加ボタン
+
+		if (openAllBtn) {
+			openAllBtn.addEventListener('click', openAllAccordions);
+		}
+
+		if (closeAllBtn) {
+			closeAllBtn.addEventListener('click', closeAllAccordions);
+		}
+
+		if (closeAllBtn2) {
+			closeAllBtn2.addEventListener('click', closeAllAccordions);
+		}
 	});
 </script>
 

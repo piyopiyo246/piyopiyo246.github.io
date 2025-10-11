@@ -51,23 +51,6 @@
 	<link rel="stylesheet" href="../style.min.css">
 	<link rel="stylesheet" href="../style_v.min.css">
 
-	<!-- アコーディオン用のJavaScript関数を追加 -->
-	<script>
-		function doToggleClassName(obj, onClassName, offClassName) {
-			obj.className = (obj.className != onClassName) ? onClassName : offClassName;
-		}
-		function getParentObj(obj) {
-			return obj.parentElement || obj.parentNode;
-		}
-		function doReplaceClassName(findClassName, replaceClassName, targetTagName) {
-			var elements = document.getElementsByTagName(targetTagName || '*');
-			for (var i = 0; i < elements.length; i++) {
-				if (elements[i].className == findClassName)
-					elements[i].className = replaceClassName;
-			}
-		}
-	</script>
-
 	<!-- 6. Cookie同意管理システム -->
 	<script>
 		window._cookiescript = {
@@ -270,15 +253,15 @@
 					</li>
 				</ul>
 				<h1 class="b bf4">GLA クラス</h1>
-				 <div style="display: flex; justify-content: space-between; width: 1210px;">
+				<div style="display: flex; justify-content: space-between; width: 1210px;">
 					<dl class="m1">
 						<dt class="s2 af0">Series</dt>
 						<dd class="s2"><a href="#x156" title="第１世代 GLAクラス X156" class="lnk2">156</a></dd>
 						<dd class="s2"><a href="#h247" title="第２世代 GLAクラス H247" class="lnk2">247</a></dd>
 					</dl>
 					<span>
-						<button class="vmenu_all_action square_btn" type="button" title="クリックで全ての開閉部を開く" span onclick="doReplaceClassName('vmenu_off', 'vmenu_on2')">全て開く</button>
-						<button class="vmenu_all_action square_btn" type="button" title="クリックで全ての開閉部を閉じる" span onclick="doReplaceClassName('vmenu_on2', 'vmenu_off')">全て閉じる</button>
+						<button id="open-all-accordions" class="vmenu_all_action square_btn" type="button" title="クリックで全ての開閉部を開く">全て開く</button>
+						<button id="close-all-accordions" class="vmenu_all_action square_btn" type="button" title="クリックで全ての開閉部を閉じる">全て閉じる</button>
 						<button class="square_btn" type="button" onclick="location.href='en_mb_img_gla.html'">En</button>
 						<button class="square_btn" type="button" onclick="location.href='mb_img_gla.html'">De</button>
 					</span>
@@ -330,28 +313,38 @@
 			<h2>第１世代 GLA</h2>
 			<div class="style-w">
 				<a href="full/gla/x156.jpg"><img src="style/gla/x156.webp" alt="メルセデス,X156,GLA" width="1210" height="756"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<p class="bf1a i"><a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBGLA%E3%82%AF%E3%83%A9%E3%82%B9#%E5%88%9D%E4%BB%A3_(2013%E5%B9%B4-)_X156" class="ico-wiki m1" title="Wikipedia(J) X156"></a></p>
-						<h3 class="i m0">X156</h3>
-						<p class="i m1">　12/2013 - 11/2019</p>
-						<p class="ru">デザイナー : Robert Le&scaron;nik , Mark Fetherston , Hans Peter Wunderlich</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-x156" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBGLA%E3%82%AF%E3%83%A9%E3%82%B9#%E5%88%9D%E4%BB%A3_(2013%E5%B9%B4-)_X156" class="ico-wiki" title="Wikipedia(J) X156"></a>
+								<h3>X156<h3>
+										12/2013 - 11/2019
+							</div>
+						</div>
+						<div class="accordion-right">
+							デザイナー : Robert Le&scaron;nik , Mark Fetherston (外装) , Hans Peter Wunderlich (内装) , Gorden Wagener
+						</div>
+					</button>
+					<div id="accordion-content-x156" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">X156</h4>
+							<a href="full/gla/x156_f.jpg"><img loading="lazy" src="style/gla/x156_f.webp" alt="メルセデス,X156,GLA,フロント" width="710" height="372"></a>
+							<a href="full/gla/x156_d.jpg"><img loading="lazy" src="style/gla/x156_d.webp" alt="メルセデス,X156,GLA,ダッシュボード" width="496" height="372"></a><br>
+							<h5 class="i">フェイスリフト</h5>
+							<p class="i m1">2017</p><br>
+							<a href="full/gla/x156_f2.jpg"><img loading="lazy" src="style/gla/x156_f2.webp" alt="X156,GLA,フロント" width="665" height="360"></a>
+							<a href="full/gla/x156_d2.jpg"><img loading="lazy" src="style/gla/x156_d2.webp" alt="メルセデス,X156,GLA,ダッシュボード" width="540" height="360"></a><br>
+							<a href="full/gla/x156_r2.jpg"><img loading="lazy" src="style/gla/x156_r2.webp" alt="メルセデス,X156,GLA,リヤ" width="665" height="405"></a>
+							<a href="full/gla/x156_i.jpg"><img loading="lazy" src="style/gla/x156_i.webp" alt="メルセデス,X156,GLA,内装" width="540" height="405"></a>
+							<h5>ボディサイズ</h5>
+							<a href="full/gla/x156_a1.jpg"><img loading="lazy" src="style/gla/x156_a1.webp" alt="メルセデス,X156,GLA,寸法" width="815" height="326"></a>
+							<a href="full/gla/x156_a2.jpg"><img loading="lazy" src="style/gla/x156_a2.webp" alt="メルセデス,X156,GLA,寸法" width="391" height="326"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">X156</h4>
-						<a href="full/gla/x156_f.jpg"><img loading="lazy" src="style/gla/x156_f.webp" alt="メルセデス,X156,GLA,フロント" width="710" height="372"></a>
-						<a href="full/gla/x156_d.jpg"><img loading="lazy" src="style/gla/x156_d.webp" alt="メルセデス,X156,GLA,ダッシュボード" width="496" height="372"></a><br>
-						<h5 class="i">フェイスリフト</h5>
-						<p class="i m1">2017</p><br>
-						<a href="full/gla/x156_f2.jpg"><img loading="lazy" src="style/gla/x156_f2.webp" alt="X156,GLA,フロント" width="665" height="360"></a>
-						<a href="full/gla/x156_d2.jpg"><img loading="lazy" src="style/gla/x156_d2.webp" alt="メルセデス,X156,GLA,ダッシュボード" width="540" height="360"></a><br>
-						<a href="full/gla/x156_r2.jpg"><img loading="lazy" src="style/gla/x156_r2.webp" alt="メルセデス,X156,GLA,リヤ" width="665" height="405"></a>
-						<a href="full/gla/x156_i.jpg"><img loading="lazy" src="style/gla/x156_i.webp" alt="メルセデス,X156,GLA,内装" width="540" height="405"></a>
-						<h5>ボディサイズ</h5>
-						<a href="full/gla/x156_a1.jpg"><img loading="lazy" src="style/gla/x156_a1.webp" alt="メルセデス,X156,GLA,寸法" width="815" height="326"></a>
-						<a href="full/gla/x156_a2.jpg"><img loading="lazy" src="style/gla/x156_a2.webp" alt="メルセデス,X156,GLA,寸法" width="391" height="326"></a>
-					</section>
 				</div>
+
 			</div>
 		</section>
 
@@ -359,41 +352,51 @@
 			<h2>第２世代 GLA</h2>
 			<div class="style-w">
 				<a href="full/gla/h247.jpg"><img loading="lazy" src="style/gla/h247.webp" alt="メルセデス,h247,GLA,フロント" width="1210" height="908"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<p class="bf1a i"><a href="https://de.wikipedia.org/wiki/Mercedes-Benz_H_247" class="ico-wiki m1" title="Wikipedia(D) Mercedes-Benz H247"></a></p>
-						<h3 class="i m0">H247</h3>
-						<p class="i m2">12/2019 -</p>
-						<p class="ru">デザイナー : Gorden Wagener</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-h247" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://de.wikipedia.org/wiki/Mercedes-Benz_H_247" class="ico-wiki" title="Wikipedia(D) Mercedes-Benz H247"></a>
+								<h3>H247<h3>
+										12/2019 -
+							</div>
+						</div>
+						<div class="accordion-right">
+							デザイナー : Balázs Filczer , Gordon Schlie (外装) , Jonathan Wienert (内装) , Gorden Wagener
+						</div>
+					</button>
+					<div id="accordion-content-h247" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">H247</h4>
+							<a href="full/gla/h247_f.jpg"><img loading="lazy" src="style/gla/h247_f.webp" alt="メルセデス,h247,GLA,フロント" width="602" height="414"></a>
+							<a href="full/gla/h247_r.jpg"><img loading="lazy" src="style/gla/h247_r.webp" alt="メルセデス,h247,GLA,リヤ" width="602" height="414"></a><br>
+							<a href="full/gla/h247_i.jpg"><img loading="lazy" src="style/gla/h247_i.webp" alt="メルセデス,h247,GLA,内装" width="602" height="402"></a>
+							<a href="full/gla/h247_ir.webp"><img loading="lazy" src="style/gla/h247_ir.webp" alt="メルセデス,h247,GLA,内装" width="602" height="401"></a><br>
+							<a href="full/gla/h247_d.jpg"><img loading="lazy" src="style/gla/h247_d.webp" alt="メルセデス,h247,GLA,ダッシュボード" width="657" height="365"></a>
+							<a href="full/gla/h247_m.jpg"><img loading="lazy" src="style/gla/h247_m.webp" alt="メルセデス,h247,GLA,Motor" width="547" height="365"></a><br>
+							<h5 class="i">フェイスリフト</h5>
+							<p class="i m1">3/2023</p><br>
+							<a href="full/gla/h247_f2.webp"><img loading="lazy" src="style/gla/h247_f2.webp" alt="メルセデス,h247,GLA,フロント" width="602" height="339"></a>
+							<a href="full/gla/h247_r2.jpg"><img loading="lazy" src="style/gla/h247_r2.webp" alt="メルセデス,h247,GLA,リヤ" width="602" height="339"></a><br>
+							<a href="full/gla/h247_d2.webp"><img loading="lazy" src="style/gla/h247_d2.webp" alt="メルセデス,h247,GLA,ダッシュボード" width="602" height="339"></a>
+							<a href="full/gla/h247_ir2.webp"><img loading="lazy" src="style/gla/h247_ir2.webp" alt="メルセデス,h247,GLA,内装" width="602" height="339"></a><br>
+							<a href="full/gla/h247_ic2.jpg"><img loading="lazy" src="style/gla/h247_ic2.webp" alt="メルセデス,h247,GLA,内装" width="602" height="339"></a>
+							<a href="full/gla/h247_i2.webp"><img loading="lazy" src="style/gla/h247_i2.webp" alt="メルセデス,h247,GLA,内装" width="602" height="339"></a><br>
+							<h5 class="i m0">AMG GLA45</h5>
+							<p class="i m2">6/2020 -</p><br>
+							<a href="full/gla/h247_amg_f.jpg"><img loading="lazy" src="style/gla/h247_amg_f.webp" alt="メルセデス,h247,GLA,AMG,フロント" width="604" height="340"></a>
+							<a href="full/gla/h247_amg_r.jpg"><img loading="lazy" src="style/gla/h247_amg_r.webp" alt="メルセデス,h247,GLA,AMG,リヤ" width="604" height="340"></a><br>
+							<a href="full/gla/h247_amg_d.jpg"><img loading="lazy" src="style/gla/h247_amg_d.webp" alt="メルセデス,h247,GLA,AMG,ダッシュボード" width="654" height="368"></a>
+							<a href="full/gla/h247_amg_i.jpg"><img loading="lazy" src="style/gla/h247_amg_i.webp" alt="メルセデス,h247,GLA,AMG,内装" width="552" height="368"></a>
+							<h5>ボディサイズ</h5>
+							<a href="full/gla/h247_a1.jpg"><img loading="lazy" src="style/gla/h247_a1.webp" alt="メルセデス,h247,GLA,側面図" width="799" height="345"></a>
+							<a href="full/gla/h247_a2.jpg"><img loading="lazy" src="style/gla/h247_a2.webp" alt="メルセデス,h247,GLA,正面図" width="408" height="345"></a><br>
+							<a href="full/gla/h247_a3.jpg"><img loading="lazy" src="style/gla/h247_a3.webp" alt="メルセデス,h247,GLA,上面図" width="799" height="355"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">H247</h4>
-						<a href="full/gla/h247_f.jpg"><img loading="lazy" src="style/gla/h247_f.webp" alt="メルセデス,h247,GLA,フロント" width="602" height="414"></a>
-						<a href="full/gla/h247_r.jpg"><img loading="lazy" src="style/gla/h247_r.webp" alt="メルセデス,h247,GLA,リヤ" width="602" height="414"></a><br>
-						<a href="full/gla/h247_i.jpg"><img loading="lazy" src="style/gla/h247_i.webp" alt="メルセデス,h247,GLA,内装" width="602" height="402"></a>
-						<a href="full/gla/h247_ir.webp"><img loading="lazy" src="style/gla/h247_ir.webp" alt="メルセデス,h247,GLA,内装" width="602" height="401"></a><br>
-						<a href="full/gla/h247_d.jpg"><img loading="lazy" src="style/gla/h247_d.webp" alt="メルセデス,h247,GLA,ダッシュボード" width="657" height="365"></a>
-						<a href="full/gla/h247_m.jpg"><img loading="lazy" src="style/gla/h247_m.webp" alt="メルセデス,h247,GLA,Motor" width="547" height="365"></a><br>
-						<h5 class="i">フェイスリフト</h5>
-						<p class="i m1">3/2023</p><br>
-						<a href="full/gla/h247_f2.webp"><img loading="lazy" src="style/gla/h247_f2.webp" alt="メルセデス,h247,GLA,フロント" width="602" height="339"></a>
-						<a href="full/gla/h247_r2.jpg"><img loading="lazy" src="style/gla/h247_r2.webp" alt="メルセデス,h247,GLA,リヤ" width="602" height="339"></a><br>
-						<a href="full/gla/h247_d2.webp"><img loading="lazy" src="style/gla/h247_d2.webp" alt="メルセデス,h247,GLA,ダッシュボード" width="602" height="339"></a>
-						<a href="full/gla/h247_ir2.webp"><img loading="lazy" src="style/gla/h247_ir2.webp" alt="メルセデス,h247,GLA,内装" width="602" height="339"></a><br>
-						<a href="full/gla/h247_ic2.jpg"><img loading="lazy" src="style/gla/h247_ic2.webp" alt="メルセデス,h247,GLA,内装" width="602" height="339"></a>
-						<a href="full/gla/h247_i2.webp"><img loading="lazy" src="style/gla/h247_i2.webp" alt="メルセデス,h247,GLA,内装" width="602" height="339"></a><br>
-						<h5 class="i m0">AMG GLA45</h5>
-						<p class="i m2">6/2020 -</p><br>
-						<a href="full/gla/h247_amg_f.jpg"><img loading="lazy" src="style/gla/h247_amg_f.webp" alt="メルセデス,h247,GLA,AMG,フロント" width="604" height="340"></a>
-						<a href="full/gla/h247_amg_r.jpg"><img loading="lazy" src="style/gla/h247_amg_r.webp" alt="メルセデス,h247,GLA,AMG,リヤ" width="604" height="340"></a><br>
-						<a href="full/gla/h247_amg_d.jpg"><img loading="lazy" src="style/gla/h247_amg_d.webp" alt="メルセデス,h247,GLA,AMG,ダッシュボード" width="654" height="368"></a>
-						<a href="full/gla/h247_amg_i.jpg"><img loading="lazy" src="style/gla/h247_amg_i.webp" alt="メルセデス,h247,GLA,AMG,内装" width="552" height="368"></a>
-						<h5>ボディサイズ</h5>
-						<a href="full/gla/h247_a1.jpg"><img loading="lazy" src="style/gla/h247_a1.webp" alt="メルセデス,h247,GLA,側面図" width="799" height="345"></a>
-						<a href="full/gla/h247_a2.jpg"><img loading="lazy" src="style/gla/h247_a2.webp" alt="メルセデス,h247,GLA,正面図" width="408" height="345"></a><br>
-						<a href="full/gla/h247_a3.jpg"><img loading="lazy" src="style/gla/h247_a3.webp" alt="メルセデス,h247,GLA,上面図" width="799" height="355"></a>
-					</section>
 				</div>
+
 			</div>
 		</section>
 
@@ -441,9 +444,10 @@
 			<hr>
 			<p class="mid"><small>@ since 2010 , piyopiyo_246</small></p>
 		</footer>
+
 		<p class="m-05" id="page-top"><a href="#head">&#9650;</a></p>
 		<p id="close-accordion">
-			<a class="vmenu_all_action" onclick="doReplaceClassName ('vmenu_on2','vmenu_off')" title="全ての開閉部を閉じる">&#9654;</a>
+			<a id="close-all-accordions-2" class="vmenu_all_action" title="全ての開閉部を閉じる">&#9654;</a>
 		</p>
 	</div>
 
@@ -499,6 +503,7 @@
 	</script>
 </body>
 
+<!-- スクロールしてトップ -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script>
 	$(function () {
@@ -517,6 +522,120 @@
 			}, 500);
 			return false;
 		});
+	});
+</script>
+
+<script>
+	// シンプル版アコーディオン機能（入れ子非対応）
+	document.addEventListener('DOMContentLoaded', function () {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+		accordionHeaders.forEach(header => {
+			header.addEventListener('click', function () {
+				const content = this.nextElementSibling;
+				const isActive = this.classList.contains('active');
+
+				// クリックされたアコーディオンのみトグル
+				if (isActive) {
+					this.classList.remove('active');
+					this.setAttribute('aria-expanded', 'false');
+					content.classList.remove('active');
+				} else {
+					this.classList.add('active');
+					this.setAttribute('aria-expanded', 'true');
+					content.classList.add('active');
+				}
+			});
+
+			// キーボード操作のサポート
+			header.addEventListener('keydown', function (e) {
+				if (e.key === 'Enter' || e.key === ' ') {
+					e.preventDefault();
+					this.click();
+				}
+			});
+		});
+
+		// 全開/全閉ボタンのイベントリスナー
+		const openAllBtn = document.getElementById('open-all-accordions');
+		const closeAllBtn = document.getElementById('close-all-accordions');
+		const closeAllBtn2 = document.getElementById('close-all-accordions-2');
+
+		if (openAllBtn) {
+			openAllBtn.addEventListener('click', openAllAccordions);
+		}
+
+		if (closeAllBtn) {
+			closeAllBtn.addEventListener('click', closeAllAccordions);
+		}
+
+		if (closeAllBtn2) {
+			closeAllBtn2.addEventListener('click', closeAllAccordions);
+		}
+	});
+
+	// 全アコーディオン操作機能
+	function openAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.add('active');
+			header.setAttribute('aria-expanded', 'true');
+			content.classList.add('active');
+		});
+	}
+
+	function closeAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.remove('active');
+			header.setAttribute('aria-expanded', 'false');
+			content.classList.remove('active');
+		});
+	}
+
+	// 全アコーディオン操作機能
+	function openAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.add('active');
+			header.setAttribute('aria-expanded', 'true');
+			content.classList.add('active');
+		});
+	}
+
+	function closeAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.remove('active');
+			header.setAttribute('aria-expanded', 'false');
+			content.classList.remove('active');
+		});
+	}
+
+	// ボタンにイベントリスナーを追加
+	document.addEventListener('DOMContentLoaded', function () {
+		// 既存のアコーディオンコード...
+
+		// 全開/全閉ボタン
+		const openAllBtn = document.getElementById('open-all-accordions');
+		const closeAllBtn = document.getElementById('close-all-accordions');
+		const closeAllBtn2 = document.getElementById('close-all-accordions-2'); // 追加ボタン
+
+		if (openAllBtn) {
+			openAllBtn.addEventListener('click', openAllAccordions);
+		}
+
+		if (closeAllBtn) {
+			closeAllBtn.addEventListener('click', closeAllAccordions);
+		}
+
+		if (closeAllBtn2) {
+			closeAllBtn2.addEventListener('click', closeAllAccordions);
+		}
 	});
 </script>
 
