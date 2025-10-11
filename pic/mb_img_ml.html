@@ -51,23 +51,6 @@
 	<link rel="stylesheet" href="../style.min.css">
 	<link rel="stylesheet" href="../style_v.min.css">
 
-	<!-- アコーディオン用のJavaScript関数を追加 -->
-	<script>
-		function doToggleClassName(obj, onClassName, offClassName) {
-			obj.className = (obj.className != onClassName) ? onClassName : offClassName;
-		}
-		function getParentObj(obj) {
-			return obj.parentElement || obj.parentNode;
-		}
-		function doReplaceClassName(findClassName, replaceClassName, targetTagName) {
-			var elements = document.getElementsByTagName(targetTagName || '*');
-			for (var i = 0; i < elements.length; i++) {
-				if (elements[i].className == findClassName)
-					elements[i].className = replaceClassName;
-			}
-		}
-	</script>
-
 	<!-- 6. Cookie同意管理システム -->
 	<script>
 		window._cookiescript = {
@@ -194,7 +177,6 @@
 				console.groupEnd();
 			}
 		};
-
 		// 初期化処理（エラーハンドリング追加）
 		try {
 			if (window._cookiescript.hasConsent()) {
@@ -281,8 +263,8 @@
 						<dd class="s2"><a href="#v167" title="Der 2te GLE-klasse V167" class="lnk2">167</a></dd>
 					</dl>
 					<span>
-						<button class="vmenu_all_action square_btn" type="button" title="Klicken Sie hier, um alle Öffnungen zu öffnen" span onclick="doReplaceClassName('vmenu_off', 'vmenu_on2')">Öffne alles</button>
-						<button class="vmenu_all_action square_btn" type="button" title="Klicken Sie hier, um alle Öffnungen zu schließen" span onclick="doReplaceClassName('vmenu_on2', 'vmenu_off')">Alle schließen</button>
+						<button id="open-all-accordions" class="vmenu_all_action square_btn" type="button" title="Klicken Sie hier, um alle Öffnungen zu öffnen">Öffne alles</button>
+						<button id="close-all-accordions" class="vmenu_all_action square_btn" type="button" title="Klicken Sie hier, um alle Öffnungen zu schließen">Alle schließen</button>
 						<button class="square_btn" type="button" onclick="location.href='ja_mb_img_ml.html'">Ja</button>
 						<button class="square_btn" type="button" onclick="location.href='en_mb_img_ml.html'">En</button>
 					</span>
@@ -338,15 +320,23 @@
 			<h2>Die 1ste ML-klasse</h2>
 			<div class="style-w">
 				<a href="full/ml/w163.jpg"><img src="style/ml/w163.webp" alt="Mercedes,W163,ML" width="1210" height="910"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Klicken Sie hier, um das Akkordeonfenster zu öffnen">
-						<p class="bf1a i"><a href="https://de.wikipedia.org/wiki/W163" class="ico-wiki m1" title="Wikipedia(D) W163"></a></p>
-						<h3 class="i m0">W163</h3>
-						<p class="i m1">1997 - 2005</p>
-						<p class="ru">Designer : Bruno Sacco , Peter Pfeiffer , Peter Arcadipane (1993)</p>
+
+			<div class="accordion">
+				<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-w163" title="Klicken Sie hier, um das Akkordeonfenster zu öffnen">
+					<div class="accordion-row">
+						<div class="accordion-left">
+							<a href="https://de.wikipedia.org/wiki/W163" class="ico-wiki" title="Wikipedia(D) W163"></a>
+							<h3>W163</h3>
+							1997 - 2005
+						</div>
+						<div class="accordion-right">
+							Designer : Bruno Sacco , Peter Pfeiffer , Peter Arcadipane (1993)
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">W163</h4>
+				</button>
+				<div id="accordion-content-w163" class="accordion-content subpage" role="region">
+					<div class="accordion-content-inner subpage">
+												<h4 class="displayNone">W163</h4>
 						<div>
 							<div class="box60a"><br>
 								<a href="full/ml/w163_f.jpg"><img loading="lazy" src="style/ml/w163_f.webp" alt="Mercedes,W163,ML,Frontansicht" width="604" height="367"></a><br>
@@ -363,8 +353,10 @@
 						</div>
 						<h5>Abmessungen</h5>
 						<a href="full/ml/w163_a.jpg"><img loading="lazy" src="style/ml/w163_a.webp" alt="Mercedes,W163,ML,Maße" width="1024" height="338"></a>
-					</section>
+					</div>
 				</div>
+			</div>
+
 			</div>
 		</section>
 
@@ -372,15 +364,23 @@
 			<h2>Der 2te ML-klasse</h2>
 			<div class="style-w">
 				<a href="full/ml/w164.jpg"><img loading="lazy" src="style/ml/w164.webp" alt="Mercedes,W164,ML" width="1210" height="681"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Klicken Sie hier, um das Akkordeonfenster zu öffnen">
-						<p class="bf1a i"><a href="https://de.wikipedia.org/wiki/Mercedes-Benz_W_164" class="ico-wiki m1" title="Wikipedia(D) W164"></a></p>
-						<h3 class="i m0">W164</h3>
-						<p class="i m1">2005 - 2011</p>
-						<p class="ru">Designer : Steve Mattin (2001)</p>
+
+			<div class="accordion">
+				<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-w164" title="Klicken Sie hier, um das Akkordeonfenster zu öffnen">
+					<div class="accordion-row">
+						<div class="accordion-left">
+							<a href="https://de.wikipedia.org/wiki/Mercedes-Benz_W_164" class="ico-wiki" title="Wikipedia(D) W164"></a>
+							<h3>W164</h3>
+							2005 - 2011
+						</div>
+						<div class="accordion-right">
+							Designer : Steve Mattin , Peter Pfeiffer
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">W164</h4>
+				</button>
+				<div id="accordion-content-w164" class="accordion-content subpage" role="region">
+					<div class="accordion-content-inner subpage">
+												<h4 class="displayNone">W164</h4>
 						<div>
 							<div class="box60a"><br>
 								<a href="full/ml/w164_f.jpg"><img loading="lazy" src="style/ml/w164_f.webp" alt="Mercedes,W164,ML,Frontansicht" width="604" height="370"></a><br>
@@ -397,8 +397,10 @@
 						</div>
 						<h5>Abmessungen</h5>
 						<a href="full/ml/w164_a.gif"><img loading="lazy" src="style/ml/w164_a.gif" alt="Mercedes,W164,ML,Maße" width="804" height="1096"></a>
-					</section>
+					</div>
 				</div>
+			</div>
+
 			</div>
 		</section>
 
@@ -406,15 +408,23 @@
 			<h2>Der 3te ML-klasse / Die 1ste GLE-klasse</h2>
 			<div class="style-w">
 				<a href="full/ml/w166.jpg"><img loading="lazy" src="style/ml/w166.webp" alt="Mercedes,W166,ML" width="1210" height="807"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Klicken Sie hier, um das Akkordeonfenster zu öffnen">
-						<p class="bf1a i"><a href="https://de.wikipedia.org/wiki/Mercedes-Benz_W_166" class="ico-wiki m1" title="Wikipedia(D) W166"></a></p>
-						<h3 class="i m0">W166</h3>
-						<p class="i m1">07/2011 - 2018</p>
-						<p class="ru">Designer : Emiel Burki, Hubert Lee (2008)</p>
+
+			<div class="accordion">
+				<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-w166" title="Klicken Sie hier, um das Akkordeonfenster zu öffnen">
+					<div class="accordion-row">
+						<div class="accordion-left">
+							<a href="https://de.wikipedia.org/wiki/Mercedes-Benz_W_166" class="ico-wiki" title="Wikipedia(D) W166"></a>
+							<h3>W166</h3>
+							07/2011 - 2018
+						</div>
+						<div class="accordion-right">
+							Designer : Ilario Aliotti , Robert Lešnik (Exterior) , Martin Geh (Interior) , Gorden Wagener
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">W166</h4>
+				</button>
+				<div id="accordion-content-w166" class="accordion-content subpage" role="region">
+					<div class="accordion-content-inner subpage">
+												<h4 class="displayNone">W166</h4>
 						<div>
 							<div class="box60a"><br>
 								<a href="full/ml/w166_f.jpg"><img loading="lazy" src="style/ml/w166_f.webp" alt="Mercedes,W166,ML,Frontansicht" width="604" height="353"></a><br>
@@ -431,8 +441,10 @@
 						</div>
 						<h5>Abmessungen</h5>
 						<a href="full/ml/w166_a.jpg"><img loading="lazy" src="style/ml/w166_a.webp" alt="Mercedes,W166,ML,Maße" width="806" height="1030"></a>
-					</section>
+					</div>
 				</div>
+			</div>
+
 			</div>
 		</section>
 
@@ -440,24 +452,33 @@
 			<h2>GLE-coupé</h2>
 			<div class="style-w">
 				<a href="full/ml/c292_s.jpg"><img loading="lazy" src="style/ml/c292_s.webp" alt="Mercedes,C292,GLE-coupé,Seitenansicht" width="1210" height="739"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Klicken Sie hier, um das Akkordeonfenster zu öffnen">
-						<p class="bf1a i"><a href="https://de.wikipedia.org/wiki/Mercedes-Benz_C_292" class="ico-wiki m1" title="Wikipedia(D) W166"></a></p>
-						<h3 class="i">C292</h3>
-						<p class="i m1">Coupé</p>
-						<p class="i m1">12/2015 - 2019</p>
-						<p class="ru">Designer : Gorden Wagener</p>
+
+			<div class="accordion">
+				<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-c292" title="Klicken Sie hier, um das Akkordeonfenster zu öffnen">
+					<div class="accordion-row">
+						<div class="accordion-left">
+							<a href="https://de.wikipedia.org/wiki/Mercedes-Benz_C_292" class="ico-wiki" title="Wikipedia(D) W166"></a>
+							<h3>C292</h3>
+							12/2015 - 2019
+						</div>
+						<div class="accordion-right">
+							Designer : Mark Fetherston , Robert Lešnik , Gorden Wagener
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">Coupé</h4>
+				</button>
+				<div id="accordion-content-c292" class="accordion-content subpage" role="region">
+					<div class="accordion-content-inner subpage">
+												<h4 class="displayNone">Coupé</h4>
 						<a href="full/ml/c292_r.jpg"><img loading="lazy" src="style/ml/c292_r.webp" alt="Mercedes,C292,GLE-coupé,Rückansicht" width="613" height="374"></a>
 						<a href="full/ml/c292_f.jpg"><img loading="lazy" src="style/ml/c292_f.webp" alt="Mercedes,C292,GLE-coupé,Frontansicht" width="593" height="374"></a><br>
 						<a href="full/ml/c292_i.jpg"><img loading="lazy" src="style/ml/c292_i.webp" alt="Mercedes,C292,GLE-coupé,Rückansicht seat" width="602" height="401"></a>
 						<a href="full/ml/c292_d.jpg"><img loading="lazy" src="style/ml/c292_d.webp" alt="Mercedes,C292,GLE-coupé,Instrumententafel" width="604" height="401"></a>
 						<h5>Abmessungen</h5>
 						<a href="full/ml/c292_a.gif"><img loading="lazy" src="style/ml/c292_a.gif" alt="Mercedes,C292,GLE-coupé,Maße" width="1210" height="704"></a>
-					</section>
+					</div>
 				</div>
+			</div>
+
 			</div>
 		</section>
 
@@ -465,14 +486,23 @@
 			<h2>Der 2te GLE-klasse</h2>
 			<div class="style-w">
 				<a href="full/ml/v167.jpg"><img loading="lazy" src="style/ml/v167.webp" alt="Mercedes,V167,GLE" width="1210" height="807"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Klicken Sie hier, um das Akkordeonfenster zu öffnen">
-						<p class="bf1a i"><a href="https://de.wikipedia.org/wiki/Mercedes-Benz_V_167" class="ico-wiki m1" title="Wikipedia(D) W166"></a></p>
-						<h3 class="i">V167</h3>
-						<p class="i m1">2018 -</p>
+
+			<div class="accordion">
+				<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-v167" title="Klicken Sie hier, um das Akkordeonfenster zu öffnen">
+					<div class="accordion-row">
+						<div class="accordion-left">
+							<a href="https://de.wikipedia.org/wiki/Mercedes-Benz_V_167" class="ico-wiki" title="Wikipedia(D) W166"></a>
+							<h3>V167</h3>
+							2018 -
+						</div>
+						<div class="accordion-right">
+							Designer : Gordon Schlie , Robert Lešnik (Exterior) , Hans Peter Wunderlich (Interior) , Gorden Wagener
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">V167</h4>
+				</button>
+				<div id="accordion-content-v167" class="accordion-content subpage" role="region">
+					<div class="accordion-content-inner subpage">
+												<h4 class="displayNone">V167</h4>
 						<a href="full/ml/v167_f.jpg"><img loading="lazy" src="style/ml/v167_f.webp" alt="Mercedes,V167,GLE,Frontansicht" width="608" height="397"></a>
 						<a href="full/ml/v167_r.jpg"><img loading="lazy" src="style/ml/v167_r.webp" alt="Mercedes,V167,GLE,Rückansicht" width="596" height="397"></a><br>
 						<a href="full/ml/v167_d.jpg"><img loading="lazy" src="style/ml/v167_d.webp" alt="Mercedes,V167,GLE,Instrumententafel" width="602" height="401"></a>
@@ -490,18 +520,25 @@
 						<h5>Abmessungen</h5>
 						<a href="full/ml/v167_a1.jpg"><img loading="lazy" src="style/ml/v167_a1.webp" alt="Mercedes,V167,GLE,Maße" width="389" height="389"></a>
 						<a href="full/ml/v167_a2.jpg"><img loading="lazy" src="style/ml/v167_a2.webp" alt="Mercedes,V167,GLE,Maße" width="817" height="389"></a>
-					</section>
-				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Klicken Sie hier, um das Akkordeonfenster zu öffnen">
-						<h3 class="bf1b i">AMG</h3>
-						<h4 class="i m1">GLE53</h4>
-						<p class="i m1">03/2019 -</p>
-						<h4 class="i m2">GLE63</h4>
-						<p class="i m1">11/2019 -</p>
 					</div>
-					<section>
-						<h4 class="displayNone">V167 AMG</h4>
+				</div>
+			</div>
+
+			<div class="accordion">
+				<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-amg-gle53-63" title="Klicken Sie hier, um das Akkordeonfenster zu öffnen">
+					<div class="accordion-row">
+						<div class="accordion-left">
+							<h4>AMG</h4>
+							<p>GLE 53</p>
+									03/2019 -
+							<p>GLE 63</p>
+									11/2019 -
+						</div>
+					</div>
+				</button>
+				<div id="accordion-content-amg-gle53-63" class="accordion-content subpage" role="region">
+					<div class="accordion-content-inner subpage">
+												<h4 class="displayNone">V167 AMG</h4>
 						<a href="full/ml/v167_amg_f.jpg"><img loading="lazy" src="style/ml/v167_amg_f.webp" alt="Mercedes,V167,GLE,AMG,Frontansicht" width="1210" height="807"></a><br>
 						<a href="full/ml/v167_amg_r.jpg"><img loading="lazy" src="style/ml/v167_amg_r.webp" alt="Mercedes,V167,GLE,AMG,Rückansicht" width="601" height="401"></a>
 						<a href="full/ml/v167_amg_d.jpg"><img loading="lazy" src="style/ml/v167_amg_d.webp" alt="Mercedes,V167,GLE,AMG,Instrumententafel" width="601" height="401"></a><br>
@@ -509,8 +546,10 @@
 						<a href="full/ml/v167_amg_2i.jpg"><img loading="lazy" src="style/ml/v167_amg_2i.webp" alt="Mercedes,V167,GLE,AMG,Innenansicht" width="604" height="401"></a><br>
 						<a href="full/ml/v167_amg_m.jpg"><img loading="lazy" src="style/ml/v167_amg_m.webp" alt="Mercedes,V167,GLE,AMG,Motor" width="609" height="406"></a>
 						<a href="full/ml/v167_amg_chassis.jpg"><img loading="lazy" src="style/ml/v167_amg_chassis.webp" alt="Mercedes,V167,GLE,AMG,Chassis" width="594" height="406"></a>
-					</section>
+					</div>
 				</div>
+			</div>
+
 			</div>
 		</section>
 
@@ -518,14 +557,23 @@
 			<h2>Der 2te GLE-coupé</h2>
 			<div class="style-w">
 				<a href="full/ml/c167_f.jpg"><img loading="lazy" src="style/ml/c167_f.webp" alt="MercedesC167,GLE-coupé,Frontansicht" width="1210" height="908"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Klicken Sie hier, um das Akkordeonfenster zu öffnen">
-						<p class="bf1a i"><a href="https://de.wikipedia.org/wiki/Mercedes-Benz_C_167" class="ico-wiki m1" title="Wikipedia(D) W166"></a></p>
-						<h3 class="i">C167</h3>
-						<p class="i m1">2019 -</p>
+
+			<div class="accordion">
+				<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-c167" title="Klicken Sie hier, um das Akkordeonfenster zu öffnen">
+					<div class="accordion-row">
+						<div class="accordion-left">
+							<a href="https://de.wikipedia.org/wiki/Mercedes-Benz_C_167" class="ico-wiki" title="Wikipedia(D) W166"></a>
+							<h3>C167</h3>
+							2019 -
+						</div>
+						<div class="accordion-right">
+							Designer : Gordon Schlie , Robert Lešnik , Gorden Wagener
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">C167</h4>
+				</button>
+				<div id="accordion-content-c167" class="accordion-content subpage" role="region">
+					<div class="accordion-content-inner subpage">
+												<h4 class="displayNone">C167</h4>
 						<a href="full/ml/c167_r.jpg"><img loading="lazy" src="style/ml/c167_r.webp" alt="MercedesC167,GLE-coupé,Rückansicht" width="603" height="452"></a>
 						<a href="full/ml/c167_d.jpg"><img loading="lazy" src="style/ml/c167_d.webp" alt="MercedesC167,GLE-coupé,Instrumententafel" width="603" height="452"></a><br>
 						<a href="full/ml/c167_1i.jpg"><img loading="lazy" src="style/ml/c167_1i.webp" alt="Mercedes,C167,GLE-coupé,Innenansicht" width="603" height="402"></a>
@@ -543,25 +591,33 @@
 						<h5>Abmessungen</h5>
 						<a href="full/ml/c167_a1.jpg"><img loading="lazy" src="style/ml/c167_a1.webp" alt="MercedesC167,GLE-coupé,Maße" width="389" height="389"></a>
 						<a href="full/ml/c167_a2.jpg"><img loading="lazy" src="style/ml/c167_a2.webp" alt="MercedesC167,GLE-coupé,Maße" width="817" height="389"></a>
-					</section>
-				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Klicken Sie hier, um das Akkordeonfenster zu öffnen">
-						<h3 class="bf1b i">AMG</h3>
-						<p class="i m1">Coupé</p>
-						<p class="i m1">GLE53</p>
-						<p class="i m1">11/2019 -</p>
-						<p class="i m2">GLE63</p>
-						<p class="i m1">03/2020 -</p>
 					</div>
-					<section>
-						<h4 class="displayNone">GLE53</h4>
+				</div>
+			</div>
+
+			<div class="accordion">
+				<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-amg-gle53-63" title="Klicken Sie hier, um das Akkordeonfenster zu öffnen">
+					<div class="accordion-row">
+						<div class="accordion-left">
+							<h4>AMG</h4>
+							<p>GLE 53</p>
+									11/2019 -
+							<p>GLE 63</p>
+									03/2020 -
+						</div>
+					</div>
+				</button>
+				<div id="accordion-content-amg-gle53-63" class="accordion-content subpage" role="region">
+					<div class="accordion-content-inner subpage">
+												<h4 class="displayNone">GLE53</h4>
 						<a href="full/ml/c167_amg_f.jpg"><img loading="lazy" src="style/ml/c167_amg_f.webp" alt="Mercedes,V167,GLE-coupé,AMG,Frontansicht" width="1210" height="650"></a><br>
 						<a href="full/ml/c167_amg_r.jpg"><img loading="lazy" src="style/ml/c167_amg_r.webp" alt="Mercedes,V167,GLE-coupé,AMG,Rückansicht" width="568" height="426"></a>
 						<a href="full/ml/c167_amg_i.jpg"><img loading="lazy" src="style/ml/c167_amg_i.webp" alt="Mercedes,V167,GLE-coupé,AMG,Innenansicht" width="639" height="426"></a><br>
 						<a href="full/ml/c167_amg_d.jpg"><img loading="lazy" src="style/ml/c167_amg_d.webp" alt="Mercedes,V167,GLE-coupé,AMG,Instrumententafel" width="1210" height="807"></a>
-					</section>
+					</div>
 				</div>
+			</div>
+
 			</div>
 		</section>
 
@@ -612,9 +668,10 @@
 			<hr>
 			<p class="mid"><small>@ seit 2010 , piyopiyo_246</small></p>
 		</footer>
+
 		<p class="m-05" id="page-top"><a href="#head">&#9650;</a></p>
 		<p id="close-accordion">
-			<a class="vmenu_all_action" onclick="doReplaceClassName ('vmenu_on2','vmenu_off')" title="Alle Öffnungen schließen">&#9654;</a>
+			<a id="close-all-accordions-2" class="vmenu_all_action" title="Alle Öffnungen schließen">&#9654;</a>
 		</p>
 	</div>
 
@@ -689,6 +746,120 @@
 			}, 500);
 			return false;
 		});
+	});
+</script>
+
+<script>
+	// シンプル版アコーディオン機能（入れ子非対応）
+	document.addEventListener('DOMContentLoaded', function () {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+		accordionHeaders.forEach(header => {
+			header.addEventListener('click', function () {
+				const content = this.nextElementSibling;
+				const isActive = this.classList.contains('active');
+
+				// クリックされたアコーディオンのみトグル
+				if (isActive) {
+					this.classList.remove('active');
+					this.setAttribute('aria-expanded', 'false');
+					content.classList.remove('active');
+				} else {
+					this.classList.add('active');
+					this.setAttribute('aria-expanded', 'true');
+					content.classList.add('active');
+				}
+			});
+
+			// キーボード操作のサポート
+			header.addEventListener('keydown', function (e) {
+				if (e.key === 'Enter' || e.key === ' ') {
+					e.preventDefault();
+					this.click();
+				}
+			});
+		});
+
+		// 全開/全閉ボタンのイベントリスナー
+		const openAllBtn = document.getElementById('open-all-accordions');
+		const closeAllBtn = document.getElementById('close-all-accordions');
+		const closeAllBtn2 = document.getElementById('close-all-accordions-2');
+
+		if (openAllBtn) {
+			openAllBtn.addEventListener('click', openAllAccordions);
+		}
+
+		if (closeAllBtn) {
+			closeAllBtn.addEventListener('click', closeAllAccordions);
+		}
+
+		if (closeAllBtn2) {
+			closeAllBtn2.addEventListener('click', closeAllAccordions);
+		}
+	});
+
+	// 全アコーディオン操作機能
+	function openAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.add('active');
+			header.setAttribute('aria-expanded', 'true');
+			content.classList.add('active');
+		});
+	}
+
+	function closeAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.remove('active');
+			header.setAttribute('aria-expanded', 'false');
+			content.classList.remove('active');
+		});
+	}
+
+	// 全アコーディオン操作機能
+	function openAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.add('active');
+			header.setAttribute('aria-expanded', 'true');
+			content.classList.add('active');
+		});
+	}
+
+	function closeAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.remove('active');
+			header.setAttribute('aria-expanded', 'false');
+			content.classList.remove('active');
+		});
+	}
+
+	// ボタンにイベントリスナーを追加
+	document.addEventListener('DOMContentLoaded', function () {
+		// 既存のアコーディオンコード...
+
+		// 全開/全閉ボタン
+		const openAllBtn = document.getElementById('open-all-accordions');
+		const closeAllBtn = document.getElementById('close-all-accordions');
+		const closeAllBtn2 = document.getElementById('close-all-accordions-2'); // 追加ボタン
+
+		if (openAllBtn) {
+			openAllBtn.addEventListener('click', openAllAccordions);
+		}
+
+		if (closeAllBtn) {
+			closeAllBtn.addEventListener('click', closeAllAccordions);
+		}
+
+		if (closeAllBtn2) {
+			closeAllBtn2.addEventListener('click', closeAllAccordions);
+		}
 	});
 </script>
 
