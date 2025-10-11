@@ -51,23 +51,6 @@
 	<link rel="stylesheet" href="../style.min.css">
 	<link rel="stylesheet" href="../style_v.min.css">
 
-	<!-- アコーディオン用のJavaScript関数を追加 -->
-	<script>
-		function doToggleClassName(obj, onClassName, offClassName) {
-			obj.className = (obj.className != onClassName) ? onClassName : offClassName;
-		}
-		function getParentObj(obj) {
-			return obj.parentElement || obj.parentNode;
-		}
-		function doReplaceClassName(findClassName, replaceClassName, targetTagName) {
-			var elements = document.getElementsByTagName(targetTagName || '*');
-			for (var i = 0; i < elements.length; i++) {
-				if (elements[i].className == findClassName)
-					elements[i].className = replaceClassName;
-			}
-		}
-	</script>
-
 	<!-- 6. Cookie同意管理システム -->
 	<script>
 		window._cookiescript = {
@@ -88,7 +71,7 @@
 							analytics_storage: 'granted',
 							ad_storage: 'denied',
 							functionality_storage: 'granted',
-							region: ['US', 'GB', 'CA', 'AU', 'NZ', 'IE'] ,
+							region: ['US', 'GB', 'CA', 'AU', 'NZ', 'IE'],
 							// デバッグ用パラメータ（本番では削除）
 							debug_mode: location.hostname.includes('localhost')
 						});
@@ -206,7 +189,7 @@
 					ad_storage: 'denied',
 					functionality_storage: 'granted',
 					wait_for_update: 500,
-					region: ['US', 'GB', 'CA', 'AU', 'NZ', 'IE'] 
+					region: ['US', 'GB', 'CA', 'AU', 'NZ', 'IE']
 				});
 			}
 		} catch (initError) {
@@ -270,7 +253,7 @@
 					</li>
 				</ul>
 				<h1 class="b bf4">GL / GLS-class</h1>
-				 <div style="display: flex; justify-content: space-between; width: 1210px;">
+				<div style="display: flex; justify-content: space-between; width: 1210px;">
 					<dl class="m1">
 						<dt class="s2 af0">Series</dt>
 						<dd class="s2"><a href="#x164" title="The 1st GL-class X164" class="lnk2">164</a></dd>
@@ -278,8 +261,8 @@
 						<dd class="s2"><a href="#x167" title="The 2rd GLS-class X167" class="lnk2">167</a></dd>
 					</dl>
 					<span>
-						<button class="vmenu_all_action square_btn" type="button" title="Click here to open all openings" span onclick="doReplaceClassName('vmenu_off', 'vmenu_on2')">Open all</button>
-						<button class="vmenu_all_action square_btn" type="button" title="Click here to close all openings" span onclick="doReplaceClassName('vmenu_on2', 'vmenu_off')">Close all</button>
+						<button id="open-all-accordions" class="vmenu_all_action square_btn" type="button" title="Click here to open all openings">Open all</button>
+						<button id="close-all-accordions" class="vmenu_all_action square_btn" type="button" title="Click here to close all openings">Close all</button>
 						<button class="square_btn" type="button" onclick="location.href='ja_mb_img_gl.html'">Ja</button>
 						<button class="square_btn" type="button" onclick="location.href='mb_img_gl.html'">De</button>
 					</span>
@@ -332,34 +315,44 @@
 			<h2>The 1st GL-class</h2>
 			<div class="style-w">
 				<a href="full/gl/x164.jpg"><img src="style/gl/x164.webp" alt="Mercedes,X164,GL" width="1210" height="766"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<p class="bf1a i"><a href="https://en.wikipedia.org/wiki/Mercedes-Benz_GL-Class_(X164)" class="ico-wiki m1" title="Wikipedia(E) X164"></a></p>
-						<h3 class="i m0">X164</h3>
-						<p class="i m1">2006 - 2012</p>
-						<p class="ru">Designer : Peter Pfeiffer</p>
-					</div>
-					<section>
-						<h4 class="displayNone">X164</h4>
-						<div>
-							<div class="box60a"><br>
-								<a href="full/gl/x164_f.jpg"><img loading="lazy" src="style/gl/x164_f.webp" alt="Mercedes,X164,GL,Front view" width="604" height="408"></a><br>
-								<a href="full/gl/x164_r.jpg"><img loading="lazy" src="style/gl/x164_r.webp" alt="Mercedes,X164,GL,Rear view" width="604" height="422"></a><br>
-								<a href="full/gl/x164_d.jpg"><img loading="lazy" src="style/gl/x164_d.webp" alt="Mercedes,X164,GL,Dashboard" width="604" height="453"></a>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-x164" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://en.wikipedia.org/wiki/Mercedes-Benz_GL-Class_(X164)" class="ico-wiki" title="Wikipedia(E) X164"></a>
+								<h3>X164<h3>
+										2006 - 2012
 							</div>
-							<div class="box60a">
-								<h5 class="i">Facelift</h5>
-								<p class="i m1">06/2009</p><br>
-								<a href="full/gl/x164_f2.jpg"><img loading="lazy" src="style/gl/x164_f2.webp" alt="Mercedes,X164,GL,Front view" width="604" height="408"></a><br>
-								<a href="full/gl/x164_r2.jpg"><img loading="lazy" src="style/gl/x164_r2.webp" alt="Mercedes,X164,GL,Rear view" width="604" height="422"></a><br>
-								<a href="full/gl/x164_d2.jpg"><img loading="lazy" src="style/gl/x164_d2.webp" alt="Mercedes,X164,GL,Dashboard" width="604" height="454"></a>
+							<div class="accordion-right">
+								Designer : Steve Mattin , Gorden Wagener
 							</div>
 						</div>
-						<a href="full/gl/x164_i.jpg"><img loading="lazy" src="style/gl/x164_i.webp" alt="Mercedes,X164,GL,Interior" width="1210" height="622"></a>
-						<h5>Dimensions</h5>
-						<a href="full/gl/x164_a.jpg"><img loading="lazy" src="style/gl/x164_a.webp" alt="Mercedes,X164,GL,Dimensions" width="1210" height="747"></a>
-					</section>
+					</button>
+					<div id="accordion-content-x164" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">X164</h4>
+							<div>
+								<div class="box60a"><br>
+									<a href="full/gl/x164_f.jpg"><img loading="lazy" src="style/gl/x164_f.webp" alt="Mercedes,X164,GL,Front view" width="604" height="408"></a><br>
+									<a href="full/gl/x164_r.jpg"><img loading="lazy" src="style/gl/x164_r.webp" alt="Mercedes,X164,GL,Rear view" width="604" height="422"></a><br>
+									<a href="full/gl/x164_d.jpg"><img loading="lazy" src="style/gl/x164_d.webp" alt="Mercedes,X164,GL,Dashboard" width="604" height="453"></a>
+								</div>
+								<div class="box60a">
+									<h5 class="i">Facelift</h5>
+									<p class="i m1">06/2009</p><br>
+									<a href="full/gl/x164_f2.jpg"><img loading="lazy" src="style/gl/x164_f2.webp" alt="Mercedes,X164,GL,Front view" width="604" height="408"></a><br>
+									<a href="full/gl/x164_r2.jpg"><img loading="lazy" src="style/gl/x164_r2.webp" alt="Mercedes,X164,GL,Rear view" width="604" height="422"></a><br>
+									<a href="full/gl/x164_d2.jpg"><img loading="lazy" src="style/gl/x164_d2.webp" alt="Mercedes,X164,GL,Dashboard" width="604" height="454"></a>
+								</div>
+							</div>
+							<a href="full/gl/x164_i.jpg"><img loading="lazy" src="style/gl/x164_i.webp" alt="Mercedes,X164,GL,Interior" width="1210" height="622"></a>
+							<h5>Dimensions</h5>
+							<a href="full/gl/x164_a.jpg"><img loading="lazy" src="style/gl/x164_a.webp" alt="Mercedes,X164,GL,Dimensions" width="1210" height="747"></a>
+						</div>
+					</div>
 				</div>
+
 			</div>
 		</section>
 
@@ -367,27 +360,37 @@
 			<h2>The 2nd GL-class / The 1st GLS-class</h2>
 			<div class="style-w">
 				<a href="full/gl/x166_f.jpg"><img loading="lazy" src="style/gl/x166_f.webp" alt="Mercedes,X166,GL,Front view" width="1210" height="627"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<p class="bf1a i"><a href="https://en.wikipedia.org/wiki/Mercedes-Benz_GL-Class_(X166)" class="ico-wiki m1" title="Wikipedia(E) X166"></a></p>
-						<h3 class="i m0">X166</h3>
-						<p class="i m1">06/2012 - 2019</p>
-						<p class="ru">Designer : Gorden Wagener</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-x166" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://en.wikipedia.org/wiki/Mercedes-Benz_GL-Class_(X166)" class="ico-wiki" title="Wikipedia(E) X166"></a>
+								<h3>X166<h3>
+										06/2012 - 2019
+							</div>
+							<div class="accordion-right">
+								Designer : Holger Huttler , Gorden Wagener
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-x166" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">X166</h4>
+							<a href="full/gl/x166_r.jpg"><img loading="lazy" src="style/gl/x166_r.webp" alt="Mercedes,X166,GL,Rear view" width="646" height="404"></a>
+							<a href="full/gl/x166_d.jpg"><img loading="lazy" src="style/gl/x166_d.webp" alt="Mercedes,X166,GL,Dashboard" width="558" height="404"></a><br>
+							<h5 class="i">Facelift</h5>
+							<p class="i m1">Renamed to GLS 11/2015</p><br>
+							<a href="full/gl/x166_f2.jpg"><img loading="lazy" src="style/gl/x166_f2.webp" alt="Mercedes,X166,GLS,Front view" width="545" height="374"></a>
+							<a href="full/gl/x166_r2.jpg"><img loading="lazy" src="style/gl/x166_r2.webp" alt="Mercedes,X166,GLS,Rear view" width="658" height="374"></a><br>
+							<a href="full/gl/x166_d2.jpg"><img loading="lazy" src="style/gl/x166_d2.webp" alt="Mercedes,X166,GLS,Dashboard" width="587" height="504"></a>
+							<a href="full/gl/x166_i2.jpg"><img loading="lazy" src="style/gl/x166_i2.webp" alt="Mercedes,X166,GLS,Interior" width="617" height="504"></a>
+							<h5>Dimensions</h5>
+							<a href="full/gl/x166_a.jpg"><img loading="lazy" src="style/gl/x166_a.png" alt="Mercedes,X166,GLS,Dimensions" width="1210" height="663"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">X166</h4>
-						<a href="full/gl/x166_r.jpg"><img loading="lazy" src="style/gl/x166_r.webp" alt="Mercedes,X166,GL,Rear view" width="646" height="404"></a>
-						<a href="full/gl/x166_d.jpg"><img loading="lazy" src="style/gl/x166_d.webp" alt="Mercedes,X166,GL,Dashboard" width="558" height="404"></a><br>
-						<h5 class="i">Facelift</h5>
-						<p class="i m1">Renamed to GLS 11/2015</p><br>
-						<a href="full/gl/x166_f2.jpg"><img loading="lazy" src="style/gl/x166_f2.webp" alt="Mercedes,X166,GLS,Front view" width="545" height="374"></a>
-						<a href="full/gl/x166_r2.jpg"><img loading="lazy" src="style/gl/x166_r2.webp" alt="Mercedes,X166,GLS,Rear view" width="658" height="374"></a><br>
-						<a href="full/gl/x166_d2.jpg"><img loading="lazy" src="style/gl/x166_d2.webp" alt="Mercedes,X166,GLS,Dashboard" width="587" height="504"></a>
-						<a href="full/gl/x166_i2.jpg"><img loading="lazy" src="style/gl/x166_i2.webp" alt="Mercedes,X166,GLS,Interior" width="617" height="504"></a>
-						<h5>Dimensions</h5>
-						<a href="full/gl/x166_a.jpg"><img loading="lazy" src="style/gl/x166_a.png" alt="Mercedes,X166,GLS,Dimensions" width="1210" height="663"></a>
-					</section>
 				</div>
+
 			</div>
 		</section>
 
@@ -395,41 +398,51 @@
 			<h2>The 2nd GLS-class</h2>
 			<div class="style-w">
 				<a href="full/gl/x167_f.jpg"><img loading="lazy" src="style/gl/x167_f.webp" alt="Mercedes,x167,GLS,Front view" width="1210" height="626"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<p class="bf1a i"><a href="https://en.wikipedia.org/wiki/Mercedes-Benz_GLS_(X167)" class="ico-wiki m1" title="Wikipedia(E) X167"></a></p>
-						<h3 class="i m0">X167</h3>
-						<p class="i m1">04/2019 -</p>
-						<p class="ru">Designer : Balázs Filczer</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-x167" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://en.wikipedia.org/wiki/Mercedes-Benz_GLS_(X167)" class="ico-wiki" title="Wikipedia(E) X167"></a>
+								<h3>X167<h3>
+										04/2019 -
+							</div>
+							<div class="accordion-right">
+								Designer : Balázs Filczer , Gorden Wagener
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-x167" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">X167</h4>
+							<a href="full/gl/x167_d.jpg"><img loading="lazy" src="style/gl/x167_d.webp" alt="Mercedes,x167,GLS,Dashboard" width="1210" height="512"></a><br>
+							<a href="full/gl/x167_r.jpg"><img loading="lazy" src="style/gl/x167_r.webp" alt="Mercedes,x167,GLS,Rear view" width="603" height="400"></a>
+							<a href="full/gl/x167_i.jpg"><img loading="lazy" src="style/gl/x167_i.webp" alt="Mercedes,x167,GLS,Interior" width="603" height="391"></a><br>
+							<h5 class="i">Facelift</h5>
+							<p class="i m1">09/2023</p><br>
+							<a href="full/gl/x167_f2.webp"><img loading="lazy" src="style/gl/x167_f2.webp" alt="Mercedes,x167,GLS,Front view" width="599" height="330"></a>
+							<a href="full/gl/x167_r2.webp"><img loading="lazy" src="style/gl/x167_r2.webp" alt="Mercedes,x167,GLS,Rear view" width="609" height="330"></a><br>
+							<a href="full/gl/x167_d2.jpg"><img loading="lazy" src="style/gl/x167_d2.webp" alt="Mercedes,x167,GLS,Dashboard" width="603" height="339"></a>
+							<a href="full/gl/x167_i2.webp"><img loading="lazy" src="style/gl/x167_i2.webp" alt="Mercedes,x167,GLS,Interior" width="602" height="339"></a><br>
+							<h4 class="i">Mercedes-Maybach GLS 600 4MATIC</h4>
+							<p class="i m1">11/2019 -</p><br>
+							<a href="full/gl/x167_mb_f.jpg"><img loading="lazy" src="style/gl/x167_mb_f.webp" alt="Mercedes,x167,GLS,Maybach,Front view" width="581" height="362"></a>
+							<a href="full/gl/x167_mb_r.jpg"><img loading="lazy" src="style/gl/x167_mb_r.webp" alt="Mercedes,x167,GLS,Maybach,Rear view" width="625" height="362"></a><br>
+							<a href="full/gl/x167_mb_d.jpg"><img loading="lazy" src="style/gl/x167_mb_d.webp" alt="Mercedes,x167,GLS,Maybach,Dashboard" width="688" height="387"></a>
+							<a href="full/gl/x167_mb_i.jpg"><img loading="lazy" src="style/gl/x167_mb_i.webp" alt="Mercedes,x167,GLS,Maybach,Interior" width="516" height="387"></a><br>
+							<h5 class="i">Facelift</h5>
+							<p class="i m1">09/2023</p><br>
+							<a href="full/gl/x167_mb_f2.jpg"><img loading="lazy" src="style/gl/x167_mb_f2.webp" alt="Mercedes,X167,GLS,Maybach,Front view" width="602" height="339"></a>
+							<a href="full/gl/x167_mb_r2.jpg"><img loading="lazy" src="style/gl/x167_mb_r2.webp" alt="Mercedes,X167,GLS,Maybach,Rear view" width="603" height="339"></a><br>
+							<a href="full/gl/x167_mb_d2.webp"><img loading="lazy" src="style/gl/x167_mb_d2.webp" alt="Mercedes,X167,GLS,Maybach,Dashboard" width="555" height="365"></a>
+							<a href="full/gl/x167_mb_i2.webp"><img loading="lazy" src="style/gl/x167_mb_i2.webp" alt="Mercedes,X167,GLS,Maybach,Interior" width="648" height="365"></a>
+							<h5>Dimensions</h5>
+							<a href="full/gl/x167_a1.jpg"><img loading="lazy" src="style/gl/x167_a1.webp" alt="Mercedes,x167,GLS,Dimensions" width="1210" height="519"></a><br>
+							<a href="full/gl/x167_a2.jpg"><img loading="lazy" src="style/gl/x167_a2.webp" alt="Mercedes,x167,GLS,Dimensions" width="1210" height="519"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">X167</h4>
-						<a href="full/gl/x167_d.jpg"><img loading="lazy" src="style/gl/x167_d.webp" alt="Mercedes,x167,GLS,Dashboard" width="1210" height="512"></a><br>
-						<a href="full/gl/x167_r.jpg"><img loading="lazy" src="style/gl/x167_r.webp" alt="Mercedes,x167,GLS,Rear view" width="603" height="400"></a>
-						<a href="full/gl/x167_i.jpg"><img loading="lazy" src="style/gl/x167_i.webp" alt="Mercedes,x167,GLS,Interior" width="603" height="391"></a><br>
-						<h5 class="i">Facelift</h5>
-						<p class="i m1">09/2023</p><br>
-						<a href="full/gl/x167_f2.webp"><img loading="lazy" src="style/gl/x167_f2.webp" alt="Mercedes,x167,GLS,Front view" width="599" height="330"></a>
-						<a href="full/gl/x167_r2.webp"><img loading="lazy" src="style/gl/x167_r2.webp" alt="Mercedes,x167,GLS,Rear view" width="609" height="330"></a><br>
-						<a href="full/gl/x167_d2.jpg"><img loading="lazy" src="style/gl/x167_d2.webp" alt="Mercedes,x167,GLS,Dashboard" width="603" height="339"></a>
-						<a href="full/gl/x167_i2.webp"><img loading="lazy" src="style/gl/x167_i2.webp" alt="Mercedes,x167,GLS,Interior" width="602" height="339"></a><br>
-						<h4 class="i">Mercedes-Maybach GLS 600 4MATIC</h4>
-						<p class="i m1">11/2019 -</p><br>
-						<a href="full/gl/x167_mb_f.jpg"><img loading="lazy" src="style/gl/x167_mb_f.webp" alt="Mercedes,x167,GLS,Maybach,Front view" width="581" height="362"></a>
-						<a href="full/gl/x167_mb_r.jpg"><img loading="lazy" src="style/gl/x167_mb_r.webp" alt="Mercedes,x167,GLS,Maybach,Rear view" width="625" height="362"></a><br>
-						<a href="full/gl/x167_mb_d.jpg"><img loading="lazy" src="style/gl/x167_mb_d.webp" alt="Mercedes,x167,GLS,Maybach,Dashboard" width="688" height="387"></a>
-						<a href="full/gl/x167_mb_i.jpg"><img loading="lazy" src="style/gl/x167_mb_i.webp" alt="Mercedes,x167,GLS,Maybach,Interior" width="516" height="387"></a><br>
-						<h5 class="i">Facelift</h5>
-						<p class="i m1">09/2023</p><br>
-						<a href="full/gl/x167_mb_f2.jpg"><img loading="lazy" src="style/gl/x167_mb_f2.webp" alt="Mercedes,X167,GLS,Maybach,Front view" width="602" height="339"></a>
-						<a href="full/gl/x167_mb_r2.jpg"><img loading="lazy" src="style/gl/x167_mb_r2.webp" alt="Mercedes,X167,GLS,Maybach,Rear view" width="603" height="339"></a><br>
-						<a href="full/gl/x167_mb_d2.webp"><img loading="lazy" src="style/gl/x167_mb_d2.webp" alt="Mercedes,X167,GLS,Maybach,Dashboard" width="555" height="365"></a>
-						<a href="full/gl/x167_mb_i2.webp"><img loading="lazy" src="style/gl/x167_mb_i2.webp" alt="Mercedes,X167,GLS,Maybach,Interior" width="648" height="365"></a>
-						<h5>Dimensions</h5>
-						<a href="full/gl/x167_a1.jpg"><img loading="lazy" src="style/gl/x167_a1.webp" alt="Mercedes,x167,GLS,Dimensions" width="1210" height="519"></a><br>
-						<a href="full/gl/x167_a2.jpg"><img loading="lazy" src="style/gl/x167_a2.webp" alt="Mercedes,x167,GLS,Dimensions" width="1210" height="519"></a>
-					</section>
 				</div>
+
 			</div>
 		</section>
 
@@ -478,9 +491,10 @@
 			<hr>
 			<p class="mid"><small>@ since 2010 , piyopiyo_246</small></p>
 		</footer>
+
 		<p class="m-05" id="page-top"><a href="#head">&#9650;</a></p>
 		<p id="close-accordion">
-			<a class="vmenu_all_action" onclick="doReplaceClassName ('vmenu_on2','vmenu_off')" title="Close all openings">&#9654;</a>
+			<a id="close-all-accordions-2" class="vmenu_all_action" title="Close all openings">&#9654;</a>
 		</p>
 	</div>
 
@@ -516,7 +530,7 @@
 				analytics_storage: 'denied',
 				ad_storage: 'denied',
 				functionality_storage: 'granted',
-				region: ['US', 'GB', 'CA', 'AU', 'NZ', 'IE'] 
+				region: ['US', 'GB', 'CA', 'AU', 'NZ', 'IE']
 			};
 
 			// GTM用設定
@@ -555,6 +569,120 @@
 			}, 500);
 			return false;
 		});
+	});
+</script>
+
+<script>
+	// シンプル版アコーディオン機能（入れ子非対応）
+	document.addEventListener('DOMContentLoaded', function () {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+		accordionHeaders.forEach(header => {
+			header.addEventListener('click', function () {
+				const content = this.nextElementSibling;
+				const isActive = this.classList.contains('active');
+
+				// クリックされたアコーディオンのみトグル
+				if (isActive) {
+					this.classList.remove('active');
+					this.setAttribute('aria-expanded', 'false');
+					content.classList.remove('active');
+				} else {
+					this.classList.add('active');
+					this.setAttribute('aria-expanded', 'true');
+					content.classList.add('active');
+				}
+			});
+
+			// キーボード操作のサポート
+			header.addEventListener('keydown', function (e) {
+				if (e.key === 'Enter' || e.key === ' ') {
+					e.preventDefault();
+					this.click();
+				}
+			});
+		});
+
+		// 全開/全閉ボタンのイベントリスナー
+		const openAllBtn = document.getElementById('open-all-accordions');
+		const closeAllBtn = document.getElementById('close-all-accordions');
+		const closeAllBtn2 = document.getElementById('close-all-accordions-2');
+
+		if (openAllBtn) {
+			openAllBtn.addEventListener('click', openAllAccordions);
+		}
+
+		if (closeAllBtn) {
+			closeAllBtn.addEventListener('click', closeAllAccordions);
+		}
+
+		if (closeAllBtn2) {
+			closeAllBtn2.addEventListener('click', closeAllAccordions);
+		}
+	});
+
+	// 全アコーディオン操作機能
+	function openAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.add('active');
+			header.setAttribute('aria-expanded', 'true');
+			content.classList.add('active');
+		});
+	}
+
+	function closeAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.remove('active');
+			header.setAttribute('aria-expanded', 'false');
+			content.classList.remove('active');
+		});
+	}
+
+	// 全アコーディオン操作機能
+	function openAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.add('active');
+			header.setAttribute('aria-expanded', 'true');
+			content.classList.add('active');
+		});
+	}
+
+	function closeAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.remove('active');
+			header.setAttribute('aria-expanded', 'false');
+			content.classList.remove('active');
+		});
+	}
+
+	// ボタンにイベントリスナーを追加
+	document.addEventListener('DOMContentLoaded', function () {
+		// 既存のアコーディオンコード...
+
+		// 全開/全閉ボタン
+		const openAllBtn = document.getElementById('open-all-accordions');
+		const closeAllBtn = document.getElementById('close-all-accordions');
+		const closeAllBtn2 = document.getElementById('close-all-accordions-2'); // 追加ボタン
+
+		if (openAllBtn) {
+			openAllBtn.addEventListener('click', openAllAccordions);
+		}
+
+		if (closeAllBtn) {
+			closeAllBtn.addEventListener('click', closeAllAccordions);
+		}
+
+		if (closeAllBtn2) {
+			closeAllBtn2.addEventListener('click', closeAllAccordions);
+		}
 	});
 </script>
 
