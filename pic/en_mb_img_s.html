@@ -50,24 +50,6 @@
 	<!-- 5. CSS -->
 	<link rel="stylesheet" href="../style.min.css">
 	<link rel="stylesheet" href="../style_v.min.css">
-	<link rel="stylesheet" href="../fa.all.min.css">
-
-	<!-- アコーディオン用のJavaScript関数を追加 -->
-	<script>
-		function doToggleClassName(obj, onClassName, offClassName) {
-			obj.className = (obj.className != onClassName) ? onClassName : offClassName;
-		}
-		function getParentObj(obj) {
-			return obj.parentElement || obj.parentNode;
-		}
-		function doReplaceClassName(findClassName, replaceClassName, targetTagName) {
-			var elements = document.getElementsByTagName(targetTagName || '*');
-			for (var i = 0; i < elements.length; i++) {
-				if (elements[i].className == findClassName)
-					elements[i].className = replaceClassName;
-			}
-		}
-	</script>
 
 	<!-- 6. Cookie同意管理システム -->
 	<script>
@@ -89,7 +71,7 @@
 							analytics_storage: 'granted',
 							ad_storage: 'denied',
 							functionality_storage: 'granted',
-							region: ['US', 'GB', 'CA', 'AU', 'NZ', 'IE'] ,
+							region: ['US', 'GB', 'CA', 'AU', 'NZ', 'IE'],
 							// デバッグ用パラメータ（本番では削除）
 							debug_mode: location.hostname.includes('localhost')
 						});
@@ -208,7 +190,7 @@
 					ad_storage: 'denied',
 					functionality_storage: 'granted',
 					wait_for_update: 500,
-					region: ['US', 'GB', 'CA', 'AU', 'NZ', 'IE'] 
+					region: ['US', 'GB', 'CA', 'AU', 'NZ', 'IE']
 				});
 			}
 		} catch (initError) {
@@ -272,14 +254,14 @@
 					</li>
 				</ul>
 				<h1 class="b bf4">S-class</h1>
-				 <div style="display: flex; justify-content: space-between; width: 1210px;">
+				<div style="display: flex; justify-content: space-between; width: 1210px;">
 					<dl class="m1">
 						<dt class="s2 af0">Series</dt>
 						<dd class="s2"><a href="#w187" title="Typ220 W187" class="lnk2">187</a></dd>
 						<dd class="s2"><a href="#w180" title="Ponton W180" class="lnk2">180</a></dd>
 						<dd class="s2"><a href="#w128" title="Ponton W128" class="lnk2">128</a></dd>
 						<dd class="s2"><a href="#w111" title="Heckflosse,Fintail W111/W112" class="lnk2">111/112</a></dd>
-						<dd class="s2"><a href="#w108" title="W108" class="lnk2">108</a></dd>
+						<dd class="s2"><a href="#w108" title="W108" class="lnk2">108/109</a></dd>
 						<dd class="s2"><a href="#w116" title="The 1st S-class W116" class="lnk2">116</a></dd>
 						<dd class="s2"><a href="#w126" title="The 2nd S-class W126" class="lnk2">126</a></dd>
 						<dd class="s2"><a href="#w140" title="The 3rd S-class W140" class="lnk2">140</a></dd>
@@ -289,8 +271,8 @@
 						<dd><a href="#w223" title="The 7th S-class W223" class="lnk2">223</a></dd>
 					</dl>
 					<span>
-						<button class="vmenu_all_action square_btn" type="button" title="Click here to open all openings" span onclick="doReplaceClassName('vmenu_off', 'vmenu_on2')">Open all</button>
-						<button class="vmenu_all_action square_btn" type="button" title="Click here to close all openings" span onclick="doReplaceClassName('vmenu_on2', 'vmenu_off')">Close all</button>
+						<button id="open-all-accordions" class="vmenu_all_action square_btn" type="button" title="Click here to open all openings">Open all</button>
+						<button id="close-all-accordions" class="vmenu_all_action square_btn" type="button" title="Click here to close all openings">Close all</button>
 						<button class="square_btn" type="button" onclick="location.href='ja_mb_img_s.html'">Ja</button>
 						<button class="square_btn" type="button" onclick="location.href='mb_img_s.html'">De</button>
 					</span>
@@ -362,22 +344,33 @@
 			<h2>Typ 220</h2>
 			<div class="style-w">
 				<a href="full/s/w187.jpg"><img src="style/s/w187.webp" alt="Mercedes,W187" width="1210" height="833"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<p class="bf1a i"><a href="https://en.wikipedia.org/wiki/Mercedes-Benz_W187" class="ico-wiki m1" title="Wikipedia(E) W187"></a></p>
-						<h3 class="i m0">W187</h3>
-						<p class="i m1">1951 - 1955</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-w187" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://en.wikipedia.org/wiki/Mercedes-Benz_W187" class="ico-wiki" title="Wikipedia(E) W187"></a>
+								<h3>W187</h3>
+								1951 - 1955
+							</div>
+							<div class="accordion-right">
+								Designer : Friedrich Geiger
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-w187" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">W187</h4>
+							<a href="full/s/w187_f.jpg"><img loading="lazy" src="style/s/w187_f.webp" alt="Mercedes,W187,Front view" width="1210" height="832"></a><br>
+							<a href="full/s/w187_r.jpg"><img loading="lazy" src="style/s/w187_r.webp" alt="Mercedes,W187,Rear view" width="638" height="425"></a>
+							<a href="full/s/w187_d.jpg"><img loading="lazy" src="style/s/w187_d.webp" alt="Mercedes,W187,Dashboard" width="567" height="425"></a>
+							<h5>Delivery Van</h5>
+							<a href="full/s/w187k_f.jpg"><img loading="lazy" src="style/s/w187k_f.webp" alt="Mercedes,W187,Delivery Van,Front view" width="455" height="400"></a>
+							<a href="full/s/w187k_r.jpg"><img loading="lazy" src="style/s/w187k_r.webp" alt="Mercedes,W187,Delivery Van,Rear view" width="750" height="400"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">W187</h4>
-						<a href="full/s/w187_f.jpg"><img loading="lazy" src="style/s/w187_f.webp" alt="Mercedes,W187,Front view" width="1210" height="832"></a><br>
-						<a href="full/s/w187_r.jpg"><img loading="lazy" src="style/s/w187_r.webp" alt="Mercedes,W187,Rear view" width="638" height="425"></a>
-						<a href="full/s/w187_d.jpg"><img loading="lazy" src="style/s/w187_d.webp" alt="Mercedes,W187,Dashboard" width="567" height="425"></a>
-						<h5>Delivery Van</h5>
-						<a href="full/s/w187k_f.jpg"><img loading="lazy" src="style/s/w187k_f.webp" alt="Mercedes,W187,Delivery Van,Front view" width="455" height="400"></a>
-						<a href="full/s/w187k_r.jpg"><img loading="lazy" src="style/s/w187k_r.webp" alt="Mercedes,W187,Delivery Van,Rear view" width="750" height="400"></a>
-					</section>
 				</div>
+
 			</div>
 		</section>
 
@@ -385,21 +378,31 @@
 			<h2>Ponton ( Typ220 / Typ220S )</h2>
 			<div class="style-w">
 				<a href="full/s/w180.jpg"><img loading="lazy" src="style/s/w180.webp" alt="Mercedes,W180" width="1210" height="908"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<p class="bf1a i"><a href="https://en.wikipedia.org/wiki/Mercedes-Benz_W180" class="ico-wiki m1" title="Wikipedia(E) W180"></a></p>
-						<h3 class="i m0">W180</h3>
-						<p class="i m1">1954 - 1959</p>
-						<p class="ru">Designer : Fritz Nallinger</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-w180" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://en.wikipedia.org/wiki/Mercedes-Benz_W180" class="ico-wiki" title="Wikipedia(E) W180"></a>
+								<h3>W180</h3>
+								1954 - 1959
+							</div>
+							<div class="accordion-right">
+								Designer : Friedrich Geiger
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-w180" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">W180</h4>
+							<a href="full/s/w180_f.jpg"><img loading="lazy" src="style/s/w180_f.webp" alt="Mercedes,W180,Front view" width="615" height="388"></a>
+							<a href="full/s/w180_r.jpg"><img loading="lazy" src="style/s/w180_r.webp" alt="Mercedes,W180,Rear view" width="588" height="387"></a><br>
+							<a href="full/s/w180_d.jpg"><img loading="lazy" src="style/s/w180_d.webp" alt="Mercedes,W180,Dashboard" width="1210" height="804"></a><br>
+							<a href="full/s/w180_sus.jpg"><img loading="lazy" src="style/s/w180_sus.webp" alt="Mercedes,W180,Rear suspension" width="1210" height="768"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">W180</h4>
-						<a href="full/s/w180_f.jpg"><img loading="lazy" src="style/s/w180_f.webp" alt="Mercedes,W180,Front view" width="615" height="388"></a>
-						<a href="full/s/w180_r.jpg"><img loading="lazy" src="style/s/w180_r.webp" alt="Mercedes,W180,Rear view" width="588" height="387"></a><br>
-						<a href="full/s/w180_d.jpg"><img loading="lazy" src="style/s/w180_d.webp" alt="Mercedes,W180,Dashboard" width="1210" height="804"></a><br>
-						<a href="full/s/w180_sus.jpg"><img loading="lazy" src="style/s/w180_sus.webp" alt="Mercedes,W180,Rear suspension" width="1210" height="768"></a>
-					</section>
 				</div>
+
 			</div>
 		</section>
 
@@ -408,7 +411,8 @@
 			<div class="style-w">
 				<a href="https://en.wikipedia.org/wiki/Mercedes-Benz_W128" class="ico-wiki m1" title="Wikipedia(E) W128"></a>
 				<h3 class="i m0">W128</h3>
-				<p class="i m1">1958 - 1960</p><br>
+				<p class="i m1">1958 - 1960</p>
+				<p class="ru">Designer : Friedrich Geiger</p>
 				<a href="full/s/w128_f.jpg"><img loading="lazy" src="style/s/w128_f.webp" alt="Mercedes,W128,Front view" width="604" height="429"></a>
 				<a href="full/s/w128_r.jpg"><img loading="lazy" src="style/s/w128_r.webp" alt="Mercedes,W180,Rear view" width="601" height="429"></a>
 			</div>
@@ -418,28 +422,40 @@
 			<h2>Heckflosse (Fintail)</h2>
 			<div class="style-w">
 				<a href="full/s/w111.jpg"><img loading="lazy" src="style/s/w111.webp" alt="Mercedes,W111" width="1210" height="756"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<p class="bf1a i"><a href="https://en.wikipedia.org/wiki/Mercedes-Benz_W111" class="ico-wiki m1" title="Wikipedia(E) W111"></a></p>
-						<h3 class="i m0">W111</h3>
-						<p class="i m1 s2">220, 220S, 220SE, 230S&nbsp;1959 - 1968</p>
-						<a href="https://en.wikipedia.org/wiki/Mercedes-Benz_W112" class="ico-wiki m1" title="Wikipedia(E) W112"></a>
-						<h3 class="i m0">W112</h3>
-						<p class="i m1">300SE&nbsp;1961 - 1965</p>
-						<p class="ru">Designer : Friedrich Geiger</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-w111-w112" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://en.wikipedia.org/wiki/Mercedes-Benz_W111" class="ico-wiki" title="Wikipedia(E) W111"></a>
+								<h3>W111</h3>
+								<p>220, 220S, 220SE, 230S</p>
+								1959 - 1968
+								<a href="https://en.wikipedia.org/wiki/Mercedes-Benz_W112" class="ico-wiki m4" title="Wikipedia(E) W112"></a>
+								<h3>W112</h3>
+								<p>300SE</p>
+								1961 - 1965
+							</div>
+						</div>
+						<div class="accordion-right">
+							Designer : Paul Bracq , Friedrich Geiger
+						</div>
+					</button>
+					<div id="accordion-content-w111-w112" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">W111</h4>
+							<a href="full/s/w111_f.jpg"><img loading="lazy" src="style/s/w111_f.webp" alt="Mercedes,W111l,Front view" width="697" height="372"></a>
+							<a href="full/s/w111_r.jpg"><img loading="lazy" src="style/s/w111_r.webp" alt="Mercedes,W111,Rear view" width="508" height="372"></a><br>
+							<a href="full/s/w111_d.jpg"><img loading="lazy" src="style/s/w111_d.webp" alt="Mercedes,W111,Dashboard" width="1210" height="804"></a>
+							<h5>Dimensions</h5>
+							<a href="full/s/w111_a.jpg"><img loading="lazy" src="style/s/w111_a.png" alt="Mercedes,W111,Dimensions" width="804" height="284"></a>
+							<h5>Universal</h5>
+							<a href="full/s/w111k_f.jpg"><img loading="lazy" src="style/s/w111k_f.webp" alt="Mercedes,W111l,Universal,Front view" width="625" height="437"></a>
+							<a href="full/s/w111k_r.jpg"><img loading="lazy" src="style/s/w111k_r.webp" alt="Mercedes,W111,Universal,Rear view" width="580" height="437"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">W111</h4>
-						<a href="full/s/w111_f.jpg"><img loading="lazy" src="style/s/w111_f.webp" alt="Mercedes,W111l,Front view" width="697" height="372"></a>
-						<a href="full/s/w111_r.jpg"><img loading="lazy" src="style/s/w111_r.webp" alt="Mercedes,W111,Rear view" width="508" height="372"></a><br>
-						<a href="full/s/w111_d.jpg"><img loading="lazy" src="style/s/w111_d.webp" alt="Mercedes,W111,Dashboard" width="1210" height="804"></a>
-						<h5>Dimensions</h5>
-						<a href="full/s/w111_a.jpg"><img loading="lazy" src="style/s/w111_a.png" alt="Mercedes,W111,Dimensions" width="804" height="284"></a>
-						<h5>Universal</h5>
-						<a href="full/s/w111k_f.jpg"><img loading="lazy" src="style/s/w111k_f.webp" alt="Mercedes,W111l,Universal,Front view" width="625" height="437"></a>
-						<a href="full/s/w111k_r.jpg"><img loading="lazy" src="style/s/w111k_r.webp" alt="Mercedes,W111,Universal,Rear view" width="580" height="437"></a>
-					</section>
 				</div>
+
 			</div>
 		</section>
 		<section>
@@ -454,25 +470,35 @@
 			<h2>W108 / W109</h2>
 			<div class="style-w">
 				<a href="full/s/w108_s.jpg"><img loading="lazy" src="style/s/w108_s.webp" alt="Mercedes,W108,Side view" width="1210" height="827"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<p class="bf1a i"><a href="https://en.wikipedia.org/wiki/Mercedes-Benz_W108/W109" class="ico-wiki m1" title="Wikipedia(E) W108/W109"></a></p>
-						<h3 class="i m0">W108 / W109</h3>
-						<p class="i m1">1965 - 1972</p>
-						<p class="ru">Designer : Paul Bracq , Friedrich Geiger (1963)</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-w108 / w109" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://en.wikipedia.org/wiki/Mercedes-Benz_W108/W109" class="ico-wiki" title="Wikipedia(E) W108/W109"></a>
+
+
+								<h3>W108 / W109</h3>
+								1965 - 1972
+							</div>
+							<div class="accordion-right">
+								Designer : Bruno Sacco , Paul Bracq , Friedrich Geiger
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-w108 / w109" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">w108</h4>
+							<a href="full/s/w108_f.jpg"><img loading="lazy" src="style/s/w108_f.webp" alt="Mercedes,W108,Front view" width="671" height="381"></a>
+							<a href="full/s/w108_d.jpg"><img loading="lazy" src="style/s/w108_d.webp" alt="Mercedes,W108,Dashboard" width="533" height="381"></a><br>
+							<a href="full/s/w108_r.jpg"><img loading="lazy" src="style/s/w108_r.webp" alt="Mercedes,W108,Rear view" width="1210" height="728"></a>
+							<h5>Dimensions</h5>
+							<a href="full/s/w108_a.jpg"><img loading="lazy" src="style/s/w108_a.webp" alt="Mercedes,W108,S-class,Dimensions" width="603" height="904"></a>
+							<a href="full/s/w108.jpg"><img loading="lazy" src="style/s/w108.webp" alt="Mercedes,W108,S-class" width="602" height="904"></a>
+						</div>
 					</div>
-
-
-					<section>
-						<h4 class="displayNone">w108</h4>
-						<a href="full/s/w108_f.jpg"><img loading="lazy" src="style/s/w108_f.webp" alt="Mercedes,W108,Front view" width="671" height="381"></a>
-						<a href="full/s/w108_d.jpg"><img loading="lazy" src="style/s/w108_d.webp" alt="Mercedes,W108,Dashboard" width="533" height="381"></a><br>
-						<a href="full/s/w108_r.jpg"><img loading="lazy" src="style/s/w108_r.webp" alt="Mercedes,W108,Rear view" width="1210" height="728"></a>
-						<h5>Dimensions</h5>
-						<a href="full/s/w108_a.jpg"><img loading="lazy" src="style/s/w108_a.webp" alt="Mercedes,W108,S-class,Dimensions" width="603" height="904"></a>
-						<a href="full/s/w108.jpg"><img loading="lazy" src="style/s/w108.webp" alt="Mercedes,W108,S-class" width="602" height="904"></a>
-					</section>
 				</div>
+
 			</div>
 		</section>
 
@@ -480,23 +506,35 @@
 			<h2>The 1st S-class</h2>
 			<div class="style-w">
 				<a href="full/s/w116.jpg"><img loading="lazy" src="style/s/w116.webp" alt="Mercedes,W116,S-class,primary,Front view" width="1210" height="898"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<p class="bf1a i"><a href="https://en.wikipedia.org/wiki/Mercedes-Benz_W116" class="ico-wiki m1" title="Wikipedia(E) W116"></a></p>
-						<h3 class="i m0">W116</h3>
-						<p class="i m1">09/1972 - 09/1980</p>
-						<p class="i m2">*From this model it was officially called the S-class.</p>
-						<p class="r">Designer : Friedrich Geiger (1969)</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-w116" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://en.wikipedia.org/wiki/Mercedes-Benz_W116" class="ico-wiki" title="Wikipedia(E) W116"></a>
+								<h3>W116</h3>
+								09/1972 - 09/1980
+							</div>
+							<div class="accordion-right">
+								Designer : Gérard Cardiet , Bruno Sacco , Friedrich Geiger
+							</div>
+						</div>
+						<div class="accordion-multi-line">
+							From this model it was officially called the S-class.
+						</div>
+					</button>
+					<div id="accordion-content-w116" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">w116</h4>
+							<a href="full/s/w116_r.jpg"><img loading="lazy" src="style/s/w116_r.webp" alt="Mercedes,W116,S-class,primary,Rear view" width="602" height="452"></a>
+							<a href="full/s/w116_d.jpg"><img loading="lazy" src="style/s/w116_d.webp" alt="Mercedes,W116,S-class,primary,Dashboard" width="603" height="452"></a><br>
+							<a href="full/s/w116_tp.jpg"><img loading="lazy" src="style/s/w116_tp.webp" alt="Mercedes,W116,S-class,primary,transparent" width="760" height="253"></a>
+							<h5>Dimensions</h5>
+							<a href="full/s/w116_a.jpg"><img loading="lazy" src="style/s/w116_a.webp" alt="Mercedes,W116,S-class,primary,Dimensions" width="860" height="1080"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">w116</h4>
-						<a href="full/s/w116_r.jpg"><img loading="lazy" src="style/s/w116_r.webp" alt="Mercedes,W116,S-class,primary,Rear view" width="602" height="452"></a>
-						<a href="full/s/w116_d.jpg"><img loading="lazy" src="style/s/w116_d.webp" alt="Mercedes,W116,S-class,primary,Dashboard" width="603" height="452"></a><br>
-						<a href="full/s/w116_tp.jpg"><img loading="lazy" src="style/s/w116_tp.webp" alt="Mercedes,W116,S-class,primary,transparent" width="760" height="253"></a>
-						<h5>Dimensions</h5>
-						<a href="full/s/w116_a.jpg"><img loading="lazy" src="style/s/w116_a.webp" alt="Mercedes,W116,S-class,primary,Dimensions" width="860" height="1080"></a>
-					</section>
 				</div>
+
 			</div>
 		</section>
 
@@ -504,34 +542,44 @@
 			<h2>The 2nd S-class</h2>
 			<div class="style-w">
 				<a href="full/s/w126_f.jpg"><img loading="lazy" src="style/s/w126_f.webp" alt="Mercedes,W126,S-class,2nd,Front view" width="1210" height="906"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<p class="bf1a i"><a href="https://en.wikipedia.org/wiki/Mercedes-Benz_W126" class="ico-wiki m1" title="Wikipedia(E) 126"></a></p>
-						<h3 class="i m0">W126</h3>
-						<p class="i m1">09/1979 - 10/1991</p>
-						<p class="ru">Designer : Bruno Sacco (1975, 1976)</p>
-					</div>
-					<section>
-						<h4 class="displayNone">w116</h4>
-						<a href="full/s/w126_tp.jpg"><img loading="lazy" src="style/s/w126_tp.webp" alt="Mercedes,W116,S-class,primary,tp" width="1210" height="908"></a><br>
-						<div>
-							<div class="box60a"><br>
-								<a href="full/s/w126_r.jpg"><img loading="lazy" src="style/s/w126_r.webp" alt="Mercedes,W126,S-class,2nd,Rear view" width="604" height="374"></a><br>
-								<a href="full/s/w126_d.jpg"><img loading="lazy" src="style/s/w126_d.webp" alt="Mercedes,W126,S-class,2nd,Dashboard" width="604" height="374"></a><br>
-								<a href="full/s/w126_i.jpg"><img loading="lazy" src="style/s/w126_i.webp" alt="Mercedes,W126,S-class,2nd,Interior" width="604" height="392"></a>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-w126" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://en.wikipedia.org/wiki/Mercedes-Benz_W126" class="ico-wiki" title="Wikipedia(E) 126"></a>
+								<h3>W126</h3>
+								09/1979 - 10/1991
 							</div>
-							<div class="box60a">
-								<h5 class="i">Facelift</h5>
-								<p class="i m1">1985</p><br>
-								<a href="full/s/w126_f2.jpg"><img loading="lazy" src="style/s/w126_f2.webp" alt="Mercedes,W126,S-class,2nd,Front view" width="604" height="374"></a><br>
-								<a href="full/s/w126_r2.jpg"><img loading="lazy" src="style/s/w126_r2.webp" alt="Mercedes,W126,S-class,2nd,Rear view" width="604" height="374"></a><br>
-								<a href="full/s/w126_d2.jpg"><img loading="lazy" src="style/s/w126_d2.webp" alt="Mercedes,W126,S-class,2nd,Dashboard" width="604" height="392"></a>
+							<div class="accordion-right">
+								Designer : Manfred Seeger (Exterior) , Herbert Linge (Interior) , Bruno Sacco
 							</div>
 						</div>
-						<h5>Dimensions</h5>
-						<a href="full/s/w126_a.jpg"><img loading="lazy" src="style/s/w126_a.webp" alt="Mercedes,W126,S-class,2nd,Dimensions" width="804" height="422"></a>
-					</section>
+					</button>
+					<div id="accordion-content-w126" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">w116</h4>
+							<a href="full/s/w126_tp.jpg"><img loading="lazy" src="style/s/w126_tp.webp" alt="Mercedes,W116,S-class,primary,tp" width="1210" height="908"></a><br>
+							<div>
+								<div class="box60a"><br>
+									<a href="full/s/w126_r.jpg"><img loading="lazy" src="style/s/w126_r.webp" alt="Mercedes,W126,S-class,2nd,Rear view" width="604" height="374"></a><br>
+									<a href="full/s/w126_d.jpg"><img loading="lazy" src="style/s/w126_d.webp" alt="Mercedes,W126,S-class,2nd,Dashboard" width="604" height="374"></a><br>
+									<a href="full/s/w126_i.jpg"><img loading="lazy" src="style/s/w126_i.webp" alt="Mercedes,W126,S-class,2nd,Interior" width="604" height="392"></a>
+								</div>
+								<div class="box60a">
+									<h5 class="i">Facelift</h5>
+									<p class="i m1">1985</p><br>
+									<a href="full/s/w126_f2.jpg"><img loading="lazy" src="style/s/w126_f2.webp" alt="Mercedes,W126,S-class,2nd,Front view" width="604" height="374"></a><br>
+									<a href="full/s/w126_r2.jpg"><img loading="lazy" src="style/s/w126_r2.webp" alt="Mercedes,W126,S-class,2nd,Rear view" width="604" height="374"></a><br>
+									<a href="full/s/w126_d2.jpg"><img loading="lazy" src="style/s/w126_d2.webp" alt="Mercedes,W126,S-class,2nd,Dashboard" width="604" height="392"></a>
+								</div>
+							</div>
+							<h5>Dimensions</h5>
+							<a href="full/s/w126_a.jpg"><img loading="lazy" src="style/s/w126_a.webp" alt="Mercedes,W126,S-class,2nd,Dimensions" width="804" height="422"></a>
+						</div>
+					</div>
 				</div>
+
 			</div>
 		</section>
 
@@ -539,29 +587,39 @@
 			<h2>The 3rd S-class</h2>
 			<div class="style-w">
 				<a href="full/s/w140_f.jpg"><img loading="lazy" src="style/s/w140_f.webp" alt="Mercedes,W140,S-class,3rd,Front view" width="1210" height="756"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<p class="bf1a i"><a href="https://en.wikipedia.org/wiki/Mercedes-Benz_W140" class="ico-wiki m1" title="Wikipedia(E) 140"></a></p>
-						<h3 class="i m0">W140</h3>
-						<p class="i m1">07/1991 - 09/1998</p>
-						<p class="ru">Designer : Olivier Boulay; Bruno Sacco (1986, 1987)</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-w140" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://en.wikipedia.org/wiki/Mercedes-Benz_W140" class="ico-wiki" title="Wikipedia(E) 140"></a>
+								<h3>W140</h3>
+								07/1991 - 09/1998
+							</div>
+							<div class="accordion-right">
+								Designer : Olivier Boulay , Peter Pfeiffer , Bruno Sacco
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-w140" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">w140</h4>
+							<a href="full/s/w140_r.jpg"><img loading="lazy" src="style/s/w140_r.webp" alt="Mercedes,W140,S-class,3rd,Rear view" width="667" height="417"></a>
+							<a href="full/s/w140_d.jpg"><img loading="lazy" src="style/s/w140_d.webp" alt="Mercedes,W140,S-class,3rd,Dashboard" width="536" height="417"></a><br>
+							<h5 class="i">Facelift</h5>
+							<p class="i m1">1994</p><br>
+							<a href="full/s/w140_f2.jpg"><img loading="lazy" src="style/s/w140_f2.webp" alt="Mercedes,W140,S-class,3rd,Front view" width="1210" height="466"></a><br>
+							<a href="full/s/w140_r2.jpg"><img loading="lazy" src="style/s/w140_r2.webp" alt="Mercedes,W140,S-class,3rd,Rear view" width="670" height="419"></a>
+							<a href="full/s/w140_i.jpg"><img loading="lazy" src="style/s/w140_i.webp" alt="Mercedes,W140,S-class,3rd,Interior" width="534" height="419"></a>
+							<h5>Dimensions</h5>
+							<a href="full/s/w140_a.gif"><img loading="lazy" src="style/s/w140_a.gif" alt="Mercedes,W140,S-class,3rd,Dimensions" width="1035" height="500"></a>
+							<h5>Pullman - Limousine</h5>
+							<a href="full/s/w140l_f.jpg"><img loading="lazy" src="style/s/w140l_f.webp" alt="Mercedes,W140, Pullman,Front view" width="1210" height="522"></a><br>
+							<a href="full/s/w140l_i.jpg"><img loading="lazy" src="style/s/w140l_i.webp" alt="Mercedes,W140, Pullman,Interior" width="671" height="419"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">w140</h4>
-						<a href="full/s/w140_r.jpg"><img loading="lazy" src="style/s/w140_r.webp" alt="Mercedes,W140,S-class,3rd,Rear view" width="667" height="417"></a>
-						<a href="full/s/w140_d.jpg"><img loading="lazy" src="style/s/w140_d.webp" alt="Mercedes,W140,S-class,3rd,Dashboard" width="536" height="417"></a><br>
-						<h5 class="i">Facelift</h5>
-						<p class="i m1">1994</p><br>
-						<a href="full/s/w140_f2.jpg"><img loading="lazy" src="style/s/w140_f2.webp" alt="Mercedes,W140,S-class,3rd,Front view" width="1210" height="466"></a><br>
-						<a href="full/s/w140_r2.jpg"><img loading="lazy" src="style/s/w140_r2.webp" alt="Mercedes,W140,S-class,3rd,Rear view" width="670" height="419"></a>
-						<a href="full/s/w140_i.jpg"><img loading="lazy" src="style/s/w140_i.webp" alt="Mercedes,W140,S-class,3rd,Interior" width="534" height="419"></a>
-						<h5>Dimensions</h5>
-						<a href="full/s/w140_a.gif"><img loading="lazy" src="style/s/w140_a.gif" alt="Mercedes,W140,S-class,3rd,Dimensions" width="1035" height="500"></a>
-						<h5>Pullman - Limousine</h5>
-						<a href="full/s/w140l_f.jpg"><img loading="lazy" src="style/s/w140l_f.webp" alt="Mercedes,W140, Pullman,Front view" width="1210" height="522"></a><br>
-						<a href="full/s/w140l_i.jpg"><img loading="lazy" src="style/s/w140l_i.webp" alt="Mercedes,W140, Pullman,Interior" width="671" height="419"></a>
-					</section>
 				</div>
+
 			</div>
 		</section>
 
@@ -569,35 +627,45 @@
 			<h2>The 4th S-class</h2>
 			<div class="style-w">
 				<a href="full/s/w220.jpg"><img loading="lazy" src="style/s/w220.webp" alt="Mercedes,W220,S-klasse" width="1210" height="756"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<p class="bf1a i"><a href="https://en.wikipedia.org/wiki/Mercedes-Benz_S-Class_(W220)" class="ico-wiki m1" title="Wikipedia(E) 220"></a></p>
-						<h3 class="i m0">W220</h3>
-						<p class="i m1">1998 - 2005</p>
-						<p class="ru">Designer : Steve Mattin, Bruno Sacco (1994)</p>
-					</div>
-					<section>
-						<h4 class="displayNone">W220</h4>
-						<div>
-							<div class="box59a">
-								<a href="full/s/w220_f.jpg"><img loading="lazy" src="style/s/w220_f.webp" alt="Mercedes,W220,S-class,4th,Front view" width="588" height="242"></a><br>
-								<a href="full/s/w220_r.jpg"><img loading="lazy" src="style/s/w220_r.webp" alt="Mercedes,W220,S-class,4th,Rear view" width="588" height="242"></a>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-w220" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://en.wikipedia.org/wiki/Mercedes-Benz_S-Class_(W220)" class="ico-wiki" title="Wikipedia(E) 220"></a>
+								<h3>W220</h3>
+								1998 - 2005
 							</div>
-							<a href="full/s/w220_d.jpg"><img loading="lazy" src="style/s/w220_d.webp" alt="Mercedes,W220,S-class,4th,Dashboard" width="618" height="464"></a>
 						</div>
-						<h5 class="i">Facelift</h5>
-						<p class="i m1">2002</p><br>
-						<a href="full/s/w220_f2.jpg"><img loading="lazy" src="style/s/w220_f2.webp" alt="Mercedes,W220,S-class,4th,Front view" width="1210" height="700"></a><br>
-						<a href="full/s/w220_r2.jpg"><img loading="lazy" src="style/s/w220_r2.webp" alt="Mercedes,W220,S-class,4th,Rear view" width="619" height="413"></a>
-						<a href="full/s/w220_d2.jpg"><img loading="lazy" src="style/s/w220_d2.webp" alt="Mercedes,W220,S-class,4th,Dashboard" width="584" height="413"></a>
-						<h5>Dimensions</h5>
-						<a href="full/s/w220_a.jpg"><img loading="lazy" src="style/s/w220_a.webp" alt="Mercedes,W220,S-class,4th,Dimensions" width="804" height="1144"></a>
-						<h5>Pullman - Limousine</h5>
-						<a href="full/s/w220l_f.jpg"><img loading="lazy" src="style/s/w220l_f.webp" alt="Mercedes,W220,Front view" width="676" height="297"></a>
-						<a href="full/s/w220l_i.jpg"><img loading="lazy" src="style/s/w220l_i.webp" alt="Mercedes,W220,Interior" width="528" height="297"></a><br>
-						<a href="full/s/w220l_r.jpg"><img loading="lazy" src="style/s/w220l_r.webp" alt="Mercedes,W220," width="1210" height="493"></a>
-					</section>
+						<div class="accordion-right">
+							Designer : Dieter Futschik (Exterior) , Christoph Holzwarth (Interior) , Peter Pfeiffer , Bruno Sacco
+						</div>
+					</button>
+					<div id="accordion-content-w220" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">W220</h4>
+							<div>
+								<div class="box59a">
+									<a href="full/s/w220_f.jpg"><img loading="lazy" src="style/s/w220_f.webp" alt="Mercedes,W220,S-class,4th,Front view" width="588" height="242"></a><br>
+									<a href="full/s/w220_r.jpg"><img loading="lazy" src="style/s/w220_r.webp" alt="Mercedes,W220,S-class,4th,Rear view" width="588" height="242"></a>
+								</div>
+								<a href="full/s/w220_d.jpg"><img loading="lazy" src="style/s/w220_d.webp" alt="Mercedes,W220,S-class,4th,Dashboard" width="618" height="464"></a>
+							</div>
+							<h5 class="i">Facelift</h5>
+							<p class="i m1">2002</p><br>
+							<a href="full/s/w220_f2.jpg"><img loading="lazy" src="style/s/w220_f2.webp" alt="Mercedes,W220,S-class,4th,Front view" width="1210" height="700"></a><br>
+							<a href="full/s/w220_r2.jpg"><img loading="lazy" src="style/s/w220_r2.webp" alt="Mercedes,W220,S-class,4th,Rear view" width="619" height="413"></a>
+							<a href="full/s/w220_d2.jpg"><img loading="lazy" src="style/s/w220_d2.webp" alt="Mercedes,W220,S-class,4th,Dashboard" width="584" height="413"></a>
+							<h5>Dimensions</h5>
+							<a href="full/s/w220_a.jpg"><img loading="lazy" src="style/s/w220_a.webp" alt="Mercedes,W220,S-class,4th,Dimensions" width="804" height="1144"></a>
+							<h5>Pullman - Limousine</h5>
+							<a href="full/s/w220l_f.jpg"><img loading="lazy" src="style/s/w220l_f.webp" alt="Mercedes,W220,Front view" width="676" height="297"></a>
+							<a href="full/s/w220l_i.jpg"><img loading="lazy" src="style/s/w220l_i.webp" alt="Mercedes,W220,Interior" width="528" height="297"></a><br>
+							<a href="full/s/w220l_r.jpg"><img loading="lazy" src="style/s/w220l_r.webp" alt="Mercedes,W220," width="1210" height="493"></a>
+						</div>
+					</div>
 				</div>
+
 			</div>
 		</section>
 
@@ -605,42 +673,52 @@
 			<h2>The 5th S-class</h2>
 			<div class="style-w">
 				<a href="full/s/w221_f.jpg"><img loading="lazy" src="style/s/w221_f.webp" alt="Mercedes,W221,S-class,5th,Front view" width="1210" height="786"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<p class="bf1a i"><a href="https://en.wikipedia.org/wiki/Mercedes-Benz_S-Class_(W221)" class="ico-wiki m1" title="Wikipedia(E) 221"></a></p>
-						<h3 class="i m0">W221</h3>
-						<p class="i m1">09/2005 - 06/2013</p>
-						<p class="ru">Designer : Gorden Wagener (2001)</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-w221" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://en.wikipedia.org/wiki/Mercedes-Benz_S-Class_(W221)" class="ico-wiki" title="Wikipedia(E) 221"></a>
+								<h3>W221</h3>
+								09/2005 - 06/2013
+							</div>
+						</div>
+						<div class="accordion-right">
+							Designer : Michael Friess , Mark Fetherston , Holger Huttler , Gorden Wagener , Peter Pfeiffer
+						</div>
+					</button>
+					<div id="accordion-content-w221" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">W221</h4>
+							<a href="full/s/w221_tp.jpg"><img loading="lazy" src="style/s/w221_tp.webp" alt="Mercedes,W221,S-class,Perspective view" width="1210" height="764"></a><br>
+							<a href="full/s/w221_r.jpg"><img loading="lazy" src="style/s/w221_r.webp" alt="Mercedes,W221,S-class,5th,Rear view" width="662" height="407"></a>
+							<a href="full/s/w221_d.jpg"><img loading="lazy" src="style/s/w221_d.webp" alt="Mercedes,W221,S-class,5th,Dashboard" width="543" height="407"></a><br>
+							<h5 class="i">Facelift</h5>
+							<p class="i m1">2009</p><br>
+							<a href="full/s/w221_f2.jpg"><img loading="lazy" src="style/s/w221_f2.webp" alt="Mercedes,W221,S-class,5th,Front view" width="626" height="391"></a>
+							<a href="full/s/w221_r2.jpg"><img loading="lazy" src="style/s/w221_r2.webp" alt="Mercedes,W221,S-class,5th,Rear view" width="579" height="391"></a>
+							<div>
+								<div class="box41"><br>
+									<a href="full/s/w221_d2.jpg"><img loading="lazy" src="style/s/w221_d2.webp" alt="Mercedes,W221,S-class,5th,Dashboard" width="404" height="303"></a><br>
+									<a href="full/s/w221_i2.jpg"><img loading="lazy" src="style/s/w221_i2.webp" alt="Mercedes,W221,S-class,5th,Interior" width="404" height="410"></a>
+								</div>
+								<div class="box80">
+									<h5 class="lh3">Dimensions</h5>
+									<a href="full/s/w221_a2.jpg"><img loading="lazy" src="style/s/w221_a2.webp" alt="Mercedes,W221,S-class,5th,Dimensions" width="801" height="931"></a>
+								</div>
+							</div>
+							<h5>S600 Pullman Guard 2008</h5>
+							<div>
+								<div class="box51">
+									<a href="full/s/w221l_f.jpg"><img loading="lazy" src="style/s/w221l_f.webp" alt="Mercedes,W221, front" width="506" height="216"></a><br>
+									<a href="full/s/w221l_r.jpg"><img loading="lazy" src="style/s/w221l_r.webp" alt="Mercedes,W221, rear" width="506" height="216"></a>
+								</div>
+								<a href="full/s/w221l_i.jpg"><img loading="lazy" src="style/s/w221l_i.webp" alt="Mercedes,W221,Interior" width="700" height="437"></a>
+							</div>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">W221</h4>
-						<a href="full/s/w221_tp.jpg"><img loading="lazy" src="style/s/w221_tp.webp" alt="Mercedes,W221,S-class,Perspective view" width="1210" height="764"></a><br>
-						<a href="full/s/w221_r.jpg"><img loading="lazy" src="style/s/w221_r.webp" alt="Mercedes,W221,S-class,5th,Rear view" width="662" height="407"></a>
-						<a href="full/s/w221_d.jpg"><img loading="lazy" src="style/s/w221_d.webp" alt="Mercedes,W221,S-class,5th,Dashboard" width="543" height="407"></a><br>
-						<h5 class="i">Facelift</h5>
-						<p class="i m1">2009</p><br>
-						<a href="full/s/w221_f2.jpg"><img loading="lazy" src="style/s/w221_f2.webp" alt="Mercedes,W221,S-class,5th,Front view" width="626" height="391"></a>
-						<a href="full/s/w221_r2.jpg"><img loading="lazy" src="style/s/w221_r2.webp" alt="Mercedes,W221,S-class,5th,Rear view" width="579" height="391"></a>
-						<div>
-							<div class="box41"><br>
-								<a href="full/s/w221_d2.jpg"><img loading="lazy" src="style/s/w221_d2.webp" alt="Mercedes,W221,S-class,5th,Dashboard" width="404" height="303"></a><br>
-								<a href="full/s/w221_i2.jpg"><img loading="lazy" src="style/s/w221_i2.webp" alt="Mercedes,W221,S-class,5th,Interior" width="404" height="410"></a>
-							</div>
-							<div class="box80">
-								<h5 class="lh3">Dimensions</h5>
-								<a href="full/s/w221_a2.jpg"><img loading="lazy" src="style/s/w221_a2.webp" alt="Mercedes,W221,S-class,5th,Dimensions" width="801" height="931"></a>
-							</div>
-						</div>
-						<h5>S600 Pullman Guard 2008</h5>
-						<div>
-							<div class="box51">
-								<a href="full/s/w221l_f.jpg"><img loading="lazy" src="style/s/w221l_f.webp" alt="Mercedes,W221, front" width="506" height="216"></a><br>
-								<a href="full/s/w221l_r.jpg"><img loading="lazy" src="style/s/w221l_r.webp" alt="Mercedes,W221, rear" width="506" height="216"></a>
-							</div>
-							<a href="full/s/w221l_i.jpg"><img loading="lazy" src="style/s/w221l_i.webp" alt="Mercedes,W221,Interior" width="700" height="437"></a>
-						</div>
-					</section>
 				</div>
+
 			</div>
 		</section>
 
@@ -648,37 +726,47 @@
 			<h2>The 6th S-class</h2>
 			<div class="style-w">
 				<a href="full/s/w222.jpg"><img loading="lazy" src="style/s/w222.webp" alt="Mercedes,W222,S-klasse" width="1210" height="804"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<p class="bf1a i"><a href="https://en.wikipedia.org/wiki/Mercedes-Benz_S-Class_(W222)" class="ico-wiki m1" title="Wikipedia(E) 222"></a></p>
-						<h3 class="i m0">W222</h3>
-						<p class="i m1">06/2013 - 2020</p>
-						<p class="ru">Designer : Il-hun Yoon , Robert Le&scaron;nik , Gorden Wagener (2009)</p>
-					</div>
-					<section>
-						<h4 class="displayNone">W222</h4>
-						<a href="full/s/w222_tp.jpg"><img loading="lazy" src="style/s/w222_tp.webp" alt="Mercedes,W222,S-class,Perspective view" width="1210" height="734"></a><br>
-						<a href="full/s/w222_f.jpg"><img loading="lazy" src="style/s/w222_f.webp" alt="Mercedes,W222,S-class,6th,Front view" width="581" height="363"></a>
-						<a href="full/s/w222_r.jpg"><img loading="lazy" src="style/s/w222_r.webp" alt="Mercedes,W222,S-class,6th,Rear view" width="624" height="363"></a><br>
-						<a href="full/s/w222_d.jpg"><img loading="lazy" src="style/s/w222_d.webp" alt="Mercedes,W222,S-class,6th,Dashboard" width="654" height="368"></a>
-						<a href="full/s/w222_i.jpg"><img loading="lazy" src="style/s/w222_i.webp" alt="Mercedes,W222,S-class,6th,Interior" width="551" height="368"></a>
-						<h5>Dimensions&nbsp;Above V222 / Below W222</h5>
-						<div>
-							<div class="box80a">
-								<a href="full/s/w222_a1.jpg"><img loading="lazy" src="style/s/w222_a1.webp" alt="Mercedes,W222,S-class,6th,Dimensions" width="800" height="372"></a><br>
-								<a href="full/s/w222_a2.jpg"><img loading="lazy" src="style/s/w222_a2.webp" alt="Mercedes,W222,S-class,6th,Dimensions" width="800" height="282"></a><br>
-								<a href="full/s/w222_a3.jpg"><img loading="lazy" src="style/s/w222_a3.webp" alt="Mercedes,W222,S-class,6th,Dimensions" width="800" height="310"></a>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-w222" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://en.wikipedia.org/wiki/Mercedes-Benz_S-Class_(W222)" class="ico-wiki" title="Wikipedia(E) 222"></a>
+								<h3>W222</h3>
+								06/2013 - 2020
 							</div>
-							<a href="full/s/w222_st.jpg"><img loading="lazy" src="style/s/w222_st.webp" alt="Mercedes,W222,S-class,6th,seat" width="404" height="606"></a>
 						</div>
-						<h5 class="i">Facelift</h5>
-						<p class="i m1">04/2017 Straight 6 is back.</p><br>
-						<a href="full/s/w222_s2.jpg"><img loading="lazy" src="style/s/w222_s2.webp" alt="Mercedes,W222,S-class,6th,Side view" width="1210" height="648"></a><br>
-						<a href="full/s/w222_f2.jpg"><img loading="lazy" src="style/s/w222_f2.webp" alt="Mercedes,W222,S-class,6th,Front view" width="626" height="498"></a>
-						<a href="full/s/w222_r2.jpg"><img loading="lazy" src="style/s/w222_r2.webp" alt="Mercedes,W222,S-class,6th,Rear view" width="580" height="498"></a><br>
-						<a href="full/s/w222_d2.jpg"><img loading="lazy" src="style/s/w222_d2.webp" alt="Mercedes,W222,S-class,6th,Dashboard" width="1210" height="626"></a>
-					</section>
+						<div class="accordion-right">
+							Designer : Filip Nagi (Exterior) , Hans Peter Wunderlich (Interior) , Robert Lešnik , Gorden Wagener
+						</div>
+					</button>
+					<div id="accordion-content-w222" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">W222</h4>
+							<a href="full/s/w222_tp.jpg"><img loading="lazy" src="style/s/w222_tp.webp" alt="Mercedes,W222,S-class,Perspective view" width="1210" height="734"></a><br>
+							<a href="full/s/w222_f.jpg"><img loading="lazy" src="style/s/w222_f.webp" alt="Mercedes,W222,S-class,6th,Front view" width="581" height="363"></a>
+							<a href="full/s/w222_r.jpg"><img loading="lazy" src="style/s/w222_r.webp" alt="Mercedes,W222,S-class,6th,Rear view" width="624" height="363"></a><br>
+							<a href="full/s/w222_d.jpg"><img loading="lazy" src="style/s/w222_d.webp" alt="Mercedes,W222,S-class,6th,Dashboard" width="654" height="368"></a>
+							<a href="full/s/w222_i.jpg"><img loading="lazy" src="style/s/w222_i.webp" alt="Mercedes,W222,S-class,6th,Interior" width="551" height="368"></a>
+							<h5>Dimensions&nbsp;Above V222 / Below W222</h5>
+							<div>
+								<div class="box80a">
+									<a href="full/s/w222_a1.jpg"><img loading="lazy" src="style/s/w222_a1.webp" alt="Mercedes,W222,S-class,6th,Dimensions" width="800" height="372"></a><br>
+									<a href="full/s/w222_a2.jpg"><img loading="lazy" src="style/s/w222_a2.webp" alt="Mercedes,W222,S-class,6th,Dimensions" width="800" height="282"></a><br>
+									<a href="full/s/w222_a3.jpg"><img loading="lazy" src="style/s/w222_a3.webp" alt="Mercedes,W222,S-class,6th,Dimensions" width="800" height="310"></a>
+								</div>
+								<a href="full/s/w222_st.jpg"><img loading="lazy" src="style/s/w222_st.webp" alt="Mercedes,W222,S-class,6th,seat" width="404" height="606"></a>
+							</div>
+							<h5 class="i">Facelift</h5>
+							<p class="i m1">04/2017 Straight 6 is back.</p><br>
+							<a href="full/s/w222_s2.jpg"><img loading="lazy" src="style/s/w222_s2.webp" alt="Mercedes,W222,S-class,6th,Side view" width="1210" height="648"></a><br>
+							<a href="full/s/w222_f2.jpg"><img loading="lazy" src="style/s/w222_f2.webp" alt="Mercedes,W222,S-class,6th,Front view" width="626" height="498"></a>
+							<a href="full/s/w222_r2.jpg"><img loading="lazy" src="style/s/w222_r2.webp" alt="Mercedes,W222,S-class,6th,Rear view" width="580" height="498"></a><br>
+							<a href="full/s/w222_d2.jpg"><img loading="lazy" src="style/s/w222_d2.webp" alt="Mercedes,W222,S-class,6th,Dashboard" width="1210" height="626"></a>
+						</div>
+					</div>
 				</div>
+
 			</div>
 		</section>
 
@@ -686,39 +774,56 @@
 			<h2>The 7th S-class</h2>
 			<div class="style-w">
 				<a href="full/s/w223.jpg"><img loading="lazy" src="style/s/w223.webp" alt="Mercedes,w223,S-class" width="1210" height="681"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<p class="bf1a i"><a href="https://en.wikipedia.org/wiki/Mercedes-Benz_S-Class_(W223)" class="ico-wiki m1" title="Wikipedia(E) 223"></a></p>
-						<h3 class="i m0">W223</h3>
-						<p class="i m1">09/2020 -</p>
-						<p class="ru">Designer : Balázs Filczer</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-w223" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://en.wikipedia.org/wiki/Mercedes-Benz_S-Class_(W223)" class="ico-wiki" title="Wikipedia(E) 223"></a>
+								<h3>W223</h3>
+								09/2020 -
+							</div>
+							<div class="accordion-right">
+								Designer : Balázs Filczer , Robert Lešnik (Exterior) , Gorden Wagener
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-w223" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">W223</h4>
+							<a href="full/s/w223_f.jpg"><img loading="lazy" src="style/s/w223_f.webp" alt="Mercedes,w223,S-class,7th,Front view" width="602" height="338"></a>
+							<a href="full/s/w223_r.jpg"><img loading="lazy" src="style/s/w223_r.webp" alt="Mercedes,w223,S-class,7th,Rear view" width="602" height="338"></a><br>
+							<a href="full/s/w223_d.jpg"><img loading="lazy" src="style/s/w223_d.webp" alt="Mercedes,w223,S-class,7th,Dashboard" width="602" height="338"></a>
+							<a href="full/s/w223_i.jpg"><img loading="lazy" src="style/s/w223_i.webp" alt="Mercedes,w223,S-class,7th,Interior" width="602" height="338"></a>
+							<h5>Dimensions</h5>
+							<a href="full/s/w223_a1.jpg"><img loading="lazy" src="style/s/w223_a1.webp" alt="Mercedes,W223,S-class,7th,dimension" width="1210" height="485"></a><br>
+							<a href="full/s/w223_a2.png"><img loading="lazy" src="style/s/w223_a2.webp" alt="Mercedes,W223,S-class,7th,dimension" width="566" height="463"></a>
+							<a href="full/s/w223_a3.png"><img loading="lazy" src="style/s/w223_a3.webp" alt="Mercedes,W223,S-class,7th,dimension" width="494" height="463"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">W223</h4>
-						<a href="full/s/w223_f.jpg"><img loading="lazy" src="style/s/w223_f.webp" alt="Mercedes,w223,S-class,7th,Front view" width="602" height="338"></a>
-						<a href="full/s/w223_r.jpg"><img loading="lazy" src="style/s/w223_r.webp" alt="Mercedes,w223,S-class,7th,Rear view" width="602" height="338"></a><br>
-						<a href="full/s/w223_d.jpg"><img loading="lazy" src="style/s/w223_d.webp" alt="Mercedes,w223,S-class,7th,Dashboard" width="602" height="338"></a>
-						<a href="full/s/w223_i.jpg"><img loading="lazy" src="style/s/w223_i.webp" alt="Mercedes,w223,S-class,7th,Interior" width="602" height="338"></a>
-						<h5>Dimensions</h5>
-						<a href="full/s/w223_a1.jpg"><img loading="lazy" src="style/s/w223_a1.webp" alt="Mercedes,W223,S-class,7th,dimension" width="1210" height="485"></a><br>
-						<a href="full/s/w223_a2.png"><img loading="lazy" src="style/s/w223_a2.webp" alt="Mercedes,W223,S-class,7th,dimension" width="566" height="463"></a>
-						<a href="full/s/w223_a3.png"><img loading="lazy" src="style/s/w223_a3.webp" alt="Mercedes,W223,S-class,7th,dimension" width="494" height="463"></a>
-					</section>
 				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="Click to open the accordion panel">
-						<h3 class="bf1b i">AMG</h3>
-						<p class="i m1">S63 E Performance</p>
-						<p class="i m1">since 12/2022</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-amg-s63" title="Click to open the accordion panel">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h4>AMG S 63</h4>
+								<p>E Performance</p>
+								12/2022 -
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-amg-s63" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<a href="full/s/w223_r_s63.jpg"><img loading="lazy" src="style/s/w223_r_s63.webp" alt="Mercedes,AMG,w223,S-class,7th,Rear view" width="1210" height="796"></a><br>
+							<a href="full/s/w223_f_s63.jpg"><img loading="lazy" src="style/s/w223_f_s63.webp" alt="Mercedes,AMG,w223,S-class,7th,Front view" width="595" height="406"></a>
+							<a href="full/s/w223_m_s63.jpg"><img loading="lazy" src="style/s/w223_m_s63.webp" alt="Mercedes,AMG,w223,S-class,7th,Engine" width="610" height="406"></a><br>
+							<a href="full/s/w223_d_s63.jpg"><img loading="lazy" src="style/s/w223_d_s63.webp" alt="Mercedes,AMG,w223,S-class,7th,Dashboard" width="602" height="401"></a>
+							<a href="full/s/w223_i_s63.jpg"><img loading="lazy" src="style/s/w223_i_s63.webp" alt="Mercedes,AMG,w223,S-class,7th,Interior" width="602" height="401"></a>
+						</div>
 					</div>
-					<section>
-						<a href="full/s/w223_r_s63.jpg"><img loading="lazy" src="style/s/w223_r_s63.webp" alt="Mercedes,AMG,w223,S-class,7th,Rear view" width="1210" height="796"></a><br>
-						<a href="full/s/w223_f_s63.jpg"><img loading="lazy" src="style/s/w223_f_s63.webp" alt="Mercedes,AMG,w223,S-class,7th,Front view" width="595" height="406"></a>
-						<a href="full/s/w223_m_s63.jpg"><img loading="lazy" src="style/s/w223_m_s63.webp" alt="Mercedes,AMG,w223,S-class,7th,Engine" width="610" height="406"></a><br>
-						<a href="full/s/w223_d_s63.jpg"><img loading="lazy" src="style/s/w223_d_s63.webp" alt="Mercedes,AMG,w223,S-class,7th,Dashboard" width="602" height="401"></a>
-						<a href="full/s/w223_i_s63.jpg"><img loading="lazy" src="style/s/w223_i_s63.webp" alt="Mercedes,AMG,w223,S-class,7th,Interior" width="602" height="401"></a>
-					</section>
 				</div>
+
 			</div>
 		</section>
 		<h2>
@@ -740,7 +845,7 @@
 				<dd class="s2"><a href="#w180" title="Ponton W180" class="lnk2">180</a></dd>
 				<dd class="s2"><a href="#w128" title="Ponton W128" class="lnk2">128</a></dd>
 				<dd class="s2"><a href="#w111" title="Heckflosse,Fintail W111/W112" class="lnk2">111/112</a></dd>
-				<dd class="s2"><a href="#w108" title="W108" class="lnk2">108</a></dd>
+				<dd class="s2"><a href="#w108" title="W108" class="lnk2">108/109</a></dd>
 				<dd class="s2"><a href="#w116" title="The 1st S-class W116" class="lnk2">116</a></dd>
 				<dd class="s2"><a href="#w126" title="The 2nd S-class W126" class="lnk2">126</a></dd>
 				<dd class="s2"><a href="#w140" title="The 3rd S-class W140" class="lnk2">140</a></dd>
@@ -784,9 +889,10 @@
 			<hr>
 			<p class="mid"><small>@ since 2010 , piyopiyo_246</small></p>
 		</footer>
+
 		<p class="m-05" id="page-top"><a href="#head">&#9650;</a></p>
 		<p id="close-accordion">
-			<a class="vmenu_all_action" onclick="doReplaceClassName ('vmenu_on2','vmenu_off')" title="Close all openings">&#9654;</a>
+			<a id="close-all-accordions-2" class="vmenu_all_action" title="Close all openings">&#9654;</a>
 		</p>
 	</div>
 
@@ -822,7 +928,7 @@
 				analytics_storage: 'denied',
 				ad_storage: 'denied',
 				functionality_storage: 'granted',
-				region: ['US', 'GB', 'CA', 'AU', 'NZ', 'IE'] 
+				region: ['US', 'GB', 'CA', 'AU', 'NZ', 'IE']
 			};
 
 			// GTM用設定
@@ -866,6 +972,120 @@
 			}, 500);
 			return false;
 		});
+	});
+</script>
+
+<script>
+	// シンプル版アコーディオン機能（入れ子非対応）
+	document.addEventListener('DOMContentLoaded', function () {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+		accordionHeaders.forEach(header => {
+			header.addEventListener('click', function () {
+				const content = this.nextElementSibling;
+				const isActive = this.classList.contains('active');
+
+				// クリックされたアコーディオンのみトグル
+				if (isActive) {
+					this.classList.remove('active');
+					this.setAttribute('aria-expanded', 'false');
+					content.classList.remove('active');
+				} else {
+					this.classList.add('active');
+					this.setAttribute('aria-expanded', 'true');
+					content.classList.add('active');
+				}
+			});
+
+			// キーボード操作のサポート
+			header.addEventListener('keydown', function (e) {
+				if (e.key === 'Enter' || e.key === ' ') {
+					e.preventDefault();
+					this.click();
+				}
+			});
+		});
+
+		// 全開/全閉ボタンのイベントリスナー
+		const openAllBtn = document.getElementById('open-all-accordions');
+		const closeAllBtn = document.getElementById('close-all-accordions');
+		const closeAllBtn2 = document.getElementById('close-all-accordions-2');
+
+		if (openAllBtn) {
+			openAllBtn.addEventListener('click', openAllAccordions);
+		}
+
+		if (closeAllBtn) {
+			closeAllBtn.addEventListener('click', closeAllAccordions);
+		}
+
+		if (closeAllBtn2) {
+			closeAllBtn2.addEventListener('click', closeAllAccordions);
+		}
+	});
+
+	// 全アコーディオン操作機能
+	function openAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.add('active');
+			header.setAttribute('aria-expanded', 'true');
+			content.classList.add('active');
+		});
+	}
+
+	function closeAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.remove('active');
+			header.setAttribute('aria-expanded', 'false');
+			content.classList.remove('active');
+		});
+	}
+
+	// 全アコーディオン操作機能
+	function openAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.add('active');
+			header.setAttribute('aria-expanded', 'true');
+			content.classList.add('active');
+		});
+	}
+
+	function closeAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.remove('active');
+			header.setAttribute('aria-expanded', 'false');
+			content.classList.remove('active');
+		});
+	}
+
+	// ボタンにイベントリスナーを追加
+	document.addEventListener('DOMContentLoaded', function () {
+		// 既存のアコーディオンコード...
+
+		// 全開/全閉ボタン
+		const openAllBtn = document.getElementById('open-all-accordions');
+		const closeAllBtn = document.getElementById('close-all-accordions');
+		const closeAllBtn2 = document.getElementById('close-all-accordions-2'); // 追加ボタン
+
+		if (openAllBtn) {
+			openAllBtn.addEventListener('click', openAllAccordions);
+		}
+
+		if (closeAllBtn) {
+			closeAllBtn.addEventListener('click', closeAllAccordions);
+		}
+
+		if (closeAllBtn2) {
+			closeAllBtn2.addEventListener('click', closeAllAccordions);
+		}
 	});
 </script>
 
