@@ -51,23 +51,6 @@
 	<link rel="stylesheet" href="../style.min.css">
 	<link rel="stylesheet" href="../style_v.min.css">
 
-	<!-- アコーディオン用のJavaScript関数を追加 -->
-	<script>
-		function doToggleClassName(obj, onClassName, offClassName) {
-			obj.className = (obj.className != onClassName) ? onClassName : offClassName;
-		}
-		function getParentObj(obj) {
-			return obj.parentElement || obj.parentNode;
-		}
-		function doReplaceClassName(findClassName, replaceClassName, targetTagName) {
-			var elements = document.getElementsByTagName(targetTagName || '*');
-			for (var i = 0; i < elements.length; i++) {
-				if (elements[i].className == findClassName)
-					elements[i].className = replaceClassName;
-			}
-		}
-	</script>
-
 	<!-- 6. Cookie同意管理システム -->
 	<script>
 		window._cookiescript = {
@@ -270,7 +253,7 @@
 					</li>
 				</ul>
 				<h1 class="b bf4">SLK / SLCクラス</h1>
-				 <div style="display: flex; justify-content: space-between; width: 1210px;">
+				<div style="display: flex; justify-content: space-between; width: 1210px;">
 					<dl class="m1">
 						<dt class="s2 af0">Series</dt>
 						<dd class="s2"><a href="#r170" title="第１世代 SLK R170" class="lnk2">170</a></dd>
@@ -278,8 +261,8 @@
 						<dd class="s2"><a href="#r172" title="第３世代 SLK R172" class="lnk2">172</a></dd>
 					</dl>
 					<span>
-						<button class="vmenu_all_action square_btn" type="button" title="クリックで全ての開閉部を開く" span onclick="doReplaceClassName('vmenu_off', 'vmenu_on2')">全て開く</button>
-						<button class="vmenu_all_action square_btn" type="button" title="クリックで全ての開閉部を閉じる" span onclick="doReplaceClassName('vmenu_on2', 'vmenu_off')">全て閉じる</button>
+						<button id="open-all-accordions" class="vmenu_all_action square_btn" type="button" title="クリックで全ての開閉部を開く">全て開く</button>
+						<button id="close-all-accordions" class="vmenu_all_action square_btn" type="button" title="クリックで全ての開閉部を閉じる">全て閉じる</button>
 						<button class="square_btn" type="button" onclick="location.href='en_mb_img_slk.html'">En</button>
 						<button class="square_btn" type="button" onclick="location.href='mb_img_slk.html'">De</button>
 					</span>
@@ -332,28 +315,38 @@
 			<h2>第１世代 SLK</h2>
 			<div class="style-w">
 				<a href="full/slk/r170_r.jpg"><img src="style/slk/r170_r.webp" alt="メルセデス,R170,SLK,リヤ" width="1210" height="805"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<p class="bf1a i"><a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBSLK%E3%82%AF%E3%83%A9%E3%82%B9#%E5%88%9D%E4%BB%A3%EF%BC%881996%E5%B9%B4-2004%E5%B9%B4%EF%BC%89R170" class="ico-wiki m1" title="Wikipedia(J) R170"></a></p>
-						<h3 class="i m0">R170</h3>
-						<p class="i m1">ロードスター (vario roof)</p>
-						<p class="i m1">1996 - 2004</p>
-						<p class="ru">デザイナー : Michael Mauer; Murat Gunak (1993)</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-r170" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBSLK%E3%82%AF%E3%83%A9%E3%82%B9#%E5%88%9D%E4%BB%A3%EF%BC%881996%E5%B9%B4-2004%E5%B9%B4%EF%BC%89R170" class="ico-wiki" title="Wikipedia(J) R170"></a>
+								<h3>R170</h3>
+								<p>ロードスター (vario roof)</p>
+								1996 - 2004
+							</div>
+							<div class="accordion-right">
+								デザイナー : Michael Mauer , Murat Gunak , Bruno Sacco
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-r170" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">ロードスター</h4>
+							<a href="full/slk/r170_f.jpg"><img loading="lazy" src="style/slk/r170_f.webp" alt="メルセデス,R170,SLK,フロント" width="705" height="375"></a>
+							<a href="full/slk/r170_d.jpg"><img loading="lazy" src="style/slk/r170_d.webp" alt="メルセデス,R170,SLK,ダッシュボード" width="500" height="375"></a><br>
+							<a href="full/slk/r170_m.jpg"><img loading="lazy" src="style/slk/r170_m.webp" alt="メルセデス,R170,SLK,エンジン" width="1210" height="1211"></a><br>
+							<h5 class="i">フェイスリフト</h5>
+							<p class="i m1">02/2000</p><br>
+							<a href="full/slk/r170_f2.jpg"><img loading="lazy" src="style/slk/r170_f2.webp" alt="メルセデス,R170,SLK,フロント" width="686" height="306"></a>
+							<a href="full/slk/r170_r2.jpg"><img loading="lazy" src="style/slk/r170_r2.webp" alt="メルセデス,R170,SLK,リヤ" width="520" height="306"></a><br>
+							<a href="full/slk/r170_d2.jpg"><img loading="lazy" src="style/slk/r170_d2.webp" alt="Mercedes,R170,SLK,ダッシュボード" width="1210" height="801"></a>
+							<h5>ボディサイズ</h5>
+							<img loading="lazy" src="style/slk/r170_a.webp" alt="Mercedes,R170,SLK,寸法" width="1210" height="651">
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">ロードスター</h4>
-						<a href="full/slk/r170_f.jpg"><img loading="lazy" src="style/slk/r170_f.webp" alt="メルセデス,R170,SLK,フロント" width="705" height="375"></a>
-						<a href="full/slk/r170_d.jpg"><img loading="lazy" src="style/slk/r170_d.webp" alt="メルセデス,R170,SLK,ダッシュボード" width="500" height="375"></a><br>
-						<a href="full/slk/r170_m.jpg"><img loading="lazy" src="style/slk/r170_m.webp" alt="メルセデス,R170,SLK,エンジン" width="1210" height="1211"></a><br>
-						<h5 class="i">フェイスリフト</h5>
-						<p class="i m1">02/2000</p><br>
-						<a href="full/slk/r170_f2.jpg"><img loading="lazy" src="style/slk/r170_f2.webp" alt="メルセデス,R170,SLK,フロント" width="686" height="306"></a>
-						<a href="full/slk/r170_r2.jpg"><img loading="lazy" src="style/slk/r170_r2.webp" alt="メルセデス,R170,SLK,リヤ" width="520" height="306"></a><br>
-						<a href="full/slk/r170_d2.jpg"><img loading="lazy" src="style/slk/r170_d2.webp" alt="Mercedes,R170,SLK,ダッシュボード" width="1210" height="801"></a>
-						<h5>ボディサイズ</h5>
-						<img loading="lazy" src="style/slk/r170_a.webp" alt="Mercedes,R170,SLK,寸法" width="1210" height="651">
-					</section>
 				</div>
+
 			</div>
 		</section>
 
@@ -361,34 +354,44 @@
 			<h2>第２世代 SLK</h2>
 			<div class="style-w">
 				<a href="full/slk/r171.jpg"><img loading="lazy" src="style/slk/r171.webp" alt="メルセデス,R171,SLK " width="1210" height="908"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<p class="bf1a i"><a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBSLK%E3%82%AF%E3%83%A9%E3%82%B9#2%E4%BB%A3%E7%9B%AE%EF%BC%882004%E5%B9%B4-2011%E5%B9%B4%EF%BC%89R171" class="ico-wiki m1" title="Wikipedia(J) R171"></a></p>
-						<h3 class="i m0">R171</h3>
-						<p class="i m1">ロードスター (vario roof)</p>
-						<p class="i m1">03/2004 - 03/2011</p>
-						<p class="ru">デザイナー : Steve Mattin , Gorden Wagener (2000, 2001)</p>
-					</div>
-					<section>
-						<h4 class="displayNone">ロードスター</h4>
-						<a href="full/slk/r171_r.jpg"><img loading="lazy" src="style/slk/r171_r.webp" alt="メルセデス,R171,SLK,リヤ" width="687" height="379"></a>
-						<a href="full/slk/r171_d.jpg"><img loading="lazy" src="style/slk/r171_d.webp" alt="メルセデス,R171,SLK,ダッシュボード" width="517" height="379"></a><br>
-						<a href="full/slk/r171_tp.jpg"><img loading="lazy" src="style/slk/r171_tp.webp" alt="メルセデス,R171,SLK,透視図" width="1210" height="908"></a>
-						<div>
-							<div class="box51">
-								<h5 class="i">フェイスリフト</h5>
-								<p class="i m1">12/2007</p><br>
-								<a href="full/slk/r171_f2.jpg"><img loading="lazy" src="style/slk/r171_f2.webp" alt="メルセデス,R171,SLK,フロント" width="510" height="290"></a><br>
-								<a href="full/slk/r171_r2.jpg"><img loading="lazy" src="style/slk/r171_r2.webp" alt="メルセデス,R171,SLK,リヤ" width="510" height="273"></a><br>
-								<a href="full/slk/r171_d2.jpg"><img loading="lazy" src="style/slk/r171_d2.webp" alt="メルセデス,R171,SLK,ダッシュボード" width="510" height="354"></a>
-							</div>
-							<div class="box69a">
-								<h5>ボディサイズ</h5>
-								<a href="full/slk/r171_a2.jpg"><img loading="lazy" src="style/slk/r171_a2.webp" alt="メルセデス,R171,SLK,寸法" width="700" height="922"></a>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-r171" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBSLK%E3%82%AF%E3%83%A9%E3%82%B9#2%E4%BB%A3%E7%9B%AE%EF%BC%882004%E5%B9%B4-2011%E5%B9%B4%EF%BC%89R171" class="ico-wiki" title="Wikipedia(J) R171"></a>
+								<h3>R171</h3>
+								<p>ロードスター (vario roof)</p>
+								03/2004 - 03/2011
 							</div>
 						</div>
-					</section>
+						<div class="accordion-right">
+							デザイナー : Designer : George Melosch , Frank Pfisterer , Steve Mattin , Gorden Wagener , Peter Pfeiffer
+						</div>
+					</button>
+					<div id="accordion-content-r171" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">ロードスター</h4>
+							<a href="full/slk/r171_r.jpg"><img loading="lazy" src="style/slk/r171_r.webp" alt="メルセデス,R171,SLK,リヤ" width="687" height="379"></a>
+							<a href="full/slk/r171_d.jpg"><img loading="lazy" src="style/slk/r171_d.webp" alt="メルセデス,R171,SLK,ダッシュボード" width="517" height="379"></a><br>
+							<a href="full/slk/r171_tp.jpg"><img loading="lazy" src="style/slk/r171_tp.webp" alt="メルセデス,R171,SLK,透視図" width="1210" height="908"></a>
+							<div>
+								<div class="box51">
+									<h5 class="i">フェイスリフト</h5>
+									<p class="i m1">12/2007</p><br>
+									<a href="full/slk/r171_f2.jpg"><img loading="lazy" src="style/slk/r171_f2.webp" alt="メルセデス,R171,SLK,フロント" width="510" height="290"></a><br>
+									<a href="full/slk/r171_r2.jpg"><img loading="lazy" src="style/slk/r171_r2.webp" alt="メルセデス,R171,SLK,リヤ" width="510" height="273"></a><br>
+									<a href="full/slk/r171_d2.jpg"><img loading="lazy" src="style/slk/r171_d2.webp" alt="メルセデス,R171,SLK,ダッシュボード" width="510" height="354"></a>
+								</div>
+								<div class="box69a">
+									<h5>ボディサイズ</h5>
+									<a href="full/slk/r171_a2.jpg"><img loading="lazy" src="style/slk/r171_a2.webp" alt="メルセデス,R171,SLK,寸法" width="700" height="922"></a>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
+
 			</div>
 		</section>
 
@@ -396,35 +399,45 @@
 			<h2>第３世代 SLK / SLC</h2>
 			<div class="style-w">
 				<a href="full/slk/r172_i.jpg"><img loading="lazy" src="style/slk/r172_i.webp" alt="メルセデス,R172,SLK,AMG,内装" width="1210" height="908"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<p class="bf1a i"><a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBSLK%E3%82%AF%E3%83%A9%E3%82%B9#3%E4%BB%A3%E7%9B%AE%EF%BC%882011%E5%B9%B4-2016%E5%B9%B4%EF%BC%89R172" class="ico-wiki m1" title="Wikipedia(J) R172"></a></p>
-						<h3 class="i m0">R172</h3>
-						<p class="i m1">ロードスター (vario roof)</p>
-						<p class="i m1">03/2011 - 06/2020</p>
-						<p class="ru">デザイナー : Il-hun Yoon (2007, 2008)</p>
-					</div>
-					<section>
-						<h4 class="displayNone">ロードスター</h4>
-						<div>
-							<div class="box60a"><br>
-								<a href="full/slk/r172_f.jpg"><img loading="lazy" src="style/slk/r172_f.webp" alt="メルセデス,R172,SLK,フロント" width="604" height="328"></a><br>
-								<a href="full/slk/r172_r.jpg"><img loading="lazy" src="style/slk/r172_r.webp" alt="メルセデス,R172,SLK,リヤ" width="604" height="328"></a><br>
-								<a href="full/slk/r172_d.jpg"><img loading="lazy" src="style/slk/r172_d.webp" alt="メルセデス,R172,SLK,ダッシュボード" width="604" height="453"></a>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-r172" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBSLK%E3%82%AF%E3%83%A9%E3%82%B9#3%E4%BB%A3%E7%9B%AE%EF%BC%882011%E5%B9%B4-2016%E5%B9%B4%EF%BC%89R172" class="ico-wiki" title="Wikipedia(J) R172"></a>
+								<h3>R172</h3>
+								<p>ロードスター (vario roof)</p>
+								03/2011 - 06/2020
 							</div>
-							<div class="box60a">
-								<h5 class="i">フェイスリフト</h5>
-								<p class="i m1">SLC に名称変更　01/2016</p><br>
-								<a href="full/slk/r172_f2.jpg"><img loading="lazy" src="style/slk/r172_f2.webp" alt="メルセデス,R172,SLC,フロント" width="604" height="346"></a><br>
-								<a href="full/slk/r172_r2.jpg"><img loading="lazy" src="style/slk/r172_r2.webp" alt="メルセデス,R172,SLC,リヤ" width="604" height="361"></a><br>
-								<a href="full/slk/r172_d2.jpg"><img loading="lazy" src="style/slk/r172_d2.webp" alt="メルセデス,R172,SLC,ダッシュボード" width="604" height="402"></a>
+							<div class="accordion-right">
+								デザイナー : Il-hun Yoon , Gorden Wagener
 							</div>
 						</div>
-						<div class="mid"><img loading="lazy" src="style/slk/r172_m.webp" alt="Mercedes,R172,SLK,エンジン" width="1200" height="800"></div>
-						<h5>ボディサイズ</h5>
-						<a href="full/slk/r172_a.jpg"><img loading="lazy" src="style/slk/r172_a.webp" alt="メルセデス,R172,SLK,寸法" width="804" height="1027"></a>
-					</section>
+					</button>
+					<div id="accordion-content-r172" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">ロードスター</h4>
+							<div>
+								<div class="box60a"><br>
+									<a href="full/slk/r172_f.jpg"><img loading="lazy" src="style/slk/r172_f.webp" alt="メルセデス,R172,SLK,フロント" width="604" height="328"></a><br>
+									<a href="full/slk/r172_r.jpg"><img loading="lazy" src="style/slk/r172_r.webp" alt="メルセデス,R172,SLK,リヤ" width="604" height="328"></a><br>
+									<a href="full/slk/r172_d.jpg"><img loading="lazy" src="style/slk/r172_d.webp" alt="メルセデス,R172,SLK,ダッシュボード" width="604" height="453"></a>
+								</div>
+								<div class="box60a">
+									<h5 class="i">フェイスリフト</h5>
+									<p class="i m1">SLC に名称変更　01/2016</p><br>
+									<a href="full/slk/r172_f2.jpg"><img loading="lazy" src="style/slk/r172_f2.webp" alt="メルセデス,R172,SLC,フロント" width="604" height="346"></a><br>
+									<a href="full/slk/r172_r2.jpg"><img loading="lazy" src="style/slk/r172_r2.webp" alt="メルセデス,R172,SLC,リヤ" width="604" height="361"></a><br>
+									<a href="full/slk/r172_d2.jpg"><img loading="lazy" src="style/slk/r172_d2.webp" alt="メルセデス,R172,SLC,ダッシュボード" width="604" height="402"></a>
+								</div>
+							</div>
+							<div class="mid"><img loading="lazy" src="style/slk/r172_m.webp" alt="Mercedes,R172,SLK,エンジン" width="1200" height="800"></div>
+							<h5>ボディサイズ</h5>
+							<a href="full/slk/r172_a.jpg"><img loading="lazy" src="style/slk/r172_a.webp" alt="メルセデス,R172,SLK,寸法" width="804" height="1027"></a>
+						</div>
+					</div>
 				</div>
+
 			</div>
 		</section>
 
@@ -473,9 +486,10 @@
 			<hr>
 			<p class="mid"><small>@ since 2010 , piyopiyo_246</small></p>
 		</footer>
+
 		<p class="m-05" id="page-top"><a href="#head">&#9650;</a></p>
 		<p id="close-accordion">
-			<a class="vmenu_all_action" onclick="doReplaceClassName ('vmenu_on2','vmenu_off')" title="全ての開閉部を閉じる">&#9654;</a>
+			<a id="close-all-accordions-2" class="vmenu_all_action" title="全ての開閉部を閉じる">&#9654;</a>
 		</p>
 	</div>
 
@@ -549,6 +563,120 @@
 			}, 500);
 			return false;
 		});
+	});
+</script>
+
+<script>
+	// シンプル版アコーディオン機能（入れ子非対応）
+	document.addEventListener('DOMContentLoaded', function () {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+		accordionHeaders.forEach(header => {
+			header.addEventListener('click', function () {
+				const content = this.nextElementSibling;
+				const isActive = this.classList.contains('active');
+
+				// クリックされたアコーディオンのみトグル
+				if (isActive) {
+					this.classList.remove('active');
+					this.setAttribute('aria-expanded', 'false');
+					content.classList.remove('active');
+				} else {
+					this.classList.add('active');
+					this.setAttribute('aria-expanded', 'true');
+					content.classList.add('active');
+				}
+			});
+
+			// キーボード操作のサポート
+			header.addEventListener('keydown', function (e) {
+				if (e.key === 'Enter' || e.key === ' ') {
+					e.preventDefault();
+					this.click();
+				}
+			});
+		});
+
+		// 全開/全閉ボタンのイベントリスナー
+		const openAllBtn = document.getElementById('open-all-accordions');
+		const closeAllBtn = document.getElementById('close-all-accordions');
+		const closeAllBtn2 = document.getElementById('close-all-accordions-2');
+
+		if (openAllBtn) {
+			openAllBtn.addEventListener('click', openAllAccordions);
+		}
+
+		if (closeAllBtn) {
+			closeAllBtn.addEventListener('click', closeAllAccordions);
+		}
+
+		if (closeAllBtn2) {
+			closeAllBtn2.addEventListener('click', closeAllAccordions);
+		}
+	});
+
+	// 全アコーディオン操作機能
+	function openAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.add('active');
+			header.setAttribute('aria-expanded', 'true');
+			content.classList.add('active');
+		});
+	}
+
+	function closeAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.remove('active');
+			header.setAttribute('aria-expanded', 'false');
+			content.classList.remove('active');
+		});
+	}
+
+	// 全アコーディオン操作機能
+	function openAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.add('active');
+			header.setAttribute('aria-expanded', 'true');
+			content.classList.add('active');
+		});
+	}
+
+	function closeAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.remove('active');
+			header.setAttribute('aria-expanded', 'false');
+			content.classList.remove('active');
+		});
+	}
+
+	// ボタンにイベントリスナーを追加
+	document.addEventListener('DOMContentLoaded', function () {
+		// 既存のアコーディオンコード...
+
+		// 全開/全閉ボタン
+		const openAllBtn = document.getElementById('open-all-accordions');
+		const closeAllBtn = document.getElementById('close-all-accordions');
+		const closeAllBtn2 = document.getElementById('close-all-accordions-2'); // 追加ボタン
+
+		if (openAllBtn) {
+			openAllBtn.addEventListener('click', openAllAccordions);
+		}
+
+		if (closeAllBtn) {
+			closeAllBtn.addEventListener('click', closeAllAccordions);
+		}
+
+		if (closeAllBtn2) {
+			closeAllBtn2.addEventListener('click', closeAllAccordions);
+		}
 	});
 </script>
 
