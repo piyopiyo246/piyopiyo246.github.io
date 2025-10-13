@@ -50,24 +50,6 @@
 	<!-- 5. CSS -->
 	<link rel="stylesheet" href="../style.min.css">
 	<link rel="stylesheet" href="../style_v.min.css">
-	<link rel="stylesheet" href="../fa.all.min.css">
-
-	<!-- アコーディオン用のJavaScript関数を追加 -->
-	<script>
-		function doToggleClassName(obj, onClassName, offClassName) {
-			obj.className = (obj.className != onClassName) ? onClassName : offClassName;
-		}
-		function getParentObj(obj) {
-			return obj.parentElement || obj.parentNode;
-		}
-		function doReplaceClassName(findClassName, replaceClassName, targetTagName) {
-			var elements = document.getElementsByTagName(targetTagName || '*');
-			for (var i = 0; i < elements.length; i++) {
-				if (elements[i].className == findClassName)
-					elements[i].className = replaceClassName;
-			}
-		}
-	</script>
 
 	<!-- 6. Cookie同意管理システム -->
 	<script>
@@ -271,7 +253,7 @@
 					</li>
 				</ul>
 				<h1 class="b bf4">SL クラス</h1>
-				 <div style="display: flex; justify-content: space-between; width: 1210px;">
+				<div style="display: flex; justify-content: space-between; width: 1210px;">
 					<dl class="m1">
 						<dt class="s2 af0">Series</dt>
 						<dd class="s2"><a href="#w198" title="300SL 第１世代 SLクラス,W198" class="lnk2">W198</a></dd>
@@ -284,8 +266,8 @@
 						<dd><a href="#r232" title="第７世代 SLクラス R232" class="lnk2">R232</a></dd>
 					</dl>
 					<span>
-						<button class="vmenu_all_action square_btn" type="button" title="クリックで全ての開閉部を開く" span onclick="doReplaceClassName('vmenu_off', 'vmenu_on2')">全て開く</button>
-						<button class="vmenu_all_action square_btn" type="button" title="クリックで全ての開閉部を閉じる" span onclick="doReplaceClassName('vmenu_on2', 'vmenu_off')">全て閉じる</button>
+						<button id="open-all-accordions" class="vmenu_all_action square_btn" type="button" title="クリックで全ての開閉部を開く">全て開く</button>
+						<button id="close-all-accordions" class="vmenu_all_action square_btn" type="button" title="クリックで全ての開閉部を閉じる">全て閉じる</button>
 						<button class="square_btn" type="button" onclick="location.href='en_mb_img_sl.html'">En</button>
 						<button class="square_btn" type="button" onclick="location.href='mb_img_sl.html'">De</button>
 					</span>
@@ -354,43 +336,60 @@
 			<h2>第１世代 SL (300SL)</h2>
 			<div class="style-w">
 				<a href="full/sl/w198_f.jpg"><img loading="lazy" src="style/sl/w198_f.webp" alt="メルセデス,W198c,300SL,フロント" width="1210" height="640"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<p class="bf1a i"><a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BB300SL" class="ico-wiki m1" title="Wikipedia(J) W198"></a></p>
-						<h3 class="i m0">W198</h3>
-						<p class="i m1">Coupe</p>
-						<p class="i m1">1954 - 1957</p>
-						<p class="ru">デザイナー : Friedrich Geiger</p>
-					</div>
-					<section>
-						<h4 class="displayNone">W198</h4>
-						<div class="mid">
-							<img loading="lazy" src="style/sl/w198_tp_v1.webp" alt="メルセデス,W198c,300SL,透視図" width="1024" height="681"><br>
-							<img loading="lazy" src="style/sl/w198_tp_v2.webp" alt="メルセデス,W198c,300SL,透視図" width="1024" height="821"><br>
-							<img loading="lazy" src="style/sl/w198_tp_v3.webp" alt="メルセデス,W198c,300SL,透視図" width="1024" height="664"><br>
-							<img loading="lazy" src="style/sl/w198_eg.webp" alt="メルセデス,W198c,300SL,Engine" width="1024" height="461">
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-w198" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BB300SL" class="ico-wiki" title="Wikipedia(J) W198"></a>
+								<h3>W198</h3>
+								<p>Coupe</p>
+								1954 - 1957
+							</div>
+							<div class="accordion-right">
+								デザイナー : Rudolf Uhlenhaut , Friedrich Geiger
+							</div>
 						</div>
-						<h5>Coupe</h5>
-						<a href="full/sl/w198_tp.jpg"><img loading="lazy" src="style/sl/w198_tp.webp" alt="メルセデス,W198c,300SL,透視図" width="1210" height="783"></a><br>
-						<a href="full/sl/w198_d.jpg"><img loading="lazy" src="style/sl/w198_d.webp" alt="メルセデス,W198c,300SL,ダッシュボード" width="520" height="390"></a>
-						<a href="full/sl/w198_s.jpg"><img loading="lazy" src="style/sl/w198_s.webp" alt="メルセデス,W198c,300SL,側面" width="684" height="390"></a><br>
-						<a href="full/sl/w198_r.jpg"><img loading="lazy" src="style/sl/w198_r.webp" alt="メルセデス,W198c,300SL,リヤ" width="1210" height="476"></a>
-					</section>
-				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<h3 class="bf1b i">W198 II</h3>
-						<p class="i m1">ロードスター (softtop)</p>
-						<p class="i m1">1957 - 1963</p>
+					</button>
+					<div id="accordion-content-w198" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">W198</h4>
+							<div class="mid">
+								<img loading="lazy" src="style/sl/w198_tp_v1.webp" alt="メルセデス,W198c,300SL,透視図" width="1024" height="681"><br>
+								<img loading="lazy" src="style/sl/w198_tp_v2.webp" alt="メルセデス,W198c,300SL,透視図" width="1024" height="821"><br>
+								<img loading="lazy" src="style/sl/w198_tp_v3.webp" alt="メルセデス,W198c,300SL,透視図" width="1024" height="664"><br>
+								<img loading="lazy" src="style/sl/w198_eg.webp" alt="メルセデス,W198c,300SL,Engine" width="1024" height="461">
+							</div>
+							<h5>Coupe</h5>
+							<a href="full/sl/w198_tp.jpg"><img loading="lazy" src="style/sl/w198_tp.webp" alt="メルセデス,W198c,300SL,透視図" width="1210" height="783"></a><br>
+							<a href="full/sl/w198_d.jpg"><img loading="lazy" src="style/sl/w198_d.webp" alt="メルセデス,W198c,300SL,ダッシュボード" width="520" height="390"></a>
+							<a href="full/sl/w198_s.jpg"><img loading="lazy" src="style/sl/w198_s.webp" alt="メルセデス,W198c,300SL,側面" width="684" height="390"></a><br>
+							<a href="full/sl/w198_r.jpg"><img loading="lazy" src="style/sl/w198_r.webp" alt="メルセデス,W198c,300SL,リヤ" width="1210" height="476"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">ロードスター</h4>
-						<a href="full/sl/w198a_f.jpg"><img loading="lazy" src="style/sl/w198a_f.webp" alt="メルセデス,W198a,300SL,フロント" width="1210" height="716"></a><br>
-						<a href="full/sl/w198a_r.jpg"><img loading="lazy" src="style/sl/w198a_r.webp" alt="メルセデス,W198a,300SL,リヤ" width="1210" height="698"></a><br>
-						<a href="full/sl/w198a_s.jpg"><img loading="lazy" src="style/sl/w198a_s.webp" alt="メルセデス,W198a,300SL,側面" width="631" height="431"></a>
-						<a href="full/sl/w198a_d.jpg"><img loading="lazy" src="style/sl/w198a_d.webp" alt="メルセデス,W198a,300SL,ダッシュボード" width="575" height="431"></a>
-					</section>
 				</div>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-w198 ii" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h3>W198 II</h3>
+								<p>ロードスター (softtop)</p>
+								1957 - 1963
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-w198 ii" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">ロードスター</h4>
+							<a href="full/sl/w198a_f.jpg"><img loading="lazy" src="style/sl/w198a_f.webp" alt="メルセデス,W198a,300SL,フロント" width="1210" height="716"></a><br>
+							<a href="full/sl/w198a_r.jpg"><img loading="lazy" src="style/sl/w198a_r.webp" alt="メルセデス,W198a,300SL,リヤ" width="1210" height="698"></a><br>
+							<a href="full/sl/w198a_s.jpg"><img loading="lazy" src="style/sl/w198a_s.webp" alt="メルセデス,W198a,300SL,側面" width="631" height="431"></a>
+							<a href="full/sl/w198a_d.jpg"><img loading="lazy" src="style/sl/w198a_d.webp" alt="メルセデス,W198a,300SL,ダッシュボード" width="575" height="431"></a>
+						</div>
+					</div>
+				</div>
+
 			</div>
 		</section>
 
@@ -398,22 +397,33 @@
 			<h2>190SL</h2>
 			<div class="style-w">
 				<a href="full/sl/w121_r.jpg"><img loading="lazy" src="style/sl/w121_r.webp" alt="メルセデス,W121B II,190SL,リヤ" width="1210" height="908"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<p class="bf1a i"><a href="https://en.wikipedia.org/wiki/Mercedes-Benz_190_SL" class="ico-wiki m1" title="Wikipedia(E) W121 BII"></a></p>
-						<h3 class="i m0">W121B II</h3>
-						<p class="i m1">ロードスター (softtop)</p>
-						<p class="i m1">1955 - 1963</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-w121b ii" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://en.wikipedia.org/wiki/Mercedes-Benz_190_SL" class="ico-wiki" title="Wikipedia(E) W121 BII"></a>
+								<h3>W121B II</h3>
+								<p>ロードスター (softtop)</p>
+								1955 - 1963
+							</div>
+							<div class="accordion-right">
+								デザイナー : Hans Hermann Stange , Friedrich Geiger
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-w121b ii" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">ロードスター</h4>
+							<a href="full/sl/w121_f.jpg"><img loading="lazy" src="style/sl/w121_f.webp" alt="メルセデス,W121B II,190SL,フロント" width="603" height="452"></a>
+							<a href="full/sl/w121_d.jpg"><img loading="lazy" src="style/sl/w121_d.webp" alt="メルセデス,W121B II,190SL,ダッシュボード" width="603" height="452"></a><br>
+							<div class="mid"><img loading="lazy" src="style/sl/w121b2.webp" alt="メルセデス,W121B II,190SL" width="1024" height="768"></div>
+							<h5>ボディサイズ</h5>
+							<img loading="lazy" src="style/sl/w121_a.webp" alt="メルセデス,W121B II,190SL,寸法" width="1210" height="381">
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">ロードスター</h4>
-						<a href="full/sl/w121_f.jpg"><img loading="lazy" src="style/sl/w121_f.webp" alt="メルセデス,W121B II,190SL,フロント" width="603" height="452"></a>
-						<a href="full/sl/w121_d.jpg"><img loading="lazy" src="style/sl/w121_d.webp" alt="メルセデス,W121B II,190SL,ダッシュボード" width="603" height="452"></a><br>
-						<div class="mid"><img loading="lazy" src="style/sl/w121b2.webp" alt="メルセデス,W121B II,190SL" width="1024" height="768"></div>
-						<h5>ボディサイズ</h5>
-						<img loading="lazy" src="style/sl/w121_a.webp" alt="メルセデス,W121B II,190SL,寸法" width="1210" height="381">
-					</section>
 				</div>
+
 			</div>
 		</section>
 
@@ -421,27 +431,37 @@
 			<h2>第２世代 SL (Pagoda)</h2>
 			<div class="style-w">
 				<a href="full/sl/w113_f.jpg"><img loading="lazy" src="style/sl/w113_f.webp" alt="メルセデス,W113,SL,フロント" width="1210" height="670"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<p class="bf1a i"><a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBSL%E3%82%AF%E3%83%A9%E3%82%B9#2%E4%BB%A3%E7%9B%AE_W113%EF%BC%881963%E5%B9%B4-1971%E5%B9%B4%EF%BC%89" class="ico-wiki m1" title="Wikipedia(J) W113"></a></p>
-						<h3 class="i m0">W113</h3>
-						<p class="i m1">ロードスター (softtop)</p>
-						<p class="i m1">1963 - 1971</p>
-						<p class="m2a">※ オプションでハードトップ装着可能</p>
-						<p class="ru">デザイナー : Paul Bracq , B&eacute;la Bar&eacute;nyi , Friedrich Geiger</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-w113" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBSL%E3%82%AF%E3%83%A9%E3%82%B9#2%E4%BB%A3%E7%9B%AE_W113%EF%BC%881963%E5%B9%B4-1971%E5%B9%B4%EF%BC%89" class="ico-wiki" title="Wikipedia(J) W113"></a>
+								<h3>W113</h3>
+								<p>ロードスター (softtop)</p>
+								1963 - 1971
+							</div>
+							<div class="accordion-right">
+								デザイナー : Paul Bracq , Bruno Sacco , Béla Barényi , Friedrich Geiger
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-w113" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">W113</h4>
+							<p class="m2a">※ オプションでハードトップ装着可能</p>
+							<a href="full/sl/w113_r.jpg"><img loading="lazy" src="style/sl/w113_r.webp" alt="メルセデス,W113,SL,リヤ" width="668" height="358"></a>
+							<a href="full/sl/w113_d.jpg"><img loading="lazy" src="style/sl/w113_d.webp" alt="メルセデス,W113,SL,ダッシュボード" width="537" height="358"></a><br>
+							<a href="full/sl/w113_a.gif"><img loading="lazy" src="style/sl/w113_a.webp" alt="メルセデス,W113,SL,寸法" width="1210" height="612"></a>
+							<h5>ロードスター (softtop)</h5>
+							<a href="full/sl/w113a_r.jpg"><img loading="lazy" src="style/sl/w113a_r.webp" alt="メルセデス,W113a,SL,リヤ" width="1210" height="908"></a><br>
+							<a href="full/sl/w113a_f.jpg"><img loading="lazy" src="style/sl/w113a_f.webp" alt="メルセデス,W113a,SL,フロント" width="700" height="379"></a>
+							<a href="full/sl/w113a_d.jpg"><img loading="lazy" src="style/sl/w113a_d.webp" alt="メルセデス,W113a,SL,ダッシュボード" width="505" height="379"></a><br>
+							<a href="full/sl/w113a_2f.jpg"><img loading="lazy" src="style/sl/w113a_2f.webp" alt="メルセデス,W113a,SL" width="1210" height="807"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">W113</h4>
-						<a href="full/sl/w113_r.jpg"><img loading="lazy" src="style/sl/w113_r.webp" alt="メルセデス,W113,SL,リヤ" width="668" height="358"></a>
-						<a href="full/sl/w113_d.jpg"><img loading="lazy" src="style/sl/w113_d.webp" alt="メルセデス,W113,SL,ダッシュボード" width="537" height="358"></a><br>
-						<a href="full/sl/w113_a.gif"><img loading="lazy" src="style/sl/w113_a.webp" alt="メルセデス,W113,SL,寸法" width="1210" height="612"></a>
-						<h5>ロードスター (softtop)</h5>
-						<a href="full/sl/w113a_r.jpg"><img loading="lazy" src="style/sl/w113a_r.webp" alt="メルセデス,W113a,SL,リヤ" width="1210" height="908"></a><br>
-						<a href="full/sl/w113a_f.jpg"><img loading="lazy" src="style/sl/w113a_f.webp" alt="メルセデス,W113a,SL,フロント" width="700" height="379"></a>
-						<a href="full/sl/w113a_d.jpg"><img loading="lazy" src="style/sl/w113a_d.webp" alt="メルセデス,W113a,SL,ダッシュボード" width="505" height="379"></a><br>
-						<a href="full/sl/w113a_2f.jpg"><img loading="lazy" src="style/sl/w113a_2f.webp" alt="メルセデス,W113a,SL" width="1210" height="807"></a>
-					</section>
 				</div>
+
 			</div>
 		</section>
 
@@ -451,64 +471,84 @@
 				<div class="mid">
 					<a href="full/sl/r107_f.jpg"><img loading="lazy" src="style/sl/r107_f.webp" alt="メルセデス,R107,SL,フロント" width="1024" height="452"></a>
 				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<p class="bf1a i"><a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBSL%E3%82%AF%E3%83%A9%E3%82%B9#3%E4%BB%A3%E7%9B%AE_R107%EF%BC%881971%E5%B9%B4-1989%E5%B9%B4%EF%BC%89" class="ico-wiki m1" title="Wikipedia(J) 107"></a></p>
-						<h3 class="i m0">R107</h3>
-						<p class="i m1">ロードスター (softtop)</p>
-						<p class="i m1">1971 - 1989</p>
-						<p class="m2a">※ オプションでハードトップ装着可能</p>
-						<p class="ru">デザイナー : Joseph Gallitzend&ouml;rfer; Friedrich Geiger (1968)</p>
-					</div>
-					<section>
-						<h4 class="displayNone">ロードスター</h4>
-						<h5>フェイスリフト</h5>
-						<a href="full/sl/r107_f2.jpg"><img loading="lazy" src="style/sl/r107_f2.webp" alt="メルセデス,R107,SL,フロント" width="604" height="341"></a>
-						<a href="full/sl/r107_r2.jpg"><img loading="lazy" src="style/sl/r107_r2.webp" alt="メルセデス,R107,SL,リヤ" width="604" height="341"></a>
-						<div>
-							<div class="box60a">
-								<h5>softtop</h5>
-								<a href="full/sl/r107a_f.jpg"><img loading="lazy" src="style/sl/r107a_f.webp" alt="メルセデス,R107a,SL,フロント" width="604" height="345"></a><br>
-								<a href="full/sl/r107a_r.jpg"><img loading="lazy" src="style/sl/r107a_r.webp" alt="メルセデス,R107a,リヤ" width="604" height="382"></a><br>
-								<a href="full/sl/r107a_d.jpg"><img loading="lazy" src="style/sl/r107a_d.webp" alt="メルセデス,R107a,SL,ダッシュボード" width="604" height="374"></a>
-							</div>
-							<div class="box60a">
-								<h5>フェイスリフト</h5>
-								<a href="full/sl/r107a_f2.jpg"><img loading="lazy" src="style/sl/r107a_f2.webp" alt="メルセデス,R107a,SL,フロント" width="604" height="372"></a><br>
-								<a href="full/sl/r107a_r2.jpg"><img loading="lazy" src="style/sl/r107a_r2.webp" alt="メルセデス,R107a,SL,リヤ" width="604" height="382"></a><br>
-								<a href="full/sl/r107a_d2.jpg"><img loading="lazy" src="style/sl/r107a_d2.webp" alt="メルセデス,R107a,SL,ダッシュボード" width="604" height="346"></a>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-r107" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBSL%E3%82%AF%E3%83%A9%E3%82%B9#3%E4%BB%A3%E7%9B%AE_R107%EF%BC%881971%E5%B9%B4-1989%E5%B9%B4%EF%BC%89" class="ico-wiki" title="Wikipedia(J) 107"></a>
+								<h3>R107</h3>
+								<p>ロードスター (softtop)</p>
+								1971 - 1989
 							</div>
 						</div>
-						<h5>ボディサイズ</h5>
-						<a href="full/sl/r107_a.jpg"><img loading="lazy" src="style/sl/r107_a.webp" alt="Mercedes,R107,SL,寸法図" width="804" height="1088"></a>
-					</section>
-				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<h3 class="bf1b i">C107 (SLC)</h3>
-						<p class="i m1">Coupe</p>
-						<p class="i m1">1972 - 1981</p>
-					</div>
-					<section>
-						<h4 class="displayNone">Coupe</h4>
-						<a href="full/sl/c107.jpg"><img loading="lazy" src="style/sl/c107.webp" alt="メルセデス,C107,SL" width="1210" height="804"></a><br>
-						<div>
-							<div class="box60a"><br>
-								<a href="full/sl/c107_f.jpg"><img loading="lazy" src="style/sl/c107_f.webp" alt="メルセデス,C107,SL,フロント" width="604" height="323"></a><br>
-								<a href="full/sl/c107_r.jpg"><img loading="lazy" src="style/sl/c107_r.webp" alt="メルセデス,C107,SL,リヤ" width="604" height="322"></a><br>
-								<a href="full/sl/c107_d.jpg"><img loading="lazy" src="style/sl/c107_d.webp" alt="メルセデス,C107,SL,ダッシュボード" width="604" height="453"></a>
+						<div class="accordion-right">
+							デザイナー : Josef Gallitzendörfer , Ferdinand Hellhage , Paul Bracq , Bruno Sacco , Friedrich Geiger
+						</div>
+					</button>
+					<div id="accordion-content-r107" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">ロードスター</h4>
+							<p class="m2a">※ オプションでハードトップ装着可能</p>
+							<h5>フェイスリフト</h5>
+							<a href="full/sl/r107_f2.jpg"><img loading="lazy" src="style/sl/r107_f2.webp" alt="メルセデス,R107,SL,フロント" width="604" height="341"></a>
+							<a href="full/sl/r107_r2.jpg"><img loading="lazy" src="style/sl/r107_r2.webp" alt="メルセデス,R107,SL,リヤ" width="604" height="341"></a>
+							<div>
+								<div class="box60a">
+									<h5>softtop</h5>
+									<a href="full/sl/r107a_f.jpg"><img loading="lazy" src="style/sl/r107a_f.webp" alt="メルセデス,R107a,SL,フロント" width="604" height="345"></a><br>
+									<a href="full/sl/r107a_r.jpg"><img loading="lazy" src="style/sl/r107a_r.webp" alt="メルセデス,R107a,リヤ" width="604" height="382"></a><br>
+									<a href="full/sl/r107a_d.jpg"><img loading="lazy" src="style/sl/r107a_d.webp" alt="メルセデス,R107a,SL,ダッシュボード" width="604" height="374"></a>
+								</div>
+								<div class="box60a">
+									<h5>フェイスリフト</h5>
+									<a href="full/sl/r107a_f2.jpg"><img loading="lazy" src="style/sl/r107a_f2.webp" alt="メルセデス,R107a,SL,フロント" width="604" height="372"></a><br>
+									<a href="full/sl/r107a_r2.jpg"><img loading="lazy" src="style/sl/r107a_r2.webp" alt="メルセデス,R107a,SL,リヤ" width="604" height="382"></a><br>
+									<a href="full/sl/r107a_d2.jpg"><img loading="lazy" src="style/sl/r107a_d2.webp" alt="メルセデス,R107a,SL,ダッシュボード" width="604" height="346"></a>
+								</div>
 							</div>
-							<div class="box60a">
-								<h5>フェイスリフト</h5>
-								<a href="full/sl/c107_f2.jpg"><img loading="lazy" src="style/sl/c107_f2.webp" alt="メルセデス,C107,SL,フロント" width="604" height="321"></a><br>
-								<a href="full/sl/c107_r2.jpg"><img loading="lazy" src="style/sl/c107_r2.webp" alt="メルセデス,C107,SL,リヤ" width="604" height="322"></a><br>
-								<a href="full/sl/c107_d2.jpg"><img loading="lazy" src="style/sl/c107_d2.webp" alt="メルセデス,C107,SL,ダッシュボード" width="604" height="453"></a>
+							<h5>ボディサイズ</h5>
+							<a href="full/sl/r107_a.jpg"><img loading="lazy" src="style/sl/r107_a.webp" alt="Mercedes,R107,SL,寸法図" width="804" height="1088"></a>
+						</div>
+					</div>
+				</div>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-c107 (slc)" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h3>C107 (SLC)</h3>
+								<p>Coupe</p>
+								1972 - 1981
+							</div>
+							<div class="accordion-right">
+								デザイナー : Josef Gallitzendörfer , Bruno Sacco , Paul Bracq , Friedrich Geiger
 							</div>
 						</div>
-						<h5>ボディサイズ</h5>
-						<a href="full/sl/c107_a.gif"><img loading="lazy" src="style/sl/c107_a.gif" alt="メルセデス,C107,SL,寸法" width="804" height="502"></a>
-					</section>
+					</button>
+					<div id="accordion-content-c107 (slc)" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">Coupe</h4>
+							<a href="full/sl/c107.jpg"><img loading="lazy" src="style/sl/c107.webp" alt="メルセデス,C107,SL" width="1210" height="804"></a><br>
+							<div>
+								<div class="box60a"><br>
+									<a href="full/sl/c107_f.jpg"><img loading="lazy" src="style/sl/c107_f.webp" alt="メルセデス,C107,SL,フロント" width="604" height="323"></a><br>
+									<a href="full/sl/c107_r.jpg"><img loading="lazy" src="style/sl/c107_r.webp" alt="メルセデス,C107,SL,リヤ" width="604" height="322"></a><br>
+									<a href="full/sl/c107_d.jpg"><img loading="lazy" src="style/sl/c107_d.webp" alt="メルセデス,C107,SL,ダッシュボード" width="604" height="453"></a>
+								</div>
+								<div class="box60a">
+									<h5>フェイスリフト</h5>
+									<a href="full/sl/c107_f2.jpg"><img loading="lazy" src="style/sl/c107_f2.webp" alt="メルセデス,C107,SL,フロント" width="604" height="321"></a><br>
+									<a href="full/sl/c107_r2.jpg"><img loading="lazy" src="style/sl/c107_r2.webp" alt="メルセデス,C107,SL,リヤ" width="604" height="322"></a><br>
+									<a href="full/sl/c107_d2.jpg"><img loading="lazy" src="style/sl/c107_d2.webp" alt="メルセデス,C107,SL,ダッシュボード" width="604" height="453"></a>
+								</div>
+							</div>
+							<h5>ボディサイズ</h5>
+							<a href="full/sl/c107_a.gif"><img loading="lazy" src="style/sl/c107_a.gif" alt="メルセデス,C107,SL,寸法" width="804" height="502"></a>
+						</div>
+					</div>
 				</div>
+
 			</div>
 		</section>
 
@@ -516,45 +556,55 @@
 			<h2>第４世代 SL</h2>
 			<div class="style-w">
 				<a href="full/sl/r129_f.jpg"><img loading="lazy" src="style/sl/r129_f.webp" alt="メルセデス,R129,SL,フロント" width="1210" height="756"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<p class="bf1a i"><a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBSL%E3%82%AF%E3%83%A9%E3%82%B9#4%E4%BB%A3%E7%9B%AE_R129%EF%BC%881989%E5%B9%B4-2001%E5%B9%B4%EF%BC%89" class="ico-wiki m1" title="Wikipedia(J) R129"></a></p>
-						<h3 class="i m0">R129</h3>
-						<p class="i m1">ロードスター (softtop)</p>
-						<p class="i m1">1989 - 2001</p>
-						<p class="m2a">※ オプションでハードトップ装着可能</p>
-						<p class="ru">デザイナー : Johann Tomforde; Bruno Sacco , Gerhard Steinle (1984)</p>
-					</div>
-					<section>
-						<h4 class="displayNone">ロードスター</h4>
-						<a href="full/sl/r129_r.jpg"><img loading="lazy" src="style/sl/r129_r.webp" alt="メルセデス,R129,SL,リヤ" width="604" height="353"></a>
-						<a href="full/sl/r129_d.jpg"><img loading="lazy" src="style/sl/r129_d.webp" alt="メルセデス,R129,SL,ダッシュボード" width="604" height="353"></a><br>
-						<a href="full/sl/r129_tp.jpg"><img loading="lazy" src="style/sl/r129_tp.webp" alt="メルセデス,R129a_SL,透視図" width="1210" height="852"></a><br>
-						<h5 class="i">フェイスリフト I</h5>
-						<p class="i m1">09/1995</p><br>
-						<a href="full/sl/r129_f2.jpg"><img loading="lazy" src="style/sl/r129_f2.webp" alt="メルセデス,R129,SL,フロント" width="1180" height="782"></a><br>
-						<a href="full/sl/r129_r2.jpg"><img loading="lazy" src="style/sl/r129_r2.webp" alt="メルセデス,R129,SL,リヤ" width="604" height="400"></a>
-						<a href="full/sl/r129_d2.jpg"><img loading="lazy" src="style/sl/r129_d2.webp" alt="メルセデス,R129,SL,ダッシュボード" width="604" height="400"></a>
-						<h4>Mille Miglia</h4>
-						<a href="full/sl/r129_f2_mille_miglia.jpg"><img loading="lazy" src="style/sl/r129_f2_mille_miglia.webp" alt="メルセデス,R129,SL,フロント2,mille miglia" width="604" height="403"></a>
-						<a href="full/sl/r129_r2_mille_miglia.jpg"><img loading="lazy" src="style/sl/r129_r2_mille_miglia.webp" alt="メルセデス,R129,SL,リヤ2,mille miglia" width="604" height="403"></a><br>
-						<h5 class="i">フェイスリフト II</h5>
-						<p class="i m1">04/1998</p><br>
-						<a href="full/sl/r129_f3a.jpg"><img loading="lazy" src="style/sl/r129_f3a.webp" alt="メルセデス,R129,SL,フロント" width="1210" height="681"></a><br>
-						<a href="full/sl/r129_r3.jpg"><img loading="lazy" src="style/sl/r129_r3.webp" alt="メルセデス,R129a,SL,リヤ" width="604" height="400"></a>
-						<a href="full/sl/r129_d3.jpg"><img loading="lazy" src="style/sl/r129_d3.webp" alt="メルセデス,R129,SL,ダッシュボード" width="604" height="400"></a><br>
-						<div>
-							<div class="box60a">
-								<h5>内装</h5>
-								<a href="full/sl/r129_i.jpg"><img loading="lazy" src="style/sl/r129_i.webp" alt="メルセデス,R129,SL,内装" width="604" height="598"></a>
-							</div>
-							<div class="box60a">
-								<h5>ボディサイズ</h5>
-								<a href="full/sl/r129_a.jpg"><img loading="lazy" src="style/sl/r129_a.webp" alt="メルセデス,R129,SL,寸法" width="604" height="721"></a><br>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-r129" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBSL%E3%82%AF%E3%83%A9%E3%82%B9#4%E4%BB%A3%E7%9B%AE_R129%EF%BC%881989%E5%B9%B4-2001%E5%B9%B4%EF%BC%89" class="ico-wiki" title="Wikipedia(J) R129"></a>
+								<h3>R129</h3>
+								<p>ロードスター (softtop)</p>
+								1989 - 2001
 							</div>
 						</div>
-					</section>
+						<div class="accordion-right">
+							デザイナー : Gerhard Steinle , Josef Gallitzendörfer , Peter Pfeiffer , Bruno Sacco
+						</div>
+					</button>
+					<div id="accordion-content-r129" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">ロードスター</h4>
+							<p class="m2a">※ オプションでハードトップ装着可能</p>
+							<a href="full/sl/r129_r.jpg"><img loading="lazy" src="style/sl/r129_r.webp" alt="メルセデス,R129,SL,リヤ" width="604" height="353"></a>
+							<a href="full/sl/r129_d.jpg"><img loading="lazy" src="style/sl/r129_d.webp" alt="メルセデス,R129,SL,ダッシュボード" width="604" height="353"></a><br>
+							<a href="full/sl/r129_tp.jpg"><img loading="lazy" src="style/sl/r129_tp.webp" alt="メルセデス,R129a_SL,透視図" width="1210" height="852"></a><br>
+							<h5 class="i">フェイスリフト I</h5>
+							<p class="i m1">09/1995</p><br>
+							<a href="full/sl/r129_f2.jpg"><img loading="lazy" src="style/sl/r129_f2.webp" alt="メルセデス,R129,SL,フロント" width="1180" height="782"></a><br>
+							<a href="full/sl/r129_r2.jpg"><img loading="lazy" src="style/sl/r129_r2.webp" alt="メルセデス,R129,SL,リヤ" width="604" height="400"></a>
+							<a href="full/sl/r129_d2.jpg"><img loading="lazy" src="style/sl/r129_d2.webp" alt="メルセデス,R129,SL,ダッシュボード" width="604" height="400"></a>
+							<h4>Mille Miglia</h4>
+							<a href="full/sl/r129_f2_mille_miglia.jpg"><img loading="lazy" src="style/sl/r129_f2_mille_miglia.webp" alt="メルセデス,R129,SL,フロント2,mille miglia" width="604" height="403"></a>
+							<a href="full/sl/r129_r2_mille_miglia.jpg"><img loading="lazy" src="style/sl/r129_r2_mille_miglia.webp" alt="メルセデス,R129,SL,リヤ2,mille miglia" width="604" height="403"></a><br>
+							<h5 class="i">フェイスリフト II</h5>
+							<p class="i m1">04/1998</p><br>
+							<a href="full/sl/r129_f3a.jpg"><img loading="lazy" src="style/sl/r129_f3a.webp" alt="メルセデス,R129,SL,フロント" width="1210" height="681"></a><br>
+							<a href="full/sl/r129_r3.jpg"><img loading="lazy" src="style/sl/r129_r3.webp" alt="メルセデス,R129a,SL,リヤ" width="604" height="400"></a>
+							<a href="full/sl/r129_d3.jpg"><img loading="lazy" src="style/sl/r129_d3.webp" alt="メルセデス,R129,SL,ダッシュボード" width="604" height="400"></a><br>
+							<div>
+								<div class="box60a">
+									<h5>内装</h5>
+									<a href="full/sl/r129_i.jpg"><img loading="lazy" src="style/sl/r129_i.webp" alt="メルセデス,R129,SL,内装" width="604" height="598"></a>
+								</div>
+								<div class="box60a">
+									<h5>ボディサイズ</h5>
+									<a href="full/sl/r129_a.jpg"><img loading="lazy" src="style/sl/r129_a.webp" alt="メルセデス,R129,SL,寸法" width="604" height="721"></a><br>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
+
 			</div>
 		</section>
 
@@ -562,46 +612,56 @@
 			<h2>第５世代 SL</h2>
 			<div class="style-w">
 				<a href="full/sl/r230.jpg"><img loading="lazy" src="style/sl/r230.webp" alt="メルセデス,R230_SL,側面" width="1210" height="634"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<p class="bf1a i"><a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBSL%E3%82%AF%E3%83%A9%E3%82%B9#5%E4%BB%A3%E7%9B%AE_R230%EF%BC%882001%E5%B9%B4-2011%E5%B9%B4%EF%BC%89" class="ico-wiki m1" title="Wikipedia(J) R230"></a></p>
-						<h3 class="i m0">R230</h3>
-						<p class="i m1">ロードスター (vario roof)</p>
-						<p class="i m1">10/2001 - 11/2011</p>
-						<p class="ru">デザイナー : Steve Mattin; Bruno Sacco (1997)</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-r230" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBSL%E3%82%AF%E3%83%A9%E3%82%B9#5%E4%BB%A3%E7%9B%AE_R230%EF%BC%882001%E5%B9%B4-2011%E5%B9%B4%EF%BC%89" class="ico-wiki" title="Wikipedia(J) R230"></a>
+								<h3>R230</h3>
+								<p>ロードスター (vario roof)</p>
+								10/2001 - 11/2011
+							</div>
+						</div>
+						<div class="accordion-right">
+							デザイナー : Frank Pfisterer , Cristina Lopez , Steve Mattin , Gorden Wagener , Peter Pfeiffer , Bruno Sacco
+						</div>
+					</button>
+					<div id="accordion-content-r230" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">ロードスター</h4>
+							<div>
+								<div class="box60a"><br>
+									<a href="full/sl/r230_f.jpg"><img loading="lazy" src="style/sl/r230_f.webp" alt="メルセデス,R230,SL,フロント" width="604" height="345"></a><br>
+									<a href="full/sl/r230_r.jpg"><img loading="lazy" src="style/sl/r230_r.webp" alt="メルセデス,R230,SL,リヤ" width="604" height="312"></a><br>
+									<a href="full/sl/r230_d.jpg"><img loading="lazy" src="style/sl/r230_d.webp" alt="メルセデス,R230,SL,ダッシュボード" width="604" height="380"></a>
+								</div>
+								<div class="box60a">
+									<h5 class="i">フェイスリフト I</h5>
+									<p class="i m1">06/2005</p><br>
+									<a href="full/sl/r230_f2.jpg"><img loading="lazy" src="style/sl/r230_f2.webp" alt="メルセデス,R230,SL,フロント" width="604" height="305"></a><br>
+									<a href="full/sl/r230_r2.jpg"><img loading="lazy" src="style/sl/r230_r2.webp" alt="メルセデス,R230,SL,リヤ" width="604" height="278"></a><br>
+									<a href="full/sl/r230_d2.jpg"><img loading="lazy" src="style/sl/r230_d2.webp" alt="メルセデス,R230,SL,ダッシュボード" width="604" height="453"></a>
+								</div>
+							</div>
+							<div>
+								<div class="box60a">
+									<h5 class="i">フェイスリフト II</h5>
+									<p class="i m1">2008</p>
+									<p class="ru">デザイナー : Gorden Wagener</p>
+									<a href="full/sl/r230_f3.jpg"><img loading="lazy" src="style/sl/r230_f3.webp" alt="メルセデス,R230,SL,フロント" width="604" height="365"></a><br>
+									<a href="full/sl/r230_r3.jpg"><img loading="lazy" src="style/sl/r230_r3.webp" alt="メルセデス,R230,SL,リヤ" width="604" height="351"></a><br>
+									<a href="full/sl/r230_d3.jpg"><img loading="lazy" src="style/sl/r230_d3.webp" alt="メルセデス,R230,SL,ダッシュボード" width="604" height="453"></a>
+								</div>
+								<div class="box60a">
+									<h5>ボディサイズ</h5>
+									<a href="full/sl/r230_a3.jpg"><img loading="lazy" src="style/sl/r230_a3.webp" alt="メルセデス,R230,SL,寸法" width="604" height="767"></a>
+								</div>
+							</div>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">ロードスター</h4>
-						<div>
-							<div class="box60a"><br>
-								<a href="full/sl/r230_f.jpg"><img loading="lazy" src="style/sl/r230_f.webp" alt="メルセデス,R230,SL,フロント" width="604" height="345"></a><br>
-								<a href="full/sl/r230_r.jpg"><img loading="lazy" src="style/sl/r230_r.webp" alt="メルセデス,R230,SL,リヤ" width="604" height="312"></a><br>
-								<a href="full/sl/r230_d.jpg"><img loading="lazy" src="style/sl/r230_d.webp" alt="メルセデス,R230,SL,ダッシュボード" width="604" height="380"></a>
-							</div>
-							<div class="box60a">
-								<h5 class="i">フェイスリフト I</h5>
-								<p class="i m1">06/2005</p><br>
-								<a href="full/sl/r230_f2.jpg"><img loading="lazy" src="style/sl/r230_f2.webp" alt="メルセデス,R230,SL,フロント" width="604" height="305"></a><br>
-								<a href="full/sl/r230_r2.jpg"><img loading="lazy" src="style/sl/r230_r2.webp" alt="メルセデス,R230,SL,リヤ" width="604" height="278"></a><br>
-								<a href="full/sl/r230_d2.jpg"><img loading="lazy" src="style/sl/r230_d2.webp" alt="メルセデス,R230,SL,ダッシュボード" width="604" height="453"></a>
-							</div>
-						</div>
-						<div>
-							<div class="box60a">
-								<h5 class="i">フェイスリフト II</h5>
-								<p class="i m1">2008</p>
-								<p class="ru">デザイナー : Gorden Wagener</p>
-								<a href="full/sl/r230_f3.jpg"><img loading="lazy" src="style/sl/r230_f3.webp" alt="メルセデス,R230,SL,フロント" width="604" height="365"></a><br>
-								<a href="full/sl/r230_r3.jpg"><img loading="lazy" src="style/sl/r230_r3.webp" alt="メルセデス,R230,SL,リヤ" width="604" height="351"></a><br>
-								<a href="full/sl/r230_d3.jpg"><img loading="lazy" src="style/sl/r230_d3.webp" alt="メルセデス,R230,SL,ダッシュボード" width="604" height="453"></a>
-							</div>
-							<div class="box60a">
-								<h5>ボディサイズ</h5>
-								<a href="full/sl/r230_a3.jpg"><img loading="lazy" src="style/sl/r230_a3.webp" alt="メルセデス,R230,SL,寸法" width="604" height="767"></a>
-							</div>
-						</div>
-					</section>
 				</div>
+
 			</div>
 		</section>
 
@@ -609,33 +669,43 @@
 			<h2>第６世代 SL</h2>
 			<div class="style-w">
 				<a href="full/sl/r231_f.jpg"><img loading="lazy" src="style/sl/r231_f.webp" alt="メルセデス,R231,SL,フロント" width="1210" height="807"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<p class="bf1a i"><a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBR231" class="ico-wiki m1" title="Wikipedia(J) R231"></a></p>
-						<h3 class="i m0">R231</h3>
-						<p class="i m1">ロードスター (vario roof)</p>
-						<p class="i m1">03/2012 - 06/2020</p>
-						<p class="ru">デザイナー : Frank Pfisterer; Mark Fetherston (2007)</p>
-					</div>
-					<section>
-						<h4 class="displayNone">ロードスター</h4>
-						<a href="full/sl/r231_r.jpg"><img loading="lazy" src="style/sl/r231_r.webp" alt="メルセデス,R231,SL,リヤ" width="565" height="424"></a>
-						<a href="full/sl/r231_d.jpg"><img loading="lazy" src="style/sl/r231_d.webp" alt="メルセデス,R231,SL,ダッシュボード" width="636" height="424"></a>
-						<div>
-							<div class="box70a">
-								<h5 class="i">フェイスリフト</h5>
-								<p class="i m1">2017 -</p><br>
-								<a href="full/sl/r231_f2.jpg"><img loading="lazy" src="style/sl/r231_f2.webp" alt="メルセデス,R231,SL,フロント" width="710" height="327"></a><br>
-								<a href="full/sl/r231_r2.jpg"><img loading="lazy" src="style/sl/r231_r2.webp" alt="メルセデス,R231,SL,リヤ" width="710" height="376"></a>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-r231" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBR231" class="ico-wiki" title="Wikipedia(J) R231"></a>
+								<h3>R231</h3>
+								<p>ロードスター (vario roof)</p>
+								03/2012 - 06/2020
 							</div>
-							<div class="box50">
-								<h5>ボディサイズ</h5>
-								<a href="full/sl/r231_a.jpg"><img loading="lazy" src="style/sl/r231_a.webp" alt="メルセデス,R230,SL,寸法" width="498" height="706"></a>
+							<div class="accordion-right">
+								デザイナー : Frank Pfisterer , Mark Fetherston , Gorden Wagener
 							</div>
 						</div>
-						<a href="full/sl/r231_d2.jpg"><img loading="lazy" src="style/sl/r231_d2.webp" alt="メルセデス,R231,SL,ダッシュボード" width="1210" height="807"></a>
-					</section>
+					</button>
+					<div id="accordion-content-r231" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">ロードスター</h4>
+							<a href="full/sl/r231_r.jpg"><img loading="lazy" src="style/sl/r231_r.webp" alt="メルセデス,R231,SL,リヤ" width="565" height="424"></a>
+							<a href="full/sl/r231_d.jpg"><img loading="lazy" src="style/sl/r231_d.webp" alt="メルセデス,R231,SL,ダッシュボード" width="636" height="424"></a>
+							<div>
+								<div class="box70a">
+									<h5 class="i">フェイスリフト</h5>
+									<p class="i m1">2017 -</p><br>
+									<a href="full/sl/r231_f2.jpg"><img loading="lazy" src="style/sl/r231_f2.webp" alt="メルセデス,R231,SL,フロント" width="710" height="327"></a><br>
+									<a href="full/sl/r231_r2.jpg"><img loading="lazy" src="style/sl/r231_r2.webp" alt="メルセデス,R231,SL,リヤ" width="710" height="376"></a>
+								</div>
+								<div class="box50">
+									<h5>ボディサイズ</h5>
+									<a href="full/sl/r231_a.jpg"><img loading="lazy" src="style/sl/r231_a.webp" alt="メルセデス,R230,SL,寸法" width="498" height="706"></a>
+								</div>
+							</div>
+							<a href="full/sl/r231_d2.jpg"><img loading="lazy" src="style/sl/r231_d2.webp" alt="メルセデス,R231,SL,ダッシュボード" width="1210" height="807"></a>
+						</div>
+					</div>
 				</div>
+
 			</div>
 		</section>
 
@@ -643,33 +713,44 @@
 			<h2>第７世代 SL Mercedes-AMG</h2>
 			<div class="style-w">
 				<a href="full/sl/r232_f.jpg"><img loading="lazy" src="style/sl/r232_f.webp" alt="メルセデス,R232,SL,Frontansicht" width="1210" height="679"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<p class="bf1a i"><a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9AMG%E3%83%BBSL" class="ico-wiki m1" title="Wikipedia(J) R232"></a></p>
-						<h3 class="i m0">R232</h3>
-						<p class="i m1">ロードスター (softtop)</p>
-						<p class="i m1">11/2021 -</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-r232" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9AMG%E3%83%BBSL" class="ico-wiki" title="Wikipedia(J) R232"></a>
+								<h3>R232</h3>
+								<p>ロードスター (softtop)</p>
+								11/2021 -
+							</div>
+						</div>
+						<div class="accordion-right">
+							Designer : Slavche Tanevski , Mark Fetherston (Exterior) , Jan Kaul (Interior) , Gorden Wagener
+						</div>
+					</button>
+					<div id="accordion-content-r232" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">ロードスター</h4>
+							<a href="full/sl/r232_tp.jpg"><img loading="lazy" src="style/sl/r232_tp.webp" alt="メルセデス-AMG,R232,SL,ボディフレーム" width="1210" height="788"></a><br>
+							<a href="full/sl/r232_s.jpg"><img loading="lazy" src="style/sl/r232_s.webp" alt="メルセデス-AMG,R232,SL,サイドビュー" width="1210" height="590"></a><br>
+							<a href="full/sl/r232_r.jpg"><img loading="lazy" src="style/sl/r232_r.webp" alt="メルセデス-AMG,R232,SL,リヤ" width="606" height="303"></a>
+							<a href="full/sl/r232_r_v2.jpg"><img loading="lazy" src="style/sl/r232_r_v2.webp" alt="メルセデス-AMG,R232,SL,リヤ" width="598" height="303"></a><br>
+							<a href="full/sl/r232_r_v3.jpg"><img loading="lazy" src="style/sl/r232_r_v3.webp" alt="メルセデス-AMG,R232,SL,リヤ" width="601" height="338"></a>
+							<a href="full/sl/r232_d.jpg"><img loading="lazy" src="style/sl/r232_d.webp" alt="メルセデス-AMG,R232,SL,ダッシュボード" width="601" height="338"></a><br>
+							<a href="full/sl/r232_i.jpg"><img loading="lazy" src="style/sl/r232_i.webp" alt="メルセデス-AMG,R232,SL,内装" width="601" height="338"></a>
+							<a href="full/sl/r232_i_v2.jpg"><img loading="lazy" src="style/sl/r232_i_v2.webp" alt="メルセデス-AMG,R232,SL,内装" width="601" height="338"></a><br>
+							<a href="full/sl/r232_i_v3.jpg"><img loading="lazy" src="style/sl/r232_i_v3.webp" alt="メルセデス-AMG,R232,SL,内装" width="601" height="338"></a>
+							<a href="full/sl/r232_m.jpg"><img loading="lazy" src="style/sl/r232_m.webp" alt="メルセデス-AMG,R232,SL,エンジン" width="603" height="338"></a><br>
+							<a href="full/sl/r232_t.jpg"><img loading="lazy" src="style/sl/r232_t.webp" alt="メルセデス-AMG,R232,SL,トップビュー" width="1210" height="820"></a><br>
+							<a href="full/sl/r232_s_v2.jpg"><img loading="lazy" src="style/sl/r232_s_v2.webp" alt="メルセデス-AMG,R232,SL,サイドビュー" width="1210" height="605"></a>
+							<h5>ボディサイズ</h5>
+							<a href="full/sl/r232_a1.webp"><img loading="lazy" src="style/sl/r232_a1.webp" alt="Mercedes,R232,SL,寸法" width="1210" height="500"></a><br>
+							<a href="full/sl/r232_a2.webp"><img loading="lazy" src="style/sl/r232_a2.webp" alt="Mercedes,R232,SL,寸法" width="603" height="500"></a>
+							<a href="full/sl/r232_a3.webp"><img loading="lazy" src="style/sl/r232_a3.webp" alt="Mercedes,R232,SL,寸法" width="603" height="500"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">ロードスター</h4>
-						<a href="full/sl/r232_tp.jpg"><img loading="lazy" src="style/sl/r232_tp.webp" alt="メルセデス-AMG,R232,SL,ボディフレーム" width="1210" height="788"></a><br>
-						<a href="full/sl/r232_s.jpg"><img loading="lazy" src="style/sl/r232_s.webp" alt="メルセデス-AMG,R232,SL,サイドビュー" width="1210" height="590"></a><br>
-						<a href="full/sl/r232_r.jpg"><img loading="lazy" src="style/sl/r232_r.webp" alt="メルセデス-AMG,R232,SL,リヤ" width="606" height="303"></a>
-						<a href="full/sl/r232_r_v2.jpg"><img loading="lazy" src="style/sl/r232_r_v2.webp" alt="メルセデス-AMG,R232,SL,リヤ" width="598" height="303"></a><br>
-						<a href="full/sl/r232_r_v3.jpg"><img loading="lazy" src="style/sl/r232_r_v3.webp" alt="メルセデス-AMG,R232,SL,リヤ" width="601" height="338"></a>
-						<a href="full/sl/r232_d.jpg"><img loading="lazy" src="style/sl/r232_d.webp" alt="メルセデス-AMG,R232,SL,ダッシュボード" width="601" height="338"></a><br>
-						<a href="full/sl/r232_i.jpg"><img loading="lazy" src="style/sl/r232_i.webp" alt="メルセデス-AMG,R232,SL,内装" width="601" height="338"></a>
-						<a href="full/sl/r232_i_v2.jpg"><img loading="lazy" src="style/sl/r232_i_v2.webp" alt="メルセデス-AMG,R232,SL,内装" width="601" height="338"></a><br>
-						<a href="full/sl/r232_i_v3.jpg"><img loading="lazy" src="style/sl/r232_i_v3.webp" alt="メルセデス-AMG,R232,SL,内装" width="601" height="338"></a>
-						<a href="full/sl/r232_m.jpg"><img loading="lazy" src="style/sl/r232_m.webp" alt="メルセデス-AMG,R232,SL,エンジン" width="603" height="338"></a><br>
-						<a href="full/sl/r232_t.jpg"><img loading="lazy" src="style/sl/r232_t.webp" alt="メルセデス-AMG,R232,SL,トップビュー" width="1210" height="820"></a><br>
-						<a href="full/sl/r232_s_v2.jpg"><img loading="lazy" src="style/sl/r232_s_v2.webp" alt="メルセデス-AMG,R232,SL,サイドビュー" width="1210" height="605"></a>
-						<h5>ボディサイズ</h5>
-						<a href="full/sl/r232_a1.webp"><img loading="lazy" src="style/sl/r232_a1.webp" alt="Mercedes,R232,SL,寸法" width="1210" height="500"></a><br>
-						<a href="full/sl/r232_a2.webp"><img loading="lazy" src="style/sl/r232_a2.webp" alt="Mercedes,R232,SL,寸法" width="603" height="500"></a>
-						<a href="full/sl/r232_a3.webp"><img loading="lazy" src="style/sl/r232_a3.webp" alt="Mercedes,R232,SL,寸法" width="603" height="500"></a>
-					</section>
 				</div>
+
 			</div>
 		</section>
 
@@ -723,9 +804,10 @@
 			<hr>
 			<p class="mid"><small>@ since 2010 , piyopiyo_246</small></p>
 		</footer>
+
 		<p class="m-05" id="page-top"><a href="#head">&#9650;</a></p>
 		<p id="close-accordion">
-			<a class="vmenu_all_action" onclick="doReplaceClassName ('vmenu_on2','vmenu_off')" title="全ての開閉部を閉じる">&#9654;</a>
+			<a id="close-all-accordions-2" class="vmenu_all_action" title="全ての開閉部を閉じる">&#9654;</a>
 		</p>
 	</div>
 
@@ -805,6 +887,120 @@
 			}, 500);
 			return false;
 		});
+	});
+</script>
+
+<script>
+	// シンプル版アコーディオン機能（入れ子非対応）
+	document.addEventListener('DOMContentLoaded', function () {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+		accordionHeaders.forEach(header => {
+			header.addEventListener('click', function () {
+				const content = this.nextElementSibling;
+				const isActive = this.classList.contains('active');
+
+				// クリックされたアコーディオンのみトグル
+				if (isActive) {
+					this.classList.remove('active');
+					this.setAttribute('aria-expanded', 'false');
+					content.classList.remove('active');
+				} else {
+					this.classList.add('active');
+					this.setAttribute('aria-expanded', 'true');
+					content.classList.add('active');
+				}
+			});
+
+			// キーボード操作のサポート
+			header.addEventListener('keydown', function (e) {
+				if (e.key === 'Enter' || e.key === ' ') {
+					e.preventDefault();
+					this.click();
+				}
+			});
+		});
+
+		// 全開/全閉ボタンのイベントリスナー
+		const openAllBtn = document.getElementById('open-all-accordions');
+		const closeAllBtn = document.getElementById('close-all-accordions');
+		const closeAllBtn2 = document.getElementById('close-all-accordions-2');
+
+		if (openAllBtn) {
+			openAllBtn.addEventListener('click', openAllAccordions);
+		}
+
+		if (closeAllBtn) {
+			closeAllBtn.addEventListener('click', closeAllAccordions);
+		}
+
+		if (closeAllBtn2) {
+			closeAllBtn2.addEventListener('click', closeAllAccordions);
+		}
+	});
+
+	// 全アコーディオン操作機能
+	function openAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.add('active');
+			header.setAttribute('aria-expanded', 'true');
+			content.classList.add('active');
+		});
+	}
+
+	function closeAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.remove('active');
+			header.setAttribute('aria-expanded', 'false');
+			content.classList.remove('active');
+		});
+	}
+
+	// 全アコーディオン操作機能
+	function openAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.add('active');
+			header.setAttribute('aria-expanded', 'true');
+			content.classList.add('active');
+		});
+	}
+
+	function closeAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.remove('active');
+			header.setAttribute('aria-expanded', 'false');
+			content.classList.remove('active');
+		});
+	}
+
+	// ボタンにイベントリスナーを追加
+	document.addEventListener('DOMContentLoaded', function () {
+		// 既存のアコーディオンコード...
+
+		// 全開/全閉ボタン
+		const openAllBtn = document.getElementById('open-all-accordions');
+		const closeAllBtn = document.getElementById('close-all-accordions');
+		const closeAllBtn2 = document.getElementById('close-all-accordions-2'); // 追加ボタン
+
+		if (openAllBtn) {
+			openAllBtn.addEventListener('click', openAllAccordions);
+		}
+
+		if (closeAllBtn) {
+			closeAllBtn.addEventListener('click', closeAllAccordions);
+		}
+
+		if (closeAllBtn2) {
+			closeAllBtn2.addEventListener('click', closeAllAccordions);
+		}
 	});
 </script>
 
