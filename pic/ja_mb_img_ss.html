@@ -51,23 +51,6 @@
 	<link rel="stylesheet" href="../style.min.css">
 	<link rel="stylesheet" href="../style_v.min.css">
 
-	<!-- アコーディオン用のJavaScript関数を追加 -->
-	<script>
-		function doToggleClassName(obj, onClassName, offClassName) {
-			obj.className = (obj.className != onClassName) ? onClassName : offClassName;
-		}
-		function getParentObj(obj) {
-			return obj.parentElement || obj.parentNode;
-		}
-		function doReplaceClassName(findClassName, replaceClassName, targetTagName) {
-			var elements = document.getElementsByTagName(targetTagName || '*');
-			for (var i = 0; i < elements.length; i++) {
-				if (elements[i].className == findClassName)
-					elements[i].className = replaceClassName;
-			}
-		}
-	</script>
-
 	<!-- 6. Cookie同意管理システム -->
 	<script>
 		window._cookiescript = {
@@ -271,7 +254,7 @@
 					</li>
 				</ul>
 				<h1 class="b bf4">SL / SLS / AMG-GT</h1>
-				 <div style="display: flex; justify-content: space-between; width: 1210px;">
+				<div style="display: flex; justify-content: space-between; width: 1210px;">
 					<dl class="m1">
 						<dt class="s2 af0">Series</dt>
 						<dd class="s2"><a href="#w194" title="300SL プロトタイプ W194" class="lnk2">194</a></dd>
@@ -284,8 +267,8 @@
 						<dd><a href="#c192" title="AMG GT C192" class="lnk2">192</a></dd>
 					</dl>
 					<span>
-						<button class="vmenu_all_action square_btn" type="button" title="クリックで全ての開閉部を開く" span onclick="doReplaceClassName('vmenu_off', 'vmenu_on2')">全て開く</button>
-						<button class="vmenu_all_action square_btn" type="button" title="クリックで全ての開閉部を閉じる" span onclick="doReplaceClassName('vmenu_on2', 'vmenu_off')">全て閉じる</button>
+						<button id="open-all-accordions" class="vmenu_all_action square_btn" type="button" title="クリックで全ての開閉部を開く">全て開く</button>
+						<button id="close-all-accordions" class="vmenu_all_action square_btn" type="button" title="クリックで全ての開閉部を閉じる">全て閉じる</button>
 						<button class="square_btn" type="button" onclick="location.href='en_mb_img_ss.html'">En</button>
 						<button class="square_btn" type="button" onclick="location.href='mb_img_ss.html'">De</button>
 					</span>
@@ -343,24 +326,34 @@
 			<h2>300SL プロトタイプ</h2>
 			<div class="style-w">
 				<img src="style/ss/w194_0.webp" alt="メルセデス,W194,300SL" width="1210" height="757">
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<p class="bf1a i"><a href="https://en.wikipedia.org/wiki/Mercedes-Benz_W194" class="ico-wiki m1" title="Wikipedia(E) W194"></a></p>
-						<h3 class="i m0">W194</h3>
-						<p class="i m1">Coupe</p>
-						<p class="i m1">1952 - 1953</p>
-						<p class="ru">デザイナー : Rudolf Uhlenhaut</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-w194" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://en.wikipedia.org/wiki/Mercedes-Benz_W194" class="ico-wiki" title="Wikipedia(E) W194"></a>
+								<h3>W194</h3>
+								<p>Coupe</p>
+								1952 - 1953
+							</div>
+							<div class="accordion-right">
+								デザイナー : Rudolf Uhlenhaut , Friedrich Geiger
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-w194" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">Coupe</h4>
+							<img loading="lazy" src="style/ss/w194.webp" alt="メルセデス,W194,300SL" width="1210" height="681"><br>
+							<a href="full/ss/w194_f.jpg"><img loading="lazy" src="style/ss/w194_f.webp" alt="メルセデス,W194,300SL プロトタイプ,フロント" width="567" height="425"></a>
+							<a href="full/ss/w194_r.jpg"><img loading="lazy" src="style/ss/w194_r.webp" alt="メルセデス,W194,300SL プロトタイプ,リヤ" width="638" height="425"></a><br>
+							<a href="full/ss/w194_d.jpg"><img loading="lazy" src="style/ss/w194_d.webp" alt="メルセデス,W194,300SL プロトタイプ,ダッシュボード" width="597" height="448"></a>
+							<a href="full/ss/w194_m.jpg"><img loading="lazy" src="style/ss/w194_m.webp" alt="メルセデス,W194,300SL プロトタイプ,エンジン" width="605" height="448"></a><br>
+							<a href="full/ss/w194_s.jpg"><img loading="lazy" src="style/ss/w194_s.webp" alt="メルセデス,w194,300SL プロトタイプ,側面" width="1210" height="908"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">Coupe</h4>
-						<img loading="lazy" src="style/ss/w194.webp" alt="メルセデス,W194,300SL" width="1210" height="681"><br>
-						<a href="full/ss/w194_f.jpg"><img loading="lazy" src="style/ss/w194_f.webp" alt="メルセデス,W194,300SL プロトタイプ,フロント" width="567" height="425"></a>
-						<a href="full/ss/w194_r.jpg"><img loading="lazy" src="style/ss/w194_r.webp" alt="メルセデス,W194,300SL プロトタイプ,リヤ" width="638" height="425"></a><br>
-						<a href="full/ss/w194_d.jpg"><img loading="lazy" src="style/ss/w194_d.webp" alt="メルセデス,W194,300SL プロトタイプ,ダッシュボード" width="597" height="448"></a>
-						<a href="full/ss/w194_m.jpg"><img loading="lazy" src="style/ss/w194_m.webp" alt="メルセデス,W194,300SL プロトタイプ,エンジン" width="605" height="448"></a><br>
-						<a href="full/ss/w194_s.jpg"><img loading="lazy" src="style/ss/w194_s.webp" alt="メルセデス,w194,300SL プロトタイプ,側面" width="1210" height="908"></a>
-					</section>
 				</div>
+
 			</div>
 		</section>
 
@@ -368,42 +361,59 @@
 			<h2>300SLR</h2>
 			<div class="style-w">
 				<a href="full/ss/w196a_300slr.jpg"><img loading="lazy" src="style/ss/w196a_300slr.webp" alt="メルセデス,W196,300slr" width="1210" height="908"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<p class="bf1a i"><a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBW196" class="ico-wiki m1" title="Wikipedia(J) W196"></a></p>
-						<h3 class="i m0">W196</h3>
-						<p class="i m1">ロードスター</p>
-						<p class="i m1">1955</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-w196" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBW196" class="ico-wiki" title="Wikipedia(J) W196"></a>
+								<h3>W196</h3>
+								<p>ロードスター</p>
+								1955
+							</div>
+							<div class="accordion-right">
+								デザイナー : Rudolf Uhlenhaut , Friedrich Geiger
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-w196" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">ロードスター</h4>
+							<a href="full/ss/w196a_f_300slr.jpg"><img loading="lazy" src="style/ss/w196a_f_300slr.webp" alt="メルセデス,w196,300slr,フロント" width="1210" height="805"></a><br>
+							<a href="full/ss/w196_tp_300slr.jpg"><img loading="lazy" src="style/ss/w196_tp_300slr.webp" alt="メルセデス,w196,w196,300slr,透視図" width="1210" height="532"></a><br>
+							<a href="full/ss/w196_2tp_300slr.jpg"><img loading="lazy" src="style/ss/w196_2tp_300slr.webp" alt="メルセデス,W196,300slr,透視図" width="603" height="452"></a>
+							<a href="full/ss/w196a_3f_300slr.jpg"><img loading="lazy" src="style/ss/w196a_3f_300slr.webp" alt="メルセデス,W196,300slr,フロント" width="603" height="452"></a><br>
+							<a href="full/ss/w194_2m.jpg"><img loading="lazy" src="style/ss/w194_2m.webp" alt="メルセデス,W196,300slr,エンジン" width="603" height="452"></a>
+							<a href="full/ss/w196_m_300slr.jpg"><img loading="lazy" src="style/ss/w196_m_300slr.webp" alt="メルセデス,W196,300slr,エンジン" width="603" height="452"></a><br>
+							<a href="full/ss/w196a_r_300slr.jpg"><img loading="lazy" src="style/ss/w196a_r_300slr.webp" alt="メルセデス,w196,300slr,リヤ" width="1210" height="775"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">ロードスター</h4>
-						<a href="full/ss/w196a_f_300slr.jpg"><img loading="lazy" src="style/ss/w196a_f_300slr.webp" alt="メルセデス,w196,300slr,フロント" width="1210" height="805"></a><br>
-						<a href="full/ss/w196_tp_300slr.jpg"><img loading="lazy" src="style/ss/w196_tp_300slr.webp" alt="メルセデス,w196,w196,300slr,透視図" width="1210" height="532"></a><br>
-						<a href="full/ss/w196_2tp_300slr.jpg"><img loading="lazy" src="style/ss/w196_2tp_300slr.webp" alt="メルセデス,W196,300slr,透視図" width="603" height="452"></a>
-						<a href="full/ss/w196a_3f_300slr.jpg"><img loading="lazy" src="style/ss/w196a_3f_300slr.webp" alt="メルセデス,W196,300slr,フロント" width="603" height="452"></a><br>
-						<a href="full/ss/w194_2m.jpg"><img loading="lazy" src="style/ss/w194_2m.webp" alt="メルセデス,W196,300slr,エンジン" width="603" height="452"></a>
-						<a href="full/ss/w196_m_300slr.jpg"><img loading="lazy" src="style/ss/w196_m_300slr.webp" alt="メルセデス,W196,300slr,エンジン" width="603" height="452"></a><br>
-						<a href="full/ss/w196a_r_300slr.jpg"><img loading="lazy" src="style/ss/w196a_r_300slr.webp" alt="メルセデス,w196,300slr,リヤ" width="1210" height="775"></a>
-					</section>
 				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<h3 class="bf1b i">W196</h3>
-						<p class="i m1">Uhlenhaut - Coupe</p>
-						<p class="i m1">1955</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-uhlenhaut - coupe" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h4>Uhlenhaut - Coupe</h4>
+								1955
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-uhlenhaut - coupe" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">Coupe</h4>
+							<a href="full/ss/w196_f_300slr.jpg"><img loading="lazy" src="style/ss/w196_f_300slr.webp" alt="メルセデス,w196,300slr,フロント" width="1210" height="908"></a><br>
+							<a href="full/ss/w196_r_300slr.jpg"><img loading="lazy" src="style/ss/w196_r_300slr.webp" alt="メルセデス,w196,300slr,リヤ" width="751" height="455"></a>
+							<a href="full/ss/w196_d_300slr.jpg"><img loading="lazy" src="style/ss/w196_d_300slr.webp" alt="メルセデス,w196,300slr,ダッシュボード" width="455" height="455"></a><br>
+							<a href="full/ss/w196_s_300slr.jpg"><img loading="lazy" src="style/ss/w196_s_300slr.webp" alt="メルセデス,W196,300slr,側面" width="1210" height="908"></a><br>
+							<a href="full/ss/w196_2f_300slr.jpg"><img loading="lazy" src="style/ss/w196_2f_300slr.webp" alt="メルセデス,W196,300slr,フロント" width="603" height="452"></a>
+							<a href="full/ss/w196_3f_300slr.jpg"><img loading="lazy" src="style/ss/w196_3f_300slr.webp" alt="メルセデス,W196,300slr,フロント" width="603" height="452"></a>
+							<h5>ボディサイズ</h5>
+							<a href="full/ss/w196_a_300slr.jpg"><img loading="lazy" src="style/ss/w196_a_300slr.webp" alt="メルセデス,w196,300slr,寸法" width="1210" height="855"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">Coupe</h4>
-						<a href="full/ss/w196_f_300slr.jpg"><img loading="lazy" src="style/ss/w196_f_300slr.webp" alt="メルセデス,w196,300slr,フロント" width="1210" height="908"></a><br>
-						<a href="full/ss/w196_r_300slr.jpg"><img loading="lazy" src="style/ss/w196_r_300slr.webp" alt="メルセデス,w196,300slr,リヤ" width="751" height="455"></a>
-						<a href="full/ss/w196_d_300slr.jpg"><img loading="lazy" src="style/ss/w196_d_300slr.webp" alt="メルセデス,w196,300slr,ダッシュボード" width="455" height="455"></a><br>
-						<a href="full/ss/w196_s_300slr.jpg"><img loading="lazy" src="style/ss/w196_s_300slr.webp" alt="メルセデス,W196,300slr,側面" width="1210" height="908"></a><br>
-						<a href="full/ss/w196_2f_300slr.jpg"><img loading="lazy" src="style/ss/w196_2f_300slr.webp" alt="メルセデス,W196,300slr,フロント" width="603" height="452"></a>
-						<a href="full/ss/w196_3f_300slr.jpg"><img loading="lazy" src="style/ss/w196_3f_300slr.webp" alt="メルセデス,W196,300slr,フロント" width="603" height="452"></a>
-						<h5>ボディサイズ</h5>
-						<a href="full/ss/w196_a_300slr.jpg"><img loading="lazy" src="style/ss/w196_a_300slr.webp" alt="メルセデス,w196,300slr,寸法" width="1210" height="855"></a>
-					</section>
 				</div>
+
 			</div>
 		</section>
 
@@ -411,21 +421,31 @@
 			<h2>300SLS</h2>
 			<div class="style-w">
 				<a href="full/ss/w196a_s_300sls.jpg"><img loading="lazy" src="style/ss/w196a_s_300sls.webp" alt="メルセデス,w196,300sls,側面" width="1210" height="747"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<h3 class="bf1b i">W196 II</h3>
-						<p class="i m1">TOURING SPORTS CAR</p>
-						<p class="i m1">ロードスター</p>
-						<p class="i m1">1957</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-w196 ii" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h3>W196 II</h3>
+								<p>ロードスター</p>
+								1957
+							</div>
+							<div class="accordion-right">
+								デザイナー : Rudolf Uhlenhaut , Friedrich Geiger
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-w196 ii" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">ロードスター</h4>
+							<a href="full/ss/w196a_2f_300sls.jpg"><img loading="lazy" src="style/ss/w196a_2f_300sls.webp" alt="メルセデス,W196,300sls,フロント" width="621" height="394"></a>
+							<a href="full/ss/w196a_2r_300sls.jpg"><img loading="lazy" src="style/ss/w196a_2r_300sls.webp" alt="メルセデス,W196,300sls,リヤ" width="585" height="394"></a><br>
+							<a href="full/ss/w196a_f_300sls.jpg"><img loading="lazy" src="style/ss/w196a_f_300sls.webp" alt="メルセデス,w196,300sls,フロント" width="622" height="390"></a>
+							<a href="full/ss/w196a_r_300sls.jpg"><img loading="lazy" src="style/ss/w196a_r_300sls.webp" alt="メルセデス,w196,300sls,リヤ" width="585" height="390"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">ロードスター</h4>
-						<a href="full/ss/w196a_2f_300sls.jpg"><img loading="lazy" src="style/ss/w196a_2f_300sls.webp" alt="メルセデス,W196,300sls,フロント" width="621" height="394"></a>
-						<a href="full/ss/w196a_2r_300sls.jpg"><img loading="lazy" src="style/ss/w196a_2r_300sls.webp" alt="メルセデス,W196,300sls,リヤ" width="585" height="394"></a><br>
-						<a href="full/ss/w196a_f_300sls.jpg"><img loading="lazy" src="style/ss/w196a_f_300sls.webp" alt="メルセデス,w196,300sls,フロント" width="622" height="390"></a>
-						<a href="full/ss/w196a_r_300sls.jpg"><img loading="lazy" src="style/ss/w196a_r_300sls.webp" alt="メルセデス,w196,300sls,リヤ" width="585" height="390"></a>
-					</section>
 				</div>
+
 			</div>
 		</section>
 		<section>
@@ -436,56 +456,76 @@
 			<h2 id="c199">SLR McLaren</h2>
 			<div class="style-w">
 				<a href="full/ss/c199.jpg"><img loading="lazy" src="style/ss/c199.webp" alt="メルセデス,C199,SLR McLaren" width="1210" height="756"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<p class="bf1a i"><a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBSLR%E3%83%9E%E3%82%AF%E3%83%A9%E3%83%BC%E3%83%AC%E3%83%B3" class="ico-wiki m1" title="Wikipedia(J) 199"></a></p>
-						<h3 class="i m0">C199</h3>
-						<p class="i m1">Coupe</p>
-						<p class="i m1">2004 - 2009</p>
-						<p class="ru">デザイナー : Gorden Wagener , Steffen K&ouml;hl , Franz Lecher (1998)</p>
-					</div>
-					<section>
-						<h4 class="displayNone">C199</h4>
-						<div>
-							<div class="box53"><br>
-								<a href="full/ss/c199_f.jpg"><img loading="lazy" src="style/ss/c199_f.webp" alt="メルセデス,C199,SLR McLaren,フロント" width="524" height="393"></a><br>
-								<a href="full/ss/c199_r.jpg"><img loading="lazy" src="style/ss/c199_r.webp" alt="メルセデス,C199,SLR McLaren,リヤ" width="524" height="260"></a><br>
-								<a href="full/ss/c199_d.jpg"><img loading="lazy" src="style/ss/c199_d.webp" alt="メルセデス,C199,SLR McLaren,ダッシュボード" width="524" height="314"></a>
-							</div>
-							<div class="box68">
-								<h5>ボディサイズ</h5>
-								<a href="full/ss/c199_a.jpg"><img loading="lazy" src="style/ss/c199_a.webp" alt="メルセデス,C197,AMG GT,寸法" width="680" height="970"></a>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-c199" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBSLR%E3%83%9E%E3%82%AF%E3%83%A9%E3%83%BC%E3%83%AC%E3%83%B3" class="ico-wiki" title="Wikipedia(J) 199"></a>
+								<h3>C199</h3>
+								<p>Coupe</p>
+								2004 - 2009
 							</div>
 						</div>
-						<h3 class="i">A199</h3>
-						<p class="i m1">ロードスター</p><br>
-						<a href="full/ss/c199a_f.jpg"><img loading="lazy" src="style/ss/c199a_f.webp" alt="メルセデス,C199a,SLR McLaren,ロードスター,フロント" width="577" height="384"></a>
-						<a href="full/ss/c199a_r.jpg"><img loading="lazy" src="style/ss/c199a_r.webp" alt="メルセデス,C199a,SLR McLaren,ロードスター,リヤ" width="625" height="384"></a>
-					</section>
+						<div class="accordion-right">
+							デザイナー : Gordon Murray , Mark Fetherston , Steve Mattin , Il-hun Yoon , Peter Pfeiffer
+						</div>
+					</button>
+					<div id="accordion-content-c199" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">C199</h4>
+							<div>
+								<div class="box53"><br>
+									<a href="full/ss/c199_f.jpg"><img loading="lazy" src="style/ss/c199_f.webp" alt="メルセデス,C199,SLR McLaren,フロント" width="524" height="393"></a><br>
+									<a href="full/ss/c199_r.jpg"><img loading="lazy" src="style/ss/c199_r.webp" alt="メルセデス,C199,SLR McLaren,リヤ" width="524" height="260"></a><br>
+									<a href="full/ss/c199_d.jpg"><img loading="lazy" src="style/ss/c199_d.webp" alt="メルセデス,C199,SLR McLaren,ダッシュボード" width="524" height="314"></a>
+								</div>
+								<div class="box68">
+									<h5>ボディサイズ</h5>
+									<a href="full/ss/c199_a.jpg"><img loading="lazy" src="style/ss/c199_a.webp" alt="メルセデス,C197,AMG GT,寸法" width="680" height="970"></a>
+								</div>
+							</div>
+							<h3 class="i">A199</h3>
+							<p class="i m1">ロードスター</p><br>
+							<a href="full/ss/c199a_f.jpg"><img loading="lazy" src="style/ss/c199a_f.webp" alt="メルセデス,C199a,SLR McLaren,ロードスター,フロント" width="577" height="384"></a>
+							<a href="full/ss/c199a_r.jpg"><img loading="lazy" src="style/ss/c199a_r.webp" alt="メルセデス,C199a,SLR McLaren,ロードスター,リヤ" width="625" height="384"></a>
+						</div>
+					</div>
 				</div>
+
 			</div>
 			<h3 class="b" id="z199">Stirling Moss</h3>
 			<div class="style-w">
 				<a href="full/ss/z199_2r.jpg"><img loading="lazy" src="style/ss/z199_2r.webp" alt="メルセデス,Z199,Stirling Moss McLaren,リヤ" width="1210" height="750"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<p class="bf1a i"><a href="https://en.wikipedia.org/wiki/Mercedes-Benz_SLR_McLaren#Stirling_Moss_(2009)" class="ico-wiki m1" title="Wikipedia(E) Z199"></a></p>
-						<h3 class="i m0">Z199</h3>
-						<p class="i m1">ロードスター</p>
-						<p class="i m1">2009</p>
-						<p class="ru">デザイナー : Il-hun Yoon , Frank Pfisterer</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-z199" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://en.wikipedia.org/wiki/Mercedes-Benz_SLR_McLaren#Stirling_Moss_(2009)" class="ico-wiki" title="Wikipedia(E) Z199"></a>
+								<h3>Z199</h3>
+								<p>ロードスター</p>
+								2009
+							</div>
+							<div class="accordion-right">
+								デザイナー : Il-hun Yoon , Slavche Tanevski , Gordon Murray , Peter Pfeiffer
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-z199" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">Z199</h4>
+							<a href="full/ss/z199_tp.jpg"><img loading="lazy" src="style/ss/z199_tp.webp" alt="メルセデス,Z199,Stirling Moss McLaren,透視図" width="1210" height="681"></a><br>
+							<a href="full/ss/z199_f.jpg"><img loading="lazy" src="style/ss/z199_f.webp" alt="メルセデス,Z199,Stirling Moss McLaren,フロント" width="601" height="451"></a>
+							<a href="full/ss/z199_r.jpg"><img loading="lazy" src="style/ss/z199_r.webp" alt="メルセデス,Z199,Stirling Moss McLaren,リヤ" width="601" height="451"></a><br>
+							<a href="full/ss/z199_d.jpg"><img loading="lazy" src="style/ss/z199_d.webp" alt="メルセデス,Z199,Stirling Moss McLaren,ダッシュボード" width="635" height="426"></a>
+							<a href="full/ss/z199_i.jpg"><img loading="lazy" src="style/ss/z199_i.webp" alt="メルセデス,Z199,Stirling Moss McLaren,内装" width="568" height="426"></a><br>
+							<a href="full/ss/z199_2d.jpg"><img loading="lazy" src="style/ss/z199_2d.webp" alt="メルセデス,Z199,Stirling Moss McLaren,ダッシュボード" width="804" height="536"></a>
+							<a href="full/ss/z199_2f.jpg"><img loading="lazy" src="style/ss/z199_2f.webp" alt="メルセデス,Z199,Stirling Moss McLaren,フロント" width="401" height="536"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">Z199</h4>
-						<a href="full/ss/z199_tp.jpg"><img loading="lazy" src="style/ss/z199_tp.webp" alt="メルセデス,Z199,Stirling Moss McLaren,透視図" width="1210" height="681"></a><br>
-						<a href="full/ss/z199_f.jpg"><img loading="lazy" src="style/ss/z199_f.webp" alt="メルセデス,Z199,Stirling Moss McLaren,フロント" width="601" height="451"></a>
-						<a href="full/ss/z199_r.jpg"><img loading="lazy" src="style/ss/z199_r.webp" alt="メルセデス,Z199,Stirling Moss McLaren,リヤ" width="601" height="451"></a><br>
-						<a href="full/ss/z199_d.jpg"><img loading="lazy" src="style/ss/z199_d.webp" alt="メルセデス,Z199,Stirling Moss McLaren,ダッシュボード" width="635" height="426"></a>
-						<a href="full/ss/z199_i.jpg"><img loading="lazy" src="style/ss/z199_i.webp" alt="メルセデス,Z199,Stirling Moss McLaren,内装" width="568" height="426"></a><br>
-						<a href="full/ss/z199_2d.jpg"><img loading="lazy" src="style/ss/z199_2d.webp" alt="メルセデス,Z199,Stirling Moss McLaren,ダッシュボード" width="804" height="536"></a>
-						<a href="full/ss/z199_2f.jpg"><img loading="lazy" src="style/ss/z199_2f.webp" alt="メルセデス,Z199,Stirling Moss McLaren,フロント" width="401" height="536"></a>
-					</section>
 				</div>
+
 			</div>
 		</section>
 
@@ -493,26 +533,36 @@
 			<h2>SLS AMG</h2>
 			<div class="style-w">
 				<a href="full/ss/c197_r.jpg"><img loading="lazy" src="style/ss/c197_r.webp" alt="メルセデス,C197,SLS AMG,リヤ" width="1200" height="800"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<p class="bf1a i"><a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBSLS_AMG" class="ico-wiki m1" title="Wikipedia(J) C197"></a></p>
-						<h3 class="i m0">C197</h3>
-						<p class="i m1">Coupe</p>
-						<p class="i m1">2009 - 2014</p>
-						<p class="ru">デザイナー : Mark Fetherston (2007)</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-c197" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBSLS_AMG" class="ico-wiki" title="Wikipedia(J) C197"></a>
+								<h3>C197</h3>
+								<p>Coupe</p>
+								2009 - 2014
+							</div>
+							<div class="accordion-right">
+								デザイナー : Mark Fetherston , Gorden Wagener
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-c197" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">Coupe</h4>
+							<a href="full/ss/c197_f.jpg"><img loading="lazy" src="style/ss/c197_f.webp" alt="メルセデス,C197,SLS AMG,フロント" width="730" height="339"></a>
+							<a href="full/ss/c197_d.jpg"><img loading="lazy" src="style/ss/c197_d.webp" alt="メルセデス,C197,SLS AMG,ダッシュボード" width="474" height="339"></a>
+							<h5>ボディサイズ</h5>
+							<a href="full/ss/c197_a.jpg"><img loading="lazy" src="style/ss/c197_a.webp" alt="メルセデス,C197,SLS AMG,寸法" width="873" height="1200"></a><br>
+							<h3 class="i">A197</h3>
+							<p class="i m1">ロードスター</p><br>
+							<a href="full/ss/c197a_f.jpg"><img loading="lazy" src="style/ss/c197a_f.webp" alt="メルセデス,C197a,SLS AMG,ロードスター,フロント" width="568" height="263"></a>
+							<a href="full/ss/c197a_r.jpg"><img loading="lazy" src="style/ss/c197a_r.webp" alt="メルセデス,C197a,SLS AMG,ロードスター,リヤ" width="638" height="263"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">Coupe</h4>
-						<a href="full/ss/c197_f.jpg"><img loading="lazy" src="style/ss/c197_f.webp" alt="メルセデス,C197,SLS AMG,フロント" width="730" height="339"></a>
-						<a href="full/ss/c197_d.jpg"><img loading="lazy" src="style/ss/c197_d.webp" alt="メルセデス,C197,SLS AMG,ダッシュボード" width="474" height="339"></a>
-						<h5>ボディサイズ</h5>
-						<a href="full/ss/c197_a.jpg"><img loading="lazy" src="style/ss/c197_a.webp" alt="メルセデス,C197,SLS AMG,寸法" width="873" height="1200"></a><br>
-						<h3 class="i">A197</h3>
-						<p class="i m1">ロードスター</p><br>
-						<a href="full/ss/c197a_f.jpg"><img loading="lazy" src="style/ss/c197a_f.webp" alt="メルセデス,C197a,SLS AMG,ロードスター,フロント" width="568" height="263"></a>
-						<a href="full/ss/c197a_r.jpg"><img loading="lazy" src="style/ss/c197a_r.webp" alt="メルセデス,C197a,SLS AMG,ロードスター,リヤ" width="638" height="263"></a>
-					</section>
 				</div>
+
 			</div>
 		</section>
 		<section>
@@ -526,33 +576,44 @@
 			<h2>AMG GT</h2>
 			<div class="style-w">
 				<a href="full/ss/c190_d.jpg"><img loading="lazy" src="style/ss/c190_d.webp" alt="メルセデス,C190,AMG GT,ダッシュボード" width="1210" height="806"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<p class="bf1a i"><a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9AMG%E3%83%BBGT" class="ico-wiki m1" title="Wikipedia(J) C190"></a></p>
-						<h3 class="i">C190</h3>
-						<p class="i m1">Coupe</p>
-						<p class="i m1">2014 - 2021</p><br>
-						<p class="ru">デザイナー : Gorden Wagener , Mark Fetherston (exterior) , Jan Kaul (interior)</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-c190" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9AMG%E3%83%BBGT" class="ico-wiki" title="Wikipedia(J) C190"></a>
+								<h3>C190</h3>
+								<p>Coupe</p>
+								2014 - 2021
+							</div>
+						</div>
+						<div class="accordion-right">
+							デザイナー : Mark Fetherston , Robert Lešnik (Exterior) , Jan Kaul (interior) , Gorden Wagener
+						</div>
+					</button>
+					<div id="accordion-content-c190" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">Coupe</h4>
+							<a href="full/ss/c190_f.jpg"><img loading="lazy" src="style/ss/c190_f.webp" alt="メルセデス,C190,AMG GT,フロント" width="604" height="303"></a>
+							<a href="full/ss/c190_r.jpg"><img loading="lazy" src="style/ss/c190_r.webp" alt="メルセデス,C190,AMG GT,リヤ" width="600" height="303"></a><br>
+							<h4 class="i">AMG GT R</h4>
+							<p class="i m1">Coupe</p>
+							<p class="i m1">03/2016 - 2021　Link:
+								<a href="https://youtu.be/g_-QBjXyI-8" title="youtube,Der Klong von GTR" class="lnk"><span class="td3">Green hell</span></a>
+							</p><br>
+							<a href="full/ss/c190amg-gt-r_f.jpg"><img loading="lazy" src="style/ss/c190amg-gt-r_f.webp" alt="メルセデス,C190,AMG GT R,フロント" width="603" height="352"></a>
+							<a href="full/ss/c190amg-gt-r_r.jpg"><img loading="lazy" src="style/ss/c190amg-gt-r_r.webp" alt="メルセデス,C190,AMG GT R,リヤ" width="603" height="352"></a>
+							<h5>ボディサイズ</h5>
+							<a href="full/ss/c190_a.jpg"><img loading="lazy" src="style/ss/c190_a.webp" alt="メルセデス,C190,AMG GT,寸法" width="804" height="1062"></a><br>
+							<h3 class="i">A190</h3>
+							<p class="i m1">ロードスター</p>
+							<p class="i m1">03/2017 - 2021</p><br>
+							<a href="full/ss/a190_f.jpg"><img loading="lazy" src="style/ss/a190_f.webp" alt="メルセデス,C190,AMG GT C ロードスター,フロント" width="602" height="401"></a>
+							<a href="full/ss/a190_r.jpg"><img loading="lazy" src="style/ss/a190_r.webp" alt="メルセデス,C190,AMG GT C ロードスター,リヤ" width="602" height="401"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">Coupe</h4>
-						<a href="full/ss/c190_f.jpg"><img loading="lazy" src="style/ss/c190_f.webp" alt="メルセデス,C190,AMG GT,フロント" width="604" height="303"></a>
-						<a href="full/ss/c190_r.jpg"><img loading="lazy" src="style/ss/c190_r.webp" alt="メルセデス,C190,AMG GT,リヤ" width="600" height="303"></a><br>
-						<h4 class="i">AMG GT R</h4>
-						<p class="i m1">03/2016 - 2021　Link:
-							<a href="https://youtu.be/g_-QBjXyI-8" title="youtube,Der Klong von GTR" class="lnk"><span class="td3">Green hell</span></a>
-						</p><br>
-						<a href="full/ss/c190amg-gt-r_f.jpg"><img loading="lazy" src="style/ss/c190amg-gt-r_f.webp" alt="メルセデス,C190,AMG GT R,フロント" width="603" height="352"></a>
-						<a href="full/ss/c190amg-gt-r_r.jpg"><img loading="lazy" src="style/ss/c190amg-gt-r_r.webp" alt="メルセデス,C190,AMG GT R,リヤ" width="603" height="352"></a>
-						<h5>ボディサイズ</h5>
-						<a href="full/ss/c190_a.jpg"><img loading="lazy" src="style/ss/c190_a.webp" alt="メルセデス,C190,AMG GT,寸法" width="804" height="1062"></a><br>
-						<h3 class="i">A190</h3>
-						<p class="i m1">ロードスター</p>
-						<p class="i m1">03/2017 - 2021</p><br>
-						<a href="full/ss/a190_f.jpg"><img loading="lazy" src="style/ss/a190_f.webp" alt="メルセデス,C190,AMG GT C ロードスター,フロント" width="602" height="401"></a>
-						<a href="full/ss/a190_r.jpg"><img loading="lazy" src="style/ss/a190_r.webp" alt="メルセデス,C190,AMG GT C ロードスター,リヤ" width="602" height="401"></a>
-					</section>
 				</div>
+
 			</div>
 		</section>
 
@@ -560,26 +621,36 @@
 			<h2>AMG GT 4door Coupe</h2>
 			<div class="style-w">
 				<a href="full/ss/x290_s.jpg"><img loading="lazy" src="style/ss/x290_s.webp" alt="メルセデス,X290,AMG GT,4ドア,クーペ,側面" width="1210" height="750"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<p class="bf1a i"><a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9AMG%E3%83%BBGT%E3%83%BB4%E3%83%89%E3%82%A2%E3%82%AF%E3%83%BC%E3%83%9A" class="ico-wiki m1" title="Wikipedia(J) X290"></a></p>
-						<h3 class="i m0">X290</h3>
-						<p class="i m1">4door Coupe</p>
-						<p class="i m1">03/2018 -</p>
-						<p class="ru">デザイナー : Balázs Filczer</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-x290" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9AMG%E3%83%BBGT%E3%83%BB4%E3%83%89%E3%82%A2%E3%82%AF%E3%83%BC%E3%83%9A" class="ico-wiki" title="Wikipedia(J) X290"></a>
+								<h3>X290</h3>
+								<p>4door Coupe</p>
+								03/2018 -
+							</div>
+						</div>
+						<div class="accordion-right">
+							デザイナー : Balázs Filczer , Daniel Kiltane , Slavche Tanevski , Robert Lešnik , Gorden Wagener
+						</div>
+					</button>
+					<div id="accordion-content-x290" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">4door Coupe</h4>
+							<a href="full/ss/x290_f.jpg"><img loading="lazy" src="style/ss/x290_f.webp" alt="メルセデス,X290,AMG GT,4ドア,クーペ,フロント" width="602" height="339"></a>
+							<a href="full/ss/x290_r.jpg"><img loading="lazy" src="style/ss/x290_r.webp" alt="メルセデス,X290,AMG GT,4ドア,クーペ,リヤ" width="602" height="339"></a><br>
+							<a href="full/ss/x290_d.jpg"><img loading="lazy" src="style/ss/x290_d.webp" alt="メルセデス,X290,AMG GT,4ドア,クーペ,ダッシュボード" width="602" height="401"></a>
+							<a href="full/ss/x290_i.jpg"><img loading="lazy" src="style/ss/x290_i.webp" alt="メルセデス,X290,AMG GT,4ドア,クーペ,内装" width="602" height="401"></a>
+							<h5>ボディサイズ</h5>
+							<a href="full/ss/x290_a1.webp"><img loading="lazy" src="style/ss/x290_a1.webp" alt="メルセデス,X290,AMG GT,寸法" width="602" height="416"></a>
+							<a href="full/ss/x290_a2.webp"><img loading="lazy" src="style/ss/x290_a2.webp" alt="メルセデス,X290,AMG GT,寸法" width="602" height="416"></a><br>
+							<a href="full/ss/x290_a3.webp"><img loading="lazy" src="style/ss/x290_a3.webp" alt="メルセデス,X290,AMG GT,寸法" width="1210" height="432"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">4door Coupe</h4>
-						<a href="full/ss/x290_f.jpg"><img loading="lazy" src="style/ss/x290_f.webp" alt="メルセデス,X290,AMG GT,4ドア,クーペ,フロント" width="602" height="339"></a>
-						<a href="full/ss/x290_r.jpg"><img loading="lazy" src="style/ss/x290_r.webp" alt="メルセデス,X290,AMG GT,4ドア,クーペ,リヤ" width="602" height="339"></a><br>
-						<a href="full/ss/x290_d.jpg"><img loading="lazy" src="style/ss/x290_d.webp" alt="メルセデス,X290,AMG GT,4ドア,クーペ,ダッシュボード" width="602" height="401"></a>
-						<a href="full/ss/x290_i.jpg"><img loading="lazy" src="style/ss/x290_i.webp" alt="メルセデス,X290,AMG GT,4ドア,クーペ,内装" width="602" height="401"></a>
-						<h5>ボディサイズ</h5>
-						<a href="full/ss/x290_a1.webp"><img loading="lazy" src="style/ss/x290_a1.webp" alt="メルセデス,X290,AMG GT,寸法" width="602" height="416"></a>
-						<a href="full/ss/x290_a2.webp"><img loading="lazy" src="style/ss/x290_a2.webp" alt="メルセデス,X290,AMG GT,寸法" width="602" height="416"></a><br>
-						<a href="full/ss/x290_a3.webp"><img loading="lazy" src="style/ss/x290_a3.webp" alt="メルセデス,X290,AMG GT,寸法" width="1210" height="432"></a>
-					</section>
 				</div>
+
 			</div>
 		</section>
 
@@ -587,28 +658,38 @@
 			<h2>AMG GT II</h2>
 			<div class="style-w">
 				<a href="full/ss/c192.webp"><img loading="lazy" src="style/ss/c192.webp" alt="メルセデス,C190,AMG GT,ダッシュボード" width="1210" height="681"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<p class="bf1a i"><a href="https://de.wikipedia.org/w/index.php?title=Mercedes-AMG_C_192" class="ico-wiki m1" title="Wikipedia(D) AMG GT"></a></p>
-						<h3 class="i m0">C192</h3>
-						<p class="i m1">Coupe</p>
-						<p class="i m1">08/2023 - </p>
-						<p class="ru">デザイナー : Gorden Wagner</p>
-					</div>
-					<section>
-						<h4 class="displayNone">Coupe</h4>
-						<a href="full/ss/c192_f.webp"><img loading="lazy" src="style/ss/c192_f.webp" alt="メルセデス,C190,AMG GT,クーペ,フロント" width="602" height="339"></a>
-						<a href="full/ss/c192_r.jpg"><img loading="lazy" src="style/ss/c192_r.webp" alt="メルセデス,C190,AMG GT,クーペ,リヤ" width="602" height="339"></a><br>
-						<a href="full/ss/c192_d.jpg"><img loading="lazy" src="style/ss/c192_d.webp" alt="メルセデス,C190,AMG GT,クーペ,ダッシュボード" width="602" height="339"></a>
-						<a href="full/ss/c192_i.jpg"><img loading="lazy" src="style/ss/c192_i.webp" alt="メルセデス,C190,AMG GT,クーペ,内装" width="602" height="339"></a><br>
-						<a href="full/ss/c192_i2.jpg"><img loading="lazy" src="style/ss/c192_i2.webp" alt="メルセデス,C190,AMG GT,クーペ,内装" width="602" height="339"></a>
-						<a href="full/ss/c192_i3.jpg"><img loading="lazy" src="style/ss/c192_i3.webp" alt="メルセデス,C190,AMG GT,クーペ,内装" width="602" height="339"></a><br>
-						<a href="full/ss/c192_s.jpg"><img loading="lazy" src="style/ss/c192_s.webp" alt="メルセデス,C190,AMG GT,クーペ,側面" width="602" height="339"></a>
-						<a href="full/ss/c192_m.jpg"><img loading="lazy" src="style/ss/c192_m.webp" alt="メルセデス,C190,AMG GT,クーペ,エンジン" width="602" height="339"></a>
-						<!-- <h5>ボディサイズ</h5>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-c192" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://de.wikipedia.org/w/index.php?title=Mercedes-AMG_C_192" class="ico-wiki" title="Wikipedia(D) AMG GT"></a>
+								<h3>C192</h3>
+								<p>Coupe</p>
+								08/2023 -
+							</div>
+							<div class="accordion-right">
+								デザイナー : Slavche Tanevski , Robert Lešnik , Gorden Wagner
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-c192" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">Coupe</h4>
+							<a href="full/ss/c192_f.webp"><img loading="lazy" src="style/ss/c192_f.webp" alt="メルセデス,C190,AMG GT,クーペ,フロント" width="602" height="339"></a>
+							<a href="full/ss/c192_r.jpg"><img loading="lazy" src="style/ss/c192_r.webp" alt="メルセデス,C190,AMG GT,クーペ,リヤ" width="602" height="339"></a><br>
+							<a href="full/ss/c192_d.jpg"><img loading="lazy" src="style/ss/c192_d.webp" alt="メルセデス,C190,AMG GT,クーペ,ダッシュボード" width="602" height="339"></a>
+							<a href="full/ss/c192_i.jpg"><img loading="lazy" src="style/ss/c192_i.webp" alt="メルセデス,C190,AMG GT,クーペ,内装" width="602" height="339"></a><br>
+							<a href="full/ss/c192_i2.jpg"><img loading="lazy" src="style/ss/c192_i2.webp" alt="メルセデス,C190,AMG GT,クーペ,内装" width="602" height="339"></a>
+							<a href="full/ss/c192_i3.jpg"><img loading="lazy" src="style/ss/c192_i3.webp" alt="メルセデス,C190,AMG GT,クーペ,内装" width="602" height="339"></a><br>
+							<a href="full/ss/c192_s.jpg"><img loading="lazy" src="style/ss/c192_s.webp" alt="メルセデス,C190,AMG GT,クーペ,側面" width="602" height="339"></a>
+							<a href="full/ss/c192_m.jpg"><img loading="lazy" src="style/ss/c192_m.webp" alt="メルセデス,C190,AMG GT,クーペ,エンジン" width="602" height="339"></a>
+							<!-- <h5>ボディサイズ</h5>
 								<a href="full/ss/c192_a.jpg"><img loading="lazy" src="style/ss/c192_a.webp" alt="メルセデス,C190,AMG GT,寸法図"></a><br> -->
-					</section>
+						</div>
+					</div>
 				</div>
+
 			</div>
 		</section>
 
@@ -662,9 +743,10 @@
 			<hr>
 			<p class="mid"><small>@ since 2010 , piyopiyo_246</small></p>
 		</footer>
+
 		<p class="m-05" id="page-top"><a href="#head">&#9650;</a></p>
 		<p id="close-accordion">
-			<a class="vmenu_all_action" onclick="doReplaceClassName ('vmenu_on2','vmenu_off')" title="全ての開閉部を閉じる">&#9654;</a>
+			<a id="close-all-accordions-2" class="vmenu_all_action" title="全ての開閉部を閉じる">&#9654;</a>
 		</p>
 	</div>
 
@@ -720,6 +802,7 @@
 	</script>
 </body>
 
+<!-- スクロールしてトップ -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script>
 	$(function () {
@@ -738,6 +821,120 @@
 			}, 500);
 			return false;
 		});
+	});
+</script>
+
+<script>
+	// シンプル版アコーディオン機能（入れ子非対応）
+	document.addEventListener('DOMContentLoaded', function () {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+		accordionHeaders.forEach(header => {
+			header.addEventListener('click', function () {
+				const content = this.nextElementSibling;
+				const isActive = this.classList.contains('active');
+
+				// クリックされたアコーディオンのみトグル
+				if (isActive) {
+					this.classList.remove('active');
+					this.setAttribute('aria-expanded', 'false');
+					content.classList.remove('active');
+				} else {
+					this.classList.add('active');
+					this.setAttribute('aria-expanded', 'true');
+					content.classList.add('active');
+				}
+			});
+
+			// キーボード操作のサポート
+			header.addEventListener('keydown', function (e) {
+				if (e.key === 'Enter' || e.key === ' ') {
+					e.preventDefault();
+					this.click();
+				}
+			});
+		});
+
+		// 全開/全閉ボタンのイベントリスナー
+		const openAllBtn = document.getElementById('open-all-accordions');
+		const closeAllBtn = document.getElementById('close-all-accordions');
+		const closeAllBtn2 = document.getElementById('close-all-accordions-2');
+
+		if (openAllBtn) {
+			openAllBtn.addEventListener('click', openAllAccordions);
+		}
+
+		if (closeAllBtn) {
+			closeAllBtn.addEventListener('click', closeAllAccordions);
+		}
+
+		if (closeAllBtn2) {
+			closeAllBtn2.addEventListener('click', closeAllAccordions);
+		}
+	});
+
+	// 全アコーディオン操作機能
+	function openAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.add('active');
+			header.setAttribute('aria-expanded', 'true');
+			content.classList.add('active');
+		});
+	}
+
+	function closeAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.remove('active');
+			header.setAttribute('aria-expanded', 'false');
+			content.classList.remove('active');
+		});
+	}
+
+	// 全アコーディオン操作機能
+	function openAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.add('active');
+			header.setAttribute('aria-expanded', 'true');
+			content.classList.add('active');
+		});
+	}
+
+	function closeAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.remove('active');
+			header.setAttribute('aria-expanded', 'false');
+			content.classList.remove('active');
+		});
+	}
+
+	// ボタンにイベントリスナーを追加
+	document.addEventListener('DOMContentLoaded', function () {
+		// 既存のアコーディオンコード...
+
+		// 全開/全閉ボタン
+		const openAllBtn = document.getElementById('open-all-accordions');
+		const closeAllBtn = document.getElementById('close-all-accordions');
+		const closeAllBtn2 = document.getElementById('close-all-accordions-2'); // 追加ボタン
+
+		if (openAllBtn) {
+			openAllBtn.addEventListener('click', openAllAccordions);
+		}
+
+		if (closeAllBtn) {
+			closeAllBtn.addEventListener('click', closeAllAccordions);
+		}
+
+		if (closeAllBtn2) {
+			closeAllBtn2.addEventListener('click', closeAllAccordions);
+		}
 	});
 </script>
 
