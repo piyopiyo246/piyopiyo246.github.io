@@ -51,23 +51,6 @@
 	<link rel="stylesheet" href="../style.min.css">
 	<link rel="stylesheet" href="../style_v.min.css">
 
-	<!-- アコーディオン用のJavaScript関数を追加 -->
-	<script>
-		function doToggleClassName(obj, onClassName, offClassName) {
-			obj.className = (obj.className != onClassName) ? onClassName : offClassName;
-		}
-		function getParentObj(obj) {
-			return obj.parentElement || obj.parentNode;
-		}
-		function doReplaceClassName(findClassName, replaceClassName, targetTagName) {
-			var elements = document.getElementsByTagName(targetTagName || '*');
-			for (var i = 0; i < elements.length; i++) {
-				if (elements[i].className == findClassName)
-					elements[i].className = replaceClassName;
-			}
-		}
-	</script>
-
 	<!-- 6. Cookie同意管理システム -->
 	<script>
 		window._cookiescript = {
@@ -278,8 +261,8 @@
 						<dd class="s2"><a href="#w420" title="第２世代 Citan / Tクラス W420" class="lnk2">420</a></dd>
 					</dl>
 					<span>
-						<button class="vmenu_all_action square_btn" type="button" title="クリックで全ての開閉部を開く" span onclick="doReplaceClassName('vmenu_off', 'vmenu_on2')">全て開く</button>
-						<button class="vmenu_all_action square_btn" type="button" title="クリックで全ての開閉部を閉じる" span onclick="doReplaceClassName('vmenu_on2', 'vmenu_off')">全て閉じる</button>
+						<button id="open-all-accordions" class="vmenu_all_action square_btn" type="button" title="クリックで全ての開閉部を開く">全て開く</button>
+						<button id="close-all-accordions" class="vmenu_all_action square_btn" type="button" title="クリックで全ての開閉部を閉じる">全て閉じる</button>
 						<button class="square_btn" type="button" onclick="location.href='en_mb_img_v1.html'">En</button>
 						<button class="square_btn" type="button" onclick="location.href='mb_img_v1.html'">De</button>
 					</span>
@@ -336,22 +319,33 @@
 			<h2>Vaneo</h2>
 			<div class="style-w">
 				<div class="mid"><img loading="lazy" src="style/v1/w414.webp" alt="メルセデス,W414,Vaneo" width="1200" height="900"></div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<p class="bf1a i"><a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BB%E3%83%90%E3%83%8D%E3%82%AA" class="ico-wiki m1" title="Wikipedia(J) W414"></a></p>
-						<h3 class="i m0">W414</h3>
-						<p class="i m1">Vaneo</p>
-						<p class="i m1">09/2001 - 07/2005</p>
+
+			<div class="accordion">
+				<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-w414" title="クリックしてアコーディオンパネルを開いてください">
+					<div class="accordion-row">
+						<div class="accordion-left">
+							<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BB%E3%83%90%E3%83%8D%E3%82%AA" class="ico-wiki" title="Wikipedia(J) W414"></a>
+							<h3>W414</h3>
+							<p>Vaneo</p>
+							09/2001 - 07/2005
+						</div>
+						<div class="accordion-right">
+							デザイナー : Steve Mattin , Peter Pfeiffer , Bruno Sacco
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">Vaneo</h4>
+				</button>
+				<div id="accordion-content-w414" class="accordion-content subpage" role="region">
+					<div class="accordion-content-inner subpage">
+												<h4 class="displayNone">Vaneo</h4>
 						<a href="full/v1/w414_f.jpg"><img loading="lazy" src="style/v1/w414_f.webp" alt="メルセデス,W414,Vaneo,フロント" width="452" height="284"></a>
 						<a href="full/v1/w414_r.jpg"><img loading="lazy" src="style/v1/w414_r.webp" alt="メルセデス,W414,Vaneo,リヤ" width="396" height="284"></a>
 						<a href="full/v1/w414_d.jpg"><img loading="lazy" src="style/v1/w414_d.webp" alt="メルセデス,W414,Vaneo,ダッシュボード" width="352" height="284"></a>
 						<h5>ボディサイズ</h5>
 						<a href="full/v1/w414_a.jpg"><img loading="lazy" src="style/v1/w414_a.png" alt="メルセデス,W414,Vaneo,寸法" width="1210" height="887"></a>
-					</section>
+					</div>
 				</div>
+			</div>
+
 			</div>
 		</section>
 
@@ -359,15 +353,24 @@
 			<h2>第１世代 Citan</h2>
 			<div class="style-w">
 				<a href="full/v1/w415.jpg"><img loading="lazy" src="style/v1/w415.webp" alt="メルセデス,W415,Citan,フロント" width="1210" height="681"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<p class="bf1a i"><a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BB%E3%82%B7%E3%82%BF%E3%83%B3" class="ico-wiki m1" title="Wikipedia(J) W415"></a></p>
-						<h3 class="i m0">W415</h3>
-						<p class="i m1">Citan</p>
-						<p class="i m1">09/2012 -</p>
+
+			<div class="accordion">
+				<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-w415" title="クリックしてアコーディオンパネルを開いてください">
+					<div class="accordion-row">
+						<div class="accordion-left">
+							<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BB%E3%82%B7%E3%82%BF%E3%83%B3" class="ico-wiki" title="Wikipedia(J) W415"></a>
+							<h3>W415</h3>
+							<p>Citan</p>
+							09/2012 -
+						</div>
+						<div class="accordion-right">
+							デザイナー : Betrand Janssen
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">Citan</h4>
+				</button>
+				<div id="accordion-content-w415" class="accordion-content subpage" role="region">
+					<div class="accordion-content-inner subpage">
+												<h4 class="displayNone">Citan</h4>
 						<h5>Compact</h5>
 						<a href="full/v1/w415_f.jpg"><img loading="lazy" src="style/v1/w415_f.webp" alt="メルセデス,W415,Citan,フロント" width="383" height="300"></a>
 						<a href="full/v1/w415_r.jpg"><img loading="lazy" src="style/v1/w415_r.webp" alt="メルセデス,W415,Citan,リヤ" width="370" height="300"></a>
@@ -379,15 +382,22 @@
 						<h5>Extralong</h5>
 						<a href="full/v1/w415el_f.jpg"><img loading="lazy" src="style/v1/w415el_f.webp" alt="メルセデス,W415,Citan,Extra long,フロント" width="520" height="284"></a>
 						<a href="full/v1/w415el_r.jpg"><img loading="lazy" src="style/v1/w415el_r.webp" alt="メルセデス,W415,Citan,Extra long,リヤ" width="475" height="284"></a>
-					</section>
-				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<h3 class="bf1b i">W415</h3>
-						<p class="i m1">OEM</p>
 					</div>
-					<section>
-						<h4 class="displayNone">OEM</h4>
+				</div>
+			</div>
+
+			<div class="accordion">
+				<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-w415" title="クリックしてアコーディオンパネルを開いてください">
+					<div class="accordion-row">
+						<div class="accordion-left">
+							<h3>W415<h3>
+							<p>OEM</p>
+						</div>
+					</div>
+				</button>
+				<div id="accordion-content-w415" class="accordion-content subpage" role="region">
+					<div class="accordion-content-inner subpage">
+												<h4 class="displayNone">OEM</h4>
 						<a href="https://de.wikipedia.org/wiki/Renault_Kangoo#Kangoo_(Typ_W,_2008%E2%80%932021)" class="ico-wiki m1" title="Wikipedia(D) Renault Kangoo"></a>
 						<h5 class="i">Renault Kangoo II</h5>
 						<p class="i m1">2008</p><br>
@@ -400,8 +410,10 @@
 						<a href="full/v1/dacia_dokker_f.jpg"><img loading="lazy" src="style/v1/dacia_dokker_f.webp" alt="dacia,dokker,フロント" width="389" height="286"></a>
 						<a href="full/v1/dacia_dokker_r.jpg"><img loading="lazy" src="style/v1/dacia_dokker_r.webp" alt="dacia,dokker,リヤ" width="381" height="286"></a>
 						<a href="full/v1/dacia_dokker_d.jpg"><img loading="lazy" src="style/v1/dacia_dokker_d.webp" alt="dacia,dokker,ダッシュボード" width="430" height="286"></a>
-					</section>
+					</div>
 				</div>
+			</div>
+
 			</div>
 		</section>
 
@@ -409,15 +421,24 @@
 			<h2>第２世代 Citan / Tクラス</h2>
 			<div class="style-w">
 				<a href="full/v1/w420p.jpg"><img loading="lazy" src="style/v1/w420p.webp" alt="メルセデス,w420,Citan" width="1210" height="802"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<p class="bf1a i"><a href="https://de.wikipedia.org/wiki/Mercedes-Benz_W_420" class="ico-wiki m1" title="Wikipedia(D) w420"></a></p>
-						<h3 class="i m0">W420</h3>
-						<p class="i m1">Citan</p>
-						<p class="i m1">2021 -</p>
+
+			<div class="accordion">
+				<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-w420" title="クリックしてアコーディオンパネルを開いてください">
+					<div class="accordion-row">
+						<div class="accordion-left">
+							<a href="https://de.wikipedia.org/wiki/Mercedes-Benz_W_420" class="ico-wiki" title="Wikipedia(D) w420"></a>
+							<h3>W420</h3>
+							<p>Citan</p>
+							2021 -
+						</div>
+						<div class="accordion-right">
+							デザイナー : Betrand Janssen , Gordon Schlie , Frank Lecher , Gorden Wagener
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">Citan</h4>
+				</button>
+				<div id="accordion-content-w420" class="accordion-content subpage" role="region">
+					<div class="accordion-content-inner subpage">
+												<h4 class="displayNone">Citan</h4>
 						<h5>Panel Van</h5>
 						<a href="full/v1/w420p_f.jpg"><img loading="lazy" src="style/v1/w420p_f.webp" alt="メルセデス,w420,Citan,Panel Van,フロント" width="604" height="400"></a>
 						<a href="full/v1/w420p_r.jpg"><img loading="lazy" src="style/v1/w420p_r.webp" alt="メルセデス,w420,Citan,Panel Van,リヤ" width="604" height="400"></a><br>
@@ -431,16 +452,23 @@
 						<a href="full/v1/w420_r.jpg"><img loading="lazy" src="style/v1/w420_r.webp" alt="メルセデス,w420,Citan,リヤ" width="604" height="400"></a><br>
 						<a href="full/v1/w420_d.jpg"><img loading="lazy" src="style/v1/w420_d.webp" alt="メルセデス,w420,Citan,ダッシュボード" width="604" height="403"></a>
 						<a href="full/v1/w420_i.jpg"><img loading="lazy" src="style/v1/w420_i.webp" alt="メルセデス,w420,Citan,内装" width="604" height="403"></a>
-					</section>
-				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<h3 class="bf1b i">W420</h3>
-						<p class="i m1">Tクラス</p>
-						<p class="i m1">2022 -</p>
 					</div>
-					<section>
-						<h4 class="displayNone">Tクラス</h4>
+				</div>
+			</div>
+
+			<div class="accordion">
+				<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-w420" title="クリックしてアコーディオンパネルを開いてください">
+					<div class="accordion-row">
+						<div class="accordion-left">
+							<h3>W420</h3>
+							<p>Tクラス</p>
+								2022 -
+						</div>
+					</div>
+				</button>
+				<div id="accordion-content-w420" class="accordion-content subpage" role="region">
+					<div class="accordion-content-inner subpage">
+												<h4 class="displayNone">Tクラス</h4>
 						<a href="full/v1/w420t_ic.jpg"><img loading="lazy" src="style/v1/w420t_ic.webp" alt="メルセデス,w420,Tクラス,内装" width="1210" height="756"></a><br>
 						<a href="full/v1/w420t_s.jpg"><img loading="lazy" src="style/v1/w420t_s.webp" alt="メルセデス,w420,Tクラス,サイドビュー" width="688" height="344"></a>
 						<a href="full/v1/w420t_r.jpg"><img loading="lazy" src="style/v1/w420t_r.webp" alt="メルセデス,w420,Tクラス,リヤ" width="516" height="344"></a><br>
@@ -448,23 +476,33 @@
 						<a href="full/v1/w420t_d.jpg"><img loading="lazy" src="style/v1/w420t_d.webp" alt="メルセデス,w420,Tクラス,ダッシュボード" width="675" height="422"></a><br>
 						<a href="full/v1/w420t_i.jpg"><img loading="lazy" src="style/v1/w420t_i.webp" alt="メルセデス,w420,Tクラス,内装" width="604" height="378"></a>
 						<a href="full/v1/w420t_ib.jpg"><img loading="lazy" src="style/v1/w420t_ib.webp" alt="メルセデス,w420,Tクラス,内装" width="604" height="378"></a>
-					</section>
-				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<h3 class="bf1b i">W420</h3>
-						<p class="i m1">OEM</p>
 					</div>
-					<section>
-						<h4 class="displayNone">OEM</h4>
+				</div>
+			</div>
+
+
+			<div class="accordion">
+				<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-w420" title="クリックしてアコーディオンパネルを開いてください">
+					<div class="accordion-row">
+						<div class="accordion-left">
+							<h3>W420<h3>
+							<p>OEM</p>
+						</div>
+					</div>
+				</button>
+				<div id="accordion-content-w420" class="accordion-content subpage" role="region">
+					<div class="accordion-content-inner subpage">
+												<h4 class="displayNone">OEM</h4>
 						<a href="https://de.wikipedia.org/wiki/Renault_Kangoo#Kangoo_(seit_2021)" class="ico-wiki m1" title="Wikipedia(D) Renault Kangoo"></a>
 						<h5 class="i">Renault Kangoo III</h5>
 						<p class="i m1">2021 -</p><br>
 						<a href="full/v1/renault_kangoo3_f.jpg"><img loading="lazy" src="style/v1/renault_kangoo3_f.webp" alt="ルノー,カングー,フロント" width="604" height="400"></a>
 						<a href="full/v1/renault_kangoo3_r.jpg"><img loading="lazy" src="style/v1/renault_kangoo3_r.webp" alt="ルノー,カングー,リヤ" width="604" height="400"></a><br>
 						<a href="full/v1/renault_kangoo3_d.jpg"><img loading="lazy" src="style/v1/renault_kangoo3_d.webp" alt="ルノー,カングー,ダッシュボード" width="1210" height="908"></a>
-					</section>
+					</div>
 				</div>
+			</div>
+
 			</div>
 		</section>
 
@@ -513,9 +551,10 @@
 			<hr>
 			<p class="mid"><small>@ since 2010 , piyopiyo_246</small></p>
 		</footer>
+
 		<p class="m-05" id="page-top"><a href="#head">&#9650;</a></p>
 		<p id="close-accordion">
-			<a class="vmenu_all_action" onclick="doReplaceClassName ('vmenu_on2','vmenu_off')" title="全ての開閉部を閉じる">&#9654;</a>
+			<a id="close-all-accordions-2" class="vmenu_all_action" title="全ての開閉部を閉じる">&#9654;</a>
 		</p>
 	</div>
 
@@ -571,6 +610,7 @@
 	</script>
 </body>
 
+<!-- スクロールしてトップ -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script>
 	$(function () {
@@ -589,6 +629,120 @@
 			}, 500);
 			return false;
 		});
+	});
+</script>
+
+<script>
+	// シンプル版アコーディオン機能（入れ子非対応）
+	document.addEventListener('DOMContentLoaded', function () {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+		accordionHeaders.forEach(header => {
+			header.addEventListener('click', function () {
+				const content = this.nextElementSibling;
+				const isActive = this.classList.contains('active');
+
+				// クリックされたアコーディオンのみトグル
+				if (isActive) {
+					this.classList.remove('active');
+					this.setAttribute('aria-expanded', 'false');
+					content.classList.remove('active');
+				} else {
+					this.classList.add('active');
+					this.setAttribute('aria-expanded', 'true');
+					content.classList.add('active');
+				}
+			});
+
+			// キーボード操作のサポート
+			header.addEventListener('keydown', function (e) {
+				if (e.key === 'Enter' || e.key === ' ') {
+					e.preventDefault();
+					this.click();
+				}
+			});
+		});
+
+		// 全開/全閉ボタンのイベントリスナー
+		const openAllBtn = document.getElementById('open-all-accordions');
+		const closeAllBtn = document.getElementById('close-all-accordions');
+		const closeAllBtn2 = document.getElementById('close-all-accordions-2');
+
+		if (openAllBtn) {
+			openAllBtn.addEventListener('click', openAllAccordions);
+		}
+
+		if (closeAllBtn) {
+			closeAllBtn.addEventListener('click', closeAllAccordions);
+		}
+
+		if (closeAllBtn2) {
+			closeAllBtn2.addEventListener('click', closeAllAccordions);
+		}
+	});
+
+	// 全アコーディオン操作機能
+	function openAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.add('active');
+			header.setAttribute('aria-expanded', 'true');
+			content.classList.add('active');
+		});
+	}
+
+	function closeAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.remove('active');
+			header.setAttribute('aria-expanded', 'false');
+			content.classList.remove('active');
+		});
+	}
+
+	// 全アコーディオン操作機能
+	function openAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.add('active');
+			header.setAttribute('aria-expanded', 'true');
+			content.classList.add('active');
+		});
+	}
+
+	function closeAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.remove('active');
+			header.setAttribute('aria-expanded', 'false');
+			content.classList.remove('active');
+		});
+	}
+
+	// ボタンにイベントリスナーを追加
+	document.addEventListener('DOMContentLoaded', function () {
+		// 既存のアコーディオンコード...
+
+		// 全開/全閉ボタン
+		const openAllBtn = document.getElementById('open-all-accordions');
+		const closeAllBtn = document.getElementById('close-all-accordions');
+		const closeAllBtn2 = document.getElementById('close-all-accordions-2'); // 追加ボタン
+
+		if (openAllBtn) {
+			openAllBtn.addEventListener('click', openAllAccordions);
+		}
+
+		if (closeAllBtn) {
+			closeAllBtn.addEventListener('click', closeAllAccordions);
+		}
+
+		if (closeAllBtn2) {
+			closeAllBtn2.addEventListener('click', closeAllAccordions);
+		}
 	});
 </script>
 
