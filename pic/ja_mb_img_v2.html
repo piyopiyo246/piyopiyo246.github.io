@@ -51,23 +51,6 @@
 	<link rel="stylesheet" href="../style.min.css">
 	<link rel="stylesheet" href="../style_v.min.css">
 
-	<!-- アコーディオン用のJavaScript関数を追加 -->
-	<script>
-		function doToggleClassName(obj, onClassName, offClassName) {
-			obj.className = (obj.className != onClassName) ? onClassName : offClassName;
-		}
-		function getParentObj(obj) {
-			return obj.parentElement || obj.parentNode;
-		}
-		function doReplaceClassName(findClassName, replaceClassName, targetTagName) {
-			var elements = document.getElementsByTagName(targetTagName || '*');
-			for (var i = 0; i < elements.length; i++) {
-				if (elements[i].className == findClassName)
-					elements[i].className = replaceClassName;
-			}
-		}
-	</script>
-
 	<!-- 6. Cookie同意管理システム -->
 	<script>
 		window._cookiescript = {
@@ -271,7 +254,7 @@
 					</li>
 				</ul>
 				<h1 class="b bf4">MB100 / Vクラス / ヴィアノ / ヴィト</h1>
-				 <div style="display: flex; justify-content: space-between; width: 1210px;">
+				<div style="display: flex; justify-content: space-between; width: 1210px;">
 					<dl class="m1">
 						<dt class="s2 af0">Series</dt>
 						<dd class="s2"><a href="#n1300" title="N1000 / N1300" class="lnk2">N1000 / N1300</a></dd>
@@ -282,8 +265,8 @@
 						<dd class="s2"><a href="#w447" title="Vクラス / Vito W447" class="lnk2">447</a></dd>
 					</dl>
 					<span>
-						<button class="vmenu_all_action square_btn" type="button" title="クリックで全ての開閉部を開く" span onclick="doReplaceClassName('vmenu_off', 'vmenu_on2')">全て開く</button>
-						<button class="vmenu_all_action square_btn" type="button" title="クリックで全ての開閉部を閉じる" span onclick="doReplaceClassName('vmenu_on2', 'vmenu_off')">全て閉じる</button>
+						<button id="open-all-accordions" class="vmenu_all_action square_btn" type="button" title="クリックで全ての開閉部を開く">全て開く</button>
+						<button id="close-all-accordions" class="vmenu_all_action square_btn" type="button" title="クリックで全ての開閉部を閉じる">全て閉じる</button>
 						<button class="square_btn" type="button" onclick="location.href='en_mb_img_v2.html'">En</button>
 						<button class="square_btn" type="button" onclick="location.href='mb_img_v2.html'">De</button>
 					</span>
@@ -337,51 +320,66 @@
 			<h2>N1000 / N1300</h2>
 			<div class="style-w">
 				<a href="full/v2/n1300.jpg"><img src="style/v2/n1300.webp" alt="メルセデス,N1300" width="1210" height="600"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<p class="bf1a i"><a href="https://en.wikipedia.org/wiki/Mercedes-Benz_N1300#DKW_F_1000" class="ico-wiki m1" title="Wikipedia(E) DKW_F_1000"></a></p>
-						<h3 class="i m0">DKW F1000</h3>
-						<p class="i m1">1963 - 1975</p>
-						<p class="ru">
-							Designed by Carrozzeria Fissore
-						</p>
-					</div>
-					<section>
-						<h4 class="displayNone">DKW F1000</h4>
-						<a href="full/v2/dkw_f1000_f.jpg"><img loading="lazy" src="style/v2/dkw_f1000_f.webp" alt="Auto Union,DKW,f1000,フロント" width="656" height="406"></a>
-						<a href="full/v2/dkw_f1000_r.jpg"><img loading="lazy" src="style/v2/dkw_f1000_r.webp" alt="Auto Union,DKW,f1000,リヤ" width="547" height="406"></a><br>
-						<a href="full/v2/dkw_f1000_d.jpg"><img loading="lazy" src="style/v2/dkw_f1000_d.webp" alt="Auto Union,DKW,f1000,ダッシュボード" width="602" height="401"></a>
-						<a href="full/v2/dkw_f1000t_f.jpg"><img loading="lazy" src="style/v2/dkw_f1000t_f.webp" alt="Auto Union,DKW,f1000,フロント" width="602" height="401"></a>
-						<div>
-							<h5>ボディサイズ</h5>
-							<a href="full/v2/dkw_f1000_a.jpg" class="f"><img loading="lazy" src="style/v2/dkw_f1000_a.webp" alt="Auto Union,DKW,f1000,寸法図" width="832" height="678"></a>
-							<div class="m1 wp box34">
-								DKW F1000 は、スペインのビトリアにある工場 Industrias del Motor SAIMOSA によって1963年に開発されました。
-								ダイムラー・ベンツは1958年にアウトウニオンを買収し、1965年にフォルクスワーゲンに売却しましたが、ビトリア工場は
-								ダイムラー・ベンツに属し、社名を MEVOSA に変更し、F1000 を N1000 および N1300 として製造しました。
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-dkw f1000" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://en.wikipedia.org/wiki/Mercedes-Benz_N1300#DKW_F_1000" class="ico-wiki" title="Wikipedia(E) DKW_F_1000"></a>
+								<h3>DKW F1000</h3>
+								1963 - 1975
+							</div>
+							<div class="accordion-right">
+								Designed by Carrozzeria Fissore
 							</div>
 						</div>
-					</section>
-				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<p class="bf1a i"><a href="https://en.wikipedia.org/wiki/Mercedes-Benz_N1300#Mercedes-Benz_N_1000/N_1300" class="ico-wiki m1" title="Wikipedia(E) Mercedes-Benz N1000/N1300"></a></p>
-						<h3 class="i m0">N1000 , N1300</h3>
-						<p class="i m1">1975 - 1980</p>
+					</button>
+					<div id="accordion-content-dkw f1000" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">DKW F1000</h4>
+							<a href="full/v2/dkw_f1000_f.jpg"><img loading="lazy" src="style/v2/dkw_f1000_f.webp" alt="Auto Union,DKW,f1000,フロント" width="656" height="406"></a>
+							<a href="full/v2/dkw_f1000_r.jpg"><img loading="lazy" src="style/v2/dkw_f1000_r.webp" alt="Auto Union,DKW,f1000,リヤ" width="547" height="406"></a><br>
+							<a href="full/v2/dkw_f1000_d.jpg"><img loading="lazy" src="style/v2/dkw_f1000_d.webp" alt="Auto Union,DKW,f1000,ダッシュボード" width="602" height="401"></a>
+							<a href="full/v2/dkw_f1000t_f.jpg"><img loading="lazy" src="style/v2/dkw_f1000t_f.webp" alt="Auto Union,DKW,f1000,フロント" width="602" height="401"></a>
+							<div>
+								<h5>ボディサイズ</h5>
+								<a href="full/v2/dkw_f1000_a.jpg" class="f"><img loading="lazy" src="style/v2/dkw_f1000_a.webp" alt="Auto Union,DKW,f1000,寸法図" width="832" height="678"></a>
+								<div class="m1 wp box34">
+									DKW F1000 は、スペインのビトリアにある工場 Industrias del Motor SAIMOSA によって1963年に開発されました。
+									ダイムラー・ベンツは1958年にアウトウニオンを買収し、1965年にフォルクスワーゲンに売却しましたが、ビトリア工場は
+									ダイムラー・ベンツに属し、社名を MEVOSA に変更し、F1000 を N1000 および N1300 として製造しました。
+								</div>
+							</div>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">N1000 , N1300</h4>
-						<a href="full/v2/n1000_tp.webp"><img loading="lazy" src="style/v2/n1000_tp.webp" alt="Daimler-Benz,n1000,透視図" width="1200" height="868"></a><br>
-						<a href="full/v2/n1300_f.jpg"><img loading="lazy" src="style/v2/n1300_f.webp" alt="Daimler-Benz,n1300,フロント" width="603" height="450"></a>
-						<a href="full/v2/n1300_r.jpg"><img loading="lazy" src="style/v2/n1300_r.webp" alt="Daimler-Benz,n1300,リヤ" width="600" height="450"></a><br>
-						<a href="full/v2/n1300h_f.jpg"><img loading="lazy" src="style/v2/n1300h_f.webp" alt="Daimler-Benz,n1300,フロント" width="618" height="389"></a>
-						<a href="full/v2/n1300_d.jpg"><img loading="lazy" src="style/v2/n1300_d.webp" alt="Daimler-Benz,n1300,ダッシュボード" width="584" height="389"></a><br>
-						<a href="full/v2/n1300t_f.jpg"><img loading="lazy" src="style/v2/n1300t_f.webp" alt="Daimler-Benz,n1300,フロント" width="652" height="367"></a>
-						<a href="full/v2/n1300_m.jpg"><img loading="lazy" src="style/v2/n1300_m.webp" alt="Daimler-Benz,n1300,エンジン" width="551" height="367"></a><br>
-						<a href="full/v2/n1000_i.jpg"><img loading="lazy" src="style/v2/n1000_i.webp" alt="Daimler-Benz,n1000,内装" width="630" height="351"></a>
-						<a href="full/v2/n1000_s.jpg"><img loading="lazy" src="style/v2/n1000_s.webp" alt="Daimler-Benz,n1000,サイド" width="500" height="351"></a>
-					</section>
 				</div>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-n1000 , n1300" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://en.wikipedia.org/wiki/Mercedes-Benz_N1300#Mercedes-Benz_N_1000/N_1300" class="ico-wiki" title="Wikipedia(E) Mercedes-Benz N1000/N1300"></a>
+								<h3>N1000 , N1300</h3>
+								1975 - 1980
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-n1000 , n1300" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">N1000 , N1300</h4>
+							<a href="full/v2/n1000_tp.webp"><img loading="lazy" src="style/v2/n1000_tp.webp" alt="Daimler-Benz,n1000,透視図" width="1200" height="868"></a><br>
+							<a href="full/v2/n1300_f.jpg"><img loading="lazy" src="style/v2/n1300_f.webp" alt="Daimler-Benz,n1300,フロント" width="603" height="450"></a>
+							<a href="full/v2/n1300_r.jpg"><img loading="lazy" src="style/v2/n1300_r.webp" alt="Daimler-Benz,n1300,リヤ" width="600" height="450"></a><br>
+							<a href="full/v2/n1300h_f.jpg"><img loading="lazy" src="style/v2/n1300h_f.webp" alt="Daimler-Benz,n1300,フロント" width="618" height="389"></a>
+							<a href="full/v2/n1300_d.jpg"><img loading="lazy" src="style/v2/n1300_d.webp" alt="Daimler-Benz,n1300,ダッシュボード" width="584" height="389"></a><br>
+							<a href="full/v2/n1300t_f.jpg"><img loading="lazy" src="style/v2/n1300t_f.webp" alt="Daimler-Benz,n1300,フロント" width="652" height="367"></a>
+							<a href="full/v2/n1300_m.jpg"><img loading="lazy" src="style/v2/n1300_m.webp" alt="Daimler-Benz,n1300,エンジン" width="551" height="367"></a><br>
+							<a href="full/v2/n1000_i.jpg"><img loading="lazy" src="style/v2/n1000_i.webp" alt="Daimler-Benz,n1000,内装" width="630" height="351"></a>
+							<a href="full/v2/n1000_s.jpg"><img loading="lazy" src="style/v2/n1000_s.webp" alt="Daimler-Benz,n1000,サイド" width="500" height="351"></a>
+						</div>
+					</div>
+				</div>
+
 			</div>
 		</section>
 
@@ -389,86 +387,107 @@
 			<h2>MB100</h2>
 			<div class="style-w">
 				<a href="full/v2/w631.jpg"><img loading="lazy" src="style/v2/w631.webp" alt="メルセデス,631,MB100" width="1210" height="648"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<p class="bf1a i"><a href="https://en.wikipedia.org/wiki/Mercedes-Benz_MB100" class="ico-wiki m1" title="Wikipedia(E)_Mercedes-Benz MB100"></a></p>
-						<h3 class="i m0">MB90, 100, 130, 150, 180</h3>
-						<p class="i m1">MEVOSA - Mercedes-Benz España, SA</p>
-						<p class="i m1">1980 - 1986</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-mb90, 100, 130, 150, 180" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://en.wikipedia.org/wiki/Mercedes-Benz_MB100" class="ico-wiki" title="Wikipedia(E)_Mercedes-Benz MB100"></a>
+								<h3>MB90, 100, 130, 150, 180</h3>
+								<p>MEVOSA - Mercedes-Benz España, SA</p>
+								1980 - 1986
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-mb90, 100, 130, 150, 180" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<a href="full/v2/mb100_f.jpg"><img loading="lazy" src="style/v2/mb100_f.webp" alt="Daimler-Benz,MB100,フロント" width="776" height="578"></a>
+							<a href="full/v2/mb100_f0.jpg"><img loading="lazy" src="style/v2/mb100_f0.webp" alt="Daimler-Benz,MB100,フロント" width="429" height="578"></a><br>
+							<a href="full/v2/mb100h_f.jpg"><img loading="lazy" src="style/v2/mb100h_f.webp" alt="Daimler-Benz,MB100,フロント" width="1210" height="908"></a><br>
+							<a href="full/v2/mb100_r.jpg"><img loading="lazy" src="style/v2/mb100_r.webp" alt="Daimler-Benz,MB100,リヤ" width="515" height="388"></a>
+							<a href="full/v2/mb100_d.webp"><img loading="lazy" src="style/v2/mb100_d.webp" alt="Daimler-Benz,MB100,ダッシュボード" width="690" height="388"></a><br>
+							<a href="full/v2/mb100_s.webp"><img loading="lazy" src="style/v2/mb100_s.webp" alt="Daimler-Benz,MB100,サイド" width="603" height="452"></a>
+							<a href="full/v2/mb100_i.webp"><img loading="lazy" src="style/v2/mb100_i.webp" alt="Daimler-Benz,MB100,内装" width="603" height="452"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">MEVOSA - Mercedes-Benz España, SA</h4>
-						<a href="full/v2/mb100_f.jpg"><img loading="lazy" src="style/v2/mb100_f.webp" alt="Daimler-Benz,MB100,フロント" width="776" height="578"></a>
-						<a href="full/v2/mb100_f0.jpg"><img loading="lazy" src="style/v2/mb100_f0.webp" alt="Daimler-Benz,MB100,フロント" width="429" height="578"></a><br>
-						<a href="full/v2/mb100h_f.jpg"><img loading="lazy" src="style/v2/mb100h_f.webp" alt="Daimler-Benz,MB100,フロント" width="1210" height="908"></a><br>
-						<a href="full/v2/mb100_r.jpg"><img loading="lazy" src="style/v2/mb100_r.webp" alt="Daimler-Benz,MB100,リヤ" width="515" height="388"></a>
-						<a href="full/v2/mb100_d.webp"><img loading="lazy" src="style/v2/mb100_d.webp" alt="Daimler-Benz,MB100,ダッシュボード" width="690" height="388"></a><br>
-						<a href="full/v2/mb100_s.webp"><img loading="lazy" src="style/v2/mb100_s.webp" alt="Daimler-Benz,MB100,サイド" width="603" height="452"></a>
-						<a href="full/v2/mb100_i.webp"><img loading="lazy" src="style/v2/mb100_i.webp" alt="Daimler-Benz,MB100,内装" width="603" height="452"></a>
-					</section>
 				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<h3 class="bf1b i">W631</h3>
-						<p class="i m1">MB100, 120, 140, 180</p>
-						<p class="i m2">
-							スペイン: Vitoria-Gasteiz (Mercedes-Benz España, S.A.)<br>
-							<span class="m21a">フィリピン：マニラ（Mercedes-Benz Philippines）</span>
-						</p>
-						<p class="i m1">1987 - 1996</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-w631" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h3>W631</h3>
+								<p>MB100, 120, 140, 180</p>
+								1987 - 1996
+							</div>
+						</div>
+						<div class="accordion-multi-line">
+							スペイン: Vitoria-Gasteiz (Mercedes-Benz España, S.A.)
+							<span class="m4">フィリピン：マニラ（Mercedes-Benz Philippines）</span>
+						</div>
+					</button>
+					<div id="accordion-content-w631" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="displayNone">MB100</h4>
+							<a href="full/v2/w631_f.jpg"><img loading="lazy" src="style/v2/w631_f.webp" alt="メルセデス,631,MB100,フロント" width="398" height="269"></a>
+							<a href="full/v2/w631p_f.jpg"><img loading="lazy" src="style/v2/w631p_f.webp" alt="メルセデス,631,MB100p,フロント" width="398" height="269"></a>
+							<a href="full/v2/w631t_f.jpg"><img loading="lazy" src="style/v2/w631t_f.webp" alt="メルセデス,631,MB100t,フロント" width="405" height="269"></a><br>
+							<a href="full/v2/w631t_fx.jpg"><img loading="lazy" src="style/v2/w631t_fx.webp" alt="メルセデス,631,MB100,リヤ" width="392" height="253"></a>
+							<a href="full/v2/w631_i.jpg"><img loading="lazy" src="style/v2/w631_i.webp" alt="メルセデス,631,MB100,内装" width="379" height="253"></a>
+							<a href="full/v2/w631_d.jpg"><img loading="lazy" src="style/v2/w631_d.webp" alt="メルセデス,631,MB100,ダッシュボード" width="427" height="253"></a><br>
+							<a href="full/v2/w631_rx.jpg"><img loading="lazy" src="style/v2/w631_rx.webp" alt="メルセデス,631,MB100,リヤ" width="656" height="410"></a>
+							<a href="full/v2/w631_ix.jpg"><img loading="lazy" src="style/v2/w631_ix.webp" alt="メルセデス,631,MB100,内装" width="547" height="410"></a><br>
+							<h5 class="i">フェイスリフト</h5>
+							<p class="i m1">1992</p><br>
+							<a href="full/v2/w631_f2.jpg"><img loading="lazy" src="style/v2/w631_f2.webp" alt="メルセデス,631,MB100,フロント" width="395" height="283"></a>
+							<a href="full/v2/w631_r2.jpg"><img loading="lazy" src="style/v2/w631_r2.webp" alt="メルセデス,631,MB100,リヤ" width="369" height="283"></a>
+							<a href="full/v2/w631_d2.jpg"><img loading="lazy" src="style/v2/w631_d2.webp" alt="メルセデス,631,MB100,ダッシュボード" width="435" height="283"></a>
+							<h5>Long</h5>
+							<a href="full/v2/w631l_f2.jpg"><img loading="lazy" src="style/v2/w631l_f2.webp" alt="メルセデス,631,MB100,フロント" width="414" height="276"></a>
+							<a href="full/v2/w631l_r2.jpg"><img loading="lazy" src="style/v2/w631l_r2.webp" alt="メルセデス,631,MB100,リヤ" width="414" height="276"></a>
+							<a href="full/v2/w631l_i2.jpg"><img loading="lazy" src="style/v2/w631l_i2.webp" alt="メルセデス,631,MB100,内装" width="368" height="276"></a><br>
+							<a href="full/v2/w631_m2.jpg"><img loading="lazy" src="style/v2/w631_m2.webp" alt="メルセデス,631,MB100,フロント" width="382" height="268"></a>
+							<a href="full/v2/w631t_f2.jpg"><img loading="lazy" src="style/v2/w631t_f2.webp" alt="メルセデス,631,MB100,フロント" width="416" height="268"></a>
+							<a href="full/v2/w631t_r2.jpg"><img loading="lazy" src="style/v2/w631t_r2.webp" alt="メルセデス,631,MB100,リヤ" width="400" height="268"></a>
+							<h5>ボディサイズ</h5>
+							<a href="full/v2/w631_a2.jpg"><img loading="lazy" src="style/v2/w631_a2.webp" alt="メルセデス,631,MB100,寸法" width="1210" height="696"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">MB100</h4>
-						<a href="full/v2/w631_f.jpg"><img loading="lazy" src="style/v2/w631_f.webp" alt="メルセデス,631,MB100,フロント" width="398" height="269"></a>
-						<a href="full/v2/w631p_f.jpg"><img loading="lazy" src="style/v2/w631p_f.webp" alt="メルセデス,631,MB100p,フロント" width="398" height="269"></a>
-						<a href="full/v2/w631t_f.jpg"><img loading="lazy" src="style/v2/w631t_f.webp" alt="メルセデス,631,MB100t,フロント" width="405" height="269"></a><br>
-						<a href="full/v2/w631t_fx.jpg"><img loading="lazy" src="style/v2/w631t_fx.webp" alt="メルセデス,631,MB100,リヤ" width="392" height="253"></a>
-						<a href="full/v2/w631_i.jpg"><img loading="lazy" src="style/v2/w631_i.webp" alt="メルセデス,631,MB100,内装" width="379" height="253"></a>
-						<a href="full/v2/w631_d.jpg"><img loading="lazy" src="style/v2/w631_d.webp" alt="メルセデス,631,MB100,ダッシュボード" width="427" height="253"></a><br>
-						<a href="full/v2/w631_rx.jpg"><img loading="lazy" src="style/v2/w631_rx.webp" alt="メルセデス,631,MB100,リヤ" width="656" height="410"></a>
-						<a href="full/v2/w631_ix.jpg"><img loading="lazy" src="style/v2/w631_ix.webp" alt="メルセデス,631,MB100,内装" width="547" height="410"></a><br>
-						<h5 class="i">フェイスリフト</h5>
-						<p class="i m1">1992</p><br>
-						<a href="full/v2/w631_f2.jpg"><img loading="lazy" src="style/v2/w631_f2.webp" alt="メルセデス,631,MB100,フロント" width="395" height="283"></a>
-						<a href="full/v2/w631_r2.jpg"><img loading="lazy" src="style/v2/w631_r2.webp" alt="メルセデス,631,MB100,リヤ" width="369" height="283"></a>
-						<a href="full/v2/w631_d2.jpg"><img loading="lazy" src="style/v2/w631_d2.webp" alt="メルセデス,631,MB100,ダッシュボード" width="435" height="283"></a>
-						<h5>Long</h5>
-						<a href="full/v2/w631l_f2.jpg"><img loading="lazy" src="style/v2/w631l_f2.webp" alt="メルセデス,631,MB100,フロント" width="414" height="276"></a>
-						<a href="full/v2/w631l_r2.jpg"><img loading="lazy" src="style/v2/w631l_r2.webp" alt="メルセデス,631,MB100,リヤ" width="414" height="276"></a>
-						<a href="full/v2/w631l_i2.jpg"><img loading="lazy" src="style/v2/w631l_i2.webp" alt="メルセデス,631,MB100,内装" width="368" height="276"></a><br>
-						<a href="full/v2/w631_m2.jpg"><img loading="lazy" src="style/v2/w631_m2.webp" alt="メルセデス,631,MB100,フロント" width="382" height="268"></a>
-						<a href="full/v2/w631t_f2.jpg"><img loading="lazy" src="style/v2/w631t_f2.webp" alt="メルセデス,631,MB100,フロント" width="416" height="268"></a>
-						<a href="full/v2/w631t_r2.jpg"><img loading="lazy" src="style/v2/w631t_r2.webp" alt="メルセデス,631,MB100,リヤ" width="400" height="268"></a>
-						<h5>ボディサイズ</h5>
-						<a href="full/v2/w631_a2.jpg"><img loading="lazy" src="style/v2/w631_a2.webp" alt="メルセデス,631,MB100,寸法" width="1210" height="696"></a>
-					</section>
 				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<h3 class="bf1a i m0" id="w661">W661</h3>
-						<p class="i m1">MB100, 140 / SsangYong / Daewoo</p>
-						<p class="i m1">1995 - 2003</p>
-						<p class="i m2">SAIC Maxus Istana</p>
-						<p class="i m1">2009 - 2014</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-w661" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h3>W661</h3>
+								<p>MB100, 140 / SsangYong / Daewoo</p>
+								1995 - 2003
+								<p>SAIC Maxus Istana</p>
+								2009 - 2014
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-w661" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h4 class="m2">MB100, 140 Mercedes-Benz España S.A. </h4>
+							<a href="full/v2/w661_f.jpg"><img loading="lazy" src="style/v2/w661_f.webp" alt="メルセデス,661,MB140,フロント" width="417" height="263"></a>
+							<a href="full/v2/w661_r.jpg"><img loading="lazy" src="style/v2/w661_r.webp" alt="メルセデス,661,MB140,リヤ" width="396" height="263"></a>
+							<a href="full/v2/w661_d.jpg"><img loading="lazy" src="style/v2/w661_d.webp" alt="メルセデス,661,MB140,ダッシュボード" width="388" height="263"></a>
+							<h4 class="m2">SsangYong Istana Pyeongtaek / Daewoo Istana (韓国)</h4>
+							<a href="full/v2/ssang_yong_istana_f.jpg"><img loading="lazy" src="style/v2/ssang_yong_istana_f.webp" alt="SsangYong,Istana,フロント" width="585" height="396"></a>
+							<a href="full/v2/ssang_yong_istana_r.jpg"><img loading="lazy" src="style/v2/ssang_yong_istana_r.webp" alt="SsangYong,Istana,リヤ" width="619" height="396"></a><br>
+							<a href="full/v2/ssang_yong_istana_d.jpg"><img loading="lazy" src="style/v2/ssang_yong_istana_d.webp" alt="SsangYong,Istana,ダッシュボード" width="603" height="452"></a>
+							<a href="full/v2/ssang_yong_istana_i.webp"><img loading="lazy" src="style/v2/ssang_yong_istana_i.webp" alt="SsangYong,Istana,内装" width="603" height="452"></a>
+							<h4 class="m2">SAIC Maxus Istana Shanghai Huizhong Automotive / Zhanjiang Sanxing Motors (中国)</h4>
+							<a href="full/v2/saic_maxus_istana_f.jpg"><img loading="lazy" src="style/v2/saic_maxus_istana_f.webp" alt="SAIC Maxus Istana,フロント" width="587" height="412"></a>
+							<a href="full/v2/saic_maxus_istana_r.jpg"><img loading="lazy" src="style/v2/saic_maxus_istana_r.webp" alt="SAIC Maxus Istana,リヤ" width="618" height="412"></a>
+							<h5 class="m2">フェイスリフト</h5>
+							<a href="full/v2/saic_maxus_istana_f2.jpg"><img loading="lazy" src="style/v2/saic_maxus_istana_f2.webp" alt="SAIC Maxus Istana,フロント" width="633" height="481"></a>
+							<a href="full/v2/saic_maxus_istana_r2.jpg"><img loading="lazy" src="style/v2/saic_maxus_istana_r2.webp" alt="SAIC Maxus Istana,リヤ" width="573" height="481"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="m2">MB100, 140 Mercedes-Benz España S.A. </h4>
-						<a href="full/v2/w661_f.jpg"><img loading="lazy" src="style/v2/w661_f.webp" alt="メルセデス,661,MB140,フロント" width="417" height="263"></a>
-						<a href="full/v2/w661_r.jpg"><img loading="lazy" src="style/v2/w661_r.webp" alt="メルセデス,661,MB140,リヤ" width="396" height="263"></a>
-						<a href="full/v2/w661_d.jpg"><img loading="lazy" src="style/v2/w661_d.webp" alt="メルセデス,661,MB140,ダッシュボード" width="388" height="263"></a>
-						<h4 class="m2">SsangYong Istana Pyeongtaek / Daewoo Istana (韓国)</h4>
-						<a href="full/v2/ssang_yong_istana_f.jpg"><img loading="lazy" src="style/v2/ssang_yong_istana_f.webp" alt="SsangYong,Istana,フロント" width="585" height="396"></a>
-						<a href="full/v2/ssang_yong_istana_r.jpg"><img loading="lazy" src="style/v2/ssang_yong_istana_r.webp" alt="SsangYong,Istana,リヤ" width="619" height="396"></a><br>
-						<a href="full/v2/ssang_yong_istana_d.jpg"><img loading="lazy" src="style/v2/ssang_yong_istana_d.webp" alt="SsangYong,Istana,ダッシュボード" width="603" height="452"></a>
-						<a href="full/v2/ssang_yong_istana_i.webp"><img loading="lazy" src="style/v2/ssang_yong_istana_i.webp" alt="SsangYong,Istana,内装" width="603" height="452"></a>
-						<h4 class="m2">SAIC Maxus Istana Shanghai Huizhong Automotive / Zhanjiang Sanxing Motors (中国)</h4>
-						<a href="full/v2/saic_maxus_istana_f.jpg"><img loading="lazy" src="style/v2/saic_maxus_istana_f.webp" alt="SAIC Maxus Istana,フロント" width="587" height="412"></a>
-						<a href="full/v2/saic_maxus_istana_r.jpg"><img loading="lazy" src="style/v2/saic_maxus_istana_r.webp" alt="SAIC Maxus Istana,リヤ" width="618" height="412"></a>
-						<h5 class="m2">フェイスリフト</h5>
-						<a href="full/v2/saic_maxus_istana_f2.jpg"><img loading="lazy" src="style/v2/saic_maxus_istana_f2.webp" alt="SAIC Maxus Istana,フロント" width="633" height="481"></a>
-						<a href="full/v2/saic_maxus_istana_r2.jpg"><img loading="lazy" src="style/v2/saic_maxus_istana_r2.webp" alt="SAIC Maxus Istana,リヤ" width="573" height="481"></a>
-					</section>
 				</div>
+
 			</div>
 		</section>
 
@@ -476,39 +495,57 @@
 			<h2>第１世代 Vクラス / Vito</h2>
 			<div class="style-w">
 				<a href="full/v2/w638.jpg"><img loading="lazy" src="style/v2/w638.webp" alt="メルセデス,W638,Vクラス" width="1210" height="558"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<p class="bf1a i"><a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBV%E3%82%AF%E3%83%A9%E3%82%B9#%E5%88%9D%E4%BB%A3%EF%BC%88W638%EF%BC%89" class="ico-wiki m1" title="Wikipedia(J)_Mercedes-Benz W638"></a></p>
-						<h3 class="i m0">W638</h3>
-						<p class="i m1">Vクラス</p>
-						<p class="i m1">1995 - 2003</p>
-						<p class="i m2">※スペインのビトリア・ガステイス工場で生産された。</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-w638" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBV%E3%82%AF%E3%83%A9%E3%82%B9#%E5%88%9D%E4%BB%A3%EF%BC%88W638%EF%BC%89" class="ico-wiki" title="Wikipedia(J)_Mercedes-Benz W638"></a>
+								<h3>W638</h3>
+								<h4>Vクラス</h4>
+								1995 - 2003
+							</div>
+							<div class="accordion-right">
+								デザイナー : Lorenz Capellmann , Betrand Janssen , Peter Pfeiffer
+							</div>
+						</div>
+						<div class="accordion-multi-line">
+							※スペインのビトリア・ガステイス工場で生産された。
+						</div>
+					</button>
+					<div id="accordion-content-w638" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<a href="full/v2/w638_f_2.jpg"><img loading="lazy" src="style/v2/w638_f_2.webp" alt="メルセデス,W638,Vクラス,フロント" width="609" height="337"></a>
+							<a href="full/v2/w638_r_2.jpg"><img loading="lazy" src="style/v2/w638_r_2.webp" alt="メルセデス,W638,Vクラス,リヤ" width="597" height="337"></a><br>
+							<a href="full/v2/w638_d_2.webp"><img loading="lazy" src="style/v2/w638_d_2.webp" alt="メルセデス,W638,Vクラス,ダッシュボード" width="649" height="365"></a>
+							<a href="full/v2/w638_i_2.jpg"><img loading="lazy" src="style/v2/w638_i_2.webp" alt="メルセデス,W638,Vクラス,内装" width="556" height="365"></a><br>
+							<a href="full/v2/w638_a_2.jpg"><img loading="lazy" src="style/v2/w638_a_2.webp" alt="メルセデス,W638,Vクラス,寸法図" width="1210" height="769"></a><br>
+							<a href="full/v2/w638_tp_2.jpg"><img loading="lazy" src="style/v2/w638_tp_2.webp" alt="メルセデス,W638,Vクラス,透視図" width="1210" height="950"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">Vクラス</h4>
-						<a href="full/v2/w638_f_2.jpg"><img loading="lazy" src="style/v2/w638_f_2.webp" alt="メルセデス,W638,Vクラス,フロント" width="609" height="337"></a>
-						<a href="full/v2/w638_r_2.jpg"><img loading="lazy" src="style/v2/w638_r_2.webp" alt="メルセデス,W638,Vクラス,リヤ" width="597" height="337"></a><br>
-						<a href="full/v2/w638_d_2.webp"><img loading="lazy" src="style/v2/w638_d_2.webp" alt="メルセデス,W638,Vクラス,ダッシュボード" width="649" height="365"></a>
-						<a href="full/v2/w638_i_2.jpg"><img loading="lazy" src="style/v2/w638_i_2.webp" alt="メルセデス,W638,Vクラス,内装" width="556" height="365"></a><br>
-						<a href="full/v2/w638_a_2.jpg"><img loading="lazy" src="style/v2/w638_a_2.webp" alt="メルセデス,W638,Vクラス,寸法図" width="1210" height="769"></a><br>
-						<a href="full/v2/w638_tp_2.jpg"><img loading="lazy" src="style/v2/w638_tp_2.webp" alt="メルセデス,W638,Vクラス,透視図" width="1210" height="950"></a>
-					</section>
 				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<h3 class="bf1b i">W638</h3>
-						<p class="i m1">Vito</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-w638" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h4>Vito</h4>
+								1996 - 2003
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-w638" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<a href="full/v2/w638_f.jpg"><img loading="lazy" src="style/v2/w638_f.webp" alt="メルセデス,W638,Vito,フロント" width="603" height="452"></a>
+							<a href="full/v2/w638_r.jpg"><img loading="lazy" src="style/v2/w638_r.webp" alt="メルセデス,W638,Vito,リヤ" width="603" height="452"></a><br>
+							<a href="full/v2/w638_d.jpg"><img loading="lazy" src="style/v2/w638_d.webp" alt="メルセデス,W638,Vito,ダッシュボード" width="603" height="452"></a>
+							<a href="full/v2/w638_m.jpg"><img loading="lazy" src="style/v2/w638_m.webp" alt="メルセデス,W638,Vito,エンジン" width="603" height="452"></a><br>
+							<a href="full/v2/w638_i.jpg"><img loading="lazy" src="style/v2/w638_i.webp" alt="メルセデス,W638,Vito,内装" width="602" height="401"></a>
+							<a href="full/v2/w638_ia.jpg"><img loading="lazy" src="style/v2/w638_ia.webp" alt="メルセデス,W638,Vito,内装" width="602" height="401"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">Vito</h4>
-						<a href="full/v2/w638_f.jpg"><img loading="lazy" src="style/v2/w638_f.webp" alt="メルセデス,W638,Vito,フロント" width="603" height="452"></a>
-						<a href="full/v2/w638_r.jpg"><img loading="lazy" src="style/v2/w638_r.webp" alt="メルセデス,W638,Vito,リヤ" width="603" height="452"></a><br>
-						<a href="full/v2/w638_d.jpg"><img loading="lazy" src="style/v2/w638_d.webp" alt="メルセデス,W638,Vito,ダッシュボード" width="603" height="452"></a>
-						<a href="full/v2/w638_m.jpg"><img loading="lazy" src="style/v2/w638_m.webp" alt="メルセデス,W638,Vito,エンジン" width="603" height="452"></a><br>
-						<a href="full/v2/w638_i.jpg"><img loading="lazy" src="style/v2/w638_i.webp" alt="メルセデス,W638,Vito,内装" width="602" height="401"></a>
-						<a href="full/v2/w638_ia.jpg"><img loading="lazy" src="style/v2/w638_ia.webp" alt="メルセデス,W638,Vito,内装" width="602" height="401"></a>
-					</section>
 				</div>
+
 			</div>
 		</section>
 
@@ -516,70 +553,88 @@
 			<h2>第２世代 Viano / Vito</h2>
 			<div class="style-w">
 				<div class="mid"><img loading="lazy" src="style/v2/w639.webp" alt="メルセデス,W639,Vクラス" width="1154" height="866"></div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<p class="bf1a i"><a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBV%E3%82%AF%E3%83%A9%E3%82%B9#2%E4%BB%A3%E7%9B%AE%EF%BC%88W639%EF%BC%89" class="ico-wiki m1" title="Wikipedia(J) W639"></a></p>
-						<h3 class="i m0">W639 / V639</h3>
-						<p class="i m1">Viano</p>
-						<p class="i m1">2003 - 2014</p>
-						<p class="m2a">※ この世代から駆動方式が後輪駆動になりました。</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-w639-v639" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBV%E3%82%AF%E3%83%A9%E3%82%B9#2%E4%BB%A3%E7%9B%AE%EF%BC%88W639%EF%BC%89" class="ico-wiki" title="Wikipedia(J) W639"></a>
+								<h3>W639 / V639</h3>
+								<h4>Viano</h4>
+								2003 - 2014
+							</div>
+							<div class="accordion-right">
+								デザイナー : Lorenz Capellmann , Betrand Janssen , Peter Pfeiffer
+							</div>
+						</div>
+						<div class="accordion-multi-line">
+							※ この世代から駆動方式が後輪駆動になりました。
+						</div>
+					</button>
+					<div id="accordion-content-w639-v639" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h5>Compact</h5>
+							<a href="full/v2/w639_f_2.jpg"><img loading="lazy" src="style/v2/w639_f_2.webp" alt="メルセデス,W639.Viano,フロント," width="609" height="337"></a>
+							<a href="full/v2/w639_r_2.jpg"><img loading="lazy" src="style/v2/w639_r_2.webp" alt="メルセデス,W639.Viano,リヤ" width="596" height="337"></a><br>
+							<a href="full/v2/w639_d_2.jpg"><img loading="lazy" src="style/v2/w639_d_2.webp" alt="メルセデス,W639.Viano,ダッシュボード" width="480" height="356"></a>
+							<a href="full/v2/w639_s_2.webp"><img loading="lazy" src="style/v2/w639_s_2.webp" alt="メルセデス,W639.Viano,側面" width="726" height="356"></a><br>
+							<h5 class="i">フェイスリフト</h5>
+							<p class="i m1">10/2010</p>
+							<h4 class="i m1">Long</h4><br>
+							<a href="full/v2/v639_f2_2.jpg"><img loading="lazy" src="style/v2/v639_f2_2.webp" alt="メルセデス,W639.Viano2,フロント," width="510" height="334"></a>
+							<a href="full/v2/v639_s2_2.jpg"><img loading="lazy" src="style/v2/v639_s2_2.webp" alt="メルセデス,W639.Viano2,側面" width="695" height="334"></a><br>
+							<a href="full/v2/v639_d2_2.jpg"><img loading="lazy" src="style/v2/v639_d2_2.webp" alt="メルセデス,W639.Viano2,ダッシュボード" width="699" height="337"></a>
+							<a href="full/v2/v639_i2_2.jpg"><img loading="lazy" src="style/v2/v639_i2_2.webp" alt="メルセデス,W639.Viano2,内装" width="505" height="337"></a>
+							<h5>Extralong</h5>
+							<a href="full/v2/v639el_f2_2.jpg"><img loading="lazy" src="style/v2/v639el_f2_2.webp" alt="メルセデス,W639.Viano,Extralong,フロント," width="550" height="364"></a>
+							<a href="full/v2/v639el_r2_2.jpg"><img loading="lazy" src="style/v2/v639el_r2_2.webp" alt="メルセデス,W639.Viano,Extralong,リヤ" width="655" height="364"></a><br>
+							<a href="full/v2/v639el_i2_2.jpg"><img loading="lazy" src="style/v2/v639el_i2_2.webp" alt="メルセデス,W639.Viano,Extralong,内装" width="602" height="452"></a>
+							<a href="full/v2/v639el_ir2_2.jpg"><img loading="lazy" src="style/v2/v639el_ir2_2.webp" alt="メルセデス,W639.Viano,Extralong,内装" width="602" height="452"></a><br>
+							<a href="full/v2/w639_a_2.jpg"><img loading="lazy" src="style/v2/w639_a_2.webp" alt="メルセデス,639,Viano,寸法図" width="1210" height="1455"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">Viano</h4>
-						<h5>Compact</h5>
-						<a href="full/v2/w639_f_2.jpg"><img loading="lazy" src="style/v2/w639_f_2.webp" alt="メルセデス,W639.Viano,フロント," width="609" height="337"></a>
-						<a href="full/v2/w639_r_2.jpg"><img loading="lazy" src="style/v2/w639_r_2.webp" alt="メルセデス,W639.Viano,リヤ" width="596" height="337"></a><br>
-						<a href="full/v2/w639_d_2.jpg"><img loading="lazy" src="style/v2/w639_d_2.webp" alt="メルセデス,W639.Viano,ダッシュボード" width="480" height="356"></a>
-						<a href="full/v2/w639_s_2.webp"><img loading="lazy" src="style/v2/w639_s_2.webp" alt="メルセデス,W639.Viano,側面" width="726" height="356"></a><br>
-						<h5 class="i">フェイスリフト</h5>
-						<p class="i m1">10/2010</p>
-						<h4 class="i m1">Long</h4><br>
-						<a href="full/v2/v639_f2_2.jpg"><img loading="lazy" src="style/v2/v639_f2_2.webp" alt="メルセデス,W639.Viano2,フロント," width="510" height="334"></a>
-						<a href="full/v2/v639_s2_2.jpg"><img loading="lazy" src="style/v2/v639_s2_2.webp" alt="メルセデス,W639.Viano2,側面" width="695" height="334"></a><br>
-						<a href="full/v2/v639_d2_2.jpg"><img loading="lazy" src="style/v2/v639_d2_2.webp" alt="メルセデス,W639.Viano2,ダッシュボード" width="699" height="337"></a>
-						<a href="full/v2/v639_i2_2.jpg"><img loading="lazy" src="style/v2/v639_i2_2.webp" alt="メルセデス,W639.Viano2,内装" width="505" height="337"></a>
-						<h5>Extralong</h5>
-						<a href="full/v2/v639el_f2_2.jpg"><img loading="lazy" src="style/v2/v639el_f2_2.webp" alt="メルセデス,W639.Viano,Extralong,フロント," width="550" height="364"></a>
-						<a href="full/v2/v639el_r2_2.jpg"><img loading="lazy" src="style/v2/v639el_r2_2.webp" alt="メルセデス,W639.Viano,Extralong,リヤ" width="655" height="364"></a><br>
-						<a href="full/v2/v639el_i2_2.jpg"><img loading="lazy" src="style/v2/v639el_i2_2.webp" alt="メルセデス,W639.Viano,Extralong,内装" width="602" height="452"></a>
-						<a href="full/v2/v639el_ir2_2.jpg"><img loading="lazy" src="style/v2/v639el_ir2_2.webp" alt="メルセデス,W639.Viano,Extralong,内装" width="602" height="452"></a><br>
-						<a href="full/v2/w639_a_2.jpg"><img loading="lazy" src="style/v2/w639_a_2.webp" alt="メルセデス,639,Viano,寸法図" width="1210" height="1455"></a>
-					</section>
 				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<h3 class="bf1a i m0">W639 / V639</h3>
-						<p class="i m1">Vito</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-vito" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h4>Vito<h4>
+										2003 - 2014
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-vito" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h5>Compact</h5>
+							<a href="full/v2/w639_f.jpg"><img loading="lazy" src="style/v2/w639_f.webp" alt="メルセデス,W639,Vito,フロント," width="621" height="369"></a>
+							<a href="full/v2/w639_r.jpg"><img loading="lazy" src="style/v2/w639_r.webp" alt="メルセデス,W639,Vito,リヤ" width="582" height="369"></a><br>
+							<a href="full/v2/w639_d.jpg"><img loading="lazy" src="style/v2/w639_d.webp" alt="メルセデス,W639,Vito,ダッシュボード" width="629" height="384"></a>
+							<a href="full/v2/w639_m.webp"><img loading="lazy" src="style/v2/w639_m.webp" alt="メルセデス,W639,Vito,Motor" width="576" height="384"></a>
+							<h5>Long</h5>
+							<a href="full/v2/v639l_f.webp"><img loading="lazy" src="style/v2/v639l_f.webp" alt="メルセデス,V639,Vito,ロング,フロント," width="601" height="398"></a>
+							<a href="full/v2/v639l_r.jpg"><img loading="lazy" src="style/v2/v639l_r.webp" alt="メルセデス,V639,Vito,ロング,リヤ" width="603" height="398"></a>
+							<h5>Extralong</h5>
+							<a href="full/v2/v639el_f.jpg"><img loading="lazy" src="style/v2/v639el_f.webp" alt="メルセデス,V639,Vito,Extralong,フロント," width="492" height="312"></a>
+							<a href="full/v2/v639el_s.jpg"><img loading="lazy" src="style/v2/v639el_s.webp" alt="メルセデス,V639,Vito,Extralong,側面" width="713" height="312"></a><br>
+							<h5 class="i">フェイスリフト</h5>
+							<p class="i m1">10/2010</p><br>
+							<a href="full/v2/w639_f2.jpg"><img loading="lazy" src="style/v2/w639_f2.webp" alt="メルセデス,W639,Vito,フロント," width="1210" height="579"></a><br>
+							<a href="full/v2/w639_r2.jpg"><img loading="lazy" src="style/v2/w639_r2.webp" alt="メルセデス,W639,Vito,リヤ" width="671" height="401"></a>
+							<a href="full/v2/w639_d2.jpg"><img loading="lazy" src="style/v2/w639_d2.webp" alt="メルセデス,W639,Vito,ダッシュボード" width="535" height="401"></a>
+							<h5>Long</h5>
+							<a href="full/v2/v639l_f2.jpg"><img loading="lazy" src="style/v2/v639l_f2.webp" alt="メルセデス,V639,Vito,ロング,フロント," width="625" height="328"></a>
+							<a href="full/v2/v639l_r2.jpg"><img loading="lazy" src="style/v2/v639l_r2.webp" alt="メルセデス,V639,Vito,ロング,リヤ" width="577" height="328"></a>
+							<h5>Extralong</h5>
+							<a href="full/v2/v639el_f2.jpg"><img loading="lazy" src="style/v2/v639el_f2.webp" alt="メルセデス,V639,Vito,Extralong,フロント," width="1210" height="626"></a><br>
+							<a href="full/v2/v639el_r2.jpg"><img loading="lazy" src="style/v2/v639el_r2.webp" alt="メルセデス,V639,Vito,Extralong,リヤ" width="649" height="369"></a>
+							<a href="full/v2/v639el_i2.jpg"><img loading="lazy" src="style/v2/v639el_i2.webp" alt="メルセデス,V639,Vito,内装" width="555" height="369"></a>
+							<h5>Size and type</h5>
+							<a href="full/v2/w639a.jpg"><img loading="lazy" src="style/v2/w639a.webp" alt="メルセデス,W639" width="1210" height="482"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">Vito</h4>
-						<h5>Compact</h5>
-						<a href="full/v2/w639_f.jpg"><img loading="lazy" src="style/v2/w639_f.webp" alt="メルセデス,W639,Vito,フロント," width="621" height="369"></a>
-						<a href="full/v2/w639_r.jpg"><img loading="lazy" src="style/v2/w639_r.webp" alt="メルセデス,W639,Vito,リヤ" width="582" height="369"></a><br>
-						<a href="full/v2/w639_d.jpg"><img loading="lazy" src="style/v2/w639_d.webp" alt="メルセデス,W639,Vito,ダッシュボード" width="629" height="384"></a>
-						<a href="full/v2/w639_m.webp"><img loading="lazy" src="style/v2/w639_m.webp" alt="メルセデス,W639,Vito,Motor" width="576" height="384"></a>
-						<h5>Long</h5>
-						<a href="full/v2/v639l_f.webp"><img loading="lazy" src="style/v2/v639l_f.webp" alt="メルセデス,V639,Vito,ロング,フロント," width="601" height="398"></a>
-						<a href="full/v2/v639l_r.jpg"><img loading="lazy" src="style/v2/v639l_r.webp" alt="メルセデス,V639,Vito,ロング,リヤ" width="603" height="398"></a>
-						<h5>Extralong</h5>
-						<a href="full/v2/v639el_f.jpg"><img loading="lazy" src="style/v2/v639el_f.webp" alt="メルセデス,V639,Vito,Extralong,フロント," width="492" height="312"></a>
-						<a href="full/v2/v639el_s.jpg"><img loading="lazy" src="style/v2/v639el_s.webp" alt="メルセデス,V639,Vito,Extralong,側面" width="713" height="312"></a><br>
-						<h5 class="i">フェイスリフト</h5>
-						<p class="i m1">10/2010</p><br>
-						<a href="full/v2/w639_f2.jpg"><img loading="lazy" src="style/v2/w639_f2.webp" alt="メルセデス,W639,Vito,フロント," width="1210" height="579"></a><br>
-						<a href="full/v2/w639_r2.jpg"><img loading="lazy" src="style/v2/w639_r2.webp" alt="メルセデス,W639,Vito,リヤ" width="671" height="401"></a>
-						<a href="full/v2/w639_d2.jpg"><img loading="lazy" src="style/v2/w639_d2.webp" alt="メルセデス,W639,Vito,ダッシュボード" width="535" height="401"></a>
-						<h5>Long</h5>
-						<a href="full/v2/v639l_f2.jpg"><img loading="lazy" src="style/v2/v639l_f2.webp" alt="メルセデス,V639,Vito,ロング,フロント," width="625" height="328"></a>
-						<a href="full/v2/v639l_r2.jpg"><img loading="lazy" src="style/v2/v639l_r2.webp" alt="メルセデス,V639,Vito,ロング,リヤ" width="577" height="328"></a>
-						<h5>Extralong</h5>
-						<a href="full/v2/v639el_f2.jpg"><img loading="lazy" src="style/v2/v639el_f2.webp" alt="メルセデス,V639,Vito,Extralong,フロント," width="1210" height="626"></a><br>
-						<a href="full/v2/v639el_r2.jpg"><img loading="lazy" src="style/v2/v639el_r2.webp" alt="メルセデス,V639,Vito,Extralong,リヤ" width="649" height="369"></a>
-						<a href="full/v2/v639el_i2.jpg"><img loading="lazy" src="style/v2/v639el_i2.webp" alt="メルセデス,V639,Vito,内装" width="555" height="369"></a>
-						<h5>Size and type</h5>
-						<a href="full/v2/w639a.jpg"><img loading="lazy" src="style/v2/w639a.webp" alt="メルセデス,W639" width="1210" height="482"></a>
-					</section>
 				</div>
+
 			</div>
 		</section>
 
@@ -587,86 +642,108 @@
 			<h2>第３世代 Vクラス / Vito</h2>
 			<div class="style-w">
 				<a href="full/v2/w447.jpg"><img loading="lazy" src="style/v2/w447.webp" alt="メルセデス,W447,Vito,フロント" width="1210" height="756"></a>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<p class="bf1a i"><a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBV%E3%82%AF%E3%83%A9%E3%82%B9#3%E4%BB%A3%E7%9B%AE%EF%BC%88W447%EF%BC%89" class="ico-wiki m1" title="Wikipedia(J)_Mercedes-Benz W447"></a></p>
-						<h3 class="i m0">W447 / V447</h3>
-						<p class="i m1">Vクラス</p>
-						<p class="i m1">05/2014 -</p>
-					</div>
-					<section>
-						<h4 class="displayNone">Vクラス</h4>
-						<img loading="lazy" src="style/v2/w447_s_3typ.webp" alt="メルセデス,W447,Vクラス,比較" width="704" height="957">
-						<div class="ib">
-							<a href="full/v2/w447_d_2.jpg"><img loading="lazy" src="style/v2/w447_d_2.webp" alt="メルセデス,W447,V,ダッシュボード" width="500" height="281"></a><br>
-							<a href="full/v2/v447_i.jpg"><img loading="lazy" src="style/v2/v447_i.webp" alt="メルセデス,V447,Vクラス,内装" width="500" height="333"></a><br>
-							<a href="full/v2/v447l_m_2.jpg"><img loading="lazy" src="style/v2/v447l_m_2.webp" alt="メルセデス,V447,Vクラスロング,エンジン" width="500" height="333"></a>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-w447 / v447" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBV%E3%82%AF%E3%83%A9%E3%82%B9#3%E4%BB%A3%E7%9B%AE%EF%BC%88W447%EF%BC%89" class="ico-wiki" title="Wikipedia(J)_Mercedes-Benz W447"></a>
+								<h3>W447 / V447</h3>
+								<h4>Vクラス</h4>
+								05/2014 -
+							</div>
+							<div class="accordion-right">
+								デザイナー : Betrand Janssen , Gorden Wagener
+							</div>
 						</div>
-						<h5>Compact</h5>
-						<a href="full/v2/w447_s_2.webp"><img loading="lazy" src="style/v2/w447_s_2.webp" alt="メルセデス,W447,Vクラス,コンパクト,側面" width="650" height="340"></a>
-						<a href="full/v2/w447_r_2.webp"><img loading="lazy" src="style/v2/w447_r_2.webp" alt="メルセデス,W447,Vクラス,コンパクト,リヤ" width="554" height="340"></a>
-						<h5>Long</h5>
-						<a href="full/v2/v447l_f_2.jpg"><img loading="lazy" src="style/v2/v447l_f_2.webp" alt="メルセデス,V447,Vクラスロング,フロント" width="607" height="405"></a>
-						<a href="full/v2/v447l_r_2.jpg"><img loading="lazy" src="style/v2/v447l_r_2.webp" alt="メルセデス,V447,Vクラスロング,リヤ" width="599" height="405"></a>
-						<h5>アヴァンギャルド Long</h5>
-						<a href="full/v2/v447l_i_2.jpg"><img loading="lazy" src="style/v2/v447l_i_2.webp" alt="メルセデス,V447,Vクラスロング,内装" width="1210" height="628"></a>
-						<h5>Extralong</h5>
-						<a href="full/v2/v447el_f_2.webp"><img loading="lazy" src="style/v2/v447el_f_2.webp" alt="メルセデス,V447,Vクラス,エクストラロング,フロント" width="602" height="401"></a>
-						<a href="full/v2/v447el_r_2.webp"><img loading="lazy" src="style/v2/v447el_r_2.webp" alt="メルセデス,V447,Vクラス,エクストラロング,リヤ" width="602" height="401"></a>
-						<h5>アヴァンギャルド Extralong</h5>
-						<a href="full/v2/v447el_f_2ava.jpg"><img loading="lazy" src="style/v2/v447el_f_2ava.webp" alt="メルセデス,V447,Vクラス,エクストラロング,アヴァンギャルド,フロント" width="624" height="387"></a>
-						<a href="full/v2/v447el_i_2ava.jpg"><img loading="lazy" src="style/v2/v447el_i_2ava.webp" alt="メルセデス,V447,Vクラス,エクストラロング,アヴァンギャルド,内装" width="581" height="387"></a>
-					</section>
-				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<h3 class="bf1b i">W447 / V447</h3>
-						<p class="i m1">Vito</p>
-						<p class="i m1">10/2014 -</p>
+					</button>
+					<div id="accordion-content-w447 / v447" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<img loading="lazy" src="style/v2/w447_s_3typ.webp" alt="メルセデス,W447,Vクラス,比較" width="704" height="957">
+							<div class="ib">
+								<a href="full/v2/w447_d_2.jpg"><img loading="lazy" src="style/v2/w447_d_2.webp" alt="メルセデス,W447,V,ダッシュボード" width="500" height="281"></a><br>
+								<a href="full/v2/v447_i.jpg"><img loading="lazy" src="style/v2/v447_i.webp" alt="メルセデス,V447,Vクラス,内装" width="500" height="333"></a><br>
+								<a href="full/v2/v447l_m_2.jpg"><img loading="lazy" src="style/v2/v447l_m_2.webp" alt="メルセデス,V447,Vクラスロング,エンジン" width="500" height="333"></a>
+							</div>
+							<h5>Compact</h5>
+							<a href="full/v2/w447_s_2.webp"><img loading="lazy" src="style/v2/w447_s_2.webp" alt="メルセデス,W447,Vクラス,コンパクト,側面" width="650" height="340"></a>
+							<a href="full/v2/w447_r_2.webp"><img loading="lazy" src="style/v2/w447_r_2.webp" alt="メルセデス,W447,Vクラス,コンパクト,リヤ" width="554" height="340"></a>
+							<h5>Long</h5>
+							<a href="full/v2/v447l_f_2.jpg"><img loading="lazy" src="style/v2/v447l_f_2.webp" alt="メルセデス,V447,Vクラスロング,フロント" width="607" height="405"></a>
+							<a href="full/v2/v447l_r_2.jpg"><img loading="lazy" src="style/v2/v447l_r_2.webp" alt="メルセデス,V447,Vクラスロング,リヤ" width="599" height="405"></a>
+							<h5>アヴァンギャルド Long</h5>
+							<a href="full/v2/v447l_i_2.jpg"><img loading="lazy" src="style/v2/v447l_i_2.webp" alt="メルセデス,V447,Vクラスロング,内装" width="1210" height="628"></a>
+							<h5>Extralong</h5>
+							<a href="full/v2/v447el_f_2.webp"><img loading="lazy" src="style/v2/v447el_f_2.webp" alt="メルセデス,V447,Vクラス,エクストラロング,フロント" width="602" height="401"></a>
+							<a href="full/v2/v447el_r_2.webp"><img loading="lazy" src="style/v2/v447el_r_2.webp" alt="メルセデス,V447,Vクラス,エクストラロング,リヤ" width="602" height="401"></a>
+							<h5>アヴァンギャルド Extralong</h5>
+							<a href="full/v2/v447el_f_2ava.jpg"><img loading="lazy" src="style/v2/v447el_f_2ava.webp" alt="メルセデス,V447,Vクラス,エクストラロング,アヴァンギャルド,フロント" width="624" height="387"></a>
+							<a href="full/v2/v447el_i_2ava.jpg"><img loading="lazy" src="style/v2/v447el_i_2ava.webp" alt="メルセデス,V447,Vクラス,エクストラロング,アヴァンギャルド,内装" width="581" height="387"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="displayNone">Vito</h4>
-						<a href="full/v2/w447_d.jpg"><img loading="lazy" src="style/v2/w447_d.webp" alt="メルセデス,W447,Vito,ダッシュボード" width="557" height="248"></a>
-						<a href="full/v2/w447_s.jpg"><img loading="lazy" src="style/v2/w447_s.webp" alt="メルセデス,W447,Vito,側面" width="647" height="248"></a>
-						<h5>Compact</h5>
-						<a href="full/v2/w447_f.jpg"><img loading="lazy" src="style/v2/w447_f.webp" alt="メルセデス,W447,Vito,フロント" width="603" height="452"></a>
-						<a href="full/v2/w447_r.jpg"><img loading="lazy" src="style/v2/w447_r.webp" alt="メルセデス,W447,Vito,リヤ" width="603" height="452"></a>
-						<h5>Long</h5>
-						<a href="full/v2/v447l_f.jpg"><img loading="lazy" src="style/v2/v447l_f.webp" alt="メルセデス,V447,Vitoロング,フロント" width="651" height="377"></a>
-						<a href="full/v2/v447l_r.jpg"><img loading="lazy" src="style/v2/v447l_r.webp" alt="メルセデス,V447,Vito,ロング,リヤ" width="554" height="377"></a>
-						<h5>Extralong</h5>
-						<a href="full/v2/v447el_f.jpg"><img loading="lazy" src="style/v2/v447el_f.webp" alt="メルセデス,V447,Vito,Extralong,フロント" width="542" height="303"></a>
-						<a href="full/v2/v447el_s.jpg"><img loading="lazy" src="style/v2/v447el_s.webp" alt="メルセデス,V447,Vito,Extralong,側面" width="662" height="303"></a>
-					</section>
 				</div>
-				<div class="vmenu_off">
-					<div class="vmenuitem_2" onclick="doToggleClassName(getParentObj(this),'vmenu_on2','vmenu_off')" title="クリックしてアコーディオンパネルを開いてください">
-						<h3 class="bf1b i">W447 / V447</h3>
-						<p class="i m1">Marco Polo / Marco Polo Activity</p>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-vito" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h4>Vito<h4>
+										10/2014 -
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-vito" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<a href="full/v2/w447_d.jpg"><img loading="lazy" src="style/v2/w447_d.webp" alt="メルセデス,W447,Vito,ダッシュボード" width="557" height="248"></a>
+							<a href="full/v2/w447_s.jpg"><img loading="lazy" src="style/v2/w447_s.webp" alt="メルセデス,W447,Vito,側面" width="647" height="248"></a>
+							<h5>Compact</h5>
+							<a href="full/v2/w447_f.jpg"><img loading="lazy" src="style/v2/w447_f.webp" alt="メルセデス,W447,Vito,フロント" width="603" height="452"></a>
+							<a href="full/v2/w447_r.jpg"><img loading="lazy" src="style/v2/w447_r.webp" alt="メルセデス,W447,Vito,リヤ" width="603" height="452"></a>
+							<h5>Long</h5>
+							<a href="full/v2/v447l_f.jpg"><img loading="lazy" src="style/v2/v447l_f.webp" alt="メルセデス,V447,Vitoロング,フロント" width="651" height="377"></a>
+							<a href="full/v2/v447l_r.jpg"><img loading="lazy" src="style/v2/v447l_r.webp" alt="メルセデス,V447,Vito,ロング,リヤ" width="554" height="377"></a>
+							<h5>Extralong</h5>
+							<a href="full/v2/v447el_f.jpg"><img loading="lazy" src="style/v2/v447el_f.webp" alt="メルセデス,V447,Vito,Extralong,フロント" width="542" height="303"></a>
+							<a href="full/v2/v447el_s.jpg"><img loading="lazy" src="style/v2/v447el_s.webp" alt="メルセデス,V447,Vito,Extralong,側面" width="662" height="303"></a>
+						</div>
 					</div>
-					<section>
-						<h4 class="i">Marco Polo</h4>
-						<p class="i m2">Vクラス Basis</p><br>
-						<a href="full/v2/w447mp_i01.jpg"><img loading="lazy" src="style/v2/w447mp_i01.webp" alt="メルセデス,W447,Marco Polo" width="1210" height="680"></a><br>
-						<a href="full/v2/w447mp_i02.jpg"><img loading="lazy" src="style/v2/w447mp_i02.webp" alt="メルセデス,W447,Marco Polo,内装" width="602" height="401"></a>
-						<a href="full/v2/w447mp_i03.jpg"><img loading="lazy" src="style/v2/w447mp_i03.webp" alt="メルセデス,W447,Marco Polo,内装" width="602" height="401"></a><br>
-						<a href="full/v2/w447mp_i04.jpg"><img loading="lazy" src="style/v2/w447mp_i04.webp" alt="メルセデス,W447,Marco Polo,内装" width="551" height="367"></a>
-						<a href="full/v2/w447mp_i05.jpg"><img loading="lazy" src="style/v2/w447mp_i05.webp" alt="メルセデス,W447,Marco Polo,内装" width="653" height="367"></a><br>
-						<h4 class="i">Marco Polo Activity</h4>
-						<p class="i m2">Vito Basis</p><br>
-						<a href="full/v2/v447mp.jpg"><img loading="lazy" src="style/v2/v447mp.webp" alt="メルセデス,V447,Vクラス,Marco Polo" width="1210" height="756"></a><br>
-						<a href="full/v2/v447mp_f.jpg"><img loading="lazy" src="style/v2/v447mp_f.webp" alt="メルセデス,V447,Vクラス,Marco Polo,フロント" width="625" height="386"></a>
-						<a href="full/v2/v447mp_f0.jpg"><img loading="lazy" src="style/v2/v447mp_f0.webp" alt="メルセデス,V447,Vクラス,Marco Polo,フロント" width="577" height="386"></a><br>
-						<a href="full/v2/v447mp_r.jpg"><img loading="lazy" src="style/v2/v447mp_r.webp" alt="メルセデス,V447,Vクラス,Marco Polo,リヤ" width="602" height="339"></a>
-						<a href="full/v2/v447mp_r0.jpg"><img loading="lazy" src="style/v2/v447mp_r0.webp" alt="メルセデス,V447,Vクラス,Marco Polo,リヤ" width="602" height="339"></a><br>
-						<a href="full/v2/v447mp_i01.jpg"><img loading="lazy" src="style/v2/v447mp_i01.webp" alt="メルセデス,V447,Marco Polo,内装" width="601" height="338"></a>
-						<a href="full/v2/v447mp_i02.jpg"><img loading="lazy" src="style/v2/v447mp_i02.webp" alt="メルセデス,V447,Marco Polo,内装" width="601" height="338"></a><br>
-						<a href="full/v2/v447mp_i03.jpg"><img loading="lazy" src="style/v2/v447mp_i03.webp" alt="メルセデス,V447,Marco Polo,内装" width="653" height="367"></a>
-						<a href="full/v2/v447mp_i04.jpg"><img loading="lazy" src="style/v2/v447mp_i04.webp" alt="メルセデス,V447,Marco Polo,内装" width="551" height="367"></a><br>
-						<a href="full/v2/v447mp_i05.jpg"><img loading="lazy" src="style/v2/v447mp_i05.webp" alt="メルセデス,V447,Marco Polo,内装" width="570" height="357"></a>
-						<a href="full/v2/v447mp_d.jpg"><img loading="lazy" src="style/v2/v447mp_d.webp" alt="メルセデス,V447,Marco Polo,ダッシュボード" width="634" height="357"></a>
-					</section>
 				</div>
+
+				<div class="accordion">
+					<button class="accordion-header subpage" aria-expanded="false" aria-controls="accordion-content-marco polo / marco polo activity" title="クリックしてアコーディオンパネルを開いてください">
+						<div class="accordion-row">
+							<div class="accordion-left">
+								<h4>Marco Polo / Marco Polo Activity<h4>
+										2015 -
+							</div>
+						</div>
+					</button>
+					<div id="accordion-content-marco polo / marco polo activity" class="accordion-content subpage" role="region">
+						<div class="accordion-content-inner subpage">
+							<h5 class="i">Marco Polo</h5>
+							<p class="i m2">Vクラス Basis</p><br>
+							<a href="full/v2/w447mp_i01.jpg"><img loading="lazy" src="style/v2/w447mp_i01.webp" alt="メルセデス,W447,Marco Polo" width="1210" height="680"></a><br>
+							<a href="full/v2/w447mp_i02.jpg"><img loading="lazy" src="style/v2/w447mp_i02.webp" alt="メルセデス,W447,Marco Polo,内装" width="602" height="401"></a>
+							<a href="full/v2/w447mp_i03.jpg"><img loading="lazy" src="style/v2/w447mp_i03.webp" alt="メルセデス,W447,Marco Polo,内装" width="602" height="401"></a><br>
+							<a href="full/v2/w447mp_i04.jpg"><img loading="lazy" src="style/v2/w447mp_i04.webp" alt="メルセデス,W447,Marco Polo,内装" width="551" height="367"></a>
+							<a href="full/v2/w447mp_i05.jpg"><img loading="lazy" src="style/v2/w447mp_i05.webp" alt="メルセデス,W447,Marco Polo,内装" width="653" height="367"></a><br>
+							<h5 class="i">Marco Polo Activity</h5>
+							<p class="i m2">Vito Basis</p><br>
+							<a href="full/v2/v447mp.jpg"><img loading="lazy" src="style/v2/v447mp.webp" alt="メルセデス,V447,Vクラス,Marco Polo" width="1210" height="756"></a><br>
+							<a href="full/v2/v447mp_f.jpg"><img loading="lazy" src="style/v2/v447mp_f.webp" alt="メルセデス,V447,Vクラス,Marco Polo,フロント" width="625" height="386"></a>
+							<a href="full/v2/v447mp_f0.jpg"><img loading="lazy" src="style/v2/v447mp_f0.webp" alt="メルセデス,V447,Vクラス,Marco Polo,フロント" width="577" height="386"></a><br>
+							<a href="full/v2/v447mp_r.jpg"><img loading="lazy" src="style/v2/v447mp_r.webp" alt="メルセデス,V447,Vクラス,Marco Polo,リヤ" width="602" height="339"></a>
+							<a href="full/v2/v447mp_r0.jpg"><img loading="lazy" src="style/v2/v447mp_r0.webp" alt="メルセデス,V447,Vクラス,Marco Polo,リヤ" width="602" height="339"></a><br>
+							<a href="full/v2/v447mp_i01.jpg"><img loading="lazy" src="style/v2/v447mp_i01.webp" alt="メルセデス,V447,Marco Polo,内装" width="601" height="338"></a>
+							<a href="full/v2/v447mp_i02.jpg"><img loading="lazy" src="style/v2/v447mp_i02.webp" alt="メルセデス,V447,Marco Polo,内装" width="601" height="338"></a><br>
+							<a href="full/v2/v447mp_i03.jpg"><img loading="lazy" src="style/v2/v447mp_i03.webp" alt="メルセデス,V447,Marco Polo,内装" width="653" height="367"></a>
+							<a href="full/v2/v447mp_i04.jpg"><img loading="lazy" src="style/v2/v447mp_i04.webp" alt="メルセデス,V447,Marco Polo,内装" width="551" height="367"></a><br>
+							<a href="full/v2/v447mp_i05.jpg"><img loading="lazy" src="style/v2/v447mp_i05.webp" alt="メルセデス,V447,Marco Polo,内装" width="570" height="357"></a>
+							<a href="full/v2/v447mp_d.jpg"><img loading="lazy" src="style/v2/v447mp_d.webp" alt="メルセデス,V447,Marco Polo,ダッシュボード" width="634" height="357"></a>
+						</div>
+					</div>
+				</div>
+
 			</div>
 		</section>
 
@@ -718,9 +795,10 @@
 			<hr>
 			<p class="mid"><small>@ since 2010 , piyopiyo_246</small></p>
 		</footer>
+
 		<p class="m-05" id="page-top"><a href="#head">&#9650;</a></p>
 		<p id="close-accordion">
-			<a class="vmenu_all_action" onclick="doReplaceClassName ('vmenu_on2','vmenu_off')" title="全ての開閉部を閉じる">&#9654;</a>
+			<a id="close-all-accordions-2" class="vmenu_all_action" title="全ての開閉部を閉じる">&#9654;</a>
 		</p>
 	</div>
 
@@ -776,6 +854,7 @@
 	</script>
 </body>
 
+<!-- スクロールしてトップ -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script>
 	$(function () {
@@ -794,6 +873,120 @@
 			}, 500);
 			return false;
 		});
+	});
+</script>
+
+<script>
+	// シンプル版アコーディオン機能（入れ子非対応）
+	document.addEventListener('DOMContentLoaded', function () {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+		accordionHeaders.forEach(header => {
+			header.addEventListener('click', function () {
+				const content = this.nextElementSibling;
+				const isActive = this.classList.contains('active');
+
+				// クリックされたアコーディオンのみトグル
+				if (isActive) {
+					this.classList.remove('active');
+					this.setAttribute('aria-expanded', 'false');
+					content.classList.remove('active');
+				} else {
+					this.classList.add('active');
+					this.setAttribute('aria-expanded', 'true');
+					content.classList.add('active');
+				}
+			});
+
+			// キーボード操作のサポート
+			header.addEventListener('keydown', function (e) {
+				if (e.key === 'Enter' || e.key === ' ') {
+					e.preventDefault();
+					this.click();
+				}
+			});
+		});
+
+		// 全開/全閉ボタンのイベントリスナー
+		const openAllBtn = document.getElementById('open-all-accordions');
+		const closeAllBtn = document.getElementById('close-all-accordions');
+		const closeAllBtn2 = document.getElementById('close-all-accordions-2');
+
+		if (openAllBtn) {
+			openAllBtn.addEventListener('click', openAllAccordions);
+		}
+
+		if (closeAllBtn) {
+			closeAllBtn.addEventListener('click', closeAllAccordions);
+		}
+
+		if (closeAllBtn2) {
+			closeAllBtn2.addEventListener('click', closeAllAccordions);
+		}
+	});
+
+	// 全アコーディオン操作機能
+	function openAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.add('active');
+			header.setAttribute('aria-expanded', 'true');
+			content.classList.add('active');
+		});
+	}
+
+	function closeAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.remove('active');
+			header.setAttribute('aria-expanded', 'false');
+			content.classList.remove('active');
+		});
+	}
+
+	// 全アコーディオン操作機能
+	function openAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.add('active');
+			header.setAttribute('aria-expanded', 'true');
+			content.classList.add('active');
+		});
+	}
+
+	function closeAllAccordions() {
+		const accordionHeaders = document.querySelectorAll('.accordion-header');
+		accordionHeaders.forEach(header => {
+			const content = header.nextElementSibling;
+			header.classList.remove('active');
+			header.setAttribute('aria-expanded', 'false');
+			content.classList.remove('active');
+		});
+	}
+
+	// ボタンにイベントリスナーを追加
+	document.addEventListener('DOMContentLoaded', function () {
+		// 既存のアコーディオンコード...
+
+		// 全開/全閉ボタン
+		const openAllBtn = document.getElementById('open-all-accordions');
+		const closeAllBtn = document.getElementById('close-all-accordions');
+		const closeAllBtn2 = document.getElementById('close-all-accordions-2'); // 追加ボタン
+
+		if (openAllBtn) {
+			openAllBtn.addEventListener('click', openAllAccordions);
+		}
+
+		if (closeAllBtn) {
+			closeAllBtn.addEventListener('click', closeAllAccordions);
+		}
+
+		if (closeAllBtn2) {
+			closeAllBtn2.addEventListener('click', closeAllAccordions);
+		}
 	});
 </script>
 
