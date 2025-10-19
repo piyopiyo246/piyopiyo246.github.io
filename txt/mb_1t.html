@@ -235,12 +235,17 @@
 </head>
 
 <body>
-	<!-- 8. GTM noscriptフォールバック -->
-	<noscript>
-		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MMJ4PJ3" height="0" width="0" style="display:none;visibility:hidden"></iframe>
-	</noscript>
-
-	<!-- 9. Cookie同意バナー（body直後に移動） -->
+	<!-- <body>直後に配置 -->
+	<script>
+		if (!window.dataLayer.some(e => e.event === 'page_view')) {
+			gtag('event', 'page_view', {
+				page_title: document.title,
+				page_location: location.href,
+				send_to: 'G-5V9EW158CK'
+			});
+		}
+	</script>
+	<!-- 7. Cookie同意バナー（最初に読み込み） -->
 	<script>
 		document.addEventListener('CookieScriptAccept', () => {
 			localStorage.setItem('cookie_consent', 'true');
@@ -252,6 +257,10 @@
 	 <script src="tp.js"></script>
 
 	<!-- 8. GTM noscriptフォールバック -->
+	<noscript>
+		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MMJ4PJ3" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+	</noscript>
+
 	<header>
 		<ul class="f" itemscope itemtype="https://schema.org/BreadcrumbList">
 			<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="f m1">
