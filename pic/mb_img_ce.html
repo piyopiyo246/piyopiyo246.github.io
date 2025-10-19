@@ -2,6 +2,9 @@
 <html lang="de">
 
 <head>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=GT-KFG3B2J"></script>
+
 	<!-- 1. 基本設定（必須） -->
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -199,21 +202,17 @@
 	</script>
 </head>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=GT-KFG3B2J"></script>
-
-<!-- </body>直前に追加 -->
-<script>
-	if (!window.dataLayer.some(e => e.event === 'page_view')) {
-		gtag('event', 'page_view', {
-			page_title: document.title,
-			page_location: location.href,
-			send_to: 'G-5V9EW158CK'
-		});
-	}
-</script>
-
 <body>
+	<!-- <body>直後に配置 -->
+	<script>
+		if (!window.dataLayer.some(e => e.event === 'page_view')) {
+			gtag('event', 'page_view', {
+				page_title: document.title,
+				page_location: location.href,
+				send_to: 'G-5V9EW158CK'
+			});
+		}
+	</script>
 	<!-- 7. Cookie同意バナー（最初に読み込み） -->
 	<script>
 		document.addEventListener('CookieScriptAccept', () => {
