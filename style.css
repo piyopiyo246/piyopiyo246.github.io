@@ -491,7 +491,7 @@ td {
 }
 
 .bd {
-	border-bottom: 1px #777 solid;
+	border-bottom: 1px #000 solid;
 }
 
 /*inline*/
@@ -780,11 +780,15 @@ figcaption {
 	text-align: center;
 }
 
-.nomal_title {
+.normal_title,.center_title {
 	background-color: #fbfbfb;
 	color: #111;
 	text-align: left;
 	padding: 0;
+}
+
+.center_title {
+	text-align: center;
 }
 
 iframe {
