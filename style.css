@@ -97,11 +97,11 @@ a.lnk4 {
 	color: #555;
 }
 
-a.lnk:hover {
+.lnk:hover {
 	color: #666;
 }
 
-a.lnk2:hover {
+.lnk2:hover {
 	color: #2600ff;
 }
 
