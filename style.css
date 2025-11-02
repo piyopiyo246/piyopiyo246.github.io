@@ -200,7 +200,8 @@ hr {
 .dashboard,
 .wood,
 .under_box,
-.sitemap {
+.sitemap,
+.under_dashboard {
 	background: #4f4f4f;
 	width: 100%;
 	min-width: 1210px;
@@ -221,6 +222,12 @@ hr {
 	text-align: center;
 	clear: both;
 	z-index: 1;
+	border-bottom: solid 2px #000 ;
+}
+
+.under_dashboard {
+	height: 5px;
+	border-bottom: solid 1px #000 ;
 }
 
 /*文字を重ねる*/
@@ -772,7 +779,7 @@ td {
 /*スクロールバーの動く部分*/
 ::-webkit-scrollbar-thumb {
 	background: #4f4f4f;
-	height: 19.5%;
+	height: 20.9%;
 }
 
 figure {
