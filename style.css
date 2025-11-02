@@ -217,17 +217,15 @@ hr {
 }
 
 .wood {
-	height: 46px;
-	background: #333;
+	height: 44px;
 	text-align: center;
 	clear: both;
 	z-index: 1;
-	border-left: solid 10px #4f4f4f ;
 	border-bottom: solid 1px #000 ;
 }
 
 .under_dashboard {
-	height: 4px;
+	height: 6px;
 	border-bottom: solid 1px #000 ;
 }
 
@@ -236,7 +234,7 @@ hr {
 .c-box {
 	position: absolute;
 	left: 31.5%;
-	top: 50%;
+	top: 49%;
 	transform: translate(-50%, -50%);
 	color: #FFF;
 	font-size: 100%;
@@ -713,7 +711,7 @@ td {
 /*スクロールバーの動く部分*/
 ::-webkit-scrollbar-thumb {
 	background: #4f4f4f;
-	height: 20.1%;
+	height: 19.5%;
 }
 
 figure {
