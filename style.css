@@ -89,7 +89,8 @@ a:visited {
 	color: #000;
 }
 
-.lnk,.lnk2 {
+.lnk,
+.lnk2 {
 	color: #000;
 }
 
@@ -221,12 +222,12 @@ hr {
 	text-align: center;
 	clear: both;
 	z-index: 1;
-	border-bottom: solid 1px #000 ;
+	border-bottom: solid 1px #000;
 }
 
 .under_dashboard {
 	height: 6px;
-	border-bottom: solid 1px #000 ;
+	border-bottom: solid 1px #000;
 }
 
 /*文字を重ねる*/
@@ -728,7 +729,8 @@ figcaption {
 	text-align: center;
 }
 
-.normal_title,.center_title {
+.normal_title,
+.center_title {
 	background-color: #fbfbfb;
 	color: #111;
 	text-align: left;
