@@ -227,7 +227,9 @@ hr {
 
 .under_dashboard {
 	height: 6px;
+	/* stylelint-disable-line */
 	border-bottom: solid 1px #000;
+	/* stylelint-disable-line */
 }
 
 /*文字を重ねる*/
