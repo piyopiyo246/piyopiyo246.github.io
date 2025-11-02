@@ -713,7 +713,7 @@ td {
 /*スクロールバーの動く部分*/
 ::-webkit-scrollbar-thumb {
 	background: #4f4f4f;
-	height: 20.9%;
+	height: 20.1%;
 }
 
 figure {
