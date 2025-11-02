@@ -212,16 +212,18 @@ hr {
 }
 
 .dashboard {
-	height: 57px;
+	height: 54.4px;
 	border-bottom: solid 2px #333;
 	padding: 0;
 }
 
 .wood {
 	height: 48px;
+	background: #333;
 	text-align: center;
 	clear: both;
 	z-index: 1;
+	border-left: solid 10px #4f4f4f ;
 	border-bottom: solid 2px #000 ;
 }
 
