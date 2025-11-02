@@ -212,23 +212,23 @@ hr {
 }
 
 .dashboard {
-	height: 54.4px;
+	height: 54px;
 	border-bottom: solid 2px #333;
 	padding: 0;
 }
 
 .wood {
-	height: 48px;
+	height: 46px;
 	background: #333;
 	text-align: center;
 	clear: both;
 	z-index: 1;
 	border-left: solid 10px #4f4f4f ;
-	border-bottom: solid 2px #000 ;
+	border-bottom: solid 1px #000 ;
 }
 
 .under_dashboard {
-	height: 5px;
+	height: 4px;
 	border-bottom: solid 1px #000 ;
 }
 
@@ -682,73 +682,6 @@ td {
 	position: absolute;
 	top: 0;
 	left: 0;
-}
-
-/* Accordion Tab */
-.vmenuitem_2,
-.vmenuitem_5,
-.vmenuitem_6 {
-	cursor: pointer;
-	width: 400px;
-}
-
-.vmenuitem_2 {
-	width: 90%;
-	border-radius: 22px;
-	margin-right: auto;
-	margin-left: auto;
-}
-
-.vmenuitem_5 {
-	width: 940px;
-}
-
-.vmenuitem_6 {
-	width: 1180px;
-}
-
-.vmenuitem_5 :hover,
-.vmenuitem_6 :hover {
-	background: #fbfbfb;
-}
-
-.vmenu_on .vmenuitem_5,
-.vmenu_on .vmenuitem_6 {
-	background: #fbfbfb;
-}
-
-.vmenu_on,
-.vmenu_off {
-	clear: both;
-	cursor: auto;
-	margin-top: 8px;
-}
-
-.vmenu_on2 .vmenuitem_2 {
-	border: 2px solid #707070;
-	margin-top: 8px;
-	margin-bottom: 8px;
-}
-
-.vmenu_off .vmenuitem_2 {
-	border: 2px solid #707070;
-	margin-bottom: 8px;
-}
-
-.vmenuitem_2:hover {
-	border: 2px solid #9e9e9e;
-}
-
-.vmenu_on section {
-	background: #fbfbfb;
-}
-
-.vmenu_on2 section {
-	background: #4f4f4f;
-}
-
-.vmenu_off section {
-	display: none;
 }
 
 .vmenu_all_action {
