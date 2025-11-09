@@ -107,12 +107,12 @@ a.lnk4 {
 }
 
 a.lnk3 {
-	color: #fbfbfb;
+	color: #fbfbfba5;
 	line-height: 40px;
 }
 
 a.lnk3:visited {
-	color: #fbfbfb;
+	color: #fbfbfba5;
 }
 
 a.lnk3:hover {

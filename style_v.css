@@ -167,12 +167,18 @@
 	border-bottom: solid 0.9px #666;
 }
 
-/*E/C-class 画像サイト*/
+/*E/C-class 画像サイト , home/zeit/車種別コード表*/
 .td3 {
 	color: #f2f2f2;
 }
 
-.td3:hover {
+.td4 {
+	color: red;
+}
+
+.td3:hover ,
+.td4:hover
+ {
 	border-bottom: solid 1.8px #59f3ff;
 	color: #59f3ff;
 }
@@ -2682,75 +2688,83 @@
 }
 
 .xl_e,
-.xl_sl,
-.xl_s,
-.xl_b,
 .xl_ce,
-.xl_a,
-.xl_clk,
+.xl_s,
 .xl_cl,
-.xl_ss,
 .xl_c,
+.xl_clk,
+.xl_b,
+.xl_b2,
+.xl_a,
+.xl_sl,
+.xl_ss,
 .xl_t1,
-.xl_v,
 .xl_g,
 .xl_old,
 .xl_100,
-.xl_w {
+.xl_u,
+.xl_rw,
+.xl_prot,
+.xl_bus
+{
 	vertical-align: middle;
 	text-align: center;
 	font-size: 12.0pt;
 	font-weight: 700;
 	border: .5pt solid gray;
-	background: #548235;
-}
-
-.xl_sl {
-	background: #006699;
-}
-
-.xl_s {
-	background: #ffff4e;
-}
-
-.xl_b {
-	background: #FFCCFF;
-}
+	background: green ;
+}	
 
 .xl_ce {
-	background: #CCFFCC;
-}
+	background: lawngreen ;
+}	
+
+.xl_s {
+	background:  DarkGoldenRod ;
+}		
+
+.xl_cl {
+	background: yellow;
+}	
 
 .xl_a {
-	background: #d45858;
+	background: red;
+}		
+
+.xl_b {
+	background:  orangered;
+}			
+
+.xl_b2 {
+	background: pink ;
+}			
+
+.xl_c {
+	background: blue;
 }
 
 .xl_clk {
-	background: #CCECFF;
-}
+	background: LightBlue ;
+}			
 
-.xl_cl {
-	background: #FFFF99;
+.xl_sl {
+background: DarkViolet ;
 }
 
 .xl_ss {
-	background: #7030A0;
-}
-
-.xl_c {
-	background: #3333FF;
-}
+	background: rgb(192, 165, 255) ;
+}	
 
 .xl_t1 {
 	background: gray;
 }
 
-.xl_v {
-	background: #D9D9D9;
+.xl_bus {
+	background: rgb(196, 196, 196);
 }
 
 .xl_g {
-	background: #FFC000;
+	background: Olive  ;
 }
 
 .xl_old {
@@ -2758,9 +2772,17 @@
 }
 
 .xl_100 {
-	background: #6b1500;
+	background: rgb(90, 0, 0) ;
 }
 
-.xl_w {
+.xl_u {
 	background: white;
+}
+
+.xl_rw {
+	background: greenyellow;
+}
+
+.xl_prot {
+	background: Silver;
 }
