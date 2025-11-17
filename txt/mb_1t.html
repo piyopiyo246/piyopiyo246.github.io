@@ -10,8 +10,26 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
 
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		// 強化版config設定
+		gtag('config', 'G-5V9EW158CK', {
+			send_page_view: true,
+			cookie_flags: 'SameSite=None;Secure',
+			groups: 'GA4'  // グループ指定で管理しやすく
+		});
+
+		// GTM連携のための追加イベント
+		gtag('event', 'gtm.js', {
+			'gtm.uniqueEventId': Math.floor(Math.random() * 1000000)
+		});
+	</script>
+
 	<!-- 2. Core Metadata -->
-	<title>メルセデス・ベンツ総合スレッド | 過去ログ倉庫</title>
+	<title>ルセデス・ベンツ総合スレッド | 過去ログ倉庫</title>
 	<meta name="description" content="メルセデス・ベンツ総合スレッド全過去ログです。検索用にお使い下さい。">
 	<link rel="canonical" href="https://piyopiyo246.github.io/txt/mb_1t.html">
 
@@ -31,62 +49,7 @@
 	<!-- 5. CSS -->
 	<link rel="stylesheet" href="log.min.css">
 
-	<!-- クッキー同意バナー用のカスタムCSS -->
-	<style>
-		/* クッキー同意バナーのスタイル修正 */
-		#cookiescript_injected {
-			z-index: 999999 !important;
-			box-shadow: 0 0 10px rgba(0, 0, 0, 0.3) !important;
-		}
-
-		#cookiescript_buttons {
-			display: flex !important;
-			justify-content: center !important;
-			gap: 10px !important;
-		}
-
-		#cookiescript_accept {
-			background-color: #1976d2 !important;
-			padding: 8px 16px !important;
-			border-radius: 4px !important;
-		}
-
-		#cookiescript_reject {
-			background-color: #f5f5f5 !important;
-			color: #333 !important;
-			padding: 8px 16px !important;
-			border-radius: 4px !important;
-		}
-
-		@media (max-width: 768px) {
-			#cookiescript_injected {
-				max-width: 90% !important;
-				left: 5% !important;
-				right: 5% !important;
-			}
-		}
-	</style>
-
-	<!-- 6. Google Analytics 設定（トラッキングコード基本設定） -->
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
-
-		// 強化版config設定
-		gtag('config', 'G-5V9EW158CK', {
-			send_page_view: true,
-			cookie_flags: 'SameSite=None;Secure',
-			groups: 'GA4'  // グループ指定で管理しやすく
-		});
-
-		// GTM連携のための追加イベント
-		gtag('event', 'gtm.js', {
-			'gtm.uniqueEventId': Math.floor(Math.random() * 1000000)
-		});
-	</script>
-
-	<!-- 7. Cookie同意管理システム -->
+	<!-- 6. Cookie同意管理システム -->
 	<script>
 		window._cookiescript = {
 			hasConsent: () => {
@@ -52731,8 +52694,37 @@ zutotototototototototototototoototootoototttttttttt
 	});
 </script>
 
-<!-- ページTOPへ戻るスクリプト -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<!-- </body>直前に追加 -->
+	<script>
+		// 同意状態の強制初期化
+		window.dataLayer = window.dataLayer || [];
+		function initializeConsent() {
+			const defaultConsent = {
+				analytics_storage: 'denied',
+				ad_storage: 'denied',
+				functionality_storage: 'granted',
+				region: ['JP']
+			};
+
+			// GTM用設定
+			window.dataLayer.push({
+				'gtm.consent': defaultConsent,
+				'gtm.uniqueEventId': Date.now()
+			});
+
+			// GA4用設定
+			if (window.gtag) {
+				gtag('consent', 'default', defaultConsent);
+			}
+		}
+
+		// DOM読み込み完了後＆GTM初期化前に実行
+		document.addEventListener('DOMContentLoaded', initializeConsent);
+	</script>
+</body>
+
+<!-- スクロールしてトップ -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script><!-- scrollTop “difer”はダメ絶対！-->
 <script>
 	$(function () {
 		var topBtn = $('#page-top'); topBtn.hide();
@@ -52752,34 +52744,5 @@ zutotototototototototototototoototootoototttttttttt
 		});
 	});
 </script>
-
-<!-- 同意状態の強制初期化（文書終わりに移動） -->
-<script>
-	// 同意状態の強制初期化
-	window.dataLayer = window.dataLayer || [];
-	function initializeConsent() {
-		const defaultConsent = {
-			analytics_storage: 'denied',
-			ad_storage: 'denied',
-			functionality_storage: 'granted',
-			region: ['JP']
-		};
-
-		// GTM用設定
-		window.dataLayer.push({
-			'gtm.consent': defaultConsent,
-			'gtm.uniqueEventId': Date.now()
-		});
-
-		// GA4用設定
-		if (window.gtag) {
-			gtag('consent', 'default', defaultConsent);
-		}
-	}
-
-	// DOM読み込み完了後＆GTM初期化前に実行
-	document.addEventListener('DOMContentLoaded', initializeConsent);
-</script>
-</body>
 
 </html>
