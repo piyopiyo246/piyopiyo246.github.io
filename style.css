@@ -81,48 +81,33 @@ a {
 	text-decoration-thickness: 0.7px;
 }
 
-a:link {
-	color: #000;
-}
-
-a:visited {
-	color: #000;
-}
-
+a:link,
+a:visited,
 .lnk,
 .lnk2 {
 	color: #000;
+}
+
+a:hover {
+	color: #2600ff;
+	text-decoration: none;
 }
 
 a.lnk4 {
 	color: #555;
 }
 
-.lnk:hover {
-	color: #2600ff;
-}
-
-.lnk2:hover {
-	color: #2600ff;
-}
-
-a.lnk3 {
-	color: #fbfbfba5;
-	line-height: 40px;
-}
-
+a.lnk3 ,
 a.lnk3:visited {
+	line-height: 40px;
 	color: #fbfbfba5;
 }
 
 a.lnk3:hover {
-	border-bottom: solid 1px #f2f2f2;
+	color: #ffffff;
 }
 
-a.model {
-	color: #f2f2f2;
-}
-
+a.model ,
 a.model:visited {
 	color: #f2f2f2;
 }
