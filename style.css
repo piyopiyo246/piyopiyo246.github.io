@@ -1320,7 +1320,8 @@ iframe {
 @media (max-width: 600px) {
 
 	.title-row,
-	.title-row-narrow {
+	.title-row-narrow,
+	.title-row-low {
 		/* 1列にして縦積みにする */
 		grid-template-columns: 1fr;
 		gap: 8px;
@@ -1345,7 +1346,8 @@ iframe {
 .normal-list-narrow {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-	gap: 8px 20px;	/* 上下8px、左右20pxの間隔 */
+	gap: 8px 20px;
+	/* 上下8px、左右20pxの間隔 */
 	padding: 0;
 	margin: 8px 0 4px 20px;
 	list-style: none;
@@ -1412,7 +1414,10 @@ iframe {
 
 /* --- スマホ対応の微調整 --- */
 @media (max-width: 600px) {
-	.normal-list {
+
+	.normal-list,
+	.normal-list-wide,
+	.normal-list-narrow {
 		/* スマホでは1列、または幅を狭める */
 		grid-template-columns: 1fr;
 		gap: 8px;
