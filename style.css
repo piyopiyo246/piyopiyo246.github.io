@@ -1382,6 +1382,18 @@ iframe {
 }
 */
 
+/* --- スマホ対応の微調整 --- */
+@media (max-width: 600px) {
+
+	.normal-list,
+	.normal-list-wide,
+	.normal-list-narrow {
+		/* スマホでは1列、または幅を狭める */
+		grid-template-columns: 1fr;
+		gap: 8px;
+	}
+}
+
 /* リンクアイコンの共通設定 */
 .icon-link {
 	display: inline-block;
@@ -1410,18 +1422,6 @@ iframe {
 
 .icon-link.eg {
 	background-image: url('ico/eg.png');
-}
-
-/* --- スマホ対応の微調整 --- */
-@media (max-width: 600px) {
-
-	.normal-list,
-	.normal-list-wide,
-	.normal-list-narrow {
-		/* スマホでは1列、または幅を狭める */
-		grid-template-columns: 1fr;
-		gap: 8px;
-	}
 }
 
 /* アイコンとテキストをまとめたグループごとの隙間調整 */
