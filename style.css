@@ -1384,7 +1384,7 @@ iframe {
 .icon-link {
 	display: inline-block;
 	width: 20px;
-	height: 20px;
+	height: 16px;
 	margin: 0 6px;
 	background-size: contain;
 	/* 画像を枠内に収める */
