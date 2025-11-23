@@ -97,7 +97,7 @@ a.lnk4 {
 	color: #555;
 }
 
-a.lnk3 ,
+a.lnk3,
 a.lnk3:visited {
 	line-height: 40px;
 	color: #fbfbfba5;
@@ -107,7 +107,7 @@ a.lnk3:hover {
 	color: #ffffff;
 }
 
-a.model ,
+a.model,
 a.model:visited {
 	color: #f2f2f2;
 }
@@ -1246,65 +1246,64 @@ iframe {
 	width: 100%;
 }
 
-/* Neueリスト */
+/* titleリスト--<dl><dt><dd> */
 /* 全体のリスト設定 */
-.neue-list,
-.neue-list-n {
+.title-list {
 	margin: 0;
 	padding: 0;
 	max-width: 100%;
-	/* 必要に応じて幅を調整してください */
 }
 
 /* 行ごとのレイアウト（Gridを使用） */
-.neue-row,
-.neue-row-n {
+.title-row,
+.title-row-narrow,
+.title-row-low {
 	display: grid;
-	/* 左列: 固定幅(120px)、右列: 残りの幅すべて(1fr) */
 	grid-template-columns: 120px 1fr;
+	/* 左列: 固定幅(120px)、右列: 残りの幅すべて(1fr) */
 	gap: 10px;
 	/* 列の間の余白 */
 	padding: 4px 0 4px 20px;
 }
 
-.neue-row-n {
-	gap: 5px;
-	padding: 4px 0 4px 20px;
+.title-row-narrow {
+	grid-template-columns: 60px 1fr;
 }
 
-.neue-row:last-child,
-.neue-row:last-child-n {
+.title-row-low {
+	padding: 0 0 0 20px;
+}
+
+.title-row:last-child,
+.title-row-narrow,
+.title-row-low {
 	border-bottom: none;
 }
 
 /* 左側のカテゴリタイトル */
-.neue-category,
-.neue-category-n {
+.title-category {
 	font-weight: bold;
 	color: #666;
 	margin: 0;
-	/* 上下中央揃えにしたい場合はコメントアウトを外す */
-	/* align-self: center; */
 }
 
 /* 右側のアイテムエリア */
-.neue-items,
-.neue-items-n {
+.title-items,
+.title-items-low {
 	margin: 0;
 	display: flex;
 	flex-wrap: wrap;
 	/* 折り返しを許可 */
+	align-items: center;
 	gap: 10px 36px;
-	/* 上下10px、左右20pxの間隔 */
 }
 
-.neue-items-n {
-	gap: 4px 4px;
+.title-items-low {
+	gap: 0 22px;
 }
 
 /* リンクのスタイル */
-.neue-items a,
-.neue-items-n a {
+.title-items a {
 	color: #000;
 	text-decoration: underline;
 	text-decoration-thickness: 0.7px;
@@ -1312,8 +1311,7 @@ iframe {
 	display: inline-block;
 }
 
-.neue-items a:hover,
-.neue-items-n a:hover {
+.title-items a:hover {
 	color: #2600ff;
 	text-decoration: none;
 }
@@ -1321,22 +1319,118 @@ iframe {
 /* --- スマホ対応（画面幅600px以下の場合） --- */
 @media (max-width: 600px) {
 
-	.neue-row,
-	.neue-row-n {
+	.title-row,
+	.title-row-narrow {
 		/* 1列にして縦積みにする */
 		grid-template-columns: 1fr;
 		gap: 8px;
 	}
 
-	.neue-category,
-	.neue-category-n {
+	.title-category {
 		background-color: #f5f5f5;
 		padding: 4px 8px;
 		border-radius: 4px;
 	}
 
-	.neue-items,
-	.neue-items-n {
+	.title-items,
+	.title-items-low {
 		padding-left: 8px;
 	}
+}
+
+/* normalリスト <ul><li> */
+/* リスト全体のグリッド設定 */
+.normal-list,
+.normal-list-wide,
+.normal-list-narrow {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	gap: 8px 20px;	/* 上下8px、左右20pxの間隔 */
+	padding: 0;
+	margin: 8px 0 4px 20px;
+	list-style: none;
+}
+
+.normal-list-wide {
+	grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+}
+
+.normal-list-narrow {
+	grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+}
+
+/* 各項目の設定 */
+.normal-list li,
+.normal-list-wide li,
+.normal-list-narrow li {
+	display: flex;
+	align-items: center;
+	/* 縦位置を中央揃えにする */
+	line-height: 1.5;
+	white-space: nowrap;
+	/* 基本は折り返さない */
+	overflow: hidden;
+	text-overflow: ellipsis;
+	/* はみ出た文字は...にする（必要なら） */
+}
+
+/* 長いテキストがある場合、折り返しを許可したいなら以下を使う */
+/* .normal-list li {
+  white-space: normal;
+}
+*/
+
+/* リンクアイコンの共通設定 */
+.icon-link {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin: 0 6px;
+	background-size: contain;
+	/* 画像を枠内に収める */
+	background-repeat: no-repeat;
+	background-position: center;
+	vertical-align: middle;
+	flex-shrink: 0;
+	/* 横幅が狭くなってもアイコンは縮ませない */
+}
+
+/* 個別のアイコン設定 */
+.icon-link.wiki {
+	background-image: url('ico/wiki.png');
+	width: 17px;
+	height: 17px;
+}
+
+.icon-link.camera {
+	background-image: url('ico/camera.png');
+}
+
+.icon-link.eg {
+	background-image: url('ico/eg.png');
+}
+
+/* --- スマホ対応の微調整 --- */
+@media (max-width: 600px) {
+	.normal-list {
+		/* スマホでは1列、または幅を狭める */
+		grid-template-columns: 1fr;
+		gap: 8px;
+	}
+}
+
+/* アイコンとテキストをまとめたグループごとの隙間調整 */
+.item-group {
+	display: inline-flex;
+	/* グループ内でも横並び・高さ調整を有効にする */
+	align-items: center;
+	/* アイコンと文字の高さを合わせる */
+	margin-right: 15px;
+	/* 隣のグループとの余白（gapの代わり） */
+}
+
+/* グループ内の余白調整 */
+.item-group .icon-link {
+	margin: 0 4px 0 0;
+	/* アイコンの右側に少し隙間 */
 }
