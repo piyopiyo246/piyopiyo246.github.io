@@ -46,8 +46,35 @@
 
 	<!-- 5. CSS -->
 	<link rel="stylesheet" href="./style.min.css">
-	<link rel="stylesheet" href="./style_v.min.css">
+	<style>
 
+/*inline要素を殺したいとき*/
+		.cb {
+			clear: both;
+		}
+
+		/*Accordion history_only*/
+		.ac2 {
+			width: 100%;
+		}
+
+		.ac2:hover {
+			background: #fdfdfd;
+		}
+
+		.jump-link,
+		.under_button {
+			border: 1px solid #111;
+			border-radius: 3px;
+			text-decoration: none;
+		}
+
+		.enter_button {
+			border: 2px solid #9e9e9e;
+			background: #4f4f4f;
+			border-radius: 6px;
+		}
+	</style>
 	<!-- 6. Cookie同意管理システム -->
 	<script>
 		window._cookiescript = {
@@ -235,16 +262,27 @@
 				<h3 class="bf1 i">
 					<span class="b">2025</span>
 				</h3>
-				<p class="i">パンくずリスト・Cookie許可ボタン・長文フェードアウト設置、Accordion更新</p>
+				<p class="i">パンくずリスト・Cookie許可ボタン・長文フェードアウト設置、Accordion更新、CSS整理</p>
 			</div>
 			<div id="y2025" style="display:none;clear:both;"><!-- 谷 -->
 				<dl class="m4 wp t0">
+					<dt class="s2">25/11/23</dt>
+					<dd>
+						当ページのどレガシーなリストを display: flex や grid で、少しモダンに・・<br>
+						併せて、アイコンやリンクの表示も少々変更
+					</dd>
 					<dt class="s2">25/11/16</dt>
 					<dd>
 						rel="noopener"を全ページから消去
 						<span class="m2">※</span> <a href="https://qiita.com/H-Iida/items/2b495f0ca6e9eccb0bbd">根拠</a><br>
 						<span class="af4"><a href="c_klasse.html#kakolog" class="lnk2">過去ログ倉庫</a></span>
 						アーカイブのリンクを target="_blank"に仕様変更
+					</dd>
+					<dt class="s2">25/11/01</dt>
+					<dd>
+						<span class="af4"><a href="c_klasse.html#zeit" class="lnk2">年表</a></span>
+						<a href="c_klasse.html#zeit-designer" class="lnk2">デザインチームの変遷</a></span>
+						を追加
 					</dd>
 					<dt class="s2">25/10/20</dt>
 					<dd>
@@ -535,7 +573,7 @@
 									<a href="https://de.wikipedia.org/wiki/Bruno_Sacco" class="lnk3" target="_blank">wikipedia(D)</a>
 								</p>
 							</div>
-							<img loading="lazy" src="pic/bruno-sacco.webp" class="t0 m1" alt="Bruno-Sacco" width="251" height="250">
+							<img loading="lazy" src="designer/bruno-sacco.webp" class="t0 m1" alt="Bruno-Sacco" width="251" height="250">
 							<img loading="lazy" src="pic/style/c/0w201_f.webp" alt="Mercedes-Benz W201" width="433" height="250">
 						</div>
 					</dd>
