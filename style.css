@@ -92,7 +92,9 @@ a.lnk4 {
 a.lnk3,
 a.lnk3:visited {
 	line-height: 40px;
-	color: #fbfbfba5
+	color: #fbfbfba5;
+	font-weight: 700;
+	text-decoration: none
 }
 
 a.lnk3:hover {
