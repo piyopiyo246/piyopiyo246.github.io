@@ -23152,6 +23152,19 @@
 	});
 </script>
 
+<script>
+	$(function () {
+		var topBtn = $('#close-accordion'); topBtn.hide();
+		$(window).scroll(function () {
+			if ($(this).scrollTop() > 100) {
+				topBtn.fadeIn();
+			} else {
+				topBtn.fadeOut();
+			}
+		});
+	});
+</script>
+
 <!-- 改良版アコーディオン機能（入れ子対応） -->
 <script>
 	document.addEventListener('DOMContentLoaded', function () {
