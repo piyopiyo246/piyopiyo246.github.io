@@ -633,22 +633,28 @@
 		// DOM読み込み完了後＆GTM初期化前に実行
 		document.addEventListener('DOMContentLoaded', initializeConsent);
 	</script>
-</body>
 
 <!-- スクロールしてトップ -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script><!-- scrollTop “difer”はダメ絶対！-->
 <script>
 	$(function () {
-		var topBtn = $('#page-top'); topBtn.hide();
+		// 共通の動作をする要素をまとめて取得
+		var commonBtns = $('#page-top, #close-accordion');
+
+		// 初期状態で非表示
+		commonBtns.hide();
+
+		// スクロール時の動作（両方のボタンに適用）
 		$(window).scroll(function () {
 			if ($(this).scrollTop() > 100) {
-				topBtn.fadeIn();
+				commonBtns.fadeIn();
 			} else {
-				topBtn.fadeOut();
+				commonBtns.fadeOut();
 			}
 		});
 
-		topBtn.click(function () {
+		// クリック時の動作（#page-top だけに適用）
+		$('#page-top').click(function () {
 			$('body,html').animate({
 				scrollTop: 0
 			}, 500);
@@ -770,5 +776,5 @@
 		}
 	});
 </script>
-
+</body>
 </html>
