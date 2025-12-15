@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
 	<!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=GT-KFG3B2J"></script>
@@ -196,6 +197,7 @@
 		}
 	</script>
 </head>
+
 <body>
 	<!-- <body>直後に配置 -->
 	<script>
@@ -22259,15 +22261,16 @@
 									で初めて採用
 								</div>
 							</div>
+							<div class="symbol-remainder">
+								<h5 class="m1 t1 b fs110p">1993年の命名規則変更</h5>
+								<p>
+									&emsp;これらの末尾記号（サフィックス）は、1993年の大幅な命名規則変更により整理されました。
+									それまでの「190 E」（数字＋末尾記号）という順序から、<span class="b">「E 320」「C 200」</span>のように<span class="b">「クラス名＋数字」</span>という現在の順序へと変更され、燃料噴射を示す「E」などの機能を表すサフィックスは廃止・統合されていきました。
+								</p>
+							</div>
 						</div>
-
-						<h5 class="m1 t1 b fs110p">1993年の命名規則変更</h5>
-						<p class="m2">
-							これらの末尾記号（サフィックス）は、1993年の大幅な命名規則変更により整理されました。
-							それまでの「190 E」（数字＋末尾記号）という順序から、<span class="b">「E 320」「C 200」</span>のように<span class="b">「クラス名＋数字」</span>という現在の順序へと変更され、燃料噴射を示す「E」などの機能を表すサフィックスは廃止・統合されていきました。
-						</p>
-
 						<hr class="tin">
+
 					</div>
 				</div>
 			</div>
@@ -23112,163 +23115,164 @@
 		document.addEventListener('DOMContentLoaded', initializeConsent);
 	</script>
 
-<!-- 画像表示 -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.min.css"><!--lightbox css-->
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script> <!-- lightbox js-->
-<!-- <script defer src="js/lazysizes.min.js"></script>lazy -->
+	<!-- 画像表示 -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.min.css"><!--lightbox css-->
+	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script> <!-- lightbox js-->
+	<!-- <script defer src="js/lazysizes.min.js"></script>lazy -->
 
-<!-- 横scroll -->
-<script>
-	document.addEventListener('DOMContentLoaded', function () {
-		if (typeof fleXcrollInit === 'function') {
-			fleXcrollInit();
-		}
-	});
-</script>
-
-<!-- スクロールトップ -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script><!-- scrollTop “difer”はダメ絶対！-->
-<script>
-	$(function () {
-		// 共通の動作をする要素をまとめて取得
-		var commonBtns = $('#page-top, #close-accordion');
-
-		// 初期状態で非表示
-		commonBtns.hide();
-
-		// スクロール時の動作（両方のボタンに適用）
-		$(window).scroll(function () {
-			if ($(this).scrollTop() > 100) {
-				commonBtns.fadeIn();
-			} else {
-				commonBtns.fadeOut();
+	<!-- 横scroll -->
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			if (typeof fleXcrollInit === 'function') {
+				fleXcrollInit();
 			}
 		});
+	</script>
 
-		// クリック時の動作（#page-top だけに適用）
-		$('#page-top').click(function () {
-			$('body,html').animate({
-				scrollTop: 0
-			}, 500);
-			return false;
-		});
-	});
-</script>
+	<!-- スクロールトップ -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script><!-- scrollTop “difer”はダメ絶対！-->
+	<script>
+		$(function () {
+			// 共通の動作をする要素をまとめて取得
+			var commonBtns = $('#page-top, #close-accordion');
 
-<!-- 改良版アコーディオン機能（入れ子対応） -->
-<script>
-	document.addEventListener('DOMContentLoaded', function () {
-		const accordionHeaders = document.querySelectorAll('.accordion-header');
+			// 初期状態で非表示
+			commonBtns.hide();
 
-		accordionHeaders.forEach(header => {
-			header.addEventListener('click', function (e) {
-				e.stopPropagation(); // 親要素へのイベント伝播を防止
-
-				const content = this.nextElementSibling;
-				const isActive = this.classList.contains('active');
-
-				// 同じレベルのアコーディオンのみ閉じる
-				const parentAccordion = this.closest('.accordion, .accordion-nested');
-				const sameLevelHeaders = parentAccordion.querySelectorAll('.accordion-header');
-
-				// sameLevelHeaders.forEach(h => {
-				// 	if (h !== this) {
-				// 		h.classList.remove('active');
-				// 		h.setAttribute('aria-expanded', 'false');
-				// 		h.nextElementSibling.classList.remove('active');
-				// 	}
-				// });
-
-				// クリックされたアコーディオンをトグル
-				if (isActive) {
-					this.classList.remove('active');
-					this.setAttribute('aria-expanded', 'false');
-					content.classList.remove('active');
+			// スクロール時の動作（両方のボタンに適用）
+			$(window).scroll(function () {
+				if ($(this).scrollTop() > 100) {
+					commonBtns.fadeIn();
 				} else {
-					this.classList.add('active');
-					this.setAttribute('aria-expanded', 'true');
-					content.classList.add('active');
+					commonBtns.fadeOut();
 				}
 			});
 
-			// キーボード操作のサポート
-			header.addEventListener('keydown', function (e) {
-				if (e.key === 'Enter' || e.key === ' ') {
-					e.preventDefault();
-					this.click();
-				}
+			// クリック時の動作（#page-top だけに適用）
+			$('#page-top').click(function () {
+				$('body,html').animate({
+					scrollTop: 0
+				}, 500);
+				return false;
 			});
 		});
-	});
+	</script>
 
-	// 特定のアコーディオンを開く関数
-	function openAccordionById(id) {
-		const header = document.querySelector(`[aria-controls="${id}"]`);
-		const content = document.getElementById(id);
-		if (header && content) {
-			header.classList.add('active');
-			header.setAttribute('aria-expanded', 'true');
-			content.classList.add('active');
-		}
-	}
+	<!-- 改良版アコーディオン機能（入れ子対応） -->
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			const accordionHeaders = document.querySelectorAll('.accordion-header');
 
-	// 特定のアコーディオンを閉じる関数
-	function closeAccordionById(id) {
-		const header = document.querySelector(`[aria-controls="${id}"]`);
-		const content = document.getElementById(id);
-		if (header && content) {
-			header.classList.remove('active');
-			header.setAttribute('aria-expanded', 'false');
-			content.classList.remove('active');
-		}
-	}
+			accordionHeaders.forEach(header => {
+				header.addEventListener('click', function (e) {
+					e.stopPropagation(); // 親要素へのイベント伝播を防止
 
-	// 使用例
-	// openAccordionById('content-1');
-	// openAccordionById('content-3');
+					const content = this.nextElementSibling;
+					const isActive = this.classList.contains('active');
 
-	// 全アコーディオン操作機能
-	function openAllAccordions() {
-		const accordionHeaders = document.querySelectorAll('.accordion-header');
-		accordionHeaders.forEach(header => {
-			const content = header.nextElementSibling;
-			header.classList.add('active');
-			header.setAttribute('aria-expanded', 'true');
-			content.classList.add('active');
+					// 同じレベルのアコーディオンのみ閉じる
+					const parentAccordion = this.closest('.accordion, .accordion-nested');
+					const sameLevelHeaders = parentAccordion.querySelectorAll('.accordion-header');
+
+					// sameLevelHeaders.forEach(h => {
+					// 	if (h !== this) {
+					// 		h.classList.remove('active');
+					// 		h.setAttribute('aria-expanded', 'false');
+					// 		h.nextElementSibling.classList.remove('active');
+					// 	}
+					// });
+
+					// クリックされたアコーディオンをトグル
+					if (isActive) {
+						this.classList.remove('active');
+						this.setAttribute('aria-expanded', 'false');
+						content.classList.remove('active');
+					} else {
+						this.classList.add('active');
+						this.setAttribute('aria-expanded', 'true');
+						content.classList.add('active');
+					}
+				});
+
+				// キーボード操作のサポート
+				header.addEventListener('keydown', function (e) {
+					if (e.key === 'Enter' || e.key === ' ') {
+						e.preventDefault();
+						this.click();
+					}
+				});
+			});
 		});
-	}
 
-	function closeAllAccordions() {
-		const accordionHeaders = document.querySelectorAll('.accordion-header');
-		accordionHeaders.forEach(header => {
-			const content = header.nextElementSibling;
-			header.classList.remove('active');
-			header.setAttribute('aria-expanded', 'false');
-			content.classList.remove('active');
+		// 特定のアコーディオンを開く関数
+		function openAccordionById(id) {
+			const header = document.querySelector(`[aria-controls="${id}"]`);
+			const content = document.getElementById(id);
+			if (header && content) {
+				header.classList.add('active');
+				header.setAttribute('aria-expanded', 'true');
+				content.classList.add('active');
+			}
+		}
+
+		// 特定のアコーディオンを閉じる関数
+		function closeAccordionById(id) {
+			const header = document.querySelector(`[aria-controls="${id}"]`);
+			const content = document.getElementById(id);
+			if (header && content) {
+				header.classList.remove('active');
+				header.setAttribute('aria-expanded', 'false');
+				content.classList.remove('active');
+			}
+		}
+
+		// 使用例
+		// openAccordionById('content-1');
+		// openAccordionById('content-3');
+
+		// 全アコーディオン操作機能
+		function openAllAccordions() {
+			const accordionHeaders = document.querySelectorAll('.accordion-header');
+			accordionHeaders.forEach(header => {
+				const content = header.nextElementSibling;
+				header.classList.add('active');
+				header.setAttribute('aria-expanded', 'true');
+				content.classList.add('active');
+			});
+		}
+
+		function closeAllAccordions() {
+			const accordionHeaders = document.querySelectorAll('.accordion-header');
+			accordionHeaders.forEach(header => {
+				const content = header.nextElementSibling;
+				header.classList.remove('active');
+				header.setAttribute('aria-expanded', 'false');
+				content.classList.remove('active');
+			});
+		}
+
+		// ボタンにイベントリスナーを追加
+		document.addEventListener('DOMContentLoaded', function () {
+			// 既存のアコーディオンコード...
+
+			// 全開/全閉ボタン
+			const openAllBtn = document.getElementById('open-all-accordions');
+			const closeAllBtn = document.getElementById('close-all-accordions');
+			const closeAllBtn2 = document.getElementById('close-all-accordions-2'); // 追加ボタン
+
+			if (openAllBtn) {
+				openAllBtn.addEventListener('click', openAllAccordions);
+			}
+
+			if (closeAllBtn) {
+				closeAllBtn.addEventListener('click', closeAllAccordions);
+			}
+
+			if (closeAllBtn2) {
+				closeAllBtn2.addEventListener('click', closeAllAccordions);
+			}
 		});
-	}
-
-	// ボタンにイベントリスナーを追加
-	document.addEventListener('DOMContentLoaded', function () {
-		// 既存のアコーディオンコード...
-
-		// 全開/全閉ボタン
-		const openAllBtn = document.getElementById('open-all-accordions');
-		const closeAllBtn = document.getElementById('close-all-accordions');
-		const closeAllBtn2 = document.getElementById('close-all-accordions-2'); // 追加ボタン
-
-		if (openAllBtn) {
-			openAllBtn.addEventListener('click', openAllAccordions);
-		}
-
-		if (closeAllBtn) {
-			closeAllBtn.addEventListener('click', closeAllAccordions);
-		}
-
-		if (closeAllBtn2) {
-			closeAllBtn2.addEventListener('click', closeAllAccordions);
-		}
-	});
-</script>
+	</script>
 </body>
+
 </html>

@@ -1252,11 +1252,9 @@ iframe {
 	margin-top: 0;
 }
 .symbol-card {
-	background-color: #f9f9f9;
-	border: 1px solid #e0e0e0;
 	padding: 14px;
-	transition: transform .2s;
 }
+.symbol-remainder{ grid-column: 1/-1}
 .symbol-header { display: flex; align-items: center; }
 .symbol-char {
 	font-size: 32px;
