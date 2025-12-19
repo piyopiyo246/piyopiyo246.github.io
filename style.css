@@ -16,10 +16,6 @@ body {
 	-ms-text-size-adjust: none
 }
 
-.ws-n {
-	white-space: nowrap
-}
-
 .angletoggle:before {
 	content: "\f107"
 }
