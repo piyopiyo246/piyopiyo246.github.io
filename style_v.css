@@ -2342,6 +2342,7 @@
 .box43,
 .box44,
 .box46,
+.box49a,
 .box50,
 .box51,
 .box52a,
@@ -2361,6 +2362,7 @@
 .box68b,
 .box69a,
 .box70a,
+.box70b,
 .box76,
 .box77,
 .box79,
@@ -2500,6 +2502,10 @@
 	width: 460px
 }
 
+.box49a {
+	width: 494px
+}
+
 .box50 {
 	width: 500px
 }
@@ -2574,6 +2580,10 @@
 
 .box70a {
 	width: 706px
+}
+
+.box70b {
+	width: 716px
 }
 
 .box76 {
