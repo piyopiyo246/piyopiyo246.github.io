@@ -357,21 +357,14 @@ img {
 	padding: 2pt 0
 }
 
-.kakumaru img {
-	border-radius: 10px
-}
+.kakumaru img {	border-radius: 10px}
 
-.ico-camera,
-.ico-eg,
-.ico-tube,
-.ico-wiki,
-.ico-wiki2 {
+.ico-camera,.ico-eg,.ico-tube,.ico-wiki,.ico-wiki2 {
 	display: inline-block;
 	background-repeat: no-repeat
 }
 
-.ico-wiki,
-.ico-wiki2 {
+.ico-wiki,.ico-wiki2 {
 	width: 17px;
 	margin-right: 3px;
 	background-image: url(ico/wiki.png);
@@ -382,8 +375,7 @@ img {
 	height: 14px
 }
 
-.ico-camera,
-.ico-eg {
+.ico-camera,.ico-eg {
 	width: 20px;
 	height: 16px;
 	margin-left: 6px;
@@ -391,9 +383,7 @@ img {
 	background-image: url(ico/camera.png)
 }
 
-.ico-eg {
-	background-image: url(ico/eg.png)
-}
+.ico-eg {	background-image: url(ico/eg.png)}
 
 .ico-tube {
 	width: 23px;
@@ -401,25 +391,28 @@ img {
 	background-image: url(ico/youtube.png)
 }
 
-dl,
-dt,
-li,
-ul {
+dl,dt,li,ul {
 	padding: 0;
 	margin: 0
 }
 
-dl,
-ol,
-ul {
+dl,ol,ul {
 	overflow: hidden;
 	position: relative;
 	zoom: 1
 }
 
-dl,
-ul {
+dl,ul {
 	list-style: none
+}
+
+.pochi {
+ list-style-type: disc;
+  padding-left: 1em;
+}
+
+.pochi li {
+  display: list-item;
 }
 
 dt {
@@ -439,9 +432,7 @@ table {
 	table-layout: auto
 }
 
-table,
-td,
-th {
+table,td,th {
 	border: none
 }
 
@@ -451,43 +442,29 @@ th {
 	border-bottom: 1px #777 solid
 }
 
-tr {
-	vertical-align: top
-}
+tr { vertical-align: top}
 
 td {
 	padding: 0 8px 0 0;
 	vertical-align: top
 }
 
-.fix {
-	table-layout: fixed
-}
+.fix {	table-layout: fixed}
 
-.bd {
-	border-bottom: 1px #000 solid
-}
+.bd {	border-bottom: 1px #000 solid}
 
-.i {
-	display: inline
-}
+.i {	display: inline}
 
-.ib {
-	display: inline-block
-}
+.ib {	display: inline-block}
 
 .wp {
 	white-space: normal;
 	word-wrap: break-word
 }
 
-.fn {
-	float: none
-}
+.fn {	float: none}
 
-.cb {
-	clear: both
-}
+.cb {	clear: both}
 
 .style-w {
 	width: 1220px;
@@ -530,9 +507,7 @@ td {
 	width: 100%
 }
 
-.ac2:hover {
-	background: #fdfdfd
-}
+.ac2:hover {	background: #fdfdfd}
 
 .displayNone {
 	display: none
@@ -922,10 +897,6 @@ iframe {
 	outline-offset: 2px
 }
 
-.accordion-nested {
-	margin: 0
-}
-
 .accordion-header.min {
 	width: 100%;
 	margin: 2px 0;
@@ -960,7 +931,7 @@ iframe {
 	background: #e8e8e8
 }
 
-.accordion-nested .accordion-header {
+ .accordion-header {
 	width: 100%;
 	margin: 2px 0 2px 30px;
 	padding: 8px 0 8px 50px;
@@ -969,26 +940,26 @@ iframe {
 	border-radius: 0
 }
 
-.accordion-nested .accordion-header:focus {
+ .accordion-header:focus {
 	outline: 0;
 	box-shadow: none;
 	border-left: none
 }
 
-.accordion-nested .accordion-header.active {
+ .accordion-header.active {
 	border-left: none
 }
 
-.accordion-nested .accordion-header:hover {
+ .accordion-header:hover {
 	background: #e8e8e8;
 	border: none
 }
 
-.accordion-nested .accordion-header::before {
+ .accordion-header::before {
 	left: 20px
 }
 
-.accordion-nested .accordion-header.active::before {
+ .accordion-header.active::before {
 	border-width: 16px 10px 0 10px;
 	border-color: #666 transparent transparent transparent;
 	left: 18px;
@@ -996,11 +967,11 @@ iframe {
 	transform: translateY(-50%)
 }
 
-.accordion-nested .accordion-header.active {
+ .accordion-header.active {
 	background-color: transparent
 }
 
-.accordion-nested .accordion-header.active:hover {
+ .accordion-header.active:hover {
 	background: #e8e8e8
 }
 
@@ -1317,4 +1288,48 @@ iframe {
 
 .item-group .icon-link {
 	margin: 0 4px 0 0
+}
+
+.engine-table-container {
+	width: 100%;
+	max-width: 1210px;
+	margin: 18px 0 32px;
+	font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+	line-height: 1.4;
+	overflow-x: auto; /* スマホ対策 */
+}
+
+.engine-table {
+	width: 99%;
+	min-width: 800px;	/* 列が多いので、ある程度の幅を確保してスクロールさせる */
+	border-collapse: collapse;
+	border: none;
+	 border-bottom: 1px solid #333; /* 下だけに線を引く */
+}
+
+.engine-table th,
+.engine-table td {
+	padding: 12px 8px;
+	text-align: left;
+}
+
+.engine-table th {
+	border-bottom: 1px solid #333;
+	background-color: transparent;	/* 背景なしを明示 */
+	font-size: 96%;
+	white-space: nowrap;
+}
+
+/* 数値系の列を中央寄せにする（2, 3, 4列目） */
+.engine-table th:nth-child(2),
+.engine-table td:nth-child(2),
+.engine-table th:nth-child(3),
+.engine-table td:nth-child(3),
+.engine-table th:nth-child(4),
+.engine-table td:nth-child(4) {
+	text-align: center;
+}
+
+.num {
+	white-space: nowrap;
 }
