@@ -124,20 +124,14 @@ a.model:visited {
 	text-align: justify
 }
 
-.b,
-.bb,
-.b a {
+.b,.bb,.b a {
 	font-weight: 700;
 	color: #666
 }
 
-.bb {
-	color: #000
-}
+.bb {	color: #000}
 
-.b_cancel {
-	font-weight: 400
-}
+.b_cancel {	font-weight: 400}
 
 .aa {
 	font-family: 'MS UI Gothic', 'Roboto Condensed', Roboto, 'Noto Sans JP', 'UD デジタル 教科書体 N-R', 'ＭＳ Ｐゴシック', sans-serif;
@@ -147,13 +141,9 @@ a.model:visited {
 	src: local("Noto Sans CJK JP Regular"), url(//fonts.gstatic.com/ea/notosansjp/v5/NotoSansJP-Regular.woff2) format('woff2'), url(//fonts.gstatic.com/ea/notosansjp/v5/NotoSansJP-Regular.woff) format('woff'), url(//fonts.gstatic.com/ea/notosansjp/v5/NotoSansJP-Regular.otf) format('opentype')
 }
 
-.hiragino {
-	font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif
-}
+.hiragino {	font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif}
 
-.ch {
-	font-family: 'MS UI Gothic', "ＭＳ Ｐゴシック", "MS PGothic", sans-serif
-}
+.ch {	font-family: 'MS UI Gothic', "ＭＳ Ｐゴシック", "MS PGothic", sans-serif}
 
 hr {
 	margin-left: 4px;
@@ -176,6 +166,34 @@ hr {
 	padding: 0;
 	clear: both;
 	z-index: 1
+}
+
+/* フッター全体：背景を横いっぱいに広げる */
+footer#map {
+    width: 100%;
+    background-color: #333; /* 既存のbgc-ricohなどの背景色 */
+}
+
+/* 内側のコンテンツ：幅を指定して中央に寄せる */
+footer#map .mid {
+    width: 1220px;       /* style.min.cssの#contentsと同じ幅に設定 */
+    margin-left: auto;   /* 左右の余白を自動にして中央へ */
+    margin-right: auto;
+    max-width: 100%;     /* 画面が狭い時に備えて */
+    box-sizing: border-box; /* パディングを含めた幅計算にする */
+}
+
+/* テキストも中央寄せにしたい場合 */
+footer#map .mid p {
+    text-align: center;
+}
+
+/* nav要素を中央に寄せる設定 */
+footer#map nav {
+    width: 1220px;       /* 他のコンテンツ（#contentsや.mid）と同じ幅にする */
+    margin-left: auto;   /* 左右の余白を自動にして中央へ */
+    margin-right: auto;
+    display: block;      /* 確実にブロック要素として扱う */
 }
 
 .dashboard {
