@@ -236,11 +236,16 @@
 }
 
 .af4:after,
+.af4a:after,
 .bf4:before {
 	content: "|";
 	color: #444;
 	font-weight: 700;
 	margin: 10px
+}
+
+.af4a:after {
+	margin-right: 0
 }
 
 .bgc-w {
