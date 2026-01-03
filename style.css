@@ -924,8 +924,9 @@ iframe {
 }
 
 .accordion-header.min:hover {
-	background: #e8e8e8;
-	border: none
+  /* #e8e8e8を50%、透明を50%で混ぜる */
+  background: color-mix(in srgb, black, transparent 90%);
+  border: none;
 }
 
 .accordion-header.min::before {
@@ -945,7 +946,7 @@ iframe {
 }
 
 .accordion-header.min.active:hover {
-	background: #e8e8e8
+  background: color-mix(in srgb, black, transparent 90%);
 }
 
  .accordion-header {
@@ -968,7 +969,7 @@ iframe {
 }
 
  .accordion-header:hover {
-	background: #e8e8e8;
+  background: color-mix(in srgb, black, transparent 90%);
 	border: none
 }
 
@@ -989,7 +990,7 @@ iframe {
 }
 
  .accordion-header.active:hover {
-	background: #e8e8e8
+  background: color-mix(in srgb, black, transparent 90%);
 }
 
 .accordion-header.subpage {
