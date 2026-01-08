@@ -1317,12 +1317,18 @@ iframe {
 	overflow-x: auto; /* スマホ対策 */
 }
 
-.engine-table {
+.engine-table ,
+.body-table ,
+.body-table2 {
 	width: 99%;
 	min-width: 800px;	/* 列が多いので、ある程度の幅を確保してスクロールさせる */
 	border-collapse: collapse;
 	border: none;
 	 border-bottom: 1px solid #333; /* 下だけに線を引く */
+}
+
+.body-table2 {
+	width: 70%;
 }
 
 .engine-table th,
