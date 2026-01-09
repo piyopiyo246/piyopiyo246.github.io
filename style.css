@@ -151,7 +151,8 @@ hr {
 }
 
 .tin {
-	border-top: .1px solid #999
+	border-top: .1px solid #ababab;
+	margin: 1%;
 }
 
 .dashboard,
