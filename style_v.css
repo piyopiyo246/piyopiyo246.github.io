@@ -2374,6 +2374,7 @@
 .box70b,
 .box76,
 .box77,
+.box78,
 .box79,
 .box80,
 .box80a,
@@ -2601,6 +2602,10 @@
 
 .box77 {
 	width: 770px
+}
+
+.box78 {
+	width: 780px
 }
 
 .box79 {
