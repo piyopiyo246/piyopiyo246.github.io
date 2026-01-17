@@ -21,6 +21,8 @@
 		"editor.formatOnPaste": false,
 		"[jsonc]": {
 			"editor.defaultFormatter": "vscode.json-language-features"
-		}
+		},
+		"html.hover.references": false,
+		"css.hover.references": false
 	}
 }
