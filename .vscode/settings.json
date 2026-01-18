@@ -1,4 +1,18 @@
 {
-  "html.hover.references": false,
-  "css.hover.references": false
-}
+    "workbench.settings.useSplitJSON": true,
+    "workbench.colorTheme": "GitHub Dark Colorblind (Beta)",
+    "files.autoSave": "afterDelay",//ファイルの自動保存のタイミングを「遅延後（一定時間経過後）」に設定する
+    "editor.minimap.enabled": false,
+    "workbench.activityBar.location": "top",
+    "liveServer.settings.donotShowInfoMsg": true,
+    "html.format.unformatted": "a,span,img,strong",
+    "editor.stickyScroll.enabled": false,
+    "workbench.secondarySideBar.defaultVisibility": "hidden",
+    "editor.tabSize": 2,
+    "html.format.wrapLineLength": 0,
+    "css.hover.references": false,
+    "html.hover.references": false,
+    "less.hover.references": false,
+    "scss.hover.references": false,
+    "editor.suggest.showReferences": false
+ }

@@ -23,6 +23,10 @@
 			"editor.defaultFormatter": "vscode.json-language-features"
 		},
 		"html.hover.references": false,
-		"css.hover.references": false
+		"css.hover.references": false,
+		"workbench.secondarySideBar.defaultVisibility": "hidden",
+		"editor.suggest.showReferences": false,
+		"less.hover.references": false,
+		"scss.hover.references": false
 	}
 }

@@ -997,7 +997,7 @@ iframe {
 .accordion-header.subpage {
 	background: 0 0;
 	color: #f2f2f2;
-	padding: 12px 20px 12px 88px;
+	padding: 12px 12px 12px 43px;
 	cursor: pointer;
 	border: 2px solid #707070;
 	border-radius: 22px;
@@ -1006,11 +1006,11 @@ iframe {
 	flex-direction: column;
 	align-items: flex-start;
 	width: 90%;
-	margin: 12px auto -4px;
+	margin: 12px auto;
 	text-align: left;
 	font-size: inherit;
 	position: relative;
-	gap: 4px
+	gap: 8px
 }
 
 .accordion-header.subpage:hover {
@@ -1083,20 +1083,10 @@ iframe {
 	white-space: nowrap
 }
 
-.accordion-header.subpage h3,
-.accordion-header.subpage h4,
 .accordion-header.subpage span,
 .accordion-header.subpage p {
 	font-size: 17px;
 	margin: 0 20px 0 10px;
-	display: inline
-}
-
-.accordion-header.subpage h3,
-.accordion-header.subpage h4,
-.accordion-header.subpage h5
- {
-	color: #fc0c0c;
 }
 
 .accordion-header.subpage a {
@@ -1106,7 +1096,7 @@ iframe {
 .accordion-multi-line {
 	display: flex;
 	flex-wrap: wrap;
-	margin: 8px 0 0 8px;
+	padding: 0 0 0 12px;
 	gap: 8px;
 	width: 100%
 }
