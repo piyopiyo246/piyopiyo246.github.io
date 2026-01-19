@@ -637,7 +637,7 @@ td {
 	}
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
 	width: 10px
 }
 
@@ -648,8 +648,8 @@ td {
 
 ::-webkit-scrollbar-thumb {
 	background: #4f4f4f;
-	height: 19.5%
-}
+	height: 0%
+} */
 
 figure {
 	padding: 0;
