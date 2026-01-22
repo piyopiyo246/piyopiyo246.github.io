@@ -232,7 +232,7 @@
 		<section id="Chronologie">
 			<h2 class="bf0">Site Historie</h2>
 
-			<!-- <div class="ac2 t0" onclick="obj=document.getElementById('y2026').style; obj.display=(obj.display=='none')?'block':'none';">
+			<div class="ac2 t0" onclick="obj=document.getElementById('y2026').style; obj.display=(obj.display=='none')?'block':'none';">
 				<h3 class="bf1 i">
 					<span class="b">2026</span>
 				</h3>
@@ -240,8 +240,13 @@
 			</div>
 			<div id="y2026" style="display:none;clear:both;">
 				<dl class="m4 wp t0">
+					<dt class="s2">26/01/18</dt>
+					<dd>
+						accordion の組成を一部変更（Home・Galerie ）
+					</dd>
+
 				</dl>
-			</div> -->
+			</div>
 
 			<div class="ac2 t0" onclick="obj=document.getElementById('y2025').style; obj.display=(obj.display=='none')?'block':'none';">
 				<h3 class="bf1 i">
@@ -251,10 +256,10 @@
 			</div>
 			<div id="y2025" style="display:none;clear:both;"><!-- 谷 -->
 				<dl class="m4 wp t0">
-						<dt class="s2">25/12/19</dt>
-						<dd>
-							新PC到着
-						</dd>
+					<dt class="s2">25/12/19</dt>
+					<dd>
+						新PC到着
+					</dd>
 					<dt class="s2">25/12/12</dt>
 					<dd>
 						<span class="af4"><a href="c_klasse.html#zeit">年表</a></span>
@@ -1037,7 +1042,7 @@
 					<dd>
 						<a href="c_klasse.html#zeit-db">
 							<span class="af4"><a href="c_klasse.html#zeit">年表</a></span>
-							<span class="af4">Daimler と関連メーカー</span>
+						<span class="af4">Daimler と関連メーカー</span>
 						</a>
 						<a href="https://de.wikipedia.org/wiki/Benz_Patent-Motorwagen_Nummer_3">Benz Patent-Motorwagen No.3</a>
 						画像追加
@@ -1046,8 +1051,8 @@
 					<dd>
 						<a href="c_klasse.html#zeit-db">
 							<span class="af4"><a href="c_klasse.html#zeit">年表</a></span>
-							<span class="af4">Daimler と関連メーカー</span>
-							SEAT・Škoda・Porsche 追加
+						<span class="af4">Daimler と関連メーカー</span>
+						SEAT・Škoda・Porsche 追加
 						</a>
 					</dd>
 					<dt class="s2">22/09/24</dt>
@@ -3169,26 +3174,28 @@
 		document.addEventListener('DOMContentLoaded', initializeConsent);
 	</script>
 
-<!-- スクロールしてトップ -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script><!-- scrollTop “difer”はダメ絶対！-->
-<script>
-	$(function () {
-		var topBtn = $('#page-top'); topBtn.hide();
-		$(window).scroll(function () {
-			if ($(this).scrollTop() > 100) {
-				topBtn.fadeIn();
-			} else {
-				topBtn.fadeOut();
-			}
-		});
+	<!-- スクロールしてトップ -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script><!-- scrollTop “difer”はダメ絶対！-->
+	<script>
+		$(function () {
+			var topBtn = $('#page-top'); topBtn.hide();
+			$(window).scroll(function () {
+				if ($(this).scrollTop() > 100) {
+					topBtn.fadeIn();
+				} else {
+					topBtn.fadeOut();
+				}
+			});
 
-		topBtn.click(function () {
-			$('body,html').animate({
-				scrollTop: 0
-			}, 500);
-			return false;
+			topBtn.click(function () {
+				$('body,html').animate({
+					scrollTop: 0
+				}, 500);
+				return false;
+			});
 		});
-	});
-</script>
+	</script>
 
-</body></html>
+</body>
+
+</html>
