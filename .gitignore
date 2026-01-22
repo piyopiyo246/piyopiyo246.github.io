@@ -1,25 +1,4 @@
 *.bak
-*.jbf
-*.xlsx
-history/
-new thread.txt
-test/
-kotou/
-browser/
-xls/
+.vscode/
 xx/
-.tmp.drivedownload/
-HiReName/
-F6Exif/
-変換時のポイント.txt
-piyopiyo.code-workspace
-bkp.html
-pic/full/glk/17c893-04-1512147087 (1).jpg
-pic/full/glk/17c893-04-1512147087.jpg
-pic/full/glk/2018-mercedes-amg-glc63-coupe-first-drive.jpg
-pic/full/glk/2018_mercedes-amg_glc_63_coupe_29.jpg
-pic/full/glk/2019MBGLCcoupe3.jpg
-pic/full/glk/254578_Mercedes-Benz_GLC_Coupe_cachez_ce_VUS_que_je_ne_serais_voir.jpg
-txt.txt
-pic/full/c/55amg
-.continue/agents/new-config.yaml
+.tmp.drivedownload/
