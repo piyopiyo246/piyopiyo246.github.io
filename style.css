@@ -527,10 +527,6 @@ td {
 
 .ac2:hover {	background: #fdfdfd}
 
-.displayNone {
-	display: none
-}
-
 .timeline2 {
 	width: 154px
 }
@@ -1345,4 +1341,16 @@ iframe {
 
 .num {
 	white-space: nowrap;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
