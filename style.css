@@ -1075,23 +1075,24 @@ iframe {
 
 .accordion-right {
 	margin-left: auto;
+	padding: 0 18px 0;
 	white-space: nowrap
 }
 
 .accordion-header.subpage span,
 .accordion-header.subpage p {
 	font-size: 17px;
-	margin: 0 20px 0 10px;
+	margin: 0 0 0 20px;
 }
 
-.accordion-header.subpage a {
-	margin-right: -24px
+.accordion-header.subpage p {
+	margin: 0 6px 0 6px
 }
 
 .accordion-multi-line {
 	display: flex;
 	flex-wrap: wrap;
-	padding: 0 0 0 12px;
+	padding: 0 0 0 32px;
 	gap: 8px;
 	width: 100%
 }
