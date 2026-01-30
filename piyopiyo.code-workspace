@@ -27,6 +27,9 @@
 		"workbench.secondarySideBar.defaultVisibility": "hidden",
 		"editor.suggest.showReferences": false,
 		"less.hover.references": false,
-		"scss.hover.references": false
+		"scss.hover.references": false,
+		"[css]": {
+			"editor.defaultFormatter": "vscode.css-language-features"
+		}
 	}
 }
