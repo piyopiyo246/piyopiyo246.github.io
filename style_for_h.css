@@ -1015,6 +1015,7 @@ a.model:visited { color: #f2f2f2 }
 .box35,
 .box38,
 .box56,
+.box62,
 .box78,
 .box124
 { float: left }
@@ -1037,6 +1038,7 @@ a.model:visited { color: #f2f2f2 }
 .box35 { width: 350px }
 .box38 { width: 380px }
 .box56 { width: 560px }
+.box62 { width: 620px }
 .box78 { width: 780px }
 .box124 { width: 1240px }
 
