@@ -316,10 +316,10 @@
 						<span class="accordion-row">
 							<span class="accordion-left">
 								<span>R170</span>
-								<p>ロードスター (vario roof)</p>
-								1996 - 2004
-							</span>
-							<span class="accordion-right">
+						<p>ロードスター (vario roof)</p>
+						1996 - 2004
+						</span>
+						<span class="accordion-right">
 								デザイナー : Michael Mauer , Murat Gunak , Bruno Sacco
 							</span>
 						</span>
@@ -357,6 +357,8 @@
 								<p>ロードスター (vario roof)</p>
 								03/2004 - 03/2011
 							</span>
+						</span>
+						<span class="accordion-multi-line">
 							<span class="accordion-right">
 								デザイナー : Designer : George Melosch , Frank Pfisterer , Steve Mattin , Gorden Wagener , Peter Pfeiffer
 							</span>
@@ -398,10 +400,10 @@
 						<span class="accordion-row">
 							<span class="accordion-left">
 								<span>R172</span>
-								<p>ロードスター (vario roof)</p>
-								03/2011 - 06/2020
-							</span>
-							<span class="accordion-right">
+						<p>ロードスター (vario roof)</p>
+						03/2011 - 06/2020
+						</span>
+						<span class="accordion-right">
 								デザイナー : Il-hun Yoon , Gorden Wagener
 							</span>
 						</span>
@@ -535,146 +537,147 @@
 		document.addEventListener('DOMContentLoaded', initializeConsent);
 	</script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script>
-	$(function () {
-		// 共通の動作をする要素をまとめて取得
-		var commonBtns = $('#page-top, #close-accordion');
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script>
+		$(function () {
+			// 共通の動作をする要素をまとめて取得
+			var commonBtns = $('#page-top, #close-accordion');
 
-		// 初期状態で非表示
-		commonBtns.hide();
+			// 初期状態で非表示
+			commonBtns.hide();
 
-		// スクロール時の動作（両方のボタンに適用）
-		$(window).scroll(function () {
-			if ($(this).scrollTop() > 100) {
-				commonBtns.fadeIn();
-			} else {
-				commonBtns.fadeOut();
+			// スクロール時の動作（両方のボタンに適用）
+			$(window).scroll(function () {
+				if ($(this).scrollTop() > 100) {
+					commonBtns.fadeIn();
+				} else {
+					commonBtns.fadeOut();
+				}
+			});
+
+			// クリック時の動作（#page-top だけに適用）
+			$('#page-top').click(function () {
+				$('body,html').animate({
+					scrollTop: 0
+				}, 500);
+				return false;
+			});
+		});
+	</script>
+
+	<script>
+		// シンプル版アコーディオン機能（入れ子非対応）
+		document.addEventListener('DOMContentLoaded', function () {
+			const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+			accordionHeaders.forEach(header => {
+				header.addEventListener('click', function () {
+					const content = this.nextElementSibling;
+					const isActive = this.classList.contains('active');
+
+					// クリックされたアコーディオンのみトグル
+					if (isActive) {
+						this.classList.remove('active');
+						this.setAttribute('aria-expanded', 'false');
+						content.classList.remove('active');
+					} else {
+						this.classList.add('active');
+						this.setAttribute('aria-expanded', 'true');
+						content.classList.add('active');
+					}
+				});
+
+				// キーボード操作のサポート
+				header.addEventListener('keydown', function (e) {
+					if (e.key === 'Enter' || e.key === ' ') {
+						e.preventDefault();
+						this.click();
+					}
+				});
+			});
+
+			// 全開/全閉ボタンのイベントリスナー
+			const openAllBtn = document.getElementById('open-all-accordions');
+			const closeAllBtn = document.getElementById('close-all-accordions');
+			const closeAllBtn2 = document.getElementById('close-all-accordions-2');
+
+			if (openAllBtn) {
+				openAllBtn.addEventListener('click', openAllAccordions);
+			}
+
+			if (closeAllBtn) {
+				closeAllBtn.addEventListener('click', closeAllAccordions);
+			}
+
+			if (closeAllBtn2) {
+				closeAllBtn2.addEventListener('click', closeAllAccordions);
 			}
 		});
 
-		// クリック時の動作（#page-top だけに適用）
-		$('#page-top').click(function () {
-			$('body,html').animate({
-				scrollTop: 0
-			}, 500);
-			return false;
-		});
-	});
-</script>
-
-<script>
-	// シンプル版アコーディオン機能（入れ子非対応）
-	document.addEventListener('DOMContentLoaded', function () {
-		const accordionHeaders = document.querySelectorAll('.accordion-header');
-
-		accordionHeaders.forEach(header => {
-			header.addEventListener('click', function () {
-				const content = this.nextElementSibling;
-				const isActive = this.classList.contains('active');
-
-				// クリックされたアコーディオンのみトグル
-				if (isActive) {
-					this.classList.remove('active');
-					this.setAttribute('aria-expanded', 'false');
-					content.classList.remove('active');
-				} else {
-					this.classList.add('active');
-					this.setAttribute('aria-expanded', 'true');
-					content.classList.add('active');
-				}
+		// 全アコーディオン操作機能
+		function openAllAccordions() {
+			const accordionHeaders = document.querySelectorAll('.accordion-header');
+			accordionHeaders.forEach(header => {
+				const content = header.nextElementSibling;
+				header.classList.add('active');
+				header.setAttribute('aria-expanded', 'true');
+				content.classList.add('active');
 			});
+		}
 
-			// キーボード操作のサポート
-			header.addEventListener('keydown', function (e) {
-				if (e.key === 'Enter' || e.key === ' ') {
-					e.preventDefault();
-					this.click();
-				}
+		function closeAllAccordions() {
+			const accordionHeaders = document.querySelectorAll('.accordion-header');
+			accordionHeaders.forEach(header => {
+				const content = header.nextElementSibling;
+				header.classList.remove('active');
+				header.setAttribute('aria-expanded', 'false');
+				content.classList.remove('active');
 			});
+		}
+
+		// 全アコーディオン操作機能
+		function openAllAccordions() {
+			const accordionHeaders = document.querySelectorAll('.accordion-header');
+			accordionHeaders.forEach(header => {
+				const content = header.nextElementSibling;
+				header.classList.add('active');
+				header.setAttribute('aria-expanded', 'true');
+				content.classList.add('active');
+			});
+		}
+
+		function closeAllAccordions() {
+			const accordionHeaders = document.querySelectorAll('.accordion-header');
+			accordionHeaders.forEach(header => {
+				const content = header.nextElementSibling;
+				header.classList.remove('active');
+				header.setAttribute('aria-expanded', 'false');
+				content.classList.remove('active');
+			});
+		}
+
+		// ボタンにイベントリスナーを追加
+		document.addEventListener('DOMContentLoaded', function () {
+			// 既存のアコーディオンコード...
+
+			// 全開/全閉ボタン
+			const openAllBtn = document.getElementById('open-all-accordions');
+			const closeAllBtn = document.getElementById('close-all-accordions');
+			const closeAllBtn2 = document.getElementById('close-all-accordions-2'); // 追加ボタン
+
+			if (openAllBtn) {
+				openAllBtn.addEventListener('click', openAllAccordions);
+			}
+
+			if (closeAllBtn) {
+				closeAllBtn.addEventListener('click', closeAllAccordions);
+			}
+
+			if (closeAllBtn2) {
+				closeAllBtn2.addEventListener('click', closeAllAccordions);
+			}
 		});
-
-		// 全開/全閉ボタンのイベントリスナー
-		const openAllBtn = document.getElementById('open-all-accordions');
-		const closeAllBtn = document.getElementById('close-all-accordions');
-		const closeAllBtn2 = document.getElementById('close-all-accordions-2');
-
-		if (openAllBtn) {
-			openAllBtn.addEventListener('click', openAllAccordions);
-		}
-
-		if (closeAllBtn) {
-			closeAllBtn.addEventListener('click', closeAllAccordions);
-		}
-
-		if (closeAllBtn2) {
-			closeAllBtn2.addEventListener('click', closeAllAccordions);
-		}
-	});
-
-	// 全アコーディオン操作機能
-	function openAllAccordions() {
-		const accordionHeaders = document.querySelectorAll('.accordion-header');
-		accordionHeaders.forEach(header => {
-			const content = header.nextElementSibling;
-			header.classList.add('active');
-			header.setAttribute('aria-expanded', 'true');
-			content.classList.add('active');
-		});
-	}
-
-	function closeAllAccordions() {
-		const accordionHeaders = document.querySelectorAll('.accordion-header');
-		accordionHeaders.forEach(header => {
-			const content = header.nextElementSibling;
-			header.classList.remove('active');
-			header.setAttribute('aria-expanded', 'false');
-			content.classList.remove('active');
-		});
-	}
-
-	// 全アコーディオン操作機能
-	function openAllAccordions() {
-		const accordionHeaders = document.querySelectorAll('.accordion-header');
-		accordionHeaders.forEach(header => {
-			const content = header.nextElementSibling;
-			header.classList.add('active');
-			header.setAttribute('aria-expanded', 'true');
-			content.classList.add('active');
-		});
-	}
-
-	function closeAllAccordions() {
-		const accordionHeaders = document.querySelectorAll('.accordion-header');
-		accordionHeaders.forEach(header => {
-			const content = header.nextElementSibling;
-			header.classList.remove('active');
-			header.setAttribute('aria-expanded', 'false');
-			content.classList.remove('active');
-		});
-	}
-
-	// ボタンにイベントリスナーを追加
-	document.addEventListener('DOMContentLoaded', function () {
-		// 既存のアコーディオンコード...
-
-		// 全開/全閉ボタン
-		const openAllBtn = document.getElementById('open-all-accordions');
-		const closeAllBtn = document.getElementById('close-all-accordions');
-		const closeAllBtn2 = document.getElementById('close-all-accordions-2'); // 追加ボタン
-
-		if (openAllBtn) {
-			openAllBtn.addEventListener('click', openAllAccordions);
-		}
-
-		if (closeAllBtn) {
-			closeAllBtn.addEventListener('click', closeAllAccordions);
-		}
-
-		if (closeAllBtn2) {
-			closeAllBtn2.addEventListener('click', closeAllAccordions);
-		}
-	});
-</script>
+	</script>
 </body>
+
 </html>
