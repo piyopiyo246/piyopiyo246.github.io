@@ -15,7 +15,7 @@ body {
 	-webkit-text-size-adjust: none;
 	-ms-text-size-adjust: none
 }
-#contents {
+.contents {
 	width: 1220px;
 	margin: 0 auto
 }
