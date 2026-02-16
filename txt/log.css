@@ -29,6 +29,8 @@ h2 {
 .ib {
 	display: inline-block;
 }
+.mid { text-align: center }
+
 .m2 {
 	margin-left: 36px;
 }
@@ -139,7 +141,7 @@ footer {
 	/* 青色系の背景色 */
 	color: #fff;
 	/* 白色系の文字色 */
-	font-size: 1.2em;
+	font-size: 0.8em;
 	/* 少し大きめの文字サイズ */
 	padding: 10px 20px;
 	/* 適度な余白 */
