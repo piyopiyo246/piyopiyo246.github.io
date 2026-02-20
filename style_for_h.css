@@ -29,7 +29,7 @@
 }
 .title-items,
 .title-items-low {
-	margin: 0;
+	margin: 0 10px 0 0;
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
