@@ -714,13 +714,13 @@ a.model:visited { color: #f2f2f2 }
 /* 渋めのカラーパレットへ変更 */
 .xl_e { color: #fff; }   /* 鶯色（うぐいす）: 深みのある緑 */
 .xl_ce { background: #556b2f; color: #fff; }   /* 鶯色（うぐいす）: 深みのある緑 */
-.xl_s { background: #8b4513; color: #fff; }    /* 褐色（かちいろ）: 落ち着いた茶 */
+.xl_s { background: #8b8113; color: #fff; }    /* わずかに緑がかった、暗く渋い黄色 */
 .xl_cl { background: #b5a642; }                /* 真鍮色（しんちゅう）: くすんだ金・黄 */
 .xl_a { background: #8b0000; color: #fff; }    /* 臙脂（えんじ）: 深い赤 */
 .xl_b { background: #a0522d; color: #fff; }    /* 赭（そほ）: 落ち着いた赤茶 */
 .xl_b2 { background: #b19693; }                /* 灰桜（はいざくら）: くすんだピンク */
-.xl_c { background: #2f4f4f; color: #fff; }    /* 藍鼠（あいねず）: 深い青緑・紺 */
-.xl_clk { background: #708090; color: #fff; }  /* 鉛色（なまりいろ）: 青みがかった灰 */
+.xl_c { background: #094868; color: #fff; }    /* 深納戸（ふかなんど） / 鉄紺（てつこん）：鉄のように力強く、紺よりもさらに暗く深い色。 */
+.xl_clk { background: #436b93; color: #fff; }  /* 熨斗目花色（のしめはなだいろ）: 藍染の「花色（鮮やかな青）」を少し暗く、灰色がからせたような色。 */
 .xl_sl { background: #4b0082; color: #fff; }   /* 滅紫（けしむらさき）: 暗い紫 */
 .xl_ss { background: #9370db; color: #fff; }   /* 藤鼠（ふじねず）: 落ち着いた薄紫 */
 .xl_t1 { background: #696969; color: #fff; }   /* 鈍色（にびいろ）: 濃いグレー */
