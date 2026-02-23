@@ -713,23 +713,23 @@ a.model:visited { color: #f2f2f2 }
 }
 /* 渋めのカラーパレットへ変更 */
 .xl_e { color: #fff; }   /* 鶯色（うぐいす）: 深みのある緑 */
-.xl_ce { background: #556b2f; color: #fff; }   /* 鶯色（うぐいす）: 深みのある緑 */
+.xl_ce { background: #a1c06b; }   /* 柳茶（やなぎちゃ）: 「くすみ」を加えた、黄緑色系の伝統色 */
 .xl_s { background: #8b8113; color: #fff; }    /* わずかに緑がかった、暗く渋い黄色 */
 .xl_cl { background: #b5a642; }                /* 真鍮色（しんちゅう）: くすんだ金・黄 */
 .xl_a { background: #8b0000; color: #fff; }    /* 臙脂（えんじ）: 深い赤 */
 .xl_b { background: #a0522d; color: #fff; }    /* 赭（そほ）: 落ち着いた赤茶 */
 .xl_b2 { background: #b19693; }                /* 灰桜（はいざくら）: くすんだピンク */
-.xl_c { background: #094868; color: #fff; }    /* 深納戸（ふかなんど） / 鉄紺（てつこん）：鉄のように力強く、紺よりもさらに暗く深い色。 */
-.xl_clk { background: #436b93; color: #fff; }  /* 熨斗目花色（のしめはなだいろ）: 藍染の「花色（鮮やかな青）」を少し暗く、灰色がからせたような色。 */
+.xl_c { background: #094868; color: #fff; }    /* 深納戸（ふかなんど） / 鉄紺（てつこん）：紺よりもさらに暗く深い色。 */
+.xl_clk { background: #6199d2; }  /* 勿忘草色（わすれなぐさいろ）: 、明るく淡い青色 */
 .xl_sl { background: #4b0082; color: #fff; }   /* 滅紫（けしむらさき）: 暗い紫 */
-.xl_ss { background: #9370db; color: #fff; }   /* 藤鼠（ふじねず）: 落ち着いた薄紫 */
+.xl_ss { background: #b496ef; }   /* 藤紫（ふじむらさき）: 青みを含んだ、明るく透明感のある紫 */
 .xl_t1 { background: #696969; color: #fff; }   /* 鈍色（にびいろ）: 濃いグレー */
 .xl_bus { background: #a9a9a9; }               /* 錫色（すずいろ）: 明るめのグレー */
 .xl_g { background: #454d32; color: #fff; }    /* 海松茶（みるちゃ）: 濃いオリーブ */
 .xl_old { background: #1c1c1c; color: #fff; }  /* 墨色（すみいろ）: 柔らかな黒 */
-.xl_100 { background: #3d0000; color: #fff; }  /* 焦茶（こげちゃ）: 限りなく黒に近い赤茶 */
+.xl_100 { background: #640000; color: #fff; }  /* 焦茶（こげちゃ）: 限りなく黒に近い赤茶 */
 .xl_u { background: #f5f5f5; }                 /* 生成り（きなり）: わずかに灰がかった白 */
-.xl_rw { background: #8fbc8f; }                /* 若竹色（わかたけ）の影: 落ち着いた黄緑 */
+.xl_rw { background: #b9eab9; color: #65064a; }   /* 若竹色（わかたけ）の影: 落ち着いた黄緑 */
 .xl_prot { background: #c0c0c0; }              /* 銀鼠（ぎんねず）: 上品なシルバー */
 
 /* margin-left */

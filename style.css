@@ -160,11 +160,7 @@ hr {
 .af4a:after { margin-right: 0 }
 .td3 { color: #f2f2f2 }
 .td4 { color: red }
-.td3:hover,
-.td4:hover {
-	border-bottom: solid 1.8px #59f3ff;
-	color: #59f3ff
-}
+.td5 { color: #cc0059 }
 
 .t0 { margin-top: .8px }
 .t0f { margin-top: 3px }
