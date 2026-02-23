@@ -46,7 +46,10 @@ h5 {
 	font-weight: 400;
 	margin: 2px 0 4px 8px
 }
-p { margin: 0 }
+p {
+	 margin: 0;
+		padding-right: 8px
+ }
 img {
 	vertical-align: top;
 	margin: 0;
@@ -224,6 +227,7 @@ hr {
 .box53,
 .box54,
 .box59a,
+.box68,
 .box68b,
 .box80b,
 .box90
@@ -244,6 +248,7 @@ hr {
 .box53 { width: 530px }
 .box54 { width: 540px }
 .box59a { width: 592px }
+.box68 { width: 680px }
 .box68b { width: 684px }
 .box80b { width: 808px }
 .box90 { width: 900px }
