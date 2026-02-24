@@ -726,7 +726,7 @@ a.model:visited { color: #f2f2f2 }
 .xl_t1 { background: #696969; color: #fff; }   /* 鈍色（にびいろ）: 濃いグレー */
 .xl_bus { background: #a9a9a9; }               /* 錫色（すずいろ）: 明るめのグレー */
 .xl_g { background: #454d32; color: #fff; }    /* 海松茶（みるちゃ）: 濃いオリーブ */
-.xl_old { background: #1c1c1c; color: #fff; }  /* 墨色（すみいろ）: 柔らかな黒 */
+.xl_old { background: #1c1c1c; color: #c4c4c4; }  /* 墨色（すみいろ）: 柔らかな黒 */
 .xl_100 { background: #640000; color: #fff; }  /* 焦茶（こげちゃ）: 限りなく黒に近い赤茶 */
 .xl_u { background: #f5f5f5; }                 /* 生成り（きなり）: わずかに灰がかった白 */
 .xl_rw { background: #b9eab9; color: #0d966b; }   /* 若竹色（わかたけ）の影: 落ち着いた黄緑 */
