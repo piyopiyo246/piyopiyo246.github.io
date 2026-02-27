@@ -4,7 +4,10 @@
    ========================================================================== */
 body {
 	font-family: '游ゴシック', 'Hiragino Sans', sans-serif;
-	line-height: 2.1;
+	/* font-family: 'Hiragino Sans', sans-serif ,'游ゴシック';
+	font-family: sans-serif ,'Hiragino Sans', '游ゴシック'; */
+	line-height: 2.1;	
+
 	font-size: 18px;
 	color: #000;
 	letter-spacing: 0;
