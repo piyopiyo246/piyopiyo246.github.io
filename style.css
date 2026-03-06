@@ -134,6 +134,7 @@ a.lnk3:hover { color: #fff }
 	color: #666
 }
 .bb { color: #000}
+
 hr {
 	margin-left: 4px;
 	border-top: 1.4px solid #666
@@ -577,6 +578,11 @@ iframe { border-width: 0 }
 	box-sizing: border-box;
 	background: #4f4f4f;
 	color: #f2f2f2
+}
+.style-w h3 {
+	color: #c0bfbf;
+	font-weight: 700;
+	margin-left: 18px;
 }
 
 /* history */
