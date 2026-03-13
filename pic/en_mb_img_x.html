@@ -74,7 +74,7 @@
 							analytics_storage: 'granted',
 							ad_storage: 'denied',
 							functionality_storage: 'granted',
-							region: ['US', 'GB', 'CA', 'AU', 'NZ', 'IE'] ,
+							region: ['US', 'GB', 'CA', 'AU', 'NZ', 'IE'],
 							// デバッグ用パラメータ（本番では削除）
 							debug_mode: location.hostname.includes('localhost')
 						});
@@ -192,7 +192,7 @@
 					ad_storage: 'denied',
 					functionality_storage: 'granted',
 					wait_for_update: 500,
-					region: ['US', 'GB', 'CA', 'AU', 'NZ', 'IE'] 
+					region: ['US', 'GB', 'CA', 'AU', 'NZ', 'IE']
 				});
 			}
 		} catch (initError) {
@@ -226,70 +226,74 @@
 		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MMJ4PJ3" height="0" width="0" style="display:none;visibility:hidden"></iframe>
 	</noscript>
 
-		<header class="contents">
-			<nav class="center t0c">
-				<ul class="f" itemscope itemtype="https://schema.org/BreadcrumbList">
-					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="f m01">
-						<a itemprop="item" href="https://piyopiyo246.github.io/c_klasse.html" itemscope itemtype="https://schema.org/WebPage" id="breadcrumb-home">
+	<header class="contents">
+		<nav class="center t0c">
+			<ul class="f" itemscope itemtype="https://schema.org/BreadcrumbList">
+				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="f m01">
+					<a itemprop="item" href="https://piyopiyo246.github.io/c_klasse.html">
 							<span itemprop="name">Home</span>
-							<meta itemprop="url" content="https://piyopiyo246.github.io/c_klasse.html">
 						</a>
-						<meta itemprop="position" content="1">
-					</li>
-					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="f bf4">
-						<a itemprop="item" href="https://piyopiyo246.github.io/c_klasse.html#galerie" itemscope itemtype="https://schema.org/WebPage" id="breadcrumb-galerie">
+					<meta itemprop="position" content="1">
+				</li>
+				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="f bf4">
+					<a itemprop="item" href="https://piyopiyo246.github.io/c_klasse.html#galerie">
 							<span itemprop="name">Mercedes-Benz Pkw GALLERY</span>
-							<meta itemprop="url" content="https://piyopiyo246.github.io/c_klasse.html#galerie">
 						</a>
-						<meta itemprop="position" content="2">
+					<meta itemprop="position" content="2">
+				</li>
+				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+					<a itemprop="item" href="https://piyopiyo246.github.io/pic/en_mb_img_x.html">
 						<span itemprop="name" class="sr-only">X-class</span>
+					</a>
+					<meta itemprop="position" content="3">
+				</li>
+			</ul>
+
+			<h1 class="b bf4">X-class</h1>
+			<div style="display: flex; justify-content: space-between; width: 1210px;">
+				<dl class="m01">
+					<dt class="s02 af0">Series</dt>
+					<dd class="s02"><a href="#w470" title="470">470</a></dd>
+				</dl>
+				<ul>
+					<li class="m01">
+						<button class="square_btn" type="button" onclick="location.href='ja_mb_img_x.html'">Ja</button>
+						<button class="square_btn" type="button" onclick="location.href='mb_img_x.html'">De</button>
 					</li>
 				</ul>
-				<h1 class="b bf4">X-class</h1>
-				 <div style="display: flex; justify-content: space-between; width: 1210px;">
-					<dl class="m01">
-						<dt class="s02 af0">Series</dt>
-						<dd class="s02"><a href="#w470" title="470">470</a></dd>
-					</dl>
-					<ul>
-						<li class="m01">
-							<button class="square_btn" type="button" onclick="location.href='ja_mb_img_x.html'">Ja</button>
-							<button class="square_btn" type="button" onclick="location.href='mb_img_x.html'">De</button>
-						</li>
-					</ul>
-				</div>
-				<hr>
-				<dl class="m01">
-					<dt class="w11 b">Sedan/Wagon</dt>
-					<dd><a href="en_mb_img_a.html">A-class</a></dd>
-					<dd><a href="en_mb_img_b.html">B-class</a></dd>
-					<dd><a href="en_mb_img_c.html">C-class</a></dd>
-					<dd><a href="en_mb_img_e.html">E-class</a></dd>
-					<dd><a href="en_mb_img_s.html">S-class</a></dd>
-					<dd><a href="en_mb_img_l.html">Limousine/Maybach</a></dd>
-					<dt class="w11 b">Coupe/Roadster</dt>
-					<dd><a href="en_mb_img_cla.html">CLA</a></dd>
-					<dd><a href="en_mb_img_clc.html">C-coupe</a></dd>
-					<dd><a href="en_mb_img_clk.html">CLK</a></dd>
-					<dd><a href="en_mb_img_ce.html">E-coupe/CLE</a></dd>
-					<dd><a href="en_mb_img_cls.html">CLS</a></dd>
-					<dd><a href="en_mb_img_cl.html">S-coupe</a></dd>
-					<dd><a href="en_mb_img_slk.html">SLK/SLC</a></dd>
-					<dd><a href="en_mb_img_sl.html">SL</a></dd>
-					<dd><a href="en_mb_img_ss.html">SLR/SLS/AMG-GT</a></dd>
-					<dt class="w11 b">SUV/Off-road</dt>
-					<dd><a href="en_mb_img_gla.html">GLA</a></dd>
-					<dd><a href="en_mb_img_glb.html">GLB</a></dd>
-					<dd><a href="en_mb_img_glk.html">GLK/GLC</a></dd>
-					<dd><a href="en_mb_img_r.html">R-class</a></dd>
-					<dd><a href="en_mb_img_ml.html">ML/GLE</a></dd>
-					<dd><a href="en_mb_img_gl.html">GL/GLS</a></dd>
-					<dd><a href="en_mb_img_g.html">G-class</a></dd>
-					<dt class="w11 b">Minivan/Pickup</dt>
-					<dd><a href="en_mb_img_v1.html">T-class/Vaneo/Citan</a></dd>
-					<dd><a href="en_mb_img_v2.html">V-class/Viano/Vito</a></dd>
-					<dd class="b">X-class</dd>
-				</dl>
+			</div>
+			<hr>
+			<dl class="m01">
+				<dt class="w11 b">Sedan/Wagon</dt>
+				<dd><a href="en_mb_img_a.html">A-class</a></dd>
+				<dd><a href="en_mb_img_b.html">B-class</a></dd>
+				<dd><a href="en_mb_img_c.html">C-class</a></dd>
+				<dd><a href="en_mb_img_e.html">E-class</a></dd>
+				<dd><a href="en_mb_img_s.html">S-class</a></dd>
+				<dd><a href="en_mb_img_l.html">Limousine/Maybach</a></dd>
+				<dt class="w11 b">Coupe/Roadster</dt>
+				<dd><a href="en_mb_img_cla.html">CLA</a></dd>
+				<dd><a href="en_mb_img_clc.html">C-coupe</a></dd>
+				<dd><a href="en_mb_img_clk.html">CLK</a></dd>
+				<dd><a href="en_mb_img_ce.html">E-coupe/CLE</a></dd>
+				<dd><a href="en_mb_img_cls.html">CLS</a></dd>
+				<dd><a href="en_mb_img_cl.html">S-coupe</a></dd>
+				<dd><a href="en_mb_img_slk.html">SLK/SLC</a></dd>
+				<dd><a href="en_mb_img_sl.html">SL</a></dd>
+				<dd><a href="en_mb_img_ss.html">SLR/SLS/AMG-GT</a></dd>
+				<dt class="w11 b">SUV/Off-road</dt>
+				<dd><a href="en_mb_img_gla.html">GLA</a></dd>
+				<dd><a href="en_mb_img_glb.html">GLB</a></dd>
+				<dd><a href="en_mb_img_glk.html">GLK/GLC</a></dd>
+				<dd><a href="en_mb_img_r.html">R-class</a></dd>
+				<dd><a href="en_mb_img_ml.html">ML/GLE</a></dd>
+				<dd><a href="en_mb_img_gl.html">GL/GLS</a></dd>
+				<dd><a href="en_mb_img_g.html">G-class</a></dd>
+				<dt class="w11 b">Minivan/Pickup</dt>
+				<dd><a href="en_mb_img_v1.html">T-class/Vaneo/Citan</a></dd>
+				<dd><a href="en_mb_img_v2.html">V-class/Viano/Vito</a></dd>
+				<dd class="b">X-class</dd>
+			</dl>
 			<hr>
 			<div class="mid style-w t1">
 				<div class="box60 t0b">
@@ -297,10 +301,10 @@
 				</div>
 				<a href="#w470" title="X-class W470"><img fetchpriority="high" src="thumb/x/470.webp" alt="470" width="160" height="100"></a>
 			</div>
-			</nav>
-		</header>
+		</nav>
+	</header>
 
-		<main class="contents">
+	<main class="contents">
 		<section id="w470">
 			<h2 class="i">X-class</h2>
 			<a href="https://en.wikipedia.org/wiki/Mercedes-Benz_X-Class" class="icon-link wiki" title="Wikipedia(E)_Mercedes-Benz_Baureihe_470"></a>
@@ -332,8 +336,8 @@
 		</section>
 	</main>
 
-		<footer class="contents t1">
-			<nav>
+	<footer class="contents t1">
+		<nav>
 			<a class="f m01" href="../c_klasse.html" title="Back to the C-class template">Home</a>
 			<a class="f bf4 af4" href="../c_klasse.html#galerie">Mercedes-Benz Pkw GALLERY</a>
 			<span class="f b">X-class</span>
@@ -373,10 +377,10 @@
 				<dd><a href="en_mb_img_v2.html">V-class/Viano/Vito</a></dd>
 				<dd class="b">X-class</dd>
 			</dl>
-			</nav>
-			<hr>
-			<p class="mid"><small>@ since 2010 , piyopiyo_246</small></p>
-		</footer>
+		</nav>
+		<hr>
+		<p class="mid"><small>@ since 2010 , piyopiyo_246</small></p>
+	</footer>
 	<p id="page-top">
 		<a href="#head" aria-label="Jump to top of page" title=" Jump to top of page">&#9650;</a>
 	</p>
@@ -413,7 +417,7 @@
 				analytics_storage: 'denied',
 				ad_storage: 'denied',
 				functionality_storage: 'granted',
-				region: ['US', 'GB', 'CA', 'AU', 'NZ', 'IE'] 
+				region: ['US', 'GB', 'CA', 'AU', 'NZ', 'IE']
 			};
 
 			// GTM用設定
@@ -432,140 +436,141 @@
 		document.addEventListener('DOMContentLoaded', initializeConsent);
 	</script>
 
-<!-- スクロールしてトップ -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script><!-- scrollTop “difer”はダメ絶対！-->
-<script>
-	$(function () {
-		var topBtn = $('#page-top'); topBtn.hide();
-		$(window).scroll(function () {
-			if ($(this).scrollTop() > 100) {
-				topBtn.fadeIn();
-			} else {
-				topBtn.fadeOut();
+	<!-- スクロールしてトップ -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script><!-- scrollTop “difer”はダメ絶対！-->
+	<script>
+		$(function () {
+			var topBtn = $('#page-top'); topBtn.hide();
+			$(window).scroll(function () {
+				if ($(this).scrollTop() > 100) {
+					topBtn.fadeIn();
+				} else {
+					topBtn.fadeOut();
+				}
+			});
+
+			topBtn.click(function () {
+				$('body,html').animate({
+					scrollTop: 0
+				}, 500);
+				return false;
+			});
+		});
+	</script>
+
+	<script>
+		// シンプル版アコーディオン機能（入れ子非対応）
+		document.addEventListener('DOMContentLoaded', function () {
+			const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+			accordionHeaders.forEach(header => {
+				header.addEventListener('click', function () {
+					const content = this.nextElementSibling;
+					const isActive = this.classList.contains('active');
+
+					// クリックされたアコーディオンのみトグル
+					if (isActive) {
+						this.classList.remove('active');
+						this.setAttribute('aria-expanded', 'false');
+						content.classList.remove('active');
+					} else {
+						this.classList.add('active');
+						this.setAttribute('aria-expanded', 'true');
+						content.classList.add('active');
+					}
+				});
+
+				// キーボード操作のサポート
+				header.addEventListener('keydown', function (e) {
+					if (e.key === 'Enter' || e.key === ' ') {
+						e.preventDefault();
+						this.click();
+					}
+				});
+			});
+
+			// 全開/全閉ボタンのイベントリスナー
+			const openAllBtn = document.getElementById('open-all-accordions');
+			const closeAllBtn = document.getElementById('close-all-accordions');
+			const closeAllBtn2 = document.getElementById('close-all-accordions-2');
+
+			if (openAllBtn) {
+				openAllBtn.addEventListener('click', openAllAccordions);
+			}
+
+			if (closeAllBtn) {
+				closeAllBtn.addEventListener('click', closeAllAccordions);
+			}
+
+			if (closeAllBtn2) {
+				closeAllBtn2.addEventListener('click', closeAllAccordions);
 			}
 		});
 
-		topBtn.click(function () {
-			$('body,html').animate({
-				scrollTop: 0
-			}, 500);
-			return false;
-		});
-	});
-</script>
-
-<script>
-	// シンプル版アコーディオン機能（入れ子非対応）
-	document.addEventListener('DOMContentLoaded', function () {
-		const accordionHeaders = document.querySelectorAll('.accordion-header');
-
-		accordionHeaders.forEach(header => {
-			header.addEventListener('click', function () {
-				const content = this.nextElementSibling;
-				const isActive = this.classList.contains('active');
-
-				// クリックされたアコーディオンのみトグル
-				if (isActive) {
-					this.classList.remove('active');
-					this.setAttribute('aria-expanded', 'false');
-					content.classList.remove('active');
-				} else {
-					this.classList.add('active');
-					this.setAttribute('aria-expanded', 'true');
-					content.classList.add('active');
-				}
+		// 全アコーディオン操作機能
+		function openAllAccordions() {
+			const accordionHeaders = document.querySelectorAll('.accordion-header');
+			accordionHeaders.forEach(header => {
+				const content = header.nextElementSibling;
+				header.classList.add('active');
+				header.setAttribute('aria-expanded', 'true');
+				content.classList.add('active');
 			});
+		}
 
-			// キーボード操作のサポート
-			header.addEventListener('keydown', function (e) {
-				if (e.key === 'Enter' || e.key === ' ') {
-					e.preventDefault();
-					this.click();
-				}
+		function closeAllAccordions() {
+			const accordionHeaders = document.querySelectorAll('.accordion-header');
+			accordionHeaders.forEach(header => {
+				const content = header.nextElementSibling;
+				header.classList.remove('active');
+				header.setAttribute('aria-expanded', 'false');
+				content.classList.remove('active');
 			});
+		}
+
+		// 全アコーディオン操作機能
+		function openAllAccordions() {
+			const accordionHeaders = document.querySelectorAll('.accordion-header');
+			accordionHeaders.forEach(header => {
+				const content = header.nextElementSibling;
+				header.classList.add('active');
+				header.setAttribute('aria-expanded', 'true');
+				content.classList.add('active');
+			});
+		}
+
+		function closeAllAccordions() {
+			const accordionHeaders = document.querySelectorAll('.accordion-header');
+			accordionHeaders.forEach(header => {
+				const content = header.nextElementSibling;
+				header.classList.remove('active');
+				header.setAttribute('aria-expanded', 'false');
+				content.classList.remove('active');
+			});
+		}
+
+		// ボタンにイベントリスナーを追加
+		document.addEventListener('DOMContentLoaded', function () {
+			// 既存のアコーディオンコード...
+
+			// 全開/全閉ボタン
+			const openAllBtn = document.getElementById('open-all-accordions');
+			const closeAllBtn = document.getElementById('close-all-accordions');
+			const closeAllBtn2 = document.getElementById('close-all-accordions-2'); // 追加ボタン
+
+			if (openAllBtn) {
+				openAllBtn.addEventListener('click', openAllAccordions);
+			}
+
+			if (closeAllBtn) {
+				closeAllBtn.addEventListener('click', closeAllAccordions);
+			}
+
+			if (closeAllBtn2) {
+				closeAllBtn2.addEventListener('click', closeAllAccordions);
+			}
 		});
-
-		// 全開/全閉ボタンのイベントリスナー
-		const openAllBtn = document.getElementById('open-all-accordions');
-		const closeAllBtn = document.getElementById('close-all-accordions');
-		const closeAllBtn2 = document.getElementById('close-all-accordions-2');
-
-		if (openAllBtn) {
-			openAllBtn.addEventListener('click', openAllAccordions);
-		}
-
-		if (closeAllBtn) {
-			closeAllBtn.addEventListener('click', closeAllAccordions);
-		}
-
-		if (closeAllBtn2) {
-			closeAllBtn2.addEventListener('click', closeAllAccordions);
-		}
-	});
-
-	// 全アコーディオン操作機能
-	function openAllAccordions() {
-		const accordionHeaders = document.querySelectorAll('.accordion-header');
-		accordionHeaders.forEach(header => {
-			const content = header.nextElementSibling;
-			header.classList.add('active');
-			header.setAttribute('aria-expanded', 'true');
-			content.classList.add('active');
-		});
-	}
-
-	function closeAllAccordions() {
-		const accordionHeaders = document.querySelectorAll('.accordion-header');
-		accordionHeaders.forEach(header => {
-			const content = header.nextElementSibling;
-			header.classList.remove('active');
-			header.setAttribute('aria-expanded', 'false');
-			content.classList.remove('active');
-		});
-	}
-
-	// 全アコーディオン操作機能
-	function openAllAccordions() {
-		const accordionHeaders = document.querySelectorAll('.accordion-header');
-		accordionHeaders.forEach(header => {
-			const content = header.nextElementSibling;
-			header.classList.add('active');
-			header.setAttribute('aria-expanded', 'true');
-			content.classList.add('active');
-		});
-	}
-
-	function closeAllAccordions() {
-		const accordionHeaders = document.querySelectorAll('.accordion-header');
-		accordionHeaders.forEach(header => {
-			const content = header.nextElementSibling;
-			header.classList.remove('active');
-			header.setAttribute('aria-expanded', 'false');
-			content.classList.remove('active');
-		});
-	}
-
-	// ボタンにイベントリスナーを追加
-	document.addEventListener('DOMContentLoaded', function () {
-		// 既存のアコーディオンコード...
-
-		// 全開/全閉ボタン
-		const openAllBtn = document.getElementById('open-all-accordions');
-		const closeAllBtn = document.getElementById('close-all-accordions');
-		const closeAllBtn2 = document.getElementById('close-all-accordions-2'); // 追加ボタン
-
-		if (openAllBtn) {
-			openAllBtn.addEventListener('click', openAllAccordions);
-		}
-
-		if (closeAllBtn) {
-			closeAllBtn.addEventListener('click', closeAllAccordions);
-		}
-
-		if (closeAllBtn2) {
-			closeAllBtn2.addEventListener('click', closeAllAccordions);
-		}
-	});
-</script>
+	</script>
 </body>
+
 </html>
