@@ -1,6 +1,7 @@
 @charset "UTF-8";
 body {
 	font-family: 'MS UI Gothic','Hiragino Sans', sans-serif;
+	font-weight: 500;
 	background-color: #efefef;
 	font-size: 22px;
 }
@@ -17,7 +18,7 @@ nav {
 	border-bottom: solid 2px #ffffff;
 }
 h1 {
-	margin-top: 20px;
+	margin-top: 60px;
 	margin-left: 40px;
 	font-size: 110%;
 	display: inline-block;
