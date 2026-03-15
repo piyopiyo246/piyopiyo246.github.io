@@ -126,8 +126,6 @@
 	position: absolute;
 	background: no-repeat;
 	user-select: none;
-	pointer-events: none;
-
 }
 .bk,
 .bk2 {
