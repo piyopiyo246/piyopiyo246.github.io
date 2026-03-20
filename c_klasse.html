@@ -200,6 +200,7 @@
 
 		.bk,
 		.bk2,
+		.bk3,
 		.bk4,
 		.bk5 {
 			position: absolute;
@@ -220,24 +221,23 @@
 			line-height: 300%
 		}
 
+		.bk3,
 		.bk4,
 		.bk5 {
-			top: 0
+			top: 0;
+			left: 300px;
 		}
-
-		.bk5 {
-			width: 320px;
-			left: 800px
+		.bk3
+		{
+			width: 780px;
 		}
-
-		.bk4 {
+		.bk4
+		{
 			width: 960px;
 			left: 200px;
-			text-align: left
 		}
-
 		.bk5 {
-			left: 300px
+			width: 320px;
 		}
 
 		/* zeit-limo bk */
@@ -13360,7 +13360,7 @@
 		<section id="motor">
 			<h2 class="bf0" title="Motor">エンジン</h2>
 
-			<div class="bk5 style-w2 m10">
+			<div class="bk5 style-w2">
 				<span title="Es ist nur eine Notation des Benzinmotors.">ガソリンエンジンのみ掲載しています。</span>
 			</div>
 
@@ -24181,17 +24181,19 @@
 						<div class="figure-container">
 							<figure>
 								<a href="badge/nomenclature.jpg" target="_blank">
-												<img loading="lazy" src="badge/nomenclature_min.webp" alt="Nomenklatur ab 2015" width="650" height="380">
-											</a>
+									<img loading="lazy" src="badge/nomenclature_min.webp" alt="Nomenklatur ab 2015" width="650" height="380">
+								</a>
 								<figcaption class="center_title" title="Namenskonventionen für Kurse im Jahr 2015">
-									2015年におけるクラス</figcaption>
+									2015年におけるクラス
+								</figcaption>
 							</figure>
 							<figure>
 								<a href="badge/drivesys.webp" target="_blank">
-												<img loading="lazy" src="badge/drivesys_min.webp" alt="Drive system ab 2015" width="527" height="380">
-											</a>
+									<img loading="lazy" src="badge/drivesys_min.webp" alt="Drive system ab 2015" width="527" height="380">
+								</a>
 								<figcaption class="center_title" title="Antriebssystemcode im Jahr 2015">
-									2015年におけるドライブシステム符号</figcaption>
+									2015年におけるドライブシステム符号
+								</figcaption>
 							</figure>
 						</div>
 						<div class="t1">
@@ -24864,8 +24866,11 @@
 			</div>
 
 			<h2 class="bf0" title="Vehicle Identification Number">VIN CODE</h2>
+			<div class="bk3 style-w2">
+				※ 車検証の「車台番号」17桁の英数字が VIN コードです。DeCoder に入力すると、色々教えてくれます。
+			</div>
 			<p class="m02">
-				※ 車検証の「車台番号」17桁の英数字が VIN コードです。DeCoder に入力すると、色々教えてくれます。<br>
+
 				<a href="https://www.mbdecoder.com/" title="DeCoder" class="m02 s04">MBdecoder</a>
 				<a href="https://www.datamb.com/" title="DeCoder" class="s04">DataMB</a>
 				<a href="https://www.vindeCoderz.com/EN/Mercedes-benz" title="DeCoder" class="s04">MB VIN decoder</a>
