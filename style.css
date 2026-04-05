@@ -600,6 +600,13 @@ iframe { border-width: 0 }
 /* history */
 .ac2 { width: 100% }
 .ac2:hover { background: #fdfdfd}
+/* zeit-db,history */
+.jump-link,
+.under_button {
+	border: 1px solid #111;
+	border-radius: 3px;
+	text-decoration: none
+}
 
 /* style-bottom
 ========================================================================== */
