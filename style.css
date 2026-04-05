@@ -605,7 +605,7 @@ iframe { border-width: 0 }
 .under_button {
 	border: 1px solid #111;
 	border-radius: 3px;
-	text-decoration: none
+	text-align: center
 }
 
 /* style-bottom
