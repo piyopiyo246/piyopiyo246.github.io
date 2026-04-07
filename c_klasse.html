@@ -277,15 +277,22 @@
 		}
 
 		/* huroku */
+		/* 1. フォントの定義（ファイルの読み込み設定） */
+		@font-face {
+			font-family: 'Noto Sans JP Custom';
+			/* 任意の名前を付けます */
+			src: local("Noto Sans CJK JP Regular"),
+				url(//fonts.gstatic.com/ea/notosansjp/v5/NotoSansJP-Regular.woff2) format('woff2'),
+				url(//fonts.gstatic.com/ea/notosansjp/v5/NotoSansJP-Regular.woff) format('woff'),
+				url(//fonts.gstatic.com/ea/notosansjp/v5/NotoSansJP-Regular.otf) format('opentype');
+		}
+
 		.aa {
+			/* 定義した名前を優先しつつ、AA（アスキーアート）に必要なMS UI Gothic等を指定 */
 			font-family: 'MS UI Gothic', 'Roboto Condensed', Roboto, 'Noto Sans JP';
 			font-size: 16px;
 			line-height: .95;
 			margin: 70px 0 15px 30px;
-			src: local("Noto Sans CJK JP Regular"),
-				url(//fonts.gstatic.com/ea/notosansjp/v5/NotoSansJP-Regular.woff2) format('woff2'),
-				url(//fonts.gstatic.com/ea/notosansjp/v5/NotoSansJP-Regular.woff) format('woff'),
-				url(//fonts.gstatic.com/ea/notosansjp/v5/NotoSansJP-Regular.otf) format('opentype')
 		}
 
 		/* zeit-code */
@@ -479,11 +486,13 @@
 			overflow-wrap: break-word;
 			font-size: small
 		}
+
 		.enter_button {
 			border: 2px solid #9e9e9e;
 			background: #4f4f4f;
 			border-radius: 6px
 		}
+
 		.floating-buttons {
 			position: fixed;
 			right: 20px;
