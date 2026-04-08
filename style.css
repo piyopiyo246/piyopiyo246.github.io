@@ -484,6 +484,7 @@ hr {
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
+	padding: 0 0 0 44px;
 	gap: 8px;
 	flex: 1
 }
@@ -495,7 +496,7 @@ hr {
 .accordion-header.subpage span,
 .accordion-header.subpage p {
 	font-size: 17px;
-	margin: 0 0 0 20px;
+	margin: 0;
 }
 .accordion-header.subpage p {
 	margin: 0 6px 0 6px
@@ -503,7 +504,7 @@ hr {
 .accordion-multi-line {
 	display: flex;
 	flex-wrap: wrap;
-	padding: 0 0 0 24px;
+	padding: 0 0 0 44px;
 	gap: 8px;
 	width: 98%
 }
