@@ -1375,27 +1375,6 @@
 			});
 		}
 
-		// 全アコーディオン操作機能
-		function openAllAccordions() {
-			const accordionHeaders = document.querySelectorAll('.accordion-header');
-			accordionHeaders.forEach(header => {
-				const content = header.nextElementSibling;
-				header.classList.add('active');
-				header.setAttribute('aria-expanded', 'true');
-				content.classList.add('active');
-			});
-		}
-
-		function closeAllAccordions() {
-			const accordionHeaders = document.querySelectorAll('.accordion-header');
-			accordionHeaders.forEach(header => {
-				const content = header.nextElementSibling;
-				header.classList.remove('active');
-				header.setAttribute('aria-expanded', 'false');
-				content.classList.remove('active');
-			});
-		}
-
 		// ボタンにイベントリスナーを追加
 		document.addEventListener('DOMContentLoaded', function () {
 			// 既存のアコーディオンコード...
