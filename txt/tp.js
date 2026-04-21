@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 3. 【追加】URLにハッシュがある場合の自動開閉チェック
     if (window.location.hash) {
-        const targetId = window.location.hash; // 例: "#t409"
+        const targetId = window.location.hash; // 例: "#t_c_010_409"
         const targetElement = document.querySelector(targetId);
         
         // ターゲット要素が存在し、かつそれが full-text コンテナの中にあるか確認
