@@ -29,8 +29,13 @@ li {
 .thread-index{
 	margin-left: 50px;
 }
-.thread-index a {
+.thread-index2{
+	margin-left: 10px;
+	display: inline-block;
+}
+.thread-index a,.thread-index2 a {
 	margin-left: 18px;
+	line-height: 1.5;
 }
 h1 {
 	margin: 60px 0 10px 36px;
