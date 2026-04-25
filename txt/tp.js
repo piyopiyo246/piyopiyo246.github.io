@@ -1,37 +1,52 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const showMoreButton = document.getElementById('show-more-button');
-    const shortText = document.querySelector('.short-text');
-    const fadeOut = document.querySelector('.fade-out');
-    const fullText = document.querySelector('.full-text');
-
-    // 1. 全文表示処理を共通関数として定義
-    function revealFullText() {
-        if (fullText && !fullText.classList.contains('visible')) {
-            shortText.style.height = 'auto'; // 高さ制限を解除
-            fadeOut.style.display = 'none'; // フェードアウトを非表示
-            fullText.classList.add('visible'); // 全文を表示
-            showMoreButton.style.display = 'none'; // ボタンを非表示
-        }
-    }
-
-    // 2. ボタンクリック時の動作
-    if (showMoreButton) {
-        showMoreButton.addEventListener('click', revealFullText);
-    }
-
-    // 3. 【追加】URLにハッシュがある場合の自動開閉チェック
-    if (window.location.hash) {
-        const targetId = window.location.hash; // 例: "#t_c_010_409"
-        const targetElement = document.querySelector(targetId);
+    // 1. 全文表示を実行する共通関数（対象のコンテナを引数にとる）
+    function revealContainer(container) {
+        if (!container) return;
         
-        // ターゲット要素が存在し、かつそれが full-text コンテナの中にあるか確認
-        if (targetElement && fullText.contains(targetElement)) {
-            revealFullText();
-            
-            // 表示直後にスクロール位置を再調整（念のため）
-            setTimeout(() => {
-                targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }, 100);
+        const shortText = container.querySelector('.short-text');
+        const fadeOut = container.querySelector('.fade-out');
+        const fullText = container.querySelector('.full-text');
+        const button = container.querySelector('#show-more-button');
+
+        if (fullText && !fullText.classList.contains('visible')) {
+            if (shortText) shortText.style.height = 'auto'; // 高さ制限を解除
+            if (fadeOut) fadeOut.style.display = 'none';    // フェードアウトを非表示
+            fullText.classList.add('visible');             // 全文を表示
+            if (button) button.style.display = 'none';      // ボタンを非表示
         }
     }
+
+    // 2. ボタンクリック時の動作（ページ内のすべてのボタンに設定）
+    const allButtons = document.querySelectorAll('#show-more-button');
+    allButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const container = this.closest('.long-text-container');
+            revealContainer(container);
+        });
+    });
+
+    // 3. URLのハッシュを判定して自動開閉する関数
+    function checkHashAndReveal() {
+        if (window.location.hash) {
+            const targetId = window.location.hash;
+            const targetElement = document.querySelector(targetId);
+            
+            if (targetElement) {
+                // ターゲット要素が含まれている親コンテナを特定
+                const container = targetElement.closest('.long-text-container');
+                if (container) {
+                    revealContainer(container);
+                    
+                    // 表示直後にスクロール位置を再調整
+                    setTimeout(() => {
+                        targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }, 100);
+                }
+            }
+        }
+    }
+
+    // 4. 【重要】初回読み込み時と、ページ内リンククリック（ハッシュ変更）時の両方を監視
+    checkHashAndReveal(); // ページ読み込み時
+    window.addEventListener('hashchange', checkHashAndReveal); // リンククリック時
 });
