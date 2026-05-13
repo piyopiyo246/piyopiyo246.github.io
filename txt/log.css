@@ -106,7 +106,7 @@ span {
 }
 #page-top {
 	position: fixed;
-	bottom: 10px;
+	bottom: 20px;
 	left: -50px;
 	font-size: 77%;
 	opacity:0.6; 
@@ -209,4 +209,38 @@ footer {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+/* 右下フローティングボタンの設定 */
+#goto-main,
+#goto-galerie {
+	all: unset; 
+	position: fixed;
+	right: 18px; /* 画面右端に配置 */
+	font-size: 83%;
+	opacity: .6;
+	z-index: 9999;
+}
+
+/* 2つのボタンが重ならないよう高さを調整 */
+#goto-main { bottom: 97px; }
+#goto-galerie { bottom: 50px; }
+
+#goto-main a,
+#goto-galerie a {
+	background: #666; /* 控えめなグレー */
+	color: #fff;
+	text-decoration: none;
+	width: 120px;      /* 文字を入れるため少し幅を確保 */
+	padding: 7px ;
+	text-align: center;
+	display: block;
+	border-radius: 5px;
+	font-weight: 800; /* サイト全体の統一設定に合わせる */
+}
+
+#goto-main a:hover,
+#goto-galerie a:hover {
+	text-decoration: none;
+	background: #222; /* ホバー時はサイトの基本色に */
+	opacity: 1;
 }

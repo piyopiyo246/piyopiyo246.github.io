@@ -92,7 +92,7 @@
 				</li>
 			</ul>
 			<ul>
-				<li class="af1"><a href="../c_klasse.html" class="lnk" title="Cクラス総合スレッドテンプレ">テンプレ</a></li>
+				<li class="af1"><a href="../c_klasse.html" class="lnk" title="Cクラス総合スレッドのテンプレ">ホーム</a></li>
 				<li><a href="mb_1t.html" class="lnk" title="メルセデスベンツ総合スレッド全過去ログ">MB</a></li>
 				<li><a href="c-class_1t.html" class="lnk" title="Cクラス総合スレッド全過去ログ">C総合</a></li>
 				<li><a href="slk_1t.html" class="lnk" title="SLKスレッド全過去ログ">SLK</a></li>
@@ -30809,6 +30809,40 @@ w206のc63って日本には導入されてないの？
 		});
 	});
 </script>
+
+<!-- ホーム，Galerie へ -->
+<script>
+$(function () {
+  // 右下のナビゲーション要素をまとめて取得
+  var navBtnsRight = $('#goto-main, #goto-galerie');
+
+  // 初期状態では非表示
+  navBtnsRight.hide();
+
+  // スクロール時の動作
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 150) { // 100pxより少し深めに設定
+      navBtnsRight.fadeIn();
+    } else {
+      navBtnsRight.fadeOut();
+    }
+  });
+});
+</script>
+
+<!-- 浮遊ナビゲーションボタン（右下） -->
+<div id="floating-nav-right">
+	<p id="goto-main">
+		<a href="https://piyopiyo246.github.io/c_klasse.html" title="メインページへ / Zur Hauptseite">
+			ホームへ
+		</a>
+	</p>
+	<p id="goto-galerie">
+		<a href="https://piyopiyo246.github.io/pic/ja_mb_img_c#w206" title="画像サイトへ / Zur Galerie">
+			Galerie へ
+		</a>
+	</p>
+</div>
 
 </body>
 </html>
