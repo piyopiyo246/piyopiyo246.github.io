@@ -2583,6 +2583,8 @@
 			border: none;
 			/* 枠線も消す場合は追加 */
 		}
+		.s01a { margin-right: 8px }
+
 	</style>
 	<script type="application/ld+json">
 {
@@ -2687,9 +2689,9 @@
 				<dt class="title-category" title="更新">Update</dt>
 				<dd class="title-items-low">
 					<dl>
-						<dt class="s02">26/04/29</dt>
+						<dt class="s02">26/05/20</dt>
 						<dd>
-							ページトップに TOPICS 追加
+							<a href="#body-foreign">外国車</a>にTOPICSを追加。
 						</dd>
 					</dl>
 				</dd>
@@ -8748,11 +8750,11 @@
 					<div class="accordion-content-inner">
 						<h3 class="sr-only">国産車 諸元表</h3>
 
-						<div class="accordion m01" id="body-topics">
-							<button class="accordion-header min" aria-expanded="false" aria-controls="content-body-topics">
+						<div class="accordion m01" id="body-jp-topics">
+							<button class="accordion-header min" aria-expanded="false" aria-controls="content-body-jp-topics">
 								<span title="Themen">Topics</span>
 							</button>
-							<div id="content-body-topics" class="accordion-content">
+							<div id="content-body-jp-topics" class="accordion-content">
 								<div class="accordion-content-inner">
 									<h4 class="sr-only">国産車 比較 トピックス</h4>
 									<p class="m02">2024/09 時点</p>
@@ -8782,7 +8784,7 @@
 											<tr>
 												<td class="left">
 													<a href="https://goo.gl/9QzrT4" target="_blank"><img src="ico/toyota.png" width="24" height="16" alt="toyota rogo" title="Wiki(J) トヨタ" style="margin-top: 8px;"></a>
-													<a href="https://x.gd/ozqux" class="icon-link wiki m01" target="_blank" title="Wiki(J)"></a>
+													<a href="https://x.gd/ozqux" class="icon-link wiki" target="_blank" title="Wiki(J)"></a>
 													<a href="pdf/corolla_main_202405.pdf" target="_blank">Corolla</a>
 												</td>
 												<td>E21#</td>
@@ -8805,7 +8807,7 @@
 											<tr>
 												<td class="left">
 													<a href="https://goo.gl/c57c17" target="_blank"><img src="ico/honda.png" width="20" height="20" alt="Honda rogo" title="Wiki(J) ホンダ"></a>
-													<a href="https://ja.wikipedia.org/wiki/%E3%83%9B%E3%83%B3%E3%83%80%E3%83%BB%E3%82%B7%E3%83%93%E3%83%83%E3%82%AF" class="icon-link wiki m1f" target="_blank" title="Wiki(J) ホンダ・シビック"></a>
+													<a href="https://ja.wikipedia.org/wiki/%E3%83%9B%E3%83%B3%E3%83%80%E3%83%BB%E3%82%B7%E3%83%93%E3%83%83%E3%82%AF" class="icon-link wiki" target="_blank" title="Wiki(J) ホンダ・シビック"></a>
 													<a href="pdf/civic_spec_list.pdf?from=car_footer" target="_blank">Civic</a>
 												</td>
 												<td>FL1</td>
@@ -8828,7 +8830,7 @@
 											<tr>
 												<td class="left">
 													<a href="https://x.gd/rPXkt" target="_blank"><img src="ico/mazda.png" width="23" height="18" alt="mazda rogo" title="Wiki(J)マツダ"></a>
-													<a href="https://x.gd/1oGkt" class="icon-link wiki m1f" target="_blank" title="Wiki(J)マツダ3"></a>
+													<a href="https://x.gd/1oGkt" class="icon-link wiki" target="_blank" title="Wiki(J)マツダ3"></a>
 													<a href="pdf/mazda3_specification_202510.pdf" target="_blank">Mazda 3</a>
 												</td>
 												<td>BPFJ3R</td>
@@ -8851,7 +8853,7 @@
 											<tr>
 												<td class="left">
 													<a href="https://goo.gl/Xozy7l" target="_blank"><img src="ico/subaru.ico" width="24" height="20" alt="Subaru rogo" title="Wiki(J) スバル"></a>
-													<a href="https://ja.wikipedia.org/wiki/%E3%82%B9%E3%83%90%E3%83%AB%E3%83%BB%E3%83%AC%E3%83%B4%E3%82%A9%E3%83%BC%E3%82%B0" class="icon-link wiki m01" target="_blank" title="Wiki(J) スバル・レヴォーグ"></a>
+													<a href="https://ja.wikipedia.org/wiki/%E3%82%B9%E3%83%90%E3%83%AB%E3%83%BB%E3%83%AC%E3%83%B4%E3%82%A9%E3%83%BC%E3%82%B0" class="icon-link wiki" target="_blank" title="Wiki(J) スバル・レヴォーグ"></a>
 													<a href="pdf/20230925104506levorg_specifications.pdf" target="_blank">LEVORG</a>
 												</td>
 												<td>SJ</td>
@@ -10721,6 +10723,88 @@
 				<div id="content-body-foreign" class="accordion-content" role="region">
 					<div class="accordion-content-inner">
 						<h3 class="sr-only">外国車 諸元表</h3>
+
+						<div class="accordion m01" id="body-foreign-topics">
+							<button class="accordion-header min" aria-expanded="false" aria-controls="content-body-foreign-topics">
+								<span title="Themen">Topics</span>
+							</button>
+							<div id="content-body-foreign-topics" class="accordion-content">
+								<div class="accordion-content-inner">
+									<h4 class="sr-only">外国車 比較 トピックス</h4>
+									<table class="body-table">
+										<thead>
+											<tr>
+												<th scope="col">モデル</th>
+												<th scope="col">code</th>
+												<th scope="col">var.</th>
+												<th scope="col">駆動</th>
+												<th scope="col" class="b"><span title="in voller Länge/mm">全長</span></th>
+												<th scope="col"><span title="Gesamtbreite/mm">全幅</span></th>
+												<th scope="col"><span title="Gesamthöhe/mm">全高</span></th>
+												<th scope="col"><span title="Radstand/mm/ホイールベース">軸距</span></th>
+												<th scope="col" class="b"><span title="Volles Gewicht/kg">全重</span></th>
+												<th scope="col"><span title="Minimaler Wenderadius/最小回転半径">回</span></th>
+												<th scope="col"><span title="Suspension">sus</span></th>
+												<th scope="col">E/G</th>
+												<th scope="col">turbo</th>
+												<th scope="col">hybrid</th>
+												<th scope="col"><span title="仏馬力">PS</span></th>
+												<th scope="col">T/M</th>
+												<th scope="col">価格</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="left">
+													<a href="https://x.gd/5KHdg" target="_blank"><img src="ico/renault.png" width="24" height="16" alt="renault rogo" title="Wiki(J) ルノー" style="margin-top: 8px;"></a>
+													<a href="https://x.gd/kouBj" class="icon-link wiki m01" target="_blank" title="Wiki(J)"></a>
+													Megane
+												</td>
+												<td>ABA-BBM5M</td>
+												<td>GT</td>
+												<td>FF</td>
+												<td class="b">4,395</td>
+												<td>1,815</td>
+												<td>1,435</td>
+												<td>2,670</td>
+												<td class="b">1,430</td>
+												<td>5.2</td>
+												<td>ms/ba</td>
+												<td>1.6</td>
+												<td>○</td>
+												<td>-</td>
+												<td>205</td>
+												<td>7DCT</td>
+												<td>\3,340,000</td>
+											</tr>
+											<tr>
+												<td class="left">
+													<a href="https://x.gd/n0KFB" target="_blank" class="s01a"><img src="ico/ds.png" width="16" height="20" alt="DS rogo" title="Wiki(J) DS"></a>
+													<a href="https://x.gd/IayPf" class="icon-link wiki" target="_blank" title="Wiki(J) DS4"></a>
+													No.4
+												</td>
+												<td>D41</td>
+												<td>エトワール HB</td>
+												<td>FF</td>
+												<td class="b">4,415</td>
+												<td>1,830</td>
+												<td>1,495</td>
+												<td>2,675</td>
+												<td class="b">1,390</td>
+												<td>5.5</td>
+												<td>ms/ba</td>
+												<td>1.5</td>
+												<td>○</td>
+												<td>○</td>
+												<td>136+20</td>
+												<td>6DCT</td>
+												<td>\6,250,000</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
 
 						<div class="accordion m01" id="body-vw">
 							<button class="accordion-header min" aria-expanded="false" aria-controls="content-body-vw">
@@ -26061,15 +26145,9 @@
 			<article class="box80b">
 				<h4 id="historischelog" title="Verlauf aktualisieren" class="b">最近の更新履歴</h4>
 				<dl class="m02">
-					<dt class="s02">26/03/23</dt>
+					<dt class="s02">26/04/29</dt>
 					<dd>
-						<span class="af4"><a href="c_klasse.html#body-spec">車体</a></span>
-						Wikipedia情報 &amp; 見出しタグ追加
-					</dd>
-					<dt class="s02">26/03/18</dt>
-					<dd>
-						<span class="af4"><a href="c_klasse.html#motor">エンジン</a></span>
-						エンジンコードの表記を統一
+						ページトップに TOPICS 追加
 					</dd>
 				</dl>
 				<h5 title="Verlauf aktualisieren" class="t1 b">技術的更新</h5>
@@ -26083,7 +26161,7 @@
 						過去ログサイトにホームと Galerie へのフローティングリンクを追加
 					</dd>
 				</dl>
-				<p class="t1 m01">
+				<p class="t1 m01 pb02">
 					<a id="anhang" href="history.html" title="Vergangene Update-Historie.">過去の更新履歴（別ページ）</a>
 				</p>
 			</article>
