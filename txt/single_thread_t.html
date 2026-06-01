@@ -107,6 +107,19 @@
 				<li><a href="w206_1t.html" class="lnk" title="Cクラス【W/S206】スレッド全過去ログ1">206</a></li>
 				<li><a href="glc_1t.html" class="lnk" title="GLC【X253/X254】スレッド全過去ログ">GLC</a></li>
 				<li><a href="cla_1t.html" class="lnk" title="CLA【C/X117】スレッド全過去ログ">CLA</a></li>
+				<!-- 検索窓 -->
+				<li id="nav-search">
+					<span id="page-search-count"></span>
+					<input
+						type="search"
+						id="page-search-input"
+						placeholder="&#128269; ページ内検索"
+						aria-label="ページ内検索"
+						autocomplete="off"
+					>
+					<button id="page-search-prev" aria-label="前の結果" title="前の結果（Shift+Enter）">&#8593;</button>
+					<button id="page-search-next" aria-label="次の結果" title="次の結果（Enter）">&#8595;</button>
+				</li>
 			</ul>
 			<h1>メルセデス・ベンツ190E・Cクラス単独スレッド全過去ログ</h1>
 			<p class="ib">2001/06 - 2009/03</p>
@@ -22020,5 +22033,144 @@ $(function () {
 	</p>
 </div>
 
+
+<!-- 検索窓 -->
+<script>
+	(function () {
+		const input = document.getElementById('page-search-input');
+		const btnPrev = document.getElementById('page-search-prev');
+		const btnNext = document.getElementById('page-search-next');
+		const countEl = document.getElementById('page-search-count');
+		const header = document.querySelector('header');
+
+		let marks = [];
+		let currentIdx = -1;
+
+		/* ---- tp.js の revealContainer を再利用して全文展開 ---- */
+		function expandAll() {
+			document.querySelectorAll('.long-text-container').forEach(container => {
+				const shortText = container.querySelector('.short-text');
+				const fadeOut = container.querySelector('.fade-out');
+				const fullText = container.querySelector('.full-text');
+				const button = container.querySelector('#show-more-button');
+				if (fullText && !fullText.classList.contains('visible')) {
+					if (shortText) shortText.style.height = 'auto';
+					if (fadeOut) fadeOut.style.display = 'none';
+					fullText.classList.add('visible');
+					if (button) button.style.display = 'none';
+				}
+			});
+		}
+
+		/* ---- ハイライト解除 ---- */
+		function clearMarks() {
+			document.querySelectorAll('.search-highlight').forEach(el => {
+				el.replaceWith(document.createTextNode(el.textContent));
+			});
+			document.querySelector('main')?.normalize();
+			marks = [];
+			currentIdx = -1;
+			countEl.textContent = '';
+		}
+
+		/* ---- ハイライト実行 ---- */
+		function highlightAll(keyword) {
+			clearMarks();
+			if (!keyword) return;
+
+			// 検索前に全文展開
+			expandAll();
+
+			const searchRoot = document.querySelector('main') || document.body;
+			const regex = new RegExp(
+				keyword.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi'
+			);
+
+			const walker = document.createTreeWalker(
+				searchRoot,
+				NodeFilter.SHOW_TEXT,
+				{
+					acceptNode(node) {
+						if (header && header.contains(node)) return NodeFilter.FILTER_REJECT;
+						const tag = node.parentElement?.tagName;
+						if (tag === 'SCRIPT' || tag === 'STYLE') return NodeFilter.FILTER_REJECT;
+						return node.textContent.trim()
+							? NodeFilter.FILTER_ACCEPT
+							: NodeFilter.FILTER_SKIP;
+					}
+				}
+			);
+
+			const textNodes = [];
+			let node;
+			while ((node = walker.nextNode())) textNodes.push(node);
+
+			textNodes.forEach(textNode => {
+				const text = textNode.textContent;
+				if (!regex.test(text)) return;
+				regex.lastIndex = 0;
+
+				const frag = document.createDocumentFragment();
+				let lastIdx = 0, match;
+				while ((match = regex.exec(text)) !== null) {
+					if (match.index > lastIdx)
+						frag.appendChild(document.createTextNode(text.slice(lastIdx, match.index)));
+					const mark = document.createElement('mark');
+					mark.className = 'search-highlight';
+					mark.textContent = match[0];
+					frag.appendChild(mark);
+					marks.push(mark);
+					lastIdx = regex.lastIndex;
+				}
+				if (lastIdx < text.length)
+					frag.appendChild(document.createTextNode(text.slice(lastIdx)));
+				textNode.parentNode.replaceChild(frag, textNode);
+			});
+
+			if (marks.length > 0) {
+				goTo(0);
+			} else {
+				countEl.textContent = '0件';
+			}
+		}
+
+		/* ---- 指定インデックスへ移動 ---- */
+		function goTo(idx) {
+			if (!marks.length) return;
+			if (currentIdx >= 0) marks[currentIdx].classList.remove('current');
+			currentIdx = (idx + marks.length) % marks.length;
+			marks[currentIdx].classList.add('current');
+			marks[currentIdx].scrollIntoView({ behavior: 'smooth', block: 'center' });
+			countEl.textContent = (currentIdx + 1) + '/' + marks.length + '件';
+		}
+
+		/* ---- イベント ---- */
+		input.addEventListener('keydown', e => {
+			if (e.key === 'Enter') {
+				e.preventDefault();
+				if (e.shiftKey) {
+					marks.length ? goTo(currentIdx - 1) : highlightAll(input.value.trim());
+				} else {
+					marks.length ? goTo(currentIdx + 1) : highlightAll(input.value.trim());
+				}
+			}
+			if (e.key === 'Escape') {
+				clearMarks();
+				input.value = '';
+			}
+		});
+
+		input.addEventListener('input', e => {
+			if (!e.target.value) clearMarks();
+		});
+
+		btnNext.addEventListener('click', () =>
+			marks.length ? goTo(currentIdx + 1) : highlightAll(input.value.trim())
+		);
+		btnPrev.addEventListener('click', () =>
+			marks.length ? goTo(currentIdx - 1) : highlightAll(input.value.trim())
+		);
+	})();
+</script>
 </body>
 </html>
