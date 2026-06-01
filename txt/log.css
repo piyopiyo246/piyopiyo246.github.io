@@ -297,7 +297,7 @@ footer {
 
 /* ヒット数：入力欄の左に表示 */
 #page-search-count {
-	color: #e6a800;
+	color: #64bdcb;
 	font-size: 14px;
 	min-width: 48px;
 	text-align: right;
@@ -326,7 +326,8 @@ footer {
 }
 
 #page-search-input:focus {
-	border-color: #e6a800;
+	background: #fff;
+	border-color: #64bdcb;
 	box-shadow: 0 0 0 2px rgba(230, 168, 0, 0.25), inset 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 
@@ -346,9 +347,9 @@ footer {
 
 #page-search-prev:hover,
 #page-search-next:hover {
-	background: #e6a800;
+	background: #64bdcb;
 	color: #000;
-	border-color: #e6a800;
+	border-color: #64bdcb;
 }
 
 /* ハイライト */
@@ -360,7 +361,7 @@ footer {
 }
 
 .search-highlight.current {
-	background: #e6a800;
+	background: #64bdcb;
 	color: #000;
 	outline: 2px solid #fff;
 }
