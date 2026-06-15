@@ -2610,6 +2610,32 @@
 		a.model:visited {
 			color: #f2f2f2
 		}
+
+/* テキストクリック式アコーディオン（装飾なし・右側展開） */
+.line-accordion {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1200px;
+  margin: 4px auto;
+  cursor: pointer;
+}
+.line-accordion-label {
+	margin-left: 16px;
+	flex-shrink: 0;
+  font-weight: 700;
+  color: #666;
+}
+.line-accordion-content {
+  display: none;
+  flex-grow: 1;
+  margin-left: 16px;
+  font-weight: 400;
+  color: #222;
+}
+.line-accordion.active .line-accordion-content {
+  display: block;
+}
 	</style>
 
 	<script type="application/ld+json">
@@ -5845,10 +5871,9 @@
 				</div>
 			</div>
 
-			<span class="f4 m06">-------------------------------------------------------------------------------------------------------------------------------------</span>
-			<dl class="title-list title-row-narrow"><!-- 略記 -->
-				<dt class="title-category" title="Abkürzung">略記</dt>
-				<dd class="title-items-low">
+			<div class="line-accordion"><!-- 略記 -->
+				<span class="line-accordion-label" title="Abkürzung">略記</span>
+				<div class="line-accordion-content">
 					<span class="item-group" title="4matic">4mtc = 4マティック</span>
 					<span class="item-group">16v = <a href="https://goo.gl/oMI3bn" class="icon-link wiki" title="Wiki(J) 16valve"></a>16バルブ</span>
 					<span class="item-group">wgn = <a href="https://goo.gl/y2xNSo" class="icon-link wiki" title="Wiki(J) Waggon"></a>ワゴン</span>
@@ -5864,8 +5889,8 @@
 					<span class="item-group">ESP = <a href="https://goo.gl/ixJEF2" class="icon-link wiki" title="Wiki(J) Electronic Stability Program"></a>横滑り防止装置</span>
 					<span class="item-group" title="Radar Safety Package">RSP = レーダー・セーフティパッケージ</span>
 					<span class="item-group" title="燃費向上排出量削減技術 Blue Efficiency">BE = ブルー・エフィシェンシー</span>
-				</dd>
-			</dl>
+				</div>
+			</div>
 
 		</section>
 		<hr>
@@ -13495,11 +13520,10 @@
 					</div>
 				</div>
 			</div>
-			<span class="f4 m06">-------------------------------------------------------------------------------------------------------------------------------------</span>
 
-			<dl class="title-list title-row-narrow"><!-- 略記 -->
-				<dt class="title-category" title="Abkürzung">略記</dt>
-				<dd class="title-items-low">
+			<div class="line-accordion"><!-- 略記 -->
+				<span class="line-accordion-label" title="Abkürzung">略記</span>
+				<div class="line-accordion-content">
 					<span class="item-group">ml = <a href="https://goo.gl/g94RHs" title="Wiki(J) Multi link"></a>マルチリンク</span>
 					<span class="item-group">4l = <a href="pic/sus/4l_f_w205.jpg" class="icon-link camera" aria-label="Image: 4link"></a>4リンク</span>
 					<span class="item-group">3l = <a href="pic/sus/3l_f_w212.jpg" class="icon-link camera" aria-label="Image: 3link"></a>3リンク</span>
@@ -13519,9 +13543,9 @@
 					<span class="item-group">ia =<a href="https://goo.gl/azq5Um" class="icon-link camera" aria-label="Image: Integral arm"></a>インテグラルアーム (BMW)</span>
 					<span class="item-group">dl =<a href="pic/sus/delta.jpg" class="icon-link camera" aria-label="Image: Delta link"></a>デルタリンク（Volvo）</span>
 					<span class="item-group">xl = クロスビーム式半楕円板ばね(Honda)</span>
-				</dd>
-			</dl>
-			<span class="f4 m06">-------------------------------------------------------------------------------------------------------------------------------------</span>
+				</div>
+			</div>
+			<hr class="tin">
 
 			<div class="accordion" id="body-dimensions">
 				<button class="accordion-header min" aria-expanded="false" aria-controls="content-body-dimensions">
@@ -26524,6 +26548,11 @@
 			}
 		});
 	</script>
+<script>
+document.querySelectorAll('.line-accordion').forEach(acc => {
+  acc.addEventListener('click', () => acc.classList.toggle('active'));
+});
+</script>
 </body>
 
 </html>
