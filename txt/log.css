@@ -199,7 +199,8 @@ footer {
 
 #show-more-button {
 	cursor: pointer;
-	background-color: #999;
+	background-color: #888;
+	opacity: 1;
 		/* 青色系の背景色 */
 	color: #fff;
 	/* 白色系の文字色 */
@@ -297,9 +298,10 @@ footer {
 }
 
 #goto-main a:hover,
-#goto-galerie a:hover {
+#goto-galerie a:hover,
+#show-more-button:hover {
 	text-decoration: none;
-	background: #222;
+	background: #444;
 	/* ホバー時はサイトの基本色に */
 	opacity: 1;
 }
