@@ -30,21 +30,6 @@ li {
 	float: left;
 }
 
-.thread-index {
-	margin-left: 50px;
-}
-
-.thread-index2 {
-	margin-left: 10px;
-	display: inline-block;
-}
-
-.thread-index a,
-.thread-index2 a {
-	margin-left: 18px;
-	line-height: 1.5;
-}
-
 h1 {
 	margin: 60px 0 10px 36px;
 	font-size: 110%;
@@ -84,7 +69,41 @@ h2 {
 .lnk:hover {
 	color: #fff;
 }
+.thread-index ,
+.thread-index2{
+	margin-left: 50px;
+	display: flex;
+  flex-wrap: wrap; 
+  gap: 12px 12px;   }
 
+.thread-index2 {
+	margin-left: 10px;
+	display: inline-block;
+}
+
+.thread-index a,
+.thread-index2 a {
+	text-decoration: none;
+  padding: 4px 8px;
+  border: 1px solid #333333;
+  border-radius: 4px;
+  background-color: #ffffff;
+  
+  /* タイポグラフィ */
+  color: #333333;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  
+  /* アニメーションとカーソル */
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.thread-index a:hover,
+.thread-index2 a:hover {
+  background-color: #333333;
+  color: #ffffff;
+}
 p {
 	white-space: pre;
 	margin-left: 60px;
