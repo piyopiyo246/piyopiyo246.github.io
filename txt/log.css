@@ -3,7 +3,7 @@
 body {
 	font-family: 'MS UI Gothic', 'Hiragino Sans', sans-serif;
 	font-weight: 500;
-	background-color: #efefef;
+	/* background-color: #efefef; */
 	font-size: 22px;
 }
 
@@ -180,8 +180,8 @@ footer {
 
 #show-more-button {
 	cursor: pointer;
-	background-color: #444;
-	/* 青色系の背景色 */
+	background-color: #999;
+		/* 青色系の背景色 */
 	color: #fff;
 	/* 白色系の文字色 */
 	font-size: 0.8em;
@@ -195,7 +195,7 @@ footer {
 	/* 影 */
 	position: absolute;
 	/* 絶対配置 */
-	bottom: 0;
+	bottom: 70px;
 	/* 下端に配置 */
 	left: 50%;
 	/* 中央に配置 */
