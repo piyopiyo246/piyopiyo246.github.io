@@ -2611,31 +2611,34 @@
 			color: #f2f2f2
 		}
 
-/* テキストクリック式アコーディオン（装飾なし・右側展開） */
-.line-accordion {
-  display: flex;
-  align-items: flex-start;
-  width: 100%;
-  max-width: 1200px;
-  margin: 4px auto;
-  cursor: pointer;
-}
-.line-accordion-label {
-	margin-left: 16px;
-	flex-shrink: 0;
-  font-weight: 700;
-  color: #666;
-}
-.line-accordion-content {
-  display: none;
-  flex-grow: 1;
-  margin-left: 16px;
-  font-weight: 400;
-  color: #222;
-}
-.line-accordion.active .line-accordion-content {
-  display: block;
-}
+		/* テキストクリック式アコーディオン（装飾なし・右側展開） */
+		.line-accordion {
+			display: flex;
+			align-items: flex-start;
+			width: 100%;
+			max-width: 1200px;
+			margin: 4px auto;
+			cursor: pointer;
+		}
+
+		.line-accordion-label {
+			margin-left: 16px;
+			flex-shrink: 0;
+			font-weight: 700;
+			color: #666;
+		}
+
+		.line-accordion-content {
+			display: none;
+			flex-grow: 1;
+			margin-left: 16px;
+			font-weight: 400;
+			color: #222;
+		}
+
+		.line-accordion.active .line-accordion-content {
+			display: block;
+		}
 	</style>
 
 	<script type="application/ld+json">
@@ -5874,21 +5877,21 @@
 			<div class="line-accordion"><!-- 略記 -->
 				<span class="line-accordion-label" title="Abkürzung">略記</span>
 				<div class="line-accordion-content">
-					<span class="item-group" title="4matic">4mtc = 4マティック</span>
-					<span class="item-group">16v = <a href="https://goo.gl/oMI3bn" class="icon-link wiki" title="Wiki(J) 16valve"></a>16バルブ</span>
-					<span class="item-group">wgn = <a href="https://goo.gl/y2xNSo" class="icon-link wiki" title="Wiki(J) Waggon"></a>ワゴン</span>
-					<span class="item-group">cpe = <a href="https://goo.gl/06OkCR" class="icon-link wiki" title="Wiki(J) Coupe"></a>クーペ</span>
-					<span class="item-group">cab = <a href="https://goo.gl/mDLjfS" class="icon-link wiki" title="Wiki(J) Cabrioret"></a>カブリオレ</span>
-					<span class="item-group">sl = <span title="sportline">スポーツライン</span></span>
-					<span class="item-group">sc = <a href="pic/ja_mb_img_clc.html" title="Wiki(J) Sport Coupe">スポーツクーペ</a></span>
-					<span class="item-group">evo = <a href="https://goo.gl/OnhYw0" class="icon-link wiki" title="Wiki(J) Evolution"></a>エボリューション</span>
-					<span class="item-group">di = <a href="https://goo.gl/CmTYI8" class="icon-link wiki" title="Wiki(J) Direct Injection"></a>直噴エンジン</span>
-					<span class="item-group">SB = <a href="https://x.gd/fCDEy" class="icon-link wiki" title="Wiki(J) Shooting Brake"></a>シューティング・ブレーク</span>
-					<span class="item-group">phb = <a href="https://goo.gl/vGDaTF" class="icon-link wiki" title="Wiki(J) Plug-in HYBRID"></a>プラグイン・ハイブリッド</span>
-					<span class="item-group" title="Blue TEC (Diesel：マフラー内排気後処理)">BT = ブルーテック</span>
-					<span class="item-group">ESP = <a href="https://goo.gl/ixJEF2" class="icon-link wiki" title="Wiki(J) Electronic Stability Program"></a>横滑り防止装置</span>
+					<span class="item-group" title="4MATIC"><a href="https://ja.wikipedia.org/wiki/%E3%83%9E%E3%82%AC%E3%83%8A%E3%83%BB%E3%82%B7%E3%83%A5%E3%82%BF%E3%82%A4%E3%82%A2%E3%83%BC" class="icon-link wiki" title="Wiki(J) 4MATIC（マグナ・シュタイア）"></a>4mtc = 4マティック</span>
+					<span class="item-group"><a href="https://ja.wikipedia.org/wiki/%E3%83%9E%E3%83%AB%E3%83%81%E3%83%90%E3%83%AB%E3%83%96%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%B3" class="icon-link wiki" title="Wiki(J) Multi-valve engine"></a>16v = 16バルブ</span>
+					<span class="item-group"><a href="https://ja.wikipedia.org/wiki/%E3%82%B9%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%AF%E3%82%B4%E3%83%B3" class="icon-link wiki" title="Wiki(J) Station wagon"></a>wgn = ワゴン</span>
+					<span class="item-group"><a href="https://ja.wikipedia.org/wiki/%E3%82%AF%E3%83%BC%E3%83%9A" class="icon-link wiki" title="Wiki(J) Coupe"></a>cpe = クーペ</span>
+					<span class="item-group"><a href="https://ja.wikipedia.org/wiki/%E3%82%AB%E3%83%96%E3%83%AA%E3%82%AA%E3%83%AC" class="icon-link wiki" title="Wiki(J) Cabriolet"></a>cab = カブリオレ</span>
+					<span class="item-group">sl = <span title="Sportline">スポーツライン</span></span>
+					<span class="item-group">sc = <a href="pic/ja_mb_img_clc.html" title="メルセデス・ベンツ Cクーペ・CLC ギャラリー">スポーツクーペ</a></span>
+					<span class="item-group"><a href="https://ja.wikipedia.org/wiki/%E3%82%A4%E3%83%9C%E3%83%AB%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3" class="icon-link wiki" title="Wiki(J) Evolution"></a>evo = エボリューション</span>
+					<span class="item-group"><a href="https://ja.wikipedia.org/wiki/%E7%9B%B4%E5%99%B4%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%B3" class="icon-link wiki" title="Wiki(J) Direct Injection"></a>di = 直噴エンジン</span>
+					<span class="item-group"><a href="https://ja.wikipedia.org/wiki/%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%83%96%E3%83%AC%E3%83%BC%E3%82%AF" class="icon-link wiki" title="Wiki(J) Shooting Brake"></a>SB = シューティング・ブレーク</span>
+					<span class="item-group"><a href="https://ja.wikipedia.org/wiki/%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3%E3%83%8F%E3%82%A4%E3%83%96%E3%83%AA%E3%83%83%E3%83%89%E3%82%AB%E3%83%BC" class="icon-link wiki" title="Wiki(J) Plug-in Hybrid"></a>PHEV = プラグイン・ハイブリッド</span>
+					<span class="item-group" title="BlueTEC（ディーゼル：マフラー内排気後処理）">BT = ブルーテック</span>
+					<span class="item-group"><a href="https://ja.wikipedia.org/wiki/%E6%A8%AA%E6%BB%91%E3%82%8A%E9%98%B2%E6%AD%A2%E8%A3%85%E7%BD%AE" class="icon-link wiki" title="Wiki(J) Electronic Stability Program"></a>ESP = 横滑り防止装置</span>
 					<span class="item-group" title="Radar Safety Package">RSP = レーダー・セーフティパッケージ</span>
-					<span class="item-group" title="燃費向上排出量削減技術 Blue Efficiency">BE = ブルー・エフィシェンシー</span>
+					<span class="item-group" title="BlueEFFICIENCY（燃費向上・排出量削減技術）">BE = ブルー・エフィシェンシー</span>
 				</div>
 			</div>
 
@@ -13524,25 +13527,25 @@
 			<div class="line-accordion"><!-- 略記 -->
 				<span class="line-accordion-label" title="Abkürzung">略記</span>
 				<div class="line-accordion-content">
-					<span class="item-group">ml = <a href="https://goo.gl/g94RHs" title="Wiki(J) Multi link"></a>マルチリンク</span>
-					<span class="item-group">4l = <a href="pic/sus/4l_f_w205.jpg" class="icon-link camera" aria-label="Image: 4link"></a>4リンク</span>
-					<span class="item-group">3l = <a href="pic/sus/3l_f_w212.jpg" class="icon-link camera" aria-label="Image: 3link"></a>3リンク</span>
-					<span class="item-group">sa = <a href="https://goo.gl/ZzLHls" title="Wiki(J) Swing axle"></a>スイングアクスル</span>
-					<span class="item-group">ta = <a href="https://goo.gl/rLQKkO" title="Wiki(J) Trailing arm"></a>トレーリングアーム</span>
-					<span class="item-group">lr = <a href="https://goo.gl/PV7njW" title="Wiki(J) Leaf rigid"></a>リーフ・リジッド</span>
-					<span class="item-group">ra = <a href="https://goo.gl/qoZJ6t" title="Wiki(J) Rigid axle"></a>リジッドアクスル</span>
-					<span class="item-group">ba = <a href="https://goo.gl/vvNUF3" title="Wiki(J) Torsion beam"></a>トーションビーム</span>
-					<span class="item-group">dd = <a href="https://goo.gl/SsXedf" title="Wiki(J) De dion"></a>ド・ディオン</span>
-					<span class="item-group">pr = <a href="https://en.wikipedia.org/wiki/Panhard_rod" title="Wiki(J) Panhard rod"></a>パナールロッド</span>
-					<span class="item-group">rr = <a href="https://en.wikipedia.org/wiki/Radius_rod" title="Wiki(J) Radius rod"></a>ラジアスロッド</span>
-					<span class="item-group">dw = <a href="https://goo.gl/eFMrvO" title="Wiki(J) Double wishbone"></a>ダブルウィッシュボーン</span>
-					<span class="item-group">st =<a href="https://goo.gl/XCvzo1" title="Wiki(J) Semi trailing arm"></a>セミトレーリングアーム</span>
-					<span class="item-group">ms =<a href="https://goo.gl/mA1cn1" title="Wiki(J) Macpherson strut"></a>マクファーソン・ストラット</span>
-					<span class="item-group">sp =<a href="pic/sus/spsa_r_w169.jpg" class="icon-link camera" aria-label="Image: Spherical parabolic"></a>スフェリカル・パラボリックスプリングアクスル</span>
-					<span class="item-group">ca =<a href="https://goo.gl/56ifst" title="Wiki(J) Central arm"></a>セントラルアーム</span>
-					<span class="item-group">ia =<a href="https://goo.gl/azq5Um" class="icon-link camera" aria-label="Image: Integral arm"></a>インテグラルアーム (BMW)</span>
-					<span class="item-group">dl =<a href="pic/sus/delta.jpg" class="icon-link camera" aria-label="Image: Delta link"></a>デルタリンク（Volvo）</span>
-					<span class="item-group">xl = クロスビーム式半楕円板ばね(Honda)</span>
+					<span class="item-group"><a href="https://ja.wikipedia.org/wiki/%E3%83%9E%E3%83%AB%E3%83%81%E3%83%AA%E3%83%B3%E3%82%AF%E5%BC%8F%E3%82%B5%E3%82%B9%E3%83%9A%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%B3" title="Wiki(J) Multi-link suspension"></a>ml = マルチリンク</span>
+					<span class="item-group"><a href="pic/sus/4l_f_w205.jpg" class="icon-link camera" aria-label="Image: 4link"></a>4l = 4リンク</span>
+					<span class="item-group"><a href="pic/sus/3l_f_w212.jpg" class="icon-link camera" aria-label="Image: 3link"></a>3l = 3リンク</span>
+					<span class="item-group"><a href="https://ja.wikipedia.org/wiki/%E3%82%B9%E3%82%A4%E3%83%B3%E3%82%B0%E3%82%A2%E3%82%AF%E3%82%B9%E3%83%AB%E5%BC%8F%E3%82%B5%E3%82%B9%E3%83%9A%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%B3" title="Wiki(J) Swing axle"></a>sa = スイングアクスル</span>
+					<span class="item-group"><a href="https://ja.wikipedia.org/wiki/%E3%83%88%E3%83%AC%E3%83%BC%E3%83%AA%E3%83%B3%E3%82%B0%E3%82%A2%E3%83%BC%E3%83%A0%E5%BC%8F%E3%82%B5%E3%82%B9%E3%83%9A%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%B3" title="Wiki(J) Trailing arm"></a>ta = トレーリングアーム</span>
+					<span class="item-group"><a href="https://ja.wikipedia.org/wiki/%E3%83%AA%E3%83%B3%E3%82%AF%E5%BC%8F%E3%82%B5%E3%82%B9%E3%83%9A%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%B3" title="Wiki(J) Leaf rigid / link suspension"></a>lr = リーフ・リジッド</span>
+					<span class="item-group"><a href="https://ja.wikipedia.org/wiki/%E8%BB%8A%E8%BB%B8%E6%87%B8%E6%9E%B6" title="Wiki(J) Rigid axle"></a>ra = リジッドアクスル</span>
+					<span class="item-group"><a href="https://ja.wikipedia.org/wiki/%E3%83%88%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%93%E3%83%BC%E3%83%A0%E5%BC%8F%E3%82%B5%E3%82%B9%E3%83%9A%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%B3" title="Wiki(J) Torsion beam"></a>ba = トーションビーム</span>
+					<span class="item-group"><a href="https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%BB%E3%83%87%E3%82%A3%E3%82%AA%E3%83%B3%E3%82%A2%E3%82%AF%E3%82%B9%E3%83%AB" title="Wiki(J) De Dion axle"></a>dd = ド・ディオン</span>
+					<span class="item-group"><a href="https://en.wikipedia.org/wiki/Panhard_rod" title="Wiki(En) Panhard rod"></a>pr = パナールロッド</span>
+					<span class="item-group"><a href="https://en.wikipedia.org/wiki/Radius_rod" title="Wiki(En) Radius rod"></a>rr = ラジアスロッド</span>
+					<span class="item-group"><a href="https://ja.wikipedia.org/wiki/%E3%83%80%E3%83%96%E3%83%AB%E3%82%A6%E3%82%A3%E3%83%83%E3%82%B7%E3%83%A5%E3%83%9C%E3%83%BC%E3%83%B3%E5%BC%8F%E3%82%B5%E3%82%B9%E3%83%9A%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%B3" title="Wiki(J) Double wishbone"></a>dw = ダブルウィッシュボーン</span>
+					<span class="item-group"><a href="https://ja.wikipedia.org/wiki/%E3%82%BB%E3%83%9F%E3%83%88%E3%83%AC%E3%83%BC%E3%83%AA%E3%83%B3%E3%82%B0%E3%82%A2%E3%83%BC%E3%83%A0%E5%BC%8F%E3%82%B5%E3%82%B9%E3%83%9A%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%B3" title="Wiki(J) Semi trailing arm"></a>st = セミトレーリングアーム</span>
+					<span class="item-group"><a href="https://ja.wikipedia.org/wiki/%E3%82%B9%E3%83%88%E3%83%A9%E3%83%83%E3%83%88%E5%BC%8F%E3%82%B5%E3%82%B9%E3%83%9A%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%B3" title="Wiki(J) MacPherson strut"></a>ms = マクファーソン・ストラット</span>
+					<span class="item-group"><a href="pic/sus/spsa_r_w169.jpg" class="icon-link camera" aria-label="Image: Spherical parabolic"></a>sp = スフェリカル・パラボリックスプリングアクスル</span>
+					<span class="item-group"><a href="https://ja.wikipedia.org/wiki/%E3%82%BB%E3%83%B3%E3%83%88%E3%83%A9%E3%83%AB%E3%82%A2%E3%83%BC%E3%83%A0" title="Wiki(J) Central arm (BMW)"></a>ca = セントラルアーム</span>
+					<span class="item-group"><a href="pic/sus/integral_arm.jpg" class="icon-link camera" aria-label="Image: Integral arm"></a>ia = インテグラルアーム（BMW）</span>
+					<span class="item-group"><a href="pic/sus/delta.jpg" class="icon-link camera" aria-label="Image: Delta link"></a>dl = デルタリンク（Volvo）</span>
+					<span class="item-group">xl = クロスビーム式半楕円板ばね（Honda）</span>
 				</div>
 			</div>
 			<hr class="tin">
@@ -26548,11 +26551,11 @@
 			}
 		});
 	</script>
-<script>
-document.querySelectorAll('.line-accordion').forEach(acc => {
-  acc.addEventListener('click', () => acc.classList.toggle('active'));
-});
-</script>
+	<script>
+		document.querySelectorAll('.line-accordion').forEach(acc => {
+			acc.addEventListener('click', () => acc.classList.toggle('active'));
+		});
+	</script>
 </body>
 
 </html>
