@@ -1,0 +1,63 @@
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		$(function () {
+			$('.inner').hide();
+
+			$('.bf2').click(function () {
+				$('.bf2').not(this).next('.inner').hide('fast');
+				$(this).next().slideToggle('fast');
+			});
+
+			$('.ac2').hover(
+				function () {
+					$('.bf2', this).addClass('hover');
+				},
+				function () {
+					$('.bf2', this).removeClass('hover');
+				}
+			);
+		});
+	</script>
+</head>
+
+<body>
+	<div style="text-align:left; width:220px; height:40px;">
+
+		<!--HOME-->
+		<h1>LOGO</h1>
+
+		<!--inner1-->
+		<div class="ac2">
+			<p class="bf2">メニュー1</p>
+			<div class="inner">
+				メニュー1A<br>
+				メニュー1B
+			</div>
+		</div>
+
+		<!--inner2-->
+		<div class="ac2">
+			<p class="bf2">メニュー2</p>
+			<div class="inner">
+				メニュー2A<br>
+				メニュー2B
+			</div>
+		</div>
+
+		<!--inner3-->
+		<div class="ac2">
+			<p class="bf2">メニュー3</p>
+			<div class="inner">
+				メニュー3A<br>
+				メニュー3B
+			</div>
+		</div>
+
+	</div>
+</body>
+
+</html>
