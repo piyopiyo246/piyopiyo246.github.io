@@ -185,64 +185,50 @@ footer {
 
 /* fade-out contents */
 .long-text-container {
-	position: relative;
-	/* fade-outの基準位置にするため */
+	position: relative;	/* fade-outの基準位置にするため */
 }
 
 .short-text {
-	height: 1700px;
-	/* 初期表示する高さ */
+	height: 1700px;	/* 初期表示する高さ */
 	overflow: hidden;
-	position: relative;
-	/* グラデーションを重ねるため */
+	position: relative;	/* グラデーションを重ねるため */
 }
 
 #show-more-button {
 	cursor: pointer;
 	background-color: #888;
 	opacity: 1;
-		/* 青色系の背景色 */
 	color: #fff;
-	/* 白色系の文字色 */
 	font-size: 0.8em;
-	/* 少し大きめの文字サイズ */
 	padding: 10px 20px;
-	/* 適度な余白 */
 	border: none;
 	border-radius: 5px;
-	/* 角丸 */
 	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-	/* 影 */
 	position: absolute;
-	/* 絶対配置 */
 	bottom: 70px;
-	/* 下端に配置 */
 	left: 50%;
-	/* 中央に配置 */
-	transform: translateX(-50%);
-	/* 中央揃え */
+	transform: translateX(-50%);	/* 中央揃え */
+	opacity: 0;
+	pointer-events: none;
+	cursor: default;
 }
 
 .fade-out {
 	position: absolute;
-	bottom: 0;
-	/* ボタンの高さ分、上方向にずらす */
+	bottom: 0;	/* ボタンの高さ分、上方向にずらす */
 	left: 0;
 	width: 100%;
-	height: 180px;
-	/* フェードアウトの高さ */
+	height: 180px;	/* フェードアウトの高さ */
 	background: linear-gradient(to bottom, rgba(255, 255, 255, 0), white);
 	pointer-events: none;
 }
 
 .full-text {
-	display: none;
-	/* 初期状態では非表示 */
+	display: none;	/* 初期状態では非表示 */
 }
 
 .full-text.visible {
-	display: block;
-	/* JavaScriptで表示切り替え */
+	display: block;	/* JavaScriptで表示切り替え */
 }
 
 /* .hidden {
@@ -265,8 +251,7 @@ footer {
 #goto-galerie {
 	all: unset;
 	position: fixed;
-	right: 18px;
-	/* 画面右端に配置 */
+	right: 18px;	/* 画面右端に配置 */
 	font-size: 83%;
 	opacity: .6;
 	z-index: 9999;
@@ -287,22 +272,19 @@ footer {
 	/* 控えめなグレー */
 	color: #fff;
 	text-decoration: none;
-	width: 120px;
-	/* 文字を入れるため少し幅を確保 */
+	width: 120px;	/* 文字を入れるため少し幅を確保 */
 	padding: 7px;
 	text-align: center;
 	display: block;
 	border-radius: 5px;
-	font-weight: 800;
-	/* サイト全体の統一設定に合わせる */
+	font-weight: 800;	/* サイト全体の統一設定に合わせる */
 }
 
 #goto-main a:hover,
 #goto-galerie a:hover,
 #show-more-button:hover {
 	text-decoration: none;
-	background: #444;
-	/* ホバー時はサイトの基本色に */
+	background: #444;	/* ホバー時はサイトの基本色に */
 	opacity: 1;
 }
 
