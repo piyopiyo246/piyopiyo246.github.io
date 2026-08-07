@@ -47,6 +47,7 @@
 .box80,
 .box80a,
 .box81,
+.box86,
 .box101
 { float: left }
 
@@ -64,6 +65,7 @@
 .box80 { width: 800px }
 .box80a { width: 804px }
 .box81 { width: 810px }
+.box86 { width: 860px }
 .box101 { width: 1010px }
 
 .case-u {
