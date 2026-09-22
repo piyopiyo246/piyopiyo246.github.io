@@ -34,7 +34,11 @@
 .lh3 { line-height: 2 }
 
 /* モバイルや改行したい幅の時だけブロック化して改行させる */
-.fl-w0 span {
+.fl-w span,
+.fl-w0 span,
+.fl-w2 span,
+.fl-w2a span,
+.fl-w3 span {
 	display: block; /* または display: inline-block; */
 }
 
