@@ -33,6 +33,11 @@
 .fl-w4 { font-size: 200% }
 .lh3 { line-height: 2 }
 
+/* モバイルや改行したい幅の時だけブロック化して改行させる */
+.fl-w0 span {
+	display: block; /* または display: inline-block; */
+}
+
 .box49a,
 .box51,
 .box60,

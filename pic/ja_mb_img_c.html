@@ -53,6 +53,32 @@
 	<link rel="stylesheet" href="../style.min.css">
 	<link rel="stylesheet" href="../style_for_p.min.css">
 
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "BreadcrumbList",
+		"itemListElement": [
+			{
+				"@type": "ListItem",
+				"position": 1,
+				"name": "ホーム",
+				"item": "https://piyopiyo246.github.io/c_klasse.html"
+			},
+			{
+				"@type": "ListItem",
+				"position": 2,
+				"name": "Mercedes-Benz Pkw GALERIE",
+				"item": "https://piyopiyo246.github.io/c_klasse.html#galerie"
+			},
+			{
+				"@type": "ListItem",
+				"position": 3,
+				"name": "190 / C クラス",
+				"item": "https://piyopiyo246.github.io/pic/ja_mb_img_c.html"
+			}
+		]
+	}
+	</script>
 </head>
 
 <body>
@@ -72,29 +98,12 @@
 	</noscript>
 
 	<header class="contents">
-		<nav class="center t0c">
-			<ul class="f" itemscope itemtype="https://schema.org/BreadcrumbList">
-				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="f m01">
-					<a itemprop="item" href="https://piyopiyo246.github.io/c_klasse.html">
-						<span itemprop="name">ホーム</span>
-					</a>
-					<meta itemprop="position" content="1">
-				</li>
-				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="f bf4">
-					<a itemprop="item" href="https://piyopiyo246.github.io/c_klasse.html#galerie">
-						<span itemprop="name">Mercedes-Benz Pkw GALERIE</span>
-					</a>
-					<meta itemprop="position" content="2">
-				</li>
-				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-					<a itemprop="item" href="https://piyopiyo246.github.io/pic/ja_mb_img_c.html">
-						<span itemprop="name" class="sr-only">190 / C クラス</span>
-					</a>
-					<meta itemprop="position" content="3">
-				</li>
+		<nav class="center t0c" aria-label="パンくずリスト">
+			<ul>
+				<li class="f m01"><a href="https://piyopiyo246.github.io/c_klasse.html">ホーム</a></li>
+				<li class="f bf4"><a href="https://piyopiyo246.github.io/c_klasse.html#galerie">Mercedes-Benz Pkw GALERIE</a></li>
+				<li class="f bf4"><span>190 / C クラス</span></li>
 			</ul>
-
-			<h1 class="b bf4">190 / C クラス</h1>
 			<div style="display: flex; justify-content: space-between; width: 1210px;">
 				<dl class="m01">
 					<dt class="s02 af0">Series</dt>
@@ -148,10 +157,10 @@
 			<hr>
 			<div class="mid style-w t1">
 				<div class="box54 t1">
-					<p class="fl-w0">
-						190 /<br>
-						C-CLASS
-					</p>
+					<h1 class="fl-w0">
+						<span>190 /</span>
+						<span>C-CLASS</span>
+					</h1>
 				</div>
 				<a href="#w201" title="190E W201"> <img fetchpriority="high" src="thumb/c/201.webp" alt="201" width="160" height="100"></a>
 				<a href="#w202" title="第１世代 Cクラス W202"><img fetchpriority="high" src="thumb/c/202.webp" alt="202" width="160" height="100"></a>
