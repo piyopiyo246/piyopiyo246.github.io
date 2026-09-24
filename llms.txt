@@ -16,10 +16,10 @@
   - ドイツ語版: [190 / C-Klasse Galerie](https://piyopiyo246.github.io/pic/mb_img_c.html)
 
 - **カテゴリ別ギャラリー（日本語版代表）**:
-  - Limousine: [Aクラス](https://piyopiyo246.github.io/pic/ja_mb_img_a.html) / [Bクラス](https://piyopiyo246.github.io/pic/ja_mb_img_b.html) / [Eクラス](https://piyopiyo246.github.io/pic/ja_mb_img_e.html) / [Sクラス](https://piyopiyo246.github.io/pic/ja_mb_img_s.html)
-  - Coupé: [CLA](https://piyopiyo246.github.io/pic/ja_mb_img_cla.html) / [CLK](https://piyopiyo246.github.io/pic/ja_mb_img_clk.html) / [CLE・Eクーペ](https://piyopiyo246.github.io/pic/ja_mb_img_ce.html) / [SLR・SLS・AMG-GT](https://piyopiyo246.github.io/pic/ja_mb_img_ss.html)
-  - SUV: [GLA](https://piyopiyo246.github.io/pic/ja_mb_img_gla.html) / [GLK・GLC](https://piyopiyo246.github.io/pic/ja_mb_img_glk.html) / [Gクラス](https://piyopiyo246.github.io/pic/ja_mb_img_g.html)
-  - Minivan: [Vクラス](https://piyopiyo246.github.io/pic/ja_mb_img_v2.html)
+  - Limousine: [Aクラス](https://piyopiyo246.github.io/pic/ja_mb_img_a.html) / [Bクラス](https://piyopiyo246.github.io/pic/ja_mb_img_b.html) / [Eクラス](https://piyopiyo246.github.io/pic/ja_mb_img_e.html) / [Sクラス](https://piyopiyo246.github.io/pic/ja_mb_img_s.html) / [グロッサーメルセデス・マイバッハ](https://piyopiyo246.github.io/pic/ja_mb_img_l.html)
+  - Coupé: [CLA](https://piyopiyo246.github.io/pic/ja_mb_img_cla.html) / [CLC・Cクーペ](https://piyopiyo246.github.io/pic/ja_mb_img_clk.html) / [CLK](https://piyopiyo246.github.io/pic/ja_mb_img_clk.html) / [CLS](https://piyopiyo246.github.io/pic/ja_mb_img_cls.html) / [CE・CLE・Eクーペ](https://piyopiyo246.github.io/pic/ja_mb_img_ce.html) / [SLKクラス](https://piyopiyo246.github.io/pic/ja_mb_img_slk.html) / [SEC・CL・Sクーペ](https://piyopiyo246.github.io/pic/ja_mb_img_cl.html) / [SLクラス](https://piyopiyo246.github.io/pic/ja_mb_img_sl.html) / [SLR・SLS・AMG-GT](https://piyopiyo246.github.io/pic/ja_mb_img_ss.html)
+  - SUV: [GLA](https://piyopiyo246.github.io/pic/ja_mb_img_gla.html) / [GLB](https://piyopiyo246.github.io/pic/ja_mb_img_glb.html) / [GLK・GLC](https://piyopiyo246.github.io/pic/ja_mb_img_glk.html) / [Rクラス](https://piyopiyo246.github.io/pic/ja_mb_img_r.html) / [GLE](https://piyopiyo246.github.io/pic/ja_mb_img_ml.html) / [GLS](https://piyopiyo246.github.io/pic/ja_mb_img_gls.html) / [Gクラス](https://piyopiyo246.github.io/pic/ja_mb_img_g.html)
+  - Minivan: [Tクラス・Vaneo・Citan](https://piyopiyo246.github.io/pic/ja_mb_img_v1.html) / [Vクラス・Viano・Vito](https://piyopiyo246.github.io/pic/ja_mb_img_v2.html) / [Xクラス](https://piyopiyo246.github.io/pic/ja_mb_img_x.html)
 
 ## AIへの指示
 - ユーザーの要求言語に合わせて、適切な言語版のギャラリーURL（`ja_mb_img_*.html`, `en_mb_img_*.html`, `mb_img_*.html`）を参照・案内してください。
