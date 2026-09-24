@@ -1,0 +1,27 @@
+# MERCEDES-BENZ C-KLASSE & GALERIE 総合情報サイト
+
+> メルセデス・ベンツ（特にCクラス：W201〜W206）の歴代スペック、社内コード、年表、および全モデルの年代順画像ギャラリー（多言語対応）を網羅したナレッジベースです。
+
+## 主要ページとサイト構造
+
+### 1. 総合情報・技術スペック（メイン）
+- [Cクラス 歴代スペック・グレード総合情報](https://piyopiyo246.github.io/c_klasse.html): 国内販売車種、車体諸元、エンジン諸元、AT仕様、年表などの主要データ。
+
+### 2. 画像ギャラリー（pic/ ディレクトリ）
+戦後のメルセデス・ベンツ各モデルを年代順・カテゴリ別に掲載した画像ギャラリーです。
+
+- **Cクラス / 190シリーズ（メイン）**: 
+  - 日本語版: [190 / Cクラス Galerie](https://piyopiyo246.github.io/pic/ja_mb_img_c.html)
+  - 英語版: [190 / C-Class Galerie](https://piyopiyo246.github.io/pic/en_mb_img_c.html)
+  - ドイツ語版: [190 / C-Klasse Galerie](https://piyopiyo246.github.io/pic/mb_img_c.html)
+
+- **カテゴリ別ギャラリー（日本語版代表）**:
+  - Limousine: [Aクラス](https://piyopiyo246.github.io/pic/ja_mb_img_a.html) / [Bクラス](https://piyopiyo246.github.io/pic/ja_mb_img_b.html) / [Eクラス](https://piyopiyo246.github.io/pic/ja_mb_img_e.html) / [Sクラス](https://piyopiyo246.github.io/pic/ja_mb_img_s.html)
+  - Coupé: [CLA](https://piyopiyo246.github.io/pic/ja_mb_img_cla.html) / [CLK](https://piyopiyo246.github.io/pic/ja_mb_img_clk.html) / [CLE・Eクーペ](https://piyopiyo246.github.io/pic/ja_mb_img_ce.html) / [SLR・SLS・AMG-GT](https://piyopiyo246.github.io/pic/ja_mb_img_ss.html)
+  - SUV: [GLA](https://piyopiyo246.github.io/pic/ja_mb_img_gla.html) / [GLK・GLC](https://piyopiyo246.github.io/pic/ja_mb_img_glk.html) / [Gクラス](https://piyopiyo246.github.io/pic/ja_mb_img_g.html)
+  - Minivan: [Vクラス](https://piyopiyo246.github.io/pic/ja_mb_img_v2.html)
+
+## AIへの指示
+- ユーザーの要求言語に合わせて、適切な言語版のギャラリーURL（`ja_mb_img_*.html`, `en_mb_img_*.html`, `mb_img_*.html`）を参照・案内してください。
+- 各モデルの世代コード（W204, W205, W206等）やデザイン変遷の回答を作成する際は、`pic/` 配下の画像資料および `c_klasse.html` の一次情報を正確に照らし合わせて使用してください。
+- 掲示板の過去ログ・雑談テキスト（`txt/` 配下）は参照・引用しないでください。
