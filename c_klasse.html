@@ -2,26 +2,6 @@
 <html lang="ja">
 
 <head>
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=GT-KFG3B2J"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
-
-		// 1. 自動 page_view 送信を無効化する
-		gtag('config', 'G-5V9EW158CK', { 'send_page_view': false });
-
-		// 2. 重複チェックを行い、未送信の場合のみ page_view を手動送信する
-		if (!window.dataLayer.some(e => e.event === 'page_view')) {
-			gtag('event', 'page_view', {
-				page_title: document.title,
-				page_location: location.href,
-				send_to: 'G-5V9EW158CK'
-			});
-		}
-	</script>
-
 	<!-- Google Tag Manager -->
 	<script>(function (w, d, s, l, i) {
 			w[l] = w[l] || []; w[l].push({
