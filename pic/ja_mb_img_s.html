@@ -823,33 +823,7 @@
 		<a id="close-all-accordions-2" class="vmenu_all_action" title="全てのアコーディオンを閉じる"><span class="sr-only">全てのアコーディオンを閉じる</span>&#9654;</a>
 	</p>
 
-	<!-- </body>直前に追加 -->
-	<script>
-		// 同意状態の強制初期化
-		window.dataLayer = window.dataLayer || [];
-		function initializeConsent() {
-			const defaultConsent = {
-				analytics_storage: 'denied',
-				ad_storage: 'denied',
-				functionality_storage: 'granted',
-				region: ['JP']
-			};
 
-			// GTM用設定
-			window.dataLayer.push({
-				'gtm.consent': defaultConsent,
-				'gtm.uniqueEventId': Date.now()
-			});
-
-			// GA4用設定
-			if (window.gtag) {
-				gtag('consent', 'default', defaultConsent);
-			}
-		}
-
-		// DOM読み込み完了後＆GTM初期化前に実行
-		document.addEventListener('DOMContentLoaded', initializeConsent);
-	</script>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
