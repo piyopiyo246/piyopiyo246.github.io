@@ -55,41 +55,6 @@
 	<link rel="stylesheet" href="../style_for_p.min.css">
 
 
-					// データレイヤー記録（エラーログ付き）
-					window.dataLayer.push({
-						event: 'CookieConsentGranted',
-						consentLevel: 'full',
-						debug_timestamp: new Date().toISOString()
-					});
-
-				} catch (mainError) {
-					console.error('Consent Flow Error:', mainError);
-					// 緊急フォールバック
-					this.fallbackGA4();
-				}
-			},
-
-			// 強化したリセット関数 
-			resetConsent: () => {
-				try {
-					localStorage.removeItem('cookie_consent');
-					if (window.gtag) {
-						gtag('consent', 'default', {
-							analytics_storage: 'denied',
-							ad_storage: 'denied',
-							wait_for_update: 1000
-						});
-						gtag('event', 'consent_reset');
-					}
-					window.dataLayer.push({
-						event: 'CookieConsentReset',
-						reset_time: Date.now()
-					});
-				} catch (e) {
-					console.error('Consent Reset Failed:', e);
-				}
-			},
-
 			//  フォールバック計測 
 			fallbackGA4: () => {
 				console.group('[Fallback GA4]');
