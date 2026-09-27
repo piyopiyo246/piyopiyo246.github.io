@@ -776,28 +776,6 @@
 				content.classList.remove('active');
 			});
 		}
-
-		// ボタンにイベントリスナーを追加
-		document.addEventListener('DOMContentLoaded', function () {
-			// 既存のアコーディオンコード...
-
-			// 全開/全閉ボタン
-			const openAllBtn = document.getElementById('open-all-accordions');
-			const closeAllBtn = document.getElementById('close-all-accordions');
-			const closeAllBtn2 = document.getElementById('close-all-accordions-2'); // 追加ボタン
-
-			if (openAllBtn) {
-				openAllBtn.addEventListener('click', openAllAccordions);
-			}
-
-			if (closeAllBtn) {
-				closeAllBtn.addEventListener('click', closeAllAccordions);
-			}
-
-			if (closeAllBtn2) {
-				closeAllBtn2.addEventListener('click', closeAllAccordions);
-			}
-		});
 	</script>
 </body>
 
