@@ -474,55 +474,6 @@
 		<a id="close-all-accordions-2" class="vmenu_all_action" title="Alle Akkordeons schließen"><span class="sr-only">Alle Akkordeons schließen</span>&#9654;</a>
 	</p>
 
-	<!--  緊急対応スクリプト -->
-	<noscript>
-		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MMJ4PJ3&gtm_auth=XXXXXX&gtm_preview=env-1" height="0" width="0" style="display:none;visibility:hidden">
-		</iframe>
-	</noscript>
-	<script>
-		window.addEventListener('load', function () {
-			setTimeout(function () {
-				if (!window.dataLayer?.some(e => e.event === 'page_view')) {
-					navigator.sendBeacon('https://www.google-analytics.com/g/collect',
-						new URLSearchParams({
-							v: '2',
-							tid: 'G-5V9EW158CK',
-							en: 'page_view',
-							dl: window.location.href,
-							sid: Math.floor(Date.now() / 1000) // セッションID追加
-						}));
-				}
-			}, 3000);
-		});
-	</script>
-
-	<!-- </body>直前に追加 -->
-	<script>
-		// 同意状態の強制初期化
-		window.dataLayer = window.dataLayer || [];
-		function initializeConsent() {
-			const defaultConsent = {
-				analytics_storage: 'denied',
-				ad_storage: 'denied',
-				functionality_storage: 'granted',
-				region: ['DE', 'AT', 'CH', 'CZ']
-			};
-
-			// GTM用設定
-			window.dataLayer.push({
-				'gtm.consent': defaultConsent,
-				'gtm.uniqueEventId': Date.now()
-			});
-
-			// GA4用設定
-			if (window.gtag) {
-				gtag('consent', 'default', defaultConsent);
-			}
-		}
-
-		// DOM読み込み完了後＆GTM初期化前に実行
-		document.addEventListener('DOMContentLoaded', initializeConsent);
-	</script>
 
 	<!-- スクロールしてトップ -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script><!-- “difer”はダメ絶対！-->
