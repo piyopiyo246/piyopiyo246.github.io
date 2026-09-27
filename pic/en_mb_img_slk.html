@@ -91,6 +91,47 @@
       })(window,document,'script','dataLayer','GTM-MMJ4PJ3');
     });
   </script>
+
+  <!-- 6. GA4 / GTM 初期化 ＆ Consent Mode (デフォルト拒否設定) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+
+    // 英語圏（'US', 'GB', 'CA', 'AU', 'NZ', 'IE'等）向けにデフォルト拒否を設
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'granted',
+      'region': ['US', 'GB', 'CA', 'AU', 'NZ', 'IE'], // ★英語版はこちらを設定
+      'wait_for_update': 500
+    });
+
+    gtag('js', new Date());
+    // GA4個別読み込み時の初期化 (GTM側でGA4を設定している場合は config 自体も不要な場合があります)
+    gtag('config', 'G-5V9EW158CK', {
+      'send_page_view': false, // 重複防止のため初期自動送信はOFF（同意確認後にGTM側で送るか手動制御）
+      'cookie_flags': 'SameSite=None;Secure'
+    });
+  </script>
+
+  <!-- 4. Cookie同意バナー（CookieScript）スクリプト -->
+  <script type="text/javascript" src="//cdn.cookie-script.com/s/8e78f8bb08fea7bc4ae66adb24bb7b98.js" charset="UTF-8"></script>
+
+  <!-- Cookie同意イベントの受取とGTM発火 -->
+  <script>
+    // CookieScriptで同意された際のイベントリスナー
+    document.addEventListener('CookieScriptAccept', function() {
+      gtag('consent', 'update', {
+        'analytics_storage': 'granted'
+      });
+      // GTMの読み込み
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MMJ4PJ3');
+    });
+  </script>
 </head>
 
 <body>
