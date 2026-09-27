@@ -9,8 +9,19 @@
 		function gtag() { dataLayer.push(arguments); }
 		gtag('js', new Date());
 
-		gtag('config', 'G-5V9EW158CK');
+		// 1. 自動 page_view 送信を無効化する
+		gtag('config', 'G-5V9EW158CK', { 'send_page_view': false });
+
+		// 2. 重複チェックを行い、未送信の場合のみ page_view を手動送信する
+		if (!window.dataLayer.some(e => e.event === 'page_view')) {
+			gtag('event', 'page_view', {
+				page_title: document.title,
+				page_location: location.href,
+				send_to: 'G-5V9EW158CK'
+			});
+		}
 	</script>
+
 	<!-- Google Tag Manager -->
 	<script>(function (w, d, s, l, i) {
 			w[l] = w[l] || []; w[l].push({
@@ -22,7 +33,7 @@
 		})(window, document, 'script', 'dataLayer', 'GTM-MMJ4PJ3');
 	</script>
 
-	<!-- 1. 基本設定 -->
+<!-- 1. 基本設定 -->
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
@@ -32,7 +43,7 @@
 	<meta name="description" content="メルセデス・ベンツ 190シリーズと Cクラスの歴代全モデル（W201・W202・W203・W204・W205・W206）の国内販売スペック・グレード情報を網羅。CLK・GLC・CLA・SLKなど関連モデルも掲載。画像ギャラリー・過去ログアーカイブも収録した総合ファンサイト。">
 	<link rel="canonical" href="https://piyopiyo246.github.io/c_klasse.html">
 
-	<!-- サイト情報の構造化データ -->
+	<!-- 3. サイト情報の構造化データ -->
 	<script type="application/ld+json">
 		{
 			"@context": "https://schema.org",
@@ -58,12 +69,12 @@
 		}
 	</script>
 
-	<!-- 3. パフォーマンス最適化 -->
+	<!-- 4. パフォーマンス最適化 -->
 	<link rel="preconnect" href="https://www.googletagmanager.com">
 	<link rel="preconnect" href="https://ajax.googleapis.com">
 	<link rel="preconnect" href="https://cdnjs.cloudflare.com">
 
-	<!-- 4. Favicon -->
+	<!-- 5. Favicon -->
 	<link rel="icon" href="ico/favicon-32x32.ico" sizes="any">
 	<link rel="icon" href="ico/favicon-32x32.svg" type="image/svg+xml">
 	<link rel="apple-touch-icon" href="ico/apple-touch-icon.png">
@@ -71,7 +82,7 @@
 	<meta name="theme-color" media="(prefers-color-scheme: dark)" content="black">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-	<!-- 5. CSS -->
+	<!-- 6. CSS -->
 	<link rel="stylesheet" href="style.min.css">
 
 	<style>
@@ -2656,21 +2667,10 @@
 			display: block;
 		}
 	</style>
-
 </head>
 
 <body>
-	<!-- <body>直後に配置 -->
-	<script>
-		if (!window.dataLayer.some(e => e.event === 'page_view')) {
-			gtag('event', 'page_view', {
-				page_title: document.title,
-				page_location: location.href,
-				send_to: 'G-5V9EW158CK'
-			});
-		}
-	</script>
-	<!-- 8. GTM noscriptフォールバック -->
+<!-- 7. GTM noscriptフォールバック -->
 	<noscript>
 		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MMJ4PJ3" height="0" width="0" style="display:none;visibility:hidden"></iframe>
 	</noscript>
