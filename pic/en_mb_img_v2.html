@@ -53,56 +53,6 @@
 	<!-- 5. CSS -->
 	<link rel="stylesheet" href="../style.min.css">
 	<link rel="stylesheet" href="../style_for_p.min.css">
-
-
-			//  フォールバック計測 
-			fallbackGA4: () => {
-				console.group('[Fallback GA4]');
-				try {
-					const url = 'https://www.google-analytics.com/g/collect';
-					const params = {
-						v: '2',
-						tid: 'G-5V9EW158CK',
-						en: 'fallback_pageview',
-						dl: encodeURIComponent(location.href),
-						_p: Math.random().toString(36).slice(2),
-						_z: 'clib'
-					};
-
-					// 送信方法の自動選択
-					if (navigator.sendBeacon) {
-						const success = navigator.sendBeacon(url, new URLSearchParams(params));
-						console.log('sendBeacon Result:', success);
-					} else {
-						new Image().src = `${url}?${new URLSearchParams(params)}`;
-						console.log('Image Ping Sent');
-					}
-				} catch (e) {
-					console.error('Fallback Failed:', e);
-				}
-				console.groupEnd();
-			}
-		};
-
-		// 初期化処理（エラーハンドリング追加）
-		try {
-			if (window._cookiescript.hasConsent()) {
-				setTimeout(() => {
-					window._cookiescript.loadGTM();
-				}, 500); // 遅延実行で競合防止
-			} else {
-				window.gtag?.('consent', 'default', {
-					analytics_storage: 'denied',
-					ad_storage: 'denied',
-					functionality_storage: 'granted',
-					wait_for_update: 500,
-					region: ['US', 'GB', 'CA', 'AU', 'NZ', 'IE']
-				});
-			}
-		} catch (initError) {
-			console.error('Initial Consent Error:', initError);
-		}
-	</script>
 </head>
 
 <body>
