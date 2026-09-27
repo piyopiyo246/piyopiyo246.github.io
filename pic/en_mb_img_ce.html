@@ -81,7 +81,8 @@
     // CookieScriptで同意された際のイベントリスナー
     document.addEventListener('CookieScriptAccept', function() {
       gtag('consent', 'update', {
-        'analytics_storage': 'granted'
+        'analytics_storage': 'granted',
+        'region': ['US', 'GB', 'CA', 'AU', 'NZ', 'IE'] // ★ここも英語圏用に合わせる
       });
       // GTMの読み込み
       (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -122,7 +123,8 @@
     // CookieScriptで同意された際のイベントリスナー
     document.addEventListener('CookieScriptAccept', function() {
       gtag('consent', 'update', {
-        'analytics_storage': 'granted'
+        'analytics_storage': 'granted',
+        'region': ['US', 'GB', 'CA', 'AU', 'NZ', 'IE'] // ★ここも英語圏用に合わせる
       });
       // GTMの読み込み
       (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
