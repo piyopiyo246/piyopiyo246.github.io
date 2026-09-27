@@ -23,12 +23,56 @@
 	<meta name="description" content="最初はCクラススレッドの単なるテンプレでしたが・・・">
 	<link rel="canonical" href="https://piyopiyo246.github.io/history.html">
 
-	<!-- 3. パフォーマンス最適化 -->
+	<!-- 3. 構造化データ (JSON-LD) -->
+	<script type="application/ld+json">
+		[
+			{
+				"@context": "https://schema.org",
+				"@type": "BreadcrumbList",
+				"itemListElement": [
+					{
+						"@type": "ListItem",
+						"position": 1,
+						"name": "ホーム",
+						"item": "https://piyopiyo246.github.io/c_klasse.html"
+					},
+					{
+						"@type": "ListItem",
+						"position": 2,
+						"name": "当サイトの発展ヒストリー",
+						"item": "https://piyopiyo246.github.io/history.html"
+					}
+				]
+			},
+			{
+				"@context": "https://schema.org",
+				"@type": "Article",
+				"mainEntityOfPage": {
+					"@type": "WebPage",
+					"@id": "https://piyopiyo246.github.io/history.html"
+				},
+				"headline": "当サイトの変遷",
+				"description": "主に当サイトの作成の発端と、その後のコンテンツ追加・修正と HTML等の技術的変遷について記録したページです。",
+				"url": "https://piyopiyo246.github.io/history.html",
+				"publisher": {
+					"@type": "Organization",
+					"name": "メルセデス・ベンツ Cクラス Fan Guide",
+					"url": "https://piyopiyo246.github.io/c_klasse.html"
+				},
+				"about": {
+					"@type": "Thing",
+					"name": "Mercedes-Benz C-Class"
+				}
+			}
+		]
+	</script>
+
+	<!-- 4. パフォーマンス最適化 -->
 	<link rel="preconnect" href="https://www.googletagmanager.com">
 	<link rel="preconnect" href="https://ajax.googleapis.com">
 	<link rel="preconnect" href="https://cdnjs.cloudflare.com">
 
-	<!-- 4. Favicon -->
+	<!-- 5. Favicon -->
 	<link rel="icon" href="ico/favicon-32x32.ico" sizes="any">
 	<link rel="icon" href="ico/favicon-32x32.svg" type="image/svg+xml">
 	<link rel="apple-touch-icon" href="ico/apple-touch-icon.png">
@@ -36,7 +80,7 @@
 	<meta name="theme-color" media="(prefers-color-scheme: dark)" content="black">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-	<!-- 5. CSS -->
+	<!-- 6. CSS -->
 	<link rel="stylesheet" href="style.min.css">
 	<style type="text/css">
 		.bf0:before {
@@ -78,7 +122,7 @@
 </head>
 
 <body>
-	<!-- 6. GTM noscriptフォールバック -->
+	<!-- 7. GTM noscriptフォールバック -->
 	<noscript>
 		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MMJ4PJ3" height="0" width="0" style="display:none;visibility:hidden"></iframe>
 	</noscript>
