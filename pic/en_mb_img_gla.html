@@ -54,68 +54,6 @@
 	<link rel="stylesheet" href="../style.min.css">
 	<link rel="stylesheet" href="../style_for_p.min.css">
 
-	<!-- 6. Cookie同意管理システム -->
-	<script>
-		window._cookiescript = {
-			hasConsent: () => {
-				try {
-					return localStorage.getItem('cookie_consent') === 'true';
-				} catch (e) {
-					console.error('CookieConsent Read Error:', e);
-					return false; // エラー時は安全側に倒す
-				}
-			},
-
-			loadGTM: () => {
-				try {
-					// ▼▼▼ GA4同意更新（エラーハンドリング追加）▼▼▼
-					if (window.gtag) {
-						gtag('consent', 'update', {
-							analytics_storage: 'granted',
-							ad_storage: 'denied',
-							functionality_storage: 'granted',
-							region: ['US', 'GB', 'CA', 'AU', 'NZ', 'IE'],
-							// デバッグ用パラメータ（本番では削除）
-							debug_mode: location.hostname.includes('localhost')
-						});
-
-						// 追加イベントで同意を記録
-						gtag('event', 'consent_update', {
-							consent_type: 'analytics',
-							granted: true
-						});
-					}
-
-					//  GTM読み込み（try-catchで囲む）
-					try {
-						(function (w, d, s, l, i) {
-							w[l] = w[l] || []; w[l].push({
-								'gtm.start': new Date().getTime(),
-								event: 'gtm.js',
-								'gtm.consent': 'granted'
-							});
-
-							var j = d.createElement(s);
-							var f = d.getElementsByTagName(s)[0];
-
-							j.onerror = () => {
-								console.error('[GTM Error] Script load failed:', j.src);
-								window.dataLayer.push({
-									event: 'gtm_load_error',
-									error_url: j.src,
-									timestamp: Date.now()
-								});
-								window._cookiescript.fallbackGA4();
-							};
-
-							j.async = true;
-							j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i;
-							f.parentNode.insertBefore(j, f);
-						})(window, document, 'script', 'dataLayer', 'GTM-MMJ4PJ3');
-					} catch (gtmError) {
-						console.error('GTM Init Error:', gtmError);
-						window._cookiescript.fallbackGA4();
-					}
 
 					// データレイヤー記録（エラーログ付き）
 					window.dataLayer.push({
