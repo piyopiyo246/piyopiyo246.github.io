@@ -1019,3 +1019,64 @@ iframe {
 	border-radius: 3px;
 	text-align: center
 }
+
+/* 閲覧ヒントバナー本体 */
+#guide-banner {
+  position: fixed;
+  right: 30px;
+  top: 150px;
+  z-index: 9999;
+  width: 300px;
+  min-height: 90px;
+  padding: 10px 12px;
+  background: #666;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: 800;
+  text-align: left;
+  opacity: 0.7; /* 背景への馴染みと視認性のバランス */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+  pointer-events: auto;
+  /* フワッと消える/現れるアニメーション */
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+
+/* バナー内の文字スタイル */
+.guide-banner-title {
+  margin: 0 0 4px 0;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  color: #eee;
+}
+
+.guide-banner-text {
+  margin: 0;
+  font-size: 0.8rem;
+  line-height: 1.45;
+  font-weight: normal;
+}
+
+.guide-banner-text strong {
+  font-size: 1rem;
+  color: #fff;
+}
+
+/* 非表示状態（スクロール中、またはアコーディオン展開時） */
+#guide-banner.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  pointer-events: none;
+}
+
+/* スマホ表示（画面幅768px以下）での配慮 */
+@media screen and (max-width: 768px) {
+  #guide-banner {
+    right: 15px;
+    top: auto;
+    bottom: 80px; /* 画面下部に退避 */
+    width: calc(100% - 30px);
+    max-width: 320px;
+  }
+}

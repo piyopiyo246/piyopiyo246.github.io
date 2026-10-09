@@ -26601,6 +26601,14 @@
 		</div>
 	</footer>
 
+	<!-- 閲覧ヒントバナー（スクロール追従・開閉連動） -->
+	<aside id="guide-banner" class="guide-banner" aria-label="サイト閲覧のヒント">
+		<div class="guide-banner-inner">
+			<p class="guide-banner-title">💡 閲覧のヒント</p>
+			<p class="guide-banner-text">各項目の <strong>▶</strong> をクリックすると、<br>詳細なスペック・年表・解説が開きます。</p>
+		</div>
+	</aside>
+
 	<!--  floating button -->
 	<p id="page-top">
 		<a href="#" aria-label="ページトップへ戻る" title="ページトップへジャンプ / Zum Seitenanfang springen">&#9650;</a>
@@ -26625,6 +26633,76 @@
 			if (typeof fleXcrollInit === 'function') {
 				fleXcrollInit();
 			}
+		});
+	</script>
+
+	<!-- 追従ヒントバナー -->
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			const guideBanner = document.getElementById('guide-banner');
+			if (!guideBanner) return;
+
+			const COOLDOWN_TIME = 60 * 1000; // 再出現までの待機時間（1分＝60000ミリ秒）
+			let scrollTimer = null;
+			let cooldownTimer = null;
+			let isCooldown = false; // 1分間のクールダウン判定フラグ
+
+			// アコーディオンが1つでも開いているかを判定
+			function isAnyAccordionOpen() {
+				return document.querySelector('.accordion-header.active, .accordion-header[aria-expanded="true"]') !== null;
+			}
+
+			// バナーを表示する
+			function showBanner() {
+				if (!isAnyAccordionOpen() && !isCooldown) {
+					guideBanner.classList.remove('is-hidden');
+				}
+			}
+
+			// 1分間のクールダウンを開始する
+			function startCooldown() {
+				isCooldown = true;
+				clearTimeout(cooldownTimer);
+				cooldownTimer = setTimeout(function () {
+					isCooldown = false;
+					// 1分経過後、アコーディオンが開いていなければ再表示
+					showBanner();
+				}, COOLDOWN_TIME);
+			}
+
+			// 1. スクロール監視
+			window.addEventListener('scroll', function () {
+				// バナーが表示されている状態でスクロールされたら、非表示にして1分間のクールダウン開始
+				if (!guideBanner.classList.contains('is-hidden')) {
+					guideBanner.classList.add('is-hidden');
+					startCooldown();
+				} else {
+					// すでに非表示中（クールダウン中含む）も非表示を維持
+					guideBanner.classList.add('is-hidden');
+				}
+
+				clearTimeout(scrollTimer);
+				scrollTimer = setTimeout(function () {
+					// スクロール停止時、クールダウンが明けていれば再表示
+					showBanner();
+				}, 300);
+			}, { passive: true });
+
+			// 2. アコーディオン開閉操作の監視
+			document.addEventListener('click', function (e) {
+				if (e.target.closest('.accordion-header, .vmenu_all_action, #open-all-accordions, #close-all-accordions, #close-all-accordions-2')) {
+					setTimeout(function () {
+						if (isAnyAccordionOpen()) {
+							guideBanner.classList.add('is-hidden');
+						} else {
+							showBanner();
+						}
+					}, 50);
+				}
+			});
+
+			// 初回ロード時の表示
+			showBanner();
 		});
 	</script>
 
