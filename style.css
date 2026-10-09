@@ -1023,13 +1023,13 @@ iframe {
 /* 閲覧ヒントバナー本体 */
 #guide-banner {
   position: fixed;
-  right: 30px;
-  top: 110px;
+  right: 20px;
+  top: 20px;
   z-index: 9999;
-  width: 340px;
+  width: 360px;
   min-height: 90px;
   padding: 10px 12px;
-  background: #666;
+  background: #444;
   color: #fff;
   border-radius: 5px;
   font-weight: 800;
@@ -1082,13 +1082,11 @@ iframe {
 /* 説明文 */
 .guide-banner-text {
   margin: 0;
-  font-size: 0.8rem;
   line-height: 1.45;
-  font-weight: normal;
+  font-weight: 800;
 }
 
 .guide-banner-text strong {
-  font-size: 0.95rem;
   color: #fff;
 }
 

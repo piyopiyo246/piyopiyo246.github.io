@@ -515,10 +515,10 @@
 			const closeBtn = document.getElementById('guide-banner-close');
 			if (!guideBanner) return;
 
-			const SCROLL_DELAY = 1000; // スクロール開始から出現までの遅延（1秒）
+			const SCROLL_DELAY = 2000; // スクロール開始から出現までの遅延（2秒）
 			const STOP_KEEP_TIME = 2000; // スクロール停止後の表示維持時間（2秒）
 
-			let scrollDelayTimer = null; // 1秒遅延用タイマー
+			let scrollDelayTimer = null; // 2秒遅延用タイマー
 			let scrollStopTimer = null;  // スクロール停止検知用タイマー
 			let hideTimer = null;        // 停止後2秒で消すタイマー
 			let isShowing = false;       // 現在バナーが出ているか
@@ -565,10 +565,10 @@
 					return;
 				}
 
-				// スクロール中なので、停止カウントダウン（5秒タイマー）は一旦リセット
+				// スクロール中なので、停止カウントダウン（2秒タイマー）は一旦リセット
 				clearTimeout(hideTimer);
 
-				// まだ表示されておらず、1秒タイマーも未起動なら「1秒遅延タイマー」をスタート
+				// まだ表示されておらず、2秒タイマーも未起動なら「2秒遅延タイマー」をスタート
 				if (!isShowing && !scrollDelayTimer) {
 					scrollDelayTimer = setTimeout(function () {
 						showBanner();
@@ -592,7 +592,7 @@
 							hideBanner();
 						}, STOP_KEEP_TIME);
 					}
-				}, 2000);
+				}, 1000);
 			}, { passive: true });
 
 			// 3. アコーディオン開閉時の監視
