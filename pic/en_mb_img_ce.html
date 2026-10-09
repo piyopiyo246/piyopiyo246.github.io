@@ -587,12 +587,126 @@
 		<p class="mid"><small>@ since 2010 , piyopiyo_246</small></p>
 	</footer>
 
+	<!-- Viewing Tips Banner -->
+	<aside id="guide-banner" class="guide-banner is-hidden" aria-label="Viewing tips">
+		<div class="guide-banner-header">
+			<span class="guide-banner-title">💡 Quick Tip</span>
+			<button type="button" id="guide-banner-close" class="guide-banner-close" aria-label="Close">&times;</button>
+		</div>
+		<p class="guide-banner-text">Click <strong>▶</strong> on each item to expand and view detailed photos.</p>
+	</aside>
+
 	<p id="page-top">
 		<a href="#" aria-label="Jump to top of page" title=" Jump to top of page">&#9650;</a>
 	</p>
 	<p id="close-accordion">
 		<a id="close-all-accordions-2" class="vmenu_all_action" title="Close all accordions"><span class="sr-only">Close all accordions</span>&#9654;</a>
 	</p>
+
+	<!-- 追従ヒントバナー -->
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			// sessionStorageを使用：タブやブラウザを閉じるとリセットされ、次回訪問時に再度出現します
+			const STORAGE_KEY = 'piyo_hide_guide_banner_session';
+
+			// 今回の訪問（セッション）で既に「×」を押している場合は表示しない
+			if (sessionStorage.getItem(STORAGE_KEY) === 'true') {
+				return;
+			}
+
+			const guideBanner = document.getElementById('guide-banner');
+			const closeBtn = document.getElementById('guide-banner-close');
+			if (!guideBanner) return;
+
+			const DISPLAY_TIME = 10 * 1000;   // 出現時の表示維持時間（10秒間）
+			const COOLDOWN_TIME = 10 * 1000; // 非表示後の再出現インターバル（10秒間）
+
+			let displayTimer = null;
+			let cooldownTimer = null;
+			let scrollTimer = null;
+			let isShowing = false;
+			let isCooldown = false;
+			let isSessionHidden = false;
+
+			// アコーディオンが1つでも開いているかを判定
+			function isAnyAccordionOpen() {
+				return document.querySelector('.accordion-header.active, .accordion-header[aria-expanded="true"]') !== null;
+			}
+
+			// バナーを表示する（10秒間維持）
+			function showBanner() {
+				if (isSessionHidden || isShowing || isCooldown || isAnyAccordionOpen()) return;
+
+				isShowing = true;
+				guideBanner.classList.remove('is-hidden');
+
+				clearTimeout(displayTimer);
+				displayTimer = setTimeout(function () {
+					hideBanner();
+				}, DISPLAY_TIME);
+			}
+
+			// 10秒経過後に非表示にし、10秒のクールダウンへ
+			function hideBanner() {
+				guideBanner.classList.add('is-hidden');
+				isShowing = false;
+				clearTimeout(displayTimer);
+
+				if (isSessionHidden) return;
+
+				isCooldown = true;
+				clearTimeout(cooldownTimer);
+				cooldownTimer = setTimeout(function () {
+					isCooldown = false;
+					showBanner();
+				}, COOLDOWN_TIME);
+			}
+
+			// 1. 「×」ボタンクリック時（今回のセッション中のみ非表示）
+			if (closeBtn) {
+				closeBtn.addEventListener('click', function (e) {
+					e.stopPropagation();
+					isSessionHidden = true;
+					sessionStorage.setItem(STORAGE_KEY, 'true'); // セッションストレージに一時保存
+
+					clearTimeout(displayTimer);
+					clearTimeout(cooldownTimer);
+					clearTimeout(scrollTimer);
+
+					guideBanner.classList.add('is-hidden');
+					guideBanner.style.display = 'none'; // DOM上でも非表示化
+				});
+			}
+
+			// 2. スクロール監視（5秒表示中はスクロールされても消さない）
+			window.addEventListener('scroll', function () {
+				if (isSessionHidden || isShowing) return;
+
+				clearTimeout(scrollTimer);
+				scrollTimer = setTimeout(function () {
+					if (!isCooldown) {
+						showBanner();
+					}
+				}, 300);
+			}, { passive: true });
+
+			// 3. アコーディオン開閉監視
+			document.addEventListener('click', function (e) {
+				if (isSessionHidden) return;
+
+				if (e.target.closest('.accordion-header, .vmenu_all_action, #open-all-accordions, #close-all-accordions, #close-all-accordions-2')) {
+					setTimeout(function () {
+						if (isAnyAccordionOpen()) {
+							hideBanner();
+						}
+					}, 50);
+				}
+			});
+
+			// 初回表示
+			showBanner();
+		});
+	</script>
 
 	<!-- スクロールしてトップ -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script><!-- “difer”はダメ絶対！-->
