@@ -1024,9 +1024,9 @@ iframe {
 #guide-banner {
   position: fixed;
   right: 30px;
-  top: 120px;
+  top: 110px;
   z-index: 9999;
-  width: 300px;
+  width: 340px;
   min-height: 90px;
   padding: 10px 12px;
   background: #666;
