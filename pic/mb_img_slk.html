@@ -367,109 +367,113 @@
 
 
 	<!-- 追従ヒントバナー -->
-	<script>
-		document.addEventListener('DOMContentLoaded', function () {
-			// sessionStorageを使用：タブやブラウザを閉じるとリセットされ、次回訪問時に再度出現します
-			const STORAGE_KEY = 'piyo_hide_guide_banner_session';
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // 今回の訪問（セッション）で既に「×」を押している場合は何もしない
+    const STORAGE_KEY = 'piyo_hide_guide_banner_session';
+    if (sessionStorage.getItem(STORAGE_KEY) === 'true') {
+      return;
+    }
 
-			// 今回の訪問（セッション）で既に「×」を押している場合は表示しない
-			if (sessionStorage.getItem(STORAGE_KEY) === 'true') {
-				return;
-			}
+    const guideBanner = document.getElementById('guide-banner');
+    const closeBtn = document.getElementById('guide-banner-close');
+    if (!guideBanner) return;
 
-			const guideBanner = document.getElementById('guide-banner');
-			const closeBtn = document.getElementById('guide-banner-close');
-			if (!guideBanner) return;
+    const SCROLL_DELAY = 1000; // スクロール開始から出現までの遅延（1秒）
+    const STOP_KEEP_TIME = 5000; // スクロール停止後の表示維持時間（5秒）
 
-			const DISPLAY_TIME = 10 * 1000;   // 出現時の表示維持時間（10秒間）
-			const COOLDOWN_TIME = 10 * 1000; // 非表示後の再出現インターバル（10秒間）
+    let scrollDelayTimer = null; // 1秒遅延用タイマー
+    let scrollStopTimer = null;  // スクロール停止検知用タイマー
+    let hideTimer = null;        // 停止後5秒で消すタイマー
+    let isShowing = false;       // 現在バナーが出ているか
+    let isSessionHidden = false; // ×ボタンで閉じられたか
 
-			let displayTimer = null;
-			let cooldownTimer = null;
-			let scrollTimer = null;
-			let isShowing = false;
-			let isCooldown = false;
-			let isSessionHidden = false;
+    // アコーディオンが1つでも開いているかを判定
+    function isAnyAccordionOpen() {
+      return document.querySelector('.accordion-header.active, .accordion-header[aria-expanded="true"]') !== null;
+    }
 
-			// アコーディオンが1つでも開いているかを判定
-			function isAnyAccordionOpen() {
-				return document.querySelector('.accordion-header.active, .accordion-header[aria-expanded="true"]') !== null;
-			}
+    // バナーを表示
+    function showBanner() {
+      if (isSessionHidden || isAnyAccordionOpen()) return;
+      isShowing = true;
+      guideBanner.classList.remove('is-hidden');
+    }
 
-			// バナーを表示する（10秒間維持）
-			function showBanner() {
-				if (isSessionHidden || isShowing || isCooldown || isAnyAccordionOpen()) return;
+    // バナーを非表示
+    function hideBanner() {
+      guideBanner.classList.add('is-hidden');
+      isShowing = false;
+      clearTimeout(hideTimer);
+    }
 
-				isShowing = true;
-				guideBanner.classList.remove('is-hidden');
+    // 1. 「×」ボタンクリック時の処理
+    if (closeBtn) {
+      closeBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        isSessionHidden = true;
+        sessionStorage.setItem(STORAGE_KEY, 'true');
 
-				clearTimeout(displayTimer);
-				displayTimer = setTimeout(function () {
-					hideBanner();
-				}, DISPLAY_TIME);
-			}
+        clearTimeout(scrollDelayTimer);
+        clearTimeout(scrollStopTimer);
+        clearTimeout(hideTimer);
+        hideBanner();
+        guideBanner.style.display = 'none';
+      });
+    }
 
-			// 10秒経過後に非表示にし、10秒のクールダウンへ
-			function hideBanner() {
-				guideBanner.classList.add('is-hidden');
-				isShowing = false;
-				clearTimeout(displayTimer);
+    // 2. スクロール連動制御
+    window.addEventListener('scroll', function () {
+      if (isSessionHidden || isAnyAccordionOpen()) {
+        if (isShowing) hideBanner();
+        return;
+      }
 
-				if (isSessionHidden) return;
+      // スクロール中なので、停止カウントダウン（5秒タイマー）は一旦リセット
+      clearTimeout(hideTimer);
 
-				isCooldown = true;
-				clearTimeout(cooldownTimer);
-				cooldownTimer = setTimeout(function () {
-					isCooldown = false;
-					showBanner();
-				}, COOLDOWN_TIME);
-			}
+      // まだ表示されておらず、1秒タイマーも未起動なら「1秒遅延タイマー」をスタート
+      if (!isShowing && !scrollDelayTimer) {
+        scrollDelayTimer = setTimeout(function () {
+          showBanner();
+          scrollDelayTimer = null;
+        }, SCROLL_DELAY);
+      }
 
-			// 1. 「×」ボタンクリック時（今回のセッション中のみ非表示）
-			if (closeBtn) {
-				closeBtn.addEventListener('click', function (e) {
-					e.stopPropagation();
-					isSessionHidden = true;
-					sessionStorage.setItem(STORAGE_KEY, 'true'); // セッションストレージに一時保存
+      // スクロール停止の検知（最後のスクロールから200ミリ秒止まったら「停止」と判定）
+      clearTimeout(scrollStopTimer);
+      scrollStopTimer = setTimeout(function () {
+        // もし1秒経たないうちにスクロールが止まった場合は、出現タイマーをキャンセル
+        if (scrollDelayTimer) {
+          clearTimeout(scrollDelayTimer);
+          scrollDelayTimer = null;
+        }
 
-					clearTimeout(displayTimer);
-					clearTimeout(cooldownTimer);
-					clearTimeout(scrollTimer);
+        // バナーが出現している状態なら、停止してから5秒後にフェードアウト
+        if (isShowing) {
+          clearTimeout(hideTimer);
+          hideTimer = setTimeout(function () {
+            hideBanner();
+          }, STOP_KEEP_TIME);
+        }
+      }, 200);
+    }, { passive: true });
 
-					guideBanner.classList.add('is-hidden');
-					guideBanner.style.display = 'none'; // DOM上でも非表示化
-				});
-			}
-
-			// 2. スクロール監視（5秒表示中はスクロールされても消さない）
-			window.addEventListener('scroll', function () {
-				if (isSessionHidden || isShowing) return;
-
-				clearTimeout(scrollTimer);
-				scrollTimer = setTimeout(function () {
-					if (!isCooldown) {
-						showBanner();
-					}
-				}, 300);
-			}, { passive: true });
-
-			// 3. アコーディオン開閉監視
-			document.addEventListener('click', function (e) {
-				if (isSessionHidden) return;
-
-				if (e.target.closest('.accordion-header, .vmenu_all_action, #open-all-accordions, #close-all-accordions, #close-all-accordions-2')) {
-					setTimeout(function () {
-						if (isAnyAccordionOpen()) {
-							hideBanner();
-						}
-					}, 50);
-				}
-			});
-
-			// 初回表示
-			showBanner();
-		});
-	</script>
+    // 3. アコーディオン開閉時の監視
+    document.addEventListener('click', function (e) {
+      if (isSessionHidden) return;
+      if (e.target.closest('.accordion-header, .vmenu_all_action, #open-all-accordions, #close-all-accordions, #close-all-accordions-2')) {
+        setTimeout(function () {
+          if (isAnyAccordionOpen()) {
+            clearTimeout(scrollDelayTimer);
+            scrollDelayTimer = null;
+            hideBanner();
+          }
+        }, 50);
+      }
+    });
+  });
+  </script>
 
 	<!-- スクロールしてトップ -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script><!-- “difer”はダメ絶対！-->
