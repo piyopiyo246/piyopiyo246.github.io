@@ -1042,14 +1042,44 @@ iframe {
   transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
 }
 
-/* バナー内の文字スタイル */
+/* ヘッダー行（タイトルと×ボタンを左右両端に並べる） */
+.guide-banner-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+  line-height: 1;
+}
+
+/* タイトルスタイル */
 .guide-banner-title {
-  margin: 0 0 4px 0;
   font-size: 0.85rem;
   letter-spacing: 0.05em;
   color: #eee;
+  font-weight: 800;
+  margin: 0;
 }
 
+/* ×ボタン（行の右端に配置） */
+.guide-banner-close {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 2px;
+  margin: 0;
+  opacity: 0.7;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.guide-banner-close:hover {
+  opacity: 1;
+  transform: scale(1.15);
+}
+
+/* 説明文 */
 .guide-banner-text {
   margin: 0;
   font-size: 0.8rem;
@@ -1058,7 +1088,7 @@ iframe {
 }
 
 .guide-banner-text strong {
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: #fff;
 }
 

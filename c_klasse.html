@@ -26601,13 +26601,15 @@
 		</div>
 	</footer>
 
-	<!-- 閲覧ヒントバナー（スクロール追従・開閉連動） -->
-	<aside id="guide-banner" class="guide-banner" aria-label="サイト閲覧のヒント">
-		<div class="guide-banner-inner">
-			<p class="guide-banner-title">💡 閲覧のヒント</p>
-			<p class="guide-banner-text">各項目の <strong>▶</strong> をクリックすると、<br>詳細なスペック・年表・解説が開きます。</p>
+	<!-- 閲覧ヒントバナー -->
+	<aside id="guide-banner" class="guide-banner is-hidden" aria-label="サイト閲覧のヒント">
+		<div class="guide-banner-header">
+			<span class="guide-banner-title">💡 閲覧のヒント</span>
+			<button type="button" id="guide-banner-close" class="guide-banner-close" aria-label="閉じる">&times;</button>
 		</div>
+		<p class="guide-banner-text">各項目の <strong>▶</strong> をクリックすると、<br>詳細なスペック・年表・解説が開きます。</p>
 	</aside>
+
 
 	<!--  floating button -->
 	<p id="page-top">
@@ -26639,76 +26641,110 @@
 	<!-- 追従ヒントバナー -->
 	<script>
 		document.addEventListener('DOMContentLoaded', function () {
+			// sessionStorageを使用：タブやブラウザを閉じるとリセットされ、次回訪問時に再度出現します
+			const STORAGE_KEY = 'piyo_hide_guide_banner_session';
+
+			// 今回の訪問（セッション）で既に「×」を押している場合は表示しない
+			if (sessionStorage.getItem(STORAGE_KEY) === 'true') {
+				return;
+			}
+
 			const guideBanner = document.getElementById('guide-banner');
+			const closeBtn = document.getElementById('guide-banner-close');
 			if (!guideBanner) return;
 
-			const COOLDOWN_TIME = 20 * 1000; // 再出現までの待機時間（1分＝60000ミリ秒）
-			let scrollTimer = null;
+			const DISPLAY_TIME = 10 * 1000;   // 出現時の表示維持時間（10秒間）
+			const COOLDOWN_TIME = 10 * 1000; // 非表示後の再出現インターバル（10秒間）
+
+			let displayTimer = null;
 			let cooldownTimer = null;
-			let isCooldown = false; // 1分間のクールダウン判定フラグ
+			let scrollTimer = null;
+			let isShowing = false;
+			let isCooldown = false;
+			let isSessionHidden = false;
 
 			// アコーディオンが1つでも開いているかを判定
 			function isAnyAccordionOpen() {
 				return document.querySelector('.accordion-header.active, .accordion-header[aria-expanded="true"]') !== null;
 			}
 
-			// バナーを表示する
+			// バナーを表示する（10秒間維持）
 			function showBanner() {
-				if (!isAnyAccordionOpen() && !isCooldown) {
-					guideBanner.classList.remove('is-hidden');
-				}
+				if (isSessionHidden || isShowing || isCooldown || isAnyAccordionOpen()) return;
+
+				isShowing = true;
+				guideBanner.classList.remove('is-hidden');
+
+				clearTimeout(displayTimer);
+				displayTimer = setTimeout(function () {
+					hideBanner();
+				}, DISPLAY_TIME);
 			}
 
-			// 1分間のクールダウンを開始する
-			function startCooldown() {
+			// 10秒経過後に非表示にし、10秒のクールダウンへ
+			function hideBanner() {
+				guideBanner.classList.add('is-hidden');
+				isShowing = false;
+				clearTimeout(displayTimer);
+
+				if (isSessionHidden) return;
+
 				isCooldown = true;
 				clearTimeout(cooldownTimer);
 				cooldownTimer = setTimeout(function () {
 					isCooldown = false;
-					// 1分経過後、アコーディオンが開いていなければ再表示
 					showBanner();
 				}, COOLDOWN_TIME);
 			}
 
-			// 1. スクロール監視
+			// 1. 「×」ボタンクリック時（今回のセッション中のみ非表示）
+			if (closeBtn) {
+				closeBtn.addEventListener('click', function (e) {
+					e.stopPropagation();
+					isSessionHidden = true;
+					sessionStorage.setItem(STORAGE_KEY, 'true'); // セッションストレージに一時保存
+
+					clearTimeout(displayTimer);
+					clearTimeout(cooldownTimer);
+					clearTimeout(scrollTimer);
+
+					guideBanner.classList.add('is-hidden');
+					guideBanner.style.display = 'none'; // DOM上でも非表示化
+				});
+			}
+
+			// 2. スクロール監視（5秒表示中はスクロールされても消さない）
 			window.addEventListener('scroll', function () {
-				// バナーが表示されている状態でスクロールされたら、非表示にして1分間のクールダウン開始
-				if (!guideBanner.classList.contains('is-hidden')) {
-					guideBanner.classList.add('is-hidden');
-					startCooldown();
-				} else {
-					// すでに非表示中（クールダウン中含む）も非表示を維持
-					guideBanner.classList.add('is-hidden');
-				}
+				if (isSessionHidden || isShowing) return;
 
 				clearTimeout(scrollTimer);
 				scrollTimer = setTimeout(function () {
-					// スクロール停止時、クールダウンが明けていれば再表示
-					showBanner();
+					if (!isCooldown) {
+						showBanner();
+					}
 				}, 300);
 			}, { passive: true });
 
-			// 2. アコーディオン開閉操作の監視
+			// 3. アコーディオン開閉監視
 			document.addEventListener('click', function (e) {
+				if (isSessionHidden) return;
+
 				if (e.target.closest('.accordion-header, .vmenu_all_action, #open-all-accordions, #close-all-accordions, #close-all-accordions-2')) {
 					setTimeout(function () {
 						if (isAnyAccordionOpen()) {
-							guideBanner.classList.add('is-hidden');
-						} else {
-							showBanner();
+							hideBanner();
 						}
 					}, 50);
 				}
 			});
 
-			// 初回ロード時の表示
+			// 初回表示
 			showBanner();
 		});
 	</script>
 
 	<!-- スクロールトップ -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-	<!-- scrollTop “difer”はダメ絶対！-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script><!-- scrollTop “difer”はダメ絶対！-->
 	<script>
 		$(function () {
 			// 共通の動作をする要素をまとめて取得
