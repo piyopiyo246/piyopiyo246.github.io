@@ -2625,7 +2625,7 @@
 		.line-accordion-label {
 			margin-left: 16px;
 			flex-shrink: 0;
-			font-weight: 700;
+			font-weight: 400;
 			color: #666;
 		}
 
@@ -2645,6 +2645,64 @@
 
 		.line-accordion.active .line-accordion-content {
 			display: block;
+		}
+
+		/* TOPICS用 横並びボタンコンテナ */
+		.topics-btn-group {
+			display: flex;
+			flex-wrap: wrap; /* ★横幅を超えたら自動で下に折り返す指定 */
+			justify-content: flex-start; /* ★ボタン群を左寄せにする */
+			gap: 20px;                   /* ★ボタン同士の間隔を20pxに設定 */
+			margin-bottom: 12px;
+		}
+
+		/* 各ボタンの基本スタイル（通常時） */
+		.topics-btn {
+  flex: 0 0 auto;              /* ★横幅いっぱいに伸ばさず、文字幅に合わせる */
+			padding: 4px 24px;
+			text-align: left;
+			margin: 0 !important;
+			cursor: pointer;
+			background-color: #f2f2f2;
+			color: #333;
+			border: none;
+			font-size: 1rem;
+			font-weight: 400;
+			transition: all 0.25s ease;
+		}
+
+		/* ホバー時 */
+		.topics-btn:hover {
+			background-color: #e5e5e5;
+		}
+
+		/* ▼ 選択中（開いている状態）のアクティブデザイン ▼ */
+		.topics-btn.active {
+			background-color: #666;/* 選択時の背景色（ダークグレー） */
+			color: #fff;/* 選択時の文字色（白） */
+			border-color: #333;
+			box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+		}
+
+		/* 矢印（▶）の回転アニメーション */
+		.topics-btn .arrow {
+			display: inline-block;
+			transition: transform 0.25s ease;
+			margin-right: 4px;
+			font-size: 1rem;
+		}
+
+		/* 選択されたボタンの矢印を下向きに回転 */
+		.topics-btn.active .arrow {
+			transform: rotate(90deg);
+		}
+
+		/* スマホ幅（600px以下）の配慮：狭い画面では縦並びへ自動変化 */
+		@media screen and (max-width: 600px) {
+			.topics-btn-group {
+				flex-direction: column;
+				gap: 6px;
+			}
 		}
 	</style>
 </head>
@@ -2735,20 +2793,26 @@
 			</div>
 		</nav>
 	</header>
-	<hr>
 
 	<article id="topics" class="contents">
-		<h2 class="bf0">TOPICS</h2>
-			<div class="bk5 style-w2">
-				主にデザインについて思うことを語ります。<br>
+		<div class="bk5 style-w2">
+			主にデザインについて思うことを語ります。<br>
+		</div>
+		<div class="topics-wrapper">
+			<h2 class="f s06">TOPICS</h2>
+			<!-- ① 横並びボタンエリア -->
+			<div class="topics-btn-group">
+				<button type="button" class="topics-btn" data-target="topic-neue-klasse">
+					<span class="arrow">▶</span> 『Neue Klasse』という大役
+				</button>
+				<button type="button" class="topics-btn" data-target="topic-white-c">
+					<span class="arrow">▶</span> 今度の C は白が似合う
+				</button>
 			</div>
 
-		<div class="accordion" id="topics-neue_klasse">
-			<button class="accordion-header min" aria-expanded="false" aria-controls="topics-neue_klasse">
-				『Neue Klasse』という大役
-			</button>
-			<div id="content-bmw_neue_klasse" class="accordion-content" role="region">
-				<div class="accordion-content-inner">
+			<!-- ② 下に展開される本文エリア -->
+			<div id="topic-neue-klasse" class="accordion-content">
+				<div class="topics-body">
 					<h3>【26/09/30】 BMW 新型 3シリーズ (G50) エンジンモデルが 発表されました。</h3>
 					<div class="style-w">
 						<p class="m01">
@@ -2782,25 +2846,19 @@
 					</div>
 				</div>
 			</div>
-		</div>
-
-		<div class="accordion" id="topics-w520">
-			<button class="accordion-header min" aria-expanded="false" aria-controls="topics">
-				今度の C は白が似合う
-			</button>
-			<div id="content-w520" class="accordion-content" role="region">
-				<div class="accordion-content-inner">
+			<div id="topic-white-c" class="accordion-content">
+				<div class="topics-body">
 					<h3>【26/04/16】 新型 Cクラス (W520) EVモデルが 発表されました。</h3>
 					<div class="box90">
-					<p class="m02">
-						&emsp;MRAから MB.EAプラットフォームへ移行。
-						​<a href="https://www.mercedes-benz.de/passengercars/models/saloon/new/c-class-electric.html" title="Die neue elektrische C-Klasse.">デビューモデル</a>は
-						C400 4Matic electricで、デュアルモータ搭載の四輪駆動。現行 C (W206)は併売継続予定。
-						最高出力 489PS、最大トルク800Nm、全重 2,460kg、0-100km/h加速4秒、最高速度は210km/h。
-						後輪駆動モーターには2速トランスミッション、前輪駆動モーターにはシングルギアを採用。
-						バッテリーは 84kWh、航続距離は 600km (WLTP)。<br>
-					</p>
-					<p class="t0b m01 bb">&emsp;無用な直線やオーガニックさを廃し、磁器っぽい。<span class="m02">'26/06/05</span></p> 
+						<p class="m02">
+							&emsp;MRAから MB.EAプラットフォームへ移行。
+							​<a href="https://www.mercedes-benz.de/passengercars/models/saloon/new/c-class-electric.html" title="Die neue elektrische C-Klasse.">デビューモデル</a>は
+							C400 4Matic electricで、デュアルモータ搭載の四輪駆動。現行 C (W206)は併売継続予定。
+							最高出力 489PS、最大トルク800Nm、全重 2,460kg、0-100km/h加速4秒、最高速度は210km/h。
+							後輪駆動モーターには2速トランスミッション、前輪駆動モーターにはシングルギアを採用。
+							バッテリーは 84kWh、航続距離は 600km (WLTP)。<br>
+						</p>
+						<p class="t0b m01 bb">&emsp;無用な直線やオーガニックさを廃し、磁器っぽい。<span class="m02">'26/06/05</span></p>
 					</div>
 					<div class="box30">
 						<img src="ico/w520.png" loading="lazy" alt="新型Cクラス" width="300" height="164">
@@ -2849,7 +2907,6 @@
 							</p>
 						</div>
 					</div>
-
 					<h4 class="m01 t0b"><strong>フロントビューあれこれ</strong></h4>
 					<div class="img-float-left m0m">
 						<img src="ico/eqe_350_f.png" loading="lazy" alt="Mercedes design01" width="282" height="150"><br>
@@ -2866,8 +2923,8 @@
 						<span title="一太郎、Edge Yahoo！使ってます。">
 							&emsp;典型的 保守・高齢層の方（広島在住）
 						</span>
-							に、この画像を見せたら、
-							<span class="bb">強い拒否反応を示されました</span> w<br>
+						に、この画像を見せたら、
+						<span class="bb">強い拒否反応を示されました</span> w<br>
 						以前の「えぐみのある強さ」を強調。ミラー越しに迫られたら、ちょっと怖いですが、<br>
 						時代に合わせた"顔と服"を提案をする Mercedes としては通常運航です。
 					</p>
@@ -26918,6 +26975,39 @@
 			acc.addEventListener('click', () => acc.classList.toggle('active'));
 		});
 	</script>
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			const topicBtns = document.querySelectorAll('.topics-btn');
+
+			topicBtns.forEach(function (btn) {
+				btn.addEventListener('click', function () {
+					const targetId = this.getAttribute('data-target');
+					const targetContent = document.getElementById(targetId);
+					const isAlreadyActive = this.classList.contains('active');
+
+					// 1. 他のTOPICSボタンと本文をすべて閉じ、選択デザインを解除
+					topicBtns.forEach(function (b) {
+						b.classList.remove('active');
+					});
+					document.querySelectorAll('.topics-wrapper .accordion-content').forEach(function (content) {
+						content.classList.remove('active');
+						content.style.maxHeight = null;
+					});
+
+					// 2. 開いているボタンを再度押した場合は閉じるだけで終了
+					if (isAlreadyActive) return;
+
+					// 3. クリックしたボタンを選択状態にし、対応する本文を下に展開
+					this.classList.add('active');
+					if (targetContent) {
+						targetContent.classList.add('active');
+						targetContent.style.maxHeight = targetContent.scrollHeight + 'px';
+					}
+				});
+			});
+		});
+	</script>
+
 </body>
 
 </html>
