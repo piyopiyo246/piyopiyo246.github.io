@@ -2648,7 +2648,7 @@
 		}
 
 		/* TOPICS用 横並びボタンコンテナ */
-		.topics-btn-group {
+		.side-by-side-btn-group {
 			display: flex;
 			flex-wrap: wrap; /* ★横幅を超えたら自動で下に折り返す指定 */
 			justify-content: flex-start; /* ★ボタン群を左寄せにする */
@@ -2657,7 +2657,7 @@
 		}
 
 		/* 各ボタンの基本スタイル（通常時） */
-		.topics-btn {
+		.side-by-side-btn {
   		flex: 0 0 auto;              /* ★横幅いっぱいに伸ばさず、文字幅に合わせる */
 			padding: 4px 24px;
 			text-align: left;
@@ -2672,12 +2672,12 @@
 		}
 
 		/* ホバー時 */
-		.topics-btn:hover {
+		.side-by-side-btn:hover {
 			background-color: #e5e5e5;
 		}
 
 		/* ▼ 選択中（開いている状態）のアクティブデザイン ▼ */
-		.topics-btn.active {
+		.side-by-side-btn.active {
 			background-color: #666;/* 選択時の背景色（ダークグレー） */
 			color: #fff;/* 選択時の文字色（白） */
 			border-color: #333;
@@ -2685,7 +2685,7 @@
 		}
 
 		/* 矢印（▶）の回転アニメーション */
-		.topics-btn .arrow {
+		.side-by-side-btn .arrow {
 			display: inline-block;
 			transition: transform 0.25s ease;
 			margin-right: 4px;
@@ -2693,13 +2693,13 @@
 		}
 
 		/* 選択されたボタンの矢印を下向きに回転 */
-		.topics-btn.active .arrow {
+		.side-by-side-btn.active .arrow {
 			transform: rotate(90deg);
 		}
 
 		/* スマホ幅（600px以下）の配慮：狭い画面では縦並びへ自動変化 */
 		@media screen and (max-width: 600px) {
-			.topics-btn-group {
+			.side-by-side-btn-group {
 				flex-direction: column;
 				gap: 6px;
 			}
@@ -2795,14 +2795,14 @@
 	</header>
 
 	<article id="topics" class="contents">
-		<div class="topics-wrapper">
+		<div class="side-by-side-wrapper">
 			<h2 class="f s06" title="主にデザインについて思うことを語ります">TOPICS</h2>
 			<!-- 横並びボタンエリア -->
-			<div class="topics-btn-group">
-				<button type="button" class="topics-btn" data-target="topic-neue-klasse">
+			<div class="side-by-side-btn-group">
+				<button type="button" class="side-by-side-btn" data-target="topic-neue-klasse">
 					<span class="arrow">▶</span> 『Neue Klasse』という大役
 				</button>
-				<button type="button" class="topics-btn" data-target="topic-white-c">
+				<button type="button" class="side-by-side-btn" data-target="topic-white-c">
 					<span class="arrow">▶</span> 今度の C は白が似合う
 				</button>
 			</div>
@@ -26976,7 +26976,7 @@
 	</script>
 	<script>
 		document.addEventListener('DOMContentLoaded', function () {
-			const topicBtns = document.querySelectorAll('.topics-btn');
+			const topicBtns = document.querySelectorAll('.side-by-side-btn');
 
 			topicBtns.forEach(function (btn) {
 				btn.addEventListener('click', function () {
@@ -26988,7 +26988,7 @@
 					topicBtns.forEach(function (b) {
 						b.classList.remove('active');
 					});
-					document.querySelectorAll('.topics-wrapper .accordion-content').forEach(function (content) {
+					document.querySelectorAll('.side-by-side-wrapper .accordion-content').forEach(function (content) {
 						content.classList.remove('active');
 						content.style.maxHeight = null;
 					});
