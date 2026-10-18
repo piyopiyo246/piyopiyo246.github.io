@@ -2650,15 +2650,19 @@
 		/* TOPICS用 横並びボタンコンテナ */
 		.side-by-side-btn-group {
 			display: flex;
-			flex-wrap: wrap; /* ★横幅を超えたら自動で下に折り返す指定 */
-			justify-content: flex-start; /* ★ボタン群を左寄せにする */
-			gap: 20px;                   /* ★ボタン同士の間隔を20pxに設定 */
+			flex-wrap: wrap;
+			/* ★横幅を超えたら自動で下に折り返す指定 */
+			justify-content: flex-start;
+			/* ★ボタン群を左寄せにする */
+			gap: 20px;
+			/* ★ボタン同士の間隔を20pxに設定 */
 			margin-bottom: 12px;
 		}
 
 		/* 各ボタンの基本スタイル（通常時） */
 		.side-by-side-btn {
-  		flex: 0 0 auto;              /* ★横幅いっぱいに伸ばさず、文字幅に合わせる */
+			flex: 0 0 auto;
+			/* ★横幅いっぱいに伸ばさず、文字幅に合わせる */
 			padding: 4px 24px;
 			text-align: left;
 			margin: 0 !important;
@@ -2678,8 +2682,10 @@
 
 		/* ▼ 選択中（開いている状態）のアクティブデザイン ▼ */
 		.side-by-side-btn.active {
-			background-color: #666;/* 選択時の背景色（ダークグレー） */
-			color: #fff;/* 選択時の文字色（白） */
+			background-color: #666;
+			/* 選択時の背景色（ダークグレー） */
+			color: #fff;
+			/* 選択時の文字色（白） */
 			border-color: #333;
 			box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 		}
@@ -2808,7 +2814,7 @@
 			</div>
 			<!-- 下に展開される本文エリア -->
 			<div id="topic-neue-klasse" class="accordion-content">
-				<div class="topics-body">
+				<div class="side-by-side-body">
 					<h3>【26/09/30】 BMW 新型 3シリーズ (G50) エンジンモデルが 発表されました。</h3>
 					<div class="style-w">
 						<p class="m01">
@@ -2843,7 +2849,7 @@
 				</div>
 			</div>
 			<div id="topic-white-c" class="accordion-content">
-				<div class="topics-body">
+				<div class="side-by-side-body">
 					<h3>【26/04/16】 新型 Cクラス (W520) EVモデルが 発表されました。</h3>
 					<div class="box90">
 						<p class="m02">
@@ -6303,13 +6309,73 @@
 				<div id="content-body-mb" class="accordion-content" role="region">
 					<div class="accordion-content-inner">
 						<h3 class="sr-only">他の メルセデス・ベンツ 諸元表</h3>
-
-						<div class="accordion m01" id="body-a">
-							<button class="accordion-header min" aria-expanded="false" aria-controls="content-body-a">
-								A クラス
-							</button>
-							<div id="content-body-a" class="accordion-content">
-								<div class="accordion-content-inner">
+						<div class="side-by-side-wrapper">
+							<!-- 横並びボタンエリア -->
+							<div class="side-by-side-btn-group">
+								<button type="button" class="side-by-side-btn" data-target="body-mb-a">
+									<span class="arrow">▶</span>A クラス
+								</button>
+								<button type="button" class="side-by-side-btn" data-target="body-mb-b">
+									<span class="arrow">▶</span>B クラス
+								</button>
+								<button type="button" class="side-by-side-btn" data-target="body-mb-e">
+									<span class="arrow">▶</span>E クラス
+								</button>
+								<button type="button" class="side-by-side-btn" data-target="body-mb-s">
+									<span class="arrow">▶</span>S クラス
+								</button>
+								<button type="button" class="side-by-side-btn" data-target="body-mb-cla">
+									<span class="arrow">▶</span>CLA クラス
+								</button>
+								<button type="button" class="side-by-side-btn" data-target="body-mb-clc">
+									<span class="arrow">▶</span>SC・CLC・C クーペ
+								</button>
+								<button type="button" class="side-by-side-btn" data-target="body-mb-clk">
+									<span class="arrow">▶</span>CLK クラス
+								</button>
+								<button type="button" class="side-by-side-btn" data-target="body-mb-ce">
+									<span class="arrow">▶</span>E クーペ
+								</button>
+								<button type="button" class="side-by-side-btn" data-target="body-mb-cls">
+									<span class="arrow">▶</span>CLS クラス
+								</button>
+								<button type="button" class="side-by-side-btn" data-target="body-mb-cl">
+									<span class="arrow">▶</span>SEC・CL・S クーペ
+								</button>
+								<button type="button" class="side-by-side-btn" data-target="body-mb-slk">
+									<span class="arrow">▶</span>SLK クラス
+								</button>
+								<button type="button" class="side-by-side-btn" data-target="body-mb-sl">
+									<span class="arrow">▶</span>SL クラス
+								</button>
+								<button type="button" class="side-by-side-btn" data-target="body-mb-v1">
+									<span class="arrow">▶</span>Vaneo・Citan
+								</button>
+								<button type="button" class="side-by-side-btn" data-target="body-mb-gla">
+									<span class="arrow">▶</span>GLA クラス
+								</button>
+								<button type="button" class="side-by-side-btn" data-target="body-mb-glb">
+									<span class="arrow">▶</span>GLB クラス
+								</button>
+								<button type="button" class="side-by-side-btn" data-target="body-mb-glc">
+									<span class="arrow">▶</span>GLC クラス
+								</button>
+								<button type="button" class="side-by-side-btn" data-target="body-mb-ml">
+									<span class="arrow">▶</span>ML・GLEクラス
+								</button>
+								<button type="button" class="side-by-side-btn" data-target="body-mb-r">
+									<span class="arrow">▶</span>R クラス
+								</button>
+								<button type="button" class="side-by-side-btn" data-target="body-mb-gl">
+									<span class="arrow">▶</span>GL・GLSクラス
+								</button>
+								<button type="button" class="side-by-side-btn" data-target="body-mb-g">
+									<span class="arrow">▶</span>G クラス
+								</button>
+							</div>
+							<!-- 下に展開される本文エリア -->
+							<div id="body-mb-a" class="accordion-content">
+								<div class="side-by-side-body">
 									<h4 class="sr-only">メルセデス・ベンツ Aクラス 諸元表</h4>
 									<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84_A%E3%82%AF%E3%83%A9%E3%82%B9" class="icon-link wiki" target="_blank" title="Wiki(J) Aクラス"></a>
 									<a href="pic/ja_mb_img_a.html" class="icon-link camera" title="GALERIE" target="_blank"></a>
@@ -6432,14 +6498,9 @@
 									</table>
 								</div>
 							</div>
-						</div>
 
-						<div class="accordion m01" id="body-b">
-							<button class="accordion-header min" aria-expanded="false" aria-controls="content-body-b">
-								B クラス
-							</button>
-							<div id="content-body-b" class="accordion-content">
-								<div class="accordion-content-inner">
+							<div id="body-mb-b" class="accordion-content">
+								<div class="side-by-side-body">
 									<h4 class="sr-only">メルセデス・ベンツ Bクラス 諸元表</h4>
 									<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84_B%E3%82%AF%E3%83%A9%E3%82%B9" class="icon-link wiki" target="_blank" title="Wiki(J) Bクラス"></a>
 									<a href="pic/ja_mb_img_b.html" class="icon-link camera" title="GALERIE" target="_blank"></a>
@@ -6540,14 +6601,9 @@
 									</table>
 								</div>
 							</div>
-						</div>
 
-						<div class="accordion m01" id="body-e">
-							<button class="accordion-header min" aria-expanded="false" aria-controls="content-body-e">
-								E クラス
-							</button>
-							<div id="content-body-e" class="accordion-content">
-								<div class="accordion-content-inner">
+							<div id="body-mb-e" class="accordion-content">
+								<div class="side-by-side-body">
 									<h4 class="sr-only">メルセデス・ベンツ Eクラス 諸元表</h4>
 									<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84_E%E3%82%AF%E3%83%A9%E3%82%B9" class="icon-link wiki" target="_blank" title="Wiki(J) Eクラス"></a>
 									<a href="pic/ja_mb_img_e.html" class="icon-link camera" title="GALERIE" target="_blank"></a>
@@ -6802,14 +6858,9 @@
 									</table>
 								</div>
 							</div>
-						</div>
 
-						<div class="accordion m01" id="body-s">
-							<button class="accordion-header min" aria-expanded="false" aria-controls="content-body-s">
-								S クラス
-							</button>
-							<div id="content-body-s" class="accordion-content">
-								<div class="accordion-content-inner">
+							<div id="body-mb-s" class="accordion-content">
+								<div class="side-by-side-body">
 									<h4 class="sr-only">メルセデス・ベンツ Sクラス 諸元表</h4>
 									<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84_S%E3%82%AF%E3%83%A9%E3%82%B9" class="icon-link wiki" target="_blank" title="Wiki(J) Sクラス"></a>
 									<a href="pic/ja_mb_img_s.html" class="icon-link camera" title="GALERIE" target="_blank"></a>
@@ -7064,14 +7115,9 @@
 									</table>
 								</div>
 							</div>
-						</div>
 
-						<div class="accordion m01" id="body-cla">
-							<button class="accordion-header min" aria-expanded="false" aria-controls="content-body-cla">
-								CLA
-							</button>
-							<div id="content-body-cla" class="accordion-content">
-								<div class="accordion-content-inner">
+							<div id="body-mb-cla" class="accordion-content">
+								<div class="side-by-side-body">
 									<h4 class="sr-only">メルセデス・ベンツ CLAクラス 諸元表</h4>
 									<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84_CLA%E3%82%AF%E3%83%A9%E3%82%B9" class="icon-link wiki" target="_blank" title="Wiki(J) CLAクラス"></a>
 									<a href="pic/ja_mb_img_cla.html" class="icon-link camera" title="GALERIE" target="_blank"></a>
@@ -7172,1890 +7218,1819 @@
 									</table>
 								</div>
 							</div>
-						</div>
 
-						<div class="accordion m01" id="body-clc">
-							<button class="accordion-header min" aria-expanded="false" aria-controls="content-body-clc">
-								SC・CLC・C クーペ
-							</button>
-							<div id="content-body-clc" class="accordion-content">
-								<h4 class="sr-only">メルセデス・ベンツ CL203 諸元表</h4>
-								<a href="https://de.wikipedia.org/wiki/Mercedes-Benz_CL203" class="icon-link wiki" target="_blank" title="Wiki(D) Mercedes-Benz CL203"></a>
-								<a href="pic/ja_mb_img_clc.html" class="icon-link camera" title="GALERIE" target="_blank"></a>
-								FR / 4MATIC (C204 - )
-								<table class="body-table">
-									<thead>
-										<tr>
-											<th scope="col"><span title="Jahr der Lieferung/デリバリーした年">年</span></th>
-											<th scope="col" class="b">code</th>
-											<th scope="col">var.</th>
-											<th scope="col" class="b"><span title="in voller Länge/mm">全長</span></th>
-											<th scope="col"><span title="Gesamtbreite/mm">全幅</span></th>
-											<th scope="col"><span title="Gesamthöhe/mm">全高</span></th>
-											<th scope="col"><span title="Radstand/mm/ホイールベース">軸距</span></th>
-											<th scope="col" class="b"><span title="Volles Gewicht/kg">全重</span></th>
-											<th scope="col"><span title="Minimaler Wenderadius/最小回転半径">回</span></th>
-											<th scope="col" class="b"><span title="Suspension">sus</span></th>
-											<th scope="col"><span title="Luftwiderstandsbeiwert/抗力係数">CD</span></th>
-											<th scope="col"><span title="Übertragung/トランスミッション">T/M</span></th>
-											<th scope="col"><span title="Motor/エンジン">E/G</span></th>
-											<th scope="col"><span title="Motortyp/エンジン配列">typ</span></th>
-											<th scope="col"><span title="Zylinderkopf/シリンダーヘッド">head</span></th>
-											<th scope="col"><span title="Verschiebung/排気量">cm&sup3;</span></th>
-											<th scope="col"><span title="仏馬力">PS</span></th>
-											<th scope="col"><span title="maximale Geschwindigkeit/最高速度">max</span></th>
-											<th scope="col"><span title="0-100km/h:sec">100</span></th>
-											<th scope="col"><span title="Zusätzliche Ausrüstung">補機</span></th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>'00</td>
-											<td class="b">CL203 </td>
-											<td class="left fs80pa"><a href="https://www.automobile-catalog.com/car/2000/1537730/mercedes-benz_c_200_kompressor_sportcoupe_automatic.html" target="_blank">C200K SC</a></td>
-											<td class="b">4,343</td>
-											<td>1,728</td>
-											<td>1,406</td>
-											<td>2,715</td>
-											<td class="b">1,405</td>
-											<td>5.0</td>
-											<td class="b">ms/ml</td>
-											<td>0.29</td>
-											<td>5G</td>
-											<td>M111</td>
-											<td>R4</td>
-											<td>DOHC16v</td>
-											<td>1,998</td>
-											<td>163</td>
-											<td>219</td>
-											<td>9.1</td>
-											<td class="left fs80pa">Komp Mehrpunkt-fi ic</td>
-										</tr>
-										<tr>
-											<td>'08</td>
-											<td class="b">CL203</td>
-											<td class="left fs80pa"><a href="https://www.automobile-catalog.com/car/2008/1552730/mercedes-benz_clc_200_kompressor_automatic.html" target="_blank">CLC200K</a></td>
-											<td class="b">4,452</td>
-											<td>1,728</td>
-											<td>1,405</td>
-											<td>2,715</td>
-											<td class="b">1,425</td>
-											<td>5.4</td>
-											<td class="b">ms/ml</td>
-											<td>0.29</td>
-											<td>5G</td>
-											<td>M271</td>
-											<td>R4</td>
-											<td>DOHC16v</td>
-											<td>1,796</td>
-											<td>184</td>
-											<td>231</td>
-											<td>8.7</td>
-											<td class="left fs80pa">Komp Mehrpunkt-fi ic</td>
-										</tr>
-										<tr>
-											<td>'12</td>
-											<td class="b">C204</td>
-											<td class="left"><a href="https://www.automobile-catalog.com/car/2012/2080355/mercedes-benz_c_200_coupe_7g-tronic.html" target="_blank">C200C</a></td>
-											<td class="b">4,590</td>
-											<td>1,770</td>
-											<td>1,406</td>
-											<td>2,760</td>
-											<td class="b">1,470</td>
-											<td>5.1</td>
-											<td class="b">ms/ml</td>
-											<td>0.27</td>
-											<td>7G</td>
-											<td>M271</td>
-											<td>R4</td>
-											<td>DOHC16v</td>
-											<td>1,796</td>
-											<td>184</td>
-											<td>237</td>
-											<td>7.8</td>
-											<td class="left">Turbo di</td>
-										</tr>
-										<tr>
-											<td>'16</td>
-											<td class="b">C205</td>
-											<td class="left"><a href="https://www.automobile-catalog.com/car/2016/2504285/mercedes-benz_c_200_coupe_9g-tronic.html" target="_blank">C200C</a></td>
-											<td class="b">4,686</td>
-											<td>1,810</td>
-											<td>1,405</td>
-											<td>2,840</td>
-											<td class="b">1,450</td>
-											<td>5.2</td>
-											<td class="b">4l/ml</td>
-											<td>0.29</td>
-											<td>9G</td>
-											<td>M274</td>
-											<td>R4</td>
-											<td>DOHC16v</td>
-											<td>1,991</td>
-											<td>184</td>
-											<td>230</td>
-											<td>7.1</td>
-											<td class="left">Turbo VVT di</td>
-										</tr>
-									</tbody>
-								</table>
+							<div id="body-mb-clc" class="accordion-content">
+								<div class="side-by-side-body">
+									<h4 class="sr-only">メルセデス・ベンツ CL203 諸元表</h4>
+									<a href="https://de.wikipedia.org/wiki/Mercedes-Benz_CL203" class="icon-link wiki" target="_blank" title="Wiki(D) Mercedes-Benz CL203"></a>
+									<a href="pic/ja_mb_img_clc.html" class="icon-link camera" title="GALERIE" target="_blank"></a>
+									FR / 4MATIC (C204 - )
+									<table class="body-table">
+										<thead>
+											<tr>
+												<th scope="col"><span title="Jahr der Lieferung/デリバリーした年">年</span></th>
+												<th scope="col" class="b">code</th>
+												<th scope="col">var.</th>
+												<th scope="col" class="b"><span title="in voller Länge/mm">全長</span></th>
+												<th scope="col"><span title="Gesamtbreite/mm">全幅</span></th>
+												<th scope="col"><span title="Gesamthöhe/mm">全高</span></th>
+												<th scope="col"><span title="Radstand/mm/ホイールベース">軸距</span></th>
+												<th scope="col" class="b"><span title="Volles Gewicht/kg">全重</span></th>
+												<th scope="col"><span title="Minimaler Wenderadius/最小回転半径">回</span></th>
+												<th scope="col" class="b"><span title="Suspension">sus</span></th>
+												<th scope="col"><span title="Luftwiderstandsbeiwert/抗力係数">CD</span></th>
+												<th scope="col"><span title="Übertragung/トランスミッション">T/M</span></th>
+												<th scope="col"><span title="Motor/エンジン">E/G</span></th>
+												<th scope="col"><span title="Motortyp/エンジン配列">typ</span></th>
+												<th scope="col"><span title="Zylinderkopf/シリンダーヘッド">head</span></th>
+												<th scope="col"><span title="Verschiebung/排気量">cm&sup3;</span></th>
+												<th scope="col"><span title="仏馬力">PS</span></th>
+												<th scope="col"><span title="maximale Geschwindigkeit/最高速度">max</span></th>
+												<th scope="col"><span title="0-100km/h:sec">100</span></th>
+												<th scope="col"><span title="Zusätzliche Ausrüstung">補機</span></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>'00</td>
+												<td class="b">CL203 </td>
+												<td class="left fs80pa"><a href="https://www.automobile-catalog.com/car/2000/1537730/mercedes-benz_c_200_kompressor_sportcoupe_automatic.html" target="_blank">C200K SC</a></td>
+												<td class="b">4,343</td>
+												<td>1,728</td>
+												<td>1,406</td>
+												<td>2,715</td>
+												<td class="b">1,405</td>
+												<td>5.0</td>
+												<td class="b">ms/ml</td>
+												<td>0.29</td>
+												<td>5G</td>
+												<td>M111</td>
+												<td>R4</td>
+												<td>DOHC16v</td>
+												<td>1,998</td>
+												<td>163</td>
+												<td>219</td>
+												<td>9.1</td>
+												<td class="left fs80pa">Komp Mehrpunkt-fi ic</td>
+											</tr>
+											<tr>
+												<td>'08</td>
+												<td class="b">CL203</td>
+												<td class="left fs80pa"><a href="https://www.automobile-catalog.com/car/2008/1552730/mercedes-benz_clc_200_kompressor_automatic.html" target="_blank">CLC200K</a></td>
+												<td class="b">4,452</td>
+												<td>1,728</td>
+												<td>1,405</td>
+												<td>2,715</td>
+												<td class="b">1,425</td>
+												<td>5.4</td>
+												<td class="b">ms/ml</td>
+												<td>0.29</td>
+												<td>5G</td>
+												<td>M271</td>
+												<td>R4</td>
+												<td>DOHC16v</td>
+												<td>1,796</td>
+												<td>184</td>
+												<td>231</td>
+												<td>8.7</td>
+												<td class="left fs80pa">Komp Mehrpunkt-fi ic</td>
+											</tr>
+											<tr>
+												<td>'12</td>
+												<td class="b">C204</td>
+												<td class="left"><a href="https://www.automobile-catalog.com/car/2012/2080355/mercedes-benz_c_200_coupe_7g-tronic.html" target="_blank">C200C</a></td>
+												<td class="b">4,590</td>
+												<td>1,770</td>
+												<td>1,406</td>
+												<td>2,760</td>
+												<td class="b">1,470</td>
+												<td>5.1</td>
+												<td class="b">ms/ml</td>
+												<td>0.27</td>
+												<td>7G</td>
+												<td>M271</td>
+												<td>R4</td>
+												<td>DOHC16v</td>
+												<td>1,796</td>
+												<td>184</td>
+												<td>237</td>
+												<td>7.8</td>
+												<td class="left">Turbo di</td>
+											</tr>
+											<tr>
+												<td>'16</td>
+												<td class="b">C205</td>
+												<td class="left"><a href="https://www.automobile-catalog.com/car/2016/2504285/mercedes-benz_c_200_coupe_9g-tronic.html" target="_blank">C200C</a></td>
+												<td class="b">4,686</td>
+												<td>1,810</td>
+												<td>1,405</td>
+												<td>2,840</td>
+												<td class="b">1,450</td>
+												<td>5.2</td>
+												<td class="b">4l/ml</td>
+												<td>0.29</td>
+												<td>9G</td>
+												<td>M274</td>
+												<td>R4</td>
+												<td>DOHC16v</td>
+												<td>1,991</td>
+												<td>184</td>
+												<td>230</td>
+												<td>7.1</td>
+												<td class="left">Turbo VVT di</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
 							</div>
-						</div>
-					</div>
 
-					<div class="accordion m01" id="body-clk">
-						<button class="accordion-header min" aria-expanded="false" aria-controls="content-body-clk">
-							CLK
-						</button>
-						<div id="content-body-clk" class="accordion-content">
-							<div class="accordion-content-inner">
-								<h4 class="sr-only">メルセデス・ベンツ CLKクラス 諸元表</h4>
-								<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84_CLK%E3%82%AF%E3%83%A9%E3%82%B9" class="icon-link wiki" target="_blank" title="Wiki(J) CLKクラス"></a>
-								<a href="pic/ja_mb_img_clk.html" class="icon-link camera" title="GALERIE" target="_blank"></a>
-								FR
-								<table class="body-table">
-									<thead>
-										<tr>
-											<th scope="col"><span title="Jahr der Lieferung/デリバリーした年">年</span></th>
-											<th scope="col" class="b">code</th>
-											<th scope="col">var.</th>
-											<th scope="col" class="b"><span title="in voller Länge/mm">全長</span></th>
-											<th scope="col"><span title="Gesamtbreite/mm">全幅</span></th>
-											<th scope="col"><span title="Gesamthöhe/mm">全高</span></th>
-											<th scope="col"><span title="Radstand/mm/ホイールベース">軸距</span></th>
-											<th scope="col" class="b"><span title="Volles Gewicht/kg">全重</span></th>
-											<th scope="col"><span title="Minimaler Wenderadius/最小回転半径">回</span></th>
-											<th scope="col" class="b"><span title="Suspension">sus</span></th>
-											<th scope="col"><span title="Luftwiderstandsbeiwert/抗力係数">CD</span></th>
-											<th scope="col"><span title="Übertragung/トランスミッション">T/M</span></th>
-											<th scope="col"><span title="Motor/エンジン">E/G</span></th>
-											<th scope="col"><span title="Motortyp/エンジン配列">typ</span></th>
-											<th scope="col"><span title="Zylinderkopf/シリンダーヘッド">head</span></th>
-											<th scope="col"><span title="Verschiebung/排気量">cm&sup3;</span></th>
-											<th scope="col"><span title="仏馬力">PS</span></th>
-											<th scope="col"><span title="maximale Geschwindigkeit/最高速度">max</span></th>
-											<th scope="col"><span title="0-100km/h:sec">100</span></th>
-											<th scope="col"><span title="Zusätzliche Ausrüstung">補機</span></th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>'97</td>
-											<td class="b">C208</td>
-											<td class="left"><a href="https://www.automobile-catalog.com/car/1997/1530125/mercedes-benz_clk_200_coupe_automatic.html" target="_blank">CLK200</a></td>
-											<td class="b">4,567 </td>
-											<td>1,722</td>
-											<td>1,371</td>
-											<td>2,690</td>
-											<td class="b">1,300</td>
-											<td>4.9</td>
-											<td class="b">dw/ml</td>
-											<td>0.30</td>
-											<td>5G</td>
-											<td>M111</td>
-											<td>R4</td>
-											<td>DOHC16v</td>
-											<td>1,998</td>
-											<td>136</td>
-											<td>207</td>
-											<td>10.8</td>
-											<td class="left">Mehrpunkt-fi</td>
-										</tr>
-										<tr>
-											<td>'02</td>
-											<td class="b">C209</td>
-											<td class="left"><a href="https://www.automobile-catalog.com/car/2002/1543100/mercedes-benz_clk_200_kompressor_automatic.html" target="_blank">CLK200K</a></td>
-											<td class="b">4,638</td>
-											<td>1,740</td>
-											<td>1,413</td>
-											<td>2,715</td>
-											<td class="b">1,465</td>
-											<td>5.0</td>
-											<td class="b">3l/ml</td>
-											<td>0.28</td>
-											<td>5G</td>
-											<td>M271</td>
-											<td>R4</td>
-											<td>DOHC16v</td>
-											<td>1,796</td>
-											<td>163</td>
-											<td>224</td>
-											<td>9.4</td>
-											<td class="left">Komp Mehrpunkt-fi</td>
-										</tr>
-									</tbody>
-								</table>
+							<div id="body-mb-clk" class="accordion-content">
+								<div class="side-by-side-body">
+									<h4 class="sr-only">メルセデス・ベンツ CLKクラス 諸元表</h4>
+									<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84_CLK%E3%82%AF%E3%83%A9%E3%82%B9" class="icon-link wiki" target="_blank" title="Wiki(J) CLKクラス"></a>
+									<a href="pic/ja_mb_img_clk.html" class="icon-link camera" title="GALERIE" target="_blank"></a>
+									FR
+									<table class="body-table">
+										<thead>
+											<tr>
+												<th scope="col"><span title="Jahr der Lieferung/デリバリーした年">年</span></th>
+												<th scope="col" class="b">code</th>
+												<th scope="col">var.</th>
+												<th scope="col" class="b"><span title="in voller Länge/mm">全長</span></th>
+												<th scope="col"><span title="Gesamtbreite/mm">全幅</span></th>
+												<th scope="col"><span title="Gesamthöhe/mm">全高</span></th>
+												<th scope="col"><span title="Radstand/mm/ホイールベース">軸距</span></th>
+												<th scope="col" class="b"><span title="Volles Gewicht/kg">全重</span></th>
+												<th scope="col"><span title="Minimaler Wenderadius/最小回転半径">回</span></th>
+												<th scope="col" class="b"><span title="Suspension">sus</span></th>
+												<th scope="col"><span title="Luftwiderstandsbeiwert/抗力係数">CD</span></th>
+												<th scope="col"><span title="Übertragung/トランスミッション">T/M</span></th>
+												<th scope="col"><span title="Motor/エンジン">E/G</span></th>
+												<th scope="col"><span title="Motortyp/エンジン配列">typ</span></th>
+												<th scope="col"><span title="Zylinderkopf/シリンダーヘッド">head</span></th>
+												<th scope="col"><span title="Verschiebung/排気量">cm&sup3;</span></th>
+												<th scope="col"><span title="仏馬力">PS</span></th>
+												<th scope="col"><span title="maximale Geschwindigkeit/最高速度">max</span></th>
+												<th scope="col"><span title="0-100km/h:sec">100</span></th>
+												<th scope="col"><span title="Zusätzliche Ausrüstung">補機</span></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>'97</td>
+												<td class="b">C208</td>
+												<td class="left"><a href="https://www.automobile-catalog.com/car/1997/1530125/mercedes-benz_clk_200_coupe_automatic.html" target="_blank">CLK200</a></td>
+												<td class="b">4,567 </td>
+												<td>1,722</td>
+												<td>1,371</td>
+												<td>2,690</td>
+												<td class="b">1,300</td>
+												<td>4.9</td>
+												<td class="b">dw/ml</td>
+												<td>0.30</td>
+												<td>5G</td>
+												<td>M111</td>
+												<td>R4</td>
+												<td>DOHC16v</td>
+												<td>1,998</td>
+												<td>136</td>
+												<td>207</td>
+												<td>10.8</td>
+												<td class="left">Mehrpunkt-fi</td>
+											</tr>
+											<tr>
+												<td>'02</td>
+												<td class="b">C209</td>
+												<td class="left"><a href="https://www.automobile-catalog.com/car/2002/1543100/mercedes-benz_clk_200_kompressor_automatic.html" target="_blank">CLK200K</a></td>
+												<td class="b">4,638</td>
+												<td>1,740</td>
+												<td>1,413</td>
+												<td>2,715</td>
+												<td class="b">1,465</td>
+												<td>5.0</td>
+												<td class="b">3l/ml</td>
+												<td>0.28</td>
+												<td>5G</td>
+												<td>M271</td>
+												<td>R4</td>
+												<td>DOHC16v</td>
+												<td>1,796</td>
+												<td>163</td>
+												<td>224</td>
+												<td>9.4</td>
+												<td class="left">Komp Mehrpunkt-fi</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
 							</div>
-						</div>
-					</div>
 
-					<div class="accordion m01" id="body-ce">
-						<button class="accordion-header min" aria-expanded="false" aria-controls="content-body-ce">
-							E クーペ
-						</button>
-						<div id="content-body-ce" class="accordion-content">
-							<div class="accordion-content-inner">
-								<a href="pic/ja_mb_img_ce.html" class="icon-link camera" title="GALERIE" target="_blank"></a>
-								FR / 4MATIC (C207 , C238)
-								<table class="body-table">
-									<thead>
-										<tr>
-											<th scope="col"><span title="Jahr der Lieferung/デリバリーした年">年</span></th>
-											<th scope="col" class="b">code</th>
-											<th scope="col">var.</th>
-											<th scope="col" class="b"><span title="in voller Länge/mm">全長</span></th>
-											<th scope="col"><span title="Gesamtbreite/mm">全幅</span></th>
-											<th scope="col"><span title="Gesamthöhe/mm">全高</span></th>
-											<th scope="col"><span title="Radstand/mm/ホイールベース">軸距</span></th>
-											<th scope="col" class="b"><span title="Volles Gewicht/kg">全重</span></th>
-											<th scope="col"><span title="Minimaler Wenderadius/最小回転半径">回</span></th>
-											<th scope="col" class="b"><span title="Suspension">sus</span></th>
-											<th scope="col"><span title="Luftwiderstandsbeiwert/抗力係数">CD</span></th>
-											<th scope="col"><span title="Übertragung/トランスミッション">T/M</span></th>
-											<th scope="col"><span title="Motor/エンジン">E/G</span></th>
-											<th scope="col"><span title="Motortyp/エンジン配列">typ</span></th>
-											<th scope="col"><span title="Zylinderkopf/シリンダーヘッド">head</span></th>
-											<th scope="col"><span title="Verschiebung/排気量">cm&sup3;</span></th>
-											<th scope="col"><span title="仏馬力">PS</span></th>
-											<th scope="col"><span title="maximale Geschwindigkeit/最高速度">max</span></th>
-											<th scope="col"><span title="0-100km/h:sec">100</span></th>
-											<th scope="col"><span title="Zusätzliche Ausrüstung">補機</span></th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>'68</td>
-											<td class="b">C114</td>
-											<td class="left"><a href="https://www.automobile-catalog.com/car/1968/1467440/mercedes-benz_250_ce_automatic.html" target="_blank">250CE</a></td>
-											<td class="b">4,685</td>
-											<td>1,790</td>
-											<td>1,395</td>
-											<td>2,750</td>
-											<td class="b">1,380</td>
-											<td></td>
-											<td class="b">dw/st</td>
-											<td>0.45</td>
-											<td>4G</td>
-											<td>M114</td>
-											<td>R6</td>
-											<td>SOHC12v</td>
-											<td>2,496</td>
-											<td>170</td>
-											<td>181</td>
-											<td>11.3</td>
-											<td class="left">Bosch D-Jetronic</td>
-										</tr>
-										<tr>
-											<td>'80</td>
-											<td class="b">C123</td>
-											<td class="left"><a href="https://www.automobile-catalog.com/car/1980/1473650/mercedes-benz_230_ce_automatic.html" target="_blank">230CE</a></td>
-											<td class="b">4,640</td>
-											<td>1,786</td>
-											<td>1,395</td>
-											<td>2,710</td>
-											<td class="b">1,390</td>
-											<td></td>
-											<td class="b">dw/st</td>
-											<td>0.42</td>
-											<td>4G</td>
-											<td>M102</td>
-											<td>R4</td>
-											<td>SOHC 8v</td>
-											<td>2,299</td>
-											<td>136</td>
-											<td>180</td>
-											<td>11.6</td>
-											<td class="left">Bosch K-Jetronic</td>
-										</tr>
-										<tr>
-											<td>'87</td>
-											<td class="b">C124</td>
-											<td class="left"><a href="https://www.automobile-catalog.com/car/1987/1518965/mercedes-benz_230_ce_automatic.html" target="_blank">230CE</a></td>
-											<td class="b">4,655</td>
-											<td>1,740</td>
-											<td>1,410</td>
-											<td>2,715</td>
-											<td class="b">1,340</td>
-											<td>5.1</td>
-											<td class="b">ms/ml</td>
-											<td>0.28</td>
-											<td>4G</td>
-											<td>M102</td>
-											<td>R4</td>
-											<td>SOHC 8v</td>
-											<td>2,299</td>
-											<td>136</td>
-											<td>201</td>
-											<td>11.0</td>
-											<td class="left">Bosch KE-Jetronic</td>
-										</tr>
-										<tr>
-											<td>'10</td>
-											<td class="b">C207</td>
-											<td class="left"><a href="https://www.automobile-catalog.com/car/2010/1554215/mercedes-benz_e_200_cgi_blueefficiency_coupe_automatic.html" target="_blank">E200C</a></td>
-											<td class="b">4,698</td>
-											<td>1,786</td>
-											<td>1,397</td>
-											<td>2,760</td>
-											<td class="b">1,505</td>
-											<td>5.1</td>
-											<td class="b">3l/ml</td>
-											<td>0.24</td>
-											<td>5G</td>
-											<td>M271</td>
-											<td>R4</td>
-											<td>DOHC16v</td>
-											<td>1,796</td>
-											<td>184</td>
-											<td>240</td>
-											<td>8.3</td>
-											<td class="left">Turbo di</td>
-										</tr>
-										<tr>
-											<td>'17</td>
-											<td class="b">C238</td>
-											<td class="left"><a href="https://www.automobile-catalog.com/car/2017/2504450/mercedes-benz_e_200_coupe.html" target="_blank">E200C</a></td>
-											<td class="b">4,826</td>
-											<td>1,860</td>
-											<td>1,430</td>
-											<td>2,873</td>
-											<td class="b">1,580</td>
-											<td>5.3</td>
-											<td class="b">4l/ml</td>
-											<td>0.27</td>
-											<td>9G</td>
-											<td>M274</td>
-											<td>R4</td>
-											<td>DOHC16v</td>
-											<td>1,991</td>
-											<td>184</td>
-											<td>231</td>
-											<td>7.6</td>
-											<td class="left">Turbo VVT di</td>
-										</tr>
-										<tr>
-											<td>'23</td>
-											<td class="b">C236</td>
-											<td class="left fs80pa"><a href="https://www.automobile-catalog.com/car/2025/3268070/mercedes-benz_cle_200_coupe.html" target="_blank">CLE200</a></td>
-											<td class="b">4,850</td>
-											<td>1,861</td>
-											<td>1,423</td>
-											<td>2,865</td>
-											<td class="b">1,715</td>
-											<td>5.5</td>
-											<td class="b">4l/ml</td>
-											<td>0.25</td>
-											<td>9G</td>
-											<td>M254</td>
-											<td>R4</td>
-											<td>DOHC16v</td>
-											<td>1,999</td>
-											<td class="fs80pa">204+23</td>
-											<td>240</td>
-											<td>7.4</td>
-											<td class="left fs80pa">48v-ISG turbo VVT di</td>
-										</tr>
-									</tbody>
-								</table>
+							<div id="body-mb-ce" class="accordion-content">
+								<div class="side-by-side-body">
+									<h4 class="sr-only">メルセデス・ベンツ CE/Eクーペ 諸元表</h4>
+									<a href="pic/ja_mb_img_ce.html" class="icon-link camera" title="GALERIE" target="_blank"></a>
+									FR / 4MATIC (C207 , C238)
+									<table class="body-table">
+										<thead>
+											<tr>
+												<th scope="col"><span title="Jahr der Lieferung/デリバリーした年">年</span></th>
+												<th scope="col" class="b">code</th>
+												<th scope="col">var.</th>
+												<th scope="col" class="b"><span title="in voller Länge/mm">全長</span></th>
+												<th scope="col"><span title="Gesamtbreite/mm">全幅</span></th>
+												<th scope="col"><span title="Gesamthöhe/mm">全高</span></th>
+												<th scope="col"><span title="Radstand/mm/ホイールベース">軸距</span></th>
+												<th scope="col" class="b"><span title="Volles Gewicht/kg">全重</span></th>
+												<th scope="col"><span title="Minimaler Wenderadius/最小回転半径">回</span></th>
+												<th scope="col" class="b"><span title="Suspension">sus</span></th>
+												<th scope="col"><span title="Luftwiderstandsbeiwert/抗力係数">CD</span></th>
+												<th scope="col"><span title="Übertragung/トランスミッション">T/M</span></th>
+												<th scope="col"><span title="Motor/エンジン">E/G</span></th>
+												<th scope="col"><span title="Motortyp/エンジン配列">typ</span></th>
+												<th scope="col"><span title="Zylinderkopf/シリンダーヘッド">head</span></th>
+												<th scope="col"><span title="Verschiebung/排気量">cm&sup3;</span></th>
+												<th scope="col"><span title="仏馬力">PS</span></th>
+												<th scope="col"><span title="maximale Geschwindigkeit/最高速度">max</span></th>
+												<th scope="col"><span title="0-100km/h:sec">100</span></th>
+												<th scope="col"><span title="Zusätzliche Ausrüstung">補機</span></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>'68</td>
+												<td class="b">C114</td>
+												<td class="left"><a href="https://www.automobile-catalog.com/car/1968/1467440/mercedes-benz_250_ce_automatic.html" target="_blank">250CE</a></td>
+												<td class="b">4,685</td>
+												<td>1,790</td>
+												<td>1,395</td>
+												<td>2,750</td>
+												<td class="b">1,380</td>
+												<td></td>
+												<td class="b">dw/st</td>
+												<td>0.45</td>
+												<td>4G</td>
+												<td>M114</td>
+												<td>R6</td>
+												<td>SOHC12v</td>
+												<td>2,496</td>
+												<td>170</td>
+												<td>181</td>
+												<td>11.3</td>
+												<td class="left">Bosch D-Jetronic</td>
+											</tr>
+											<tr>
+												<td>'80</td>
+												<td class="b">C123</td>
+												<td class="left"><a href="https://www.automobile-catalog.com/car/1980/1473650/mercedes-benz_230_ce_automatic.html" target="_blank">230CE</a></td>
+												<td class="b">4,640</td>
+												<td>1,786</td>
+												<td>1,395</td>
+												<td>2,710</td>
+												<td class="b">1,390</td>
+												<td></td>
+												<td class="b">dw/st</td>
+												<td>0.42</td>
+												<td>4G</td>
+												<td>M102</td>
+												<td>R4</td>
+												<td>SOHC 8v</td>
+												<td>2,299</td>
+												<td>136</td>
+												<td>180</td>
+												<td>11.6</td>
+												<td class="left">Bosch K-Jetronic</td>
+											</tr>
+											<tr>
+												<td>'87</td>
+												<td class="b">C124</td>
+												<td class="left"><a href="https://www.automobile-catalog.com/car/1987/1518965/mercedes-benz_230_ce_automatic.html" target="_blank">230CE</a></td>
+												<td class="b">4,655</td>
+												<td>1,740</td>
+												<td>1,410</td>
+												<td>2,715</td>
+												<td class="b">1,340</td>
+												<td>5.1</td>
+												<td class="b">ms/ml</td>
+												<td>0.28</td>
+												<td>4G</td>
+												<td>M102</td>
+												<td>R4</td>
+												<td>SOHC 8v</td>
+												<td>2,299</td>
+												<td>136</td>
+												<td>201</td>
+												<td>11.0</td>
+												<td class="left">Bosch KE-Jetronic</td>
+											</tr>
+											<tr>
+												<td>'10</td>
+												<td class="b">C207</td>
+												<td class="left"><a href="https://www.automobile-catalog.com/car/2010/1554215/mercedes-benz_e_200_cgi_blueefficiency_coupe_automatic.html" target="_blank">E200C</a></td>
+												<td class="b">4,698</td>
+												<td>1,786</td>
+												<td>1,397</td>
+												<td>2,760</td>
+												<td class="b">1,505</td>
+												<td>5.1</td>
+												<td class="b">3l/ml</td>
+												<td>0.24</td>
+												<td>5G</td>
+												<td>M271</td>
+												<td>R4</td>
+												<td>DOHC16v</td>
+												<td>1,796</td>
+												<td>184</td>
+												<td>240</td>
+												<td>8.3</td>
+												<td class="left">Turbo di</td>
+											</tr>
+											<tr>
+												<td>'17</td>
+												<td class="b">C238</td>
+												<td class="left"><a href="https://www.automobile-catalog.com/car/2017/2504450/mercedes-benz_e_200_coupe.html" target="_blank">E200C</a></td>
+												<td class="b">4,826</td>
+												<td>1,860</td>
+												<td>1,430</td>
+												<td>2,873</td>
+												<td class="b">1,580</td>
+												<td>5.3</td>
+												<td class="b">4l/ml</td>
+												<td>0.27</td>
+												<td>9G</td>
+												<td>M274</td>
+												<td>R4</td>
+												<td>DOHC16v</td>
+												<td>1,991</td>
+												<td>184</td>
+												<td>231</td>
+												<td>7.6</td>
+												<td class="left">Turbo VVT di</td>
+											</tr>
+											<tr>
+												<td>'23</td>
+												<td class="b">C236</td>
+												<td class="left fs80pa"><a href="https://www.automobile-catalog.com/car/2025/3268070/mercedes-benz_cle_200_coupe.html" target="_blank">CLE200</a></td>
+												<td class="b">4,850</td>
+												<td>1,861</td>
+												<td>1,423</td>
+												<td>2,865</td>
+												<td class="b">1,715</td>
+												<td>5.5</td>
+												<td class="b">4l/ml</td>
+												<td>0.25</td>
+												<td>9G</td>
+												<td>M254</td>
+												<td>R4</td>
+												<td>DOHC16v</td>
+												<td>1,999</td>
+												<td class="fs80pa">204+23</td>
+												<td>240</td>
+												<td>7.4</td>
+												<td class="left fs80pa">48v-ISG turbo VVT di</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
 							</div>
-						</div>
-					</div>
 
-					<div class="accordion m01" id="body-cls">
-						<button class="accordion-header min" aria-expanded="false" aria-controls="content-body-cls">
-							CLS
-						</button>
-						<div id="content-body-cls" class="accordion-content">
-							<div class="accordion-content-inner">
-								<h4 class="sr-only">メルセデス・ベンツ CLSクラス 諸元表</h4>
-								<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84_CLS%E3%82%AF%E3%83%A9%E3%82%B9" class="icon-link wiki" target="_blank" title="Wiki(J) CLSクラス"></a>
-								<a href="pic/ja_mb_img_cls.html" class="icon-link camera" title="GALERIE" target="_blank"></a>
-								FR / 4MATIC (C218 , C257)
-								<table class="body-table">
-									<thead>
-										<tr>
-											<th scope="col"><span title="Jahr der Lieferung/デリバリーした年">年</span></th>
-											<th scope="col" class="b">code</th>
-											<th scope="col">var.</th>
-											<th scope="col" class="b"><span title="in voller Länge/mm">全長</span></th>
-											<th scope="col"><span title="Gesamtbreite/mm">全幅</span></th>
-											<th scope="col"><span title="Gesamthöhe/mm">全高</span></th>
-											<th scope="col"><span title="Radstand/mm/ホイールベース">軸距</span></th>
-											<th scope="col" class="b"><span title="Volles Gewicht/kg">全重</span></th>
-											<th scope="col"><span title="Minimaler Wenderadius/最小回転半径">回</span></th>
-											<th scope="col" class="b"><span title="Suspension">sus</span></th>
-											<th scope="col"><span title="Luftwiderstandsbeiwert/抗力係数">CD</span></th>
-											<th scope="col"><span title="Übertragung/トランスミッション">T/M</span></th>
-											<th scope="col"><span title="Motor/エンジン">E/G</span></th>
-											<th scope="col"><span title="Motortyp/エンジン配列">typ</span></th>
-											<th scope="col"><span title="Zylinderkopf/シリンダーヘッド">head</span></th>
-											<th scope="col"><span title="Verschiebung/排気量">cm&sup3;</span></th>
-											<th scope="col"><span title="仏馬力">PS</span></th>
-											<th scope="col"><span title="maximale Geschwindigkeit/最高速度">max</span></th>
-											<th scope="col"><span title="0-100km/h:sec">100</span></th>
-											<th scope="col"><span title="Zusätzliche Ausrüstung">補機</span></th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>'04</td>
-											<td class="b">C219</td>
-											<td class="left"><a href="https://www.automobile-catalog.com/car/2004/1545530/mercedes-benz_cls_350_7g-tronic.html" target="_blank">CLS350</a></td>
-											<td class="b">4,913</td>
-											<td>1,873</td>
-											<td>1,403</td>
-											<td>2,854</td>
-											<td class="b">1,655</td>
-											<td>5.3</td>
-											<td class="b">4l/ml</td>
-											<td>0.30</td>
-											<td>7G</td>
-											<td>M272</td>
-											<td>V6</td>
-											<td>DOHC24v</td>
-											<td>3,498</td>
-											<td>272</td>
-											<td>254</td>
-											<td>6.5</td>
-											<td class="left">Mehrpunkt-fi VVT</td>
-										</tr>
-										<tr>
-											<td>'11</td>
-											<td class="b">C218</td>
-											<td class="left"><a href="https://www.automobile-catalog.com/car/2011/1557230/mercedes-benz_cls_350_blueefficiency_7g-tronic.html" target="_blank">CLS350</a></td>
-											<td class="b">4,940</td>
-											<td>1,881</td>
-											<td>1,416</td>
-											<td>2,874</td>
-											<td class="b">1,660</td>
-											<td>5.2</td>
-											<td class="b">3l/ml</td>
-											<td>0.27</td>
-											<td>7G</td>
-											<td>M276</td>
-											<td>V6</td>
-											<td>DOHC24V</td>
-											<td>3,498</td>
-											<td>306</td>
-											<td>276</td>
-											<td>5.7</td>
-											<td class="left">VVT di</td>
-										</tr>
-										<tr>
-											<td>'18</td>
-											<td class="b">C257</td>
-											<td class="left fs80pa"><a href="https://www.automobile-catalog.com/car/2018/2632115/mercedes-benz_cls_450_4matic.html" target="_blank">CLS450 4mtc</a></td>
-											<td class="b">4,988</td>
-											<td>1,890</td>
-											<td>1,435</td>
-											<td>2,939</td>
-											<td class="b">1,865</td>
-											<td></td>
-											<td class="b">4l/ml</td>
-											<td>0.28</td>
-											<td>9G</td>
-											<td>M256</td>
-											<td>R6</td>
-											<td>DOHC24V</td>
-											<td>2,999</td>
-											<td>367</td>
-											<td>289</td>
-											<td>4.6</td>
-											<td class="left">48V-ISG Turbo di</td>
-										</tr>
-									</tbody>
-								</table>
+							<div id="body-mb-cls" class="accordion-content">
+								<div class="side-by-side-body">
+									<h4 class="sr-only">メルセデス・ベンツ CLSクラス 諸元表</h4>
+									<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84_CLS%E3%82%AF%E3%83%A9%E3%82%B9" class="icon-link wiki" target="_blank" title="Wiki(J) CLSクラス"></a>
+									<a href="pic/ja_mb_img_cls.html" class="icon-link camera" title="GALERIE" target="_blank"></a>
+									FR / 4MATIC (C218 , C257)
+									<table class="body-table">
+										<thead>
+											<tr>
+												<th scope="col"><span title="Jahr der Lieferung/デリバリーした年">年</span></th>
+												<th scope="col" class="b">code</th>
+												<th scope="col">var.</th>
+												<th scope="col" class="b"><span title="in voller Länge/mm">全長</span></th>
+												<th scope="col"><span title="Gesamtbreite/mm">全幅</span></th>
+												<th scope="col"><span title="Gesamthöhe/mm">全高</span></th>
+												<th scope="col"><span title="Radstand/mm/ホイールベース">軸距</span></th>
+												<th scope="col" class="b"><span title="Volles Gewicht/kg">全重</span></th>
+												<th scope="col"><span title="Minimaler Wenderadius/最小回転半径">回</span></th>
+												<th scope="col" class="b"><span title="Suspension">sus</span></th>
+												<th scope="col"><span title="Luftwiderstandsbeiwert/抗力係数">CD</span></th>
+												<th scope="col"><span title="Übertragung/トランスミッション">T/M</span></th>
+												<th scope="col"><span title="Motor/エンジン">E/G</span></th>
+												<th scope="col"><span title="Motortyp/エンジン配列">typ</span></th>
+												<th scope="col"><span title="Zylinderkopf/シリンダーヘッド">head</span></th>
+												<th scope="col"><span title="Verschiebung/排気量">cm&sup3;</span></th>
+												<th scope="col"><span title="仏馬力">PS</span></th>
+												<th scope="col"><span title="maximale Geschwindigkeit/最高速度">max</span></th>
+												<th scope="col"><span title="0-100km/h:sec">100</span></th>
+												<th scope="col"><span title="Zusätzliche Ausrüstung">補機</span></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>'04</td>
+												<td class="b">C219</td>
+												<td class="left"><a href="https://www.automobile-catalog.com/car/2004/1545530/mercedes-benz_cls_350_7g-tronic.html" target="_blank">CLS350</a></td>
+												<td class="b">4,913</td>
+												<td>1,873</td>
+												<td>1,403</td>
+												<td>2,854</td>
+												<td class="b">1,655</td>
+												<td>5.3</td>
+												<td class="b">4l/ml</td>
+												<td>0.30</td>
+												<td>7G</td>
+												<td>M272</td>
+												<td>V6</td>
+												<td>DOHC24v</td>
+												<td>3,498</td>
+												<td>272</td>
+												<td>254</td>
+												<td>6.5</td>
+												<td class="left">Mehrpunkt-fi VVT</td>
+											</tr>
+											<tr>
+												<td>'11</td>
+												<td class="b">C218</td>
+												<td class="left"><a href="https://www.automobile-catalog.com/car/2011/1557230/mercedes-benz_cls_350_blueefficiency_7g-tronic.html" target="_blank">CLS350</a></td>
+												<td class="b">4,940</td>
+												<td>1,881</td>
+												<td>1,416</td>
+												<td>2,874</td>
+												<td class="b">1,660</td>
+												<td>5.2</td>
+												<td class="b">3l/ml</td>
+												<td>0.27</td>
+												<td>7G</td>
+												<td>M276</td>
+												<td>V6</td>
+												<td>DOHC24V</td>
+												<td>3,498</td>
+												<td>306</td>
+												<td>276</td>
+												<td>5.7</td>
+												<td class="left">VVT di</td>
+											</tr>
+											<tr>
+												<td>'18</td>
+												<td class="b">C257</td>
+												<td class="left fs80pa"><a href="https://www.automobile-catalog.com/car/2018/2632115/mercedes-benz_cls_450_4matic.html" target="_blank">CLS450 4mtc</a></td>
+												<td class="b">4,988</td>
+												<td>1,890</td>
+												<td>1,435</td>
+												<td>2,939</td>
+												<td class="b">1,865</td>
+												<td></td>
+												<td class="b">4l/ml</td>
+												<td>0.28</td>
+												<td>9G</td>
+												<td>M256</td>
+												<td>R6</td>
+												<td>DOHC24V</td>
+												<td>2,999</td>
+												<td>367</td>
+												<td>289</td>
+												<td>4.6</td>
+												<td class="left">48V-ISG Turbo di</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
 							</div>
-						</div>
-					</div>
 
-					<div class="accordion m01" id="body-cl">
-						<button class="accordion-header min" aria-expanded="false" aria-controls="content-body-cl">
-							SEC・CL・S クーペ
-						</button>
-						<div id="content-body-cl" class="accordion-content">
-							<div class="accordion-content-inner">
-								<h4 class="sr-only">メルセデス・ベンツ CLクラス 諸元表</h4>
-								<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84_CL%E3%82%AF%E3%83%A9%E3%82%B9" class="icon-link wiki" target="_blank" title="Wiki(J) CLクラス"></a>
-								<a href="pic/ja_mb_img_cl.html" class="icon-link camera" title="GALERIE" target="_blank"></a>
-								FR / 4MATIC (C216 - )
-								<table class="body-table">
-									<thead>
-										<tr>
-											<th scope="col"><span title="Jahr der Lieferung/デリバリーした年">年</span></th>
-											<th scope="col" class="b">code</th>
-											<th scope="col">var.</th>
-											<th scope="col" class="b"><span title="in voller Länge/mm">全長</span></th>
-											<th scope="col"><span title="Gesamtbreite/mm">全幅</span></th>
-											<th scope="col"><span title="Gesamthöhe/mm">全高</span></th>
-											<th scope="col"><span title="Radstand/mm/ホイールベース">軸距</span></th>
-											<th scope="col" class="b"><span title="Volles Gewicht/kg">全重</span></th>
-											<th scope="col"><span title="Minimaler Wenderadius/最小回転半径">回</span></th>
-											<th scope="col" class="b"><span title="Suspension">sus</span></th>
-											<th scope="col"><span title="Luftwiderstandsbeiwert/抗力係数">CD</span></th>
-											<th scope="col"><span title="Übertragung/トランスミッション">T/M</span></th>
-											<th scope="col"><span title="Motor/エンジン">E/G</span></th>
-											<th scope="col"><span title="Motortyp/エンジン配列">typ</span></th>
-											<th scope="col"><span title="Zylinderkopf/シリンダーヘッド">head</span></th>
-											<th scope="col"><span title="Verschiebung/排気量">cm&sup3;</span></th>
-											<th scope="col"><span title="仏馬力">PS</span></th>
-											<th scope="col"><span title="maximale Geschwindigkeit/最高速度">max</span></th>
-											<th scope="col"><span title="0-100km/h:sec">100</span></th>
-											<th scope="col"><span title="Zusätzliche Ausrüstung">補機</span></th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>'52</td>
-											<td class="b">W188</td>
-											<td class="left"><a href="https://www.automobile-catalog.com/car/1952/1460840/mercedes-benz_300_s_coupe.html" target="_blank">300S</a></td>
-											<td class="b">4,730</td>
-											<td>1,910</td>
-											<td>1,510</td>
-											<td>2,900</td>
-											<td class="b">1,740</td>
-											<td></td>
-											<td class="b">dw/sa</td>
-											<td>0.52</td>
-											<td>4MT</td>
-											<td>M188</td>
-											<td>R6</td>
-											<td>SOHC12v</td>
-											<td>2,996</td>
-											<td>150</td>
-											<td>168</td>
-											<td>12.7</td>
-											<td class="left">Solex 40 PBJC</td>
-										</tr>
-										<tr>
-											<td>'53</td>
-											<td class="b">W187</td>
-											<td class="left"><a href="https://www.automobile-catalog.com/car/1953/1459505/mercedes-benz_220_coupe.html" target="_blank">220</a></td>
-											<td class="b">4,540</td>
-											<td>1,685</td>
-											<td>1,550</td>
-											<td>2,845</td>
-											<td class="b">1,460</td>
-											<td></td>
-											<td class="b">dw/sa</td>
-											<td>0.60</td>
-											<td>4MT</td>
-											<td>M180</td>
-											<td>R6</td>
-											<td>SOHC12v</td>
-											<td>2,195</td>
-											<td>80</td>
-											<td>136</td>
-											<td>20.3</td>
-											<td class="left">Solex 30 PAAJ</td>
-										</tr>
-										<tr>
-											<td>'56</td>
-											<td class="b">W180</td>
-											<td class="left"><a href="https://www.automobile-catalog.com/car/1956/1459745/mercedes-benz_220_s_coupe.html" target="_blank">220S</a></td>
-											<td class="b">4,700</td>
-											<td>1,790</td>
-											<td>1,530</td>
-											<td>2,700</td>
-											<td class="b">1,350</td>
-											<td></td>
-											<td class="b">dw/sa</td>
-											<td>0.50</td>
-											<td>4MT</td>
-											<td>M180</td>
-											<td>R6</td>
-											<td>SOHC12v</td>
-											<td>2,195</td>
-											<td>100</td>
-											<td>151</td>
-											<td>14.5</td>
-											<td class="left">Solex 32 PAJTA</td>
-										</tr>
-										<tr>
-											<td>'58</td>
-											<td class="b">W128</td>
-											<td class="left"><a href="https://www.automobile-catalog.com/car/1958/1459850/mercedes-benz_220_se_coupe_hydrak.html" target="_blank">220SE</a></td>
-											<td class="b">4,700</td>
-											<td>1,790</td>
-											<td>1,530</td>
-											<td>2,700</td>
-											<td class="b">1,385</td>
-											<td></td>
-											<td class="b">dw/sa</td>
-											<td>0.50</td>
-											<td>semi4G</td>
-											<td>M127</td>
-											<td>R6</td>
-											<td>SOHC12v</td>
-											<td>2,195</td>
-											<td>115</td>
-											<td>155</td>
-											<td>13.8</td>
-											<td class="left">Bosch fi</td>
-										</tr>
-										<tr>
-											<td>'61</td>
-											<td class="b">W111</td>
-											<td class="left"><a href="https://www.automobile-catalog.com/car/1961/1462385/mercedes-benz_220_se_coupe_automatic.html" target="_blank">220SE</a></td>
-											<td class="b">4,880</td>
-											<td>1,845</td>
-											<td>1,445</td>
-											<td>2,750</td>
-											<td class="b">1,410</td>
-											<td></td>
-											<td class="b">dw/sa</td>
-											<td>0.45</td>
-											<td>4G</td>
-											<td>M127</td>
-											<td>R6</td>
-											<td>SOHC12v</td>
-											<td>2,195</td>
-											<td>120</td>
-											<td>158</td>
-											<td>13.7</td>
-											<td class="left">mechanisch-fi</td>
-										</tr>
-										<tr>
-											<td>'81</td>
-											<td class="b">C126</td>
-											<td class="left"><a href="https://www.automobile-catalog.com/car/1981/1474850/mercedes-benz_380_sec.html#gsc.tab=0" target="_blank">380SEC</a></td>
-											<td class="b">4,910</td>
-											<td>1,828</td>
-											<td>1,406</td>
-											<td>2,850</td>
-											<td class="b">1,585</td>
-											<td>5.5</td>
-											<td class="b">dw/ml</td>
-											<td>0.36</td>
-											<td>4G</td>
-											<td>M116</td>
-											<td>V8</td>
-											<td>SOHC16v</td>
-											<td>3,839</td>
-											<td>204</td>
-											<td>212</td>
-											<td>8.6</td>
-											<td class="left">Bosch K-Jetronic</td>
-										</tr>
-										<tr>
-											<td>'92</td>
-											<td class="b">C140</td>
-											<td class="left"><a href="https://www.automobile-catalog.com/car/1992/1523795/mercedes-benz_500_sec.html" target="_blank">500SEC</a></td>
-											<td class="b">5,065</td>
-											<td>1,912</td>
-											<td>1,455</td>
-											<td>2,945</td>
-											<td class="b">2,080</td>
-											<td>5.3</td>
-											<td class="b">4l/ml</td>
-											<td>0.30</td>
-											<td>4G</td>
-											<td>M119</td>
-											<td>V8</td>
-											<td>DOHC32v</td>
-											<td>4,973</td>
-											<td>320</td>
-											<td>262</td>
-											<td>7.3</td>
-											<td class="left fs80pa">Bosch LH-Jetronic</td>
-										</tr>
-										<tr>
-											<td>'99</td>
-											<td class="b">C215</td>
-											<td class="left"><a href="https://www.automobile-catalog.com/car/1999/1534700/mercedes-benz_cl_500.html" target="_blank">CL500</a></td>
-											<td class="b">4,993</td>
-											<td>1,857</td>
-											<td>1,398</td>
-											<td>2,885</td>
-											<td class="b">1,790</td>
-											<td>5.3</td>
-											<td class="b">4l/ml</td>
-											<td>0.28</td>
-											<td>5G</td>
-											<td>M113</td>
-											<td>V8</td>
-											<td>SOHC24v</td>
-											<td>4,966</td>
-											<td>306</td>
-											<td>268</td>
-											<td>6.2</td>
-											<td class="left">Mehrpunkt-fi</td>
-										</tr>
-										<tr>
-											<td>'06</td>
-											<td class="b">C216</td>
-											<td class="left"><a href="https://www.automobile-catalog.com/car/2006/1556375/mercedes-benz_cl_500_7g-tronic.html" target="_blank">CL500</a></td>
-											<td class="b">5,065</td>
-											<td>1,871</td>
-											<td>1,418</td>
-											<td>2,955</td>
-											<td class="b">1,920</td>
-											<td>5.4</td>
-											<td class="b">4l/ml</td>
-											<td>0.26</td>
-											<td>7G</td>
-											<td>M273</td>
-											<td>V8</td>
-											<td>DOHC32v</td>
-											<td>5,461</td>
-											<td>388</td>
-											<td>297</td>
-											<td>5.1</td>
-											<td class="left">Mehrpunkt-fi</td>
-										</tr>
-										<tr>
-											<td>'15</td>
-											<td class="b">C217</td>
-											<td class="left"><a href="https://www.automobile-catalog.com/car/2015/2107745/mercedes-benz_s_500_coupe.html" target="_blank">S500</a></td>
-											<td class="b">5,027</td>
-											<td>1,899</td>
-											<td>1,411</td>
-											<td>2,945</td>
-											<td class="b">1,955</td>
-											<td>5.4</td>
-											<td class="b">4l/ml</td>
-											<td>0.27</td>
-											<td>9G</td>
-											<td>M278</td>
-											<td>V8</td>
-											<td>DOHC32v</td>
-											<td>4,663</td>
-											<td>456</td>
-											<td>310</td>
-											<td>4.5</td>
-											<td class="left">2xTurbo di 2xic</td>
-										</tr>
-									</tbody>
-								</table>
+							<div id="body-mb-cl" class="accordion-content">
+								<div class="side-by-side-body">
+									<h4 class="sr-only">メルセデス・ベンツ CLクラス/Sクーペ 諸元表</h4>
+									<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84_CL%E3%82%AF%E3%83%A9%E3%82%B9" class="icon-link wiki" target="_blank" title="Wiki(J) CLクラス"></a>
+									<a href="pic/ja_mb_img_cl.html" class="icon-link camera" title="GALERIE" target="_blank"></a>
+									FR / 4MATIC (C216 - )
+									<table class="body-table">
+										<thead>
+											<tr>
+												<th scope="col"><span title="Jahr der Lieferung/デリバリーした年">年</span></th>
+												<th scope="col" class="b">code</th>
+												<th scope="col">var.</th>
+												<th scope="col" class="b"><span title="in voller Länge/mm">全長</span></th>
+												<th scope="col"><span title="Gesamtbreite/mm">全幅</span></th>
+												<th scope="col"><span title="Gesamthöhe/mm">全高</span></th>
+												<th scope="col"><span title="Radstand/mm/ホイールベース">軸距</span></th>
+												<th scope="col" class="b"><span title="Volles Gewicht/kg">全重</span></th>
+												<th scope="col"><span title="Minimaler Wenderadius/最小回転半径">回</span></th>
+												<th scope="col" class="b"><span title="Suspension">sus</span></th>
+												<th scope="col"><span title="Luftwiderstandsbeiwert/抗力係数">CD</span></th>
+												<th scope="col"><span title="Übertragung/トランスミッション">T/M</span></th>
+												<th scope="col"><span title="Motor/エンジン">E/G</span></th>
+												<th scope="col"><span title="Motortyp/エンジン配列">typ</span></th>
+												<th scope="col"><span title="Zylinderkopf/シリンダーヘッド">head</span></th>
+												<th scope="col"><span title="Verschiebung/排気量">cm&sup3;</span></th>
+												<th scope="col"><span title="仏馬力">PS</span></th>
+												<th scope="col"><span title="maximale Geschwindigkeit/最高速度">max</span></th>
+												<th scope="col"><span title="0-100km/h:sec">100</span></th>
+												<th scope="col"><span title="Zusätzliche Ausrüstung">補機</span></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>'52</td>
+												<td class="b">W188</td>
+												<td class="left"><a href="https://www.automobile-catalog.com/car/1952/1460840/mercedes-benz_300_s_coupe.html" target="_blank">300S</a></td>
+												<td class="b">4,730</td>
+												<td>1,910</td>
+												<td>1,510</td>
+												<td>2,900</td>
+												<td class="b">1,740</td>
+												<td></td>
+												<td class="b">dw/sa</td>
+												<td>0.52</td>
+												<td>4MT</td>
+												<td>M188</td>
+												<td>R6</td>
+												<td>SOHC12v</td>
+												<td>2,996</td>
+												<td>150</td>
+												<td>168</td>
+												<td>12.7</td>
+												<td class="left">Solex 40 PBJC</td>
+											</tr>
+											<tr>
+												<td>'53</td>
+												<td class="b">W187</td>
+												<td class="left"><a href="https://www.automobile-catalog.com/car/1953/1459505/mercedes-benz_220_coupe.html" target="_blank">220</a></td>
+												<td class="b">4,540</td>
+												<td>1,685</td>
+												<td>1,550</td>
+												<td>2,845</td>
+												<td class="b">1,460</td>
+												<td></td>
+												<td class="b">dw/sa</td>
+												<td>0.60</td>
+												<td>4MT</td>
+												<td>M180</td>
+												<td>R6</td>
+												<td>SOHC12v</td>
+												<td>2,195</td>
+												<td>80</td>
+												<td>136</td>
+												<td>20.3</td>
+												<td class="left">Solex 30 PAAJ</td>
+											</tr>
+											<tr>
+												<td>'56</td>
+												<td class="b">W180</td>
+												<td class="left"><a href="https://www.automobile-catalog.com/car/1956/1459745/mercedes-benz_220_s_coupe.html" target="_blank">220S</a></td>
+												<td class="b">4,700</td>
+												<td>1,790</td>
+												<td>1,530</td>
+												<td>2,700</td>
+												<td class="b">1,350</td>
+												<td></td>
+												<td class="b">dw/sa</td>
+												<td>0.50</td>
+												<td>4MT</td>
+												<td>M180</td>
+												<td>R6</td>
+												<td>SOHC12v</td>
+												<td>2,195</td>
+												<td>100</td>
+												<td>151</td>
+												<td>14.5</td>
+												<td class="left">Solex 32 PAJTA</td>
+											</tr>
+											<tr>
+												<td>'58</td>
+												<td class="b">W128</td>
+												<td class="left"><a href="https://www.automobile-catalog.com/car/1958/1459850/mercedes-benz_220_se_coupe_hydrak.html" target="_blank">220SE</a></td>
+												<td class="b">4,700</td>
+												<td>1,790</td>
+												<td>1,530</td>
+												<td>2,700</td>
+												<td class="b">1,385</td>
+												<td></td>
+												<td class="b">dw/sa</td>
+												<td>0.50</td>
+												<td>semi4G</td>
+												<td>M127</td>
+												<td>R6</td>
+												<td>SOHC12v</td>
+												<td>2,195</td>
+												<td>115</td>
+												<td>155</td>
+												<td>13.8</td>
+												<td class="left">Bosch fi</td>
+											</tr>
+											<tr>
+												<td>'61</td>
+												<td class="b">W111</td>
+												<td class="left"><a href="https://www.automobile-catalog.com/car/1961/1462385/mercedes-benz_220_se_coupe_automatic.html" target="_blank">220SE</a></td>
+												<td class="b">4,880</td>
+												<td>1,845</td>
+												<td>1,445</td>
+												<td>2,750</td>
+												<td class="b">1,410</td>
+												<td></td>
+												<td class="b">dw/sa</td>
+												<td>0.45</td>
+												<td>4G</td>
+												<td>M127</td>
+												<td>R6</td>
+												<td>SOHC12v</td>
+												<td>2,195</td>
+												<td>120</td>
+												<td>158</td>
+												<td>13.7</td>
+												<td class="left">mechanisch-fi</td>
+											</tr>
+											<tr>
+												<td>'81</td>
+												<td class="b">C126</td>
+												<td class="left"><a href="https://www.automobile-catalog.com/car/1981/1474850/mercedes-benz_380_sec.html#gsc.tab=0" target="_blank">380SEC</a></td>
+												<td class="b">4,910</td>
+												<td>1,828</td>
+												<td>1,406</td>
+												<td>2,850</td>
+												<td class="b">1,585</td>
+												<td>5.5</td>
+												<td class="b">dw/ml</td>
+												<td>0.36</td>
+												<td>4G</td>
+												<td>M116</td>
+												<td>V8</td>
+												<td>SOHC16v</td>
+												<td>3,839</td>
+												<td>204</td>
+												<td>212</td>
+												<td>8.6</td>
+												<td class="left">Bosch K-Jetronic</td>
+											</tr>
+											<tr>
+												<td>'92</td>
+												<td class="b">C140</td>
+												<td class="left"><a href="https://www.automobile-catalog.com/car/1992/1523795/mercedes-benz_500_sec.html" target="_blank">500SEC</a></td>
+												<td class="b">5,065</td>
+												<td>1,912</td>
+												<td>1,455</td>
+												<td>2,945</td>
+												<td class="b">2,080</td>
+												<td>5.3</td>
+												<td class="b">4l/ml</td>
+												<td>0.30</td>
+												<td>4G</td>
+												<td>M119</td>
+												<td>V8</td>
+												<td>DOHC32v</td>
+												<td>4,973</td>
+												<td>320</td>
+												<td>262</td>
+												<td>7.3</td>
+												<td class="left fs80pa">Bosch LH-Jetronic</td>
+											</tr>
+											<tr>
+												<td>'99</td>
+												<td class="b">C215</td>
+												<td class="left"><a href="https://www.automobile-catalog.com/car/1999/1534700/mercedes-benz_cl_500.html" target="_blank">CL500</a></td>
+												<td class="b">4,993</td>
+												<td>1,857</td>
+												<td>1,398</td>
+												<td>2,885</td>
+												<td class="b">1,790</td>
+												<td>5.3</td>
+												<td class="b">4l/ml</td>
+												<td>0.28</td>
+												<td>5G</td>
+												<td>M113</td>
+												<td>V8</td>
+												<td>SOHC24v</td>
+												<td>4,966</td>
+												<td>306</td>
+												<td>268</td>
+												<td>6.2</td>
+												<td class="left">Mehrpunkt-fi</td>
+											</tr>
+											<tr>
+												<td>'06</td>
+												<td class="b">C216</td>
+												<td class="left"><a href="https://www.automobile-catalog.com/car/2006/1556375/mercedes-benz_cl_500_7g-tronic.html" target="_blank">CL500</a></td>
+												<td class="b">5,065</td>
+												<td>1,871</td>
+												<td>1,418</td>
+												<td>2,955</td>
+												<td class="b">1,920</td>
+												<td>5.4</td>
+												<td class="b">4l/ml</td>
+												<td>0.26</td>
+												<td>7G</td>
+												<td>M273</td>
+												<td>V8</td>
+												<td>DOHC32v</td>
+												<td>5,461</td>
+												<td>388</td>
+												<td>297</td>
+												<td>5.1</td>
+												<td class="left">Mehrpunkt-fi</td>
+											</tr>
+											<tr>
+												<td>'15</td>
+												<td class="b">C217</td>
+												<td class="left"><a href="https://www.automobile-catalog.com/car/2015/2107745/mercedes-benz_s_500_coupe.html" target="_blank">S500</a></td>
+												<td class="b">5,027</td>
+												<td>1,899</td>
+												<td>1,411</td>
+												<td>2,945</td>
+												<td class="b">1,955</td>
+												<td>5.4</td>
+												<td class="b">4l/ml</td>
+												<td>0.27</td>
+												<td>9G</td>
+												<td>M278</td>
+												<td>V8</td>
+												<td>DOHC32v</td>
+												<td>4,663</td>
+												<td>456</td>
+												<td>310</td>
+												<td>4.5</td>
+												<td class="left">2xTurbo di 2xic</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
 							</div>
-						</div>
-					</div>
 
-					<div class="accordion m01" id="body-slk">
-						<button class="accordion-header min" aria-expanded="false" aria-controls="content-body-slk">
-							SLK
-						</button>
-						<div id="content-body-slk" class="accordion-content">
-							<div class="accordion-content-inner">
-								<h4 class="sr-only">メルセデス・ベンツ SLKクラス 諸元表</h4>
-								<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84_SLK%E3%82%AF%E3%83%A9%E3%82%B9" class="icon-link wiki" target="_blank" title="Wiki(J) SLKクラス"></a>
-								<a href="pic/ja_mb_img_slk.html" class="icon-link camera" title="GALERIE" target="_blank"></a>
-								FR
-								<table class="body-table">
-									<thead>
-										<tr>
-											<th scope="col"><span title="Jahr der Lieferung/デリバリーした年">年</span></th>
-											<th scope="col" class="b">code</th>
-											<th scope="col">var.</th>
-											<th scope="col" class="b"><span title="in voller Länge/mm">全長</span></th>
-											<th scope="col"><span title="Gesamtbreite/mm">全幅</span></th>
-											<th scope="col"><span title="Gesamthöhe/mm">全高</span></th>
-											<th scope="col"><span title="Radstand/mm/ホイールベース">軸距</span></th>
-											<th scope="col" class="b"><span title="Volles Gewicht/kg">全重</span></th>
-											<th scope="col"><span title="Minimaler Wenderadius/最小回転半径">回</span></th>
-											<th scope="col" class="b"><span title="Suspension">sus</span></th>
-											<th scope="col"><span title="Luftwiderstandsbeiwert/抗力係数">CD</span></th>
-											<th scope="col"><span title="Übertragung/トランスミッション">T/M</span></th>
-											<th scope="col"><span title="Motor/エンジン">E/G</span></th>
-											<th scope="col"><span title="Motortyp/エンジン配列">typ</span></th>
-											<th scope="col"><span title="Zylinderkopf/シリンダーヘッド">head</span></th>
-											<th scope="col"><span title="Verschiebung/排気量">cm&sup3;</span></th>
-											<th scope="col"><span title="仏馬力">PS</span></th>
-											<th scope="col"><span title="maximale Geschwindigkeit/最高速度">max</span></th>
-											<th scope="col"><span title="0-100km/h:sec">100</span></th>
-											<th scope="col"><span title="Zusätzliche Ausrüstung">補機</span></th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>'96</td>
-											<td class="b">R170</td>
-											<td class="left"><a href="https://www.automobile-catalog.com/car/1996/1531445/mercedes-benz_slk_200_automatic.html" target="_blank">SLK200</a></td>
-											<td class="b">3,995</td>
-											<td>1,715</td>
-											<td>1,284</td>
-											<td>2,400</td>
-											<td class="b">1,195</td>
-											<td>4.9</td>
-											<td class="b">dw/ml</td>
-											<td>0.35</td>
-											<td>5G</td>
-											<td>M111</td>
-											<td>R4</td>
-											<td>DOHC16v</td>
-											<td>1,998</td>
-											<td>136</td>
-											<td>204</td>
-											<td>9.7</td>
-											<td class="left">Mehrpunkt-fi</td>
-										</tr>
-										<tr>
-											<td>'04</td>
-											<td class="b">R171</td>
-											<td class="left"><a href="https://www.automobile-catalog.com/car/2004/1557380/mercedes-benz_slk_200_kompressor_automatic.html" target="_blank">SLK200K</a></td>
-											<td class="b">4,082</td>
-											<td>1,777</td>
-											<td>1,296</td>
-											<td>2,430</td>
-											<td class="b">1,340</td>
-											<td>4.9</td>
-											<td class="b">3l/ml</td>
-											<td>0.32</td>
-											<td>5G</td>
-											<td>M271</td>
-											<td>R4</td>
-											<td>DOHC16v</td>
-											<td>1,796</td>
-											<td>163</td>
-											<td>221</td>
-											<td>8.8</td>
-											<td class="left">Komp VVT ic fi</td>
-										</tr>
-										<tr>
-											<td>'11</td>
-											<td class="b">R172</td>
-											<td class="left"><a href="https://www.automobile-catalog.com/car/2011/1557890/mercedes-benz_slk_200_blueefficiency_7g-tronic.html" target="_blank">SLK200</a></td>
-											<td class="b">4,134</td>
-											<td>1,810</td>
-											<td>1,301</td>
-											<td>2,430</td>
-											<td class="b">1,430</td>
-											<td>4.8</td>
-											<td class="b">3l/ml</td>
-											<td>0.30</td>
-											<td>7G</td>
-											<td>M271</td>
-											<td>R4</td>
-											<td>DOHC16v</td>
-											<td>1,796</td>
-											<td>184</td>
-											<td>233</td>
-											<td>7.6</td>
-											<td class="left">Turbo di</td>
-										</tr>
-									</tbody>
-								</table>
+							<div id="body-mb-slk" class="accordion-content">
+								<div class="side-by-side-body">
+									<h4 class="sr-only">メルセデス・ベンツ SLKクラス 諸元表</h4>
+									<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84_SLK%E3%82%AF%E3%83%A9%E3%82%B9" class="icon-link wiki" target="_blank" title="Wiki(J) SLKクラス"></a>
+									<a href="pic/ja_mb_img_slk.html" class="icon-link camera" title="GALERIE" target="_blank"></a>
+									FR
+									<table class="body-table">
+										<thead>
+											<tr>
+												<th scope="col"><span title="Jahr der Lieferung/デリバリーした年">年</span></th>
+												<th scope="col" class="b">code</th>
+												<th scope="col">var.</th>
+												<th scope="col" class="b"><span title="in voller Länge/mm">全長</span></th>
+												<th scope="col"><span title="Gesamtbreite/mm">全幅</span></th>
+												<th scope="col"><span title="Gesamthöhe/mm">全高</span></th>
+												<th scope="col"><span title="Radstand/mm/ホイールベース">軸距</span></th>
+												<th scope="col" class="b"><span title="Volles Gewicht/kg">全重</span></th>
+												<th scope="col"><span title="Minimaler Wenderadius/最小回転半径">回</span></th>
+												<th scope="col" class="b"><span title="Suspension">sus</span></th>
+												<th scope="col"><span title="Luftwiderstandsbeiwert/抗力係数">CD</span></th>
+												<th scope="col"><span title="Übertragung/トランスミッション">T/M</span></th>
+												<th scope="col"><span title="Motor/エンジン">E/G</span></th>
+												<th scope="col"><span title="Motortyp/エンジン配列">typ</span></th>
+												<th scope="col"><span title="Zylinderkopf/シリンダーヘッド">head</span></th>
+												<th scope="col"><span title="Verschiebung/排気量">cm&sup3;</span></th>
+												<th scope="col"><span title="仏馬力">PS</span></th>
+												<th scope="col"><span title="maximale Geschwindigkeit/最高速度">max</span></th>
+												<th scope="col"><span title="0-100km/h:sec">100</span></th>
+												<th scope="col"><span title="Zusätzliche Ausrüstung">補機</span></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>'96</td>
+												<td class="b">R170</td>
+												<td class="left"><a href="https://www.automobile-catalog.com/car/1996/1531445/mercedes-benz_slk_200_automatic.html" target="_blank">SLK200</a></td>
+												<td class="b">3,995</td>
+												<td>1,715</td>
+												<td>1,284</td>
+												<td>2,400</td>
+												<td class="b">1,195</td>
+												<td>4.9</td>
+												<td class="b">dw/ml</td>
+												<td>0.35</td>
+												<td>5G</td>
+												<td>M111</td>
+												<td>R4</td>
+												<td>DOHC16v</td>
+												<td>1,998</td>
+												<td>136</td>
+												<td>204</td>
+												<td>9.7</td>
+												<td class="left">Mehrpunkt-fi</td>
+											</tr>
+											<tr>
+												<td>'04</td>
+												<td class="b">R171</td>
+												<td class="left"><a href="https://www.automobile-catalog.com/car/2004/1557380/mercedes-benz_slk_200_kompressor_automatic.html" target="_blank">SLK200K</a></td>
+												<td class="b">4,082</td>
+												<td>1,777</td>
+												<td>1,296</td>
+												<td>2,430</td>
+												<td class="b">1,340</td>
+												<td>4.9</td>
+												<td class="b">3l/ml</td>
+												<td>0.32</td>
+												<td>5G</td>
+												<td>M271</td>
+												<td>R4</td>
+												<td>DOHC16v</td>
+												<td>1,796</td>
+												<td>163</td>
+												<td>221</td>
+												<td>8.8</td>
+												<td class="left">Komp VVT ic fi</td>
+											</tr>
+											<tr>
+												<td>'11</td>
+												<td class="b">R172</td>
+												<td class="left"><a href="https://www.automobile-catalog.com/car/2011/1557890/mercedes-benz_slk_200_blueefficiency_7g-tronic.html" target="_blank">SLK200</a></td>
+												<td class="b">4,134</td>
+												<td>1,810</td>
+												<td>1,301</td>
+												<td>2,430</td>
+												<td class="b">1,430</td>
+												<td>4.8</td>
+												<td class="b">3l/ml</td>
+												<td>0.30</td>
+												<td>7G</td>
+												<td>M271</td>
+												<td>R4</td>
+												<td>DOHC16v</td>
+												<td>1,796</td>
+												<td>184</td>
+												<td>233</td>
+												<td>7.6</td>
+												<td class="left">Turbo di</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
 							</div>
-						</div>
-					</div>
 
-					<div class="accordion m01" id="body-sl">
-						<button class="accordion-header min" aria-expanded="false" aria-controls="content-body-sl">
-							SL
-						</button>
-						<div id="content-body-sl" class="accordion-content">
-							<div class="accordion-content-inner">
-								<h4 class="sr-only">メルセデス・ベンツ SLクラス 諸元表</h4>
-								<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84_SL%E3%82%AF%E3%83%A9%E3%82%B9" class="icon-link wiki" target="_blank" title="Wiki(J) SLクラス"></a>
-								<a href="pic/ja_mb_img_sl.html" class="icon-link camera" title="GALERIE" target="_blank"></a>
-								FR / 4MATIC (R232)
-								<table class="body-table">
-									<thead>
-										<tr>
-											<th scope="col"><span title="Jahr der Lieferung/デリバリーした年">年</span></th>
-											<th scope="col" class="b">code</th>
-											<th scope="col">var.</th>
-											<th scope="col" class="b"><span title="in voller Länge/mm">全長</span></th>
-											<th scope="col"><span title="Gesamtbreite/mm">全幅</span></th>
-											<th scope="col"><span title="Gesamthöhe/mm">全高</span></th>
-											<th scope="col"><span title="Radstand/mm/ホイールベース">軸距</span></th>
-											<th scope="col" class="b"><span title="Volles Gewicht/kg">全重</span></th>
-											<th scope="col"><span title="Minimaler Wenderadius/最小回転半径">回</span></th>
-											<th scope="col" class="b"><span title="Suspension">sus</span></th>
-											<th scope="col"><span title="Luftwiderstandsbeiwert/抗力係数">CD</span></th>
-											<th scope="col"><span title="Übertragung/トランスミッション">T/M</span></th>
-											<th scope="col"><span title="Motor/エンジン">E/G</span></th>
-											<th scope="col"><span title="Motortyp/エンジン配列">typ</span></th>
-											<th scope="col"><span title="Zylinderkopf/シリンダーヘッド">head</span></th>
-											<th scope="col"><span title="Verschiebung/排気量">cm&sup3;</span></th>
-											<th scope="col"><span title="仏馬力">PS</span></th>
-											<th scope="col"><span title="maximale Geschwindigkeit/最高速度">max</span></th>
-											<th scope="col"><span title="0-100km/h:sec">100</span></th>
-											<th scope="col"><span title="Zusätzliche Ausrüstung">補機</span></th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>'54</td>
-											<td class="b">W198</td>
-											<td class="left"><a href="https://www.automobile-catalog.com/car/1954/23720/mercedes-benz_300_sl.html" target="_blank">300SL</a></td>
-											<td class="b">4,520</td>
-											<td>1,790</td>
-											<td>1,300</td>
-											<td>2,400</td>
-											<td class="b">1,295</td>
-											<td></td>
-											<td class="b">dw/sa</td>
-											<td>0.38</td>
-											<td>4MT</td>
-											<td>M198</td>
-											<td>R6</td>
-											<td>SOHC12v</td>
-											<td>2,996</td>
-											<td>215</td>
-											<td>211</td>
-											<td>7.4</td>
-											<td class="left">mechanisch-fi</td>
-										</tr>
-										<tr>
-											<td>'63</td>
-											<td class="b">W113</td>
-											<td class="left"><a href="https://www.automobile-catalog.com/car/1963/1464200/mercedes-benz_230_sl_coupe.html" target="_blank">230SL</a></td>
-											<td class="b">4,285</td>
-											<td>1,760</td>
-											<td>1,305</td>
-											<td>2,400</td>
-											<td class="b">1,375</td>
-											<td></td>
-											<td class="b">dw/sa</td>
-											<td>0.42</td>
-											<td>4MT</td>
-											<td>M127</td>
-											<td>R6</td>
-											<td>SOHC12v</td>
-											<td>2,306</td>
-											<td>150</td>
-											<td>194</td>
-											<td>10.4</td>
-											<td class="left">Bosch port-fi</td>
-										</tr>
-										<tr>
-											<td>'71</td>
-											<td class="b">R107</td>
-											<td class="left"><a href="https://www.automobile-catalog.com/car/1971/1469240/mercedes-benz_350_sl.html" target="_blank">350SL</a></td>
-											<td class="b">4,390</td>
-											<td>1,790</td>
-											<td>1,300</td>
-											<td>2,460</td>
-											<td class="b">1,545</td>
-											<td></td>
-											<td class="b">dw/st</td>
-											<td>0.45</td>
-											<td>4MT</td>
-											<td>M116</td>
-											<td>V8</td>
-											<td>SOHC16v</td>
-											<td>3,499</td>
-											<td>200</td>
-											<td>211</td>
-											<td>8.1</td>
-											<td class="left">Bosch D-Jetronic</td>
-										</tr>
-										<tr>
-											<td>'71</td>
-											<td class="b">C107</td>
-											<td class="left"><a href="https://www.automobile-catalog.com/car/1972/1468715/mercedes-benz_350_slc.html" target="_blank">350SLC</a></td>
-											<td class="b">4,750</td>
-											<td>1,790</td>
-											<td>1,330</td>
-											<td>2,820</td>
-											<td class="b">1,595</td>
-											<td></td>
-											<td class="b">dw/st</td>
-											<td>0.43</td>
-											<td>4MT</td>
-											<td>M116</td>
-											<td>V8</td>
-											<td>SOHC16v</td>
-											<td>3,499</td>
-											<td>200</td>
-											<td>212</td>
-											<td>8.3</td>
-											<td class="left">Bosch D-Jetronic</td>
-										</tr>
-										<tr>
-											<td>'89</td>
-											<td class="b">R129</td>
-											<td class="left"><a href="https://www.automobile-catalog.com/car/1989/1521245/mercedes-benz_300_sl-24.html" target="_blank">300SL</a></td>
-											<td class="b">4,470</td>
-											<td>1,812</td>
-											<td>1,303</td>
-											<td>2,515</td>
-											<td class="b">1,690</td>
-											<td>5.0</td>
-											<td class="b">ms/ml</td>
-											<td>0.34</td>
-											<td>5MT</td>
-											<td>M104</td>
-											<td>R6</td>
-											<td>DOHC24v</td>
-											<td>2,962</td>
-											<td>231</td>
-											<td>240</td>
-											<td>7.9</td>
-											<td class="left">Bosch KE5-Jetronic</td>
-										</tr>
-										<tr>
-											<td>'02</td>
-											<td class="b">R230</td>
-											<td class="left"><a href="https://www.automobile-catalog.com/car/2002/1544480/mercedes-benz_sl_350.html" target="_blank">SL350</a></td>
-											<td class="b">4,535</td>
-											<td>1,815</td>
-											<td>1,317</td>
-											<td>2,560</td>
-											<td class="b">1,680</td>
-											<td>5.1</td>
-											<td class="b">4l/ml</td>
-											<td>0.29</td>
-											<td>6MT</td>
-											<td>M112</td>
-											<td>V6</td>
-											<td>SOHC18v</td>
-											<td>3,724</td>
-											<td>245</td>
-											<td>259</td>
-											<td>6.8</td>
-											<td class="left">Mehrpunkt-fi</td>
-										</tr>
-										<tr>
-											<td>'11</td>
-											<td class="b">R231</td>
-											<td class="left"><a href="https://www.automobile-catalog.com/car/2012/1782275/mercedes-benz_sl_350_blueefficiency.html" target="_blank">SL350</a></td>
-											<td class="b">4,617</td>
-											<td>1,877</td>
-											<td>1,315</td>
-											<td>2,585</td>
-											<td class="b">1,610</td>
-											<td>5.5</td>
-											<td class="b">4l/ml</td>
-											<td>0.27</td>
-											<td>7G</td>
-											<td>M276</td>
-											<td>V6</td>
-											<td>DOHC24v</td>
-											<td>3,498</td>
-											<td>306</td>
-											<td>280</td>
-											<td>5.5</td>
-											<td class="left">VVT di</td>
-										</tr>
-									</tbody>
-								</table>
+							<div id="body-mb-sl" class="accordion-content">
+								<div class="side-by-side-body">
+									<h4 class="sr-only">メルセデス・ベンツ SLクラス 諸元表</h4>
+									<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84_SL%E3%82%AF%E3%83%A9%E3%82%B9" class="icon-link wiki" target="_blank" title="Wiki(J) SLクラス"></a>
+									<a href="pic/ja_mb_img_sl.html" class="icon-link camera" title="GALERIE" target="_blank"></a>
+									FR / 4MATIC (R232)
+									<table class="body-table">
+										<thead>
+											<tr>
+												<th scope="col"><span title="Jahr der Lieferung/デリバリーした年">年</span></th>
+												<th scope="col" class="b">code</th>
+												<th scope="col">var.</th>
+												<th scope="col" class="b"><span title="in voller Länge/mm">全長</span></th>
+												<th scope="col"><span title="Gesamtbreite/mm">全幅</span></th>
+												<th scope="col"><span title="Gesamthöhe/mm">全高</span></th>
+												<th scope="col"><span title="Radstand/mm/ホイールベース">軸距</span></th>
+												<th scope="col" class="b"><span title="Volles Gewicht/kg">全重</span></th>
+												<th scope="col"><span title="Minimaler Wenderadius/最小回転半径">回</span></th>
+												<th scope="col" class="b"><span title="Suspension">sus</span></th>
+												<th scope="col"><span title="Luftwiderstandsbeiwert/抗力係数">CD</span></th>
+												<th scope="col"><span title="Übertragung/トランスミッション">T/M</span></th>
+												<th scope="col"><span title="Motor/エンジン">E/G</span></th>
+												<th scope="col"><span title="Motortyp/エンジン配列">typ</span></th>
+												<th scope="col"><span title="Zylinderkopf/シリンダーヘッド">head</span></th>
+												<th scope="col"><span title="Verschiebung/排気量">cm&sup3;</span></th>
+												<th scope="col"><span title="仏馬力">PS</span></th>
+												<th scope="col"><span title="maximale Geschwindigkeit/最高速度">max</span></th>
+												<th scope="col"><span title="0-100km/h:sec">100</span></th>
+												<th scope="col"><span title="Zusätzliche Ausrüstung">補機</span></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>'54</td>
+												<td class="b">W198</td>
+												<td class="left"><a href="https://www.automobile-catalog.com/car/1954/23720/mercedes-benz_300_sl.html" target="_blank">300SL</a></td>
+												<td class="b">4,520</td>
+												<td>1,790</td>
+												<td>1,300</td>
+												<td>2,400</td>
+												<td class="b">1,295</td>
+												<td></td>
+												<td class="b">dw/sa</td>
+												<td>0.38</td>
+												<td>4MT</td>
+												<td>M198</td>
+												<td>R6</td>
+												<td>SOHC12v</td>
+												<td>2,996</td>
+												<td>215</td>
+												<td>211</td>
+												<td>7.4</td>
+												<td class="left">mechanisch-fi</td>
+											</tr>
+											<tr>
+												<td>'63</td>
+												<td class="b">W113</td>
+												<td class="left"><a href="https://www.automobile-catalog.com/car/1963/1464200/mercedes-benz_230_sl_coupe.html" target="_blank">230SL</a></td>
+												<td class="b">4,285</td>
+												<td>1,760</td>
+												<td>1,305</td>
+												<td>2,400</td>
+												<td class="b">1,375</td>
+												<td></td>
+												<td class="b">dw/sa</td>
+												<td>0.42</td>
+												<td>4MT</td>
+												<td>M127</td>
+												<td>R6</td>
+												<td>SOHC12v</td>
+												<td>2,306</td>
+												<td>150</td>
+												<td>194</td>
+												<td>10.4</td>
+												<td class="left">Bosch port-fi</td>
+											</tr>
+											<tr>
+												<td>'71</td>
+												<td class="b">R107</td>
+												<td class="left"><a href="https://www.automobile-catalog.com/car/1971/1469240/mercedes-benz_350_sl.html" target="_blank">350SL</a></td>
+												<td class="b">4,390</td>
+												<td>1,790</td>
+												<td>1,300</td>
+												<td>2,460</td>
+												<td class="b">1,545</td>
+												<td></td>
+												<td class="b">dw/st</td>
+												<td>0.45</td>
+												<td>4MT</td>
+												<td>M116</td>
+												<td>V8</td>
+												<td>SOHC16v</td>
+												<td>3,499</td>
+												<td>200</td>
+												<td>211</td>
+												<td>8.1</td>
+												<td class="left">Bosch D-Jetronic</td>
+											</tr>
+											<tr>
+												<td>'71</td>
+												<td class="b">C107</td>
+												<td class="left"><a href="https://www.automobile-catalog.com/car/1972/1468715/mercedes-benz_350_slc.html" target="_blank">350SLC</a></td>
+												<td class="b">4,750</td>
+												<td>1,790</td>
+												<td>1,330</td>
+												<td>2,820</td>
+												<td class="b">1,595</td>
+												<td></td>
+												<td class="b">dw/st</td>
+												<td>0.43</td>
+												<td>4MT</td>
+												<td>M116</td>
+												<td>V8</td>
+												<td>SOHC16v</td>
+												<td>3,499</td>
+												<td>200</td>
+												<td>212</td>
+												<td>8.3</td>
+												<td class="left">Bosch D-Jetronic</td>
+											</tr>
+											<tr>
+												<td>'89</td>
+												<td class="b">R129</td>
+												<td class="left"><a href="https://www.automobile-catalog.com/car/1989/1521245/mercedes-benz_300_sl-24.html" target="_blank">300SL</a></td>
+												<td class="b">4,470</td>
+												<td>1,812</td>
+												<td>1,303</td>
+												<td>2,515</td>
+												<td class="b">1,690</td>
+												<td>5.0</td>
+												<td class="b">ms/ml</td>
+												<td>0.34</td>
+												<td>5MT</td>
+												<td>M104</td>
+												<td>R6</td>
+												<td>DOHC24v</td>
+												<td>2,962</td>
+												<td>231</td>
+												<td>240</td>
+												<td>7.9</td>
+												<td class="left">Bosch KE5-Jetronic</td>
+											</tr>
+											<tr>
+												<td>'02</td>
+												<td class="b">R230</td>
+												<td class="left"><a href="https://www.automobile-catalog.com/car/2002/1544480/mercedes-benz_sl_350.html" target="_blank">SL350</a></td>
+												<td class="b">4,535</td>
+												<td>1,815</td>
+												<td>1,317</td>
+												<td>2,560</td>
+												<td class="b">1,680</td>
+												<td>5.1</td>
+												<td class="b">4l/ml</td>
+												<td>0.29</td>
+												<td>6MT</td>
+												<td>M112</td>
+												<td>V6</td>
+												<td>SOHC18v</td>
+												<td>3,724</td>
+												<td>245</td>
+												<td>259</td>
+												<td>6.8</td>
+												<td class="left">Mehrpunkt-fi</td>
+											</tr>
+											<tr>
+												<td>'11</td>
+												<td class="b">R231</td>
+												<td class="left"><a href="https://www.automobile-catalog.com/car/2012/1782275/mercedes-benz_sl_350_blueefficiency.html" target="_blank">SL350</a></td>
+												<td class="b">4,617</td>
+												<td>1,877</td>
+												<td>1,315</td>
+												<td>2,585</td>
+												<td class="b">1,610</td>
+												<td>5.5</td>
+												<td class="b">4l/ml</td>
+												<td>0.27</td>
+												<td>7G</td>
+												<td>M276</td>
+												<td>V6</td>
+												<td>DOHC24v</td>
+												<td>3,498</td>
+												<td>306</td>
+												<td>280</td>
+												<td>5.5</td>
+												<td class="left">VVT di</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
 							</div>
-						</div>
-					</div>
 
-					<div class="accordion m01" id="body-v1">
-						<button class="accordion-header min" aria-expanded="false" aria-controls="content-body-v1">
-							Vaneo・Citan
-						</button>
-						<div id="content-body-v1" class="accordion-content">
-							<div class="accordion-content-inner">
-								<h4 class="sr-only">メルセデス・ベンツ バネオ 諸元表</h4>
-								<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BB%E3%83%B4%E3%82%A1%E3%83%8D%E3%82%AA" class="icon-link wiki" target="_blank" title="Wiki(J) バネオ"></a>
-								<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BB%E3%82%B7%E3%82%BF%E3%83%B3" class="icon-link wiki" target="_blank" title="Wiki(J) シタン"></a>
-								<a href="pic/ja_mb_img_v1.html#w414" class="icon-link camera" title="GALERIE" target="_blank"></a>
-								<a href="pic/ja_mb_img_v1.html#w415" class="icon-link camera" title="GALERIE" target="_blank"></a>
-								FF
-								<table class="body-table">
-									<thead>
-										<tr>
-											<th scope="col"><span title="Jahr der Lieferung/デリバリーした年">年</span></th>
-											<th scope="col" class="b">code</th>
-											<th scope="col">var.</th>
-											<th scope="col" class="b"><span title="in voller Länge/mm">全長</span></th>
-											<th scope="col"><span title="Gesamtbreite/mm">全幅</span></th>
-											<th scope="col"><span title="Gesamthöhe/mm">全高</span></th>
-											<th scope="col"><span title="Radstand/mm/ホイールベース">軸距</span></th>
-											<th scope="col" class="b"><span title="Volles Gewicht/kg">全重</span></th>
-											<th scope="col"><span title="Minimaler Wenderadius/最小回転半径">回</span></th>
-											<th scope="col" class="b"><span title="Suspension">sus</span></th>
-											<th scope="col"><span title="Luftwiderstandsbeiwert/抗力係数">CD</span></th>
-											<th scope="col"><span title="Übertragung/トランスミッション">T/M</span></th>
-											<th scope="col"><span title="Motor/エンジン">E/G</span></th>
-											<th scope="col"><span title="Motortyp/エンジン配列">typ</span></th>
-											<th scope="col"><span title="Zylinderkopf/シリンダーヘッド">head</span></th>
-											<th scope="col"><span title="Verschiebung/排気量">cm&sup3;</span></th>
-											<th scope="col"><span title="仏馬力">PS</span></th>
-											<th scope="col"><span title="maximale Geschwindigkeit/最高速度">max</span></th>
-											<th scope="col"><span title="0-100km/h:sec">100</span></th>
-											<th scope="col"><span title="Zusätzliche Ausrüstung">補機</span></th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>'01</td>
-											<td class="b">W414</td>
-											<td class="left"><a href="https://www.automobile-catalog.com/car/2001/1533485/mercedes-benz_vaneo_1_9_automatic.html" target="_blank">Vaneo</a></td>
-											<td class="b">4,192</td>
-											<td>1,742</td>
-											<td>1,830</td>
-											<td>2,900</td>
-											<td class="b">1,300</td>
-											<td>5.4</td>
-											<td class="b">ms/ta</td>
-											<td>0.36</td>
-											<td>5G</td>
-											<td>M166</td>
-											<td>R4</td>
-											<td>SOHC 8v</td>
-											<td>1,898</td>
-											<td>125</td>
-											<td>176</td>
-											<td>11.6</td>
-											<td class="left">Mehrpunkt-fi</td>
-										</tr>
-										<tr>
-											<td>'13</td>
-											<td class="b">W415</td>
-											<td class="left"><a href="https://www.automobile-catalog.com/car/2013/1842245/mercedes-benz_citan_112_kombi_blueefficiency.html" target="_blank">Citan</a></td>
-											<td class="b">4,321</td>
-											<td>1,829</td>
-											<td>1,809</td>
-											<td>2,697</td>
-											<td class="b">1,365</td>
-											<td></td>
-											<td class="b">ms/ta</td>
-											<td>0.36</td>
-											<td>6MT</td>
-											<td>M200</td>
-											<td>R4</td>
-											<td>DOHC16v</td>
-											<td>1,192</td>
-											<td>114</td>
-											<td></td>
-											<td></td>
-											<td class="left">Turbo VVT fi</td>
-										</tr>
-										<tr>
-											<td>'21</td>
-											<td class="b">W420</td>
-											<td class="left"><a href="https://de.wikipedia.org/wiki/Mercedes-Benz_W_420" target="_blank" title="Wiki(D) Mercedes-Benz W 420">Citan</a></td>
-											<td class="b">4,498</td>
-											<td>1,859</td>
-											<td>1,832</td>
-											<td>2,716</td>
-											<td class="b">1,491</td>
-											<td></td>
-											<td class="b">ms/ba</td>
-											<td></td>
-											<td>6MT</td>
-											<td>M282</td>
-											<td>R4</td>
-											<td>DOHC16v</td>
-											<td>1,332</td>
-											<td>131</td>
-											<td>183</td>
-											<td>12.0</td>
-											<td class="left">Turbo ic di</td>
-										</tr>
-									</tbody>
-								</table>
+							<div id="body-mb-v1" class="accordion-content">
+								<div class="side-by-side-body">
+									<h4 class="sr-only">メルセデス・ベンツ バネオ 諸元表</h4>
+									<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BB%E3%83%B4%E3%82%A1%E3%83%8D%E3%82%AA" class="icon-link wiki" target="_blank" title="Wiki(J) バネオ"></a>
+									<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BB%E3%82%B7%E3%82%BF%E3%83%B3" class="icon-link wiki" target="_blank" title="Wiki(J) シタン"></a>
+									<a href="pic/ja_mb_img_v1.html#w414" class="icon-link camera" title="GALERIE" target="_blank"></a>
+									<a href="pic/ja_mb_img_v1.html#w415" class="icon-link camera" title="GALERIE" target="_blank"></a>
+									FF
+									<table class="body-table">
+										<thead>
+											<tr>
+												<th scope="col"><span title="Jahr der Lieferung/デリバリーした年">年</span></th>
+												<th scope="col" class="b">code</th>
+												<th scope="col">var.</th>
+												<th scope="col" class="b"><span title="in voller Länge/mm">全長</span></th>
+												<th scope="col"><span title="Gesamtbreite/mm">全幅</span></th>
+												<th scope="col"><span title="Gesamthöhe/mm">全高</span></th>
+												<th scope="col"><span title="Radstand/mm/ホイールベース">軸距</span></th>
+												<th scope="col" class="b"><span title="Volles Gewicht/kg">全重</span></th>
+												<th scope="col"><span title="Minimaler Wenderadius/最小回転半径">回</span></th>
+												<th scope="col" class="b"><span title="Suspension">sus</span></th>
+												<th scope="col"><span title="Luftwiderstandsbeiwert/抗力係数">CD</span></th>
+												<th scope="col"><span title="Übertragung/トランスミッション">T/M</span></th>
+												<th scope="col"><span title="Motor/エンジン">E/G</span></th>
+												<th scope="col"><span title="Motortyp/エンジン配列">typ</span></th>
+												<th scope="col"><span title="Zylinderkopf/シリンダーヘッド">head</span></th>
+												<th scope="col"><span title="Verschiebung/排気量">cm&sup3;</span></th>
+												<th scope="col"><span title="仏馬力">PS</span></th>
+												<th scope="col"><span title="maximale Geschwindigkeit/最高速度">max</span></th>
+												<th scope="col"><span title="0-100km/h:sec">100</span></th>
+												<th scope="col"><span title="Zusätzliche Ausrüstung">補機</span></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>'01</td>
+												<td class="b">W414</td>
+												<td class="left"><a href="https://www.automobile-catalog.com/car/2001/1533485/mercedes-benz_vaneo_1_9_automatic.html" target="_blank">Vaneo</a></td>
+												<td class="b">4,192</td>
+												<td>1,742</td>
+												<td>1,830</td>
+												<td>2,900</td>
+												<td class="b">1,300</td>
+												<td>5.4</td>
+												<td class="b">ms/ta</td>
+												<td>0.36</td>
+												<td>5G</td>
+												<td>M166</td>
+												<td>R4</td>
+												<td>SOHC 8v</td>
+												<td>1,898</td>
+												<td>125</td>
+												<td>176</td>
+												<td>11.6</td>
+												<td class="left">Mehrpunkt-fi</td>
+											</tr>
+											<tr>
+												<td>'13</td>
+												<td class="b">W415</td>
+												<td class="left"><a href="https://www.automobile-catalog.com/car/2013/1842245/mercedes-benz_citan_112_kombi_blueefficiency.html" target="_blank">Citan</a></td>
+												<td class="b">4,321</td>
+												<td>1,829</td>
+												<td>1,809</td>
+												<td>2,697</td>
+												<td class="b">1,365</td>
+												<td></td>
+												<td class="b">ms/ta</td>
+												<td>0.36</td>
+												<td>6MT</td>
+												<td>M200</td>
+												<td>R4</td>
+												<td>DOHC16v</td>
+												<td>1,192</td>
+												<td>114</td>
+												<td></td>
+												<td></td>
+												<td class="left">Turbo VVT fi</td>
+											</tr>
+											<tr>
+												<td>'21</td>
+												<td class="b">W420</td>
+												<td class="left"><a href="https://de.wikipedia.org/wiki/Mercedes-Benz_W_420" target="_blank" title="Wiki(D) Mercedes-Benz W 420">Citan</a></td>
+												<td class="b">4,498</td>
+												<td>1,859</td>
+												<td>1,832</td>
+												<td>2,716</td>
+												<td class="b">1,491</td>
+												<td></td>
+												<td class="b">ms/ba</td>
+												<td></td>
+												<td>6MT</td>
+												<td>M282</td>
+												<td>R4</td>
+												<td>DOHC16v</td>
+												<td>1,332</td>
+												<td>131</td>
+												<td>183</td>
+												<td>12.0</td>
+												<td class="left">Turbo ic di</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
 							</div>
-						</div>
-					</div>
 
-					<div class="accordion m01" id="body-gla">
-						<button class="accordion-header min" aria-expanded="false" aria-controls="content-body-gla">
-							GLA
-						</button>
-						<div id="content-body-gla" class="accordion-content">
-							<div class="accordion-content-inner">
-								<h4 class="sr-only">メルセデス・ベンツ GLAクラス 諸元表</h4>
-								<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84_GLA%E3%82%AF%E3%83%A9%E3%82%B9" class="icon-link wiki" target="_blank" title="Wiki(J) GLAクラス"></a>
-								<a href="pic/ja_mb_img_gla.html" class="icon-link camera" title="GALERIE" target="_blank"></a>
-								FF / 4MATIC
-								<table class="body-table">
-									<thead>
-										<tr>
-											<th scope="col"><span title="Jahr der Lieferung/デリバリーした年">年</span></th>
-											<th scope="col" class="b">code</th>
-											<th scope="col">var.</th>
-											<th scope="col" class="b"><span title="in voller Länge/mm">全長</span></th>
-											<th scope="col"><span title="Gesamtbreite/mm">全幅</span></th>
-											<th scope="col"><span title="Gesamthöhe/mm">全高</span></th>
-											<th scope="col"><span title="Radstand/mm/ホイールベース">軸距</span></th>
-											<th scope="col" class="b"><span title="Volles Gewicht/kg">全重</span></th>
-											<th scope="col"><span title="Minimaler Wenderadius/最小回転半径">回</span></th>
-											<th scope="col" class="b"><span title="Suspension">sus</span></th>
-											<th scope="col"><span title="Luftwiderstandsbeiwert/抗力係数">CD</span></th>
-											<th scope="col"><span title="Übertragung/トランスミッション">T/M</span></th>
-											<th scope="col"><span title="Motor/エンジン">E/G</span></th>
-											<th scope="col"><span title="Motortyp/エンジン配列">typ</span></th>
-											<th scope="col"><span title="Zylinderkopf/シリンダーヘッド">head</span></th>
-											<th scope="col"><span title="Verschiebung/排気量">cm&sup3;</span></th>
-											<th scope="col"><span title="仏馬力">PS</span></th>
-											<th scope="col"><span title="maximale Geschwindigkeit/最高速度">max</span></th>
-											<th scope="col"><span title="0-100km/h:sec">100</span></th>
-											<th scope="col"><span title="Zusätzliche Ausrüstung">補機</span></th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>'13</td>
-											<td class="b">X156</td>
-											<td class="left"><a href="https://www.automobile-catalog.com/car/2014/2025695/mercedes-benz_gla_200_7g-dct.html#gsc.tab=0" target="_blank">GLA200</a></td>
-											<td class="b">4,417</td>
-											<td>1,804</td>
-											<td>1,494</td>
-											<td>2,699</td>
-											<td class="b">1,430</td>
-											<td>5.7</td>
-											<td class="b">ms/ml</td>
-											<td>0.32</td>
-											<td>7G-DCT</td>
-											<td>M270</td>
-											<td>R4</td>
-											<td>DOHC16v</td>
-											<td>1,595</td>
-											<td>156</td>
-											<td>215</td>
-											<td>8.9</td>
-											<td class="left">Turbo VVT di</td>
-										</tr>
-										<tr>
-											<td>'20</td>
-											<td class="b">H247</td>
-											<td class="left"><a href="https://www.automobile-catalog.com/car/2020/2933330/mercedes-benz_gla_200.html#gsc.tab=0" target="_blank">GLA200</a></td>
-											<td class="b">4,410</td>
-											<td>1,834</td>
-											<td>1,611</td>
-											<td>2,729</td>
-											<td class="b">1,485</td>
-											<td>5.5</td>
-											<td class="b">ms/ml</td>
-											<td>0.3</td>
-											<td>7G-DCT</td>
-											<td>M282</td>
-											<td>R4</td>
-											<td>DOHC16v</td>
-											<td>1,332</td>
-											<td>163</td>
-											<td>211</td>
-											<td>8.4</td>
-											<td class="left">Turbo di</td>
-										</tr>
-									</tbody>
-								</table>
+							<div id="body-mb-gla" class="accordion-content">
+								<div class="side-by-side-body">
+									<h4 class="sr-only">メルセデス・ベンツ GLAクラス 諸元表</h4>
+									<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84_GLA%E3%82%AF%E3%83%A9%E3%82%B9" class="icon-link wiki" target="_blank" title="Wiki(J) GLAクラス"></a>
+									<a href="pic/ja_mb_img_gla.html" class="icon-link camera" title="GALERIE" target="_blank"></a>
+									FF / 4MATIC
+									<table class="body-table">
+										<thead>
+											<tr>
+												<th scope="col"><span title="Jahr der Lieferung/デリバリーした年">年</span></th>
+												<th scope="col" class="b">code</th>
+												<th scope="col">var.</th>
+												<th scope="col" class="b"><span title="in voller Länge/mm">全長</span></th>
+												<th scope="col"><span title="Gesamtbreite/mm">全幅</span></th>
+												<th scope="col"><span title="Gesamthöhe/mm">全高</span></th>
+												<th scope="col"><span title="Radstand/mm/ホイールベース">軸距</span></th>
+												<th scope="col" class="b"><span title="Volles Gewicht/kg">全重</span></th>
+												<th scope="col"><span title="Minimaler Wenderadius/最小回転半径">回</span></th>
+												<th scope="col" class="b"><span title="Suspension">sus</span></th>
+												<th scope="col"><span title="Luftwiderstandsbeiwert/抗力係数">CD</span></th>
+												<th scope="col"><span title="Übertragung/トランスミッション">T/M</span></th>
+												<th scope="col"><span title="Motor/エンジン">E/G</span></th>
+												<th scope="col"><span title="Motortyp/エンジン配列">typ</span></th>
+												<th scope="col"><span title="Zylinderkopf/シリンダーヘッド">head</span></th>
+												<th scope="col"><span title="Verschiebung/排気量">cm&sup3;</span></th>
+												<th scope="col"><span title="仏馬力">PS</span></th>
+												<th scope="col"><span title="maximale Geschwindigkeit/最高速度">max</span></th>
+												<th scope="col"><span title="0-100km/h:sec">100</span></th>
+												<th scope="col"><span title="Zusätzliche Ausrüstung">補機</span></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>'13</td>
+												<td class="b">X156</td>
+												<td class="left"><a href="https://www.automobile-catalog.com/car/2014/2025695/mercedes-benz_gla_200_7g-dct.html#gsc.tab=0" target="_blank">GLA200</a></td>
+												<td class="b">4,417</td>
+												<td>1,804</td>
+												<td>1,494</td>
+												<td>2,699</td>
+												<td class="b">1,430</td>
+												<td>5.7</td>
+												<td class="b">ms/ml</td>
+												<td>0.32</td>
+												<td>7G-DCT</td>
+												<td>M270</td>
+												<td>R4</td>
+												<td>DOHC16v</td>
+												<td>1,595</td>
+												<td>156</td>
+												<td>215</td>
+												<td>8.9</td>
+												<td class="left">Turbo VVT di</td>
+											</tr>
+											<tr>
+												<td>'20</td>
+												<td class="b">H247</td>
+												<td class="left"><a href="https://www.automobile-catalog.com/car/2020/2933330/mercedes-benz_gla_200.html#gsc.tab=0" target="_blank">GLA200</a></td>
+												<td class="b">4,410</td>
+												<td>1,834</td>
+												<td>1,611</td>
+												<td>2,729</td>
+												<td class="b">1,485</td>
+												<td>5.5</td>
+												<td class="b">ms/ml</td>
+												<td>0.3</td>
+												<td>7G-DCT</td>
+												<td>M282</td>
+												<td>R4</td>
+												<td>DOHC16v</td>
+												<td>1,332</td>
+												<td>163</td>
+												<td>211</td>
+												<td>8.4</td>
+												<td class="left">Turbo di</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
 							</div>
-						</div>
-					</div>
 
-					<div class="accordion m01" id="body-glb">
-						<button class="accordion-header min" aria-expanded="false" aria-controls="content-body-glb">
-							GLB
-						</button>
-						<div id="content-body-glb" class="accordion-content">
-							<div class="accordion-content-inner">
-								<h4 class="sr-only">メルセデス・ベンツ GLBクラス 諸元表</h4>
-								<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBGLB%E3%82%AF%E3%83%A9%E3%82%B9" class="icon-link wiki" target="_blank" title="Wiki(J) GLBクラス"></a>
-								<a href="pic/ja_mb_img_glb.html" class="icon-link camera" title="GALERIE" target="_blank"></a>
-								FF / 4MATIC
-								<table class="body-table">
-									<thead>
-										<tr>
-											<th scope="col"><span title="Jahr der Lieferung/デリバリーした年">年</span></th>
-											<th scope="col" class="b">code</th>
-											<th scope="col">var.</th>
-											<th scope="col" class="b"><span title="in voller Länge/mm">全長</span></th>
-											<th scope="col"><span title="Gesamtbreite/mm">全幅</span></th>
-											<th scope="col"><span title="Gesamthöhe/mm">全高</span></th>
-											<th scope="col"><span title="Radstand/mm/ホイールベース">軸距</span></th>
-											<th scope="col" class="b"><span title="Volles Gewicht/kg">全重</span></th>
-											<th scope="col"><span title="Minimaler Wenderadius/最小回転半径">回</span></th>
-											<th scope="col" class="b"><span title="Suspension">sus</span></th>
-											<th scope="col"><span title="Luftwiderstandsbeiwert/抗力係数">CD</span></th>
-											<th scope="col"><span title="Übertragung/トランスミッション">T/M</span></th>
-											<th scope="col"><span title="Motor/エンジン">E/G</span></th>
-											<th scope="col"><span title="Motortyp/エンジン配列">typ</span></th>
-											<th scope="col"><span title="Zylinderkopf/シリンダーヘッド">head</span></th>
-											<th scope="col"><span title="Verschiebung/排気量">cm&sup3;</span></th>
-											<th scope="col"><span title="仏馬力">PS</span></th>
-											<th scope="col"><span title="maximale Geschwindigkeit/最高速度">max</span></th>
-											<th scope="col"><span title="0-100km/h:sec">100</span></th>
-											<th scope="col"><span title="Zusätzliche Ausrüstung">補機</span></th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>'19</td>
-											<td class="b">X247</td>
-											<td class="left"><a href="https://www.automobile-catalog.com/car/2020/2915180/mercedes-benz_glb_200.html#gsc.tab=0" target="_blank">GLB200</a></td>
-											<td class="b">4,634</td>
-											<td>1,834</td>
-											<td>1,658</td>
-											<td>2,829</td>
-											<td class="b">1,555</td>
-											<td>5.5</td>
-											<td class="b">ms/ml</td>
-											<td>0.32</td>
-											<td>7G-DCT</td>
-											<td>M282</td>
-											<td>R4</td>
-											<td>DOHC16v</td>
-											<td>1,332</td>
-											<td>163</td>
-											<td>207</td>
-											<td>9.1</td>
-											<td class="left">Turbo di</td>
-										</tr>
-									</tbody>
-								</table>
+							<div id="body-mb-glb" class="accordion-content">
+								<div class="side-by-side-body">
+									<h4 class="sr-only">メルセデス・ベンツ GLBクラス 諸元表</h4>
+									<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBGLB%E3%82%AF%E3%83%A9%E3%82%B9" class="icon-link wiki" target="_blank" title="Wiki(J) GLBクラス"></a>
+									<a href="pic/ja_mb_img_glb.html" class="icon-link camera" title="GALERIE" target="_blank"></a>
+									FF / 4MATIC
+									<table class="body-table">
+										<thead>
+											<tr>
+												<th scope="col"><span title="Jahr der Lieferung/デリバリーした年">年</span></th>
+												<th scope="col" class="b">code</th>
+												<th scope="col">var.</th>
+												<th scope="col" class="b"><span title="in voller Länge/mm">全長</span></th>
+												<th scope="col"><span title="Gesamtbreite/mm">全幅</span></th>
+												<th scope="col"><span title="Gesamthöhe/mm">全高</span></th>
+												<th scope="col"><span title="Radstand/mm/ホイールベース">軸距</span></th>
+												<th scope="col" class="b"><span title="Volles Gewicht/kg">全重</span></th>
+												<th scope="col"><span title="Minimaler Wenderadius/最小回転半径">回</span></th>
+												<th scope="col" class="b"><span title="Suspension">sus</span></th>
+												<th scope="col"><span title="Luftwiderstandsbeiwert/抗力係数">CD</span></th>
+												<th scope="col"><span title="Übertragung/トランスミッション">T/M</span></th>
+												<th scope="col"><span title="Motor/エンジン">E/G</span></th>
+												<th scope="col"><span title="Motortyp/エンジン配列">typ</span></th>
+												<th scope="col"><span title="Zylinderkopf/シリンダーヘッド">head</span></th>
+												<th scope="col"><span title="Verschiebung/排気量">cm&sup3;</span></th>
+												<th scope="col"><span title="仏馬力">PS</span></th>
+												<th scope="col"><span title="maximale Geschwindigkeit/最高速度">max</span></th>
+												<th scope="col"><span title="0-100km/h:sec">100</span></th>
+												<th scope="col"><span title="Zusätzliche Ausrüstung">補機</span></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>'19</td>
+												<td class="b">X247</td>
+												<td class="left"><a href="https://www.automobile-catalog.com/car/2020/2915180/mercedes-benz_glb_200.html#gsc.tab=0" target="_blank">GLB200</a></td>
+												<td class="b">4,634</td>
+												<td>1,834</td>
+												<td>1,658</td>
+												<td>2,829</td>
+												<td class="b">1,555</td>
+												<td>5.5</td>
+												<td class="b">ms/ml</td>
+												<td>0.32</td>
+												<td>7G-DCT</td>
+												<td>M282</td>
+												<td>R4</td>
+												<td>DOHC16v</td>
+												<td>1,332</td>
+												<td>163</td>
+												<td>207</td>
+												<td>9.1</td>
+												<td class="left">Turbo di</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
 							</div>
-						</div>
-					</div>
 
-					<div class="accordion m01" id="body-glc">
-						<button class="accordion-header min" aria-expanded="false" aria-controls="content-body-glc">
-							GLK・GLC
-						</button>
-						<div id="content-body-glc" class="accordion-content">
-							<div class="accordion-content-inner">
-								<h4 class="sr-only">メルセデス・ベンツ GLKクラス 諸元表</h4>
-								<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84_GLK%E3%82%AF%E3%83%A9%E3%82%B9" class="icon-link wiki" target="_blank" title="Wiki(J) GLKクラス"></a>
-								<a href="https://de.wikipedia.org/wiki/Mercedes-Benz_GLC-Klasse_(X253)" class="icon-link wiki" target="_blank" title="Wiki(D) X253"></a>
-								<a href="pic/ja_mb_img_glk.html" class="icon-link camera" title="GALERIE" target="_blank"></a>
-								FR / 4MATIC
-								<table class="body-table">
-									<thead>
-										<tr>
-											<th scope="col"><span title="Jahr der Lieferung/デリバリーした年">年</span></th>
-											<th scope="col" class="b">code</th>
-											<th scope="col">var.</th>
-											<th scope="col" class="b"><span title="in voller Länge/mm">全長</span></th>
-											<th scope="col"><span title="Gesamtbreite/mm">全幅</span></th>
-											<th scope="col"><span title="Gesamthöhe/mm">全高</span></th>
-											<th scope="col"><span title="Radstand/mm/ホイールベース">軸距</span></th>
-											<th scope="col" class="b"><span title="Volles Gewicht/kg">全重</span></th>
-											<th scope="col"><span title="Minimaler Wenderadius/最小回転半径">回</span></th>
-											<th scope="col" class="b"><span title="Suspension">sus</span></th>
-											<th scope="col"><span title="Luftwiderstandsbeiwert/抗力係数">CD</span></th>
-											<th scope="col"><span title="Übertragung/トランスミッション">T/M</span></th>
-											<th scope="col"><span title="Motor/エンジン">E/G</span></th>
-											<th scope="col"><span title="Motortyp/エンジン配列">typ</span></th>
-											<th scope="col"><span title="Zylinderkopf/シリンダーヘッド">head</span></th>
-											<th scope="col"><span title="Verschiebung/排気量">cm&sup3;</span></th>
-											<th scope="col"><span title="仏馬力">PS</span></th>
-											<th scope="col"><span title="maximale Geschwindigkeit/最高速度">max</span></th>
-											<th scope="col"><span title="0-100km/h:sec">100</span></th>
-											<th scope="col"><span title="Zusätzliche Ausrüstung">補機</span></th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>'08</td>
-											<td class="b">X204</td>
-											<td class="left"><a href="https://www.automobile-catalog.com/car/2008/1559750/mercedes-benz_glk_280_4matic_7g-tronic.html" target="_blank">GLK280 4mtc</a></td>
-											<td class="b">4,525</td>
-											<td>1,840</td>
-											<td>1,689</td>
-											<td>2,755</td>
-											<td class="b">1,755</td>
-											<td>5.4</td>
-											<td class="b">3l/ml</td>
-											<td>0.34</td>
-											<td>7G</td>
-											<td>M272</td>
-											<td>V6</td>
-											<td>DOHC16v</td>
-											<td>2,996</td>
-											<td>231</td>
-											<td>215</td>
-											<td>7.8</td>
-											<td class="left">VVT fi</td>
-										</tr>
-										<tr>
-											<td>'15</td>
-											<td class="b">X253</td>
-											<td class="left"><a href="https://www.automobile-catalog.com/car/2015/2170805/mercedes-benz_glc_250_4matic.html" target="_blank">GLC250 4mtc</a></td>
-											<td class="b">4,656</td>
-											<td>1,890</td>
-											<td>1,639</td>
-											<td>2,873</td>
-											<td class="b">1,660</td>
-											<td>5.7</td>
-											<td class="b">4l/ml</td>
-											<td>0.32</td>
-											<td>9G</td>
-											<td>M270</td>
-											<td>R4</td>
-											<td>DOHC16v</td>
-											<td>1,991</td>
-											<td>211</td>
-											<td>218</td>
-											<td>7.1</td>
-											<td class="left">Turbo VVT di</td>
-										</tr>
-										<tr>
-											<td>'23</td>
-											<td class="b">X254</td>
-											<td class="left"><a href="https://www.automobile-catalog.com/car/2023/3083810/mercedes-benz_glc_200_4matic_suv.html#gsc.tab=0" target="_blank">GLC200 4mtc</a></td>
-											<td class="b">4,716</td>
-											<td>1,890</td>
-											<td>1,640</td>
-											<td>2,888 </td>
-											<td class="b">1,850</td>
-											<td></td>
-											<td class="b">4l/ml</td>
-											<td>0.29</td>
-											<td>9G</td>
-											<td>M254</td>
-											<td>R4</td>
-											<td>DOHC16v</td>
-											<td>1,999</td>
-											<td>204</td>
-											<td>221</td>
-											<td>8.1</td>
-											<td class="left fs80pa">Turbo VVT di 48v-ISG</td>
-										</tr>
-									</tbody>
-								</table>
+							<div id="body-mb-glc" class="accordion-content">
+								<div class="side-by-side-body">
+									<h4 class="sr-only">メルセデス・ベンツ GLKクラス 諸元表</h4>
+									<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84_GLK%E3%82%AF%E3%83%A9%E3%82%B9" class="icon-link wiki" target="_blank" title="Wiki(J) GLKクラス"></a>
+									<a href="https://de.wikipedia.org/wiki/Mercedes-Benz_GLC-Klasse_(X253)" class="icon-link wiki" target="_blank" title="Wiki(D) X253"></a>
+									<a href="pic/ja_mb_img_glk.html" class="icon-link camera" title="GALERIE" target="_blank"></a>
+									FR / 4MATIC
+									<table class="body-table">
+										<thead>
+											<tr>
+												<th scope="col"><span title="Jahr der Lieferung/デリバリーした年">年</span></th>
+												<th scope="col" class="b">code</th>
+												<th scope="col">var.</th>
+												<th scope="col" class="b"><span title="in voller Länge/mm">全長</span></th>
+												<th scope="col"><span title="Gesamtbreite/mm">全幅</span></th>
+												<th scope="col"><span title="Gesamthöhe/mm">全高</span></th>
+												<th scope="col"><span title="Radstand/mm/ホイールベース">軸距</span></th>
+												<th scope="col" class="b"><span title="Volles Gewicht/kg">全重</span></th>
+												<th scope="col"><span title="Minimaler Wenderadius/最小回転半径">回</span></th>
+												<th scope="col" class="b"><span title="Suspension">sus</span></th>
+												<th scope="col"><span title="Luftwiderstandsbeiwert/抗力係数">CD</span></th>
+												<th scope="col"><span title="Übertragung/トランスミッション">T/M</span></th>
+												<th scope="col"><span title="Motor/エンジン">E/G</span></th>
+												<th scope="col"><span title="Motortyp/エンジン配列">typ</span></th>
+												<th scope="col"><span title="Zylinderkopf/シリンダーヘッド">head</span></th>
+												<th scope="col"><span title="Verschiebung/排気量">cm&sup3;</span></th>
+												<th scope="col"><span title="仏馬力">PS</span></th>
+												<th scope="col"><span title="maximale Geschwindigkeit/最高速度">max</span></th>
+												<th scope="col"><span title="0-100km/h:sec">100</span></th>
+												<th scope="col"><span title="Zusätzliche Ausrüstung">補機</span></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>'08</td>
+												<td class="b">X204</td>
+												<td class="left"><a href="https://www.automobile-catalog.com/car/2008/1559750/mercedes-benz_glk_280_4matic_7g-tronic.html" target="_blank">GLK280 4mtc</a></td>
+												<td class="b">4,525</td>
+												<td>1,840</td>
+												<td>1,689</td>
+												<td>2,755</td>
+												<td class="b">1,755</td>
+												<td>5.4</td>
+												<td class="b">3l/ml</td>
+												<td>0.34</td>
+												<td>7G</td>
+												<td>M272</td>
+												<td>V6</td>
+												<td>DOHC16v</td>
+												<td>2,996</td>
+												<td>231</td>
+												<td>215</td>
+												<td>7.8</td>
+												<td class="left">VVT fi</td>
+											</tr>
+											<tr>
+												<td>'15</td>
+												<td class="b">X253</td>
+												<td class="left"><a href="https://www.automobile-catalog.com/car/2015/2170805/mercedes-benz_glc_250_4matic.html" target="_blank">GLC250 4mtc</a></td>
+												<td class="b">4,656</td>
+												<td>1,890</td>
+												<td>1,639</td>
+												<td>2,873</td>
+												<td class="b">1,660</td>
+												<td>5.7</td>
+												<td class="b">4l/ml</td>
+												<td>0.32</td>
+												<td>9G</td>
+												<td>M270</td>
+												<td>R4</td>
+												<td>DOHC16v</td>
+												<td>1,991</td>
+												<td>211</td>
+												<td>218</td>
+												<td>7.1</td>
+												<td class="left">Turbo VVT di</td>
+											</tr>
+											<tr>
+												<td>'23</td>
+												<td class="b">X254</td>
+												<td class="left"><a href="https://www.automobile-catalog.com/car/2023/3083810/mercedes-benz_glc_200_4matic_suv.html#gsc.tab=0" target="_blank">GLC200 4mtc</a></td>
+												<td class="b">4,716</td>
+												<td>1,890</td>
+												<td>1,640</td>
+												<td>2,888 </td>
+												<td class="b">1,850</td>
+												<td></td>
+												<td class="b">4l/ml</td>
+												<td>0.29</td>
+												<td>9G</td>
+												<td>M254</td>
+												<td>R4</td>
+												<td>DOHC16v</td>
+												<td>1,999</td>
+												<td>204</td>
+												<td>221</td>
+												<td>8.1</td>
+												<td class="left fs80pa">Turbo VVT di 48v-ISG</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
 							</div>
-						</div>
-					</div>
 
-					<div class="accordion m01" id="body-ml">
-						<button class="accordion-header min" aria-expanded="false" aria-controls="content-body-ml">
-							ML・GLE
-						</button>
-						<div id="content-body-ml" class="accordion-content">
-							<div class="accordion-content-inner">
-								<h4 class="sr-only">メルセデス・ベンツ MLクラス 諸元表</h4>
-								<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84_M%E3%82%AF%E3%83%A9%E3%82%B9" class="icon-link wiki" target="_blank" title="Wiki(J) MLクラス"></a>
-								<a href="pic/ja_mb_img_ml.html" class="icon-link camera" title="GALERIE" target="_blank"></a>
-								FR (W166の一部) / 4MATIC
-								<table class="body-table">
-									<thead>
-										<tr>
-											<th scope="col"><span title="Jahr der Lieferung/デリバリーした年">年</span></th>
-											<th scope="col" class="b">code</th>
-											<th scope="col">var.</th>
-											<th scope="col" class="b"><span title="in voller Länge/mm">全長</span></th>
-											<th scope="col"><span title="Gesamtbreite/mm">全幅</span></th>
-											<th scope="col"><span title="Gesamthöhe/mm">全高</span></th>
-											<th scope="col"><span title="Radstand/mm/ホイールベース">軸距</span></th>
-											<th scope="col" class="b"><span title="Volles Gewicht/kg">全重</span></th>
-											<th scope="col"><span title="Minimaler Wenderadius/最小回転半径">回</span></th>
-											<th scope="col" class="b"><span title="Suspension">sus</span></th>
-											<th scope="col"><span title="Luftwiderstandsbeiwert/抗力係数">CD</span></th>
-											<th scope="col"><span title="Übertragung/トランスミッション">T/M</span></th>
-											<th scope="col"><span title="Motor/エンジン">E/G</span></th>
-											<th scope="col"><span title="Motortyp/エンジン配列">typ</span></th>
-											<th scope="col"><span title="Zylinderkopf/シリンダーヘッド">head</span></th>
-											<th scope="col"><span title="Verschiebung/排気量">cm&sup3;</span></th>
-											<th scope="col"><span title="仏馬力">PS</span></th>
-											<th scope="col"><span title="maximale Geschwindigkeit/最高速度">max</span></th>
-											<th scope="col"><span title="0-100km/h:sec">100</span></th>
-											<th scope="col"><span title="Zusätzliche Ausrüstung">補機</span></th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>'97</td>
-											<td class="b">W163</td>
-											<td class="left fs80pa"><a href="https://www.automobile-catalog.com/car/1998/1539620/mercedes-benz_ml_320.html" target="_blank">ML320 4mtc</a></td>
-											<td class="b">4,587</td>
-											<td>1,833</td>
-											<td>1,776</td>
-											<td>2,820</td>
-											<td class="b">1,915</td>
-											<td>6.0</td>
-											<td class="b">dw/dw</td>
-											<td>0.39</td>
-											<td>5G</td>
-											<td>M112</td>
-											<td>V6</td>
-											<td>SOHC18v</td>
-											<td>3,199</td>
-											<td>218</td>
-											<td>201</td>
-											<td>10</td>
-											<td class="left">Mehrpunkt-fi</td>
-										</tr>
-										<tr>
-											<td>'05</td>
-											<td class="b">W164</td>
-											<td class="left fs80pa"><a href="https://www.automobile-catalog.com/car/2005/1560125/mercedes-benz_ml_350_4matic.html" target="_blank">ML350 4mtc</a></td>
-											<td class="b">4,788</td>
-											<td>1,911</td>
-											<td>1,815</td>
-											<td>2,915</td>
-											<td class="b">2,120</td>
-											<td>5.5</td>
-											<td class="b">dw/4l</td>
-											<td>0.34</td>
-											<td>7G</td>
-											<td>M272</td>
-											<td>V6</td>
-											<td>DOHC24v</td>
-											<td>3,498</td>
-											<td>272</td>
-											<td>222</td>
-											<td>8.1</td>
-											<td class="left fs80pa">VVT Mehrpunkt-fi</td>
-										</tr>
-										<tr>
-											<td>'11</td>
-											<td class="b">W166</td>
-											<td class="left fs80pa"><a href="https://www.automobile-catalog.com/car/2011/1560635/mercedes-benz_ml_350_blueefficiency_4matic.html" target="_blank">ML350 4mtc</a></td>
-											<td class="b">4,804</td>
-											<td>1,926</td>
-											<td>1,796</td>
-											<td>2,915</td>
-											<td class="b">2,055</td>
-											<td>5.5</td>
-											<td class="b">dw/4l</td>
-											<td>0.35</td>
-											<td>7G</td>
-											<td>M276</td>
-											<td>V6</td>
-											<td>DOHC24v</td>
-											<td>3,498</td>
-											<td>306</td>
-											<td>234</td>
-											<td>7.2</td>
-											<td class="left">VVT di</td>
-										</tr>
-										<tr>
-											<td>'15</td>
-											<td class="b">C292</td>
-											<td class="left fs80pa"><a href="https://www.automobile-catalog.com/car/2015/2123765/mercedes-benz_gle_400_4matic_coupe.html" target="_blank">GLE400C 4mtc</a></td>
-											<td class="b">4,900</td>
-											<td>2,003</td>
-											<td>1,720</td>
-											<td>2,915</td>
-											<td class="b">2,105</td>
-											<td>5.9</td>
-											<td class="b">dw/4l</td>
-											<td>0.36</td>
-											<td>9G</td>
-											<td>M276</td>
-											<td>V6</td>
-											<td>DOHC24v</td>
-											<td>2,996</td>
-											<td>333</td>
-											<td>237</td>
-											<td>5.8</td>
-											<td class="left fs80pa">2xturbo 2xic di</td>
-										</tr>
-										<tr>
-											<td>'20</td>
-											<td class="b">V167</td>
-											<td class="left fs80pa"><a href="https://www.automobile-catalog.com/car/2020/2968835/mercedes-benz_gle_350_e_4matic_suv.html#gsc.tab=0" target="_blank">GLE350e 4mtc</a></td>
-											<td class="b">4,924</td>
-											<td>1,010</td>
-											<td>1,772</td>
-											<td>2,995</td>
-											<td class="b">2,530</td>
-											<td>5.1</td>
-											<td class="b">4l/ml</td>
-											<td>0.35</td>
-											<td>9G</td>
-											<td>M274</td>
-											<td>R4</td>
-											<td>DOHC16v</td>
-											<td>1,991</td>
-											<td>333</td>
-											<td>234</td>
-											<td>6.9</td>
-											<td class="left">PHEV VVT di</td>
-										</tr>
-										<tr>
-											<td>'20</td>
-											<td class="b">C167</td>
-											<td class="left fs80pa"><a href="https://www.automobile-catalog.com/car/2020/2968850/mercedes-benz_gle_350_e_4matic_coupe.html#gsc.tab=0" target="_blank">GLE400Ce 4mtc</a></td>
-											<td class="b">4,939</td>
-											<td>2,010</td>
-											<td>1,730</td>
-											<td>2,935</td>
-											<td class="b">2,550</td>
-											<td>5.5</td>
-											<td class="b">dw/ml</td>
-											<td>0.35</td>
-											<td>9G</td>
-											<td>M274</td>
-											<td>R4</td>
-											<td>DOHC24v</td>
-											<td>1,991</td>
-											<td>333</td>
-											<td>236</td>
-											<td>6.9</td>
-											<td class="left fs80pa">PHEV VVT di</td>
-										</tr>
-									</tbody>
-								</table>
+							<div id="body-mb-ml" class="accordion-content">
+								<div class="side-by-side-body">
+									<h4 class="sr-only">メルセデス・ベンツ MLクラス 諸元表</h4>
+									<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84_M%E3%82%AF%E3%83%A9%E3%82%B9" class="icon-link wiki" target="_blank" title="Wiki(J) MLクラス"></a>
+									<a href="pic/ja_mb_img_ml.html" class="icon-link camera" title="GALERIE" target="_blank"></a>
+									FR (W166の一部) / 4MATIC
+									<table class="body-table">
+										<thead>
+											<tr>
+												<th scope="col"><span title="Jahr der Lieferung/デリバリーした年">年</span></th>
+												<th scope="col" class="b">code</th>
+												<th scope="col">var.</th>
+												<th scope="col" class="b"><span title="in voller Länge/mm">全長</span></th>
+												<th scope="col"><span title="Gesamtbreite/mm">全幅</span></th>
+												<th scope="col"><span title="Gesamthöhe/mm">全高</span></th>
+												<th scope="col"><span title="Radstand/mm/ホイールベース">軸距</span></th>
+												<th scope="col" class="b"><span title="Volles Gewicht/kg">全重</span></th>
+												<th scope="col"><span title="Minimaler Wenderadius/最小回転半径">回</span></th>
+												<th scope="col" class="b"><span title="Suspension">sus</span></th>
+												<th scope="col"><span title="Luftwiderstandsbeiwert/抗力係数">CD</span></th>
+												<th scope="col"><span title="Übertragung/トランスミッション">T/M</span></th>
+												<th scope="col"><span title="Motor/エンジン">E/G</span></th>
+												<th scope="col"><span title="Motortyp/エンジン配列">typ</span></th>
+												<th scope="col"><span title="Zylinderkopf/シリンダーヘッド">head</span></th>
+												<th scope="col"><span title="Verschiebung/排気量">cm&sup3;</span></th>
+												<th scope="col"><span title="仏馬力">PS</span></th>
+												<th scope="col"><span title="maximale Geschwindigkeit/最高速度">max</span></th>
+												<th scope="col"><span title="0-100km/h:sec">100</span></th>
+												<th scope="col"><span title="Zusätzliche Ausrüstung">補機</span></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>'97</td>
+												<td class="b">W163</td>
+												<td class="left fs80pa"><a href="https://www.automobile-catalog.com/car/1998/1539620/mercedes-benz_ml_320.html" target="_blank">ML320 4mtc</a></td>
+												<td class="b">4,587</td>
+												<td>1,833</td>
+												<td>1,776</td>
+												<td>2,820</td>
+												<td class="b">1,915</td>
+												<td>6.0</td>
+												<td class="b">dw/dw</td>
+												<td>0.39</td>
+												<td>5G</td>
+												<td>M112</td>
+												<td>V6</td>
+												<td>SOHC18v</td>
+												<td>3,199</td>
+												<td>218</td>
+												<td>201</td>
+												<td>10</td>
+												<td class="left">Mehrpunkt-fi</td>
+											</tr>
+											<tr>
+												<td>'05</td>
+												<td class="b">W164</td>
+												<td class="left fs80pa"><a href="https://www.automobile-catalog.com/car/2005/1560125/mercedes-benz_ml_350_4matic.html" target="_blank">ML350 4mtc</a></td>
+												<td class="b">4,788</td>
+												<td>1,911</td>
+												<td>1,815</td>
+												<td>2,915</td>
+												<td class="b">2,120</td>
+												<td>5.5</td>
+												<td class="b">dw/4l</td>
+												<td>0.34</td>
+												<td>7G</td>
+												<td>M272</td>
+												<td>V6</td>
+												<td>DOHC24v</td>
+												<td>3,498</td>
+												<td>272</td>
+												<td>222</td>
+												<td>8.1</td>
+												<td class="left fs80pa">VVT Mehrpunkt-fi</td>
+											</tr>
+											<tr>
+												<td>'11</td>
+												<td class="b">W166</td>
+												<td class="left fs80pa"><a href="https://www.automobile-catalog.com/car/2011/1560635/mercedes-benz_ml_350_blueefficiency_4matic.html" target="_blank">ML350 4mtc</a></td>
+												<td class="b">4,804</td>
+												<td>1,926</td>
+												<td>1,796</td>
+												<td>2,915</td>
+												<td class="b">2,055</td>
+												<td>5.5</td>
+												<td class="b">dw/4l</td>
+												<td>0.35</td>
+												<td>7G</td>
+												<td>M276</td>
+												<td>V6</td>
+												<td>DOHC24v</td>
+												<td>3,498</td>
+												<td>306</td>
+												<td>234</td>
+												<td>7.2</td>
+												<td class="left">VVT di</td>
+											</tr>
+											<tr>
+												<td>'15</td>
+												<td class="b">C292</td>
+												<td class="left fs80pa"><a href="https://www.automobile-catalog.com/car/2015/2123765/mercedes-benz_gle_400_4matic_coupe.html" target="_blank">GLE400C 4mtc</a></td>
+												<td class="b">4,900</td>
+												<td>2,003</td>
+												<td>1,720</td>
+												<td>2,915</td>
+												<td class="b">2,105</td>
+												<td>5.9</td>
+												<td class="b">dw/4l</td>
+												<td>0.36</td>
+												<td>9G</td>
+												<td>M276</td>
+												<td>V6</td>
+												<td>DOHC24v</td>
+												<td>2,996</td>
+												<td>333</td>
+												<td>237</td>
+												<td>5.8</td>
+												<td class="left fs80pa">2xturbo 2xic di</td>
+											</tr>
+											<tr>
+												<td>'20</td>
+												<td class="b">V167</td>
+												<td class="left fs80pa"><a href="https://www.automobile-catalog.com/car/2020/2968835/mercedes-benz_gle_350_e_4matic_suv.html#gsc.tab=0" target="_blank">GLE350e 4mtc</a></td>
+												<td class="b">4,924</td>
+												<td>1,010</td>
+												<td>1,772</td>
+												<td>2,995</td>
+												<td class="b">2,530</td>
+												<td>5.1</td>
+												<td class="b">4l/ml</td>
+												<td>0.35</td>
+												<td>9G</td>
+												<td>M274</td>
+												<td>R4</td>
+												<td>DOHC16v</td>
+												<td>1,991</td>
+												<td>333</td>
+												<td>234</td>
+												<td>6.9</td>
+												<td class="left">PHEV VVT di</td>
+											</tr>
+											<tr>
+												<td>'20</td>
+												<td class="b">C167</td>
+												<td class="left fs80pa"><a href="https://www.automobile-catalog.com/car/2020/2968850/mercedes-benz_gle_350_e_4matic_coupe.html#gsc.tab=0" target="_blank">GLE400Ce 4mtc</a></td>
+												<td class="b">4,939</td>
+												<td>2,010</td>
+												<td>1,730</td>
+												<td>2,935</td>
+												<td class="b">2,550</td>
+												<td>5.5</td>
+												<td class="b">dw/ml</td>
+												<td>0.35</td>
+												<td>9G</td>
+												<td>M274</td>
+												<td>R4</td>
+												<td>DOHC24v</td>
+												<td>1,991</td>
+												<td>333</td>
+												<td>236</td>
+												<td>6.9</td>
+												<td class="left fs80pa">PHEV VVT di</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
 							</div>
-						</div>
-					</div>
 
-					<div class="accordion m01" id="body-r">
-						<button class="accordion-header min" aria-expanded="false" aria-controls="content-body-r">
-							R クラス
-						</button>
-						<div id="content-body-r" class="accordion-content">
-							<div class="accordion-content-inner">
-								<h4 class="sr-only">メルセデス・ベンツ Rクラス 諸元表</h4>
-								<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84_R%E3%82%AF%E3%83%A9%E3%82%B9" class="icon-link wiki" target="_blank" title="Wiki(J) Rクラス"></a>
-								<a href="pic/ja_mb_img_r.html" class="icon-link camera" title="GALERIE" target="_blank"></a>
-								FR / 4MATIC
-								<table class="body-table">
-									<thead>
-										<tr>
-											<th scope="col"><span title="Jahr der Lieferung/デリバリーした年">年</span></th>
-											<th scope="col" class="b">code</th>
-											<th scope="col">var.</th>
-											<th scope="col" class="b"><span title="in voller Länge/mm">全長</span></th>
-											<th scope="col"><span title="Gesamtbreite/mm">全幅</span></th>
-											<th scope="col"><span title="Gesamthöhe/mm">全高</span></th>
-											<th scope="col"><span title="Radstand/mm/ホイールベース">軸距</span></th>
-											<th scope="col" class="b"><span title="Volles Gewicht/kg">全重</span></th>
-											<th scope="col"><span title="Minimaler Wenderadius/最小回転半径">回</span></th>
-											<th scope="col" class="b"><span title="Suspension">sus</span></th>
-											<th scope="col"><span title="Luftwiderstandsbeiwert/抗力係数">CD</span></th>
-											<th scope="col"><span title="Übertragung/トランスミッション">T/M</span></th>
-											<th scope="col"><span title="Motor/エンジン">E/G</span></th>
-											<th scope="col"><span title="Motortyp/エンジン配列">typ</span></th>
-											<th scope="col"><span title="Zylinderkopf/シリンダーヘッド">head</span></th>
-											<th scope="col"><span title="Verschiebung/排気量">cm&sup3;</span></th>
-											<th scope="col"><span title="仏馬力">PS</span></th>
-											<th scope="col"><span title="maximale Geschwindigkeit/最高速度">max</span></th>
-											<th scope="col"><span title="0-100km/h:sec">100</span></th>
-											<th scope="col"><span title="Zusätzliche Ausrüstung">補機</span></th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>'06</td>
-											<td class="b">W251</td>
-											<td class="left"><a href="https://www.automobile-catalog.com/car/2006/1558550/mercedes-benz_r_350_4matic.html" target="_blank">R350 4mtc</a></td>
-											<td class="b">4,922</td>
-											<td>1,922</td>
-											<td>1,659</td>
-											<td>2,980</td>
-											<td class="b">2,080</td>
-											<td>5.9</td>
-											<td class="b">dw/4l</td>
-											<td>0.31</td>
-											<td>7G</td>
-											<td>M272</td>
-											<td>V6</td>
-											<td>DOHC24v</td>
-											<td>3,498</td>
-											<td>272</td>
-											<td>234</td>
-											<td>8.1</td>
-											<td class="left fs80pa">VVT Mehrpunkt-fi</td>
-										</tr>
-									</tbody>
-								</table>
+							<div id="body-mb-r" class="accordion-content">
+								<div class="side-by-side-body">
+									<h4 class="sr-only">メルセデス・ベンツ Rクラス 諸元表</h4>
+									<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84_R%E3%82%AF%E3%83%A9%E3%82%B9" class="icon-link wiki" target="_blank" title="Wiki(J) Rクラス"></a>
+									<a href="pic/ja_mb_img_r.html" class="icon-link camera" title="GALERIE" target="_blank"></a>
+									FR / 4MATIC
+									<table class="body-table">
+										<thead>
+											<tr>
+												<th scope="col"><span title="Jahr der Lieferung/デリバリーした年">年</span></th>
+												<th scope="col" class="b">code</th>
+												<th scope="col">var.</th>
+												<th scope="col" class="b"><span title="in voller Länge/mm">全長</span></th>
+												<th scope="col"><span title="Gesamtbreite/mm">全幅</span></th>
+												<th scope="col"><span title="Gesamthöhe/mm">全高</span></th>
+												<th scope="col"><span title="Radstand/mm/ホイールベース">軸距</span></th>
+												<th scope="col" class="b"><span title="Volles Gewicht/kg">全重</span></th>
+												<th scope="col"><span title="Minimaler Wenderadius/最小回転半径">回</span></th>
+												<th scope="col" class="b"><span title="Suspension">sus</span></th>
+												<th scope="col"><span title="Luftwiderstandsbeiwert/抗力係数">CD</span></th>
+												<th scope="col"><span title="Übertragung/トランスミッション">T/M</span></th>
+												<th scope="col"><span title="Motor/エンジン">E/G</span></th>
+												<th scope="col"><span title="Motortyp/エンジン配列">typ</span></th>
+												<th scope="col"><span title="Zylinderkopf/シリンダーヘッド">head</span></th>
+												<th scope="col"><span title="Verschiebung/排気量">cm&sup3;</span></th>
+												<th scope="col"><span title="仏馬力">PS</span></th>
+												<th scope="col"><span title="maximale Geschwindigkeit/最高速度">max</span></th>
+												<th scope="col"><span title="0-100km/h:sec">100</span></th>
+												<th scope="col"><span title="Zusätzliche Ausrüstung">補機</span></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>'06</td>
+												<td class="b">W251</td>
+												<td class="left"><a href="https://www.automobile-catalog.com/car/2006/1558550/mercedes-benz_r_350_4matic.html" target="_blank">R350 4mtc</a></td>
+												<td class="b">4,922</td>
+												<td>1,922</td>
+												<td>1,659</td>
+												<td>2,980</td>
+												<td class="b">2,080</td>
+												<td>5.9</td>
+												<td class="b">dw/4l</td>
+												<td>0.31</td>
+												<td>7G</td>
+												<td>M272</td>
+												<td>V6</td>
+												<td>DOHC24v</td>
+												<td>3,498</td>
+												<td>272</td>
+												<td>234</td>
+												<td>8.1</td>
+												<td class="left fs80pa">VVT Mehrpunkt-fi</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
 							</div>
-						</div>
-					</div>
 
-					<div class="accordion m01" id="body-gl">
-						<button class="accordion-header min" aria-expanded="false" aria-controls="content-body-gl">
-							GL・GLS
-						</button>
-						<div id="content-body-gl" class="accordion-content">
-							<div class="accordion-content-inner">
-								<h4 class="sr-only">メルセデス・ベンツ GLクラス 諸元表</h4>
-								<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84_GL%E3%82%AF%E3%83%A9%E3%82%B9" class="icon-link wiki" target="_blank" title="Wiki(J) GLクラス"></a>
-								<a href="pic/ja_mb_img_gl.html" class="icon-link camera" title="GALERIE" target="_blank"></a>
-								4MATIC
-								<table class="body-table">
-									<thead>
-										<tr>
-											<th scope="col"><span title="Jahr der Lieferung/デリバリーした年">年</span></th>
-											<th scope="col" class="b">code</th>
-											<th scope="col">var.</th>
-											<th scope="col" class="b"><span title="in voller Länge/mm">全長</span></th>
-											<th scope="col"><span title="Gesamtbreite/mm">全幅</span></th>
-											<th scope="col"><span title="Gesamthöhe/mm">全高</span></th>
-											<th scope="col"><span title="Radstand/mm/ホイールベース">軸距</span></th>
-											<th scope="col" class="b"><span title="Volles Gewicht/kg">全重</span></th>
-											<th scope="col"><span title="Minimaler Wenderadius/最小回転半径">回</span></th>
-											<th scope="col" class="b"><span title="Suspension">sus</span></th>
-											<th scope="col"><span title="Luftwiderstandsbeiwert/抗力係数">CD</span></th>
-											<th scope="col"><span title="Übertragung/トランスミッション">T/M</span></th>
-											<th scope="col"><span title="Motor/エンジン">E/G</span></th>
-											<th scope="col"><span title="Motortyp/エンジン配列">typ</span></th>
-											<th scope="col"><span title="Zylinderkopf/シリンダーヘッド">head</span></th>
-											<th scope="col"><span title="Verschiebung/排気量">cm&sup3;</span></th>
-											<th scope="col"><span title="仏馬力">PS</span></th>
-											<th scope="col"><span title="maximale Geschwindigkeit/最高速度">max</span></th>
-											<th scope="col"><span title="0-100km/h:sec">100</span></th>
-											<th scope="col"><span title="Zusätzliche Ausrüstung">補機</span></th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>'06</td>
-											<td class="b">X164</td>
-											<td class="left"><a href="https://www.automobile-catalog.com/car/2006/1561040/mercedes-benz_gl_450_4matic.html#gsc.tab=0" target="_blank">GL450 4mtc</a></td>
-											<td class="b">5,088</td>
-											<td>1,920</td>
-											<td>1,840</td>
-											<td>3,075</td>
-											<td class="b">2,355</td>
-											<td>5.7</td>
-											<td class="b">dw/4l</td>
-											<td>0.37</td>
-											<td>7G</td>
-											<td>M273</td>
-											<td>V8</td>
-											<td>DOHC32v</td>
-											<td>4,663</td>
-											<td>340</td>
-											<td>233</td>
-											<td>7.3</td>
-											<td class="left">Mehrpunkt-fi</td>
-										</tr>
-										<tr>
-											<td>'12</td>
-											<td class="b">X166</td>
-											<td class="left"><a href="https://www.automobile-catalog.com/car/2013/1782545/mercedes-benz_gl_450_4matic.html#gsc.tab=0" target="_blank">GLS450 4mtc</a></td>
-											<td class="b">5,120</td>
-											<td>1,934</td>
-											<td>1,850</td>
-											<td>3,075</td>
-											<td class="b">2,450</td>
-											<td>5.8</td>
-											<td class="b">dw/4l</td>
-											<td>0.35</td>
-											<td>7G</td>
-											<td>M278</td>
-											<td>V8</td>
-											<td>DOHC32v</td>
-											<td>4,663</td>
-											<td>367</td>
-											<td>235</td>
-											<td>6.7</td>
-											<td class="left">2xTurbo 2xic di</td>
-										</tr>
-										<tr>
-											<td>'20</td>
-											<td class="b">X167</td>
-											<td class="left"><a href="https://www.automobile-catalog.com/car/2020/2915000/mercedes-benz_gls_450_4matic.html#gsc.tab=0" target="_blank">GLS450 4mtc</a></td>
-											<td class="b">5,207</td>
-											<td>1,956</td>
-											<td>1,823</td>
-											<td>3,135</td>
-											<td class="b">2,385</td>
-											<td>5.6</td>
-											<td>AIR</td>
-											<td>0.33</td>
-											<td>9G</td>
-											<td>M256</td>
-											<td>R6</td>
-											<td>DOHC24v</td>
-											<td>2,999</td>
-											<td>367</td>
-											<td>247</td>
-											<td>6.2</td>
-											<td class="left fs80pa">2xTurbo di 48v-ISG</td>
-										</tr>
-									</tbody>
-								</table>
+							<div id="body-mb-gl" class="accordion-content">
+								<div class="side-by-side-body">
+									<h4 class="sr-only">メルセデス・ベンツ GLクラス 諸元表</h4>
+									<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84_GL%E3%82%AF%E3%83%A9%E3%82%B9" class="icon-link wiki" target="_blank" title="Wiki(J) GLクラス"></a>
+									<a href="pic/ja_mb_img_gl.html" class="icon-link camera" title="GALERIE" target="_blank"></a>
+									4MATIC
+									<table class="body-table">
+										<thead>
+											<tr>
+												<th scope="col"><span title="Jahr der Lieferung/デリバリーした年">年</span></th>
+												<th scope="col" class="b">code</th>
+												<th scope="col">var.</th>
+												<th scope="col" class="b"><span title="in voller Länge/mm">全長</span></th>
+												<th scope="col"><span title="Gesamtbreite/mm">全幅</span></th>
+												<th scope="col"><span title="Gesamthöhe/mm">全高</span></th>
+												<th scope="col"><span title="Radstand/mm/ホイールベース">軸距</span></th>
+												<th scope="col" class="b"><span title="Volles Gewicht/kg">全重</span></th>
+												<th scope="col"><span title="Minimaler Wenderadius/最小回転半径">回</span></th>
+												<th scope="col" class="b"><span title="Suspension">sus</span></th>
+												<th scope="col"><span title="Luftwiderstandsbeiwert/抗力係数">CD</span></th>
+												<th scope="col"><span title="Übertragung/トランスミッション">T/M</span></th>
+												<th scope="col"><span title="Motor/エンジン">E/G</span></th>
+												<th scope="col"><span title="Motortyp/エンジン配列">typ</span></th>
+												<th scope="col"><span title="Zylinderkopf/シリンダーヘッド">head</span></th>
+												<th scope="col"><span title="Verschiebung/排気量">cm&sup3;</span></th>
+												<th scope="col"><span title="仏馬力">PS</span></th>
+												<th scope="col"><span title="maximale Geschwindigkeit/最高速度">max</span></th>
+												<th scope="col"><span title="0-100km/h:sec">100</span></th>
+												<th scope="col"><span title="Zusätzliche Ausrüstung">補機</span></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>'06</td>
+												<td class="b">X164</td>
+												<td class="left"><a href="https://www.automobile-catalog.com/car/2006/1561040/mercedes-benz_gl_450_4matic.html#gsc.tab=0" target="_blank">GL450 4mtc</a></td>
+												<td class="b">5,088</td>
+												<td>1,920</td>
+												<td>1,840</td>
+												<td>3,075</td>
+												<td class="b">2,355</td>
+												<td>5.7</td>
+												<td class="b">dw/4l</td>
+												<td>0.37</td>
+												<td>7G</td>
+												<td>M273</td>
+												<td>V8</td>
+												<td>DOHC32v</td>
+												<td>4,663</td>
+												<td>340</td>
+												<td>233</td>
+												<td>7.3</td>
+												<td class="left">Mehrpunkt-fi</td>
+											</tr>
+											<tr>
+												<td>'12</td>
+												<td class="b">X166</td>
+												<td class="left"><a href="https://www.automobile-catalog.com/car/2013/1782545/mercedes-benz_gl_450_4matic.html#gsc.tab=0" target="_blank">GLS450 4mtc</a></td>
+												<td class="b">5,120</td>
+												<td>1,934</td>
+												<td>1,850</td>
+												<td>3,075</td>
+												<td class="b">2,450</td>
+												<td>5.8</td>
+												<td class="b">dw/4l</td>
+												<td>0.35</td>
+												<td>7G</td>
+												<td>M278</td>
+												<td>V8</td>
+												<td>DOHC32v</td>
+												<td>4,663</td>
+												<td>367</td>
+												<td>235</td>
+												<td>6.7</td>
+												<td class="left">2xTurbo 2xic di</td>
+											</tr>
+											<tr>
+												<td>'20</td>
+												<td class="b">X167</td>
+												<td class="left"><a href="https://www.automobile-catalog.com/car/2020/2915000/mercedes-benz_gls_450_4matic.html#gsc.tab=0" target="_blank">GLS450 4mtc</a></td>
+												<td class="b">5,207</td>
+												<td>1,956</td>
+												<td>1,823</td>
+												<td>3,135</td>
+												<td class="b">2,385</td>
+												<td>5.6</td>
+												<td>AIR</td>
+												<td>0.33</td>
+												<td>9G</td>
+												<td>M256</td>
+												<td>R6</td>
+												<td>DOHC24v</td>
+												<td>2,999</td>
+												<td>367</td>
+												<td>247</td>
+												<td>6.2</td>
+												<td class="left fs80pa">2xTurbo di 48v-ISG</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
 							</div>
-						</div>
-					</div>
 
-					<div class="accordion m01" id="body-g">
-						<button class="accordion-header min" aria-expanded="false" aria-controls="content-body-g">
-							G クラス
-						</button>
-						<div id="content-body-g" class="accordion-content">
-							<div class="accordion-content-inner">
-								<h4 class="sr-only">メルセデス・ベンツ Gクラス 諸元表</h4>
-								<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84_G%E3%82%AF%E3%83%A9%E3%82%B9" class="icon-link wiki" target="_blank" title="Wiki(J) Gクラス"></a>
-								<a href="pic/ja_mb_img_g.html" class="icon-link camera" title="GALERIE" target="_blank"></a>
-								4MATIC ( part time , W463： '01- full time)、
-								OEM：Puch・Peugeot P4
-								<table class="body-table">
-									<thead>
-										<tr>
-											<th scope="col"><span title="Jahr der Lieferung/デリバリーした年">年</span></th>
-											<th scope="col" class="b">code</th>
-											<th scope="col">var.</th>
-											<th scope="col" class="b"><span title="in voller Länge/mm">全長</span></th>
-											<th scope="col"><span title="Gesamtbreite/mm">全幅</span></th>
-											<th scope="col"><span title="Gesamthöhe/mm">全高</span></th>
-											<th scope="col"><span title="Radstand/mm/ホイールベース">軸距</span></th>
-											<th scope="col" class="b"><span title="Volles Gewicht/kg">全重</span></th>
-											<th scope="col"><span title="Minimaler Wenderadius/最小回転半径">回</span></th>
-											<th scope="col" class="b"><span title="Suspension">sus</span></th>
-											<th scope="col"><span title="Luftwiderstandsbeiwert/抗力係数">CD</span></th>
-											<th scope="col"><span title="Übertragung/トランスミッション">T/M</span></th>
-											<th scope="col"><span title="Motor/エンジン">E/G</span></th>
-											<th scope="col"><span title="Motortyp/エンジン配列">typ</span></th>
-											<th scope="col"><span title="Zylinderkopf/シリンダーヘッド">head</span></th>
-											<th scope="col"><span title="Verschiebung/排気量">cm&sup3;</span></th>
-											<th scope="col"><span title="仏馬力">PS</span></th>
-											<th scope="col"><span title="maximale Geschwindigkeit/最高速度">max</span></th>
-											<th scope="col"><span title="0-100km/h:sec">100</span></th>
-											<th scope="col"><span title="Zusätzliche Ausrüstung">補機</span></th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>'79</td>
-											<td class="b">W460</td>
-											<td class="left fs80pa">230G LWB</td>
-											<td class="b">4,395</td>
-											<td>1,700</td>
-											<td>1,975</td>
-											<td>2,850</td>
-											<td class="b">1,960</td>
-											<td>6.1</td>
-											<td class="b">pr/rr</td>
-											<td>0.6</td>
-											<td>4MT</td>
-											<td>M115</td>
-											<td>R4</td>
-											<td>SOHC8v</td>
-											<td>2,307</td>
-											<td>90</td>
-											<td>130</td>
-											<td>23.3</td>
-											<td class="left fs80pa">Stromberg 175 CDTU</td>
-										</tr>
-										<tr>
-											<td>'90</td>
-											<td class="b">W463</td>
-											<td class="left fs80pa">230GE LWB</td>
-											<td class="b">4,635</td>
-											<td>1,690</td>
-											<td>1,940</td>
-											<td>2,850</td>
-											<td class="b">2,195</td>
-											<td>6.5</td>
-											<td class="b">pr/rr</td>
-											<td>0.54</td>
-											<td>5MT</td>
-											<td>M102</td>
-											<td>R4</td>
-											<td>SOHC8v</td>
-											<td>2,299</td>
-											<td>129</td>
-											<td>152</td>
-											<td>17.9</td>
-											<td class="left fs80pa">Bosch KE-Jetronic</td>
-										</tr>
-										<tr>
-											<td>'18</td>
-											<td class="b">W463 II</td>
-											<td>G500</td>
-											<td class="b">4,825</td>
-											<td>1,931</td>
-											<td>1,969</td>
-											<td>2,890</td>
-											<td class="b">2,395</td>
-											<td>6.3</td>
-											<td class="b">dw/cr</td>
-											<td>0.54</td>
-											<td>9G</td>
-											<td>M176</td>
-											<td>V8</td>
-											<td>DOHC32v</td>
-											<td>3,982</td>
-											<td>422</td>
-											<td>215</td>
-											<td>5.5</td>
-											<td class="left">2xTurbo 2xic di</td>
-										</tr>
-									</tbody>
-								</table>
+							<div id="body-mb-g" class="accordion-content">
+								<div class="side-by-side-body">
+									<h4 class="sr-only">メルセデス・ベンツ Gクラス 諸元表</h4>
+									<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84_G%E3%82%AF%E3%83%A9%E3%82%B9" class="icon-link wiki" target="_blank" title="Wiki(J) Gクラス"></a>
+									<a href="pic/ja_mb_img_g.html" class="icon-link camera" title="GALERIE" target="_blank"></a>
+									4MATIC ( part time , W463： '01- full time)、
+									OEM：Puch・Peugeot P4
+									<table class="body-table">
+										<thead>
+											<tr>
+												<th scope="col"><span title="Jahr der Lieferung/デリバリーした年">年</span></th>
+												<th scope="col" class="b">code</th>
+												<th scope="col">var.</th>
+												<th scope="col" class="b"><span title="in voller Länge/mm">全長</span></th>
+												<th scope="col"><span title="Gesamtbreite/mm">全幅</span></th>
+												<th scope="col"><span title="Gesamthöhe/mm">全高</span></th>
+												<th scope="col"><span title="Radstand/mm/ホイールベース">軸距</span></th>
+												<th scope="col" class="b"><span title="Volles Gewicht/kg">全重</span></th>
+												<th scope="col"><span title="Minimaler Wenderadius/最小回転半径">回</span></th>
+												<th scope="col" class="b"><span title="Suspension">sus</span></th>
+												<th scope="col"><span title="Luftwiderstandsbeiwert/抗力係数">CD</span></th>
+												<th scope="col"><span title="Übertragung/トランスミッション">T/M</span></th>
+												<th scope="col"><span title="Motor/エンジン">E/G</span></th>
+												<th scope="col"><span title="Motortyp/エンジン配列">typ</span></th>
+												<th scope="col"><span title="Zylinderkopf/シリンダーヘッド">head</span></th>
+												<th scope="col"><span title="Verschiebung/排気量">cm&sup3;</span></th>
+												<th scope="col"><span title="仏馬力">PS</span></th>
+												<th scope="col"><span title="maximale Geschwindigkeit/最高速度">max</span></th>
+												<th scope="col"><span title="0-100km/h:sec">100</span></th>
+												<th scope="col"><span title="Zusätzliche Ausrüstung">補機</span></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>'79</td>
+												<td class="b">W460</td>
+												<td class="left fs80pa">230G LWB</td>
+												<td class="b">4,395</td>
+												<td>1,700</td>
+												<td>1,975</td>
+												<td>2,850</td>
+												<td class="b">1,960</td>
+												<td>6.1</td>
+												<td class="b">pr/rr</td>
+												<td>0.6</td>
+												<td>4MT</td>
+												<td>M115</td>
+												<td>R4</td>
+												<td>SOHC8v</td>
+												<td>2,307</td>
+												<td>90</td>
+												<td>130</td>
+												<td>23.3</td>
+												<td class="left fs80pa">Stromberg 175 CDTU</td>
+											</tr>
+											<tr>
+												<td>'90</td>
+												<td class="b">W463</td>
+												<td class="left fs80pa">230GE LWB</td>
+												<td class="b">4,635</td>
+												<td>1,690</td>
+												<td>1,940</td>
+												<td>2,850</td>
+												<td class="b">2,195</td>
+												<td>6.5</td>
+												<td class="b">pr/rr</td>
+												<td>0.54</td>
+												<td>5MT</td>
+												<td>M102</td>
+												<td>R4</td>
+												<td>SOHC8v</td>
+												<td>2,299</td>
+												<td>129</td>
+												<td>152</td>
+												<td>17.9</td>
+												<td class="left fs80pa">Bosch KE-Jetronic</td>
+											</tr>
+											<tr>
+												<td>'18</td>
+												<td class="b">W463 II</td>
+												<td>G500</td>
+												<td class="b">4,825</td>
+												<td>1,931</td>
+												<td>1,969</td>
+												<td>2,890</td>
+												<td class="b">2,395</td>
+												<td>6.3</td>
+												<td class="b">dw/cr</td>
+												<td>0.54</td>
+												<td>9G</td>
+												<td>M176</td>
+												<td>V8</td>
+												<td>DOHC32v</td>
+												<td>3,982</td>
+												<td>422</td>
+												<td>215</td>
+												<td>5.5</td>
+												<td class="left">2xTurbo 2xic di</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
 							</div>
+
 						</div>
 					</div>
 				</div>
