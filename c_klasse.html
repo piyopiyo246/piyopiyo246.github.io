@@ -26380,8 +26380,8 @@
 			const closeBtn = document.getElementById('guide-banner-close');
 			if (!guideBanner) return;
 
-			const SCROLL_DELAY = 2000; // スクロール開始から出現までの遅延（2秒）
-			const STOP_KEEP_TIME = 2000; // スクロール停止後の表示維持時間（2秒）
+			const SCROLL_DELAY = 3000; // スクロール開始から出現までの遅延（3秒）
+			const STOP_KEEP_TIME = 1000; // スクロール停止後の表示維持時間（1秒）
 
 			let scrollDelayTimer = null; // 2秒遅延用タイマー
 			let scrollStopTimer = null;  // スクロール停止検知用タイマー
@@ -26450,7 +26450,7 @@
 						scrollDelayTimer = null;
 					}
 
-					// バナーが出現している状態なら、停止してから2秒後にフェードアウト
+					// バナーが出現している状態なら、停止してから1秒後にフェードアウト
 					if (isShowing) {
 						clearTimeout(hideTimer);
 						hideTimer = setTimeout(function () {
