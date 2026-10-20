@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- メインページ -->
   <url><loc>https://piyopiyo246.github.io/c_klasse.html</loc><lastmod>2026-10-17</lastmod></url>
   <!-- GALERIE ドイツ語版 -->
@@ -97,4 +97,4 @@
   <url><loc>https://piyopiyo246.github.io/txt/w206_1t.html</loc><lastmod>2026-09-28</lastmod></url>
   <!-- サイトヒストリー -->
   <url><loc>https://piyopiyo246.github.io/history.html</loc><lastmod>2026-10-20</lastmod></url>
-</sitemapindex>
+</urlset>
