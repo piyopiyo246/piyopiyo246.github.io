@@ -66,6 +66,12 @@
 	<link rel="stylesheet" href="style.min.css">
 
 	<style>
+		.tin {
+			border-top: .1px solid #d4d4d4;
+			margin-left: 20px;
+			width: 98%;
+		}
+
 		.num {
 			white-space: nowrap;
 		}
@@ -2730,7 +2736,7 @@
 					<li class="i"><input class="top_btn1" type="button" onclick="location.href = '#model-in-jpn'" value="国内販売"></li>
 					<li class="i"><input class="top_btn1" type="button" onclick="location.href = '#body-spec'" value="車体"></li>
 					<li class="i"><input class="top_btn1" type="button" onclick="location.href = '#motor'" value="エンジン"></li>
-					<li class="i"><input class="top_btn1" type="button" onclick="location.href = '#at'" value="AT"></li>
+					<li class="i"><input class="top_btn1" type="button" onclick="location.href = '#automatic'" value="AT"></li>
 					<li class="i"><input class="top_btn1" type="button" onclick="location.href = '#zeit'" value="年表"></li>
 					<li class="i"><input class="top_btn1" type="button" onclick="location.href = '#vin'" value="VIN"></li>
 					<li class="i"><input class="top_btn1" type="button" onclick="location.href = '#huroku'" value="付録"></li>
@@ -13707,16 +13713,16 @@
 			</div>
 		</section>
 		<hr>
-
+		
 		<section id="motor">
-			<h2 class="bf0">エンジン</h2>
-			<div class="bk5 style-w2">
-				ガソリンエンジンのみ掲載しています。
+			<div class="bk m41">
+				<span class="lh1 fs300p f7 m4" aria-hidden="true">Motor</span><br>
+				<img src="ico/motor.gif" loading="lazy" alt="エンジン" width="300" height="220">
 			</div>
 
-			<div class="bk m37">
-				<span class="fs300p f7 s04" aria-hidden="true">Motor</span>
-				<img src="ico/motor.gif" loading="lazy" alt="エンジン" width="300" height="220">
+			<h2 class="bf0">エンジン・AT</h2>
+			<div class="bk5 style-w2">
+				ガソリンエンジンのみ掲載しています。
 			</div>
 
 			<div class="accordion" id="eg-r4">
@@ -16957,21 +16963,18 @@
 					</div>
 				</div>
 			</div>
-		</section>
-		<hr>
+			<hr class="tin">
 
-		<section id="at">
-			<h2 class="bf0">AT</h2>
 			<div class="accordion" id="automatic">
 				<button class="accordion-header min" aria-expanded="false" aria-controls="content-automatic">
-					seit 1961 -
+					AT (1961 -)
 				</button>
 				<div id="content-automatic" class="accordion-content" role="region">
 					<div class="accordion-content-inner">
 						<!-- <div class="bk">
 								<img src="ico/at.gif" class="m41 t2" loading="lazy" alt="Automatische Übertragung" width="300" height="220">
 								</div> -->
-						<h3 class="sr-only">メルセデスのオートマチックトランスミッション</h3>
+						<h3 class="sr-only">オートマチックトランスミッション</h3>
 						<table class="m01 wp">
 							<thead>
 								<tr>
@@ -17220,7 +17223,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="bk m49">
+			<div class="bk m42a">
 				<span class="fs300p f7" aria-hidden="true">Zeitleiste</span><br>
 				<img src="ico/mb-logo.png" class="m02" loading="lazy" alt="dreizackiger Stern" width="150" height="150">
 			</div>
@@ -25269,7 +25272,7 @@
 
 		<section id="vin">
 			<h2 class="bf0" title="Vehicle Identification Number">VIN CODE</h2>
-			<div class="bk m49">
+			<div class="bk m41">
 				<span class="fs300p f7 m01" aria-hidden="true">VIN CODE</span><br>
 				<div class="t-05">
 					<img src="ico/code_202.gif" loading="lazy" alt="VIN CODE" width="274" height="58">
@@ -26232,6 +26235,12 @@
 				<h5 class="t1 b">技術的更新</h5>
 				<dl class="m02">
 					<!-- 特になし -->
+					<dt class="s02">26/10/23</dt>
+					<dd>
+						<span class="af4"><a href="c_klasse.html#automatic">AT</a></span>を
+						<span class="af4"><a href="c_klasse.html#motor">エンジン</a></span>
+						に統合
+					</dd>
 					<dt class="s02">26/10/20</dt>
 					<dd>
 						<span class="af4"><a href="history.html">ヒストリー</a></span>
@@ -26252,7 +26261,7 @@
 						<li><a href="#model-in-jpn" class="lnk3">国内販売</a></li>
 						<li><a href="#body-spec" class="lnk3">車体</a></li>
 						<li><a href="#motor" class="lnk3">エンジン</a></li>
-						<li><a href="#at" class="lnk3">AT</a></li>
+						<li><a href="#automatic" class="lnk3">AT</a></li>
 						<li><a href="#zeit" class="lnk3">年表</a></li>
 					</ul>
 				</div>
