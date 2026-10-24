@@ -476,7 +476,8 @@
 		/* body-trim */
 		.trim_name {
 			overflow-wrap: break-word;
-			font-size: small
+			font-size: small;
+			line-height: 1.2
 		}
 
 		.enter_button {
@@ -701,6 +702,10 @@
 
 		.fs250p {
 			font-size: 250%
+		}
+
+		.fs104p {
+			font-size: 104%
 		}
 
 		.fs99p {
@@ -2529,6 +2534,10 @@
 			width: 1300px
 		}
 
+		.ht01 {
+			height: 16px
+		}
+
 		.ht10 {
 			height: 106.6px
 		}
@@ -2608,11 +2617,11 @@
 		.model {
 			box-sizing: border-box;
 			max-width: 100%;
-			padding: 0 2px;
+			padding: 0 3.8px;
 			color: #fff;
-			border: 2px solid #fff;
-			background: #666;
-			border-radius: 2px
+			border: none;
+			background: #777;
+			border-radius: 15%
 		}
 
 		a.model,
@@ -2668,6 +2677,10 @@
 			margin-bottom: 8px;
 		}
 
+		.side-by-side-body {
+			margin: 12px 0 12px 12px;
+		}
+
 		/* 各ボタンの基本スタイル（通常時） */
 		.side-by-side-btn {
 			flex: 0 0 auto;
@@ -2717,6 +2730,43 @@
 			.side-by-side-btn-group {
 				flex-direction: column;
 				gap: 6px;
+			}
+		}
+
+		.panel-grid-container {
+			display: grid;
+			/* デフォルトで横に9列並ぶグリッドレイアウト（元のテーブル構造を維持） */
+			grid-template-columns: repeat(8, 1fr);
+			gap: 10px;
+			align-items: start;
+			margin-bottom: 20px;
+		}
+
+		.panel-item {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+		}
+
+		.panel-item img {
+			display: block;
+			max-width: 100%;
+			height: auto;
+			border-radius: 7px;
+			/* お好みで角丸を追加してもモダンになります */
+		}
+
+		.panel-item .trim_name {
+			font-size: 0.9rem;
+			margin-top: 2px;
+			word-break: break-word;
+		}
+
+		/* レスポンシブ対応（画面幅が狭いときは自動で折り返す設定） */
+		@media screen and (max-width: 1200px) {
+			.panel-grid-container {
+				grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
 			}
 		}
 	</style>
@@ -2830,13 +2880,13 @@
 							コンセプトモデルから やや太めの筋肉質に グリーンハウスのベルトラインを上げたことで、一気に普通に。<br>
 							テールの造形とランプの形状は、初見では違和感がありましたが、何回か見続けるうちに慣れました。
 						</p>
-						<a href="pic/full/bmw/bmw_g50f.jpg"><img src="pic/style/bmw/bmw_g50f.webp" loading="lazy" alt="bmw g50" width="602" height="399"></a>
-						<a href="pic/full/bmw/bmw_g50r.jpg"><img src="pic/style/bmw/bmw_g50r.webp" loading="lazy" alt="bmw g50" width="602" height="399"></a><br>
+						<a href="pic/full/bmw/bmw_g50f.jpg"><img src="pic/style/bmw/bmw_g50f.webp" loading="lazy" alt="bmw g50" width="596" height="395"></a>
+						<a href="pic/full/bmw/bmw_g50r.jpg"><img src="pic/style/bmw/bmw_g50r.webp" loading="lazy" alt="bmw g50" width="596" height="395"></a><br>
 						<a href="https://de.wikipedia.org/wiki/BMW_NA0" class="icon-link wiki m02" target="_blank" title="Wiki(D)"></a>
 						<p class="i">
 							26年3月18日 発表 の EV・・i3 (NA0)<span class="m02"> バランスは、こちらのほうがいい希ガス</span>
 						</p><br>
-						<a href="pic/full/bmw/bmw_i3_NA0_f.jpg"><img src="pic/style/bmw/bmw_i3_NA0_f.webp" loading="lazy" alt="bmw i3" width="648" height="372"></a>
+						<a href="pic/full/bmw/bmw_i3_NA0_f.jpg"><img src="pic/style/bmw/bmw_i3_NA0_f.webp" loading="lazy" alt="bmw i3" width="636" height="372"></a>
 						<a href="pic/full/bmw/bmw_i3_NA0_r.jpg"><img src="pic/style/bmw/bmw_i3_NA0_r.webp" loading="lazy" alt="bmw i3" width="556" height="372"></a><br>
 						<a href="https://ja.wikipedia.org/wiki/BMW%E3%83%BB%E3%83%93%E3%82%B8%E3%83%A7%E3%83%B3%E3%83%BB%E3%83%8E%E3%82%A4%E3%82%A8%E3%83%BB%E3%82%AF%E3%83%A9%E3%83%83%E3%82%BB" class="icon-link wiki m02" target="_blank" title="Wiki(J)"></a>
 						<p class="i">
@@ -2846,13 +2896,13 @@
 							</span>
 						</p><br>
 						<a href="pic/full/bmw/bmw_vision_Neue_Klasse_f.jpg"><img src="pic/style/bmw/bmw_vision_Neue_Klasse_f.webp" loading="lazy" alt="bmw design・concept" width="584" height="390"></a>
-						<a href="pic/full/bmw/bmw_vision_Neue_Klasse_r.jpg"><img src="pic/style/bmw/bmw_vision_Neue_Klasse_r.webp" loading="lazy" alt="bmw design・concept" width="620" height="390"></a><br>
+						<a href="pic/full/bmw/bmw_vision_Neue_Klasse_r.jpg"><img src="pic/style/bmw/bmw_vision_Neue_Klasse_r.webp" loading="lazy" alt="bmw design・concept" width="608" height="390"></a><br>
 						<a href="https://de.wikipedia.org/wiki/BMW_Neue_Klasse" class="icon-link wiki m02" target="_blank" title="Wiki(D)"></a>
 						<p class="i">
 							オマージュ元： 半世紀前のノイエクラッセ
 							<span class="m02">いぶし銀のような貫禄が漂います</span>
 						</p><br>
-						<a href="pic/full/bmw/bmw_2000_f.jpg"><img src="pic/style/bmw/bmw_2000_f.webp" loading="lazy" alt="bmw 2000" width="632" height="381"></a>
+						<a href="pic/full/bmw/bmw_2000_f.jpg"><img src="pic/style/bmw/bmw_2000_f.webp" loading="lazy" alt="bmw 2000" width="621" height="381"></a>
 						<a href="pic/full/bmw/bmw_1500_r.jpg"><img src="pic/style/bmw/bmw_1500_r.webp" loading="lazy" alt="bmw 1500" width="571" height="381"></a>
 					</div>
 				</div>
@@ -2877,26 +2927,26 @@
 					<div class="style-w">
 						<h4 class="sr-only">サイドビュー</h4>
 						<figure class="pb01">
-							<img src="pic/full/c/w520_sa.webp" loading="lazy" alt="Mercedes design・W520" width="1210" height="853">
+							<img src="pic/full/c/w520_sa.webp" loading="lazy" alt="Mercedes design・W520" width="1193" height="841">
 							<figcaption>
 								C400 4Matic electric
 							</figcaption>
 						</figure>
 						<h4 class="m01"><strong>新・アウトバーンの階級章</strong></h4>
 						<figure class="f">
-							<img src="ico/amg_gt_4dr_electric_r.webp" loading="lazy" alt="Mercedes design05" width="600" height="400">
+							<img src="ico/amg_gt_4dr_electric_r.webp" loading="lazy" alt="Mercedes design05" width="596" height="397">
 							<figcaption>
 								AMG GT 4ドアクーペ
 							</figcaption>
 						</figure>
 						<figure class="f">
-							<img src="ico/c_electric_r.webp" loading="lazy" alt="Mercedes design03" width="600" height="400"><br>
+							<img src="ico/c_electric_r.webp" loading="lazy" alt="Mercedes design03" width="596" height="397"><br>
 							<figcaption>
 								ELECTRIC C
 							</figcaption>
 						</figure>
 						<figure class="f">
-							<img src="ico/cla_electric_r.webp" loading="lazy" alt="CLA ELECTRIC" width="600" height="400">
+							<img src="ico/cla_electric_r.webp" loading="lazy" alt="CLA ELECTRIC" width="596" height="397">
 							<figcaption>
 								CLA ELECTRIC
 							</figcaption>
@@ -3072,7 +3122,7 @@
 						<a href="pic/ja_mb_img_c.html#w201" class="icon-link camera"></a>
 						<h3 class="i">W201</h3>
 						<p class="i m01">メルセデス・ベンツ初のDセグメント</p>
-						<table class="m01 pb01">
+						<table class="m01">
 							<thead>
 								<tr>
 									<th scope="col" class="w24">販売期間</th>
@@ -3260,7 +3310,7 @@
 						<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBW202" class="icon-link wiki m3" target="_blank" title="Wiki(J) メルセデス・ベンツ・W202"></a>
 						<a href="pic/ja_mb_img_c.html#w202" class="icon-link camera"></a>
 						<h3 class="i">W202 / S202</h3>
-						<table class="m01 pb01">
+						<table class="m01">
 							<thead>
 								<tr>
 									<th scope="col" class="w24">販売期間</th>
@@ -3532,7 +3582,7 @@
 						<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBW203" class="icon-link wiki m3" target="_blank" title="Wiki(J) メルセデス・ベンツ・W203"></a>
 						<a href="pic/ja_mb_img_c.html#w203" class="icon-link camera"></a>
 						<h3 class="i">W203 / S203/CL203</h3>
-						<table class="m01 pb01">
+						<table class="m01">
 							<thead>
 								<tr>
 									<th scope="col" class="w24">販売期間</th>
@@ -3864,7 +3914,7 @@
 						<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBW204" class="icon-link wiki m3" target="_blank" title="Wiki(J) メルセデス・ベンツ・W204"></a>
 						<a href="pic/ja_mb_img_c.html#w204" class="icon-link camera"></a>
 						<h3 class="i">W204 / S204 / C204</h3>
-						<table class="m01 pb01">
+						<table class="m01">
 							<thead>
 								<tr>
 									<th scope="col" class="w24">販売期間</th>
@@ -4101,7 +4151,7 @@
 						<a href="pic/ja_mb_img_c.html#w205" class="icon-link camera"></a>
 						<h3 class="i">W205 / S205 / C205 / A205</h3>
 						<p class="i m01">全車DOHC・電子燃料噴射（直噴）</p>
-						<table class="m01 pb01">
+						<table class="m01">
 							<thead>
 								<tr>
 									<th scope="col" class="w28">販売期間</th>
@@ -4353,7 +4403,7 @@
 						<a href="pic/ja_mb_img_c.html#w206" class="icon-link camera"></a>
 						<h3 class="i">W206 / S206</h3>
 						<p class="i m01">全車DOHC・電子燃料噴射（直噴）・ターボチャージャー</p>
-						<table class="m01 pb01">
+						<table class="m01">
 							<thead>
 								<tr>
 									<th scope="col" class="w24">販売期間</th>
@@ -4462,7 +4512,7 @@
 						<span class="m01 b">1997 - 2002</span>
 						<span class="m01 b">CLK I</span>
 						<h3 class="i m02">C208 / A208</h3>
-						<table class="m01 pb01">
+						<table class="m01">
 							<thead>
 								<tr>
 									<th scope="col" class="w24">販売期間</th>
@@ -4606,7 +4656,7 @@
 						<span class="m01 b">2002 - 2009</span>
 						<span class="m01 b">CLK II</span>
 						<h3 class="i m02">C209 / A209</h3>
-						<table class="m01 pb01">
+						<table class="m01">
 							<thead>
 								<tr>
 									<th scope="col" class="w24">販売期間</th>
@@ -4750,7 +4800,7 @@
 						<span class="m01 b">2009 - 2017</span>
 						<span class="m01 b">E クラス Coupe / Cabriolet I</span>
 						<h3 class="i m02">C207 / A207</h3>
-						<table class="m01 pb01">
+						<table class="m01">
 							<thead>
 								<tr>
 									<th scope="col" class="w24">販売期間</th>
@@ -4929,7 +4979,7 @@
 						<span class="m01 b">2017 - 2023</span>
 						<span class="m01 b">E クラス Coupe / Cabriolet II</span>
 						<h3 class="i m02">C238 / A238</h3>
-						<table class="m01 pb01">
+						<table class="m01">
 							<thead>
 								<tr>
 									<th scope="col" class="w24">販売期間</th>
@@ -5048,7 +5098,7 @@
 						<span class="m01 b">2024 -</span>
 						<span class="m01 b">CLE Coupe / Cabriolet</span>
 						<h3 class="i m02">C236 / A236</h3>
-						<table class="m01 pb01">
+						<table class="m01">
 							<thead>
 								<tr>
 									<th scope="col" class="w24">販売期間</th>
@@ -5105,7 +5155,7 @@
 						<span class="m01 b">1997 - 2004</span>
 						<span class="m01 b">SLK I</span>
 						<h3 class="i m02">R170</h3>
-						<table class="m01 pb01">
+						<table class="m01">
 							<thead>
 								<tr>
 									<th scope="col" class="w24">販売期間</th>
@@ -5177,7 +5227,7 @@
 						<span class="m01 b">2004 - 2011</span>
 						<span class="m01 b">SLK II</span>
 						<h3 class="i m02">R171</h3>
-						<table class="m01 pb01">
+						<table class="m01">
 							<thead>
 								<tr>
 									<th scope="col" class="w24">販売期間</th>
@@ -5262,7 +5312,7 @@
 						<span class="m01 b">2011 - 2020</span>
 						<span class="m01 b">SLK III・SLC</span>
 						<h3 class="i m02">R172</h3>
-						<table class="m01 pb01">
+						<table class="m01">
 							<thead>
 								<tr>
 									<th scope="col" class="w24">販売期間</th>
@@ -5403,7 +5453,7 @@
 						<span class="m01 b">2008 - 2015</span>
 						<span class="m01 b">GLK</span>
 						<h3 class="i m02">X204</h3>
-						<table class="m01 pb01">
+						<table class="m01">
 							<thead>
 								<tr>
 									<th scope="col" class="w24">販売期間</th>
@@ -5463,7 +5513,7 @@
 						<span class="m01 b">2016 - 2023</span>
 						<span class="m01 b">GLC I</span>
 						<h3 class="i m02">X253・C253</h3>
-						<table class="m01 pb01">
+						<table class="m01">
 							<thead>
 								<tr>
 									<th scope="col" class="w24">販売期間</th>
@@ -5667,7 +5717,7 @@
 						<span class="m01 b">2023 - </span>
 						<span class="m01 b">GLC II</span>
 						<h3 class="i m02">X254・C254</h3>
-						<table class="m01 pb01">
+						<table class="m01">
 							<thead>
 								<tr>
 									<th scope="col" class="w24">販売期間</th>
@@ -5760,7 +5810,7 @@
 						<span class="m01 b">2013 - 2019</span>
 						<span class="m01 b">CLA I</span>
 						<h3 class="i m02">C117 / X117</h3>
-						<table class="m01 pb01">
+						<table class="m01">
 							<thead>
 								<tr>
 									<th scope="col" class="w24">販売期間</th>
@@ -5928,7 +5978,7 @@
 						<span class="m01 b">2019 - 2026</span>
 						<span class="m01 b">CLA II</span>
 						<h3 class="i m02">C118 / X118</h3>
-						<table class="m01 pb01">
+						<table class="m01">
 							<thead>
 								<tr>
 									<th scope="col" class="w24">販売期間</th>
@@ -6024,7 +6074,7 @@
 						<span class="m01 b">2026 -</span>
 						<span class="m01 b">CLA III</span>
 						<h3 class="i m02"><!-- C174/X174・-->C178/X178</h3>
-						<table class="m01 pb01">
+						<table class="m01">
 							<thead>
 								<tr>
 									<th scope="col" class="w24">販売期間</th>
@@ -13456,8 +13506,8 @@
 							<span id="body-compair" class="bk fs250p f7 t-320">W223</span><br>
 						</div>
 						<h4 class="sr-only">リファレンス</h4>
-						<dl class="m02 pb01">
-							<dt class="w4">参考 ：</dt>
+						<dl class="m02">
+							<dt class="w4">参考</dt>
 							<dd><a href="pic/w201_w124_w126.jpg" class="s04">W201-W124-W126</a></dd>
 							<dd><a href="pic/full/e/w211-w212-w213_a.jpg">W211-W212-W213</a></dd>
 							<dt class="w4">検索</dt>
@@ -13474,100 +13524,173 @@
 					インテリアトリム
 				</button>
 				<div id="content-body-trim" class="accordion-content" role="region">
-					<div class="accordion-content-inner">
-						<h3 class="m02">Mercedes車全般のパネル</h3>
-						<table class="m01 pb01">
-							<tbody>
-								<tr>
-									<td class="w6"><a href="pic/trim/01_laurel.jpg" data-lightbox="abc" data-title="laurel-l"><img src="pic/trim/01_laurel.webp" alt="calyptus-linea" width="120" height="120"></a></td>
-									<td class="w6"><a href="pic/trim/02_calyptus-linea.jpg" data-lightbox="abc" data-title="calyptus-linea-l"><img src="pic/trim/02_calyptus-linea.webp" alt="calyptus-linea" width="120" height="120"></a></td>
-									<td class="w6"><a href="pic/trim/03_wurzelnuss.jpg" data-lightbox="abc" data-title="wurzelnuss-l"><img src="pic/trim/03_wurzelnuss.webp" alt="wurzelnuss" width="120" height="120"></a></td>
-									<td class="w6"><a href="pic/trim/04_calyptus-linea.jpg" data-lightbox="abc" data-title="eucalyptus-linea-l"><img src="pic/trim/04_calyptus-linea.webp" alt="calyptus-linea" width="120" height="120"></a></td>
-									<td class="w6"><a href="pic/trim/05_wurzelnuss.jpg" data-lightbox="abc" data-title="wurzelnuss-l"><img src="pic/trim/05_wurzelnuss.webp" alt="wurzelnuss" width="120" height="120"></a></td>
-									<td class="w6"><a href="pic/trim/06_esche_hell.jpg" data-lightbox="abc" data-title="esche_hell-l"><img src="pic/trim/06_esche_hell.webp" alt="esche_hell" width="120" height="120"></a></td>
-									<td class="w6"><a href="pic/trim/07_wurzelnuss.jpg" data-lightbox="abc" data-title="wurzelnuss-l"><img src="pic/trim/07_wurzelnuss.webp" alt="wurzelnuss" width="120" height="120"></a></td>
-									<td class="w6"><a href="pic/trim/08_rosenrot.jpg" data-lightbox="abc" data-title="rosenrot-l"><img src="pic/trim/08_rosenrot.webp" alt="rosenrot" width="120" height="120"></a></td>
-									<td class="w6"><a href="pic/trim/09_kastanie.jpg" data-lightbox="abc" data-title="kastanie-l"><img src="pic/trim/09_kastanie.webp" alt="kastanie" width="120" height="120"></a></td>
-								</tr>
-								<tr>
-									<td class="trim_name">Laurel</td>
-									<td class="trim_name">Calyptus linea</td>
-									<td class="trim_name">Wurzelnuss</td>
-									<td class="trim_name">Calyptus linea</td>
-									<td class="trim_name">Wurzelnuss</td>
-									<td class="trim_name">Esche_hell</td>
-									<td class="trim_name">Wurzelnuss</td>
-									<td class="trim_name">Rosenrot</td>
-									<td class="trim_name">Kastanie</td>
-								</tr>
-								<tr>
-									<td><a href="pic/trim/10_esche-dunkel.jpg" data-lightbox="abc" data-title="esche-dunkel-l"><img src="pic/trim/10_esche-dunkel.webp" alt="esche-dunkel" width="120" height="120"></a></td>
-									<td><a href="pic/trim/11_vavona.jpg" data-lightbox="abc" data-title="vavona-l"><img src="pic/trim/11_vavona.webp" alt="vavona" width="120" height="120"></a></td>
-									<td><a href="pic/trim/12_natural_wurzel.jpg" data-lightbox="abc" data-title="natural_wurzel-l"><img src="pic/trim/12_natural_wurzel.webp" alt="natural_wurzel" width="120" height="120"></a></td>
-									<td><a href="pic/trim/13_carbon.jpg" data-lightbox="abc" data-title="carbon-l"><img src="pic/trim/13_carbon.webp" alt="carbon" width="120" height="120"></a></td>
-									<td><a href="pic/trim/14_wurzelnuss-matt.jpg" data-lightbox="abc" data-title="wurzelnuss-matt-l"><img src="pic/trim/14_wurzelnuss-matt.webp" alt="wurzelnuss-matt" width="120" height="120"></a></td>
-									<td><a href="pic/trim/15_laurel-glanz.jpg" data-lightbox="abc" data-title="laurel-glanz-l"><img src="pic/trim/15_laurel-glanz.webp" alt="laurel-glanz" width="120" height="120"></a></td>
-									<td><a href="pic/trim/16_ulme-hell.jpg" data-lightbox="abc" data-title="ulme-hell-l"><img src="pic/trim/16_ulme-hell.webp" alt="ulme-hell" width="120" height="120"></a></td>
-									<td><a href="pic/trim/17_ulme-dunkel.jpg" data-lightbox="abc" data-title="ulme-dunkel-l"><img src="pic/trim/17_ulme-dunkel.webp" alt="ulme-dunkel" width="120" height="120"></a></td>
-									<td><a href="pic/trim/18_vogelaugenahorn.jpg" data-lightbox="abc" data-title="vogelaugenahorn-l"><img src="pic/trim/18_vogelaugenahorn.webp" alt="vogelaugenahorn" width="120" height="120"></a></td>
-								</tr>
-								<tr>
-									<td class="trim_name">Esche dunkel</td>
-									<td class="trim_name">Vavona</td>
-									<td class="trim_name">Natural Wurzel</td>
-									<td class="trim_name">Carbon</td>
-									<td class="trim_name">Wurzelnuss matt</td>
-									<td class="trim_name">Laurel glanz</td>
-									<td class="trim_name">Ulme hell</td>
-									<td class="trim_name">Ulme dunkel</td>
-									<td class="trim_name">Vogelaugenahorn</td>
-								</tr>
-								<tr>
-									<td><a href="pic/trim/19_eukalyptus.jpg" data-lightbox="abc" data-title="eukalyptus-l"><img src="pic/trim/19_eukalyptus.webp" alt="eukalyptus" width="120" height="120"></a></td>
-									<td><a href="pic/trim/20_wurzelnuss.jpg" data-lightbox="abc" data-title="wurzelnuss-l"><img src="pic/trim/20_wurzelnuss.webp" alt="wurzelnuss" width="120" height="120"></a></td>
-									<td><a href="pic/trim/21_wurzelnuss.jpg" data-lightbox="abc" data-title="wurzelnuss-l"><img src="pic/trim/21_wurzelnuss.webp" alt="wurzelnuss" width="120" height="120"></a></td>
-									<td><a href="pic/trim/22_wurzelnuss-matt.jpg" data-lightbox="abc" data-title="wurzelnuss-matt-l"><img src="pic/trim/22_wurzelnuss-matt.webp" alt="wurzelnuss-matt" width="120" height="120"></a></td>
-									<td><a href="pic/trim/23_calyptus.jpg" data-lightbox="abc" data-title="calyptus-l"><img src="pic/trim/23_calyptus.webp" alt="calyptus" width="120" height="120"></a></td>
-									<td><a href="pic/trim/24_wurzelnuss.jpg" data-lightbox="abc" data-title="wurzelnuss-l"><img src="pic/trim/24_wurzelnuss.webp" alt="wurzelnuss" width="120" height="120"></a></td>
-									<td><a href="pic/trim/25_esche.jpg" data-lightbox="abc" data-title="esche-l"><img src="pic/trim/25_esche.webp" alt="esche" width="120" height="120"></a></td>
-									<td><a href="pic/trim/26_zebrano-rot.jpg" data-lightbox="abc" data-title="zebrano-rot-l"><img src="pic/trim/26_zebrano-rot.webp" alt="zebrano-rot" width="120" height="120"></a></td>
-									<td><a href="pic/trim/27_zebrano-hell.jpg" data-lightbox="abc" data-title="zebrano-hell-l"><img src="pic/trim/27_zebrano-hell.webp" alt="zebrano-hell" width="120" height="120"></a></td>
-								</tr>
-								<tr>
-									<td class="trim_name">Eukalyptus</td>
-									<td class="trim_name">Wurzelnuss</td>
-									<td class="trim_name">Wurzelnuss</td>
-									<td class="trim_name">Wurzelnuss matt</td>
-									<td class="trim_name">Calyptus</td>
-									<td class="trim_name">Wurzelnuss</td>
-									<td class="trim_name">Esche</td>
-									<td class="trim_name">Zebrano rot</td>
-									<td class="trim_name">Zebrano hell</td>
-								</tr>
-								<tr>
-									<td><a href="pic/trim/29_wurzel-rot.jpg" data-lightbox="abc" data-title="wurzel-rot-l"><img src="pic/trim/29_wurzel-rot.webp" alt="wurzel-rot" width="120" height="120"></a></td>
-									<td><a href="pic/trim/30_american-dunkel.jpg" data-lightbox="abc" data-title="american-dunkel-l"><img src="pic/trim/30_american-dunkel.webp" alt="american-dunkel" width="120" height="120"></a></td>
-									<td><a href="pic/trim/31_plantane-klar.jpg" data-lightbox="abc" data-title="plantane-klar-l"><img src="pic/trim/31_plantane-klar.webp" alt="plantane-klar" width="120" height="120"></a></td>
-									<td><a href="pic/trim/32_plantane-dunkel.jpg" data-lightbox="abc" data-title="plantane-dunkel-l"><img src="pic/trim/32_plantane-dunkel.webp" alt="plantane-dunkel" width="120" height="120"></a></td>
-									<td><a href="pic/trim/33_piano-black.jpg" data-lightbox="abc" data-title="piano-black-l"><img src="pic/trim/33_piano-black.webp" alt="piano-black" width="120" height="120"></a></td>
-									<td><a href="pic/trim/34_alu-silber_grau.jpg" data-lightbox="abc" data-title="alu-silber_grau-l"><img src="pic/trim/34_alu-silber_grau.webp" alt="alu-silber_grau" width="120" height="120"></a></td>
-									<td></td>
-									<td></td>
-									<td></td>
-								</tr>
-								<tr>
-									<td class="trim_name">Wurzel rot</td>
-									<td class="trim_name">American dunkel</td>
-									<td class="trim_name">Plantane klar</td>
-									<td class="trim_name">Plantane dunkel</td>
-									<td class="trim_name">Piano black</td>
-									<td class="trim_name">Alu silber grau</td>
-									<td></td>
-									<td></td>
-									<td></td>
-								</tr>
-							</tbody>
-						</table>
+					<h3 class="m02">Mercedes車全般のパネル</h3>
+					<div class="panel-grid-container m02">
+						<!-- 1個目 -->
+						<div class="panel-item">
+							<a href="pic/trim/01_laurel.jpg" data-lightbox="abc" data-title="laurel-l"><img src="pic/trim/01_laurel.webp" alt="calyptus-linea" width="120" height="120" loading="lazy"></a>
+							<div class="trim_name">Laurel</div>
+						</div>
+						<!-- 2個目 -->
+						<div class="panel-item">
+							<a href="pic/trim/02_calyptus-linea.jpg" data-lightbox="abc" data-title="calyptus-linea-l"><img src="pic/trim/02_calyptus-linea.webp" alt="calyptus-linea" width="120" height="120" loading="lazy"></a>
+							<div class="trim_name">Calyptus linea</div>
+						</div>
+						<!-- 3個目 -->
+						<div class="panel-item">
+							<a href="pic/trim/03_wurzelnuss.jpg" data-lightbox="abc" data-title="wurzelnuss-l"><img src="pic/trim/03_wurzelnuss.webp" alt="wurzelnuss" width="120" height="120" loading="lazy"></a>
+							<div class="trim_name">Wurzelnuss</div>
+						</div>
+						<!-- 4個目 -->
+						<div class="panel-item">
+							<a href="pic/trim/04_calyptus-linea.jpg" data-lightbox="abc" data-title="eucalyptus-linea-l"><img src="pic/trim/04_calyptus-linea.webp" alt="calyptus-linea" width="120" height="120" loading="lazy"></a>
+							<div class="trim_name">Calyptus linea</div>
+						</div>
+						<!-- 5個目 -->
+						<div class="panel-item">
+							<a href="pic/trim/05_wurzelnuss.jpg" data-lightbox="abc" data-title="wurzelnuss-l"><img src="pic/trim/05_wurzelnuss.webp" alt="wurzelnuss" width="120" height="120" loading="lazy"></a>
+							<div class="trim_name">Wurzelnuss</div>
+						</div>
+						<!-- 6個目 -->
+						<div class="panel-item">
+							<a href="pic/trim/06_esche_hell.jpg" data-lightbox="abc" data-title="esche_hell-l"><img src="pic/trim/06_esche_hell.webp" alt="esche_hell" width="120" height="120" loading="lazy"></a>
+							<div class="trim_name">Esche hell</div>
+						</div>
+						<!-- 7個目 -->
+						<div class="panel-item">
+							<a href="pic/trim/07_wurzelnuss.jpg" data-lightbox="abc" data-title="wurzelnuss-l"><img src="pic/trim/07_wurzelnuss.webp" alt="wurzelnuss" width="120" height="120" loading="lazy"></a>
+							<div class="trim_name">Wurzelnuss</div>
+						</div>
+						<!-- 8個目 -->
+						<div class="panel-item">
+							<a href="pic/trim/08_rosenrot.jpg" data-lightbox="abc" data-title="rosenrot-l"><img src="pic/trim/08_rosenrot.webp" alt="rosenrot" width="120" height="120" loading="lazy"></a>
+							<div class="trim_name">Rosenrot</div>
+						</div>
+						<!-- 9個目 -->
+						<div class="panel-item">
+							<a href="pic/trim/09_kastanie.jpg" data-lightbox="abc" data-title="kastanie-l"><img src="pic/trim/09_kastanie.webp" alt="kastanie" width="120" height="120" loading="lazy"></a>
+							<div class="trim_name">Kastanie</div>
+						</div>
+						<!-- 10個目 -->
+						<div class="panel-item">
+							<a href="pic/trim/10_esche-dunkel.jpg" data-lightbox="abc" data-title="esche-dunkel-l"><img src="pic/trim/10_esche-dunkel.webp" alt="esche-dunkel" width="120" height="120" loading="lazy"></a>
+							<div class="trim_name">Esche dunkel</div>
+						</div>
+						<!-- 11個目 -->
+						<div class="panel-item">
+							<a href="pic/trim/11_vavona.jpg" data-lightbox="abc" data-title="vavona-l"><img src="pic/trim/11_vavona.webp" alt="vavona" width="120" height="120" loading="lazy"></a>
+							<div class="trim_name">Vavona</div>
+						</div>
+						<!-- 12個目 -->
+						<div class="panel-item">
+							<a href="pic/trim/12_natural_wurzel.jpg" data-lightbox="abc" data-title="natural_wurzel-l"><img src="pic/trim/12_natural_wurzel.webp" alt="natural_wurzel" width="120" height="120" loading="lazy"></a>
+							<div class="trim_name">Natural Wurzel</div>
+						</div>
+						<!-- 13個目 -->
+						<div class="panel-item">
+							<a href="pic/trim/13_carbon.jpg" data-lightbox="abc" data-title="carbon-l"><img src="pic/trim/13_carbon.webp" alt="carbon" width="120" height="120" loading="lazy"></a>
+							<div class="trim_name">Carbon</div>
+						</div>
+						<!-- 14個目 -->
+						<div class="panel-item">
+							<a href="pic/trim/14_wurzelnuss-matt.jpg" data-lightbox="abc" data-title="wurzelnuss-matt-l"><img src="pic/trim/14_wurzelnuss-matt.webp" alt="wurzelnuss-matt" width="120" height="120" loading="lazy"></a>
+							<div class="trim_name">Wurzelnuss matt</div>
+						</div>
+						<!-- 15個目 -->
+						<div class="panel-item">
+							<a href="pic/trim/15_laurel-glanz.jpg" data-lightbox="abc" data-title="laurel-glanz-l"><img src="pic/trim/15_laurel-glanz.webp" alt="laurel-glanz" width="120" height="120" loading="lazy"></a>
+							<div class="trim_name">Laurel glanz</div>
+						</div>
+						<!-- 16個目 -->
+						<div class="panel-item">
+							<a href="pic/trim/16_ulme-hell.jpg" data-lightbox="abc" data-title="ulme-hell-l"><img src="pic/trim/16_ulme-hell.webp" alt="ulme-hell" width="120" height="120" loading="lazy"></a>
+							<div class="trim_name">Ulme hell</div>
+						</div>
+						<!-- 17個目 -->
+						<div class="panel-item">
+							<a href="pic/trim/17_ulme-dunkel.jpg" data-lightbox="abc" data-title="ulme-dunkel-l"><img src="pic/trim/17_ulme-dunkel.webp" alt="ulme-dunkel" width="120" height="120" loading="lazy"></a>
+							<div class="trim_name">Ulme dunkel</div>
+						</div>
+						<!-- 18個目 -->
+						<div class="panel-item">
+							<a href="pic/trim/18_vogelaugenahorn.jpg" data-lightbox="abc" data-title="vogelaugenahorn-l"><img src="pic/trim/18_vogelaugenahorn.webp" alt="vogelaugenahorn" width="120" height="120" loading="lazy"></a>
+							<div class="trim_name">Vogelaugenahorn</div>
+						</div>
+						<!-- 19個目 -->
+						<div class="panel-item">
+							<a href="pic/trim/19_eukalyptus.jpg" data-lightbox="abc" data-title="eukalyptus-l"><img src="pic/trim/19_eukalyptus.webp" alt="eukalyptus" width="120" height="120" loading="lazy"></a>
+							<div class="trim_name">Eukalyptus</div>
+						</div>
+						<!-- 20個目 -->
+						<div class="panel-item">
+							<a href="pic/trim/20_wurzelnuss.jpg" data-lightbox="abc" data-title="wurzelnuss-l"><img src="pic/trim/20_wurzelnuss.webp" alt="wurzelnuss" width="120" height="120" loading="lazy"></a>
+							<div class="trim_name">Wurzelnuss</div>
+						</div>
+						<!-- 21個目 -->
+						<div class="panel-item">
+							<a href="pic/trim/21_wurzelnuss.jpg" data-lightbox="abc" data-title="wurzelnuss-l"><img src="pic/trim/21_wurzelnuss.webp" alt="wurzelnuss" width="120" height="120" loading="lazy"></a>
+							<div class="trim_name">Wurzelnuss</div>
+						</div>
+						<!-- 22個目 -->
+						<div class="panel-item">
+							<a href="pic/trim/22_wurzelnuss-matt.jpg" data-lightbox="abc" data-title="wurzelnuss-matt-l"><img src="pic/trim/22_wurzelnuss-matt.webp" alt="wurzelnuss-matt" width="120" height="120" loading="lazy"></a>
+							<div class="trim_name">Wurzelnuss matt</div>
+						</div>
+						<!-- 23個目 -->
+						<div class="panel-item">
+							<a href="pic/trim/23_calyptus.jpg" data-lightbox="abc" data-title="calyptus-l"><img src="pic/trim/23_calyptus.webp" alt="calyptus" width="120" height="120" loading="lazy"></a>
+							<div class="trim_name">Calyptus</div>
+						</div>
+						<!-- 24個目 -->
+						<div class="panel-item">
+							<a href="pic/trim/24_wurzelnuss.jpg" data-lightbox="abc" data-title="wurzelnuss-l"><img src="pic/trim/24_wurzelnuss.webp" alt="wurzelnuss" width="120" height="120" loading="lazy"></a>
+							<div class="trim_name">Wurzelnuss</div>
+						</div>
+						<!-- 25個目 -->
+						<div class="panel-item">
+							<a href="pic/trim/25_esche.jpg" data-lightbox="abc" data-title="esche-l"><img src="pic/trim/25_esche.webp" alt="esche" width="120" height="120" loading="lazy"></a>
+							<div class="trim_name">Esche</div>
+						</div>
+						<!-- 26個目 -->
+						<div class="panel-item">
+							<a href="pic/trim/26_zebrano-rot.jpg" data-lightbox="abc" data-title="zebrano-rot-l"><img src="pic/trim/26_zebrano-rot.webp" alt="zebrano-rot" width="120" height="120" loading="lazy"></a>
+							<div class="trim_name">Zebrano rot</div>
+						</div>
+						<!-- 27個目 -->
+						<div class="panel-item">
+							<a href="pic/trim/27_zebrano-hell.jpg" data-lightbox="abc" data-title="zebrano-hell-l"><img src="pic/trim/27_zebrano-hell.webp" alt="zebrano-hell" width="120" height="120" loading="lazy"></a>
+							<div class="trim_name">Zebrano hell</div>
+						</div>
+						<!-- 28個目 -->
+						<div class="panel-item">
+							<a href="pic/trim/29_wurzel-rot.jpg" data-lightbox="abc" data-title="wurzel-rot-l"><img src="pic/trim/29_wurzel-rot.webp" alt="wurzel-rot" width="120" height="120" loading="lazy"></a>
+							<div class="trim_name">Wurzel rot</div>
+						</div>
+						<!-- 29個目 -->
+						<div class="panel-item">
+							<a href="pic/trim/30_american-dunkel.jpg" data-lightbox="abc" data-title="american-dunkel-l"><img src="pic/trim/30_american-dunkel.webp" alt="american-dunkel" width="120" height="120" loading="lazy"></a>
+							<div class="trim_name">American dunkel</div>
+						</div>
+						<!-- 30個目 -->
+						<div class="panel-item">
+							<a href="pic/trim/31_plantane-klar.jpg" data-lightbox="abc" data-title="plantane-klar-l"><img src="pic/trim/31_plantane-klar.webp" alt="plantane-klar" width="120" height="120" loading="lazy"></a>
+							<div class="trim_name">Plantane klar</div>
+						</div>
+						<!-- 31個目 -->
+						<div class="panel-item">
+							<a href="pic/trim/32_plantane-dunkel.jpg" data-lightbox="abc" data-title="plantane-dunkel-l"><img src="pic/trim/32_plantane-dunkel.webp" alt="plantane-dunkel" width="120" height="120" loading="lazy"></a>
+							<div class="trim_name">Plantane dunkel</div>
+						</div>
+						<!-- 32個目 -->
+						<div class="panel-item">
+							<a href="pic/trim/33_piano-black.jpg" data-lightbox="abc" data-title="piano-black-l"><img src="pic/trim/33_piano-black.webp" alt="piano-black" width="120" height="120" loading="lazy"></a>
+							<div class="trim_name">Piano black</div>
+						</div>
+						<!-- 33個目 -->
+						<div class="panel-item">
+							<a href="pic/trim/34_alu-silber_grau.jpg" data-lightbox="abc" data-title="alu-silber_grau-l"><img src="pic/trim/34_alu-silber_grau.webp" alt="alu-silber_grau" width="120" height="120" loading="lazy"></a>
+							<div class="trim_name">Alu silber grau</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -13579,7 +13702,7 @@
 				<div id="content-body-platform" class="accordion-content" role="region">
 					<div class="accordion-content-inner">
 						<h3 class="sr-only">メルセデスの新プラットフォームと車種構成</h3>
-						<table class="m01 t0b wp pb02">
+						<table class="m01 wp">
 							<thead>
 								<tr>
 									<th style="width:8%">Plattform</th>
@@ -13713,7 +13836,7 @@
 			</div>
 		</section>
 		<hr>
-		
+
 		<section id="motor">
 			<div class="bk m41">
 				<span class="lh1 fs300p f7 m4" aria-hidden="true">Motor</span><br>
@@ -16428,7 +16551,6 @@
 				<div id="content-eg-v6" class="accordion-content" role="region">
 					<div class="accordion-content-inner">
 						<h3 class="sr-only">メルセデスのV型6気筒ガソリンエンジン</h3>
-
 						<div class="accordion m01" id="eg-112">
 							<button class="accordion-header min" aria-expanded="false" aria-controls="content-eg-112">
 								<span class="w5">M112</span>
@@ -16927,8 +17049,8 @@
 				<div id="content-eg-ref" class="accordion-content" role="region">
 					<div class="accordion-content-inner">
 						<h3 class="sr-only">メルセデスのエンジンコードの意味</h3>
-						<span class="m01 t1 pb01 b">M115以降</span>
-						<p class="m4 lh1 t0">
+						<span class="m02 pb01 b">M115以降</span>
+						<p class="m4 lh1">
 							エンジン種別 : M = ガソリンエンジン , OM = ディーゼルエンジン<br>
 							｜<br>
 							｜<span class="m01">1st Code</span><br>
@@ -16947,7 +17069,6 @@
 							｜<span class="m02">2nd Code</span><br>
 							｜<br>
 						</p>
-
 						<ul class="m4">
 							<li class="item-group">ML = Kompressor</li>
 							<li class="item-group">S = 成層燃焼</li>
@@ -23871,7 +23992,7 @@
 					社内コード
 				</button>
 				<div id="content-zeit-code" class="accordion-content" role="region">
-					<div class="accordion-content-inner"><br>
+					<div class="accordion-content-inner">
 						<h3 id="zeit-code-alphabet" class="m02 b i s02">コード先頭のアルファベットの意味</h3>
 						<a href="txt/c-class_1t.html#501" target="_blank">Cクラス総合スレッド 16台目 &gt;&gt;501</a>より<br>
 						<div class="t0b pb01">
@@ -23911,7 +24032,7 @@
 						</div>
 						<hr class="tin">
 
-						<div class="box68 pb01"><!-- コード表 -->
+						<div class="box68"><!-- コード表 -->
 							<h3 class="m02 b i">コードナンバー（数値識別子）</h3>
 							<p class="m01 i">
 								※ クリックでドイツ語版 Wikiに飛びます。
@@ -24565,7 +24686,7 @@
 							　　 ~''戈ヽ 　 ｀二´ 　　 r'´:::.　`!<br>
 						</p>
 						<p class="wp t1">
-							&emsp;<span class="b">新しい Cは 520番ですた・・</span><br>
+							&emsp;<span class="b">新しい Cは 520番ですた・・</span>
 						</p>
 						<!-- <div class="t2 m44">
 							<p class="aa" style="font-size: 14pt;">
@@ -24577,7 +24698,6 @@
 								&emsp;&emsp;&nbsp;/
 							</p>
 						</div> -->
-
 					</div>
 				</div>
 			</div>
@@ -24588,7 +24708,7 @@
 				</button>
 				<div id="content-zeit-modellname" class="accordion-content" role="region">
 					<div class="accordion-content-inner">
-						<h3 class="m02 t1">モデルネーム命名規則の変遷</h3>
+						<h3 class="m02">モデルネーム命名規則の変遷</h3>
 						<div class="t0b">
 							<div class="box30">
 								<a href="badge/170.webp" target="_blank"><img src="badge/170_min.webp" class="m01" loading="lazy" alt="170" width="279" height="278"></a>
@@ -24834,30 +24954,23 @@
 						<figure class="f"><img src="designer/min/gorden_wagener.jpg" loading="lazy" alt="Gorden Wagener" width="200" height="300">
 							<figcaption class="center_title">Gorden Wagener ( 1968 - )</figcaption>
 						</figure>
-						<h4 class="m01 b">Friedrich Geiger時代（〜1973年）</h4>
-						<p class="m01">&emsp;専属デザイン部門草創期。フリードリヒ・ガイガーは戦前から戦後にかけて統括、300SLや W100など
-							MBの威厳とエレガンスを象徴するモデルを生み出した。
-							後のチーフ、ブルーノ・サッコやポール・ブラックも、この体制下でキャリアスタート。
-						</p>
-						<h4 class="m01 b">Daimler-Benz時代（〜1998年）</h4>
-						<p class="m01">&emsp;組織的デザイン体制が確立され、ブルーノ・サッコが長期間統括。
-							「普遍性」と「伝統と革新の調和」という哲学に基づき、メルセデスデザインの黄金期を迎える。
-						</p>
-						<h4 class="m01 b">Daimler Chrysler時代（1998年–2007年）</h4>
-						<p class="m01">&emsp;合併後も両社デザイン部門は独立しており、ペーター・ファイファーが統括し
-							新世代コンセプトを模索。「伝統からの脱却と多角化」を進めた。
-						</p>
-						<h4 class="m01 b">Daimler / Mercedes-Benz時代（2007年–現在）</h4>
-						<p class="m01">
-							&emsp;ゴードン・ワグネルが主導し、
+						<hr class="tin">
+						<h4 class="m02 b fs104p t0b">Friedrich Geiger時代（〜1973年）</h4>
+						<p class="m02 lh2">&emsp;専属デザイン部門草創期。ガイガーは戦前から戦後にかけて統括、300SLや W100など MBの威厳とエレガンスを象徴するモデルを生み出した。後のチーフ、ブルーノ・サッコやポール・ブラックも、この体制下でキャリアスタート。</p>
+						<h4 class="m02 b fs104p t0b">Daimler-Benz時代（〜1998年）</h4>
+						<p class="m02 lh2">&emsp;組織的デザイン体制が確立、サッコが長期間統括。「普遍性」と「伝統と革新の調和」という哲学に基づき、MBデザインの黄金期を迎える。</p>
+						<h4 class="m02 b fs104p t0b">Daimler Chrysler時代（1998年–2007年）</h4>
+						<p class="m02 lh2">&emsp;合併後も両社デザイン部門は独立しており、ファイファーが統括。新世代コンセプトを模索。「伝統からの脱却と多角化」を進めた。</p>
+						<h4 class="m02 b fs104p t0b">Daimler / Mercedes-Benz時代（2007年–現在）</h4>
+						<p class="m02 lh2">&emsp;ゴードン・ワグネルが主導し、
 							<a href="https://www.mercedes-benz.com/en/design/philosophy/sensual-purity/" target="_blank">Sensual Purity</a>
-							という明確なデザイン哲学のもと、ブランドデザインを統一的に管理。
-							世界各地に
+							という明確なデザイン哲学のもと、ブランドデザインを統一的に管理。世界各地に
 							<a href="https://group.mercedes-benz.com/innovation/design/advanced-design-studios-en.html" target="_blank">Advanced Design Studios</a>
 							を展開し、グローバルなデザイン体制を構築。
 						</p>
 					</div>
-					<h4 class="t1 m02 b">関連デザイナー･設計者</h4>
+					<hr class="tin">
+					<h4 class="m02 b">関連デザイナー･設計者</h4>
 					<table class="m01 w120">
 						<thead>
 							<tr>
@@ -25309,7 +25422,7 @@
 							WDB　202　0　20　2　F　1　3*****<br>
 							WDD　204　0　48　2　A　6　6*****
 						</p>
-						<p class="m4 lh1 pb02">
+						<p class="m4 lh1">
 							<span class="m0w">↑↑</span><span class="m4">↑</span><span class="m0r">↑</span><span class="m0r">↑</span><span class="m0a">↑</span><span class="m0k">↑</span><span class="m01">↑</span><br>
 							││<span class="m4">│</span><span class="m0r">│</span><span class="m0r">│</span><span class="m0a">│</span><span class="m0k">│</span><span class="m01">製造番号 (6桁)</span><br>
 							││<span class="m4">│</span><span class="m0r">│</span><span class="m0r">│</span><span class="m0a">│</span><span class="m0k">│</span><br>
@@ -25341,7 +25454,7 @@
 					<div class="accordion-content-inner">
 						<h3 class="sr-only">欧州/北米規格</h3>
 						<div class="m3 box43">
-							<p class="lh1 t1">
+							<p class="lh1">
 								<a href="https://ja.wikipedia.org/wiki/%E8%BB%8A%E4%B8%A1%E8%AD%98%E5%88%A5%E7%95%AA%E5%8F%B7" title="Check Digit" class="icon-link wiki m07" target="_blank"></a>検査数字<br>
 								<span class="m09">｜</span><span class="m02" title="Herstellungsstandort der Fabrik">製造工場所在地</span><br>
 								<span class="m4">車種</span><span class="m3">｜</span><span class="m2c">｜</span><br>
@@ -25351,7 +25464,7 @@
 							<p class="b ls4">
 								WDD　UG8F　B 　1　H　A　000000
 							</p>
-							<p class="m0c lh1 pb01">
+							<p class="m0c lh1">
 								↑<span class="m05d">↑</span><span class="m2f">↑</span><br>
 								メーカー<span class="m2a">|</span><span class="m2f">製造年 ------------------&gt;</span><br>
 								<span class="m06d">｜</span><br>
@@ -25360,10 +25473,10 @@
 							</p>
 						</div>
 						<div class="box68">
-							<p>※ISO規格の年式コードでは、紛らわしい文字である「I」「O」「Q」「U」「Z」や数字の「0」は除外されてアルファベットが割り当てられる仕組みになっています。</p>
-							<table class="align-table">
+							<p class="lh2">&emsp;年式コードでは、紛らわしい文字「I」「O」「Q」「U」「Z」や数字の「0」は除外されアルファベットが割り当てられます。</p>
+							<table>
 								<!-- 第1ブロック -->
-								<tr>
+								<tr class="lh1">
 									<td>1</td>
 									<td>2</td>
 									<td>3</td>
@@ -25385,7 +25498,7 @@
 									<td>K</td>
 									<td>L</td>
 								</tr>
-								<tr class="year-row">
+								<tr class="lh1">
 									<td>'71</td>
 									<td>'72</td>
 									<td>'73</td>
@@ -25408,11 +25521,11 @@
 									<td>'90</td>
 								</tr>
 								<!-- 改行代わりの余白用行 -->
-								<tr class="spacer-row">
+								<tr class="ht01">
 									<td colspan="20"></td>
 								</tr>
 								<!-- 第2ブロック -->
-								<tr>
+								<tr class="lh1">
 									<td>M</td>
 									<td>N</td>
 									<td>P</td>
@@ -25434,7 +25547,7 @@
 									<td>9</td>
 									<td>A</td>
 								</tr>
-								<tr class="year-row">
+								<tr class="lh1">
 									<td>'91</td>
 									<td>'92</td>
 									<td>'93</td>
@@ -25456,11 +25569,12 @@
 									<td>'09</td>
 									<td>'10</td>
 								</tr>
-								<tr class="spacer-row">
-									<td colspan="20"></td>
+								<!-- 改行代わりの余白用行 -->
+								<tr class="ht01">
+									<td colspan="20"> </td>
 								</tr>
 								<!-- 第3ブロック -->
-								<tr>
+								<tr class="lh1">
 									<td>B</td>
 									<td>C</td>
 									<td>D</td>
@@ -25477,9 +25591,9 @@
 									<td>R</td>
 									<td>S</td>
 									<td>T</td>
-									<td colspan="10"></td>
+									<td colspan="4"></td>
 								</tr>
-								<tr class="year-row">
+								<tr class="lh1">
 									<td>'11</td>
 									<td>'12</td>
 									<td>'13</td>
@@ -25496,7 +25610,7 @@
 									<td>'24</td>
 									<td>'25</td>
 									<td>'26</td>
-									<td colspan="10"></td>
+									<td colspan="4"></td>
 								</tr>
 							</table>
 						</div>
