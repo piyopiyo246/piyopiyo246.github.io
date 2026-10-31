@@ -42,19 +42,14 @@ section {
 }
 
 h1,
-h2 {
-	font-size: 17px;
-	font-weight: 700;
-	color: #666;
-	margin: 4px 0 4px 18px
-}
-
+h2,
 h3,
 h4,
 h5 {
 	font-size: 17px;
-	font-weight: 400;
-	margin: 2px 0 4px 8px
+	font-weight: 800;
+	color: #666;
+	margin: 4px 0 4px 36px
 }
 
 p {
@@ -719,7 +714,7 @@ hr {
 .accordion-header.min {
 	width: 100%;
 	margin: 2px 0;
-	padding: 8px 0 8px 50px;
+	padding: 8px 0 8px 70px;
 	border: none;
 	background-color: transparent;
 	border-radius: 0
@@ -731,13 +726,13 @@ hr {
 }
 
 .accordion-header.min::before {
-	left: 20px
+	left: 40px
 }
 
 .accordion-header.min.active::before {
 	border-width: 16px 10px 0 10px;
 	border-color: #666 transparent transparent transparent;
-	left: 18px;
+	left: 40px;
 	top: 50%;
 	transform: translateY(-50%)
 }
