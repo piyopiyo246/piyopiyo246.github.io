@@ -622,15 +622,13 @@ hr {
 	font-size: 17px
 }
 
-/* scrollbar */
+/* scrollbar 消す*/
 ::-webkit-scrollbar {
-	width: 4px
+	width: 0
 }
-
 ::-webkit-scrollbar-track {
-	background: none;
+	background: #4f4f4f;
 }
-
 ::-webkit-scrollbar-thumb {
 	background: #4f4f4f;
 	height: 0
