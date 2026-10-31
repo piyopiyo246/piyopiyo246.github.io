@@ -630,8 +630,8 @@ hr {
 	background: none
 }
 ::-webkit-scrollbar-thumb {
-	background: #4f4f4f;
-	height: 0
+	background: #777;
+	/* height: 0 */
 }
 
 /* accordion */
