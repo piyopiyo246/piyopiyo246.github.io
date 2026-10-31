@@ -627,7 +627,7 @@ hr {
 	width: 0
 }
 ::-webkit-scrollbar-track {
-	background: #4f4f4f;
+	background: none
 }
 ::-webkit-scrollbar-thumb {
 	background: #4f4f4f;
