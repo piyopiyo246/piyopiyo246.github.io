@@ -701,7 +701,7 @@ hr {
 }
 
 .accordion-content-inner {
-	margin-left: 16px;
+	margin: 24px 0 24px 16px;
 	padding: 0
 }
 
