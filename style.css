@@ -973,7 +973,6 @@ iframe {
 	border-width: 0
 }
 
-/* history_pic */
 .style-w {
 	width: 100%;
 	padding: 5px;
@@ -982,7 +981,9 @@ iframe {
 	color: #f2f2f2
 }
 
-.style-w h3 {
+.style-w h3,
+.style-w h4,
+.style-w h5 {
 	color: #f2f2f2;
 	font-weight: 700;
 	margin-left: 18px;
