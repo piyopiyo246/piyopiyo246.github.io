@@ -2724,13 +2724,20 @@
 			}
 		}
 
-		.panel-grid-container {
+			.panel-grid-container,
+			.panel-grid-container2
+		 {
 			display: grid;
 			/* デフォルトで横に9列並ぶグリッドレイアウト（元のテーブル構造を維持） */
 			grid-template-columns: repeat(8, 1fr);
 			gap: 10px;
 			align-items: start;
 			margin-bottom: 20px;
+		}
+
+			.panel-grid-container2
+		 {
+			grid-template-columns: repeat(4, 1fr);
 		}
 
 		.panel-item {
@@ -2862,9 +2869,9 @@
 			<h2 class="f m2a s06" title="主にデザインについて思うことを語ります">TOPICS</h2>
 			<!-- 横並びボタンエリア -->
 			<div class="side-by-side-btn-group">
-				<!-- <button type="button" class="side-by-side-btn" data-target="topic-lovely-cars">
-					<span class="arrow">▶</span>自家撞着
-				</button> -->
+				<button type="button" class="side-by-side-btn" data-target="topic-lovely-cars">
+					<span class="arrow">▶</span>私的 名車列伝
+				</button>
 				<button type="button" class="side-by-side-btn" data-target="topic-neue-klasse">
 					<span class="arrow">▶</span> 『Neue Klasse』という大役
 				</button>
@@ -2873,98 +2880,85 @@
 				</button>
 			</div>
 			<!-- 下に展開される本文エリア -->
-			<!-- <div id="topic-lovely-cars" class="accordion-content">
+			<div id="topic-lovely-cars" class="accordion-content">
 				<div class="side-by-side-body">
-					<h3>あくまでもデザイン上の話ですが</h3>
-					<p class="m01 s02">
-						ポルシェ乗りの友人と話をしていて「スタイリングが苦手な車」に触れました。
-						それについて ここで述べませんが、自分の好きな車について、
-						この辺鄙なサイトで振り返ってみようと、思い立ちました。
-						購入や価値など現実的なことを述べるつもりは毛頭ありません。
-					</p>
-					<div class="panel-grid-container m02">
-						<div class="panel-item">
-							<a href="pic/favorite/01_laurel.jpg" data-lightbox="abc" data-title="laurel-l"><img src="pic/favorite/01_laurel.webp" alt="calyptus-linea" width="120" height="120" loading="lazy"></a>
-							<div class="trim_name">Laurel</div>
-						</div>
-						<div class="panel-item">
-							<a href="pic/favorite/02_calyptus-linea.jpg" data-lightbox="abc" data-title="calyptus-linea-l"><img src="pic/favorite/02_calyptus-linea.webp" alt="calyptus-linea" width="120" height="120" loading="lazy"></a>
-							<div class="trim_name">Calyptus linea</div>
-						</div>
-						<div class="panel-item">
-							<a href="pic/favorite/03_wurzelnuss.jpg" data-lightbox="abc" data-title="wurzelnuss-l"><img src="pic/favorite/03_wurzelnuss.webp" alt="wurzelnuss" width="120" height="120" loading="lazy"></a>
-							<div class="trim_name">Wurzelnuss</div>
-						</div>
-						<div class="panel-item">
-							<a href="pic/favorite/04_calyptus-linea.jpg" data-lightbox="abc" data-title="eucalyptus-linea-l"><img src="pic/favorite/04_calyptus-linea.webp" alt="calyptus-linea" width="120" height="120" loading="lazy"></a>
-							<div class="trim_name">Calyptus linea</div>
-						</div>
-						<div class="panel-item">
-							<a href="pic/favorite/05_wurzelnuss.jpg" data-lightbox="abc" data-title="wurzelnuss-l"><img src="pic/favorite/05_wurzelnuss.webp" alt="wurzelnuss" width="120" height="120" loading="lazy"></a>
-							<div class="trim_name">Wurzelnuss</div>
-						</div>
-						<div class="panel-item">
-							<a href="pic/favorite/06_esche_hell.jpg" data-lightbox="abc" data-title="esche_hell-l"><img src="pic/favorite/06_esche_hell.webp" alt="esche_hell" width="120" height="120" loading="lazy"></a>
-							<div class="trim_name">Esche hell</div>
-						</div>
-						<div class="panel-item">
-							<a href="pic/favorite/07_wurzelnuss.jpg" data-lightbox="abc" data-title="wurzelnuss-l"><img src="pic/favorite/07_wurzelnuss.webp" alt="wurzelnuss" width="120" height="120" loading="lazy"></a>
-							<div class="trim_name">Wurzelnuss</div>
-						</div>
-						<div class="panel-item">
-							<a href="pic/favorite/08_rosenrot.jpg" data-lightbox="abc" data-title="rosenrot-l"><img src="pic/favorite/08_rosenrot.webp" alt="rosenrot" width="120" height="120" loading="lazy"></a>
-							<div class="trim_name">Rosenrot</div>
-						</div>
-						<div class="panel-item">
-							<a href="pic/favorite/09_kastanie.jpg" data-lightbox="abc" data-title="kastanie-l"><img src="pic/favorite/09_kastanie.webp" alt="kastanie" width="120" height="120" loading="lazy"></a>
-							<div class="trim_name">Kastanie</div>
-						</div>
-						<div class="panel-item">
-							<a href="pic/favorite/10_esche-dunkel.jpg" data-lightbox="abc" data-title="esche-dunkel-l"><img src="pic/favorite/10_esche-dunkel.webp" alt="esche-dunkel" width="120" height="120" loading="lazy"></a>
-							<div class="trim_name">Esche dunkel</div>
-						</div>
-					</div>
-
 					<div class="style-w">
-						<h4>フレンチ</h4>
-						<p class="m01">
-							Renault 16<br>
-							Peugeot 504<br>
-							Peugeot 406 coupe<br>
-							Citroën BX<br>
+						<h3>あくまでもデザイン上の話ですが</h3>
+						<p class="m01 s02">
+							&emsp;購入や技術的価値など現実的なことを述べるつもりは毛頭ありません。ポルシェ乗りの友人と話をしていて「スタイリングが苦手な車」に触れた際、
+							ふと、この辺鄙なサイトで 「スタイリングが好きな車」を振り返えろうと思い立ちました。<br>
+							&emsp;こうして眺めてみると、結局、自分は 70年代を中心に四角い涼しげなライトの車が好きなんだなと思いました。
+							あ、グレムリンとベルエアの変な二台は一周回って好みです。
 						</p>
-						<h4>UK</h4>
-						<p class="m01">
-							Rover SD1<br>
-							<br>
-							<br>
-							<br>
-						</p>
-						<h4>US</h4>
-						<p class="m01">
-							AMC Gremlin<br>
-							Chevrolet Bel Air '59<br>
-							Cadillac Seville<br>
-							<br>
-						</p>
-						<h4>ドイツ</h4>
-						<p class="m01">
-						 	Mercedes W202<br>
-							Mercedes W108/W109<br>
-							BMW 02<br>
-							空冷時代の Porsche 911<br>
-							Audi Quattro<br>
-						</p>
-						<h4>日本</h4>
-						<p class="m01">
-							トヨタ ハイラックス<br>
-							ホンダ アコード エアロデッキ<br>
-							<br>
-							<br>
-						</p>
+						<div class="panel-grid-container2">
+							<div class="panel-item">
+								<a href="pic/favorite/renault_16.jpg" data-lightbox="abc" data-title="1976 RENAULT 16 TL"><img src="pic/favorite/renault_16.webp" alt="1976 Renault 16 TL" width="300" height="170" loading="lazy"></a>
+								<div class="trim_name"><a href="https://collectingcars.com/ja/for-sale/1976-renault-16-tl?modal=%5B%22gallery%22%2C%22lightbox%22%5D">1976 Renault 16 TL</a></div>
+							</div>
+							<div class="panel-item">
+								<a href="pic/favorite/peugeot_504.jpg" data-lightbox="abc" data-title="1978 Peugeot 504"><img src="pic/favorite/peugeot_504.webp" alt="1978 Peugeot 504" width="300" height="170" loading="lazy"></a>
+								<div class="trim_name"><a href="https://en.wikipedia.org/wiki/Peugeot_504">1978 Peugeot 504 Ti</a></div>
+							</div>
+							<div class="panel-item">
+								<a href="pic/favorite/peugeot_406_coupe.jpg" data-lightbox="abc" data-title="1998 Peugeot 406 coupe V6"><img src="pic/favorite/peugeot_406_coupe.webp" alt="1998 Peugeot 406 coupe V6" width="300" height="170" loading="lazy"></a>
+								<div class="trim_name"><a href="https://benzin.fr/en/auctions/show/406-coupe-v6-39k-km-1998-6089622184848#&gid=1&pid=1">1998 Peugeot 406 coupe</a></div>
+							</div>
+							<div class="panel-item">
+								<a href="pic/favorite/citroen_bx.webp" data-lightbox="abc" data-title="1983 Citroen BX"><img src="pic/favorite/citroen_bx_min.webp" alt="1983 Citroen BX" width="300" height="170" loading="lazy"></a>
+								<div class="trim_name"><a href="https://www.carmagazine.co.uk/features/car-culture/citroen-bx/">1983 Citroën BX</a></div>
+							</div>
+							<div class="panel-item">
+								<a href="pic/favorite/rover_sd1.jpg" data-lightbox="abc" data-title="1976 Rover SD1"><img src="pic/favorite/rover_sd1.webp" alt="1976 Rover SD1" width="300" height="170" loading="lazy"></a>
+								<div class="trim_name"><a href="https://www.aronline.co.uk/cars/rover/sd1-development-story/">1976 Rover SD1</a></div>
+							</div>
+							<div class="panel-item">
+								<a href="pic/favorite/amc_gremlin.webp" data-lightbox="abc" data-title="1970 AMC Gremlin"><img src="pic/favorite/amc_gremlin_min.webp" alt="1970 AMC Gremlin" width="300" height="170" loading="lazy"></a>
+								<div class="trim_name"><a href="https://www.hemmings.com/stories/1970-amc-gremlin/">1970 AMC Gremlin</a></div>
+							</div>
+							<div class="panel-item">
+								<a href="pic/favorite/chevrolet_bel_air_59.webp" data-lightbox="abc" data-title="1959 Chevrolet Bel Air"><img src="pic/favorite/chevrolet_bel_air_59_min.webp" alt="1959 Chevrolet Bel Air" width="300" height="170" loading="lazy"></a>
+								<div class="trim_name"><a href="https://en.wheelz.me/1959-chevy-bel-air-283-power-pack-classic/">1959 Chevrolet Bel Air</a></div>
+							</div>
+							<div class="panel-item">
+								<a href="pic/favorite/cadillac_seville.jpg" data-lightbox="abc" data-title="1975 Cadillac Seville"><img src="pic/favorite/cadillac_seville.webp" alt="1975 Cadillac Seville" width="300" height="170" loading="lazy"></a>
+								<div class="trim_name"><a href="https://cadillac.drive.place/seville/i/group_sedan/gallery">1975 Cadillac Seville</a></div>
+							</div>
+							<div class="panel-item">
+								<a href="pic/favorite/mercedes_w202.jpg" data-lightbox="abc" data-title="1994 Mercedes W202"><img src="pic/favorite/mercedes_w202.webp" alt="1994 Mercedes W202" width="300" height="170" loading="lazy"></a>
+								<div class="trim_name"><a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBW202">1994 Mercedes W202</a></div>
+							</div>
+							<div class="panel-item">
+								<a href="pic/favorite/w114c.webp" data-lightbox="abc" data-title="1969 Mercedes W114 Coupe"><img src="pic/favorite/w114c_min.webp" alt="1969 Mercedes W114 Coupe" width="300" height="170" loading="lazy"></a>
+								<div class="trim_name"><a href="https://www.thejournal.ie/mercedes-benz-w114-coupe-3209392-Jan2017/">1969 Mercedes W114 coupe</a></div>
+							</div>
+							<div class="panel-item">
+								<a href="pic/favorite/mercedes_w108.jpg" data-lightbox="abc" data-title="1965 Mercedes W108"><img src="pic/favorite/mercedes_w108.webp" alt="1965 Mercedes W108" width="300" height="170" loading="lazy"></a>
+								<div class="trim_name"><a href="https://levolant.jp/2025/09/11/400646/">1965 Mercedes W108</a></div>
+							</div>
+							<div class="panel-item">
+								<a href="pic/favorite/porsche_911.jpg" data-lightbox="abc" data-title="1969 Porsche 911"><img src="pic/favorite/porsche_911.webp" alt="1969 Porsche 911" width="300" height="170" loading="lazy"></a>
+								<div class="trim_name"><a href="https://inventory.trisslsportscars.com/vehicles/322/1969-porsche-911-s">1969 Porsche 911</a></div>
+							</div>
+							<div class="panel-item">
+								<a href="pic/favorite/audi_quattro.jpg" data-lightbox="abc" data-title="1980 Audi Quattro"><img src="pic/favorite/audi_quattro.webp" alt="1980 Audi Quattro" width="300" height="170" loading="lazy"></a>
+								<div class="trim_name"><a href="https://www.secret-classics.com/en/40-years-of-audi-quattro/">1980 Audi Quattro</a></div>
+							</div>
+							<div class="panel-item">
+								<a href="pic/favorite/opel_kadett.jpg" data-lightbox="abc" data-title="1973 Opel Kadett"><img src="pic/favorite/opel_kadett.webp" alt="1973 Opel Kadett" width="300" height="170" loading="lazy"></a>
+								<div class="trim_name"><a href="https://autobild.jp/18125/">1973 オペル カデット</a></div>
+							</div>
+							<div class="panel-item">
+								<a href="pic/favorite/toyota_highlux.jpg" data-lightbox="abc" data-title="2009 Toyota Highlux Surf"><img src="pic/favorite/toyota_highlux.webp" alt="2009 Toyota Highlux Surf" width="300" height="170" loading="lazy"></a>
+								<div class="trim_name"><a href="https://ja.wikipedia.org/wiki/%E3%83%88%E3%83%A8%E3%82%BF%E3%83%BB%E3%83%8F%E3%82%A4%E3%83%A9%E3%83%83%E3%82%AF%E3%82%B9%E3%82%B5%E3%83%BC%E3%83%95">2009 トヨタ ハイラックスサーフ</a></div>
+							</div>
+							<div class="panel-item">
+								<a href="pic/favorite/honda_accord_aerodeck.jpg" data-lightbox="abc" data-title="1985 Honda Accord Aerodeck"><img src="pic/favorite/honda_accord_aerodeck.webp" alt="1985 Honda Accord Aerodeck" width="300" height="170" loading="lazy"></a>
+								<div class="trim_name"><a href="https://meisha.co.jp/?p=13934">1985 ホンダ アコード エアロデッキ</a></div>
+							</div>
+						</div>
 					</div>
 				</div>
-			</div> -->
+			</div>
 			<div id="topic-neue-klasse" class="accordion-content">
 				<div class="side-by-side-body">
 					<h3>【26/09/30】 BMW 新型 3シリーズ (G50) エンジンモデルが 発表されました。</h3>
@@ -3820,7 +3814,7 @@
 									<td>170</td>
 									<td>5G</td>
 									<td class="r">\565/585</td>
-									<td class="left">4matic初採用</td>
+									<td class="left">4mtc初採用</td>
 								</tr>
 								<tr>
 									<td class="left"><span class="m3h">02--------------- 07 : C180K</span></td>
@@ -4152,7 +4146,7 @@
 									<td></td>
 									<td></td>
 									<td class="r">全車7G ,</td>
-									<td class="left">Coupe追加</td>
+									<td class="left">Cpe追加</td>
 								</tr>
 								<tr>
 									<td class="left"><span class="m08">11------14 : C180BE/wgn</span></td>
@@ -4666,7 +4660,7 @@
 									<td></td>
 									<td></td>
 									<td class="r"></td>
-									<td class="left">全車Avantgarde</td>
+									<td class="left">全車Avg</td>
 								</tr>
 								<tr>
 									<td class="left"><span class="m4">99----------02 : 200</span></td>
@@ -4822,7 +4816,7 @@
 									<td></td>
 									<td></td>
 									<td class="r"></td>
-									<td class="left">全車Avantgarde</td>
+									<td class="left">全車Avg</td>
 								</tr>
 								<tr>
 									<td class="left"><span class="m06">05--06 : 55AMG cab</span></td>
@@ -19845,7 +19839,7 @@
 									│<span class="m02">│</span><span class="m4">│</span><span class="m02">│</span><br>
 									│<a href="https://de.wikipedia.org/wiki/BMW_Neue_Klasse" class="model m0va" target="_blank" title="Wiki(D)">Neue klasse</a><span class="m1g">│</span><a href="https://de.wikipedia.org/wiki/Glas_GT" class="model m02" target="_blank" title="Wiki(D)">GT</a><br>
 									│──│────│──│────<br>
-									│<a href="https://de.wikipedia.org/wiki/BMW_02" class="model" target="_blank" title="Wiki(D)">02-Serie</a><span class="m2k">│</span><span class="m0k">1966Hans</span><br>
+									│<a href="https://de.wikipedia.org/wiki/bmw_02" class="model" target="_blank" title="Wiki(D)">02-Serie</a><span class="m2k">│</span><span class="m0k">1966Hans</span><br>
 									│<span class="m02">│</span><a href="https://de.wikipedia.org/wiki/Wartburg_353" class="model" target="_blank" title="Wiki(D)">Wartburg353</a><span class="m0b">Glas GmbH</span><br>
 									<a href="https://de.wikipedia.org/wiki/BMW_R_75/5" class="model" target="_blank" title="Wiki(D)">R75</a><span class="m0x">1968Glas←─│──┘</span><br>
 									│<span class="m02">買収</span><span class="m3">│</span><br>
@@ -22624,7 +22618,7 @@
 									┃<span class="m3">│</span><br>
 									┃<span class="m3">│</span><br>
 									<a href="https://fr.wikipedia.org/wiki/Renault_8#La_Renault_8_Gordini" class="model" target="_blank" title="Wiki(F)">&nbsp;8 </a><a href="https://fr.wikipedia.org/wiki/Alpine_A110" class="model m01" target="_blank" title="Wiki(F)">A110</a><br>
-									<a href="https://fr.wikipedia.org/wiki/Renault_16" class="model" target="_blank" title="Wiki(F)">16</a><span class="m2ag">│</span><br>
+									<a href="https://fr.wikipedia.org/wiki/renault_16" class="model" target="_blank" title="Wiki(F)">16</a><span class="m2ag">│</span><br>
 									┠─→─│─<br>
 									┃<span class="m3">│</span><br>
 									<a href="https://fr.wikipedia.org/wiki/Renault_12" class="model" target="_blank" title="Wiki(F)">12</a><span class="m2ag">│</span><br>
