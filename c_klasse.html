@@ -2738,7 +2738,8 @@
 			grid-template-columns: repeat(4, 1fr);
 		}
 
-		.panel-item {
+		.panel-item,
+		.panel-words {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
@@ -2757,6 +2758,20 @@
 			font-size: 0.9rem;
 			margin-top: 2px;
 			word-break: break-word;
+		}
+
+		.panel-words {
+			width: 300px;
+			height: 170px;
+			border: 3px double #f2f2f2;
+			border-radius: 12px;
+			background-color: transparent;
+			font-family: 'Monsieur La Doulaise', cursive; /* 筆記体を指定 'Alex Brush', 'Great Vibes' */
+			font-size: 24px;
+			color: #f2f2f2;
+			justify-content: center;
+			/* 枠線を含めて横300px・縦170pxにする設定 */
+			box-sizing: border-box;
 		}
 
 		/* レスポンシブ対応（画面幅が狭いときは自動で折り返す設定） */
@@ -2890,13 +2905,24 @@
 							あ、グレムリンとベルエアの変な二台は一周回って好みです。
 						</p>
 						<div class="panel-grid-container2">
+							<div class="panel-words">
+								Cars that catch my eye
+							</div>
 							<div class="panel-item">
 								<a href="pic/favorite/renault_16.jpg" data-lightbox="def" data-title="1976 RENAULT 16 TL"><img src="pic/favorite/renault_16.webp" alt="1976 Renault 16 TL" width="300" height="170" loading="lazy"></a>
 								<div class="trim_name"><a href="https://collectingcars.com/ja/for-sale/1976-renault-16-tl?modal=%5B%22gallery%22%2C%22lightbox%22%5D">1976 Renault 16 TL</a></div>
 							</div>
 							<div class="panel-item">
-								<a href="pic/favorite/peugeot_504.jpg" data-lightbox="def" data-title="1978 Peugeot 504"><img src="pic/favorite/peugeot_504.webp" alt="1978 Peugeot 504" width="300" height="170" loading="lazy"></a>
-								<div class="trim_name"><a href="https://en.wikipedia.org/wiki/Peugeot_504">1978 Peugeot 504 Ti</a></div>
+								<a href="pic/favorite/renault_12.jpg" data-lightbox="def" data-title="1969 RENAULT 12"><img src="pic/favorite/renault_12.webp" alt="1969 Renault 12" width="300" height="170" loading="lazy"></a>
+								<div class="trim_name"><a href="https://ja.wikipedia.org/wiki/%E3%83%AB%E3%83%8E%E3%83%BC%E3%83%BB12">1969 Renault 12</a></div>
+							</div>
+							<div class="panel-item">
+								<a href="pic/favorite/peugeot_504.jpg" data-lightbox="def" data-title="1968 Peugeot 504"><img src="pic/favorite/peugeot_504.webp" alt="1968 Peugeot 504" width="300" height="170" loading="lazy"></a>
+								<div class="trim_name"><a href="https://ja.wikipedia.org/wiki/%E3%83%97%E3%82%B8%E3%83%A7%E3%83%BC%E3%83%BB504">1968 Peugeot 504 Ti</a></div>
+							</div>
+							<div class="panel-item">
+								<a href="pic/favorite/peugeot_604.jpg" data-lightbox="def" data-title="1975 Peugeot 604"><img src="pic/favorite/peugeot_604.webp" alt="1975 Peugeot 604" width="300" height="170" loading="lazy"></a>
+								<div class="trim_name"><a href="https://ja.wikipedia.org/wiki/%E3%83%97%E3%82%B8%E3%83%A7%E3%83%BC%E3%83%BB604">1975 Peugeot 604</a></div>
 							</div>
 							<div class="panel-item">
 								<a href="pic/favorite/peugeot_406_coupe.jpg" data-lightbox="def" data-title="1998 Peugeot 406 coupe V6"><img src="pic/favorite/peugeot_406_coupe.webp" alt="1998 Peugeot 406 coupe V6" width="300" height="170" loading="lazy"></a>
@@ -2911,61 +2937,66 @@
 								<div class="trim_name"><a href="https://www.aronline.co.uk/cars/rover/sd1-development-story/">1976 Rover SD1</a></div>
 							</div>
 							<div class="panel-item">
-								<a href="pic/favorite/amc_gremlin.webp" data-lightbox="def" data-title="1970 AMC Gremlin"><img src="pic/favorite/amc_gremlin_min.webp" alt="1970 AMC Gremlin" width="300" height="170" loading="lazy"></a>
+								<a href="pic/favorite/amc_gremlin.webp" data-lightbox="bcd" data-title="1970 AMC Gremlin"><img src="pic/favorite/amc_gremlin_min.webp" alt="1970 AMC Gremlin" width="300" height="170" loading="lazy"></a>
 								<div class="trim_name"><a href="https://www.hemmings.com/stories/1970-amc-gremlin/">1970 AMC Gremlin</a></div>
 							</div>
 							<div class="panel-item">
-								<a href="pic/favorite/chevrolet_bel_air_59.webp" data-lightbox="def" data-title="1959 Chevrolet Bel Air"><img src="pic/favorite/chevrolet_bel_air_59_min.webp" alt="1959 Chevrolet Bel Air" width="300" height="170" loading="lazy"></a>
+								<a href="pic/favorite/chevrolet_bel_air_59.webp" data-lightbox="bcd" data-title="1959 Chevrolet Bel Air"><img src="pic/favorite/chevrolet_bel_air_59_min.webp" alt="1959 Chevrolet Bel Air" width="300" height="170" loading="lazy"></a>
 								<div class="trim_name"><a href="https://en.wheelz.me/1959-chevy-bel-air-283-power-pack-classic/">1959 Chevrolet Bel Air</a></div>
 							</div>
 							<div class="panel-item">
-								<a href="pic/favorite/cadillac_seville.jpg" data-lightbox="def" data-title="1975 Cadillac Seville"><img src="pic/favorite/cadillac_seville.webp" alt="1975 Cadillac Seville" width="300" height="170" loading="lazy"></a>
+								<a href="pic/favorite/cadillac_seville.jpg" data-lightbox="bcd" data-title="1975 Cadillac Seville"><img src="pic/favorite/cadillac_seville.webp" alt="1975 Cadillac Seville" width="300" height="170" loading="lazy"></a>
 								<div class="trim_name"><a href="https://cadillac.drive.place/seville/i/group_sedan/gallery">1975 Cadillac Seville</a></div>
 							</div>
 							<div class="panel-item">
-								<a href="pic/favorite/mercedes_w202.jpg" data-lightbox="def" data-title="1994 Mercedes W202"><img src="pic/favorite/mercedes_w202.webp" alt="1994 Mercedes W202" width="300" height="170" loading="lazy"></a>
+								<a href="pic/favorite/mercedes_w202.jpg" data-lightbox="bcd" data-title="1994 Mercedes W202"><img src="pic/favorite/mercedes_w202.webp" alt="1994 Mercedes W202" width="300" height="170" loading="lazy"></a>
 								<div class="trim_name"><a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBW202">1994 Mercedes W202</a></div>
 							</div>
 							<div class="panel-item">
-								<a href="pic/favorite/w114c.webp" data-lightbox="def" data-title="1969 Mercedes W114 Coupe"><img src="pic/favorite/w114c_min.webp" alt="1969 Mercedes W114 Coupe" width="300" height="170" loading="lazy"></a>
+								<a href="pic/favorite/w114c.webp" data-lightbox="bcd" data-title="1969 Mercedes W114 Coupe"><img src="pic/favorite/w114c_min.webp" alt="1969 Mercedes W114 Coupe" width="300" height="170" loading="lazy"></a>
 								<div class="trim_name"><a href="https://www.thejournal.ie/mercedes-benz-w114-coupe-3209392-Jan2017/">1969 Mercedes W114 coupe</a></div>
 							</div>
 							<div class="panel-item">
-								<a href="pic/favorite/mercedes_w108.jpg" data-lightbox="def" data-title="1965 Mercedes W108"><img src="pic/favorite/mercedes_w108.webp" alt="1965 Mercedes W108" width="300" height="170" loading="lazy"></a>
+								<a href="pic/favorite/mercedes_w108.jpg" data-lightbox="bcd" data-title="1965 Mercedes W108"><img src="pic/favorite/mercedes_w108.webp" alt="1965 Mercedes W108" width="300" height="170" loading="lazy"></a>
 								<div class="trim_name"><a href="https://levolant.jp/2025/09/11/400646/">1965 Mercedes W108</a></div>
 							</div>
 							<div class="panel-item">
-								<a href="pic/favorite/porsche_911.jpg" data-lightbox="def" data-title="1969 Porsche 911"><img src="pic/favorite/porsche_911.webp" alt="1969 Porsche 911" width="300" height="170" loading="lazy"></a>
+								<a href="pic/favorite/porsche_911.jpg" data-lightbox="bcd" data-title="1969 Porsche 911"><img src="pic/favorite/porsche_911.webp" alt="1969 Porsche 911" width="300" height="170" loading="lazy"></a>
 								<div class="trim_name"><a href="https://inventory.trisslsportscars.com/vehicles/322/1969-porsche-911-s">1969 Porsche 911</a></div>
 							</div>
 							<div class="panel-item">
-								<a href="pic/favorite/audi_quattro.jpg" data-lightbox="def" data-title="1980 Audi Quattro"><img src="pic/favorite/audi_quattro.webp" alt="1980 Audi Quattro" width="300" height="170" loading="lazy"></a>
+								<a href="pic/favorite/audi_quattro.jpg" data-lightbox="bcd" data-title="1980 Audi Quattro"><img src="pic/favorite/audi_quattro.webp" alt="1980 Audi Quattro" width="300" height="170" loading="lazy"></a>
 								<div class="trim_name"><a href="https://www.secret-classics.com/en/40-years-of-audi-quattro/">1980 Audi Quattro</a></div>
 							</div>
-							<!-- <div class="panel-item">
-								<a href="pic/favorite/volkswagen_golf.jpg" data-lightbox="def" data-title="1974 Volkswagen Golf"><img src="pic/favorite/volkswagen_golf.webp" alt="1974 Volkswagen Golf" width="300" height="170" loading="lazy"></a>
-								<div class="trim_name"><a href="">1974 Volkswagen Golf</a></div>
-							</div> -->
 							<div class="panel-item">
-								<a href="pic/favorite/opel_kadett.jpg" data-lightbox="def" data-title="1973 Opel Kadett"><img src="pic/favorite/opel_kadett.webp" alt="1973 Opel Kadett" width="300" height="170" loading="lazy"></a>
+								<a href="pic/favorite/opel_kadett.jpg" data-lightbox="bcd" data-title="1973 Opel Kadett"><img src="pic/favorite/opel_kadett.webp" alt="1973 Opel Kadett" width="300" height="170" loading="lazy"></a>
 								<div class="trim_name"><a href="https://autobild.jp/18125/">1973 オペル カデット</a></div>
 							</div>
 							<div class="panel-item">
-								<a href="pic/favorite/toyota_highlux.jpg" data-lightbox="def" data-title="2009 Toyota Highlux Surf"><img src="pic/favorite/toyota_highlux.webp" alt="2009 Toyota Highlux Surf" width="300" height="170" loading="lazy"></a>
+								<a href="pic/favorite/toyota_highlux.jpg" data-lightbox="bcd" data-title="2009 Toyota Highlux Surf"><img src="pic/favorite/toyota_highlux.webp" alt="2009 Toyota Highlux Surf" width="300" height="170" loading="lazy"></a>
 								<div class="trim_name"><a href="https://ja.wikipedia.org/wiki/%E3%83%88%E3%83%A8%E3%82%BF%E3%83%BB%E3%83%8F%E3%82%A4%E3%83%A9%E3%83%83%E3%82%AF%E3%82%B9%E3%82%B5%E3%83%BC%E3%83%95">2009 トヨタ ハイラックスサーフ</a></div>
 							</div>
 							<div class="panel-item">
-								<a href="pic/favorite/honda_accord_aerodeck.jpg" data-lightbox="def" data-title="1985 Honda Accord Aerodeck"><img src="pic/favorite/honda_accord_aerodeck.webp" alt="1985 Honda Accord Aerodeck" width="300" height="170" loading="lazy"></a>
+								<a href="pic/favorite/honda_accord_aerodeck.jpg" data-lightbox="bcd" data-title="1985 Honda Accord Aerodeck"><img src="pic/favorite/honda_accord_aerodeck.webp" alt="1985 Honda Accord Aerodeck" width="300" height="170" loading="lazy"></a>
 								<div class="trim_name"><a href="https://meisha.co.jp/?p=13934">1985 ホンダ アコード エアロデッキ</a></div>
 							</div>
 							<div class="panel-item">
-								<a href="pic/favorite/honda_element.jpg" data-lightbox="def" data-title="2002 Honda Element"><img src="pic/favorite/honda_element.webp" alt="2002 Honda Element" width="300" height="170" loading="lazy"></a>
+								<a href="pic/favorite/honda_element.jpg" data-lightbox="bcd" data-title="2002 Honda Element"><img src="pic/favorite/honda_element.webp" alt="2002 Honda Element" width="300" height="170" loading="lazy"></a>
 								<div class="trim_name"><a href="https://ja.wikipedia.org/wiki/%E3%83%9B%E3%83%B3%E3%83%80%E3%83%BB%E3%82%A8%E3%83%AC%E3%83%A1%E3%83%B3%E3%83%88">2002 ホンダ エレメント</a></div>
 							</div>
-							<!-- <div class="panel-item">
-								<a href="pic/favorite/isuzu_piazza.jpg" data-lightbox="def" data-title="1979 Isuzu Piazza"><img src="pic/favorite/isuzu_piazza.webp" alt="1979 Isuzu Piazza" width="300" height="170" loading="lazy"></a>
+						</div>
+						<div class="panel-grid-container2">
+							<div class="panel-words">
+								Cars Worthy of Respect
+							</div>
+							<div class="panel-item">
+								<a href="pic/favorite/volkswagen_golf.jpg" data-lightbox="cde" data-title="1974 Volkswagen Golf"><img src="pic/favorite/volkswagen_golf.webp" alt="1974 Volkswagen Golf" width="300" height="170" loading="lazy"></a>
+								<div class="trim_name"><a href="">1974 Volkswagen Golf</a></div>
+							</div>
+							<div class="panel-item">
+								<a href="pic/favorite/isuzu_piazza.jpg" data-lightbox="cde" data-title="1979 Isuzu Piazza"><img src="pic/favorite/isuzu_piazza.webp" alt="1979 Isuzu Piazza" width="300" height="170" loading="lazy"></a>
 								<div class="trim_name"><a href="https://gazoo.com/feature/piazza/24/03/19/">1979 いすゞ ピアッツァ</a></div>
-							</div> -->
+							</div>
 						</div>
 					</div>
 				</div>
