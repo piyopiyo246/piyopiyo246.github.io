@@ -498,7 +498,8 @@ hr {
 .box68,
 .box68b,
 .box80b,
-.box90 {
+.box90,
+.box91 {
 	float: left
 }
 
@@ -576,6 +577,10 @@ hr {
 
 .box90 {
 	width: 900px
+}
+
+.box91 {
+	width: 910px
 }
 
 /* accordion button */
