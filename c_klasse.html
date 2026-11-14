@@ -2563,12 +2563,6 @@
 		.code-num-wrapper {
 			/* 既存の .box-grd の内容を統合 */
 			padding: 1em 0;
-			/* 		
-			background: -moz-linear-gradient(#fbfbfb, #393939, #fbfbfb);
-			background: -webkit-linear-gradient(#fbfbfb, #393939, #fbfbfb);
-			background: linear-gradient(to right, #fbfbfb, #393939, #fbfbfb);
-			テーブル間の余白を維持するための設定
-			 */
 			display: flex;
 			flex-direction: column;
 			gap: 20px;
@@ -2625,22 +2619,25 @@
 		}
 
 		.line-accordion-label {
-			margin-left: 54px;
+			margin-left: 24px;
+			padding: 0 24px;
 			flex-shrink: 0;
 			color: #555555;
+		}
+
+		.line-accordion-label:hover {
+			background: color-mix(in srgb, black, transparent 90%);
 		}
 
 		.line-accordion-content {
 			display: none;
 			flex-grow: 1;
 			margin-left: 16px;
-			background-color: #f2f2f2;
+			background-color: #f2f2f2
 		}
 
 		.line-accordion-content li {
-			margin-left: 24px;
-			font-weight: 400;
-			color: #111;
+			margin-left: 24px
 		}
 
 		.line-accordion.active .line-accordion-content {
@@ -2678,7 +2675,6 @@
 			color: #555555;
 			border: none;
 			font-size: 0.9rem;
-			font-weight: 400;
 			transition: all 0.25s ease;
 		}
 
@@ -2689,7 +2685,7 @@
 		/* ホバー時 */
 		.side-by-side-btn:hover,
 		.side-by-side-btn2:hover {
-			background-color: #e5e5e5;
+			background: color-mix(in srgb, black, transparent 90%)
 		}
 
 		/* ▼ 選択中（開いている状態）のアクティブデザイン ▼ */
