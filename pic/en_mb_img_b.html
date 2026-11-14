@@ -372,139 +372,6 @@
 		<a id="close-all-accordions-2" class="vmenu_all_action" title="Close all accordions"><span class="sr-only">Close all accordions</span>&#9654;</a>
 	</p>
 
-	<!-- 追従ヒントバナー -->
-	<script>
-		document.addEventListener('DOMContentLoaded', function () {
-			// ===== 設定（ここの数値だけ変えれば挙動を調整できます） =====
-			const CONFIG = {
-				SCROLL_DELAY: 2000,    // スクロール開始から出現までの遅延(ms)
-				STOP_KEEP_TIME: 2000,  // スクロール停止後の表示維持時間(ms)
-				MAX_PER_VISIT: 1,      // 1回の訪問（タブを閉じるまで）で出す最大回数
-				MAX_TOTAL: 3,          // 累計の最大表示回数。超えたら二度と出さない
-				DISMISS_DAYS: 30       // 「×」を押したあと出さない日数
-			};
-			const KEY = 'piyo_guide_banner_v2';
-
-			const guideBanner = document.getElementById('guide-banner');
-			const closeBtn = document.getElementById('guide-banner-close');
-			if (!guideBanner) return;
-
-			// ---- 保存データ（localStorage：ブラウザに残る）----
-			function load() {
-				try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; }
-			}
-			function save(d) {
-				try { localStorage.setItem(KEY, JSON.stringify(d)); } catch (e) { }
-			}
-			const state = load(); // { total, dismissedAt, learned }
-
-			// 使い方を理解済みの人には何もしない
-			if (state.learned) return;
-
-			// ---- 訪問内カウント（sessionStorage：タブを閉じると消える）----
-			function getVisitCount() {
-				try { return parseInt(sessionStorage.getItem(KEY + '_visit') || '0', 10); } catch (e) { return 0; }
-			}
-			function addVisitCount() {
-				try { sessionStorage.setItem(KEY + '_visit', String(getVisitCount() + 1)); } catch (e) { }
-			}
-
-			// 「もう出さない」条件
-			function isBlocked() {
-				if (state.learned) return true;
-				if ((state.total || 0) >= CONFIG.MAX_TOTAL) return true;
-				if (state.dismissedAt && Date.now() - state.dismissedAt < CONFIG.DISMISS_DAYS * 86400000) return true;
-				if (getVisitCount() >= CONFIG.MAX_PER_VISIT) return true;
-				return false;
-			}
-
-			let scrollDelayTimer = null; // 出現までの遅延タイマー
-			let scrollStopTimer = null;  // スクロール停止検知タイマー
-			let hideTimer = null;        // 停止後に消すタイマー
-			let isShowing = false;       // 現在バナーが出ているか
-
-			// アコーディオンが1つでも開いているか
-			function isAnyAccordionOpen() {
-				return document.querySelector('.accordion-header.active, .accordion-header[aria-expanded="true"]') !== null;
-			}
-
-			function showBanner() {
-				if (isBlocked() || isAnyAccordionOpen()) return;
-				isShowing = true;
-				guideBanner.classList.remove('is-hidden');
-				state.total = (state.total || 0) + 1; // 累計表示回数
-				save(state);
-				addVisitCount();                       // 今回の訪問での表示回数
-			}
-
-			function hideBanner() {
-				guideBanner.classList.add('is-hidden');
-				isShowing = false;
-				clearTimeout(hideTimer);
-			}
-
-			// 1. アコーディオン等を操作した人は「使い方を理解した」とみなし、以後は出さない
-			document.addEventListener('click', function (e) {
-				if (!e.target.closest('.accordion-header, .vmenu_all_action, #open-all-accordions, #close-all-accordions, #close-all-accordions-2, .line-accordion')) return;
-				state.learned = true;
-				save(state);
-				clearTimeout(scrollDelayTimer);
-				scrollDelayTimer = null;
-				if (isShowing) hideBanner();
-			});
-
-			// 2. 「×」ボタン：30日間は出さない
-			if (closeBtn) {
-				closeBtn.addEventListener('click', function (e) {
-					e.stopPropagation();
-					state.dismissedAt = Date.now();
-					save(state);
-					clearTimeout(scrollDelayTimer);
-					clearTimeout(scrollStopTimer);
-					clearTimeout(hideTimer);
-					scrollDelayTimer = null;
-					hideBanner();
-					guideBanner.style.display = 'none';
-				});
-			}
-
-			// すでに出さない条件を満たしているなら、スクロール監視もしない
-			if (isBlocked()) return;
-
-			// 3. スクロール連動制御
-			window.addEventListener('scroll', function () {
-				if (isAnyAccordionOpen()) {
-					if (isShowing) hideBanner();
-					return;
-				}
-				// 表示中でなく、もう出さない条件なら何もしない
-				if (!isShowing && isBlocked()) return;
-
-				clearTimeout(hideTimer);
-
-				if (!isShowing && !scrollDelayTimer) {
-					scrollDelayTimer = setTimeout(function () {
-						scrollDelayTimer = null;
-						showBanner();
-					}, CONFIG.SCROLL_DELAY);
-				}
-
-				// スクロール停止の検知（最後のスクロールから1秒止まったら「停止」）
-				clearTimeout(scrollStopTimer);
-				scrollStopTimer = setTimeout(function () {
-					if (scrollDelayTimer) {
-						clearTimeout(scrollDelayTimer);
-						scrollDelayTimer = null;
-					}
-					if (isShowing) {
-						clearTimeout(hideTimer);
-						hideTimer = setTimeout(hideBanner, CONFIG.STOP_KEEP_TIME);
-					}
-				}, 1000);
-			}, { passive: true });
-		});
-	</script>
-
 	<!-- スクロールしてトップ -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script><!-- “difer”はダメ絶対！-->
 	<script>
@@ -533,8 +400,9 @@
 			});
 		});
 	</script>
+
+	<!-- シンプル版アコーディオン機能（入れ子非対応） -->
 	<script>
-		// シンプル版アコーディオン機能（入れ子非対応）
 		document.addEventListener('DOMContentLoaded', function () {
 			const accordionHeaders = document.querySelectorAll('.accordion-header');
 
