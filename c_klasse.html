@@ -2729,8 +2729,9 @@
 			}
 		}
 
-		.panel-grid-container,
-		.panel-grid-container2 {
+		.panel-grid-container8,
+		.panel-grid-container4,
+		.panel-grid-container112 {
 			display: grid;
 			/* デフォルトで横に9列並ぶグリッドレイアウト（元のテーブル構造を維持） */
 			grid-template-columns: repeat(8, 1fr);
@@ -2739,8 +2740,12 @@
 			margin-bottom: 20px;
 		}
 
-		.panel-grid-container2 {
+		.panel-grid-container4 {
 			grid-template-columns: repeat(4, 1fr);
+		}
+
+		.panel-grid-container112 {
+			grid-template-columns: 1fr 1fr 2fr;
 		}
 
 		.panel-item,
@@ -2882,8 +2887,11 @@
 			<h2 class="f m2a s04" title="主にデザインについて思うことを語ります">TOPICS</h2>
 			<!-- 横並びボタンエリア -->
 			<div class="side-by-side-btn-group">
+				<button type="button" class="side-by-side-btn" data-target="topic-lovely-cars-II">
+					<span class="arrow">▶</span>私選 II 
+				</button>
 				<button type="button" class="side-by-side-btn" data-target="topic-lovely-cars">
-					<span class="arrow">▶</span>私選 20車
+					<span class="arrow">▶</span>私選 I
 				</button>
 				<button type="button" class="side-by-side-btn" data-target="topic-neue-klasse">
 					<span class="arrow">▶</span> 『Neue Klasse』という大役
@@ -2892,7 +2900,43 @@
 					<span class="arrow">▶</span> 今度の C は白が似合う
 				</button>
 			</div>
+
 			<!-- 下に展開される本文エリア -->
+			<div id="topic-lovely-cars-II" class="accordion-content">
+				<div class="side-by-side-body">
+					<div class="style-w">
+						<div class="panel-item f">
+							<a href="pic\full\e\audi_nuvolari.jpg" data-lightbox="bcd" data-title="2027 Audi Nuvolari"><img src="pic/favorite/audi_nuvolari.webp" alt="2027 Audi Nuvolari" width="300" height="170" loading="lazy"></a>
+							<div class="trim_name"><a href="https://ja.wikipedia.org/wiki/%E3%82%A2%E3%82%A6%E3%83%87%E3%82%A3%E3%83%BB%E3%83%8C%E3%83%B4%E3%82%A9%E3%83%A9%E3%83%BC%E3%83%AA">2027 Audi Nuvolari</a></div>
+						</div>
+						<div class="box91">
+							<h3>【26/11/19】C111</h3>
+							<p class="m02 s02">
+								&emsp;アウディ・ヌヴォラーリの動画を見ていたら、昔のメルセデスのコンセプトモデル C111を思い出しました。
+								Iか IIを初めて雑誌で見たときは、イタリアンスーパーカーの様なミッドシッププロポーションなのに
+								非常にドイツ臭が強いことに強い衝撃を覚えました。IIIは、航空機のそれになってしまいましたね。
+								これはこれで殺風景で工業的な香りがして悪くないですが、臆面のないポルシェ乗りの友人なら「ナメクジみたいだ」と
+								述べること間違いありません。
+							</p>
+						</div><br class="cb">
+						<div class="panel-grid-container112 t0i">
+							<div class="panel-item">
+								<a href="pic/favorite/mercedes_c111_i.jpg" data-lightbox="bcd" data-title="1968 Mercedes C111 I"><img src="pic/favorite/mercedes_c111_i.webp" alt="1968 Mercedes C111 I" width="300" height="170" loading="lazy"></a>
+								<div class="trim_name"><a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBC111#">1968 Mercedes C111 I</a></div>
+							</div>
+							<div class="panel-item">
+								<a href="pic/favorite/mercedes_c111_ii.jpg" data-lightbox="bcd" data-title="1970 Mercedes C111 II"><img src="pic/favorite/mercedes_c111_ii.webp" alt="1970 Mercedes C111 II" width="300" height="170" loading="lazy"></a>
+								<div class="trim_name"><a href="https://sportlichleicht.com/ja/concepts/c111">1970 Mercedes C111 II</a></div>
+							</div>
+							<div class="panel-item">
+								<a href="pic/favorite/mercedes_c111_iii.jpg" data-lightbox="bcd" data-title="1977 Mercedes C111 III"><img src="pic/favorite/mercedes_c111_iii.webp" alt="1977 Mercedes C111 III" width="600" height="170" loading="lazy"></a>
+								<div class="trim_name"><a href="">1977 Mercedes C111 III</a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
 			<div id="topic-lovely-cars" class="accordion-content">
 				<div class="side-by-side-body">
 					<div class="style-w">
@@ -2908,7 +2952,7 @@
 								あ、グレムリンとベルエアの変な二台は一周回って佳きです
 							</p>
 						</div><br class="cb">
-						<div class="panel-grid-container2 t0i">
+						<div class="panel-grid-container4 t0i">
 							<div class="panel-item">
 								<a href="pic/favorite/renault_16.jpg" data-lightbox="bcd" data-title="1976 RENAULT 16"><img src="pic/favorite/renault_16.webp" alt="1976 Renault 16" width="300" height="170" loading="lazy"></a>
 								<div class="trim_name"><a href="https://collectingcars.com/ja/for-sale/1976-renault-16-tl?modal=%5B%22gallery%22%2C%22lightbox%22%5D">1976 Renault 16</a></div>
@@ -2993,7 +3037,7 @@
 								</p>
 							</div>
 						</div>
-						<!-- <div class="panel-grid-container2">
+						<!-- <div class="panel-grid-container4">
 							<div class="panel-words">
 								Cars Worthy of Respect
 							</div>
@@ -3131,6 +3175,7 @@
 					</p>
 				</div>
 			</div>
+
 		</div>
 	</article>
 	<hr>
@@ -13621,7 +13666,7 @@
 				<div id="content-body-trim" class="accordion-content" role="region">
 					<div class="style-w">
 						<h3>Mercedes車全般のパネル</h3>
-						<div class="panel-grid-container">
+						<div class="panel-grid-container8">
 							<!-- 1個目 -->
 							<div class="panel-item">
 								<a href="pic/trim/01_laurel.jpg" data-lightbox="abc" data-title="laurel-l"><img src="pic/trim/01_laurel.webp" alt="calyptus-linea" width="120" height="120" loading="lazy"></a>
