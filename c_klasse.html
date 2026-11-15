@@ -2731,7 +2731,8 @@
 
 		.panel-grid-container8,
 		.panel-grid-container4,
-		.panel-grid-container112 {
+		.panel-grid-container3,
+		.panel-grid-container3-112 {
 			display: grid;
 			/* デフォルトで横に9列並ぶグリッドレイアウト（元のテーブル構造を維持） */
 			grid-template-columns: repeat(8, 1fr);
@@ -2744,7 +2745,11 @@
 			grid-template-columns: repeat(4, 1fr);
 		}
 
-		.panel-grid-container112 {
+		.panel-grid-container3 {
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+		.panel-grid-container3-112 {
 			grid-template-columns: 1fr 1fr 2fr;
 		}
 
@@ -2887,11 +2892,14 @@
 			<h2 class="f m2a s04" title="主にデザインについて思うことを語ります">TOPICS</h2>
 			<!-- 横並びボタンエリア -->
 			<div class="side-by-side-btn-group">
+				<button type="button" class="side-by-side-btn" data-target="topic-coke-bottle-line">
+					<span class="arrow">▶</span>コークボトルライン 
+				</button>
 				<button type="button" class="side-by-side-btn" data-target="topic-lovely-cars-II">
-					<span class="arrow">▶</span>私選 II 
+					<span class="arrow">▶</span>風洞とブルーノ・サッコ 
 				</button>
 				<button type="button" class="side-by-side-btn" data-target="topic-lovely-cars">
-					<span class="arrow">▶</span>私選 I
+					<span class="arrow">▶</span>私選 20車
 				</button>
 				<button type="button" class="side-by-side-btn" data-target="topic-neue-klasse">
 					<span class="arrow">▶</span> 『Neue Klasse』という大役
@@ -2902,6 +2910,73 @@
 			</div>
 
 			<!-- 下に展開される本文エリア -->
+			<!-- <div id="topic-" class="accordion-content">
+				<div class="side-by-side-body">
+					<div class="style-w">
+						<div class="panel-item f">
+							<a href="pic/favorite/.jpg" data-lightbox="bcd" data-title=""><img src="pic/favorite/.webp" alt="" width="300" height="170" loading="lazy"></a>
+							<div class="trim_name"><a href=""></a></div>
+						</div>
+						<div class="box91">
+							<h3>【26/11/19】</h3>
+							<p class="m02 s02">
+								&emsp;
+							</p>
+						</div><br class="cb">
+						<div class="panel-grid-container3 t0i">
+							<div class="panel-item">
+								<a href="pic/favorite/.jpg" data-lightbox="bcd" data-title=""><img src="pic/favorite/.webp" alt="" width="300" height="170" loading="lazy"></a>
+								<div class="trim_name"><a href=""></a></div>
+							</div>
+							<div class="panel-item">
+								<a href="pic/favorite/.jpg" data-lightbox="bcd" data-title=""><img src="pic/favorite/.webp" alt="" width="300" height="170" loading="lazy"></a>
+								<div class="trim_name"><a href=""></a></div>
+							</div>
+							<div class="panel-item">
+								<a href="pic/favorite/.jpg" data-lightbox="bcd" data-title=""><img src="pic/favorite/.webp" alt="" width="600" height="170" loading="lazy"></a>
+								<div class="trim_name"><a href=""></a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div> -->
+
+			<div id="topic-coke-bottle-line" class="accordion-content">
+				<div class="side-by-side-body">
+					<div class="style-w">
+						<div class="panel-item f">
+							<a href="pic/favorite/nissan_cedric.jpg" data-lightbox="bcd" data-title="1971 Nissan Cedric"><img src="pic/favorite/nissan_cedric.webp" alt="1971 Nissan Cedric" width="300" height="170" loading="lazy"></a>
+							<div class="trim_name"><a href="https://ja.wikipedia.org/wiki/%E6%97%A5%E7%94%A3%E3%83%BB%E3%82%BB%E3%83%89%E3%83%AA%E3%83%83%E3%82%AF#3%E4%BB%A3%E7%9B%AE_230%E5%9E%8B%E7%B3%BB%EF%BC%881971%E5%B9%B4_-_1975%E5%B9%B4%EF%BC%89">1971 Nissan Cedric</a></div>
+						</div>
+						<div class="box91">
+							<h3>Audi のコークボトルライン</h3>
+							<p class="m02 s02">
+								&emsp;70年代、コークボトルラインという言葉がありました。
+								コーラのボトルみたいに、前後フェンダー部が盛り上がった形のことです。
+								マッチョなものから、優雅なものまで数多く出現し消えていきました。<br>
+								&emsp;2007年登場の A5 クーペを見て、久々に思い出しました。
+								それまでのアウディは， 80や100の頃から嫌というほどプレーンデザインだったが、
+								ここでちょっと遊んだな？と思え、好印象でした
+							</p>
+						</div><br class="cb">
+						<div class="panel-grid-container3 t0i">
+							<div class="panel-item">
+								<a href="pic/favorite/audi_a5_cf.jpg" data-lightbox="bcd" data-title="2007 Audi A5 Coupé"><img src="pic/favorite/audi_a5_cf.webp" alt="2007 Audi A5 Coupé" width="400" height="227" loading="lazy"></a>
+								<div class="trim_name"><a href="https://ja.wikipedia.org/wiki/%E3%82%A2%E3%82%A6%E3%83%87%E3%82%A3%E3%83%BBA5">2007 Audi A5 Coupé</a></div>
+							</div>
+							<div class="panel-item">
+								<a href="pic/favorite/audi_a5_cs.jpg" data-lightbox="bcd" data-title="2007 Audi A5 Coupé"><img src="pic/favorite/audi_a5_cs.webp" alt="2007 Audi A5 Coupé" width="400" height="227" loading="lazy"></a>
+								<div class="trim_name"><a href="">2007 Audi A5 Coupé</a></div>
+							</div>
+							<div class="panel-item">
+								<a href="pic/favorite/audi_a5_cr.jpg" data-lightbox="bcd" data-title="2007 Audi A5 Coupé"><img src="pic/favorite/audi_a5_cr.webp" alt="2007 Audi A5 Coupé" width="400" height="227" loading="lazy"></a>
+								<div class="trim_name"><a href="https://ja.wikipedia.org/wiki/%E3%82%A2%E3%82%A6%E3%83%87%E3%82%A3%E3%83%BBA5">2007 Audi A5 Coupé</a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
 			<div id="topic-lovely-cars-II" class="accordion-content">
 				<div class="side-by-side-body">
 					<div class="style-w">
@@ -2913,12 +2988,12 @@
 							<h3>【26/11/19】C111</h3>
 							<p class="m02 s02">
 								&emsp;アウディ・ヌヴォラーリの動画を見ていたら、昔のコンセプトモデル C111を思い出しました。
-								IIを初めて雑誌で見た際、スーパーカーのプロポーションなのに非常にドイツ臭が強いことに衝撃を覚えました。IIIや IVは、航空機のそれになってしまいましたね。
-								これはこれで重工業的な香りがして悪くないですが、臆面のないポルシェ乗りの友人なら「ナメクジみたいだ」と
-								述べること間違いありません
+								IIを初めて雑誌で見た際、イタリアンスーパーカーのプロポーションなのにドイツ臭が強いことに衝撃を覚えました。
+								IIIや IVは、航空機のそれになってしまいました。これはこれで重工業的な香りがして悪くないですが、
+								臆面のないポルシェ乗りの友人なら「ナメクジみたいだ」と述べること間違いありません
 							</p>
 						</div><br class="cb">
-						<div class="panel-grid-container112 t0i">
+						<div class="panel-grid-container3-112 t0i">
 							<div class="panel-item">
 								<a href="pic/favorite/mercedes_c111_i.jpg" data-lightbox="bcd" data-title="1968 Mercedes C111 I"><img src="pic/favorite/mercedes_c111_i.webp" alt="1968 Mercedes C111 I" width="300" height="170" loading="lazy"></a>
 								<div class="trim_name"><a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBC111#">1968 Mercedes C111 I</a></div>
@@ -2940,7 +3015,7 @@
 				<div class="side-by-side-body">
 					<div class="style-w">
 						<div class="panel-item f">
-							<a href="pic\full\e\w124_headlight.jpg" data-lightbox="bcd" data-title="1989 Mercedes W124"><img src="pic/favorite/square_headlight.webp" alt="square headlight" width="300" height="221" loading="lazy"></a>
+							<a href="pic\full\e\w124_headlight.jpg" data-lightbox="bcd" data-title="1989 Mercedes W124"><img src="pic/favorite/w124_headlight.webp" alt="1989 Mercedes W124" width="300" height="221" loading="lazy"></a>
 							<div class="trim_name"><a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%87%E3%82%B9%E3%83%BB%E3%83%99%E3%83%B3%E3%83%84%E3%83%BBW124">1989 Mercedes W124</a></div>
 						</div>
 						<div class="box91">
@@ -26488,7 +26563,7 @@
 					<dt class="s02">26/11/07</dt>
 					<dd>
 						<span class="af4"><a href="c_klasse.html#topics_new">TOPICS</a></span>
-						「私選 I」掲載
+						「私選 20車」掲載
 					</dd>
 					<dt class="s02">26/10/30</dt>
 					<dd>
