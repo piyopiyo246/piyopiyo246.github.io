@@ -2732,7 +2732,8 @@
 		.panel-grid-container8,
 		.panel-grid-container4,
 		.panel-grid-container3,
-		.panel-grid-container3-112 {
+		.panel-grid-container3-112,
+		.panel-grid-container2 {
 			display: grid;
 			/* デフォルトで横に9列並ぶグリッドレイアウト（元のテーブル構造を維持） */
 			grid-template-columns: repeat(8, 1fr);
@@ -2753,6 +2754,10 @@
 			grid-template-columns: 1fr 1fr 2fr;
 		}
 
+		.panel-grid-container2 {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
 		.panel-item,
 		.panel-words {
 			display: flex;
@@ -2766,7 +2771,6 @@
 			max-width: 100%;
 			height: auto;
 			border-radius: 7px;
-			/* お好みで角丸を追加してもモダンになります */
 		}
 
 		.panel-item .trim_name {
@@ -2893,16 +2897,16 @@
 			<!-- 横並びボタンエリア -->
 			<div class="side-by-side-btn-group">
 				<button type="button" class="side-by-side-btn" data-target="topic-coke-bottle-line">
-					<span class="arrow">▶</span>コークボトルライン 
+					<span class="arrow">▶</span>コークボトルライン
 				</button>
 				<button type="button" class="side-by-side-btn" data-target="topic-lovely-cars-II">
-					<span class="arrow">▶</span>風洞とブルーノ・サッコ 
+					<span class="arrow">▶</span>風洞とブルーノ・サッコ
 				</button>
 				<button type="button" class="side-by-side-btn" data-target="topic-lovely-cars">
 					<span class="arrow">▶</span>私選 20車
 				</button>
 				<button type="button" class="side-by-side-btn" data-target="topic-neue-klasse">
-					<span class="arrow">▶</span> 『Neue Klasse』という大役
+					<span class="arrow">▶</span>『Neue Klasse』という大役
 				</button>
 				<button type="button" class="side-by-side-btn" data-target="topic-white-c">
 					<span class="arrow">▶</span> 今度の C は白が似合う
@@ -3125,39 +3129,83 @@
 					</div>
 				</div>
 			</div>
-
 			<div id="topic-neue-klasse" class="accordion-content">
 				<div class="side-by-side-body">
 					<div class="style-w">
-						<h3>【26/09/30】 BMW 新型 3シリーズ (G50) エンジンモデルが 発表されました</h3>
-						<p class="m01">
-							&emsp;コンセプトモデルから やや太めの筋肉質に盛り グリーンハウスのベルトラインを上げたことで、一気に普通に<br>
-							テールの造形は 初見で違和感がありましたが、何回か見続けるうちに慣れました
-						</p>
-						<a href="pic/full/bmw/bmw_g50f.jpg"><img src="pic/style/bmw/bmw_g50f.webp" loading="lazy" alt="bmw g50" width="596" height="395"></a>
-						<a href="pic/full/bmw/bmw_g50r.jpg"><img src="pic/style/bmw/bmw_g50r.webp" loading="lazy" alt="bmw g50" width="596" height="395"></a><br>
+						<div class="f s02">
+							<a href="pic/full/bmw/g50-na0-vision_neue_klasse_compare.jpg" data-lightbox="bcd" data-title="2026 3er / 2026 i3 /2023 Vision neue klasse"><img src="pic/style/bmw/g50-na0-vision_neue_klasse_compare.webp" alt="2026 3er / 2026 i3 /2023 Vision neue klasse" width="400" height="360" loading="lazy"></a>
+							<div class="mid">上から 3シリーズ、i3、Vision neue klasse</div>
+						</div>
+						<div class="box78">
+							<h3>【26/09/30】 BMW 新型 3シリーズ (G50) エンジンモデルが 発表されました</h3>
+							<p class="m02 s02">
+								&emsp;自慢の6発を載せるためロングノーズになり、さらに普通に。
+								テールの造形は 初見で違和感がありましたが、見続けるうちに慣れました。
+								こうして3台並べてみると、i3のバランスがいいように感じます
+							</p>
+							<div class="panel-grid-container2">
+								<div class="panel-item">
+									<a href="pic/full/bmw/bmw_g50f.jpg" data-lightbox="bcd" data-title="2026 BMW G50"><img src="pic/style/bmw/bmw_g50f.webp" alt="2026 BMW G50" width="400" height="227" loading="lazy"></a>
+								</div>
+								<div class="panel-item">
+									<a href="pic/full/bmw/bmw_g50r.jpg" data-lightbox="bcd" data-title="2026 BMW G50"><img src="pic/style/bmw/bmw_g50r.webp" alt="2026 BMW G50" width="400" height="227" loading="lazy"></a>
+								</div>
+							</div>
+						</div>
+						<hr class="tin">
 						<a href="https://de.wikipedia.org/wiki/BMW_NA0" class="icon-link wiki m02" target="_blank" title="Wiki(D)"></a>
 						<p class="i">
-							26年3月18日 発表 の EV・・i3 (NA0)<span class="m02"> バランスは、こちらのほうがいい希ガス</span>
+							26年3月18日 発表 の i3 (NA0)
+							<span class="m01">コンセプトモデルから やや太めの筋肉質になり グリーンハウスのベルトラインを上げたことで一気に普通に</span>
 						</p><br>
-						<a href="pic/full/bmw/bmw_i3_NA0_f.jpg"><img src="pic/style/bmw/bmw_i3_NA0_f.webp" loading="lazy" alt="bmw i3" width="636" height="372"></a>
-						<a href="pic/full/bmw/bmw_i3_NA0_r.jpg"><img src="pic/style/bmw/bmw_i3_NA0_r.webp" loading="lazy" alt="bmw i3" width="556" height="372"></a><br>
+						<div class="panel-grid-container3">
+							<div class="panel-item">
+								<a href="pic/full/bmw/bmw_i3_na0_f.jpg" data-lightbox="bcd" data-title="2026 BMW i3 (NA0)"><img src="pic/style/bmw/bmw_i3_na0_f.webp" alt="2026 BMW i3 (NA0)" width="400" height="227" loading="lazy"></a>
+							</div>
+							<div class="panel-item">
+								<a href="pic/full/bmw/bmw_i3_na0_r.jpg" data-lightbox="bcd" data-title="2026 BMW i3 (NA0)"><img src="pic/style/bmw/bmw_i3_na0_r.webp" alt="2026 BMW i3 (NA0)" width="339" height="227" loading="lazy"></a>
+							</div>
+							<div class="panel-item">
+								<a href="pic/full/bmw/bmw_i3_na0_d.webp" data-lightbox="bcd" data-title="2026 BMW i3 (NA0)"><img src="pic/style/bmw/bmw_i3_na0_d.webp" alt="2026 BMW i3 (NA0)" width="400" height="227" loading="lazy"></a>
+							</div>
+						</div>
+						<hr class="tin">
 						<a href="https://ja.wikipedia.org/wiki/BMW%E3%83%BB%E3%83%93%E3%82%B8%E3%83%A7%E3%83%B3%E3%83%BB%E3%83%8E%E3%82%A4%E3%82%A8%E3%83%BB%E3%82%AF%E3%83%A9%E3%83%83%E3%82%BB" class="icon-link wiki m02" target="_blank" title="Wiki(J)"></a>
 						<p class="i">
-							3年前発表された Vision Neue Klasse<br>
-							<span class="m02">低迷していた BMWエクステリアに風穴を開けた気がするので、
-								トライアンフや 本田1300さんはそっとしておいてくださいね
+							3年前発表 Vision Neue Klasse
+							<span class="m01">
+								低迷していた エクステリアデザインに風穴を開けた気がするので、顔つきについてはトライアンフや本田1300さんはそっとしておいてくださいね。
+								それにしても BMWは斜めが好きだなー(ダッシュボードのデジタルなパネルとか)
 							</span>
-						</p><br>
-						<a href="pic/full/bmw/bmw_vision_Neue_Klasse_f.jpg"><img src="pic/style/bmw/bmw_vision_Neue_Klasse_f.webp" loading="lazy" alt="bmw design・concept" width="584" height="390"></a>
-						<a href="pic/full/bmw/bmw_vision_Neue_Klasse_r.jpg"><img src="pic/style/bmw/bmw_vision_Neue_Klasse_r.webp" loading="lazy" alt="bmw design・concept" width="608" height="390"></a><br>
+						</p>
+						<div class="panel-grid-container3">
+							<div class="panel-item">
+								<a href="pic/full/bmw/bmw_vision_neue_klasse_f.jpg" data-lightbox="bcd" data-title="Vision Neue Klasse"><img src="pic/style/bmw/bmw_vision_neue_klasse_f.webp" alt="Vision Neue Klasse" width="400" height="227" loading="lazy"></a>
+							</div>
+							<div class="panel-item">
+								<a href="pic/full/bmw/bmw_vision_neue_klasse_r.jpg" data-lightbox="bcd" data-title="Vision Neue Klasse"><img src="pic/style/bmw/bmw_vision_neue_klasse_r.webp" alt="Vision Neue Klasse" width="400" height="227" loading="lazy"></a>
+							</div>
+							<div class="panel-item">
+								<a href="pic/full/bmw/bmw_vision_neue_klasse_d.webp" data-lightbox="bcd" data-title="Vision Neue Klasse"><img src="pic/style/bmw/bmw_vision_neue_klasse_d.webp" alt="Vision Neue Klasse" width="400" height="227" loading="lazy"></a>
+							</div>
+						</div>
+						<hr class="tin">
 						<a href="https://de.wikipedia.org/wiki/BMW_Neue_Klasse" class="icon-link wiki m02" target="_blank" title="Wiki(D)"></a>
 						<p class="i">
 							オマージュ元： 半世紀前のノイエクラッセ
 							<span class="m02">いぶし銀のような貫禄が漂います</span>
 						</p><br>
-						<a href="pic/full/bmw/bmw_2000_f.jpg"><img src="pic/style/bmw/bmw_2000_f.webp" loading="lazy" alt="bmw 2000" width="621" height="381"></a>
-						<a href="pic/full/bmw/bmw_1500_r.jpg"><img src="pic/style/bmw/bmw_1500_r.webp" loading="lazy" alt="bmw 1500" width="571" height="381"></a>
+						<div class="panel-grid-container3">
+							<div class="panel-item">
+								<a href="pic/full/bmw/bmw_2000_f.jpg" data-lightbox="bcd" data-title="1962 Neue Klasse"><img src="pic/style/bmw/bmw_2000_f.webp" alt="1962 Neue Klasse" width="400" height="227" loading="lazy"></a>
+							</div>
+							<div class="panel-item">
+								<a href="pic/full/bmw/bmw_1500_r.jpg" data-lightbox="bcd" data-title="1962 Neue Klasse"><img src="pic/style/bmw/bmw_1500_r.webp" alt="1962 Neue Klasse" width="400" height="227" loading="lazy"></a>
+							</div>
+							<div class="panel-item">
+								<a href="pic/full/bmw/bmw_2000_d.jpg" data-lightbox="bcd" data-title="1962 Neue Klasse"><img src="pic/style/bmw/bmw_2000_d.webp" alt="1962 Neue Klasse" width="400" height="227" loading="lazy"></a>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -3247,7 +3295,6 @@
 					</p>
 				</div>
 			</div>
-
 		</div>
 	</article>
 	<hr>
